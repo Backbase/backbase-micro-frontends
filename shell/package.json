@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@backbase/backbase-theme-business-preset": "1.25.0",
+    "@backbase/ui-ang": "^7.9.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -33,6 +35,7 @@
     "@angular-eslint/template-parser": "12.7.0",
     "@angular/cli": "~12.2.18",
     "@angular/compiler-cli": "~12.2.0",
+    "@angular/localize": "^12.2.17",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
