@@ -1,3 +1,6 @@
+# Angular CLI
+.angular/
+
 # Node
 coverage/
 dist/
