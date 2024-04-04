@@ -6,12 +6,14 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "ng": "ng",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
     "start": "ng serve",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {
+    "@angular-architects/module-federation": "^12.5.3",
     "@angular/animations": "~12.2.0",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
