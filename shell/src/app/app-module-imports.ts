@@ -6,8 +6,8 @@
  *
  */
 
-import { AppRoutingModule } from './app-routing.module'
-import { LayoutModule } from './layout/layout.module'
+import { AppRoutingModule } from './app-routing.module';
+import { LayoutModule } from './layout/layout.module';
 
 /**
  * Modules in this array are added to the `imports` array of the AppModule
