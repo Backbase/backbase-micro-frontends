@@ -1,0 +1,93 @@
+{
+  "name": "/client-api/v3/payment-orders/{paymentOrderId}/files/{fileRefId}_PUT",
+  "request": {
+    "url": "/client-api/v3/payment-orders/[^/]+/files/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict error",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "The request could not be completed due to a conflict with the current state of the resource.",
+            "key": "transactions.api.billingstatus.transaction",
+            "context": {
+              "billingStatus": "BILLED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "File size exceeded",
+        "key": "payment-order.api.Validation.file.size"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "409_1": {
+      "status": 409,
+      "data": {
+        "message": "File reference already exists",
+        "key": "payment-order.api.Validation.file.conflict"
+      }
+    }
+  }
+}

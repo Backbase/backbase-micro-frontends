@@ -1,0 +1,33 @@
+{
+  "name": "/api/v1/client-api/v1/news/feeds/{feedId}_GET",
+  "request": {
+    "url": "/api/v1/client-api/v1/news/feeds/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "entries": [
+          {
+            "title": "Will the stock market drop?",
+            "text": "The volatility for stocks is heating up, but how likely is it that we'll actually get a 40% plus drop as some think? It all depends.",
+            "link": "https://www.lipsum.com/feed/html"
+          },
+          {
+            "title": "Worried About Retiring During a Market Crash?",
+            "text": "With bonds and stocks selling off side by side, retirees may have a reason to fear their well-diversified portfolios may not prove enough for retirement.",
+            "link": "https://www.inspiringquotes.us/quotes/iWxM_ugtKSnXq",
+            "publishDate": "2022-05-19T18:00:00",
+            "media": {
+              "url": "https://via.placeholder.com/300/09f/fff.png",
+              "contentType": "image/png",
+              "alt": "Awesome bar chart"
+            }
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

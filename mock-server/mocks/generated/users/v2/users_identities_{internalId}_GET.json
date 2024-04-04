@@ -1,0 +1,61 @@
+{
+  "name": "/client-api/v2/users/identities/{internalId}_GET",
+  "request": {
+    "url": "/client-api/v2/users/identities/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "externalId": "admin",
+        "legalEntityInternalId": "0955e686-d31e-4216-b3dd-5d66161d536d",
+        "fullName": "Mila Example",
+        "preferredLanguage": "EN",
+        "emailAddress": "mila@example.com",
+        "mobileNumber": "07700 900000",
+        "status": "ENABLED",
+        "emailVerified": true,
+        "createdDate": "2018-02-04T06:35:41.000Z",
+        "requiredActions": ["VERIFY_EMAIL", "UPDATE_PASSWORD", "ACCEPT_TERMS_AND_CONDITIONS"],
+        "givenName": "Mila",
+        "familyName": "Example",
+        "attributes": {
+          "bank-id": "BANK0001",
+          "core-id": "milaexample"
+        }
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

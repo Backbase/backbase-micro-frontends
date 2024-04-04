@@ -1,0 +1,27 @@
+{
+  "name": "/client-api/v1/corporate-actions/{id}/decision_PUT",
+  "request": {
+    "url": "/client-api/v1/corporate-actions/[^/]+/decision(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "lib/examples/bad-request-validation-error.json"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "lib/examples/not-found-error.json"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "lib/examples/internal-server-error.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "/client-api/v1/users/{dbsUserId}/devices_GET",
+  "request": {
+    "url": "/client-api/v1/users/[^/]+/devices(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "devices": [
+          {
+            "deviceId": "3aea3f5c-776a-4547-ae9d-4099d0af7d3b",
+            "idpUserId": "acd18bff-f34a-4329-9e74-de4df3a86c9a",
+            "externalUserId": "acd18bff-f34a-4329-9e74-de4df3a86c9a",
+            "dbsUserId": "8a48e1f56e880779016e8809ab970000",
+            "username": "Bob_Jones",
+            "friendlyName": "Bob's Galaxy S7",
+            "status": "ENABLED",
+            "vendor": "Samsung",
+            "model": "Galaxy S7",
+            "created": "2019-09-03T07:44:57Z",
+            "updated": "2019-10-13T15:30:22Z"
+          },
+          {
+            "deviceId": "5148b0f1-099f-4ef8-b34e-804013011dcf",
+            "idpUserId": "acd18bff-f34a-4329-9e74-de4df3a86c9a",
+            "externalUserId": "acd18bff-f34a-4329-9e74-de4df3a86c9a",
+            "dbsUserId": "8a48e1f56e880779016e8809ab970000",
+            "username": "Bob_Jones",
+            "friendlyName": "Bob's iPhone",
+            "status": "DISABLED",
+            "vendor": "Apple",
+            "model": "iPhone 10",
+            "created": "2019-09-03T08:34:11Z",
+            "updated": "2019-10-13T15:32:58Z"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

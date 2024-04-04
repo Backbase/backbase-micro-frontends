@@ -1,0 +1,72 @@
+{
+  "name": "/client-api/v2/employee/notifications/{managementId}/approvals_GET",
+  "request": {
+    "url": "/client-api/v2/employee/notifications/[^/]+/approvals(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "recipients": [
+          {
+            "userId": "3154-611-851"
+          }
+        ],
+        "title": "Some title",
+        "message": "Everything works pretty well {{link}}",
+        "level": "INFO",
+        "targetGroup": "USER",
+        "link": "http://dashboard.support.backbase.com",
+        "validFrom": "2017-10-04T14:54:36.274+0000",
+        "expiresOn": "2018-10-04T14:54:36.274+0000",
+        "origin": "Transaction",
+        "routing": {
+          "where-to": "payments-view",
+          "data": {
+            "id": "12345"
+          }
+        }
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "/client-api/v1/calculate-amortization-schedule_POST",
+  "request": {
+    "url": "/client-api/v1/calculate-amortization-schedule(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "termUnit": "DAY",
+        "currentRemainingTermCount": 31,
+        "updatedRemainingTermCount": 29,
+        "currentMaturityDate": "2020-07-24T00:00:00Z",
+        "updatedMaturityDate": "2020-07-24T00:00:00Z",
+        "currentNextPaymentAmount": "100500",
+        "updatedNextPaymentAmount": "100000",
+        "currency": "USD",
+        "settledUp": false,
+        "additionalMessageKey": "messagekey",
+        "updatedAmortizationSchedule": [
+          {
+            "paymentDate": "2020-07-24T00:00:00Z",
+            "currencyCode": "USD",
+            "paymentAmount": "40000.00000",
+            "endingPrincipalBalance": "40000.00000",
+            "status": "Overdue",
+            "paymentType": "principal-only"
+          },
+          {
+            "paymentDate": "2020-08-24T00:00:00Z",
+            "currencyCode": "USD",
+            "paymentAmount": "8000.00000",
+            "endingPrincipalBalance": "32000.00000",
+            "status": "Scheduled",
+            "paymentType": "interest-only"
+          },
+          {
+            "paymentDate": "2020-09-24T00:00:00Z",
+            "currencyCode": "USD",
+            "paymentAmount": "32001.00000",
+            "endingPrincipalBalance": "0.00000",
+            "status": "Scheduled",
+            "paymentType": "principal-and-interest"
+          }
+        ],
+        "updatedAmortizationScheduleFile": {
+          "type": "pdf",
+          "data": ""
+        }
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

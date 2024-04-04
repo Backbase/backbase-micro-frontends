@@ -1,0 +1,612 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/allocations-asset_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/allocations-asset(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "allocations": [
+          {
+            "name": "Cash",
+            "allocationPct": 3,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "79771.16",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "UAH",
+                "allocationPct": 5.62,
+                "valuation": {
+                  "amount": "4365.28",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 25.41,
+                "valuation": {
+                  "amount": "19736.95",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "UAH",
+                "allocationPct": 8.11,
+                "valuation": {
+                  "amount": "6299.36",
+                  "currencyCode": "RUB"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 33.47,
+                "valuation": {
+                  "amount": "25997.48",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Equity",
+            "allocationPct": 45,
+            "allocationMinPct": 40,
+            "allocationMaxPct": 60,
+            "valuation": {
+              "amount": "122189.37",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "UAH",
+                "allocationPct": 3.67,
+                "valuation": {
+                  "amount": "2414.19",
+                  "currencyCode": "RSD"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 30.77,
+                "valuation": {
+                  "amount": "20241.01",
+                  "currencyCode": "AFN"
+                }
+              },
+              {
+                "name": "CHF",
+                "allocationPct": 20.6,
+                "valuation": {
+                  "amount": "13551.01",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "JPY",
+                "allocationPct": 44.3,
+                "valuation": {
+                  "amount": "29141.26",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 35.83,
+                "valuation": {
+                  "amount": "23569.56",
+                  "currencyCode": "THB"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 3.36,
+                "valuation": {
+                  "amount": "2210.26",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "CHF",
+                "allocationPct": 29.27,
+                "valuation": {
+                  "amount": "19254.28",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "JPY",
+                "allocationPct": 17.95,
+                "valuation": {
+                  "amount": "11807.80",
+                  "currencyCode": "IDR"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Private Equity",
+            "allocationPct": 4,
+            "allocationMinPct": 10,
+            "allocationMaxPct": 15,
+            "valuation": {
+              "amount": "122189.37",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "UAH",
+                "allocationPct": 3.67,
+                "valuation": {
+                  "amount": "2414.19",
+                  "currencyCode": "RSD"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 30.77,
+                "valuation": {
+                  "amount": "20241.01",
+                  "currencyCode": "AFN"
+                }
+              },
+              {
+                "name": "CHF",
+                "allocationPct": 20.6,
+                "valuation": {
+                  "amount": "13551.01",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "JPY",
+                "allocationPct": 44.3,
+                "valuation": {
+                  "amount": "29141.26",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 35.83,
+                "valuation": {
+                  "amount": "23569.56",
+                  "currencyCode": "THB"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 3.36,
+                "valuation": {
+                  "amount": "2210.26",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "CHF",
+                "allocationPct": 29.27,
+                "valuation": {
+                  "amount": "19254.28",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "JPY",
+                "allocationPct": 17.95,
+                "valuation": {
+                  "amount": "11807.80",
+                  "currencyCode": "IDR"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Bonds",
+            "allocationPct": 23,
+            "allocationMinPct": 15,
+            "allocationMaxPct": 25,
+            "valuation": {
+              "amount": "-51371.36",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "GBP",
+                "allocationPct": 15.87,
+                "valuation": {
+                  "amount": "3223.28",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 29.96,
+                "valuation": {
+                  "amount": "6085.03",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "EUR",
+                "allocationPct": 49.58,
+                "valuation": {
+                  "amount": "10069.95",
+                  "currencyCode": "PEN"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 28.37,
+                "valuation": {
+                  "amount": "5762.09",
+                  "currencyCode": "COP"
+                }
+              },
+              {
+                "name": "UAH",
+                "allocationPct": 49.19,
+                "valuation": {
+                  "amount": "9990.74",
+                  "currencyCode": "SYP"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 32.89,
+                "valuation": {
+                  "amount": "6680.13",
+                  "currencyCode": "SYP"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 17.14,
+                "valuation": {
+                  "amount": "3481.22",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "name": "CAD",
+                "allocationPct": 29.93,
+                "valuation": {
+                  "amount": "6078.93",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Convertible bonds",
+            "allocationPct": 2,
+            "allocationMinPct": 5,
+            "allocationMaxPct": 10,
+            "valuation": {
+              "amount": "-51371.36",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "GBP",
+                "allocationPct": 15.87,
+                "valuation": {
+                  "amount": "3223.28",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 29.96,
+                "valuation": {
+                  "amount": "6085.03",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "EUR",
+                "allocationPct": 49.58,
+                "valuation": {
+                  "amount": "10069.95",
+                  "currencyCode": "PEN"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 28.37,
+                "valuation": {
+                  "amount": "5762.09",
+                  "currencyCode": "COP"
+                }
+              },
+              {
+                "name": "UAH",
+                "allocationPct": 49.19,
+                "valuation": {
+                  "amount": "9990.74",
+                  "currencyCode": "SYP"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 32.89,
+                "valuation": {
+                  "amount": "6680.13",
+                  "currencyCode": "SYP"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 17.14,
+                "valuation": {
+                  "amount": "3481.22",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "name": "CAD",
+                "allocationPct": 29.93,
+                "valuation": {
+                  "amount": "6078.93",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Derivatives",
+            "allocationPct": 3,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "142739.91",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "EUR",
+                "allocationPct": -18.47,
+                "valuation": {
+                  "amount": "-51281.97",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": -3.23,
+                "valuation": {
+                  "amount": "-8968.10",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 22.28,
+                "valuation": {
+                  "amount": "61860.44",
+                  "currencyCode": "EUR"
+                }
+              },
+              {
+                "name": "UAH",
+                "allocationPct": -7.31,
+                "valuation": {
+                  "amount": "-20296.22",
+                  "currencyCode": "XCD"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 45.64,
+                "valuation": {
+                  "amount": "126719.50",
+                  "currencyCode": "BRL"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 12.5,
+                "valuation": {
+                  "amount": "34706.26",
+                  "currencyCode": "THB"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Structured Products",
+            "allocationPct": 7,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "142739.91",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "EUR",
+                "allocationPct": -18.47,
+                "valuation": {
+                  "amount": "-51281.97",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": -3.23,
+                "valuation": {
+                  "amount": "-8968.10",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 22.28,
+                "valuation": {
+                  "amount": "61860.44",
+                  "currencyCode": "EUR"
+                }
+              },
+              {
+                "name": "UAH",
+                "allocationPct": -7.31,
+                "valuation": {
+                  "amount": "-20296.22",
+                  "currencyCode": "XCD"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 45.64,
+                "valuation": {
+                  "amount": "126719.50",
+                  "currencyCode": "BRL"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": 12.5,
+                "valuation": {
+                  "amount": "34706.26",
+                  "currencyCode": "THB"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Commodities",
+            "allocationPct": 5,
+            "allocationMinPct": 6,
+            "allocationMaxPct": 10,
+            "valuation": {
+              "amount": "36221.12",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "EUR",
+                "allocationPct": 25.93,
+                "valuation": {
+                  "amount": "9256.07",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "CAD",
+                "allocationPct": 25.7,
+                "valuation": {
+                  "amount": "9173.97",
+                  "currencyCode": "SEK"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 34.66,
+                "valuation": {
+                  "amount": "12372.37",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 21.84,
+                "valuation": {
+                  "amount": "7796.09",
+                  "currencyCode": "EUR"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": -6.66,
+                "valuation": {
+                  "amount": "-2377.38",
+                  "currencyCode": "BGN"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Real Estate",
+            "allocationPct": 8,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "36221.12",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "EUR",
+                "allocationPct": 25.93,
+                "valuation": {
+                  "amount": "9256.07",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "CAD",
+                "allocationPct": 25.7,
+                "valuation": {
+                  "amount": "9173.97",
+                  "currencyCode": "SEK"
+                }
+              },
+              {
+                "name": "GBP",
+                "allocationPct": 34.66,
+                "valuation": {
+                  "amount": "12372.37",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "USD",
+                "allocationPct": 21.84,
+                "valuation": {
+                  "amount": "7796.09",
+                  "currencyCode": "EUR"
+                }
+              },
+              {
+                "name": "AUD",
+                "allocationPct": -6.66,
+                "valuation": {
+                  "amount": "-2377.38",
+                  "currencyCode": "BGN"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

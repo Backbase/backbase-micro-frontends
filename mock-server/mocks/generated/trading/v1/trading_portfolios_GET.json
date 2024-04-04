@@ -1,0 +1,52 @@
+{
+  "name": "/client-api/v1/trading/portfolios_GET",
+  "request": {
+    "url": "/client-api/v1/trading/portfolios(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "portfolios": [
+          {
+            "name": "Trading portfolio",
+            "alias": "My portfolio to trade",
+            "portfolioId": "68bbeace-274e-11ec-9621-0242ac130002",
+            "iban": "NL79RABO5373380466"
+          },
+          {
+            "name": "Trading portfolio 2",
+            "alias": "My second portfolio to trade",
+            "portfolioId": "72ba1654-274e-11ec-9621-0242ac130002",
+            "iban": "NL79RABO5373380477"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

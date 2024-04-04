@@ -1,0 +1,64 @@
+{
+  "name": "/client-api/v1/rtc/queues/assignments_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/queues/assignments(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "userId": "ec81a094-b197-4b39-9364-03d5caf68e21",
+          "preferredName": "John Smith",
+          "status": "AVAILABLE",
+          "assignedQueues": [
+            {
+              "id": "8d096ab7-b895-4a11-b839-049e976b80c1",
+              "name": "Mortgages"
+            },
+            {
+              "id": "abcbb155-586a-4dfb-83a4-21047ac1d514",
+              "name": "General"
+            }
+          ]
+        },
+        {
+          "userId": "e41ab715-e394-4473-8d33-f71501259ace",
+          "preferredName": "Chloe Kim",
+          "status": "UNAVAILABLE",
+          "assignedQueues": [
+            {
+              "id": "abcbb155-586a-4dfb-83a4-21047ac1d514",
+              "name": "General"
+            }
+          ]
+        },
+        {
+          "userId": "5f28e642-ad64-4cee-8bc9-31e66ae97206",
+          "status": "AVAILABLE",
+          "assignedQueues": []
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

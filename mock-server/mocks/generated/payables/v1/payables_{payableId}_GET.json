@@ -1,0 +1,105 @@
+{
+  "name": "/client-api/v1/payables/{payableId}_GET",
+  "request": {
+    "url": "/client-api/v1/payables/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "status": "Open",
+        "id": "c041aa5f-8d64-4c03-b7a4-9f84bb030811",
+        "referenceNumber": "SEP00-1",
+        "issueDate": "2020-11-05T00:00:00Z",
+        "dueDate": "2020-12-02T00:00:00Z",
+        "expectedDate": "2020-12-02T00:00:00Z",
+        "dueAmount": "770.00000",
+        "paidAmount": "0.00000",
+        "totalAmount": "770.00000",
+        "currencyCode": "USD",
+        "counterparty": {
+          "id": "f8dbd544-ea7c-48b1-96a4-fffee569f236",
+          "name": "Robertson & Associates",
+          "type": "Supplier"
+        },
+        "chartOfAccounts": [
+          {
+            "id": "8c48192a-723f-4f76-b3a7-c2be76c3bdc8",
+            "name": "Accounting",
+            "nominalCode": "69",
+            "category": "Expense"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

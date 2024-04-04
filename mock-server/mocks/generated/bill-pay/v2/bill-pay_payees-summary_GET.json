@@ -1,0 +1,369 @@
+{
+  "name": "/client-api/v2/bill-pay/payees-summary_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payees-summary(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "payeeSummaries": [
+          {
+            "id": "0001",
+            "name": "Citibank",
+            "nickName": "My Bank",
+            "accountNumber": "246895317",
+            "electronic": true,
+            "hasRecurringPayments": false,
+            "nextPayment": {
+              "amount": {
+                "amount": "100.99",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-02-22",
+              "recurring": false,
+              "automaticPayment": true,
+              "fee": {
+                "amount": "9.99",
+                "currencyCode": "USD"
+              }
+            },
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-02-21T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-02-22",
+                "nextPaymentDate": "2019-02-25",
+                "paymentServiceType": "EXPEDITED_PAYMENT",
+                "deliveryDays": 3,
+                "fee": {
+                  "amount": "9.99",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "cutoffTime": "2019-02-25T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-02-26",
+                "nextPaymentDate": "2019-02-27",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "ACTIVE",
+              "latestBill": {
+                "id": "20141219140239655590",
+                "amount": {
+                  "amount": "100.99",
+                  "currencyCode": "USD"
+                },
+                "minAmountDue": {
+                  "amount": "20.50",
+                  "currencyCode": "USD"
+                },
+                "outstandingBalance": {
+                  "amount": "201.98",
+                  "currencyCode": "USD"
+                },
+                "paymentDate": "2019-03-01",
+                "status": "PAID",
+                "url": "http://my.ebill.pdf",
+                "statementAvailable": false,
+                "paymentId": "abc0192802"
+              },
+              "autopay": {
+                "paymentAccount": {
+                  "accountNumber": "11111111",
+                  "routingNumber": "000000022",
+                  "accountType": "SAVINGS_ACCOUNT",
+                  "accountNickName": "Current Account"
+                },
+                "daysBeforePayOn": 3,
+                "maxPaymentAmount": {
+                  "amount": "123",
+                  "currencyCode": "USD"
+                },
+                "payOn": "BILL_ARRIVAL",
+                "payAmount": "FULL_AMOUNT",
+                "paymentScheduledAlert": false,
+                "paymentSentAlert": true,
+                "paymentCompleteAlert": true
+              }
+            },
+            "overnightDeliveryAddress": {
+              "state": "FL",
+              "city": "Saint Petersburg",
+              "address1": "560 Carillon Parkway",
+              "postalCode": "33717"
+            }
+          },
+          {
+            "id": "0002",
+            "name": "Electric Company",
+            "accountNumber": "78641258",
+            "electronic": true,
+            "hasRecurringPayments": true,
+            "nextPayment": {
+              "amount": {
+                "amount": "101.99",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-02-28",
+              "recurring": true,
+              "automaticPayment": false
+            },
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-02-25T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-02-26",
+                "nextPaymentDate": "2019-02-27",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "UPDATE_CREDENTIALS"
+            }
+          },
+          {
+            "id": "0003",
+            "name": "John Doe",
+            "electronic": false,
+            "hasRecurringPayments": false,
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-03-04T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-03-05",
+                "nextPaymentDate": "2019-03-06",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ]
+          },
+          {
+            "id": "0955e686-d31e-4216-b3dd-5d66161d536d",
+            "name": "Gas Company",
+            "electronic": true,
+            "hasRecurringPayments": false,
+            "nextPayment": {
+              "amount": {
+                "amount": "20.99",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-03-20",
+              "recurring": false,
+              "automaticPayment": false
+            },
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-03-21T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-03-22",
+                "nextPaymentDate": "2019-03-25",
+                "paymentServiceType": "EXPEDITED_PAYMENT",
+                "deliveryDays": 3,
+                "fee": {
+                  "amount": "0",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "cutoffTime": "2019-03-27T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-03-28",
+                "nextPaymentDate": "2019-03-29",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "ACTIVE"
+            }
+          },
+          {
+            "id": "31315694",
+            "name": "Somewhat Wireless",
+            "nickName": "Internet",
+            "accountNumber": "152236988",
+            "electronic": true,
+            "hasRecurringPayments": true,
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-10-08T06:00:00.000-04:00",
+                "earliestPaymentDate": "2019-10-08",
+                "nextPaymentDate": "2019-10-09",
+                "paymentServiceType": "REGULAR_PAYMENT",
+                "deliveryDays": 1
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "USER_ACTION"
+            }
+          },
+          {
+            "id": "31315661",
+            "name": "Outer Rim Supply Co.",
+            "accountNumber": "152236978",
+            "electronic": true,
+            "hasRecurringPayments": false,
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-10-08T06:00:00.000-04:00",
+                "earliestPaymentDate": "2019-10-08",
+                "nextPaymentDate": "2019-10-09",
+                "paymentServiceType": "REGULAR_PAYMENT",
+                "deliveryDays": 1
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "ERROR"
+            }
+          },
+          {
+            "id": "0004",
+            "name": "Water Company",
+            "electronic": true,
+            "hasRecurringPayments": false,
+            "nextPayment": {
+              "amount": {
+                "amount": "2001.89",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-03-14",
+              "recurring": false,
+              "automaticPayment": false
+            },
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-03-11T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-03-12",
+                "nextPaymentDate": "2019-03-13",
+                "paymentServiceType": "OVERNIGHT_CHECK",
+                "deliveryDays": 3,
+                "fee": {
+                  "amount": "9.99",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "cutoffTime": "2019-03-18T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-03-19",
+                "nextPaymentDate": "2019-03-20",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ],
+            "overnightDeliveryAddress": {
+              "state": "FL",
+              "city": "Saint Petersburg",
+              "address1": "560 Carillon Parkway",
+              "postalCode": "33717"
+            },
+            "ebill": {
+              "capable": true,
+              "enabled": true,
+              "status": "NOT_SUPPORTED"
+            }
+          },
+          {
+            "id": "0005",
+            "name": "Phone Company",
+            "electronic": true,
+            "hasRecurringPayments": true,
+            "nextPayment": {
+              "amount": {
+                "amount": "45.23",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-04-10",
+              "recurring": false,
+              "automaticPayment": false
+            },
+            "paymentServices": [
+              {
+                "cutoffTime": "2019-04-01T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-04-02",
+                "nextPaymentDate": "2019-04-03",
+                "paymentServiceType": "OVERNIGHT_CHECK",
+                "deliveryDays": 3,
+                "fee": {
+                  "amount": "9.99",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "cutoffTime": "2019-04-08T15:00:00.000-04:00",
+                "earliestPaymentDate": "2019-04-08",
+                "nextPaymentDate": "2019-04-08",
+                "paymentServiceType": "REGULAR_PAYMENT"
+              }
+            ],
+            "ebill": {
+              "capable": true,
+              "enabled": false
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

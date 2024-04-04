@@ -1,0 +1,68 @@
+{
+  "name": "/client-api/v5/message-center/messages/drafts/{draftId}_GET",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/drafts/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "attachments": [
+          {
+            "createdAt": "2017-10-02T10:51:50.000+0000",
+            "filename": "message-attachment-filename.pdf",
+            "id": "5d869ea0-d3a3-4b83-888f-767bdcdcd565",
+            "size": 2592836
+          },
+          {
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "filename": "another-message-attachment-filename.pdf",
+            "id": "ae4658a4-073c-4d8b-ab5d-55e9238d3ff0",
+            "size": 15982836
+          }
+        ],
+        "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+        "id": "754cd7fd-a9dd-489e-9933-4f0ef556a5cd",
+        "subject": "Draft subject",
+        "timestamp": "2019-11-18T10:51:50.000+0000",
+        "topic": {
+          "deleted": false,
+          "id": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+          "name": "Mortgage application"
+        }
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

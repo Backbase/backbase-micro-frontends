@@ -1,0 +1,96 @@
+{
+  "name": "/client-api/v2/users_GET",
+  "request": {
+    "url": "/client-api/v2/users(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "externalId": "U0000010",
+          "legalEntityId": "c7a382786d514262b75ab9531b749a2b",
+          "id": "d100c54f79784731843f0db89a2d2957",
+          "fullName": "David Flores",
+          "preferredLanguage": "fr-FR"
+        },
+        {
+          "externalId": "U0000011",
+          "legalEntityId": "dbc9e566d44f4cd9a1f09ad3f6729f15",
+          "id": "fafd8fd6b661402b8411a48050bdc9ad",
+          "fullName": "Sofia Duncan"
+        },
+        {
+          "externalId": "U0000012",
+          "legalEntityId": "77f8c4cd11c8436ba77f8ca34e6a173d",
+          "id": "bc9a83bf025449dea4ecc05ce816aebd",
+          "fullName": "Henry Duncan"
+        },
+        {
+          "externalId": "U0000013",
+          "legalEntityId": "34",
+          "id": "5360dbba1a254889ba94c22ff01b1c37",
+          "fullName": "Bart Nyman"
+        },
+        {
+          "externalId": "U0000014",
+          "legalEntityId": "c9fc30f4e5fb492c97ed0a05f926aecc",
+          "id": "37c1b6b531a34259b4c518eebc0b34a2",
+          "fullName": "Peter"
+        },
+        {
+          "externalId": "U0000015",
+          "legalEntityId": "0f6d14f40e064deeaee351befd53d3e7",
+          "id": "b5f499e8f3c94cf39997957ce4cbec59",
+          "fullName": "Sandra"
+        },
+        {
+          "externalId": "U0000016",
+          "legalEntityId": "6e83bf0d-0d77-4320-b854-4a704e1d50c3",
+          "id": "b5f499e8f3c94cf39997957ce4cbei84",
+          "fullName": "Marko Ilievski",
+          "preferredLanguage": "en-GB"
+        },
+        {
+          "externalId": "U0000017",
+          "legalEntityId": "6e83bf0d-0d77-4320-b854-4a704e1d50c3",
+          "id": "b5f499e8f3c94cf39997957ce4cbec59t97",
+          "fullName": "Daniela Petkovska"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

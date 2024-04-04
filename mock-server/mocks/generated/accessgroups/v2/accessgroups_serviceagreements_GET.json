@@ -1,0 +1,285 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/serviceagreements_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/serviceagreements(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "951293e6521940e3ae0608f93ff0b215",
+          "externalId": "external-id-1",
+          "name": "Broker deal 1",
+          "description": "Agreement between Backbase and Apple",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e42bbe96147",
+          "externalId": "external-id-2",
+          "name": "Broker deal 2",
+          "description": "Agreement between Backbase and HP",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae0a1e42bbe96147",
+          "externalId": "external-id-3",
+          "name": "Tyler Boyd Associates",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae1a1e42bbe96147",
+          "externalId": "external-id-4",
+          "name": "Tyler Boyd Associates UAE",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae2a1e42bbe96147",
+          "externalId": "external-id-5",
+          "name": "Tyler Boyd Associates US",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae3a1e42bbe96147",
+          "externalId": "external-id-6",
+          "name": "Tyler Boyd Associates US Salary Services",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae4a1e42bbe96147",
+          "externalId": "external-id-7",
+          "name": "Tyler Boyd Associates US Training",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae5a1e42bbe96147",
+          "externalId": "external-id-8",
+          "name": "Tyler Boyd Associates UK",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae6a1e42bbe96147",
+          "externalId": "external-id-9",
+          "name": "Tyler Boyd Associates UK Sales",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae7a1e42bbe96147",
+          "externalId": "external-id-10",
+          "name": "Tyler Boyd Associates UK Marketing",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae9a1e42bbe96147",
+          "externalId": "external-id-11",
+          "name": "Broker deal 11",
+          "description": "Agreement between Backbase and Microsoft",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a0e42bbe96147",
+          "externalId": "external-id-12",
+          "name": "Broker deal 12",
+          "description": "Agreement between Backbase and Packard-Bell",
+          "creatorLegalEntity": "0955e686-d31e-4216-b3dd-5d66161d536d",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a2e42bbe96147",
+          "externalId": "external-id-13",
+          "name": "Tyler Boyd Associates ROI",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a3e42bbe96147",
+          "externalId": "external-id-14",
+          "name": "Tyler Boyd Associates ROI Services",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a4e42bbe96147",
+          "externalId": "external-id-15",
+          "name": "Tyler Boyd Associates ROI Finance",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a5e42bbe96147",
+          "externalId": "external-id-16",
+          "name": "Tyler Boyd Associates ROI HR",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a6e42bbe96147",
+          "externalId": "external-id-17",
+          "name": "Tyler Boyd Associates EU",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a7e42bbe96147",
+          "externalId": "external-id-18",
+          "name": "Tyler Boyd Associates EU North",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a8e42bbe96147",
+          "externalId": "external-id-19",
+          "name": "Tyler Boyd Associates EU East",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a9e02bbe96147",
+          "externalId": "external-id-20",
+          "name": "Tyler Boyd Associates EU South",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e12bbe96147",
+          "externalId": "external-id-21",
+          "name": "Broker deal 21",
+          "description": "Agreement between Backbase and Google",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e22bbe96147",
+          "externalId": "external-id-22",
+          "name": "Broker deal 22",
+          "description": "Agreement between Backbase and Dell",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e32bbe96147",
+          "externalId": "external-id-23",
+          "name": "Tyler Boyd Associates EU West",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e52bbe96147",
+          "externalId": "external-id-24",
+          "name": "Tyler Boyd Associates EU Central",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e62bbe96147",
+          "externalId": "external-id-25",
+          "name": "Tyler Boyd Associates CAN",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e72bbe96147",
+          "externalId": "external-id-26",
+          "name": "Tyler Boyd Associates CAN Finance",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e82bbe96147",
+          "externalId": "external-id-27",
+          "name": "Tyler Boyd Associates BRA",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e92bbe96147",
+          "externalId": "external-id-28",
+          "name": "Tyler Boyd Associates URU",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e41bbe96147",
+          "externalId": "external-id-29",
+          "name": "Tyler Boyd Associates ARG",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "9e4fb91794574b98ae8a1e43bbe96147",
+          "externalId": "external-id-30",
+          "name": "Tyler Boyd Associates AUS",
+          "description": "Description of service agreement",
+          "creatorLegalEntity": "9371efe0-e295-47f7-822f-934532646b98",
+          "isMaster": false,
+          "status": "ENABLED"
+        }
+      ],
+      "default": true
+    }
+  }
+}

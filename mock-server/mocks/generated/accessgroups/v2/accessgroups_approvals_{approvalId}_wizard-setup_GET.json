@@ -1,0 +1,70 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/approvals/{approvalId}/wizard-setup_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/approvals/[^/]+/wizard-setup(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalId": "test",
+        "action": "CREATE",
+        "category": "Assign Permissions by Wizard",
+        "users": [
+          {
+            "userId": "c7a382786d514262b75ab9531b749a2b",
+            "userFullName": "Paddy Brian"
+          }
+        ],
+        "functionGroups": [
+          {
+            "functionGroupId": "f34f7587-5ded-4f51-94c3-3a89d1b645392"
+          },
+          {
+            "functionGroupId": "f34f7587-5ded-4f51-94c3-3a89d1b6453812"
+          }
+        ],
+        "serviceAgreementId": "606d4532-f8d9-4a5f-840a-887baf88fa24",
+        "serviceAgreementName": "AIB",
+        "accounts": [
+          "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "6c1261e8-7b6b-4c14-9bb4-e976d834c730",
+          "e6659eea893c4da48f9b7fd425de4677",
+          "8eb58b1d048d4112a2f7591d465c3f14",
+          "8a48e7546e11f733016e2249604f4076",
+          "8a48e7546e11f733016e22495b6a4067",
+          "1cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "8a48e7546e11f733016e22496d7e409d",
+          "8a48e7546e11f733016e2249734640af",
+          "8a48e7546e11f733016e22496ba94097",
+          "8a48e7546e11f733016e22494c19403a",
+          "8a48e7546e11f733016e2249715a40a9",
+          "8a48e7546e11f733016e2249693f4091",
+          "8a48e7546e11f733016e2249771240bb",
+          "8a48e7546e11f733016e22496f5f40a3"
+        ],
+        "limit": {
+          "currency": "EUR",
+          "periodicLimitsBounds": {
+            "customPeriods": [
+              {
+                "amount": 100,
+                "period": "biweekly"
+              }
+            ],
+            "daily": 100,
+            "monthly": 10000,
+            "quarterly": 100000,
+            "weekly": 1000
+          },
+          "transactionalLimitsBounds": {
+            "amount": 1000
+          }
+        },
+        "removeExistingPermissions": false
+      },
+      "default": true
+    }
+  }
+}

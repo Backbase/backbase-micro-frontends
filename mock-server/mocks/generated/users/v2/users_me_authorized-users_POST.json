@@ -1,0 +1,55 @@
+{
+  "name": "/client-api/v2/users/me/authorized-users_POST",
+  "request": {
+    "url": "/client-api/v2/users/me/authorized-users(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

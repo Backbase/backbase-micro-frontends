@@ -1,0 +1,717 @@
+{
+  "name": "/client-api/v2/bill-pay/payees-search_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payees-search(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "payees": [
+          {
+            "merchantID": "10000001",
+            "name": "Backbase UK",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000002",
+            "name": "Backbase AMS",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000003",
+            "name": "Backbase US",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000004",
+            "name": "adventescent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000005",
+            "name": "animadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000006",
+            "name": "circumadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000007",
+            "name": "syadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000008",
+            "name": "maladvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000009",
+            "name": "sucadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000010",
+            "name": "sysadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000011",
+            "name": "adventacious",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000012",
+            "name": "adventack",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000013",
+            "name": "belladvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000014",
+            "name": "coradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000015",
+            "name": "polyadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000016",
+            "name": "adventous",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000017",
+            "name": "adventant",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000018",
+            "name": "vivadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000019",
+            "name": "foradvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000020",
+            "name": "inadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000021",
+            "name": "bovadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000022",
+            "name": "adventize",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000023",
+            "name": "postadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000024",
+            "name": "lunadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000025",
+            "name": "amadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000026",
+            "name": "symadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000027",
+            "name": "advental",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000028",
+            "name": "adventic",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000029",
+            "name": "lupadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000030",
+            "name": "sufadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000031",
+            "name": "adventari",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000032",
+            "name": "adventism",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000033",
+            "name": "comadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000034",
+            "name": "laudadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000035",
+            "name": "adventose",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000036",
+            "name": "enadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000037",
+            "name": "misadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000038",
+            "name": "portadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000039",
+            "name": "adventor",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000040",
+            "name": "venadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000041",
+            "name": "tenadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000042",
+            "name": "adventation",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000043",
+            "name": "adventicious",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000044",
+            "name": "adventill",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000045",
+            "name": "fortadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000046",
+            "name": "adventil",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000047",
+            "name": "rhyadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000048",
+            "name": "aceradvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000049",
+            "name": "difadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000050",
+            "name": "adventand",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000051",
+            "name": "adventible",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000052",
+            "name": "peradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000053",
+            "name": "interadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000054",
+            "name": "podadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000055",
+            "name": "adventend",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000056",
+            "name": "maradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000057",
+            "name": "uberadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000058",
+            "name": "movadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000059",
+            "name": "adventile",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000060",
+            "name": "exadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000061",
+            "name": "frontadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000062",
+            "name": "pedadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000063",
+            "name": "outadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000064",
+            "name": "myadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000065",
+            "name": "finadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000066",
+            "name": "adventac",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000067",
+            "name": "adventaid",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000068",
+            "name": "dominadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000069",
+            "name": "transadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000070",
+            "name": "suradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000071",
+            "name": "sumadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000072",
+            "name": "adventive",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000073",
+            "name": "feladvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000074",
+            "name": "adventa",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000075",
+            "name": "domadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000076",
+            "name": "anadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000077",
+            "name": "adventoid",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000078",
+            "name": "hyperadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000079",
+            "name": "adventore",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000080",
+            "name": "adventate",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000081",
+            "name": "adventosis",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000082",
+            "name": "albadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000083",
+            "name": "synadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000084",
+            "name": "canadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000085",
+            "name": "supadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000086",
+            "name": "midadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000087",
+            "name": "esadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000088",
+            "name": "skyadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000089",
+            "name": "susadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000090",
+            "name": "archadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000091",
+            "name": "locadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000092",
+            "name": "insuladvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000093",
+            "name": "sugadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000094",
+            "name": "capadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000095",
+            "name": "falcadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000096",
+            "name": "monadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000097",
+            "name": "syladvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "10000098",
+            "name": "conadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000099",
+            "name": "cisadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "10000100",
+            "name": "kayadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000001",
+            "name": "cedadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000002",
+            "name": "veradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000003",
+            "name": "cervadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000004",
+            "name": "audadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000005",
+            "name": "coladvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000006",
+            "name": "vertadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000007",
+            "name": "adventashun",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000008",
+            "name": "suradvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000009",
+            "name": "subadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000010",
+            "name": "superadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000011",
+            "name": "doladvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000012",
+            "name": "nonadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000013",
+            "name": "garadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000014",
+            "name": "adventalt",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000015",
+            "name": "premadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000016",
+            "name": "adventity",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000017",
+            "name": "bonadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000018",
+            "name": "adventise",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000019",
+            "name": "genadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000019",
+            "name": "adventist",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000020",
+            "name": "adventable",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000021",
+            "name": "auradvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000022",
+            "name": "adventent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000023",
+            "name": "disadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000024",
+            "name": "panadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000025",
+            "name": "adventer",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000026",
+            "name": "calcadvent",
+            "zipRequired": true
+          },
+          {
+            "merchantID": "20000027",
+            "name": "unadvent",
+            "zipRequired": false
+          },
+          {
+            "merchantID": "20000028",
+            "name": "adventall",
+            "zipRequired": false
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "name": "/client-api/v2/portfoliosummary/aggregation_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/aggregation(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "portfoliosCount": 11,
+        "clientName": "Michael Davis",
+        "valuation": {
+          "amount": "858101238.00",
+          "currencyCode": "EUR"
+        },
+        "inCashTotal": {
+          "amount": "119115.00",
+          "currencyCode": "EUR"
+        },
+        "outCashTotal": {
+          "amount": "547.00",
+          "currencyCode": "EUR"
+        },
+        "performanceMTD": {
+          "amount": "8076.00",
+          "currencyCode": "EUR"
+        },
+        "performanceMTDpct": 1.25,
+        "performanceYTD": {
+          "amount": "87462546.00",
+          "currencyCode": "EUR"
+        },
+        "performanceYTDpct": 0.015,
+        "riskClass": "Med-Low",
+        "assetClasses": [
+          {
+            "valuePct": 58.66,
+            "name": "Obligations"
+          },
+          {
+            "valuePct": 15.68,
+            "name": "Cash"
+          },
+          {
+            "valuePct": 12.78,
+            "name": "Invested Funds"
+          },
+          {
+            "valuePct": 12.37,
+            "name": "Bonds"
+          },
+          {
+            "valuePct": 0.55,
+            "name": "Liquidities"
+          },
+          {
+            "valuePct": 0,
+            "name": "Assets"
+          },
+          {
+            "valuePct": -0.04,
+            "name": "Commodities"
+          }
+        ],
+        "managers": [
+          {
+            "id": "345",
+            "name": "John Doe"
+          },
+          {
+            "id": "235",
+            "name": "Mark Clarson"
+          }
+        ],
+        "attorneys": [
+          {
+            "id": "1934",
+            "name": "Sem Hurson"
+          }
+        ],
+        "netCashTotal": {
+          "amount": "118568",
+          "currencyCode": "EUR"
+        },
+        "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

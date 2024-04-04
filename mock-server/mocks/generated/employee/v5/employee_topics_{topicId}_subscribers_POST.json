@@ -1,0 +1,84 @@
+{
+  "name": "/client-api/v5/employee/topics/{topicId}/subscribers_POST",
+  "request": {
+    "url": "/client-api/v5/employee/topics/[^/]+/subscribers(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": [
+        {
+          "isSubscribed": true,
+          "subscriberId": "08ee5037-8dce-43ab-b734-e2b90a189b82"
+        },
+        {
+          "isSubscribed": false,
+          "subscriberId": "58ee5037-8dce-43ab-b734-e2b90a189b81"
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "name": "/client-api/v2/accounts/balance-history/{arrangementIds}_GET",
+  "request": {
+    "url": "/client-api/v2/accounts/balance-history/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "items": [
+          {
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "balanceHistory": [
+              {
+                "dateFrom": "2017-05-10T00:00:00.000Z",
+                "dateTo": "2017-05-11T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "12"
+                },
+                "valuePtc": "232"
+              },
+              {
+                "dateFrom": "2017-05-11T00:00:00.000Z",
+                "dateTo": "2017-05-12T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "22"
+                },
+                "valuePtc": "22"
+              },
+              {
+                "dateFrom": "2017-05-23T00:00:00.000Z",
+                "dateTo": "2017-05-24T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "32"
+                },
+                "valuePtc": "32"
+              },
+              {
+                "dateFrom": "2017-06-01T00:00:00.000Z",
+                "dateTo": "2017-06-02T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "54"
+                },
+                "valuePtc": "54"
+              },
+              {
+                "dateFrom": "2017-06-02T00:00:00.000Z",
+                "dateTo": "2017-06-03T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "34"
+                },
+                "valuePtc": "34"
+              },
+              {
+                "dateFrom": "2017-06-12T00:00:00.000Z",
+                "dateTo": "2017-06-13T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "4"
+                },
+                "valuePtc": "4"
+              },
+              {
+                "dateFrom": "2017-06-18T00:00:00.000Z",
+                "dateTo": "2017-06-19T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-14"
+                },
+                "valuePtc": "-14"
+              }
+            ]
+          },
+          {
+            "arrangementId": "5cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "balanceHistory": [
+              {
+                "dateFrom": "2017-02-11T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-120"
+                },
+                "valuePtc": "-12"
+              },
+              {
+                "dateFrom": "2017-02-17T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-100"
+                },
+                "valuePtc": "-100"
+              },
+              {
+                "dateFrom": "2017-02-22T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-60"
+                },
+                "valuePtc": "-60"
+              },
+              {
+                "dateFrom": "2017-03-04T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-10"
+                },
+                "valuePtc": "-10"
+              },
+              {
+                "dateFrom": "2017-03-12T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "0"
+                },
+                "valuePtc": "0"
+              },
+              {
+                "dateFrom": "2017-03-21T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "10"
+                },
+                "valuePtc": "10"
+              },
+              {
+                "dateFrom": "2017-03-27T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "40"
+                },
+                "valuePtc": "40"
+              },
+              {
+                "dateFrom": "2017-04-01T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "80"
+                },
+                "valuePtc": "80"
+              }
+            ]
+          },
+          {
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "balanceHistory": [
+              {
+                "dateFrom": "2017-02-11T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "1234"
+                },
+                "valuePtc": "1234"
+              },
+              {
+                "dateFrom": "2017-02-17T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "4098"
+                },
+                "valuePtc": "4098"
+              },
+              {
+                "dateFrom": "2017-02-22T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "10"
+                },
+                "valuePtc": "10"
+              },
+              {
+                "dateFrom": "2017-03-04T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-2938"
+                },
+                "valuePtc": "-2938"
+              },
+              {
+                "dateFrom": "2017-03-12T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "-1000"
+                },
+                "valuePtc": "-100"
+              },
+              {
+                "dateFrom": "2017-03-21T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "0"
+                },
+                "valuePtc": "0"
+              },
+              {
+                "dateFrom": "2017-03-27T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "5098"
+                },
+                "valuePtc": "5098"
+              },
+              {
+                "dateFrom": "2017-04-01T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "0"
+                },
+                "valuePtc": "0"
+              }
+            ]
+          },
+          {
+            "arrangementId": "7cdb2224-8926-4b4d-a99f-1c9dfbbb4611",
+            "balanceHistory": [
+              {
+                "dateFrom": "2017-02-11T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "765"
+                },
+                "valuePtc": "765"
+              },
+              {
+                "dateFrom": "2017-02-17T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "656"
+                },
+                "valuePtc": "656"
+              },
+              {
+                "dateFrom": "2017-02-22T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "745"
+                },
+                "valuePtc": "745"
+              },
+              {
+                "dateFrom": "2017-03-04T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "654"
+                },
+                "valuePtc": "654"
+              },
+              {
+                "dateFrom": "2017-03-12T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "987"
+                },
+                "valuePtc": "987"
+              },
+              {
+                "dateFrom": "2017-03-21T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "345"
+                },
+                "valuePtc": "345"
+              },
+              {
+                "dateFrom": "2017-03-27T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "234"
+                },
+                "valuePtc": "234"
+              },
+              {
+                "dateFrom": "2017-04-01T00:00:00.000Z",
+                "dateTo": "2017-04-01T00:00:00.000Z",
+                "value": {
+                  "currency": "EUR",
+                  "balance": "12"
+                },
+                "valuePtc": "12"
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": "Balance,Currency,Date,ArrangementId,ArrangementName 10.29,EUR,2018-05-10T00:00:00,1,Spending fee -123.2,EUR,2018-23-10T00:00:00,1,Spending fee 123.2,EUR,2018-24-10T00:00:00,2,Spending fee"
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

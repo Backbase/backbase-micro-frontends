@@ -1,0 +1,62 @@
+{
+  "name": "/positive-pay-check/client-api/v1/uploads-statuses",
+  "request": {
+    "url": "/positive-pay-check/client-api/v1/upload-statuses(/?)(\\?.*)$",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "unathorized": {
+      "status": 401,
+      "data": {
+        "errors": [
+          {
+            "message": "Unathorized",
+            "key": "common.api.unathorized"
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": [
+        {
+          "id": "849d66ae-c942-2ba7-8739-c5a38a596f35",
+          "status": "UPLOADING"
+        }
+      ]
+    },
+    "success_uploaded": {
+      "status": 200,
+      "data": [
+        {
+          "id": "849d66ae-c942-2ba7-8739-c5a38a596f35",
+          "status": "UPLOAD_SUCCESSFUL"
+        }
+      ]
+    }
+  }
+}

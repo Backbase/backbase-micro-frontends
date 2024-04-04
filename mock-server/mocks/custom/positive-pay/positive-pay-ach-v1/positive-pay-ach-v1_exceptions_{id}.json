@@ -1,0 +1,87 @@
+{
+  "name": "/positive-pay-ach/client-api/v1/exceptions/{id}",
+  "request": {
+    "url": "/positive-pay-ach/client-api/v1/exceptions/(?!(count))(?!next-cut-off-time)[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success_dueToday": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "id": "df6bf97c-19cc-4056-9524-42cef5ce71b8",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+        "paymentType": "ACH Debit",
+        "originatorId": "5123456789",
+        "originatorName": "First Originator",
+        "description": "Payroll December 2020",
+        "standardEntryClass": "CIE",
+        "amount": {
+          "amount": "100.00",
+          "currencyCode": "USD"
+        },
+        "requestDate": "%%today%%",
+        "dueDate": "%%dueToday%%",
+        "errors": ["Invalid Standard Entry Class", "Originator is blocked"]
+      }
+    },
+    "success_dueTommorow": {
+      "default": true,
+      "data": {
+        "id": "df6bf97c-19cc-4056-9524-42cef5ce71b8",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+        "paymentType": "ACH Debit",
+        "originatorId": "5123456789",
+        "originatorName": "First Originator",
+        "description": "Payroll December 2020",
+        "standardEntryClass": "CIE",
+        "amount": {
+          "amount": "100.00",
+          "currencyCode": "USD"
+        },
+        "requestDate": "%%yesterday%%",
+        "dueDate": "%%dueTommorow%%",
+        "errors": ["Invalid Standard Entry Class", "Originator is blocked"]
+      }
+    }
+  }
+}

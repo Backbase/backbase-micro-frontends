@@ -1,0 +1,169 @@
+{
+  "name": "/client-api/v1/rtc/users/{userId}/conversations/{conversationId}/messages_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/users/[^/]+/conversations/[^/]+/messages(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "IM426d0acb198c43df8b42ee6e206fddb9",
+          "type": "CONVERSATION_ACCEPTED",
+          "body": null,
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T20:08:30Z",
+          "dateUpdated": "2021-11-16T20:08:30Z"
+        },
+        {
+          "id": "IMa7443cccfc9946a2810ab019396ce15c",
+          "type": "MESSAGE",
+          "body": "asdf",
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T20:08:32Z",
+          "dateUpdated": "2021-11-16T20:08:32Z"
+        },
+        {
+          "id": "IM81f239c9222b4f548c394489ace20ecc",
+          "type": "MESSAGE",
+          "body": "123123",
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T23:11:32Z",
+          "dateUpdated": "2021-11-16T23:11:32Z"
+        },
+        {
+          "id": "IM079552e6556c4ed6825b84597fa7c691",
+          "type": "MESSAGE",
+          "body": null,
+          "media": [
+            {
+              "id": "MEd726969bac4ea9a8ea0ed1b4881d982f",
+              "contentType": "image/png",
+              "fileName": null,
+              "size": 226933
+            }
+          ],
+          "authorId": "customer",
+          "authorPreferredName": null,
+          "dateCreated": "2021-11-17T00:32:29Z",
+          "dateUpdated": "2021-11-17T00:32:29Z"
+        },
+        {
+          "id": "IM079552e6556c4ed6825b84597fa7c780",
+          "type": "CONVERSATION_ENDED",
+          "body": null,
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-17T00:52:29Z",
+          "dateUpdated": "2021-11-17T00:52:29Z"
+        }
+      ],
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": []
+    },
+    "success_2": {
+      "status": 200,
+      "data": [
+        {
+          "id": "IM426d0acb198c43df8b42ee6e206fddb9",
+          "type": "CONVERSATION_ACCEPTED",
+          "body": null,
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T20:08:30Z",
+          "dateUpdated": "2021-11-16T20:08:30Z"
+        },
+        {
+          "id": "IMa7443cccfc9946a2810ab019396ce15c",
+          "type": "MESSAGE",
+          "body": "asdf",
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T20:08:32Z",
+          "dateUpdated": "2021-11-16T20:08:32Z"
+        },
+        {
+          "id": "IM81f239c9222b4f548c394489ace20ecc",
+          "type": "MESSAGE",
+          "body": "123123",
+          "media": [],
+          "authorId": "admin",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-16T23:11:32Z",
+          "dateUpdated": "2021-11-16T23:11:32Z"
+        },
+        {
+          "id": "IM079552e6556c4ed6825b84597fa7c691",
+          "type": "MESSAGE",
+          "body": null,
+          "media": [
+            {
+              "id": "MEd726969bac4ea9a8ea0ed1b4881d982f",
+              "contentType": "image/png",
+              "fileName": null,
+              "size": 226933
+            }
+          ],
+          "authorId": "customer",
+          "authorPreferredName": null,
+          "dateCreated": "2021-11-17T00:32:29Z",
+          "dateUpdated": "2021-11-17T00:32:29Z"
+        },
+        {
+          "id": "IM079552e6556c4ed7195b84597fa7c691",
+          "type": "CONVERSATION_TRANSFERRED",
+          "body": null,
+          "authorId": "employee1",
+          "authorPreferredName": "Kjiro",
+          "dateCreated": "2021-11-17T00:32:29Z",
+          "attributes": {
+            "queueName": "Loans"
+          }
+        }
+      ]
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

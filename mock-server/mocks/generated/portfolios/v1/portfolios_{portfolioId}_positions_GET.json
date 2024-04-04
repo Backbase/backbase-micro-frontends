@@ -1,0 +1,111 @@
+{
+  "name": "/client-api/v1/portfolios/{portfolioId}/positions_GET",
+  "request": {
+    "url": "/client-api/v1/portfolios/[^/]+/positions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "positions": [
+          {
+            "id": "51c9d6e7-c3fa-40e2-a500-4b4e2f11cbd3",
+            "instrument": {
+              "id": "6163a37e-6148-46ac-bd46-f62f563dfa7e",
+              "name": "Apples and Pears",
+              "code": "UAPL",
+              "ticker": "UAPL",
+              "exchange": "NASDAQ",
+              "currency": "UAH",
+              "available": true,
+              "assetClass": {
+                "id": "6153577f-ad4c-47a4-bab2-b2e7c7b172cd",
+                "name": "Equities"
+              }
+            },
+            "quantity": 120,
+            "price": {
+              "currency": "UAH",
+              "amount": 1030
+            },
+            "exchangeRate": 0.99,
+            "valuation": {
+              "currency": "USD",
+              "amount": 1028
+            },
+            "accruedInterest": {
+              "amount": 12,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 1001,
+              "currency": "UAH"
+            },
+            "costExchangeRate": 1.01,
+            "unrealizedPL": {
+              "amount": 0.2,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 0.02,
+            "todayPL": {
+              "amount": 0.12,
+              "currencyCode": "USD"
+            },
+            "todayPLPct": 0.05,
+            "assetClassPct": 0.4,
+            "portfolioPct": 0.33,
+            "country": {
+              "id": "87a87cfc-81a2-4193-aafb-fa08e699ba70",
+              "name": "Ukraine",
+              "code": "UA"
+            },
+            "additions": {
+              "someKey": "someValue"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

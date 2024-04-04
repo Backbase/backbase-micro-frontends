@@ -1,0 +1,91 @@
+{
+  "name": "/client-api/v1/sanctioned-currencies_GET",
+  "request": {
+    "url": "/client-api/v1/sanctioned-currencies(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "default": {
+          "code": "GBP",
+          "decimals": 2
+        },
+        "labeled": {
+          "normal": [
+            {
+              "code": "AED",
+              "decimals": 2
+            },
+            {
+              "code": "AUD",
+              "decimals": 2
+            },
+            {
+              "code": "BRL",
+              "decimals": 2
+            },
+            {
+              "code": "CAD",
+              "decimals": 2
+            },
+            {
+              "code": "CNY",
+              "decimals": 2
+            },
+            {
+              "code": "HKD",
+              "decimals": 2
+            },
+            {
+              "code": "INR",
+              "decimals": 2
+            },
+            {
+              "code": "JPY",
+              "decimals": 0
+            },
+            {
+              "code": "JOD",
+              "decimals": 3
+            },
+            {
+              "code": "RUB",
+              "decimals": 2
+            },
+            {
+              "code": "SGD",
+              "decimals": 2
+            },
+            {
+              "code": "ZAR",
+              "decimals": 2
+            }
+          ],
+          "popular": [
+            {
+              "code": "EUR",
+              "decimals": 2
+            },
+            {
+              "code": "GBP",
+              "decimals": 2
+            },
+            {
+              "code": "USD",
+              "decimals": 2
+            }
+          ]
+        }
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

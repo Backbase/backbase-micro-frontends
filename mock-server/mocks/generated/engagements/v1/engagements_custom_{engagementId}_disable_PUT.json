@@ -1,0 +1,119 @@
+{
+  "name": "/engagement/client-api/v1/engagements/custom/{engagementId}/disable_PUT",
+  "request": {
+    "url": "/engagement/client-api/v1/engagements/custom/[^/]+/disable(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "name": "Engagement sample",
+        "uuid": "0c8b3e8b-fbff-4a4c-bb7b-9ff47aba1154",
+        "version": 1,
+        "locale": "en",
+        "startDate": "2022-03-15T23:00:00Z",
+        "endDate": "2022-03-29T22:00:00Z",
+        "audience": {
+          "type": "id",
+          "id": "6900fb88-208c-4c4e-ac52-d42ef7310d9c"
+        },
+        "channels": [
+          {
+            "type": "banner",
+            "enabled": true,
+            "uuid": "e4e51d48-21e8-42e8-bd2d-a56ff360c5cb",
+            "targetUrl": "https://www.backbase.com/",
+            "targetUrlDisplayMode": "self",
+            "priority": "medium",
+            "creatives": [
+              {
+                "uuid": "808be33f-85c0-412a-8dc8-56926b2afe00",
+                "dimensions": "328x430",
+                "filename": "SampleHTMLTemplateS.html",
+                "draftContentId": "/engagement/7eabf309-8cb2-4b36-bb35-da0f8d2e6f02/banner/03717d04-98bd-487b-b6d9-c6ec05193f4a/dimensions/328x430/0/SampleHTMLTemplateS.html",
+                "draftRepositoryId": "engagement-template-custom"
+              }
+            ],
+            "campaignSlots": [
+              {
+                "portalName": "retail-app",
+                "pageName": "page-index-8mq4cb",
+                "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+              }
+            ],
+            "startDate": "2022-03-15T23:00:00Z",
+            "endDate": "2022-03-29T22:00:00Z"
+          }
+        ],
+        "status": "paused"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

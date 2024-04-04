@@ -1,0 +1,79 @@
+{
+  "name": "/engagement/client-api/v1/general-notifications_GET",
+  "request": {
+    "url": "/engagement/client-api/v1/general-notifications(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "account-statement-ready",
+          "name": "Account Statement Is Ready",
+          "deliveryOptions": ["in-app-notification", "push"]
+        },
+        {
+          "id": "new-message-received",
+          "name": "New Message Received FFS",
+          "deliveryOptions": ["in-app-notification", "push"]
+        },
+        {
+          "id": "new-transaction-occurred",
+          "name": "New Transaction Occurred",
+          "deliveryOptions": ["in-app-notification", "push"]
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

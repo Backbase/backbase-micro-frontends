@@ -1,0 +1,73 @@
+{
+  "name": "/client-api/v2/policies_GET",
+  "request": {
+    "url": "/client-api/v2/policies(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "policies": [
+          {
+            "id": "6546c424-d3b1-4848-bbda-31cd44ab6915",
+            "name": "Simple policy",
+            "description": "A basic policy, requires one approval of type 'A' and one of type 'B'.",
+            "items": [
+              {
+                "approvalType": {
+                  "id": "748fef85-2a7a-47fa-b016-7cae583a0b79",
+                  "name": "A",
+                  "description": "1st approval",
+                  "rank": 100
+                },
+                "numberOfApprovals": 1
+              },
+              {
+                "approvalType": {
+                  "id": "9c666d9e-92d4-4d8f-9366-a4d3ee336c0c",
+                  "name": "B",
+                  "description": "2nd approval",
+                  "rank": 200
+                },
+                "numberOfApprovals": 1
+              }
+            ]
+          },
+          {
+            "id": "5a2d069a-d4c8-43aa-ba93-9069c65458ec",
+            "name": "Secondary policy",
+            "description": "A secondary policy that requires two approvals of the same type: A + A",
+            "items": [
+              {
+                "approvalType": {
+                  "id": "748fef85-2a7a-47fa-b016-7cae583a0b79",
+                  "name": "A",
+                  "description": "1st approval",
+                  "rank": 100
+                },
+                "numberOfApprovals": 2
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

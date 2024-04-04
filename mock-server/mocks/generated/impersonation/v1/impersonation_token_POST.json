@@ -1,0 +1,66 @@
+{
+  "name": "/client-api/v1/impersonation/token_POST",
+  "request": {
+    "url": "/client-api/v1/impersonation/token(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "408": {
+      "status": 408,
+      "data": {
+        "message": "Request Timeout",
+        "errors": [
+          {
+            "message": "Server request timed out",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": {
+        "access_token": "eyJhbGciOiJSUzI...",
+        "refresh_token": "eyJhbGciOiJSUzI..."
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

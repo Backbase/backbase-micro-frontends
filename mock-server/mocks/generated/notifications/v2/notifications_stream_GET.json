@@ -1,0 +1,376 @@
+{
+  "name": "/client-api/v2/notifications/stream_GET",
+  "request": {
+    "url": "/client-api/v2/notifications/stream(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "455764c6-aa6f-476d-bf63-89c9fb100878",
+          "title": "Unsupported browser",
+          "message": "DBS does not support this browser, please choose recommended {{community}}",
+          "link": "https://community.backbase.com/",
+          "level": "WARNING",
+          "origin": "Security",
+          "createdOn": "2020-06-16T14:55:36.000+0000",
+          "validFrom": "2020-07-04T14:55:36.000+0000",
+          "expiresOn": "2021-07-04T14:55:36.000+0000",
+          "translations": {
+            "en-US": {
+              "title": "Unsupported browser",
+              "message": "DBS does not support this browser, please choose recommended {{community}}",
+              "link": "https://community.backbase.com/en/"
+            },
+            "fr-FR": {
+              "title": "Navigateur non supporté",
+              "message": "DBS ne supporte pas ce navigateur, veuillez choisir recommandé {{communauté}}.",
+              "link": "https://community.backbase.com/fr/"
+            }
+          }
+        },
+        {
+          "id": "93bf73c9-aa6f-476d-bf63-89c9fb100878",
+          "title": "We found potential security vulnerabilities",
+          "message": "Security vulnerability found, {{learn more about security alerts}}",
+          "link": "https://community.backbase.com/",
+          "level": "ALERT",
+          "origin": "Security",
+          "createdOn": "2020-06-15T14:55:36.000+0000",
+          "validFrom": "2020-07-03T14:55:36.000+0000",
+          "expiresOn": "2021-07-03T14:55:36.000+0000",
+          "translations": {
+            "en-US": {
+              "title": "We found potential security vulnerabilities",
+              "message": "Security vulnerability found, {{learn more about security alerts}}",
+              "link": "https://community.backbase.com/en/"
+            },
+            "fr-FR": {
+              "title": "Nous avons trouvé des vulnérabilités de sécurité potentielles",
+              "message": "Vulnérabilité de sécurité trouvée, {{en savoir plus sur les alertes de sécurité}}",
+              "link": "https://community.backbase.com/fr/"
+            }
+          }
+        },
+        {
+          "id": "29929ef8-aa6f-476d-bf63-89c9fb100878",
+          "title": "Please, update your email",
+          "message": "Recovery email is not set. To set up, please click {{here}}",
+          "link": "https://community.backbase.com/",
+          "level": "INFO",
+          "origin": "Security",
+          "createdOn": "2020-06-14T14:55:36.000+0000",
+          "validFrom": "2020-07-02T14:55:36.000+0000",
+          "expiresOn": "2021-07-02T14:55:36.000+0000",
+          "translations": {
+            "en-US": {
+              "title": "Please, update your email",
+              "message": "Recovery email is not set. To set up, please click {{here}}",
+              "link": "https://community.backbase.com/en/"
+            },
+            "fr-FR": {
+              "title": "S'il vous plaît, mettez à jour votre email",
+              "message": "Le courrier électronique de récupération n'est pas défini. Pour configurer, s'il vous plaît cliquez sur {{here}}",
+              "link": "https://community.backbase.com/fr/"
+            }
+          }
+        },
+        {
+          "id": "799c3959-aa6f-476d-bf63-89c9fb100878",
+          "title": "Bill Pay available",
+          "message": "Ability to add payments to a bill is available on {{bill pay menu tab}}",
+          "link": "https://community.backbase.com/",
+          "level": "SUCCESS",
+          "origin": "BillPay",
+          "createdOn": "2020-06-13T14:55:36.000+0000",
+          "validFrom": "2020-07-01T14:55:36.000+0000",
+          "expiresOn": "2021-07-01T14:55:36.000+0000",
+          "routing": {
+            "where-to": "transaction-view",
+            "data": {
+              "id": "123-456-789"
+            }
+          },
+          "translations": {
+            "en-US": {
+              "title": "Bill Pay available",
+              "message": "Ability to add payments to a bill is available on {{bill pay menu tab}}",
+              "link": "https://community.backbase.com/en/"
+            },
+            "fr-FR": {
+              "title": "Bill Pay disponible",
+              "message": "La possibilité d’ajouter des paiements à une facture est disponible à {{facture facture}}",
+              "link": "https://community.backbase.com/fr/"
+            }
+          }
+        },
+        {
+          "id": "eb4853a9-306f-4a8d-a7be-5093b03e0c32",
+          "title": "Account balance changed",
+          "message": "&#128184; Hi John, your saving account balance just went below threshold.  The current balance is EUR 100.00",
+          "level": "INFO",
+          "origin": "Accounts",
+          "createdOn": "2020-05-30T06:49:46.000+0000",
+          "routing": {
+            "where-to": "arrangement-view",
+            "data": {
+              "id": "2265e96bfd19",
+              "arrangementId": "dae9ac97-5765-470f-9fa9-e221505791ee"
+            }
+          }
+        },
+        {
+          "id": "2b39e45f-08f7-4a5f-ac5b-be57772a7482",
+          "title": "New transaction",
+          "message": "&#128184; Paid EUR 100.00 Quickbooks monthly subscription fee.",
+          "level": "ALERT",
+          "origin": "PFM",
+          "createdOn": "2020-05-28T08:09:27.000+0000",
+          "routing": {
+            "where-to": "transaction-view",
+            "data": {
+              "id": "e4c26f12e4935",
+              "arrangementId": "67d5e587-b602-4c3e-a3f2-e339d70bfb4b"
+            }
+          }
+        },
+        {
+          "id": "d72f9307-df48-4111-b79e-21402cdf446a",
+          "title": "Saving goal",
+          "message": "Congrats, you successfully completed your saving goal for Maldives trip.",
+          "level": "INFO",
+          "origin": "PFM",
+          "createdOn": "2020-05-26T08:09:27.000+0000"
+        },
+        {
+          "id": "da595756-6ef9-40f4-a034-f3f0a695c648",
+          "title": "Account balance changed",
+          "message": "&#128184; Hi John, your saving account balance just went below threshold.  The current balance is EUR 100.00 ",
+          "level": "INFO",
+          "origin": "Accounts",
+          "createdOn": "2020-05-24T22:55:55.000+0000"
+        },
+        {
+          "id": "746d4549-8792-4765-85fe-90fde7d07d95",
+          "title": "Payment status change",
+          "message": "Your payment to Acme Corp of EUR 100.00 has changed to rejected.",
+          "level": "INFO",
+          "origin": "Payment",
+          "createdOn": "2020-05-22T08:17:41.000+0000",
+          "routing": {
+            "where-to": "payment-view",
+            "data": {
+              "id": "d3d3a955-aa94-44ba-a90c-c9eafab81213"
+            }
+          }
+        },
+        {
+          "id": "19b11619-f8de-49c9-a795-d4746a6a2dcb",
+          "title": "Contact status change",
+          "message": "The status for Contact: Kenya Coffee Beans has changed to rejected.",
+          "link": "https://community.backbase.com/",
+          "level": "WARNING",
+          "origin": "Contact",
+          "createdOn": "2020-05-20T19:31:52.000+0000",
+          "routing": {
+            "where-to": "party-view",
+            "data": {
+              "id": "4b9eb675-65ad-4247-8ff4-d549e3b340c6"
+            }
+          }
+        },
+        {
+          "id": "e1430d9f-c6e4-4a2a-b26a-4137d0217a9c",
+          "title": "Payment to approve",
+          "message": "You have a new payment of EUR 100.00 to approve.",
+          "level": "INFO",
+          "origin": "Payment",
+          "createdOn": "2020-05-18T08:09:27.000+0000",
+          "routing": {
+            "where-to": "payment-approve-view",
+            "data": {
+              "id": "d3d3a955-aa94-44ba-a90c-c9eafab81213"
+            }
+          }
+        },
+        {
+          "id": "e1430d9f-c6e4-4a2a-b26a-4137d0217111",
+          "title": "Payments summary",
+          "message": "You have 4 payments to approve since 2021-05-05 16:00:00.",
+          "level": "INFO",
+          "origin": "Payment",
+          "createdOn": "2020-05-05T08:09:27.000+0000",
+          "routing": {
+            "where-to": "payments-list-view"
+          }
+        },
+        {
+          "id": "e155c460-bdd6-4371-9cce-0a1189a2125d",
+          "title": "Contact to approve",
+          "message": "You have new contact to approve.",
+          "level": "INFO",
+          "origin": "Contact",
+          "createdOn": "2020-05-16T06:04:28.000+0000",
+          "routing": {
+            "where-to": "party-approve-view",
+            "data": {
+              "id": "4b9eb675-65ad-4247-8ff4-d549e3b340c6"
+            }
+          }
+        },
+        {
+          "id": "6eb77bed-c571-4cec-bcd5-d21914475ee1",
+          "title": "Planned maintenance",
+          "message": "The server will be down at October 4 due to some problems you should not care about. Sorry for inconvenience. For more information check the {{link}}.",
+          "level": "WARNING",
+          "origin": "Maintenance",
+          "link": "http://support.dashboard.backbase.com",
+          "createdOn": "2020-05-14T08:09:27.000+0000"
+        },
+        {
+          "id": "2d534c32-290b-4d7f-a730-90a904140457",
+          "title": "Export complete",
+          "message": "The CSV you requested for export is complete and ready to {{link}}",
+          "level": "SUCCESS",
+          "link": "http://support.dashboard.backbase.com",
+          "origin": "Audit",
+          "createdOn": "2020-05-12T18:24:26.000+0000"
+        },
+        {
+          "id": "60adeeff-f841-4940-a4bc-d7d3d5850517",
+          "title": "Export failed",
+          "message": "The CSV you requested for export failed to complete",
+          "level": "WARNING",
+          "origin": "Audit",
+          "createdOn": "2020-05-10T08:09:27.000+0000"
+        },
+        {
+          "id": "788d6a1b-f2ab-4755-8444-acb9d677d3e8",
+          "title": "Scheduled payment alert",
+          "message": "Don't forget: 50,- will be withdrawn from the account on 2021-10-04",
+          "level": "INFO",
+          "origin": "Security",
+          "createdOn": "2020-05-08T16:37:59.000+0000"
+        },
+        {
+          "id": "151b0953-2e09-4421-980a-cb4f5ab213e6",
+          "title": "Updates",
+          "message": "You are using an old version of application. Please update it as soon as possible. To get the new version click the {{link}}.",
+          "level": "WARNING",
+          "origin": "Security",
+          "createdOn": "2020-05-06T08:09:27.000+0000"
+        },
+        {
+          "id": "d4ba2576-fd6a-47f8-89fe-16a46d67b5b0",
+          "title": "Account statement is ready",
+          "message": "Your monthly account statement is ready to download",
+          "level": "SUCCESS",
+          "origin": "AccountStatement",
+          "createdOn": "2020-05-04T08:09:27.000+0000"
+        },
+        {
+          "id": "d3c9379e-31e3-45ca-a9a7-2771c1c8b5ff",
+          "title": "New message - Unassigned",
+          "message": "From: J.Smith<br/>Subject: Credit<br/>Topic: Currency",
+          "level": "INFO",
+          "origin": "MessageCenter",
+          "createdOn": "2020-05-02T08:09:27.000+0000",
+          "routing": {
+            "where-to": "conversation-view",
+            "data": {
+              "id": "11-11-11"
+            }
+          }
+        },
+        {
+          "id": "d72f9307-df48-4111-b79e-21402cdf446b",
+          "title": "Pocket Goal &#127881;",
+          "message": "Well done! Don't forget to withdraw your money and create a new pocket for more saving goals",
+          "level": "SUCCESS",
+          "origin": "FinancialInsights",
+          "createdOn": "2020-01-30T08:09:27.000+0000",
+          "routing": {
+            "where-to": "pocket-success-view",
+            "data": {
+              "id": "456789123"
+            }
+          }
+        },
+        {
+          "id": "d4ba2576-fd6a-47f8-89fe-16a46d67b5b0",
+          "title": "Saving goal",
+          "message": "Congrats, you successfully completed your saving goal for J.Smith",
+          "level": "INFO",
+          "origin": "PFM",
+          "createdOn": "2020-01-29T08:09:27.000+0000"
+        },
+        {
+          "id": "d4ba2576-fd6a-47f8-89fe-16a46d67b5b0",
+          "title": "Limit consumption warning",
+          "message": "You are getting close to limits threshold. Please contact Administrator",
+          "level": "WARNING",
+          "origin": "Limits",
+          "createdOn": "2020-01-028T08:09:27.000+0000"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "/client-api/v1/financial-institutions_GET",
+  "request": {
+    "url": "/client-api/v1/financial-institutions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "financialInstitutions": [
+          {
+            "id": 1,
+            "externalId": "11da7d70-ed15-11ea-adc1-0242ac120002",
+            "name": "ABN Amro",
+            "logo": "https://landportal.org/sites/landportal.org/files/styles/220heightmax/public/abn-amro-logo-vertikaal.png",
+            "credentials": [
+              {
+                "name": "username",
+                "label": "Username",
+                "type": "TEXT"
+              },
+              {
+                "name": "password",
+                "label": "Password",
+                "type": "PASSWORD"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "externalId": "b149f34b-de04-4d79-83f6-9605d698a7b5",
+            "name": "ING",
+            "logo": "https://www.ing.com/static/ingdotcompresentation/static/images/ING_lion_RGB_200x200.png",
+            "credentials": [
+              {
+                "name": "username",
+                "label": "Username",
+                "type": "TEXT"
+              },
+              {
+                "name": "password",
+                "label": "Password",
+                "type": "PASSWORD"
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "/client-api/v2/approvals/{requestId}_DELETE",
+  "request": {
+    "url": "/client-api/v2/approvals/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    }
+  }
+}

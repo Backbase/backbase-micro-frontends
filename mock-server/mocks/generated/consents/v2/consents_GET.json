@@ -1,0 +1,107 @@
+{
+  "name": "/consent/client-api/v2/consents_GET",
+  "request": {
+    "url": "/consent/client-api/v2/consents(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "34bf3478-4187-46b1-aab1-20577c5d339c",
+          "tpp": {
+            "id": "0dbbf48e-53dc-4968-8167-6337718f9781",
+            "externalId": "amazon",
+            "name": "Amazon",
+            "website": "https://amazon.com",
+            "imageUrl": "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-48.png",
+            "isTrusted": true,
+            "mail": "primary@amazon.com",
+            "phonenumber": "8882803321",
+            "address": "Amazon.com, Inc. Customer Service PO Box 81226 Seattle, WA 98108-1226",
+            "country": "US"
+          },
+          "status": "ACTIVE",
+          "expiryDate": "2019-03-28T16:41:41.090Z",
+          "numberOfAccounts": 3
+        },
+        {
+          "id": "ffe7b310-63ff-4c3a-be75-ec5f19da7e9e",
+          "tpp": {
+            "id": "b1e5bca6-2185-42a0-8701-08f4c3497485",
+            "externalId": "netflix",
+            "name": "Netflix",
+            "website": "https://netflix.com",
+            "imageUrl": "https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Netflix.png",
+            "isTrusted": true,
+            "mail": "support@netflix.com",
+            "phonenumber": "8882803321",
+            "address": "Bowery street 103, 1290 LL, New York, New York, USA",
+            "country": "US"
+          },
+          "status": "REVOKED",
+          "expiryDate": "2019-05-28T16:41:41.090Z",
+          "numberOfAccounts": 1
+        },
+        {
+          "id": "18dd7b1c-dabf-49bb-b9e3-5f586efd19d3",
+          "tpp": {
+            "id": "b62943b9-811b-446d-ac68-0a38de63d792",
+            "externalId": "some-third-party",
+            "name": "Some third party",
+            "website": "https://some-third-party.com",
+            "isTrusted": false,
+            "mail": "contact@some-third-party.com",
+            "phonenumber": "8882803321",
+            "address": "2967 West Side Avenue, 07649, Angwil, River Edge, New Jersey, USA",
+            "country": "US"
+          },
+          "status": "EXPIRED",
+          "expiryDate": "2018-09-28T16:41:41.090Z",
+          "numberOfAccounts": 2
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "value": {
+          "value": {
+            "message": "Bad Request",
+            "errors": [
+              {
+                "message": "Value Exceeded. Must be between {min} and {max}.",
+                "key": "common.api.shoesize",
+                "context": {
+                  "max": "50",
+                  "min": "1"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "value": {
+          "value": {
+            "message": "Access to requested resource denied.",
+            "errors": [
+              {
+                "message": "Resource access denied due to an insufficient user quota of {quota}.",
+                "key": "common.api.quota",
+                "context": {
+                  "quota": "someQuota"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

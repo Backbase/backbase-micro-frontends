@@ -1,0 +1,172 @@
+{
+  "name": "/client-api/v2/cards/{id}/replacement_POST",
+  "request": {
+    "url": "/client-api/v2/cards/[^/]+/replacement(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "value": {
+          "id": "sara-card-1",
+          "brand": "mastercard",
+          "type": "Credit",
+          "subType": "ATM",
+          "name": "Gold Card",
+          "status": "Active",
+          "lockStatus": "UNLOCKED",
+          "replacement": {
+            "status": "NotUnderReplacement"
+          },
+          "holder": {
+            "name": "Sara Williams"
+          },
+          "expiryDate": {
+            "year": "2022",
+            "month": "12"
+          },
+          "currency": "USD",
+          "maskedNumber": "5235",
+          "limits": [
+            {
+              "id": "sara-limit-1",
+              "channel": "ATM",
+              "frequency": "DAILY",
+              "amount": 3000,
+              "maxAmount": 10000,
+              "minAmount": 0
+            },
+            {
+              "id": "sara-limit-2",
+              "channel": "ONLINE",
+              "frequency": "DAILY",
+              "amount": 2000,
+              "maxAmount": 10000,
+              "minAmount": 0
+            }
+          ]
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "description": "damaged card",
+        "value": {
+          "id": "elon-card-1",
+          "brand": "mastercard",
+          "type": "Credit",
+          "subType": "ATM",
+          "name": "World Elite",
+          "status": "Active",
+          "lockStatus": "UNLOCKED",
+          "replacement": {
+            "status": "ReplacementRequested",
+            "reason": "Damaged"
+          },
+          "holder": {
+            "name": "Elon"
+          },
+          "expiryDate": {
+            "year": "2050",
+            "month": "12"
+          },
+          "currency": "EUR",
+          "maskedNumber": "5235",
+          "delivery": {
+            "transitSteps": [
+              {
+                "name": "Ordered",
+                "status": "SUCCESS",
+                "stepDateTime": "2019-06-19T12:52:20.906Z"
+              },
+              {
+                "name": "Processed",
+                "status": "PENDING"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "description": "stolen card",
+        "value": {
+          "id": "john-card-1",
+          "brand": "visa",
+          "type": "Credit",
+          "subType": "ATM",
+          "name": "Gold",
+          "status": "Inactive",
+          "lockStatus": "UNLOCKED",
+          "replacement": {
+            "status": "ReplacementRequested",
+            "reason": "Stolen"
+          },
+          "holder": {
+            "name": "John Doe"
+          },
+          "expiryDate": {
+            "year": "2030",
+            "month": "06"
+          },
+          "currency": "EUR",
+          "maskedNumber": "5827",
+          "delivery": {
+            "transitSteps": [
+              {
+                "name": "Ordered",
+                "status": "SUCCESS",
+                "stepDateTime": "2019-06-19T12:52:20.906Z"
+              },
+              {
+                "name": "Processed",
+                "status": "SUCCESS"
+              },
+              {
+                "name": "In Transit",
+                "status": "SUCCESS"
+              },
+              {
+                "name": "Delivered",
+                "status": "SUCCESS"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "description": "lost card",
+        "value": {
+          "id": "kim-card-1",
+          "brand": "mastercard",
+          "type": "Debit",
+          "subType": "ATM",
+          "name": "Copper",
+          "status": "Inactive",
+          "lockStatus": "UNLOCKED",
+          "replacement": {
+            "status": "ReplacementRequested",
+            "reason": "Lost"
+          },
+          "holder": {
+            "name": "Kim Sook"
+          },
+          "expiryDate": {
+            "year": "2027",
+            "month": "03"
+          },
+          "currency": "EUR",
+          "maskedNumber": "9292"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "/api/v1/client-api/v1/news/feeds_GET",
+  "request": {
+    "url": "/client-api/v1/news/feeds(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "feeds": [
+          {
+            "id": "98d02739-082c-447e-8041-a7258ec41494",
+            "name": "Latest News"
+          },
+          {
+            "id": "66b9c6fe-ef0f-45dd-8ab0-3877dff533af",
+            "name": "World News"
+          },
+          {
+            "id": "90443f08-3733-4de2-955f-a6f036f1a49b",
+            "name": "Position News"
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/service-agreements/{id}/state_PUT",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/service-agreements/[^/]+/state(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {},
+      "default": true
+    }
+  }
+}

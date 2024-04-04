@@ -1,0 +1,74 @@
+{
+  "name": "/client-api/v2/categories/{id}_GET",
+  "request": {
+    "url": "/client-api/v2/categories/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "categoryId": 1,
+        "externalId": "1",
+        "categoryName": "Home",
+        "categoryType": "Expenses",
+        "subCategories": [
+          {
+            "categoryId": 2,
+            "externalId": "2",
+            "categoryName": "Mortgage",
+            "categoryType": "Expenses",
+            "parentId": 1
+          },
+          {
+            "categoryId": 3,
+            "externalId": "3",
+            "categoryName": "Rent",
+            "categoryType": "Expenses",
+            "parentId": 1
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

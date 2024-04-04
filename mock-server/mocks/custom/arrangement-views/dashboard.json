@@ -1,0 +1,352 @@
+{
+  "name": "/arrangement-manager/client-api/v2/arrangement-views/dashboard",
+  "request": {
+    "url": "/arrangement-manager/client-api/v2/arrangement-views/dashboard(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 71,
+          "balanceAggregations": {
+            "all": {
+              "USD": {
+                "amount": "1445208.60000",
+                "numberOfAccounts": 22
+              },
+              "GBP": {
+                "amount": "7331688888.40000",
+                "numberOfAccounts": 15
+              },
+              "EUR": {
+                "amount": "33494.50000",
+                "numberOfAccounts": 15
+              },
+              "CAD": {
+                "amount": "6.50000",
+                "numberOfAccounts": 15
+              },
+              "BHD": {
+                "amount": "5109.20000",
+                "numberOfAccounts": 1
+              },
+              "INR": {
+                "amount": "-2836.90000",
+                "numberOfAccounts": 1
+              },
+              "CNY": {
+                "amount": "7803.30000",
+                "numberOfAccounts": 1
+              },
+              "JPY": {
+                "amount": "532.60000",
+                "numberOfAccounts": 1
+              }
+            },
+            "savings": {
+              "USD": {
+                "amount": "42801.10000",
+                "numberOfAccounts": 6
+              },
+              "CAD": {
+                "amount": "31481.10000",
+                "numberOfAccounts": 6
+              },
+              "EUR": {
+                "amount": "20804.10000",
+                "numberOfAccounts": 7
+              },
+              "GBP": {
+                "amount": "34205.80000",
+                "numberOfAccounts": 6
+              }
+            },
+            "credit-cards": {
+              "USD": {
+                "amount": "9754.50000",
+                "numberOfAccounts": 1
+              }
+            },
+            "current-accounts": {
+              "GBP": {
+                "amount": "22553.20000",
+                "numberOfAccounts": 8
+              },
+              "EUR": {
+                "amount": "12690.40000",
+                "numberOfAccounts": 8
+              },
+              "USD": {
+                "amount": "33374.30000",
+                "numberOfAccounts": 10
+              },
+              "CAD": {
+                "amount": "17989.30000",
+                "numberOfAccounts": 7
+              },
+              "BHD": {
+                "amount": "5109.20000",
+                "numberOfAccounts": 1
+              },
+              "INR": {
+                "amount": "-2836.90000",
+                "numberOfAccounts": 1
+              },
+              "CNY": {
+                "amount": "7803.30000",
+                "numberOfAccounts": 1
+              },
+              "JPY": {
+                "amount": "532.60000",
+                "numberOfAccounts": 1
+              }
+            },
+            "investments": {
+              "GBP": {
+                "amount": "16557888888.40000",
+                "numberOfAccounts": 1
+              },
+              "USD": {
+                "amount": "961369.30000",
+                "numberOfAccounts": 2
+              },
+              "CAD": {
+                "amount": "640456.80000",
+                "numberOfAccounts": 1
+              }
+            },
+            "loans": {
+              "CAD": {
+                "amount": "710.30000",
+                "numberOfAccounts": 1
+              },
+              "USD": {
+                "amount": "19143.40000",
+                "numberOfAccounts": 2
+              }
+            },
+            "term-deposits": {
+              "USD": {
+                "amount": "378766.00000",
+                "numberOfAccounts": 1
+              }
+            }
+          },
+          "projections": {}
+        },
+        "groups": {
+          "favorites": {
+            "metadata": {
+              "totalCount": 0
+            },
+            "elements": []
+          },
+          "non-favorites": {
+            "metadata": {
+              "totalCount": 71,
+              "nextCursor": "MGY5Y2EwZDAtZjEwMi00ZDMwLTkyOGQtMjA4YWU0ZWE3ZDE2"
+            },
+            "elements": [
+              {
+                "id": "b8f0211d-5b5f-4429-b900-ffeca891011d",
+                "attributes": {
+                  "primaryBalance": {
+                    "type": "DECIMAL",
+                    "key": "bookedBalance",
+                    "value": "-2719.20000"
+                  },
+                  "productKindUri": {
+                    "type": "STRING",
+                    "value": "current-account"
+                  },
+                  "displayName": {
+                    "type": "STRING",
+                    "value": "Assets EUR ZYK812"
+                  },
+                  "productKindName": {
+                    "type": "STRING",
+                    "value": "Current Account"
+                  },
+                  "currency": {
+                    "type": "STRING",
+                    "value": "EUR"
+                  },
+                  "accountNumber": {
+                    "type": "STRING",
+                    "key": "BBAN",
+                    "value": "••••••••••••••••••2812"
+                  }
+                }
+              },
+              {
+                "id": "4e24514b-7bb6-4efc-b0ba-50b0ffc5452f",
+                "attributes": {
+                  "primaryBalance": {
+                    "type": "DECIMAL",
+                    "key": "bookedBalance",
+                    "value": "5109.20000"
+                  },
+                  "productKindUri": {
+                    "type": "STRING",
+                    "value": "current-account"
+                  },
+                  "displayName": {
+                    "type": "STRING",
+                    "value": "Bahrain sales BHD RYG296"
+                  },
+                  "productKindName": {
+                    "type": "STRING",
+                    "value": "Current Account"
+                  },
+                  "currency": {
+                    "type": "STRING",
+                    "value": "BHD"
+                  },
+                  "accountNumber": {
+                    "type": "STRING",
+                    "key": "BBAN",
+                    "value": "•••••2296"
+                  }
+                }
+              },
+              {
+                "id": "724684d5-1485-407f-a5d0-0fa5fa012a12",
+                "attributes": {
+                  "primaryBalance": {
+                    "type": "DECIMAL",
+                    "key": "bookedBalance",
+                    "value": "7803.30000"
+                  },
+                  "productKindUri": {
+                    "type": "STRING",
+                    "value": "current-account"
+                  },
+                  "displayName": {
+                    "type": "STRING",
+                    "value": "China sales CNY ZQO579"
+                  },
+                  "productKindName": {
+                    "type": "STRING",
+                    "value": "Current Account"
+                  },
+                  "currency": {
+                    "type": "STRING",
+                    "value": "CNY"
+                  },
+                  "accountNumber": {
+                    "type": "STRING",
+                    "key": "BBAN",
+                    "value": "•••••9579"
+                  }
+                }
+              },
+              {
+                "id": "02e8bf23-1fb2-4d0e-bef2-7aa9783a23db",
+                "attributes": {
+                  "primaryBalance": {
+                    "type": "DECIMAL",
+                    "key": "creditLimitUsage",
+                    "value": "478723.20000"
+                  },
+                  "productKindUri": {
+                    "type": "STRING",
+                    "value": "credit-card"
+                  },
+                  "displayName": {
+                    "type": "STRING",
+                    "value": "Credit Card USD LCF880"
+                  },
+                  "productKindName": {
+                    "type": "STRING",
+                    "value": "Credit Card"
+                  },
+                  "currency": {
+                    "type": "STRING",
+                    "value": "USD"
+                  },
+                  "accountNumber": {
+                    "type": "STRING",
+                    "value": "••••"
+                  }
+                }
+              },
+              {
+                "id": "4c17d339-e714-4a45-a632-9da5301170cb",
+                "attributes": {
+                  "primaryBalance": {
+                    "type": "DECIMAL",
+                    "key": "bookedBalance",
+                    "value": "-3766.80000"
+                  },
+                  "productKindUri": {
+                    "type": "STRING",
+                    "value": "current-account"
+                  },
+                  "displayName": {
+                    "type": "STRING",
+                    "value": "Current Account EUR TLT672"
+                  },
+                  "productKindName": {
+                    "type": "STRING",
+                    "value": "Current Account"
+                  },
+                  "currency": {
+                    "type": "STRING",
+                    "value": "EUR"
+                  },
+                  "accountNumber": {
+                    "type": "STRING",
+                    "key": "BBAN",
+                    "value": "•••••••••••••••••••1672"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

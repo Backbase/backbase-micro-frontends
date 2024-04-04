@@ -1,0 +1,56 @@
+{
+  "name": "/client-api/v1/batch-templates/{batchTemplateId}/validation-errors_GET",
+  "request": {
+    "url": "/client-api/v1/batch-templates/[^/]+/validation-errors(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict error",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "The request could not be completed due to a conflict with the current state of the resource.",
+            "key": "transactions.api.billingstatus.transaction",
+            "context": {
+              "billingStatus": "BILLED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "message": "Total credit transactions count {{totalCreditTransactionsCount}} does not match the intended total credit transactions count {{intendedTotalCreditTransactionsCount}}.",
+          "key": "TotalCreditTransactionsCountMismatch",
+          "context": {
+            "intendedTotalCreditTransactionsCount": "10000",
+            "totalCreditTransactionsCount": "2"
+          }
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

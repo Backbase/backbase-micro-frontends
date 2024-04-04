@@ -1,0 +1,134 @@
+{
+  "name": "/client-api/v2/users/identities_GET",
+  "request": {
+    "url": "/client-api/v2/users/identities(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "identities": [
+          {
+            "id": "eadaca0b-0b9d-4244-8922-1dead62d00e4",
+            "externalId": "U0000010",
+            "legalEntityId": "48b711b8-5adb-4826-a9cc-141b386f8930",
+            "fullName": "Hasnain Boyd",
+            "legalEntityName": "Backbase"
+          },
+          {
+            "id": "177296ae-3ebb-42f4-80fe-2d79d81cc469",
+            "externalId": "U0000011",
+            "legalEntityId": "f5aacf55-44bb-4393-9d21-152d14fae6b9",
+            "fullName": "Caroline Smyth",
+            "legalEntityName": "Backbase Cardiff"
+          },
+          {
+            "id": "66569096-df06-46b1-9dbb-3e0e73912e5d",
+            "externalId": "U0000012",
+            "legalEntityId": "3a591a63-9ddf-4ad4-ab4b-40eb151757a4",
+            "fullName": "Amin Fowler",
+            "legalEntityName": "Backbase Amsterdam"
+          },
+          {
+            "id": "1117a81d-86e2-4a5a-9f79-eafbaa2bcddd",
+            "externalId": "U0000013",
+            "legalEntityId": "f5aacf55-44bb-4393-9d21-152d14fae6b9",
+            "fullName": "Amelia Slater",
+            "legalEntityName": "Backbase Cardiff"
+          },
+          {
+            "id": "55e27e95-216c-40fd-be2e-dd5a100ddcfc",
+            "externalId": "U0000014",
+            "legalEntityId": "f5aacf55-44bb-4393-9d21-152d14fae6b9",
+            "fullName": "Bradlee Lister",
+            "legalEntityName": "Backbase Cardiff"
+          },
+          {
+            "id": "59721bc0-da2d-42f8-9b14-a391d52e039e",
+            "externalId": "U0000015",
+            "legalEntityId": "3a591a63-9ddf-4ad4-ab4b-40eb151757a4",
+            "fullName": "Khalil Freeman",
+            "legalEntityName": "Backbase Amsterdam"
+          },
+          {
+            "id": "d5ff6ff6-7d39-430c-a787-75321d2f986e",
+            "externalId": "U0000016",
+            "legalEntityId": "f5aacf55-44bb-4393-9d21-152d14fae6b9",
+            "fullName": "Safwan Archer",
+            "legalEntityName": "Backbase Cardiff"
+          },
+          {
+            "id": "5e41de27-cc3c-4277-9e4f-e9fb6f1da067",
+            "externalId": "U0000017",
+            "legalEntityId": "f5aacf55-44bb-4393-9d21-152d14fae6b9",
+            "fullName": "Miranda Goldsmith",
+            "legalEntityName": "Backbase Cardiff"
+          },
+          {
+            "id": "34be7792-d4a6-44de-bef7-1d051a33dd08",
+            "externalId": "U0000018",
+            "legalEntityId": "3a591a63-9ddf-4ad4-ab4b-40eb151757a4",
+            "fullName": "Willard Pham",
+            "legalEntityName": "Backbase Amsterdam"
+          },
+          {
+            "id": "721b5973-543a-4a36-b739-352259486ac5",
+            "externalId": "U0000019",
+            "legalEntityId": "3a591a63-9ddf-4ad4-ab4b-40eb151757a4",
+            "fullName": "Braiden Calhoun",
+            "legalEntityName": "Backbase Amsterdam"
+          }
+        ],
+        "totalElements": 10
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

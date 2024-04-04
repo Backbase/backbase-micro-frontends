@@ -1,0 +1,17 @@
+{
+  "name": "/access-control/client-api/v3/legal-entities/as-participant_POST",
+  "request": {
+    "url": "/access-control/client-api/v3/legal-entities/as-participant(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "legalEntityId": "0955e686-d31e-4216-b3dd-5d66161d536d",
+        "serviceAgreementId": "0955e686-d31e-4216-b3dd-5d66161d536d"
+      },
+      "default": true
+    }
+  }
+}

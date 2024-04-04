@@ -1,0 +1,714 @@
+{
+  "name": "/client-api/v2/payment-orders_GET",
+  "request": {
+    "url": "/client-api/v2/payment-orders(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "7d34169c-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+          "status": "ENTERED",
+          "originatorAccount": {
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "a3f8defe-f447-4475-b5c1-d3971ec7a273",
+            "identification": {
+              "identification": "NL81TRIO0212471066",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Smith Bonus Savings",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+            }
+          },
+          "instructionPriority": "HIGH",
+          "requestedExecutionDate": "2021-08-16",
+          "deliveryDate": "2021-08-16",
+          "paymentMode": "SINGLE",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "transferTransactionInformation": {
+            "endToEndIdentification": "Some reference",
+            "instructedAmount": {
+              "amount": "749.99",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "MR1300020001010000123456753",
+                "schemeName": "IBAN"
+              },
+              "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+              "externalArrangementId": "9669274787995385962"
+            },
+            "counterparty": {
+              "name": "John Smith"
+            }
+          },
+          "actions": ["APPROVE", "FINAL_APPROVE", "REJECT"],
+          "permissibleActions": {
+            "approve": true,
+            "finalApprove": true,
+            "reject": true,
+            "cancel": false,
+            "delete": false,
+            "edit": false,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2021-05-12T14:33:13.452Z",
+          "edited": true,
+          "version": 1
+        },
+        {
+          "id": "0d0b6350-0ff9-11e8-b642-0ed5f89f718b",
+          "approvalId": "518bbd4a-0ff9-11e8-b642-0ed5f89f718b",
+          "status": "PROCESSED",
+          "bankStatus": "FINISHED",
+          "originatorAccount": {
+            "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+            "externalArrangementId": "729190421493794513132",
+            "identification": {
+              "identification": "NL18INGB0664923638",
+              "schemeName": "IBAN"
+            },
+            "name": "Credit Account"
+          },
+          "originator": {
+            "name": "Random Account",
+            "postalAddress": {
+              "country": "NL"
+            }
+          },
+          "batchBooking": true,
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2018-08-11",
+          "paymentMode": "RECURRING",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "schedule": {
+            "transferFrequency": "MONTHLY",
+            "on": 1,
+            "startDate": "2017-08-12",
+            "every": "1",
+            "nextExecutionDate": "2018-08-15",
+            "endDate": "2018-05-12",
+            "remainingOccurrences": 4
+          },
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "100.00",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "NO9386011117947",
+                "schemeName": "IBAN"
+              }
+            },
+            "counterparty": {
+              "name": "Jack Yellow"
+            },
+            "remittanceInformation": {
+              "type": "STRUCTURED",
+              "content": "<some-xml-tags>structured content with XML</some-xml-tags>"
+            }
+          },
+          "actions": ["EDIT"],
+          "permissibleActions": {
+            "approve": false,
+            "finalApprove": false,
+            "reject": false,
+            "cancel": false,
+            "delete": false,
+            "edit": true,
+            "create": true,
+            "export": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 1
+        },
+        {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "c383c69f-38bf-4e3e-ad3f-5f58cf971bb1",
+          "status": "REJECTED",
+          "bankStatus": "ACCOUNT_BLOCKED",
+          "reasonCode": "AB01",
+          "reasonText": "Account blocked",
+          "errorDescription": "Blocked by bank.",
+          "originatorAccount": {
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "bcf10f4d-4b2f-4413-9bab-31ff693608b5",
+            "identification": {
+              "identification": "FR188388353832IH3CAWFYXAA36",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Mr and Mrs J. Smith"
+          },
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2018-07-16",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "5000.55",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "LT121000011101001000",
+                "schemeName": "IBAN"
+              },
+              "name": "ABN Amro"
+            },
+            "counterparty": {
+              "name": "Backbase",
+              "postalAddress": {
+                "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+                "country": "NL"
+              }
+            },
+            "remittanceInformation": {
+              "type": "UNSTRUCTURED",
+              "content": "Return a debt"
+            }
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 1
+        },
+        {
+          "id": "7d34215a-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "ae01c614-d473-48d6-af7d-f516292b39cb",
+          "status": "ACCEPTED",
+          "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+          "reasonCode": "AC01",
+          "reasonText": "Accepted by bank",
+          "originatorAccount": {
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "a3f8defe-f447-4475-b5c1-d3971ec7a273",
+            "identification": {
+              "identification": "NL81TRIO0212471066",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Smith Bonus Savings"
+          },
+          "batchBooking": false,
+          "requestedExecutionDate": "2018-07-23",
+          "paymentMode": "SINGLE",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "transferTransactionInformation": {
+            "endToEndIdentification": "Some reference",
+            "instructedAmount": {
+              "amount": "749.99",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "LI21088100002324013AA",
+                "schemeName": "IBAN"
+              }
+            },
+            "counterparty": {
+              "name": "Delivery Service"
+            }
+          },
+          "actions": ["APPROVE", "REJECT"],
+          "permissibleActions": {
+            "approve": true,
+            "finalApprove": false,
+            "reject": true,
+            "cancel": false,
+            "delete": false,
+            "edit": false,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "version": 1
+        },
+        {
+          "id": "7d342c15-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "ae01a624-d473-48d6-af7d-f516292b39cb",
+          "status": "ACCEPTED",
+          "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+          "reasonCode": "AC01",
+          "reasonText": "Accepted by bank",
+          "originatorAccount": {
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "bcf10f4d-4b2f-4413-9bab-31ff693608b5",
+            "identification": {
+              "identification": "FR188388353832IH3CAWFYXAA36",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Mr and Mrs J. Smith"
+          },
+          "batchBooking": false,
+          "requestedExecutionDate": "2018-06-12",
+          "paymentMode": "SINGLE",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "transferTransactionInformation": {
+            "endToEndIdentification": "Some reference",
+            "instructedAmount": {
+              "amount": "99.99",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "MR1300020001010000123456753",
+                "schemeName": "IBAN"
+              },
+              "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+              "externalArrangementId": "9669274787995385962"
+            },
+            "counterparty": {
+              "name": "John Smith"
+            }
+          },
+          "actions": ["APPROVE", "REJECT"],
+          "permissibleActions": {
+            "approve": true,
+            "finalApprove": false,
+            "reject": true,
+            "cancel": false,
+            "delete": false,
+            "edit": false,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 1
+        },
+        {
+          "id": "7d341a2a-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "264b69e4-3df0-49c1-8cda-e2bb437461e8",
+          "status": "ACCEPTED",
+          "bankStatus": "FINISHED",
+          "originatorAccount": {
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "bcf10f4d-4b2f-4413-9bab-31ff693608b5",
+            "identification": {
+              "identification": "FR188388353832IH3CAWFYXAA36",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Mr and Mrs J. Smith"
+          },
+          "batchBooking": true,
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2018-08-11",
+          "paymentMode": "RECURRING",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "schedule": {
+            "transferFrequency": "MONTHLY",
+            "on": 1,
+            "startDate": "2017-08-12",
+            "every": "1",
+            "nextExecutionDate": "2018-08-15",
+            "endDate": "2018-05-12",
+            "remainingOccurrences": 4
+          },
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "133.33",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "NO9386011117947",
+                "schemeName": "IBAN"
+              }
+            },
+            "counterparty": {
+              "name": "Jack Yellow"
+            },
+            "remittanceInformation": {
+              "type": "STRUCTURED",
+              "content": "<some-xml-tags>structured content with XML</some-xml-tags>"
+            }
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 9312
+        },
+        {
+          "id": "5cea81b2-0ff9-11e8-b642-0ed5f89f718b",
+          "approvalId": "61624e82-0ff9-11e8-b642-0ed5f89f718b",
+          "status": "ACCEPTED",
+          "bankStatus": "FINISHED",
+          "originatorAccount": {
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+            "externalArrangementId": "a3f8defe-f447-4475-b5c1-d3971ec7a273",
+            "identification": {
+              "identification": "NL81TRIO0212471066",
+              "schemeName": "IBAN"
+            }
+          },
+          "originator": {
+            "name": "Smith Bonus Savings",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+            }
+          },
+          "batchBooking": true,
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2018-08-11",
+          "paymentMode": "RECURRING",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "schedule": {
+            "transferFrequency": "MONTHLY",
+            "on": 1,
+            "startDate": "2017-08-12",
+            "every": "1",
+            "nextExecutionDate": "2018-08-15",
+            "endDate": "2018-05-12",
+            "remainingOccurrences": 4
+          },
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "166.66",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "HU42117730161111101800000000",
+                "schemeName": "IBAN"
+              }
+            },
+            "counterparty": {
+              "name": "Jack Brown"
+            },
+            "remittanceInformation": {
+              "type": "STRUCTURED",
+              "content": "<some-xml-tags>structured content with XML</some-xml-tags>"
+            }
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "version": 42,
+          "edited": false,
+          "originatingAccountCurrency": "EUR"
+        },
+        {
+          "id": "06db9298-189b-11e8-accf-0ed5f89f718b",
+          "approvalId": "11863018-189b-11e8-accf-0ed5f89f718b",
+          "status": "ENTERED",
+          "originatorAccount": {
+            "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+            "identification": {
+              "identification": "0260-0959-3",
+              "schemeName": "BBAN"
+            }
+          },
+          "originator": {
+            "name": "John Doe",
+            "postalAddress": {
+              "addressLine1": "228 Park Ave S",
+              "town": "New York"
+            }
+          },
+          "batchBooking": false,
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2017-08-12",
+          "paymentMode": "RECURRING",
+          "paymentType": "US_FOREIGN_WIRE",
+          "schedule": {
+            "transferFrequency": "MONTHLY",
+            "on": 1,
+            "startDate": "2017-08-12",
+            "every": "1",
+            "nextExecutionDate": "2017-09-12",
+            "endDate": "2018-05-12",
+            "remainingOccurrences": 4
+          },
+          "transferTransactionInformation": {
+            "endToEndIdentification": "TRNSCT REF 1234567890",
+            "instructedAmount": {
+              "amount": "104.66",
+              "currencyCode": "USD"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "NL91 ABNA 0417 1643 00",
+                "schemeName": "IBAN"
+              }
+            },
+            "counterparty": {
+              "name": "Jack Brown",
+              "postalAddress": {
+                "addressLine1": "2589 Peaceful Lane",
+                "postCode": "44128",
+                "town": "Warrensville Heights",
+                "country": "US"
+              }
+            },
+            "remittanceInformation": {
+              "type": "UNSTRUCTURED",
+              "content": "Unstructured content"
+            },
+            "counterpartyBank": {
+              "bankBranchCode": "082000549",
+              "name": "Morgan Chase",
+              "postalAddress": {
+                "addressLine1": "4789 Vernon Street",
+                "postCode": "92028",
+                "town": "Fallbrook",
+                "country": "US"
+              }
+            },
+            "correspondentBank": {
+              "bankBranchCode": "122105155",
+              "name": "Bank of America"
+            },
+            "intermediaryBank": {
+              "bic": "DABAIE2D",
+              "bankBranchCode": "102000021",
+              "name": "SNSB"
+            },
+            "messageToBank": "My us international wire payment explanation.",
+            "targetCurrency": "EUR"
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 42
+        },
+        {
+          "id": "fa088818-623a-4260-bc46-1ff678de8dae",
+          "approvalId": "8605dc85-726c-4795-9b55-ff698ad2d1e4",
+          "status": "ENTERED",
+          "originatorAccount": {
+            "arrangementId": "07642680-2b6f-11e8-b467-0ed5f89f718b",
+            "identification": {
+              "identification": "00400440116243",
+              "schemeName": "BBAN"
+            }
+          },
+          "originator": {
+            "name": "Mr John Usmith",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, New York"
+            }
+          },
+          "instructionPriority": "HIGH",
+          "requestedExecutionDate": "2018-08-16",
+          "paymentMode": "SINGLE",
+          "paymentType": "INTERNAL",
+          "transferTransactionInformation": {
+            "endToEndIdentification": "Some reference",
+            "instructedAmount": {
+              "amount": "749.99",
+              "currencyCode": "USD"
+            },
+            "counterpartyAccount": {
+              "accountType": "SAVINGS",
+              "identification": {
+                "identification": "3242342348899",
+                "schemeName": "BBAN"
+              },
+              "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2"
+            },
+            "counterparty": {
+              "name": "John Doe"
+            }
+          },
+          "actions": ["APPROVE", "REJECT"],
+          "permissibleActions": {
+            "approve": true,
+            "finalApprove": false,
+            "reject": true,
+            "cancel": false,
+            "delete": false,
+            "edit": false,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 1
+        },
+        {
+          "id": "f58a410e-469c-41f1-8c51-21b6d24bd3c1",
+          "approvalId": "7527c230-01a7-41b8-a021-dc29aca98fe3",
+          "status": "ENTERED",
+          "originatorAccount": {
+            "arrangementId": "07642680-2b6f-11e8-b467-0ed5f89f718b",
+            "identification": {
+              "identification": "00400440116243",
+              "schemeName": "BBAN"
+            }
+          },
+          "originator": {
+            "name": "Mr John Usmith",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Los Angeles"
+            }
+          },
+          "instructionPriority": "HIGH",
+          "requestedExecutionDate": "2021-08-16",
+          "deliveryDate": "2021-08-16",
+          "paymentMode": "SINGLE",
+          "paymentType": "INTERNAL",
+          "transferTransactionInformation": {
+            "endToEndIdentification": "Some reference",
+            "instructedAmount": {
+              "amount": "134",
+              "currencyCode": "USD"
+            },
+            "counterpartyAccount": {
+              "accountType": "CHECKING",
+              "identification": {
+                "identification": "3242342123899",
+                "schemeName": "BBAN"
+              },
+              "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2"
+            },
+            "counterparty": {
+              "name": "Dan Brown"
+            },
+            "remittanceInformation": {
+              "type": "UNSTRUCTURED",
+              "content": "Return a debt`"
+            }
+          },
+          "actions": ["APPROVE", "REJECT", "EDIT"],
+          "permissibleActions": {
+            "approve": true,
+            "finalApprove": false,
+            "reject": true,
+            "cancel": false,
+            "delete": false,
+            "edit": true,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2021-05-12T14:33:13.452Z",
+          "edited": false,
+          "version": 1
+        }
+      ],
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": [
+        {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+          "status": "ACCEPTED",
+          "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+          "reasonCode": "AC01",
+          "reasonText": "Accepted by bank",
+          "originatorAccount": {
+            "identification": {
+              "identification": "8a48e08c60daa5940160dac699050088",
+              "schemeName": "ID"
+            }
+          },
+          "requestedExecutionDate": "2021-02-15",
+          "paymentType": "INTERNATIONAL_TRANSFER",
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "29.99",
+              "currencyCode": "INR"
+            },
+            "counterparty": {
+              "name": "John Doe"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "4902331374",
+                "schemeName": "BBAN"
+              }
+            },
+            "counterpartyBank": {
+              "bankBranchCode": "IDIA000A001",
+              "bic": "IBKLINBBXXR",
+              "name": "IDBA BANK IN",
+              "postalAddress": {
+                "addressLine1": "FINANCIAL PLAZA INDIA",
+                "country": "IN"
+              }
+            },
+            "correspondentBank": {
+              "bankBranchCode": "011000015",
+              "name": "FEDERAL RESERVE BANK"
+            },
+            "intermediaryBank": {
+              "bankBranchCode": "122105155",
+              "name": "SNSB2886803298"
+            },
+            "messageToBank": "My international payment explanation.",
+            "chargeBearer": "SHA",
+            "exchangeRateInformation": {
+              "currencyCode": "INR",
+              "rate": "89.00",
+              "rateType": "AGREED",
+              "contractIdentification": "/tbill/2018/T102993"
+            },
+            "transferFee": {
+              "amount": "0.29",
+              "currencyCode": "EUR"
+            },
+            "purposeOfPayment": {
+              "code": "P1004"
+            }
+          }
+        }
+      ]
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Payment type group invalid. Must be one of [credit, debit]"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "name": "/client-api/v2/places_GET",
+  "request": {
+    "url": "/client-api/v2/places(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7a",
+          "name": "Backbase Financial",
+          "address": {
+            "addressLine1": "737 Meadowbrook Boulevard",
+            "postalCode": "20005",
+            "country": "United States"
+          },
+          "hours": [
+            {
+              "day": 1,
+              "open": "09:00",
+              "close": "17:00"
+            },
+            {
+              "day": 2,
+              "open": "09:00",
+              "close": "17:00"
+            },
+            {
+              "day": 3,
+              "open": "09:00",
+              "close": "17:30"
+            },
+            {
+              "day": 4,
+              "open": "09:00",
+              "close": "20:00"
+            },
+            {
+              "day": 5,
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ],
+          "latitude": 40.70162374,
+          "longitude": -74.01232503,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Safe deposit", "Exclusive banking"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7b",
+          "name": "Bank of Nebraska",
+          "address": {
+            "addressLine1": "623 Live Oak Lane",
+            "addressLine2": "New York City",
+            "postalCode": "18254",
+            "country": "United States"
+          },
+          "hours": [
+            {
+              "day": 1,
+              "open": "09:30",
+              "close": "13:00"
+            },
+            {
+              "day": 1,
+              "open": "14:00",
+              "close": "17:00"
+            },
+            {
+              "day": 2,
+              "open": "09:00",
+              "close": "13:30"
+            },
+            {
+              "day": 2,
+              "open": "14:30",
+              "close": "17:30"
+            },
+            {
+              "day": 3,
+              "open": "09:00",
+              "close": "12:00"
+            },
+            {
+              "day": 3,
+              "open": "13:00",
+              "close": "15:00"
+            },
+            {
+              "day": 4,
+              "open": "09:00",
+              "close": "15:00"
+            },
+            {
+              "day": 4,
+              "open": "16:00",
+              "close": "20:00"
+            },
+            {
+              "day": 5,
+              "open": "09:00",
+              "close": "15:00"
+            },
+            {
+              "day": 5,
+              "open": "16:00",
+              "close": "18:00"
+            },
+            {
+              "day": 6,
+              "open": "10:00",
+              "close": "12:00"
+            },
+            {
+              "day": 6,
+              "open": "12:30",
+              "close": "14:00"
+            },
+            {
+              "day": 7,
+              "open": "10:00",
+              "close": "12:00"
+            },
+            {
+              "day": 7,
+              "open": "12:30",
+              "close": "14:00"
+            }
+          ],
+          "latitude": 40.7112536,
+          "longitude": -73.99589751,
+          "placeType": "branch",
+          "services": ["Cash withdrawals"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234123",
+          "name": "Backbase ATM",
+          "address": {
+            "addressLine1": "192 Walnut Drive",
+            "addressLine2": "New York City",
+            "postalCode": "29874",
+            "country": "United States"
+          },
+          "latitude": 40.72257311,
+          "longitude": -74.00628302,
+          "placeType": "atm",
+          "services": ["Cash withdrawals"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234121",
+          "name": "First Financial ATM",
+          "address": {
+            "addressLine1": "88 Dogwood street",
+            "addressLine2": "New York City",
+            "postalCode": "10087",
+            "country": "United States"
+          },
+          "latitude": 40.72901266,
+          "longitude": -73.97744391,
+          "placeType": "atm"
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7c",
+          "name": "Fells Wargo Bank",
+          "address": {
+            "addressLine1": "504 Park Avenue",
+            "addressLine2": "New York City",
+            "postalCode": "03331",
+            "country": "United States"
+          },
+          "hours": [
+            {
+              "day": 1,
+              "open": "09:30",
+              "close": "17:00"
+            },
+            {
+              "day": 2,
+              "open": "09:00",
+              "close": "17:30"
+            },
+            {
+              "day": 3,
+              "open": "09:00",
+              "close": "14:00"
+            },
+            {
+              "day": 4,
+              "open": "09:00",
+              "close": "20:00"
+            },
+            {
+              "day": 5,
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ],
+          "latitude": 40.72345355,
+          "longitude": -73.99240494,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Exclusive banking"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7d",
+          "name": "First State Bank",
+          "address": {
+            "addressLine1": "35 Ave North",
+            "addressLine2": "New York City",
+            "postalCode": "31118",
+            "country": "United States"
+          },
+          "hours": [
+            {
+              "day": 1,
+              "open": "09:30",
+              "close": "17:00"
+            },
+            {
+              "day": 2,
+              "open": "09:00",
+              "close": "17:30"
+            },
+            {
+              "day": 3,
+              "open": "09:00",
+              "close": "17:00"
+            },
+            {
+              "day": 4,
+              "open": "09:00",
+              "close": "20:00"
+            },
+            {
+              "day": 5,
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ],
+          "latitude": 40.71447146,
+          "longitude": -73.96551378,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Safe deposit"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7e",
+          "name": "R&Z Bank",
+          "address": {
+            "addressLine1": "45 Dakota Avenue",
+            "addressLine2": "New York City",
+            "postalCode": "58347",
+            "country": "United States"
+          },
+          "hours": [
+            {
+              "day": 1,
+              "open": "09:30",
+              "close": "17:00"
+            },
+            {
+              "day": 2,
+              "open": "09:00",
+              "close": "17:30"
+            },
+            {
+              "day": 3,
+              "open": "09:00",
+              "close": "17:00"
+            },
+            {
+              "day": 4,
+              "open": "09:00",
+              "close": "12:00"
+            },
+            {
+              "day": 4,
+              "open": "14:00",
+              "close": "20:00"
+            },
+            {
+              "day": 5,
+              "open": "09:00",
+              "close": "17:00"
+            }
+          ],
+          "latitude": 40.70484232,
+          "longitude": -73.98285158,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Safe deposit", "Exclusive banking"]
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af217a7e",
+          "name": "Eagle Freedom Bank",
+          "latitude": 40.6945173,
+          "longitude": -73.99353683,
+          "placeType": "branch"
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234129",
+          "name": "Paddy's Pub Bank",
+          "address": {
+            "addressLine1": "352 Wolf Cola Drive",
+            "addressLine2": "New York City",
+            "postalCode": "29230",
+            "country": "United States"
+          },
+          "latitude": 40.71000372,
+          "longitude": -73.99430931,
+          "placeType": "atm"
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234128",
+          "name": "Money Bank ATM",
+          "address": {
+            "addressLine1": "927 Coldrew Avenue",
+            "addressLine2": "New York City",
+            "postalCode": "29642",
+            "country": "United States"
+          },
+          "latitude": 40.73971668,
+          "longitude": -73.99168108,
+          "placeType": "atm"
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234127",
+          "name": "Community Financial ATM",
+          "address": {
+            "addressLine1": "236 Eagles Nest Street",
+            "addressLine2": "New York City",
+            "postalCode": "39124",
+            "country": "United States"
+          },
+          "latitude": 40.71483003,
+          "longitude": -74.01252754,
+          "placeType": "atm"
+        },
+        {
+          "id": "32c91a0b-199e-4275-bbe9-7097af234126",
+          "name": "SanFran United ATM",
+          "latitude": 40.73028327,
+          "longitude": -74.00176048
+        },
+        {
+          "id": "a956dbc7-a84d-46fe-91c3-bc40561ffdee",
+          "name": "Forest Associated Trust",
+          "address": {
+            "addressLine1": "137 Paper Way",
+            "addressLine2": "New York City",
+            "postalCode": "10278",
+            "country": "United States"
+          },
+          "latitude": 40.73555143,
+          "longitude": -73.97918701,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Safe deposit", "Exclusive banking"]
+        },
+        {
+          "id": "d6cdb083-ea55-4760-9ca7-10b1ce0792fd",
+          "name": "Millenial Bank United",
+          "address": {
+            "addressLine1": "26 Federal Plaza",
+            "postalCode": "10278",
+            "country": "United States"
+          },
+          "latitude": 40.74250997,
+          "longitude": -73.99698414,
+          "placeType": "branch"
+        },
+        {
+          "id": "40c154d3-344b-48c9-966d-23aaf7369c1f",
+          "name": "Great North Bank",
+          "address": {
+            "addressLine1": "135 W 3rd St",
+            "postalCode": "10012",
+            "country": "United States"
+          },
+          "latitude": 40.73947942,
+          "longitude": -73.97421453,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Safe deposit"]
+        },
+        {
+          "id": "82cd9c3b-2c91-4631-9b25-71281179fa0d",
+          "name": "Great Valley Financial",
+          "address": {
+            "addressLine1": "89 Chrysie St",
+            "addressLine2": "p.o. box 213",
+            "postalCode": "10002",
+            "country": "United States"
+          },
+          "latitude": 40.71392381,
+          "longitude": -74.00345162,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Safe deposit", "Exclusive banking"]
+        },
+        {
+          "id": "0edb7a6e-8969-493e-9787-90fe967843ce",
+          "name": "Safeway Banking",
+          "address": {
+            "addressLine1": "284 Government Drive",
+            "addressLine2": "New York City",
+            "country": "United States"
+          },
+          "latitude": 40.73626683,
+          "longitude": -74.00819778,
+          "placeType": "branch",
+          "services": ["Cash withdrawals", "Cash exchange", "Safe deposit"]
+        }
+      ],
+      "default": true
+    }
+  }
+}

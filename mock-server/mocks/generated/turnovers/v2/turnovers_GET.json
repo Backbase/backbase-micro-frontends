@@ -1,0 +1,205 @@
+{
+  "name": "/client-api/v2/turnovers_GET",
+  "request": {
+    "url": "/client-api/v2/turnovers(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "arrangementIds": ["1110afc5-4f7e-46c0-b0db-927138aa46c2"],
+        "intervalDuration": "MONTH",
+        "avgCreditAmount": {
+          "amount": "82.10",
+          "currencyCode": "EUR"
+        },
+        "avgDebitAmount": {
+          "amount": "382.10",
+          "currencyCode": "EUR"
+        },
+        "turnovers": [
+          {
+            "intervalStartDate": "2016-11-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "0",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "0",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "0",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "intervalStartDate": "2016-12-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "90382.10",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "300.65",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "90081.45",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "intervalStartDate": "2017-01-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "503.20",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "504.50",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "-1.30",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "intervalStartDate": "2017-02-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "61000.70",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "65535.50",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "-4534.80",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "intervalStartDate": "2017-03-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "4005.50",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "2999.99",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "1005.51",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "intervalStartDate": "2017-04-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "3250",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "3250.05",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "-0.05",
+              "currencyCode": "EUR"
+            }
+          }
+        ],
+        "forecast": [
+          {
+            "intervalStartDate": "2017-05-01T16:41:41.090Z",
+            "creditAmount": {
+              "amount": "3250",
+              "currencyCode": "EUR"
+            },
+            "debitAmount": {
+              "amount": "3250.05",
+              "currencyCode": "EUR"
+            },
+            "balance": {
+              "amount": "-0.05",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

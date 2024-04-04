@@ -1,0 +1,59 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/function-groups/{id}_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/function-groups/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "f34f7587-5ded-4f51-94c3-3a89d1b64539",
+        "name": "Manage Entitlements",
+        "description": "This profile will control managing of entitlements",
+        "serviceAgreementId": "1642b2e1-61c4-4ce3-8bd9-877327587f4b",
+        "permissions": [
+          {
+            "functionId": "1012",
+            "assignedPrivileges": [
+              {
+                "privilege": "view"
+              }
+            ]
+          },
+          {
+            "functionId": "1011",
+            "assignedPrivileges": [
+              {
+                "privilege": "view"
+              }
+            ]
+          },
+          {
+            "functionId": "1010",
+            "assignedPrivileges": [
+              {
+                "privilege": "view"
+              }
+            ]
+          },
+          {
+            "functionId": "1009",
+            "assignedPrivileges": [
+              {
+                "privilege": "create"
+              },
+              {
+                "privilege": "view"
+              },
+              {
+                "privilege": "edit"
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

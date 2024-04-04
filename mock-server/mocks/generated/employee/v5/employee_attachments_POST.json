@@ -1,0 +1,59 @@
+{
+  "name": "/client-api/v5/employee/attachments_POST",
+  "request": {
+    "url": "/client-api/v5/employee/attachments(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "createdAt": "2000-01-23T04:56:07.000+00:00",
+        "filename": "filename",
+        "size": 0.8008281904610115,
+        "additions": {
+          "key": "additions"
+        },
+        "id": "id"
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "/positive-pay-check/client-api/v1/uploads/{id}/invalid-checks",
+  "request": {
+    "url": "/positive-pay-check/client-api/v1/uploads/.*/invalid-checks(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "unathorized": {
+      "status": 401,
+      "data": {
+        "errors": [
+          {
+            "message": "Unathorized",
+            "key": "common.api.unathorized"
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "not_found": {
+      "status": 404,
+      "data": {
+        "message": "Not found",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Not found",
+            "key": "common.api.notfound"
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "invalidChecks": [
+          {
+            "line": 1,
+            "errors": [
+              "positivepay.upload.check.amount.invalid",
+              "positivepay.upload.check.issueDate.invalid",
+              "positivepay.upload.check.checkNumber.pattern"
+            ],
+            "rawData": "0.8841740830279431,-45977,Rod Cartwright--%%^%&^&$#dge1hyl,2023/04/11,FALSE"
+          },
+          {
+            "line": 3,
+            "errors": ["positivepay.upload.check.void.invalid"],
+            "rawData": "534705622,385257.1,Miss Danae Dooley,2023-04-11,TRUE"
+          },
+          {
+            "line": 5,
+            "errors": ["positivepay.upload.check.issueDate.invalid"],
+            "rawData": "0.6509902962472939,35670,Bettye Larkin,2023/04/11,N"
+          },
+          {
+            "line": 7,
+            "errors": ["positivepay.upload.check.checkNumber.pattern"],
+            "rawData": "0.38874143659766547,37109,Mr. Lino Johnston,2023/04/11,N"
+          },
+          {
+            "line": 11,
+            "errors": ["positivepay.upload.check.duplicate"],
+            "rawData": "992948433,356899.9,Dodie Lueilwitz,2023-04-11,N"
+          }
+        ]
+      }
+    }
+  }
+}

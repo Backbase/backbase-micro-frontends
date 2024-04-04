@@ -1,0 +1,21 @@
+{
+  "name": "/client-api/v2/users/me_GET",
+  "request": {
+    "url": "/client-api/v2/users/me(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "externalId": "externalBankId1",
+        "preferredLanguage": "fr-FR",
+        "legalEntityId": "c2185f7d-a1e8-4f97-990d-cb1cfd0d8f53",
+        "legalEntityName": "BANK A",
+        "id": "3da7e7fb-857f-44c2-92aa-80572f6394e2",
+        "fullName": "Henry Duncan"
+      },
+      "default": true
+    }
+  }
+}

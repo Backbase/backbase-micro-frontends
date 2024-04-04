@@ -1,0 +1,52 @@
+{
+  "name": "/client-api/v5/employee/topics/{topicId}_GET",
+  "request": {
+    "url": "/client-api/v5/employee/topics/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "b7bc36d5-66ad-473d-a047-49f4df30b1db",
+        "code": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+        "name": "Problems with making a payment",
+        "mailoutTopic": false,
+        "additions": {
+          "somePropertyKey": "somePropertyValue"
+        }
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

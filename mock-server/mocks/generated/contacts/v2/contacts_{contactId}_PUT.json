@@ -1,0 +1,23 @@
+{
+  "name": "/client-api/v2/contacts/{contactId}_PUT",
+  "request": {
+    "url": "/client-api/v2/contacts/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "key": "ApprovalAlreadyExistForContact",
+        "message": "Approval request already exist with this contact."
+      }
+    },
+    "success": {
+      "status": 202,
+      "data": {
+        "status": "REQUEST_ACCEPTED"
+      },
+      "default": true
+    }
+  }
+}

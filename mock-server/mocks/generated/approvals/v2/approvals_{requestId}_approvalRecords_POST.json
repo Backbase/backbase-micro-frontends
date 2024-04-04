@@ -1,0 +1,37 @@
+{
+  "name": "/client-api/v2/approvals/{requestId}/approvalRecords_POST",
+  "request": {
+    "url": "/client-api/v2/approvals/[^/]+/approvalRecords(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "key": "ContactAlreadyCreated",
+        "message": "Contact has already been created, please refresh"
+      }
+    },
+    "success": {
+      "status": 201,
+      "data": {
+        "status": "APPROVED"
+      },
+      "default": true
+    },
+    "409_1": {
+      "status": 409,
+      "data": {
+        "key": "ContactAlreadyUpdated",
+        "message": "Contact has already been updated, please refresh"
+      }
+    },
+    "409_2": {
+      "status": 409,
+      "data": {
+        "key": "ContactAlreadyDeleted",
+        "message": "Contact has already been deleted, please refresh"
+      }
+    }
+  }
+}

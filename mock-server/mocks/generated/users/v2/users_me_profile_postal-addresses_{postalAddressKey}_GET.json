@@ -1,0 +1,54 @@
+{
+  "name": "/client-api/v2/users/me/profile/postal-addresses/{postalAddressKey}_GET",
+  "request": {
+    "url": "/client-api/v2/users/me/profile/postal-addresses/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "key": "cb7653b5-31b2-481d-b9b5-aa4b415c96e2",
+        "type": "HOME",
+        "primary": true,
+        "addressLine": "2 Hertsmere Rd",
+        "streetName": "Canary Wharf",
+        "townName": "London",
+        "postalCode": "E14 4AB",
+        "country": "GB"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

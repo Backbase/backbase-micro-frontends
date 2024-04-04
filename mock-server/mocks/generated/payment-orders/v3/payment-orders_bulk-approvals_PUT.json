@@ -1,0 +1,557 @@
+{
+  "name": "/client-api/v3/payment-orders/bulk-approvals_PUT",
+  "request": {
+    "url": "/client-api/v3/payment-orders/bulk-approvals(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalStatus": "APPROVED",
+        "paymentOrders": [
+          {
+            "paymentOrderId": "7d34169c-6714-11e7-907b-a6006ad3dba0",
+            "paymentOrder": {
+              "id": "7d34169c-6714-11e7-907b-a6006ad3dba0",
+              "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+              "status": "ENTERED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "0260-0959-3",
+                  "schemeName": "BBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "228 Park Ave S",
+                  "town": "New York"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "US_FOREIGN_WIRE",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith",
+                  "postalAddress": {
+                    "addressLine1": "2589 Peaceful Lane",
+                    "postCode": "44128",
+                    "town": "Warrensville Heights",
+                    "country": "US"
+                  }
+                },
+                "remittanceInformation": {
+                  "type": "UNSTRUCTURED",
+                  "content": "Unstructured content"
+                },
+                "counterpartyBank": {
+                  "bankBranchCode": "082000549",
+                  "name": "Morgan Chase",
+                  "postalAddress": {
+                    "addressLine1": "4789 Vernon Street",
+                    "postCode": "92028",
+                    "town": "Fallbrook",
+                    "country": "US"
+                  }
+                },
+                "correspondentBank": {
+                  "bankBranchCode": "122105155",
+                  "name": "Bank of America"
+                },
+                "intermediaryBank": {
+                  "bic": "DABAIE2D",
+                  "bankBranchCode": "102000021",
+                  "name": "SNSB"
+                },
+                "messageToBank": "My us international wire payment explanation.",
+                "targetCurrency": "EUR"
+              },
+              "permissibleActions": {
+                "approve": true,
+                "finalApprove": false,
+                "reject": false,
+                "cancel": false,
+                "delete": false,
+                "edit": false,
+                "create": true,
+                "export": false
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "approvalStatus": "PENDING",
+            "status": {
+              "code": "OK"
+            }
+          },
+          {
+            "paymentOrderId": "d2ff7c65-24ae-430f-92b9-c7ca5b143081",
+            "paymentOrder": {
+              "id": "d2ff7c65-24ae-430f-92b9-c7ca5b143081",
+              "approvalId": "2d9367dc-8af1-411d-81f6-9e28c46dd189",
+              "status": "REJECTED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "NL81TRIO0212471066",
+                  "schemeName": "IBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "SEPA_CREDIT_TRANSFER",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith"
+                }
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "approvalStatus": "REJECTED",
+            "status": {
+              "code": "ERROR",
+              "message": "Not allowed to update this approval, status is final",
+              "errors": [
+                {
+                  "message": "Not allowed to update this approval, status is final",
+                  "key": "paymentorder.api.Approval.NotAllowed",
+                  "context": {
+                    "status": "REJECTED"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "paymentOrderId": "9a20be2b-b8f3-45dc-a625-55635235de4c",
+            "status": {
+              "code": "ERROR",
+              "message": "Payment not found",
+              "errors": [
+                {
+                  "message": "Payment not found",
+                  "key": "paymentorder.api.PaymentOrder.NotFound"
+                }
+              ]
+            }
+          },
+          {
+            "paymentOrderId": "c7653c55-ee9b-4f65-96db-cbda76efd3ae",
+            "paymentOrder": {
+              "id": "c7653c55-ee9b-4f65-96db-cbda76efd3ae",
+              "approvalId": "fe383f48-df2e-4b17-a0d2-3443b2e3738c",
+              "status": "ENTERED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "NL81TRIO0212471066",
+                  "schemeName": "IBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "SEPA_CREDIT_TRANSFER",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith"
+                }
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "status": {
+              "code": "ERROR",
+              "message": "Approval not found",
+              "errors": [
+                {
+                  "message": "Approval not found",
+                  "key": "paymentorder.api.Approval.NotFound"
+                }
+              ]
+            }
+          }
+        ],
+        "successCount": 1,
+        "failCount": 3
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "approvalStatus": "APPROVED",
+        "paymentOrders": [
+          {
+            "paymentOrderId": "7d34169c-6714-11e7-907b-a6006ad3dba0",
+            "paymentOrder": {
+              "id": "7d34169c-6714-11e7-907b-a6006ad3dba0",
+              "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+              "status": "ENTERED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "0260-0959-3",
+                  "schemeName": "BBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "228 Park Ave S",
+                  "town": "New York"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "US_FOREIGN_WIRE",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith",
+                  "postalAddress": {
+                    "addressLine1": "2589 Peaceful Lane",
+                    "postCode": "44128",
+                    "town": "Warrensville Heights",
+                    "country": "US"
+                  }
+                },
+                "remittanceInformation": {
+                  "type": "UNSTRUCTURED",
+                  "content": "Unstructured content"
+                },
+                "counterpartyBank": {
+                  "bankBranchCode": "082000549",
+                  "name": "Morgan Chase",
+                  "postalAddress": {
+                    "addressLine1": "4789 Vernon Street",
+                    "postCode": "92028",
+                    "town": "Fallbrook",
+                    "country": "US"
+                  }
+                },
+                "correspondentBank": {
+                  "bankBranchCode": "122105155",
+                  "name": "Bank of America"
+                },
+                "intermediaryBank": {
+                  "bic": "DABAIE2D",
+                  "bankBranchCode": "102000021",
+                  "name": "SNSB"
+                },
+                "messageToBank": "My us international wire payment explanation.",
+                "targetCurrency": "EUR"
+              },
+              "permissibleActions": {
+                "approve": true,
+                "finalApprove": false,
+                "reject": false,
+                "cancel": false,
+                "delete": false,
+                "edit": false,
+                "create": true,
+                "export": false
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "approvalStatus": "PENDING",
+            "status": {
+              "code": "OK"
+            }
+          },
+          {
+            "paymentOrderId": "d2ff7c65-24ae-430f-92b9-c7ca5b143081",
+            "paymentOrder": {
+              "id": "d2ff7c65-24ae-430f-92b9-c7ca5b143081",
+              "approvalId": "2d9367dc-8af1-411d-81f6-9e28c46dd189",
+              "status": "REJECTED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "NL81TRIO0212471066",
+                  "schemeName": "IBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "SEPA_CREDIT_TRANSFER",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith"
+                }
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "approvalStatus": "REJECTED",
+            "status": {
+              "code": "ERROR",
+              "message": "Not allowed to update this approval, status is final",
+              "errors": [
+                {
+                  "message": "Not allowed to update this approval, status is final",
+                  "key": "paymentorder.api.Approval.NotAllowed",
+                  "context": {
+                    "status": "REJECTED"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "paymentOrderId": "9a20be2b-b8f3-45dc-a625-55635235de4c",
+            "status": {
+              "code": "ERROR",
+              "message": "Payment not found",
+              "errors": [
+                {
+                  "message": "Payment not found",
+                  "key": "paymentorder.api.PaymentOrder.NotFound"
+                }
+              ]
+            }
+          },
+          {
+            "paymentOrderId": "c7653c55-ee9b-4f65-96db-cbda76efd3ae",
+            "paymentOrder": {
+              "id": "c7653c55-ee9b-4f65-96db-cbda76efd3ae",
+              "approvalId": "fe383f48-df2e-4b17-a0d2-3443b2e3738c",
+              "status": "ENTERED",
+              "originatorAccount": {
+                "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+                "externalArrangementId": "729190421493794513132",
+                "identification": {
+                  "identification": "NL81TRIO0212471066",
+                  "schemeName": "IBAN"
+                }
+              },
+              "originator": {
+                "name": "Smith Bonus Savings",
+                "postalAddress": {
+                  "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam"
+                }
+              },
+              "instructionPriority": "HIGH",
+              "requestedExecutionDate": "2017-08-16",
+              "paymentMode": "SINGLE",
+              "paymentType": "SEPA_CREDIT_TRANSFER",
+              "transferTransactionInformation": {
+                "endToEndIdentification": "Some reference",
+                "instructedAmount": {
+                  "amount": "749.99",
+                  "currencyCode": "EUR"
+                },
+                "counterpartyAccount": {
+                  "identification": {
+                    "identification": "MR1300020001010000123456753",
+                    "schemeName": "IBAN"
+                  },
+                  "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                  "externalArrangementId": "9669274787995385962"
+                },
+                "counterparty": {
+                  "name": "John Smith"
+                }
+              },
+              "createdBy": "U00243",
+              "createdAt": "2023-02-06T14:33:13.452Z",
+              "version": 2
+            },
+            "status": {
+              "code": "ERROR",
+              "message": "Limits has been breached, check report for details"
+            },
+            "breachReport": [
+              {
+                "breachInfo": [
+                  {
+                    "breachType": "THRESHOLD",
+                    "breachedLimitType": "PERIODIC",
+                    "currentConsumption": "999.00",
+                    "currentThreshold": "1000.00",
+                    "timeframe": {
+                      "period": "DAILY",
+                      "startTime": "2023-02-06T00:00:00.000Z",
+                      "endTime": "2023-02-06T23:59:59.999Z"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "successCount": 1,
+        "failCount": 3
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized_1": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:351efc97-e3e8-4a60-bd22-f1613ef7f8f0"
+          }
+        ],
+        "data": {
+          "bulkId": "1",
+          "currencyAggrCount": "1",
+          "paymentCount": "2",
+          "currencyAggr1": "20.00,EUR,2",
+          "confirmation-type": "bulk-approve-payments"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

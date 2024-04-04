@@ -1,0 +1,135 @@
+{
+  "name": "/client-api/v2/approvals/me_GET",
+  "request": {
+    "url": "/client-api/v2/approvals/me(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "5edffbc2-5dc0-11e8-9c2d-fa7ae01bbebc",
+          "creatorBbId": "john@example.com",
+          "creationTime": "2017-05-12T14:33:13Z",
+          "action": "CREATE",
+          "status": "ENTERED",
+          "data": {
+            "id": "0855e686-d31e-4216-b3dd-5d66161d536d",
+            "name": "John Doe",
+            "alias": "John",
+            "category": "Employee",
+            "contactPerson": "Jane Doe",
+            "phoneNumber": "055512345678",
+            "emailId": "john@example.com",
+            "addressLine1": "Backbase enterprise",
+            "addressLine2": "",
+            "streetName": "Jacob Bontiusplaats 9",
+            "town": "Amsterdam",
+            "postCode": "1018 LL",
+            "countrySubDivision": "North Holland",
+            "country": "NL",
+            "accounts": [
+              {
+                "name": "Jane Doe",
+                "alias": "Jane",
+                "accountType": "SAVINGS",
+                "IBAN": "FI21 1234 5600 0007 85",
+                "bankName": "Test Bank",
+                "bankAddressLine1": "Test Bank Co",
+                "bankAddressLine2": "",
+                "bankStreetName": "Jodenbreestraat 96",
+                "bankTown": "Amsterdam",
+                "bankPostCode": "1011NS",
+                "bankCountrySubDivision": "North Holland",
+                "bankCountry": "NL"
+              }
+            ],
+            "accessContextScope": "USER"
+          }
+        },
+        {
+          "id": "55ce2962-7c04-41e2-9bb9-84208342f321",
+          "creatorBbId": "john@example.com",
+          "creationTime": "2018-05-12T14:33:13.452Z",
+          "action": "UPDATE",
+          "status": "REJECTED",
+          "data": {
+            "id": "aa7cea7f-38ed-4c09-ab38-b3903f1e40ca",
+            "name": "Judy Doe",
+            "alias": "Judy",
+            "category": "VP",
+            "contactPerson": "Jane Doe",
+            "phoneNumber": "055512345678",
+            "emailId": "judy@example.com",
+            "addressLine1": "Backbase enterprise",
+            "addressLine2": "",
+            "streetName": "Jacob Bontiusplaats 9",
+            "town": "Amsterdam",
+            "postCode": "1018 LL",
+            "countrySubDivision": "North Holland",
+            "country": "NL",
+            "accounts": [
+              {
+                "name": "Jane Doe",
+                "alias": "Jane",
+                "accountType": "SAVINGS",
+                "IBAN": "FI21 1234 5600 0007 85",
+                "bankName": "Test Bank",
+                "bankAddressLine1": "Test Bank Co",
+                "bankAddressLine2": "",
+                "bankStreetName": "Jodenbreestraat 96",
+                "bankTown": "Amsterdam",
+                "bankPostCode": "1011NS",
+                "bankCountrySubDivision": "North Holland",
+                "bankCountry": "NL"
+              }
+            ],
+            "accessContextScope": "LE"
+          }
+        },
+        {
+          "id": "cf40d556-4634-4e96-8976-7fb3764444e9",
+          "creatorBbId": "john@example.com",
+          "creationTime": "2018-05-21T14:33:13.452Z",
+          "action": "DELETE",
+          "status": "ENTERED",
+          "data": {
+            "id": "0855e686-d31e-4216-b3dd-5d66161d536e",
+            "name": "Jane Doe",
+            "alias": "Jane",
+            "category": "Manager",
+            "contactPerson": "John Doe",
+            "phoneNumber": "055512345678",
+            "emailId": "jane@example.com",
+            "addressLine1": "Backbase enterprise",
+            "addressLine2": "",
+            "streetName": "Jacob Bontiusplaats 9",
+            "town": "Amsterdam",
+            "postCode": "1018 LL",
+            "countrySubDivision": "North Holland",
+            "country": "NL",
+            "accounts": [
+              {
+                "name": "Jane Doe",
+                "alias": "Jane",
+                "accountType": "SAVINGS",
+                "IBAN": "FI21 1234 5600 0007 85",
+                "bankName": "Test Bank",
+                "bankAddressLine1": "Test Bank Co",
+                "bankAddressLine2": "",
+                "bankStreetName": "Jodenbreestraat 96",
+                "bankTown": "Amsterdam",
+                "bankPostCode": "1011NS",
+                "bankCountrySubDivision": "North Holland",
+                "bankCountry": "NL"
+              }
+            ],
+            "accessContextScope": "LE"
+          }
+        }
+      ],
+      "default": true
+    }
+  }
+}

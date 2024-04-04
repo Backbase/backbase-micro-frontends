@@ -1,0 +1,67 @@
+{
+  "name": "/client-api/v1/payment-options/{paymentType}_GET",
+  "request": {
+    "url": "/client-api/v1/payment-options/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "paymentType": "US_FOREIGN_WIRE",
+        "canEditCounterparty": true,
+        "paymentOptions": [
+          {
+            "instructionPriority": "NORM",
+            "transferFee": {
+              "amount": "15.29",
+              "currencyCode": "USD"
+            },
+            "chargeBearer": ["OUR", "SHA"],
+            "executionTimeFrame": {
+              "unit": "BUSINESS_DAY",
+              "max": 1
+            },
+            "cutOffTime": "16:00"
+          },
+          {
+            "instructionPriority": "HIGH",
+            "transferFee": {
+              "amount": "20.00",
+              "currencyCode": "USD"
+            },
+            "chargeBearer": ["OUR", "SHA"],
+            "executionTimeFrame": {
+              "unit": "HOUR",
+              "min": 1,
+              "max": 2
+            },
+            "cutOffTime": "16:00"
+          }
+        ]
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,842 @@
+{
+  "name": "/client-api/v2/transactions_GET",
+  "request": {
+    "url": "/client-api/v2/transactions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c371",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "www.starbucks.com",
+          "originalDescription": "STARBUCKS 65000000764AMSTERDAM",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Food Drinks",
+          "bookingDate": "2019-05-29",
+          "valueDate": "2019-05-29",
+          "transactionAmountCurrency": {
+            "amount": "7.5",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Starbucks",
+          "counterPartyAccountNumber": "NL91ABNA0423164312",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": "Zuidplein 10, 1077 XV",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-05-29T01:20:50.52+02:00",
+          "disputeStatus": "PENDING",
+          "batchOrderId": "BATCH64b4d-a99f-1c9df",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c372",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "www.medimarket.com",
+          "originalDescription": "ONLINE PAYMENT - THANK YOU",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-05-25",
+          "valueDate": "2019-05-25",
+          "transactionAmountCurrency": {
+            "amount": "320.95",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "MediaMarkt",
+          "counterPartyAccountNumber": "NL91ABNA0541164300",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": "ArenA Boulevard 123-125, 1101 DM",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-05-25T00:00:50.52Z",
+          "disputeStatus": "REFUNDED",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c373",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "albertheijn.nl",
+          "originalDescription": "ALBERTH#239",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-05-20",
+          "valueDate": "2019-05-20",
+          "transactionAmountCurrency": {
+            "amount": "919.95",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Albert Heijn",
+          "counterPartyAccountNumber": "BE68539007547034",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": "Prins Hendrikkade 20, 1012 TL",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-05-20T11:20:50.52Z",
+          "disputeStatus": "REJECTED",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c3731214",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "International Payment",
+          "category": "Transfers",
+          "bookingDate": "2019-05-15",
+          "valueDate": "2019-05-16",
+          "transactionAmountCurrency": {
+            "amount": "887.31",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "currencyExchangeRate": 0.8945,
+          "counterPartyName": "Tusk Williams B.V",
+          "counterPartyAccountNumber": "BE68539007547034",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-05-15T23:59:59.59Z",
+          "disputeStatus": "UNDISPUTED",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c373c342",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Income",
+          "bookingDate": "2019-05-22",
+          "valueDate": "2019-05-22",
+          "transactionAmountCurrency": {
+            "amount": "1919.95",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "CRDT",
+          "counterPartyName": "Backbase B.V",
+          "counterPartyAccountNumber": "NL40ABNA0541164350",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": "Jacob Bontiusplaats 9, 1018 LL",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-05-22T00:00:01.59+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c374",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-04-28",
+          "valueDate": "2019-04-28",
+          "transactionAmountCurrency": {
+            "amount": "111.95",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Eneco Bank11",
+          "counterPartyAccountNumber": "BA391290079401028494",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-04-28T00:00:00.00+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c375",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "albertheijn.nl",
+          "originalDescription": "ALBERTHEIJN",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-04-24",
+          "valueDate": "2019-08-24",
+          "transactionAmountCurrency": {
+            "amount": "86.54",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Albert Heijn",
+          "counterPartyAccountNumber": "BG80BNBG96611020345678",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": "Jacob Bontiusplaats 9, 1018 LL",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-04-24T09:00:10.00+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c376",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Standing Order",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Other Income",
+          "bookingDate": "2019-04-15",
+          "valueDate": "2019-04-15",
+          "transactionAmountCurrency": {
+            "amount": "5200",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "CRDT",
+          "counterPartyName": "Simons & Co. B.V.",
+          "counterPartyAccountNumber": "HR1210010051863000160",
+          "counterPartyCity": "Utrecht",
+          "counterPartyAddress": "Vendelier 71. 3905PD",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-04-15T08:13:40.02+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c377",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "Payment Sent",
+          "category": "Transfers",
+          "bookingDate": "2019-04-15",
+          "valueDate": "2019-04-15",
+          "transactionAmountCurrency": {
+            "amount": "10",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Sally Lambert",
+          "counterPartyAccountNumber": "CY17002001280000001200527600",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-04-15T11:10:22.12+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c378",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "www.medimarket.com",
+          "originalDescription": "ONLINE PAYMENT - THANK YOU",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-03-13",
+          "valueDate": "2019-03-13",
+          "transactionAmountCurrency": {
+            "amount": "199.95",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "MediaMarkt",
+          "counterPartyAccountNumber": "CZ6508000000192000145399",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-03-13T09:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c379",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Transfers",
+          "bookingDate": "2019-02-13",
+          "valueDate": "2019-02-13",
+          "transactionAmountCurrency": {
+            "amount": "25",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "John White",
+          "counterPartyAccountNumber": "DK5000400440116243",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-02-13T06:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c380",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "www.starbucks.com",
+          "originalDescription": "STARBUCKS 65000000764AMSTERDAM",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Food Drinks",
+          "bookingDate": "2019-02-13",
+          "valueDate": "2019-02-13",
+          "transactionAmountCurrency": {
+            "amount": "7.5",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-02-13T07:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c381",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "Card Payment",
+          "category": "Shopping",
+          "bookingDate": "2019-02-13",
+          "valueDate": "2019-02-14",
+          "transactionAmountCurrency": {
+            "amount": "66.54",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Eneco Bank8",
+          "counterPartyAccountNumber": "FO1464600009692713",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-02-13T08:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c382",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Standing Order",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Category",
+          "bookingDate": "2019-01-10",
+          "valueDate": "2019-01-10",
+          "transactionAmountCurrency": {
+            "amount": "400",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Simons & Co. B.V.",
+          "counterPartyAccountNumber": "FI2112345600000785",
+          "counterPartyCity": "Utrecht",
+          "counterPartyAddress": "Vendelier 71. 3905PD",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-01-10T01:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c383",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Transfers",
+          "bookingDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "transactionAmountCurrency": {
+            "amount": "31",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Sally Lambert",
+          "counterPartyAccountNumber": "FR1420041010050500013M02606",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2019-10-01T12:20:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c384",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Standing Order",
+          "typeGroup": "Payment",
+          "type": "Payment Received",
+          "category": "Other Income",
+          "bookingDate": "2018-08-15",
+          "valueDate": "2018-08-15",
+          "transactionAmountCurrency": {
+            "amount": "25",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "CRDT",
+          "counterPartyName": "Eneco Bank12",
+          "counterPartyAccountNumber": "GE29NB0000000101904917",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2018-08-15T10:00:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c385",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Transfers",
+          "bookingDate": "2018-10-13",
+          "valueDate": "2018-08-15",
+          "transactionAmountCurrency": {
+            "amount": "640",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "DBIT",
+          "counterPartyName": "Sally Lambert",
+          "counterPartyAccountNumber": "DE89370400440532013000",
+          "counterPartyCity": "Amsterdam",
+          "counterPartyAddress": " Stationsplein, 1012 AB",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2018-10-13T09:37:50.52+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c386",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "category": "Income",
+          "bookingDate": "2018-07-13",
+          "valueDate": "2018-07-15",
+          "transactionAmountCurrency": {
+            "amount": "7200",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "CRDT",
+          "counterPartyName": "Simons & Co. B.V.",
+          "counterPartyAccountNumber": "GI75NWBK000000007099453",
+          "counterPartyCity": "Utrecht",
+          "counterPartyAddress": "Vendelier 71. 3905PD",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2018-07-13T11:37:12.01+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        },
+        {
+          "id": "ec9ec6fd-a99c-4cee-a73e-51f84b11c387",
+          "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4699",
+          "reference": "7e8f5718-946c-4a86-a8bb-d903a1a20db8",
+          "description": "Internet Banking",
+          "typeGroup": "Payment",
+          "type": "SEPA Payment",
+          "categoryId": 123456,
+          "location": {
+            "id": 2,
+            "latitude": 39.5963005,
+            "longitude": -104.89158799999998
+          },
+          "merchant": {
+            "id": 1,
+            "name": "Lamborghini.com",
+            "logo": "https://www.lamborghini.com/themes/custom/lambo/img/base/logo.png",
+            "website": "https://www.lamborghini.com/"
+          },
+          "bookingDate": "2018-07-13",
+          "valueDate": "2018-07-15",
+          "transactionAmountCurrency": {
+            "amount": "7200",
+            "currencyCode": "EUR"
+          },
+          "creditDebitIndicator": "CRDT",
+          "counterPartyName": "Simons & Co. B.V.",
+          "counterPartyAccountNumber": "GI75NWBK000000007099453",
+          "counterPartyCity": "Utrecht",
+          "counterPartyAddress": "Vendelier 71. 3905PD",
+          "checkImageAvailability": "UNAVAILABLE",
+          "creationTime": "2018-07-13T10:19:33.50+02:00",
+          "additions": {
+            "settlementDate": "2020-06-01",
+            "additionalCharges": "183.56",
+            "purpose": "vacation",
+            "purposeCode": "1",
+            "fees": "62",
+            "feeReferenceId": "FEE-01",
+            "ultimateDebtorName": "John Doe",
+            "counterPartyAddress": "Zuidplein 10, 1077 XV",
+            "counterPartyCity": "Amsterdam",
+            "debtorId": "df8e1cac-e483-4ad1-87e6-e7a2da343421",
+            "ultimateDebtorId": "e7a2da343421",
+            "ultimateCreditorId": "df8e1cac",
+            "ultimateCreditorName": "Julia Pence",
+            "debtorReference": "[{'name':'CLEO V MONROE SR','role':'PRIMARY'},{'name':'LANIE Q PIERCE','role':'JOINT'}]",
+            "MMCCode": "V"
+          }
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

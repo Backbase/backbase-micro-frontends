@@ -1,0 +1,21 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/data-groups/{id}_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/data-groups/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "0955e686d31e4216b3dd5d66161d536d",
+        "name": "Data group 1",
+        "description": "Simple data group",
+        "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b14",
+        "type": "ARRANGEMENTS",
+        "items": ["e6659eea893c4da48f9b7fd425de4677", "8eb58b1d048d4112a2f7591d465c3f14"]
+      },
+      "default": true
+    }
+  }
+}

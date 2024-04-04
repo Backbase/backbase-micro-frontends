@@ -1,0 +1,91 @@
+{
+  "name": "/client-api/v5/employee/conversations/report_GET",
+  "request": {
+    "url": "/client-api/v5/employee/conversations/report(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "clientUserFullName": "Ned Stark",
+          "clientUserId": "417a289c-5011-4dbc-a3ee-c00ed914f5fe",
+          "rootMessageSentDate": "2021-09-28T12:47:40.000+0000",
+          "lastMessageSentDate": "2021-09-29T13:50:40.000+0000",
+          "status": "NEW",
+          "topic": {
+            "deleted": false,
+            "id": "8e368e8f-f99c-4edb-8edb-b935b97faa60",
+            "name": "Living social deals"
+          },
+          "subject": "Important Application",
+          "bankAssigneeId": "43ca9de8-ac20-43bd-9c7d-bfa9e4ce16f8",
+          "bankAssigneeFullName": "John Snow"
+        },
+        {
+          "clientUserFullName": "Robert Johnson",
+          "clientUserId": "417a289c-5011-4dbc-a3ee-c00ed914f5fe",
+          "rootMessageSentDate": "2021-10-11T18:24:17.000+0000",
+          "lastMessageSentDate": "2021-10-11T20:27:19.000+0000",
+          "status": "IN_PROGRESS",
+          "topic": {
+            "deleted": false,
+            "id": "96aeb836-d5c1-4303-826c-5424012ba09f",
+            "name": "Prize"
+          },
+          "subject": "Vacation on Mars",
+          "bankAssigneeId": "bc32371a-2c5a-4fd9-b78e-ffe5c95e1a42",
+          "bankAssigneeFullName": "Maria Flores"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

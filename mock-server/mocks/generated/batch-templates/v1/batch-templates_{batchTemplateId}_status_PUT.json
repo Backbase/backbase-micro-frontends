@@ -1,0 +1,91 @@
+{
+  "name": "/client-api/v1/batch-templates/{batchTemplateId}/status_PUT",
+  "request": {
+    "url": "/client-api/v1/batch-templates/[^/]+/status(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict error",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "The request could not be completed due to a conflict with the current state of the resource.",
+            "key": "transactions.api.billingstatus.transaction",
+            "context": {
+              "billingStatus": "BILLED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": {
+        "batchTemplate": {
+          "id": "7c341c49-6344-22e7-907b-b6006ad3ecd0",
+          "name": "Internal transfers Acme corp",
+          "serviceAgreementId": "d6fdc581-1306-412a-9e40-86d851190acf",
+          "status": "DRAFT",
+          "details": {
+            "batchType": "INTRACOMPANY_PAYMENT_CREDIT_USA",
+            "batchName": "Europe branches cash distribution",
+            "creditDebitMixedIndicator": "CREDIT",
+            "totalCreditTransactionsCount": 120,
+            "totalCreditInstructedAmount": {
+              "amount": "322038.00",
+              "currencyCode": "USD"
+            },
+            "entryClass": "CCD",
+            "originatorAccount": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "4902331374",
+                "schemeName": "BBAN"
+              }
+            },
+            "companyId": "1800948594",
+            "companyName": "Your Company",
+            "bankBranchCode": "113105452"
+          }
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "name": "/client-api/v2/accounts/balance-history/arrangement/{arrangementId}_GET",
+  "request": {
+    "url": "/client-api/v2/accounts/balance-history/arrangement/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "dateFrom": "2017-05-10T00:00:00.000Z",
+          "dateTo": "2017-05-11T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "12"
+          },
+          "valuePtc": "232"
+        },
+        {
+          "dateFrom": "2017-05-11T00:00:00.000Z",
+          "dateTo": "2017-05-12T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "22"
+          },
+          "valuePtc": "22"
+        },
+        {
+          "dateFrom": "2017-05-23T00:00:00.000Z",
+          "dateTo": "2017-05-24T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "32"
+          },
+          "valuePtc": "32"
+        },
+        {
+          "dateFrom": "2017-06-01T00:00:00.000Z",
+          "dateTo": "2017-06-02T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "54"
+          },
+          "valuePtc": "54"
+        },
+        {
+          "dateFrom": "2017-06-02T00:00:00.000Z",
+          "dateTo": "2017-06-03T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "34"
+          },
+          "valuePtc": "34"
+        },
+        {
+          "dateFrom": "2017-06-12T00:00:00.000Z",
+          "dateTo": "2017-06-13T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "4"
+          },
+          "valuePtc": "4"
+        },
+        {
+          "dateFrom": "2017-06-18T00:00:00.000Z",
+          "dateTo": "2017-06-19T00:00:00.000Z",
+          "value": {
+            "currency": "EUR",
+            "balance": "-14"
+          },
+          "valuePtc": "-14"
+        }
+      ],
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": "Balance,Currency,Date,ArrangementId,ArrangementName 10.29,EUR,2018-05-10T00:00:00,1,Spending fee -123.2,EUR,2018-23-10T00:00:00,1,Spending fee 123.2,EUR,2018-24-10T00:00:00,2,Spending fee"
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

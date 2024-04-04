@@ -1,0 +1,190 @@
+{
+  "name": "/client-api/v2/batch-orders_GET",
+  "request": {
+    "url": "/client-api/v2/batch-orders(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "batchOrders": [
+          {
+            "id": "2f3a6d96-f671-4f03-994d-8f6caaa53cab",
+            "name": "Employee salaries",
+            "type": "SEPACT",
+            "creditDebitMixedIndicator": "CREDIT",
+            "status": "ACCEPTED",
+            "totalTransactionsCount": 73500,
+            "totalCreditTransactionsCount": 73500,
+            "totalInstructedAmount": {
+              "amount": "2400123.00",
+              "currencyCode": "EUR"
+            },
+            "totalCreditInstructedAmount": {
+              "amount": "2400123.00",
+              "currencyCode": "EUR"
+            },
+            "account": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "CH8739215260566920524",
+                "schemeName": "IBAN"
+              }
+            },
+            "requestedExecutionDate": "2019-02-18",
+            "canDelete": false,
+            "canCancel": false,
+            "canReverse": false
+          },
+          {
+            "id": "33295f9c-95ec-42f9-9817-64f7d48be023",
+            "name": "Employee salaries",
+            "type": "SEPACT",
+            "creditDebitMixedIndicator": "CREDIT",
+            "status": "ACCEPTED",
+            "totalTransactionsCount": 75930,
+            "totalCreditTransactionsCount": 75930,
+            "totalInstructedAmount": {
+              "amount": "2479474.00",
+              "currencyCode": "EUR"
+            },
+            "totalCreditInstructedAmount": {
+              "amount": "2479474.00",
+              "currencyCode": "EUR"
+            },
+            "account": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "CH8739215260566920524",
+                "schemeName": "IBAN"
+              }
+            },
+            "requestedExecutionDate": "2019-03-18",
+            "canDelete": false,
+            "canCancel": false,
+            "canReverse": false
+          },
+          {
+            "id": "f3da0418-c801-4db1-ae52-597f1459b525",
+            "name": "Employee salaries",
+            "type": "SEPACT",
+            "creditDebitMixedIndicator": "CREDIT",
+            "status": "ENTERED",
+            "totalTransactionsCount": 78791,
+            "totalCreditTransactionsCount": 78791,
+            "totalInstructedAmount": {
+              "amount": "2552947.15",
+              "currencyCode": "EUR"
+            },
+            "totalCreditInstructedAmount": {
+              "amount": "2552947.15",
+              "currencyCode": "EUR"
+            },
+            "account": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "CH8739215260566920524",
+                "schemeName": "IBAN"
+              }
+            },
+            "requestedExecutionDate": "2019-04-18",
+            "canDelete": true,
+            "canCancel": false,
+            "canReverse": false
+          }
+        ],
+        "totalBatchOrders": 3,
+        "creditDebitMixedIndicator": "CREDIT"
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "batchOrders": [
+          {
+            "id": "a8e1ba16-d9be-4dd4-92b8-e2fbfe138b71",
+            "name": "Employees salaries May",
+            "type": "SEPACT",
+            "creditDebitMixedIndicator": "CREDIT",
+            "status": "ENTERED",
+            "totalTransactionsCount": 71,
+            "totalCreditTransactionsCount": 71,
+            "totalInstructedAmount": {
+              "amount": "191056.00",
+              "currencyCode": "EUR"
+            },
+            "totalCreditInstructedAmount": {
+              "amount": "191056.00",
+              "currencyCode": "EUR"
+            },
+            "account": {
+              "name": "Salaries Account",
+              "identification": {
+                "identification": "ST42353317399261373273497",
+                "schemeName": "IBAN"
+              }
+            },
+            "requestedExecutionDate": "2019-05-27",
+            "approval": {
+              "id": "9bb143b1-bdb3-4ca5-9631-e02e743d6a10",
+              "userId": "23b8a2ac-e8bb-46b1-98d2-a2da71dfd646",
+              "externalUserId": "judi-miles",
+              "userFullName": "Judi Miles",
+              "serviceAgreementId": "e3e718d8-8f2e-4ef4-bf27-22580759b742",
+              "itemId": "a8e1ba16-d9be-4dd4-92b8-e2fbfe138b71",
+              "dataAccessItemId": "ac59c1a1-3729-4514-8051-5015dd0aadef",
+              "resource": "Batches",
+              "function": "SEPACT",
+              "status": "PENDING",
+              "createdAt": "2019-05-10T10:29:10Z",
+              "records": [],
+              "canApprove": true,
+              "canReject": true,
+              "finalApprover": true
+            },
+            "canDelete": false,
+            "canCancel": false,
+            "canReverse": false
+          }
+        ],
+        "totalBatchOrders": 1,
+        "creditDebitMixedIndicator": "CREDIT"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

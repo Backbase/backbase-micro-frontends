@@ -1,0 +1,167 @@
+{
+  "name": "/client-api/v1/forecast-configurations/{configurationId}_PUT",
+  "request": {
+    "url": "/client-api/v1/forecast-configurations/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "58c844ae-2bf1-419e-aeb6-487f6a18c92b",
+        "currencyCode": "USD",
+        "bankAccountIds": [
+          "3cdb2224-8926-4b4d-a99f-1c9dfbbb4600",
+          "4cdb2224-8926-4b4d-a99f-1c9dfbbb4697",
+          "5cdb2224-8926-4b4d-a99f-1c9dfbbb4696"
+        ],
+        "chartOfAccountIds": [
+          "a3ad5046-6a41-4b55-9072-66e5872fba62",
+          "6b718262-6099-4f32-9795-7aae2a25eac7",
+          "b2e758c5-92f5-4f52-b915-cc8ea0357868",
+          "700def49-ca84-4fa5-83d3-3de9cf393200",
+          "264c45c4-408e-4d80-ab8e-be4a3babb6c8",
+          "d4721d9a-d77b-4361-9807-09331ffcb6af",
+          "6333a502-088a-4314-a8d1-05e5cf61e023",
+          "1152c41c-3dec-44e7-9fc6-b9463b9017f5",
+          "5f4450f5-7d1b-4cc3-be31-af9df6488a50",
+          "773e43aa-8505-48b9-94ef-d7bc5786609a",
+          "e11719b8-0ec3-4bd7-943a-72f575ef7890",
+          "1d8e3740-6e22-4908-b37e-7de8bd9a012c",
+          "109b5a2f-8b10-4953-a388-2934f4f60a6e",
+          "8e03d0a6-f172-40bd-adf1-3834e9734267",
+          "4a959dfe-428f-48c2-88f6-efc155f2a19c",
+          "1bb12d54-9d81-4b63-b1c1-af419e47a687",
+          "d61afb14-0da1-43ba-935e-4b4a08a012fe",
+          "f421c967-88eb-43c1-b19e-aa03f15f67ce",
+          "8fca197a-3242-4795-8b06-48d821315ad1",
+          "8c48192a-723f-4f76-b3a7-c2be76c3bdc8",
+          "26dfb943-b6fb-484b-82b5-85eca47fe07c",
+          "dc2af3cd-9c29-4c23-b081-0ceac31d4406",
+          "4339c2ee-4040-4996-acf5-810b6c8eb337",
+          "77b9ba20-924e-4be8-8077-87278297d915",
+          "0e0f7942-612f-481c-8166-ea33fe398a74",
+          "81860ebb-997f-47b6-a1ff-30988af2520d",
+          "4d0fca62-d1e0-48fe-8481-9410f25ea4bf",
+          "c9c3eff9-0968-4d1f-b321-c2499c079014",
+          "271c798c-031c-4cfc-828c-d40e37fbb003",
+          "180cc81e-5621-45f1-8b2f-a7b1aa20cee7",
+          "587bc9dd-553d-4b3d-88d8-5256eedfb499",
+          "ccfb434a-b289-441c-99a2-30e05a572057",
+          "484ef212-372c-41bc-9a0b-9a3b64c78218",
+          "bb4a5e05-87bd-4373-9b8a-b1dbbd6ec3c8",
+          "7ebcc80a-06b9-4007-a33d-2f0365694a4d",
+          "b15090b5-bcea-4655-a7aa-861e6084ca8b",
+          "497559c7-60bf-476c-8b16-09b8952a9722",
+          "9e66abda-69bd-460f-81e2-d540cd2bcf4b",
+          "9c400ca0-009e-475a-abc6-d5a76154aa0a",
+          "cfeb44c9-9e25-4fbc-9648-a49b7cf82dad",
+          "9e68b349-72af-4cf3-8ea8-abd76f31064e",
+          "771aad7c-70d2-4f7e-9309-0ab33e11e589",
+          "45b174a0-45be-4134-95ee-27b751f29b6e",
+          "026dccb9-d8f6-4116-a3ff-872d0cd628f3",
+          "ecff9789-dff3-44a7-8ffa-72fa0af8a7ec",
+          "ee810af9-3b00-4de7-9204-c0cbc9bca5f8",
+          "3d8fed9c-8726-44fe-bdb0-da49d9457a8d",
+          "3d9747ce-afbf-4ff1-b23d-559206c5998c",
+          "1158aa19-894e-40ea-a54f-f2c6808c879a",
+          "1e870df7-7255-41e2-8220-e24c301af038",
+          "e2521f1a-ab18-483f-89d9-ea0434f00989",
+          "b94b7aca-07a3-4e49-b06c-9a89fb84793d",
+          "1137cd94-52b1-45b5-a573-1723c89a35f2",
+          "1b953b3a-0ea7-4b87-b5ca-33598b68546b",
+          "c4b4f130-c536-4b83-bbc7-15a7eda2fa67",
+          "22ed0181-f38c-4a2d-a84e-c5505eb5f14c",
+          "0d9d51d4-b347-480b-88f3-6107f0ba343f",
+          "bc366bf7-30db-4856-9f65-06ffc01596f5",
+          "1f4efcfd-4e03-49d4-b7a4-3f976f2045db",
+          "7877e117-f0ac-4142-841f-84e062f77128",
+          "ca5ea429-6cc0-4870-8513-a4e696b312d4",
+          "ba81920a-23b7-4634-946f-47f0067d9e1a",
+          "c9927ae1-eaeb-4b02-baeb-d6bcd64a20ff",
+          "bbb2a004-1783-424f-8aac-d7b71d3a9ff5",
+          "5270f4e2-d0e0-407d-aa12-87954a3d3e74",
+          "6d9c8716-fee0-4da2-a3dc-3abd5afbfdba",
+          "74d34736-f4a0-4638-9465-4f5254ddb1b5",
+          "e987c68b-6fd9-4a86-bc9b-bac1040fbbbf",
+          "ef961774-568d-4746-a790-fa8e22907db5",
+          "6b90b48e-d8b6-4dc5-8ed4-eb509141e39d",
+          "cfd72132-9cdc-4ca6-a106-f35d8f6bd727",
+          "442e062b-8585-4f14-9763-8990c9fd6087",
+          "35f1c9d8-2ce4-4f9e-9b34-ac7a0d802645",
+          "5d8860e2-a624-4009-b9a9-6f7d9add93d5",
+          "da439b63-4dc2-45c4-9cf8-d4984413403e",
+          "3b353731-f571-4854-8240-0d49cc81fecc",
+          "ecc43720-0fb4-4b20-9561-73f78021a3fa",
+          "2c7ba8c3-8c1d-4e95-b641-e78cbba8c45c",
+          "d37dcefc-f5ef-482d-b59a-bad2af1cb9ad",
+          "22a92103-3ee1-41fa-9722-1fc209caa2c2",
+          "f934846d-8461-44dd-89be-3d4cc7b59a53",
+          "a4163fda-a2c0-4d12-93cb-e016f049fee6",
+          "225f6f2a-445e-48b3-88b5-e3f9daae059a",
+          "acf2e2dd-cc98-4c16-a705-d0010b593083",
+          "de6e8ce5-90fc-4379-9972-951b94897fcc",
+          "b427bbbe-d104-46c5-b6a6-c13e37e5533f",
+          "c9205c03-ea6a-48a0-be07-733f894db4d8",
+          "7e776b86-151e-4a4a-a60a-f36e682e2a50",
+          "4edf486e-f6a7-45a8-9c0b-693675d0b65a",
+          "fb3ced8a-8bd5-41e6-8f6d-7c74fcb5aaea",
+          "f697f236-19a0-4c4f-be80-9e9f02ec7a6f"
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

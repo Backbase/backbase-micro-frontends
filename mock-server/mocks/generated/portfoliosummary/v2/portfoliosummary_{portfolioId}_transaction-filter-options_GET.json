@@ -1,0 +1,96 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/transaction-filter-options_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/transaction-filter-options(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "assetClasses": [
+          {
+            "name": "Stock",
+            "id": "stock"
+          },
+          {
+            "name": "Bond",
+            "id": "bonds"
+          },
+          {
+            "name": " Liquid Assets",
+            "id": "liquidassets"
+          },
+          {
+            "name": "Real Estate",
+            "id": "realestate"
+          },
+          {
+            "name": "Cash",
+            "id": "cash"
+          }
+        ],
+        "categories": [
+          {
+            "name": "Sell",
+            "id": "sell"
+          },
+          {
+            "name": "Buy",
+            "id": "buy"
+          },
+          {
+            "name": "Redemption",
+            "id": "redemption"
+          },
+          {
+            "name": "Fees",
+            "id": "fees"
+          },
+          {
+            "name": "Income",
+            "id": "income"
+          }
+        ],
+        "accounts": [
+          {
+            "name": "Portfolio 1",
+            "id": "189ba245-67f9-4655-a895-d838d272bd78"
+          },
+          {
+            "name": "Portfolio 2",
+            "id": "a59160c1-8f56-4eb4-b36d-441c4d510335"
+          },
+          {
+            "name": "Portfolio 3",
+            "id": "96504021-b1c9-4944-a3f7-ae3d5d84e405"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

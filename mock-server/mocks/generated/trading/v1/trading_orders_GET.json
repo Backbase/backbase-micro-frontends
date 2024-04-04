@@ -1,0 +1,114 @@
+{
+  "name": "/client-api/v1/trading/orders_GET",
+  "request": {
+    "url": "/client-api/v1/trading/orders(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "cursor": "55bbeace-274e-22ec-5487-0242ac130001",
+        "hasMoreItems": true,
+        "orders": [
+          {
+            "id": "55bbeace-274e-22ec-5487-0242ac130003",
+            "date": "2021-09-07T12:00:00.000Z",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Apple",
+              "ticker": "AAPL",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1247.15,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 10.5,
+            "totalValue": {
+              "amount": 13160.6,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "25bbeace-274e-22ec-5487-0242ac130003",
+            "date": "2021-09-07T12:00:00.000Z",
+            "type": "Market Order",
+            "tradeDirection": "Buy",
+            "status": "Filled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Apple",
+              "ticker": "AAPL",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1247.15,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "totalValue": {
+              "amount": 13095.1,
+              "currency": "USD"
+            },
+            "quantity": 10.5,
+            "external": true
+          },
+          {
+            "id": "55bbeace-274e-22ec-5487-0242ac130004",
+            "date": "2022-02-15T12:00:00.000Z",
+            "type": "Limit Order",
+            "tradeDirection": "Buy",
+            "status": "Partially Filled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Apple",
+              "ticker": "AAPL",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1247.15,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "totalValue": {
+              "amount": 13095.1,
+              "currency": "USD"
+            },
+            "quantity": 10,
+            "external": false
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

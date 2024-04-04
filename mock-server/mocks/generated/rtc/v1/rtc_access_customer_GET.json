@@ -1,0 +1,40 @@
+{
+  "name": "/client-api/v1/rtc/access/customer_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/access/customer(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "conversationToken": ""
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

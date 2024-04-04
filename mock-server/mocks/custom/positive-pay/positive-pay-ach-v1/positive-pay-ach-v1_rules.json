@@ -1,0 +1,138 @@
+{
+  "name": "/positive-pay-ach/client-api/v1/rules/filter",
+  "request": {
+    "url": "/positive-pay-ach/client-api/v1/rules/filter(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "rules": [
+          {
+            "id": "6",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "ruleType": "BLOCKER",
+            "paymentType": "ACH Debit",
+            "originatorId": "5123456789",
+            "originatorName": "First Originator",
+            "standardEntryClass": [],
+            "startDate": "2021-12-01T21:07:12Z",
+            "endDate": "2021-12-31T21:07:12Z",
+            "creationDate": "2020-12-31T06:30:00.000-05:00",
+            "allSec": true
+          },
+          {
+            "id": "5",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "ruleType": "BLOCKER",
+            "paymentType": "ACH Debit",
+            "originatorId": "5123456789",
+            "originatorName": "First Originator",
+            "standardEntryClass": ["CCD", "CIE"],
+            "startDate": "2021-12-01T21:07:12Z",
+            "endDate": "2021-12-31T21:07:12Z",
+            "creationDate": "2020-12-31T06:30:00.000-05:00",
+            "allSec": false
+          },
+          {
+            "id": "4",
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4600",
+            "ruleType": "FILTER",
+            "paymentType": "ACH Credit",
+            "originatorId": "4123456789",
+            "originatorName": "Second Originator",
+            "standardEntryClass": ["CCD"],
+            "startDate": "2021-12-01T21:07:12Z",
+            "endDate": "2021-12-31T21:07:12Z",
+            "frequency": "Weekly",
+            "maximumAmount": {
+              "amount": "10000000.99",
+              "currencyCode": "USD"
+            },
+            "creationDate": "2020-12-31T05:30:00.000-05:00",
+            "allSec": false
+          },
+          {
+            "id": "3",
+            "arrangementId": "4cdb2224-8926-4b4d-a99f-1c9dfbbb4697",
+            "ruleType": "BLOCKER",
+            "paymentType": "ACH Debit",
+            "originatorId": "*",
+            "standardEntryClass": ["CCD", "CIE"],
+            "startDate": "2021-12-01T21:07:12Z",
+            "endDate": "2021-12-31T21:07:12Z",
+            "creationDate": "2020-12-31T04:30:00.000-05:00",
+            "allSec": false
+          },
+          {
+            "id": "2",
+            "arrangementId": "5cdb2224-8926-4b4d-a99f-1c9dfbbb4696",
+            "ruleType": "BLOCKER",
+            "paymentType": "ACH Debit",
+            "originatorId": "2123456789",
+            "originatorName": "Originator First",
+            "standardEntryClass": ["CCD", "CIE"],
+            "startDate": "2022-01-01T21:07:12Z",
+            "endDate": "2022-01-31T21:07:12Z",
+            "creationDate": "2020-12-31T03:30:00.000-05:00",
+            "allSec": false
+          },
+          {
+            "id": "1",
+            "arrangementId": "2d94d333-471d-4cd7-84d2-24e822d5ca68",
+            "ruleType": "BLOCKER",
+            "paymentType": "ACH Debit",
+            "originatorId": "1123456789",
+            "originatorName": "Originator First",
+            "standardEntryClass": ["CCD", "CIE"],
+            "startDate": "2021-12-01T21:07:12Z",
+            "endDate": "2021-12-31T21:07:12Z",
+            "creationDate": "2020-12-31T02:30:00.000-05:00",
+            "allSec": false
+          }
+        ]
+      }
+    }
+  }
+}

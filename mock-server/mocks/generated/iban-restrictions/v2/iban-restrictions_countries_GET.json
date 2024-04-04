@@ -1,0 +1,23 @@
+{
+  "name": "/client-api/v2/iban-restrictions/countries_GET",
+  "request": {
+    "url": "/client-api/v2/iban-restrictions/countries(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "countryCode": "NL",
+          "ibanLength": 18
+        },
+        {
+          "countryCode": "TR",
+          "ibanLength": 26
+        }
+      ],
+      "default": true
+    }
+  }
+}

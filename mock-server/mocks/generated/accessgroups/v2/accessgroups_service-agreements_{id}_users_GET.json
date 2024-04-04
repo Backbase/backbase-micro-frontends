@@ -1,0 +1,36 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/service-agreements/{id}/users_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/service-agreements/[^/]+/users(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "01d70d09997b41cb83ea0e1db84626b3",
+          "externalId": "U0000011",
+          "legalEntityId": "a1198a20-5a40-4eb7-b47f-a553db958963",
+          "fullName": "David",
+          "legalEntityName": "LE-1"
+        },
+        {
+          "id": "bbf6a23536fa49029abf9c03f97a82fa",
+          "externalId": "U0000012",
+          "legalEntityId": "a1198a20-5a40-4eb7-b47f-a553db958963",
+          "fullName": "Paul",
+          "legalEntityName": "LE-1"
+        },
+        {
+          "id": "bc4ce9091eb04754a5a9b9422099f0fa",
+          "externalId": "U0000013",
+          "legalEntityId": "a1198a20-5a40-4eb7-b47f-a553db920429",
+          "fullName": "Wayne",
+          "legalEntityName": "LE-2"
+        }
+      ],
+      "default": true
+    }
+  }
+}

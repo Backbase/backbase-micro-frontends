@@ -1,0 +1,47 @@
+{
+  "name": "/client-api/v1/rtc/conversations/{conversationId}/participants_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/conversations/[^/]+/participants(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "userId": "b12afdac-f953-4d2d-b09a-f35a7c71d347",
+          "rtcId": "12b14d9e-f7e2-405d-93d2-7cc4a80e5eca"
+        },
+        {
+          "userId": "90bbbee7-8df2-4664-a391-6ce4163a276d",
+          "rtcId": "0694760c-357f-4408-971c-99fc80b4f493"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

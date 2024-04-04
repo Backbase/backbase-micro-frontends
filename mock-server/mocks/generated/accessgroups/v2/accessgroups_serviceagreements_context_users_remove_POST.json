@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/serviceagreements/context/users/remove_POST",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/serviceagreements/context/users/remove(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {},
+      "default": true
+    }
+  }
+}

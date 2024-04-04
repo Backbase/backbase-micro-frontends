@@ -1,0 +1,16 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/approvals/{approvalId}/approve_POST",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/approvals/[^/]+/approve(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalStatus": "PENDING"
+      },
+      "default": true
+    }
+  }
+}

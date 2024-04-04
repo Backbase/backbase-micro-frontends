@@ -1,0 +1,1157 @@
+{
+  "name": "/client-api/v2/arrangement-views/{viewName}_GET",
+  "request": {
+    "url": "/client-api/v2/arrangement-views/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 20
+        },
+        "groups": {
+          "loans": {
+            "metadata": {
+              "totalCount": 16
+            },
+            "elements": [
+              {
+                "id": "bc2ef4f2-f21e-4f82-a16b-a689967e67c7",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "1",
+                    "type": "NUMBER"
+                  },
+                  "name": {
+                    "value": "My Mortgage Loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Loan ABN Amro #1234",
+                    "type": "STRING"
+                  },
+                  "lastUpdateDate": {
+                    "value": "2021-12-10",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "c4f86dbe-16c7-4d4c-bc9e-cdea38e75d39",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "1",
+                    "type": "NUMBER"
+                  },
+                  "name": {
+                    "value": "My Mortgage Loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Loan ABN Amro #1234",
+                    "type": "STRING"
+                  },
+                  "lastUpdateDate": {
+                    "value": "2021-12-23",
+                    "type": "DATE"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 20
+        },
+        "groups": {
+          "loans": {
+            "metadata": {
+              "totalCount": 16,
+              "prevCursor": "38c48df3-433f-444b-95bf-c98c7e585bf3",
+              "nextCursor": "d5142eb2-b7f6-45c3-9ca4-08967b480872"
+            },
+            "elements": [
+              {
+                "id": "bc2ef4f2-f21e-4f82-a16b-a689967e67c7",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "name": {
+                    "value": "My Mortgage Loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Loan ABN Amro #1234",
+                    "type": "STRING"
+                  },
+                  "cardNumber": {
+                    "value": "••••••••••••1234",
+                    "type": "STRING"
+                  },
+                  "currency": {
+                    "value": "EUR",
+                    "type": "STRING"
+                  },
+                  "availableBalance": {
+                    "value": "150000",
+                    "type": "NUMBER"
+                  },
+                  "minimumPaymentDueDate": {
+                    "value": "2021-09-01",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "c4f86dbe-16c7-4d4c-bc9e-cdea38e75d39",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "4",
+                    "type": "NUMBER"
+                  },
+                  "name": {
+                    "value": "My Car Loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Loan ING #4321",
+                    "type": "STRING"
+                  },
+                  "cardNumber": {
+                    "value": "••••••••••••4321",
+                    "type": "STRING"
+                  },
+                  "currency": {
+                    "value": "EUR",
+                    "type": "STRING"
+                  },
+                  "availableBalance": {
+                    "value": "50000",
+                    "type": "NUMBER"
+                  },
+                  "minimumPaymentDueDate": {
+                    "value": "2021-09-01",
+                    "type": "DATE"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 8,
+          "balanceAggregations": {},
+          "projections": {}
+        },
+        "groups": {
+          "__all_in_one__": {
+            "metadata": {
+              "totalCount": 8,
+              "nextCursor": "OGYwY2Y4MGQtNDVmMi00ZDMxLTk5OGUtMDFhNWFlNGI4Mzhj"
+            },
+            "elements": [
+              {
+                "attributes": {
+                  "lastSyncDate": {
+                    "value": "2022-07-11T08:39:38.000Z",
+                    "type": "DATETIME"
+                  },
+                  "primaryBalance": {
+                    "value": "23.14000",
+                    "type": "DECIMAL"
+                  },
+                  "kind": {
+                    "value": "Savings Account",
+                    "type": "STRING"
+                  },
+                  "typeName": {
+                    "value": "όνομα τύπου 2",
+                    "type": "STRING"
+                  },
+                  "secondaryBalance": {
+                    "value": "216.81248",
+                    "type": "DECIMAL"
+                  }
+                },
+                "id": "6d6d7c63-a5b5-4726-bae1-618aa6dcd5b1"
+              },
+              {
+                "attributes": {
+                  "lastSyncDate": {
+                    "value": "2022-07-10T08:39:38.000Z",
+                    "type": "DATETIME"
+                  },
+                  "primaryBalance": {
+                    "value": "33.14000",
+                    "type": "DECIMAL"
+                  },
+                  "tertiaryBalance": {
+                    "value": "30.80000",
+                    "type": "DECIMAL"
+                  },
+                  "kind": {
+                    "value": "Current Account",
+                    "type": "STRING"
+                  },
+                  "typeName": {
+                    "value": "όνομα τύπου 1",
+                    "type": "STRING"
+                  },
+                  "secondaryBalance": {
+                    "value": "3.00000",
+                    "type": "DECIMAL"
+                  }
+                },
+                "id": "808838ed-1e07-41d3-8ce6-08c4a7fae7fb"
+              },
+              {
+                "attributes": {
+                  "lastSyncDate": {
+                    "value": "2022-07-09T08:39:38.000Z",
+                    "type": "DATETIME"
+                  },
+                  "primaryBalance": {
+                    "value": "43.14000",
+                    "type": "DECIMAL"
+                  },
+                  "kind": {
+                    "value": "Savings Account",
+                    "type": "STRING"
+                  },
+                  "typeName": {
+                    "value": "όνομα τύπου 2",
+                    "type": "STRING"
+                  },
+                  "secondaryBalance": {
+                    "value": "416.81248",
+                    "type": "DECIMAL"
+                  }
+                },
+                "id": "93576801-62fd-4ff3-8928-20c2484917d5"
+              },
+              {
+                "attributes": {
+                  "lastSyncDate": {
+                    "value": "2022-07-12T08:39:38.000Z",
+                    "type": "DATETIME"
+                  },
+                  "primaryBalance": {
+                    "value": "13.14000",
+                    "type": "DECIMAL"
+                  },
+                  "tertiaryBalance": {
+                    "value": "10.80000",
+                    "type": "DECIMAL"
+                  },
+                  "kind": {
+                    "value": "Current Account",
+                    "type": "STRING"
+                  },
+                  "typeName": {
+                    "value": "όνομα τύπου 1",
+                    "type": "STRING"
+                  },
+                  "secondaryBalance": {
+                    "value": "1.00000",
+                    "type": "DECIMAL"
+                  }
+                },
+                "id": "bd0f64bc-e100-42ba-9f74-db2ccdb4c166"
+              },
+              {
+                "attributes": {
+                  "lastSyncDate": {
+                    "value": "2022-07-08T08:39:38.000Z",
+                    "type": "DATETIME"
+                  },
+                  "primaryBalance": {
+                    "value": "53.14000",
+                    "type": "DECIMAL"
+                  },
+                  "tertiaryBalance": {
+                    "value": "50.80000",
+                    "type": "DECIMAL"
+                  },
+                  "kind": {
+                    "value": "Current Account",
+                    "type": "STRING"
+                  },
+                  "typeName": {
+                    "value": "όνομα τύπου 1",
+                    "type": "STRING"
+                  },
+                  "secondaryBalance": {
+                    "value": "5.00000",
+                    "type": "DECIMAL"
+                  }
+                },
+                "id": "ec78bf47-24fd-415a-8866-35af36dd6bd6"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 14,
+          "balanceAggregations": {
+            "all-accounts": {
+              "EUR": {
+                "amount": "4000.03002",
+                "numberOfAccounts": 3
+              },
+              "MEX": {
+                "amount": "2000000.03",
+                "numberOfAccounts": 5
+              }
+            },
+            "ready-to-spend": {
+              "EUR": {
+                "amount": "2000.03",
+                "numberOfAccounts": 2
+              }
+            },
+            "loans": {
+              "USD": {
+                "amount": "4000.03",
+                "numberOfAccounts": 3
+              }
+            }
+          },
+          "projections": {
+            "currencies": ["EUR", "RON", "USD"],
+            "current-accounts": ["22"],
+            "savings-accounts": ["3"],
+            "loans": ["4"]
+          }
+        },
+        "groups": {
+          "current": {
+            "metadata": {
+              "totalCount": 3
+            },
+            "elements": [
+              {
+                "id": "0ca4732c-7745-4152-8f40-e490b8ad3fe5",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "current-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Adelaide Checking Account",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "727.12",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL02INGB8635612388",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "c0d8e4c5-2e3f-4634-a860-719c4063e54b",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "current-account",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Brugge Checking Account",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "431.54",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL29ABNA5612457383",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "4deea328-df3b-43b6-b7f3-482eb131ce64",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "current-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Greg Current",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "212.99",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL75INGB2136665782",
+                    "type": "STRING"
+                  }
+                }
+              }
+            ]
+          },
+          "savings": {
+            "metadata": {
+              "totalCount": 5
+            },
+            "elements": [
+              {
+                "id": "82a23dda-0bd5-46d4-915d-2c037b8a4e39",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "savings-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Denver Savings",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "23200.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL17INGB1289364745",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "2f8bc23f-6f07-4277-a1ed-a581e95d5f71",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "savings-account",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Edmonton Savings",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "1768.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL76ABNA3591831883",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "ae34e228-d205-426e-93ce-791db348ca1f",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "savings-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "3",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Fargo Savings",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "450.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL89RABO7773107033",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "47858132-910c-4a91-b225-b1ade95c38ce",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "savings-account",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Gent Savings",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "890.00",
+                    "type": "STRING"
+                  },
+                  "accountNumber": {
+                    "value": "NL15ABNA5172064443",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "66d76c05-fdd9-46a2-87d4-65ad01e5d80a",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "savings-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "1",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Houston Savings",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "14233.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL71RABO7659536168",
+                    "type": "STRING"
+                  }
+                }
+              }
+            ]
+          },
+          "term-deposits": {
+            "metadata": {
+              "totalCount": 2
+            },
+            "elements": [
+              {
+                "id": "52e1d01b-4c1c-49a6-8388-1e61146ae7c4",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "term-deposit",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Kelly Term Deposit",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "25000.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL12INGB7189610219",
+                    "type": "STRING"
+                  },
+                  "maturityDate": {
+                    "value": "2030-12-10",
+                    "type": "DATE"
+                  },
+                  "maturityAmount": {
+                    "value": "5800",
+                    "type": "NUMBER"
+                  }
+                }
+              },
+              {
+                "id": "06230021-df86-4d3d-a235-12ea80e91f14",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "term-deposit",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Montgomery Term Deposit",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "32000.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL82ABNA7134534839",
+                    "type": "STRING"
+                  },
+                  "maturityDate": {
+                    "value": "2030-06-22",
+                    "type": "DATE"
+                  },
+                  "maturityAmount": {
+                    "value": "7500",
+                    "type": "DATE"
+                  }
+                }
+              }
+            ]
+          },
+          "loans": {
+            "metadata": {
+              "totalCount": 4
+            },
+            "elements": [
+              {
+                "id": "568666d8-e781-4142-a2b9-46263a25c361",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Car Loan",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "322.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL85INGB5614740864",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "0ca4732c-7745-4152-8f40-e490b8ad3fe5",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "College Loan",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "320500.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL64ABNA3070632572",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "365ad13d-cd04-4430-977a-036c98daf761",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "3",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "House Loan",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "15892.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL22RABO8845464385",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "ac0470be-1e5f-4e64-9c6c-f5bf01c7c5ae",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "1",
+                    "type": "NUMBER"
+                  },
+                  "displayName": {
+                    "value": "Travel Loan",
+                    "type": "STRING"
+                  },
+                  "balance": {
+                    "value": "2300.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL47RABO1568852959",
+                    "type": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 8
+        },
+        "groups": {
+          "overdue-accounts": {
+            "metadata": {
+              "totalCount": 8
+            },
+            "elements": [
+              {
+                "id": "bc2ef4f2-f21e-4f82-a16b-a689967e67c7",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Loan ING #0219",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "My Mortgage Loan",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "2000.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL12INGB7189610219",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-09-10",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "15e0e452-8461-4d1b-be29-dcd5e6955d83",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "credit-card",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Credit Card VISA ING #1332",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Credit Card VISA",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "100.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "••••••••••••1332",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-09-12",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "0ca4732c-7745-4152-8f40-e490b8ad3fe5",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Loan ABNA #4839",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "My Car Loan",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "300.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL82ABNA7134534839",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-10-16",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "365ad13d-cd04-4430-977a-036c98daf761",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "3",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Loan RABO #4385",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "My Business Loan",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "100.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL22RABO8845464385",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-12-10",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "5688348b-f0a8-4924-a085-1dac9bb50143",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "credit-card",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "3",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Credit Card RABO #6234",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Master Card Rabobank",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "90.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "••••••••••••6234",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-12-15",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "ac0470be-1e5f-4e64-9c6c-f5bf01c7c5ae",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "loan",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "1",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Travel Loan",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Loan RABO #6168",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "80.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL71RABO7659536168",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-12-10",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "7400bcbd-4831-4148-baa0-1c1a24ca004e",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "current-account",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "4",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Checking Account BUNQ #9723",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Checking Account Mr. Johnson",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "4000.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL20BUNQ6161309723",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-10-10",
+                    "type": "DATE"
+                  }
+                }
+              },
+              {
+                "id": "3a83ba9e-4e8b-4511-964d-c4da6116436e",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "current-account",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Checking Account ABNA #8558",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Checking Account Mrs. Julens",
+                    "type": "STRING"
+                  },
+                  "amountInArrear": {
+                    "value": "20.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "NL30ABNA8727958558",
+                    "type": "STRING"
+                  },
+                  "overdueSince": {
+                    "value": "2021-08-10",
+                    "type": "DATE"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success_5": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 3
+        },
+        "groups": {
+          "credit-cards-near-limit": {
+            "metadata": {
+              "totalCount": 3
+            },
+            "elements": [
+              {
+                "id": "be429665-afaf-4653-ac2b-1fe3780b3978",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "credit-cards",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "2",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Credit Card MasterCard ING",
+                    "type": "STRING"
+                  },
+                  "remainingCredit": {
+                    "value": "22.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "••••••••••••2399",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "15e0e452-8461-4d1b-be29-dcd5e6955d83",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "credit-cards",
+                    "type": "STRING"
+                  },
+                  "displayName": {
+                    "value": "Credit Card VISA ABNA",
+                    "type": "STRING"
+                  },
+                  "remainingCredit": {
+                    "value": "50.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "••••••••••••8755",
+                    "type": "STRING"
+                  }
+                }
+              },
+              {
+                "id": "15e0e452-8461-4d1b-be29-dcd5e6955d83",
+                "attributes": {
+                  "productKindUri": {
+                    "value": "credit-cards",
+                    "type": "STRING"
+                  },
+                  "institutionId": {
+                    "value": "3",
+                    "type": "STRING"
+                  },
+                  "name": {
+                    "value": "Credit Card VISA RABO",
+                    "type": "STRING"
+                  },
+                  "remainingCredit": {
+                    "value": "75.00",
+                    "type": "NUMBER"
+                  },
+                  "accountNumber": {
+                    "value": "••••••••••••6539",
+                    "type": "STRING"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

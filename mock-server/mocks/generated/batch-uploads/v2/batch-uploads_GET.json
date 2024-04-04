@@ -1,0 +1,82 @@
+{
+  "name": "/client-api/v2/batch-uploads_GET",
+  "request": {
+    "url": "/client-api/v2/batch-uploads(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "batchUploads": [
+          {
+            "id": "3d0e77b1-08fc-490d-898c-694169c76a2f",
+            "status": "FAILED",
+            "file": {
+              "name": "salaries-2019-02.csv",
+              "size": 94370816
+            },
+            "batchFileType": "BB_SEPACT_CSV",
+            "totalBatchOrdersCount": 3,
+            "createdAt": "2019-02-22T13:14:37Z"
+          },
+          {
+            "id": "82c85c38-35af-4fa8-87e5-d8374937cac2",
+            "status": "DONE",
+            "file": {
+              "name": "salaries-2019-02.csv",
+              "size": 94371840,
+              "uploadedSize": 94371840,
+              "lastModified": "2019-12-22T08:06:00Z"
+            },
+            "digest": {
+              "value": "d6099d20c5866e317bebbc69cc0eb681",
+              "algorithm": "MD5"
+            },
+            "batchFileType": "BB_SEPACT_CSV",
+            "totalBatchOrdersCount": 3,
+            "createdAt": "2019-02-22T13:44:02Z",
+            "completedAt": "2019-02-22T14:08:34Z"
+          },
+          {
+            "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+            "status": "DONE",
+            "file": {
+              "name": "salaries-2019-12.csv",
+              "size": 54371840,
+              "uploadedSize": 54371840,
+              "lastModified": "2019-12-22T08:06:00Z"
+            },
+            "digest": {
+              "value": "07c8445c33bba054e7abc463cd351db465e6b90f00d2e658d0250d13aba8fe4c",
+              "algorithm": "SHA-256"
+            },
+            "batchFileType": "BB_SEPACT_CSV",
+            "totalBatchOrdersCount": 1,
+            "createdAt": "2019-12-24T07:09:33Z",
+            "completedAt": "2019-12-24T07:11:09Z"
+          },
+          {
+            "id": "3650f774-2a95-4bfb-9f00-1c58fc1af0c6",
+            "status": "DUPLICATE",
+            "file": {
+              "name": "salaries-2019-12.csv",
+              "size": 54371840,
+              "uploadedSize": 54371840,
+              "lastModified": "2019-12-22T08:06:00Z"
+            },
+            "digest": {
+              "value": "07c8445c33bba054e7abc463cd351db465e6b90f00d2e658d0250d13aba8fe4c",
+              "algorithm": "SHA-256"
+            },
+            "batchFileType": "BB_SEPACT_CSV",
+            "totalBatchOrdersCount": 1,
+            "createdAt": "2019-12-28T09:11:13Z",
+            "completedAt": "2019-12-28T09:13:23Z"
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

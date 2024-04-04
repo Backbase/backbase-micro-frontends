@@ -1,0 +1,56 @@
+{
+  "name": "/client-api/v3/audit-log/event-categories_GET",
+  "request": {
+    "url": "/client-api/v3/audit-log/event-categories(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "eventCategories": [
+          {
+            "eventCategory": "Access Control",
+            "objectTypes": [
+              {
+                "objectType": "Data Group",
+                "eventActions": ["Create", "Update", "Delete"]
+              }
+            ]
+          },
+          {
+            "eventCategory": "Audit",
+            "objectTypes": [
+              {
+                "objectType": "Audit Log",
+                "eventActions": ["Publish", "Read", "Export"]
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

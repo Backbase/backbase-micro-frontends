@@ -1,0 +1,113 @@
+{
+  "name": "/client-api/v1/loans/{loanId}/escrow-payouts_GET",
+  "request": {
+    "url": "/client-api/v1/loans/[^/]+/escrow-payouts(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "$schema": "../schemas/escrow-payouts.yaml",
+        "escrowPayouts": [
+          {
+            "payeeName": "Umbrella Insurance",
+            "type": "Insurance",
+            "dateTime": "2020-07-24T00:00:00Z",
+            "amount": "40000.00000",
+            "currencyCode": "USD",
+            "status": "Scheduled"
+          },
+          {
+            "payeeName": "Umbrella Insurance",
+            "type": "Insurance",
+            "dateTime": "2022-08-24T00:00:00Z",
+            "amount": "20000.00000",
+            "currencyCode": "USD",
+            "status": "Processed"
+          },
+          {
+            "payeeName": "Umbrella Insurance",
+            "type": "Insurance",
+            "dateTime": "2022-01-15T00:00:00Z",
+            "amount": "30000.00000",
+            "currencyCode": "USD",
+            "status": "Scheduled"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

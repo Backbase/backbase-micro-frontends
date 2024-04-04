@@ -1,0 +1,59 @@
+{
+  "name": "/client-api/v3/audit-log/export_GET",
+  "request": {
+    "url": "/client-api/v3/audit-log/export(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "429": {
+      "status": 429,
+      "data": {
+        "message": "Too many requests for Async export."
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": {
+        "exportId": "a892e1e0-b62c-4e2b-bd24-9e2ad9786ae1"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

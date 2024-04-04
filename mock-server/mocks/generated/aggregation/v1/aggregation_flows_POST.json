@@ -1,0 +1,106 @@
+{
+  "name": "/client-api/v1/aggregation/flows_POST",
+  "request": {
+    "url": "/client-api/v1/aggregation/flows(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "value": {
+          "id": "4b70569d-1b65-4c2a-a33c-6ac70d68aba9",
+          "metadata": {
+            "accessToken": "wLImRaD8oXUYGD07s8OTlteYEUFg",
+            "configName": "Example1",
+            "fastLinkURL": "https://fl4.sandbox.yodlee.com/authenticate/restserver/fastlink"
+          }
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 201,
+      "data": {
+        "value": {
+          "id": "370f6cff-f168-4a0a-913a-56415ad050b8",
+          "metadata": {
+            "accessToken": "ZaVkUETqD3hCMdBz6cRz8IEtG1sP",
+            "configName": "Example1",
+            "fastLinkURL": "https://fl4.sandbox.yodlee.com/authenticate/restserver/fastlink",
+            "providerAccountId": "12356"
+          }
+        }
+      }
+    },
+    "success_2": {
+      "status": 201,
+      "data": {
+        "value": {
+          "id": "d2e7633b-fc3a-4d06-a668-a0f3a44060dc",
+          "metadata": {
+            "accessToken": "0FX7rintC6FjDtNX0WQgmFUh6sSQ",
+            "configName": "Example1",
+            "fastLinkURL": "https://fl4.sandbox.yodlee.com/authenticate/restserver/fastlink",
+            "providerAccountId": "564849"
+          }
+        }
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

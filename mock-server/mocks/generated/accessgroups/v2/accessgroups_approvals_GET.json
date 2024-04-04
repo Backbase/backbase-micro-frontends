@@ -1,0 +1,63 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/approvals_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/approvals(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "creatorUserFullName": "User 1",
+          "creatorUserId": "5643e686d31e4216b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Assign Permissions",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12b6"
+        },
+        {
+          "creatorUserFullName": "User 2",
+          "creatorUserId": "5643e686d31e4216b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Manage Data Groups",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12b7"
+        },
+        {
+          "creatorUserFullName": "User 3",
+          "creatorUserId": "5643e686d31e4216b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Unlock User",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12b8"
+        },
+        {
+          "creatorUserFullName": "User 4",
+          "creatorUserId": "5643e686d31e4216b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Manage Limits",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12b9"
+        },
+        {
+          "creatorUserFullName": "User 5",
+          "creatorUserId": "5643e686d31e4216b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Manage Shadow Limits",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12b1"
+        },
+        {
+          "creatorUserFullName": "User 6",
+          "creatorUserId": "5643e686d31e3567b3ff5d66161d1234",
+          "createdAt": "2019-01-01T12:00:00Z",
+          "action": "EDIT",
+          "category": "Manage Function Groups",
+          "approvalId": "2df100c6-b12b-4102-8831-db417acf12c4"
+        }
+      ],
+      "default": true
+    }
+  }
+}

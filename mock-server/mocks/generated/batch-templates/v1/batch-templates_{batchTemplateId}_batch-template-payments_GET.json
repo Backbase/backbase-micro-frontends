@@ -1,0 +1,203 @@
+{
+  "name": "/client-api/v1/batch-templates/{batchTemplateId}/batch-template-payments_GET",
+  "request": {
+    "url": "/client-api/v1/batch-templates/[^/]+/batch-template-payments(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "batchTemplatePayments": [
+          {
+            "id": "6c357c28-6714-11e7-907b-a6006ad3dcd0",
+            "counterpartyName": "A. Hamers",
+            "counterpartyAccountNumber": "5802354374",
+            "counterpartyBankBranchCode": "214105452",
+            "creditDebitIndicator": "DEBIT",
+            "instructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "description": "Salary Mar 2021 empl.no:902713",
+            "extendedDescriptionSize": 0
+          }
+        ],
+        "totalBatchTemplatePayments": 1,
+        "batchTemplate": {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "name": "Internal transfers Acme corp",
+          "serviceAgreementId": "d6fdc581-1306-412a-9e40-86d851190acf",
+          "createdAt": "2019-05-10T10:29:10Z",
+          "createdBy": "U00243",
+          "canApply": true,
+          "canDelete": true,
+          "canEdit": true,
+          "canDuplicate": true,
+          "details": {
+            "batchType": "INTRACOMPANY_PAYMENT_CREDIT_USA",
+            "batchName": "Europe branches cash distribution",
+            "creditDebitMixedIndicator": "CREDIT",
+            "totalCreditTransactionsCount": 120,
+            "totalCreditInstructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "entryClass": "CCD",
+            "originatorAccount": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "4902331374",
+                "schemeName": "BBAN"
+              }
+            },
+            "companyId": "1800948594",
+            "companyName": "Your Company",
+            "bankBranchCode": "113105452"
+          }
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "batchTemplatePayments": [
+          {
+            "id": "6c357c28-6714-11e7-907b-a6006ad3dcd0",
+            "counterpartyName": "A. Hamers",
+            "counterpartyAccountNumber": "5802354374",
+            "counterpartyBankBranchCode": "214105452",
+            "creditDebitIndicator": "DEBIT",
+            "instructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "description": "123;2023-01-06;123123123;1232;123;12333;N;true",
+            "extendedDescriptionSize": 0
+          }
+        ],
+        "totalBatchTemplatePayments": 1,
+        "batchTemplate": {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "name": "Internal transfers Acme corp",
+          "serviceAgreementId": "d6fdc581-1306-412a-9e40-86d851190acf",
+          "createdAt": "2019-05-10T10:29:10Z",
+          "createdBy": "U00243",
+          "canApply": true,
+          "canDelete": true,
+          "canEdit": true,
+          "canDuplicate": true,
+          "details": {
+            "batchType": "INTRACOMPANY_PAYMENT_CREDIT_USA",
+            "batchName": "Europe branches cash distribution",
+            "creditDebitMixedIndicator": "CREDIT",
+            "totalCreditTransactionsCount": 120,
+            "totalCreditInstructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "entryClass": "CCD",
+            "subEntryClass": "CCD_CHILD_SUPPORT",
+            "originatorAccount": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "4902331374",
+                "schemeName": "BBAN"
+              }
+            },
+            "companyId": "1800948594",
+            "companyName": "Your Company",
+            "bankBranchCode": "113105452"
+          }
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "batchTemplatePayments": [
+          {
+            "id": "6c357c28-6714-11e7-907b-a6006ad3dcd0",
+            "counterpartyName": "A. Hamers",
+            "counterpartyAccountNumber": "5802354374",
+            "counterpartyBankBranchCode": "214105452",
+            "creditDebitIndicator": "DEBIT",
+            "instructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "description": "Bank payments are the digital equivalent of paper checks. Customers can use bank payments to pay for products and services online. Instead o",
+            "extendedDescriptionSize": 456768
+          }
+        ],
+        "totalBatchTemplatePayments": 1,
+        "batchTemplate": {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "name": "Internal transfers Acme corp",
+          "serviceAgreementId": "d6fdc581-1306-412a-9e40-86d851190acf",
+          "createdAt": "2019-05-10T10:29:10Z",
+          "createdBy": "U00243",
+          "canApply": true,
+          "canDelete": true,
+          "canEdit": true,
+          "canDuplicate": true,
+          "details": {
+            "batchType": "INTRACOMPANY_PAYMENT_CREDIT_USA",
+            "batchName": "Europe branches cash distribution",
+            "creditDebitMixedIndicator": "CREDIT",
+            "totalCreditTransactionsCount": 120,
+            "totalCreditInstructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "USD"
+            },
+            "entryClass": "CTX",
+            "originatorAccount": {
+              "name": "Main Current",
+              "identification": {
+                "identification": "4902331374",
+                "schemeName": "BBAN"
+              }
+            },
+            "companyId": "1800948594",
+            "companyName": "Your Company",
+            "bankBranchCode": "113105452"
+          }
+        }
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

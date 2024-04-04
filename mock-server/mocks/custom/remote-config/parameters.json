@@ -1,0 +1,38 @@
+{
+  "name": "/client-api/v1/projects/backbase-retail-web-prototypes/parameters",
+  "request": {
+    "url": "/client-api/v1/projects/backbase-retail-web-prototypes/parameters",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied."
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Internal server error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "show_manage_contacts": true,
+        "owed_amount_focus": true,
+        "show_payment_status_retail_loans": true,
+        "show_maintenance_banner": true,
+        "maintenance_banner_text": "Dear Customer, please be aware that some services in online banking will be unavailable because of maintenance activity."
+      }
+    }
+  }
+}

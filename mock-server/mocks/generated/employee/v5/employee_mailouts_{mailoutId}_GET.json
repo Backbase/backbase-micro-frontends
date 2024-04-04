@@ -1,0 +1,66 @@
+{
+  "name": "/client-api/v5/employee/mailouts/{mailoutId}_GET",
+  "request": {
+    "url": "/client-api/v5/employee/mailouts/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "attachments": [
+          {
+            "createdAt": "2017-10-02T10:51:50.000+0000",
+            "filename": "message-attachment-filename.pdf",
+            "id": "5d869ea0-d3a3-4b83-888f-767bdcdcd565",
+            "size": 2592836
+          },
+          {
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "filename": "another-message-attachment-filename.pdf",
+            "id": "ae4658a4-073c-4d8b-ab5d-55e9238d3ff0",
+            "size": 15982836
+          }
+        ],
+        "body": "PHRhYmxlIHdpZHRoPSIxMDAlIiBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCI+CiAgPHRyPgogICAgPHRkIGFsaWduPSJjZW50ZXIiIHZhbGlnbj0ibWlkZGxlIiBzdHlsZT0iZm9udC1mYW1pbHk6J0dlb3JnaWEnLCAnVGltZXMgTmV3IFJvbWFuJywgJ1RpbWVzJywgc2VyaWY7IGNvbG9yOiMwMDAwMDA7IGZvbnQtc2l6ZToyNHB4OyBwYWRkaW5nLWJvdHRvbTo1cHgiPgogICAgICA8aT5XZWxjb21lICAke3VzZXJ9CiAgICAgIDwvaT4KICA8dHI+CiAgICA8dGQgYWxpZ249ImxlZnQiIHZhbGlnbj0ibWlkZGxlIiBzdHlsZT0iZm9udC1mYW1pbHk6J0dlb3JnaWEnLCAnVGltZXMgTmV3IFJvbWFuJywgJ1RpbWVzJywgc2VyaWY7IGNvbG9yOiMwMDAwMDA7IGZvbnQtc2l6ZToxNXB4Ij4KICAgICAgdG8gdGhlICR7d29ybGR9IFdvcmxkCiAgICAgIFRoaXMgaXMgb3VyIHdpc2ggZm9yIHlvdS4uLiAke3dpc2h9CiAgPHRyPgo8L3RhYmxlPg==",
+        "deletable": true,
+        "deliveredMessagesNumber": 493,
+        "id": "20a52c18-c4b1-4c1e-8f27-9e0998ff3ef7",
+        "important": false,
+        "initiationDate": "2020-03-04T10:51:30.275+0000",
+        "isBodyHtml": true,
+        "mailoutName": "Happy b-day to users",
+        "readMessagesNumber": 42,
+        "sender": {
+          "id": "3d72a290-00f8-4f65-a16d-65d8f0b29b5a",
+          "name": "John Snow"
+        },
+        "senderDisplayName": "The bank you love",
+        "status": "PROCESSING",
+        "subject": "Happy Birthday!",
+        "topic": {
+          "deleted": false,
+          "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+          "name": "News"
+        },
+        "totalRecipientsCount": 500
+      },
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

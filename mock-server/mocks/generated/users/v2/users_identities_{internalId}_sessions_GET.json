@@ -1,0 +1,61 @@
+{
+  "name": "/client-api/v2/users/identities/{internalId}/sessions_GET",
+  "request": {
+    "url": "/client-api/v2/users/identities/[^/]+/sessions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "sessions": [
+          {
+            "id": "9136e697-6c2f-49f6-9ef7-c67c89e8b825",
+            "ipAddress": "198.51.100.103",
+            "start": "2018-07-26T15:21:23.000Z",
+            "lastAccess": "2018-07-26T15:21:23.000Z",
+            "client": "web"
+          },
+          {
+            "id": "d04ba3e2-9dd5-484d-b756-e6a86562743a",
+            "ipAddress": "198.51.100.212",
+            "start": "2018-07-26T15:23:33.000Z",
+            "lastAccess": "2018-07-26T15:24:12.000Z",
+            "client": "mobile"
+          }
+        ]
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

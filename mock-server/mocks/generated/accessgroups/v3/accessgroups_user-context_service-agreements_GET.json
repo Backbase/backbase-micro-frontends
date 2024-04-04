@@ -1,0 +1,29 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/user-context/service-agreements_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/user-context/service-agreements(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "a1198a205a404eb7b47fa553db920429",
+          "name": "Online Banking Service Agreement",
+          "description": "Service Agreement between Online Banking and Backbase",
+          "isMaster": false,
+          "status": "ENABLED"
+        },
+        {
+          "id": "37115f7b556a4e11ba0bfd07e2567b1d",
+          "name": "Doe Corporation Service Agreement",
+          "description": "Service Agreement for Doe Corp.",
+          "isMaster": true,
+          "customerCategory": "RETAIL"
+        }
+      ],
+      "default": true
+    }
+  }
+}

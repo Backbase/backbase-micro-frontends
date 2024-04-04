@@ -1,0 +1,123 @@
+{
+  "name": "/positive-pay-check/client-api/v1/checks/filter",
+  "request": {
+    "url": "/positive-pay-check/client-api/v1/checks/filter(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "x-total-count": 5
+      },
+      "data": {
+        "checks": [
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "payeeName": "Sarah Lee",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "9999999.99"
+            },
+            "checkNumber": "111456789123456789123456789111",
+            "issueDate": "2020-11-01",
+            "voidCheck": false,
+            "registrationDate": "2005-10-21T11:50:23.000-05:00",
+            "issueStatus": "SUBMITTED"
+          },
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f32",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "payeeName": " ",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "150.54"
+            },
+            "checkNumber": "333456789123456789123456789333",
+            "issueDate": "2020-11-01",
+            "voidCheck": true,
+            "registrationDate": "2009-09-20T15:42:20.000-05:00",
+            "issueStatus": "PAID"
+          },
+          {
+            "id": "919d66ae-c942-2ba7-8739-c5a38a596f32",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "payeeName": " ",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "160.54"
+            },
+            "checkNumber": "333456789123456789123456789222",
+            "issueDate": "2020-11-01",
+            "voidCheck": true,
+            "registrationDate": "2009-09-20T15:42:20.000-05:00",
+            "issueStatus": "REJECTED"
+          },
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f33",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "payeeName": "Robin Green",
+            "amountDetails": {
+              "currencyCode": "CAD",
+              "amount": "10.89"
+            },
+            "checkNumber": "444456789123456789123456789444",
+            "issueDate": "2020-11-01",
+            "voidCheck": false,
+            "issueStatus": "EXCEPTION"
+          }
+        ]
+      }
+    },
+    "success_empty": {
+      "status": 200,
+      "headers": {
+        "x-total-count": 0
+      },
+      "data": {
+        "checks": []
+      }
+    }
+  }
+}

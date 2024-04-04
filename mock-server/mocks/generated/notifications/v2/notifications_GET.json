@@ -1,0 +1,341 @@
+{
+  "name": "/client-api/v2/notifications_GET",
+  "request": {
+    "url": "/client-api/v2/notifications(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "1234-5678-9021",
+          "title": "Account balance changed",
+          "message": "&#128184; Hi John, your saving account balance just went below threshold.  The current balance is EUR 100.00",
+          "level": "INFO",
+          "createdOn": "2020-06-16T08:00:36.000+0000",
+          "read": false,
+          "origin": "Accounts",
+          "routing": {
+            "where-to": "arrangement-view",
+            "data": {
+              "id": "2265e96bfd19",
+              "arrangementId": "dae9ac97-5765-470f-9fa9-e221505791ee"
+            }
+          },
+          "translations": {
+            "en-US": {
+              "title": "Account balance changed",
+              "message": "&#128184; Hi John, your saving account balance just went below threshold.  The current balance is EUR 100.00"
+            },
+            "fr-FR": {
+              "title": "Solde du compte modifié",
+              "message": "&#128184; Bonjour John, le solde de votre compte d'épargne est passé sous le seuil. Le solde actuel est de EUR 100.00"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9022",
+          "title": "New transaction",
+          "message": "&#128184; Paid EUR 100.00 Quickbooks monthly subscription fee.",
+          "level": "ALERT",
+          "createdOn": "2020-06-15T14:01:36.000+0000",
+          "read": false,
+          "origin": "Transaction",
+          "routing": {
+            "where-to": "transaction-view",
+            "data": {
+              "id": "e4c26f12e4935",
+              "arrangementId": "67d5e587-b602-4c3e-a3f2-e339d70bfb4b"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9023",
+          "title": "Saving goal",
+          "message": "Congrats, you successfully completed your saving goal for Maldives trip.",
+          "level": "INFO",
+          "createdOn": "2020-06-14T14:07:36.000+0000",
+          "expiresOn": "2021-10-06T14:07:36.000+0000",
+          "read": true,
+          "origin": "PFM"
+        },
+        {
+          "id": "1234-5678-9024",
+          "title": "Pocket Goal &#127881;",
+          "message": "Well done! Don't forget to withdraw your money and create a new pocket for more saving goals",
+          "level": "SUCCESS",
+          "origin": "FinancialInsights",
+          "createdOn": "2020-06-13T12:13:36.000+0000",
+          "read": true,
+          "routing": {
+            "where-to": "pocket-success-view",
+            "data": {
+              "id": "456789123"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9025",
+          "title": "Account balance changed",
+          "message": "&#128184; Hi John, your saving account balance just went below threshold.  The current balance is EUR 100.00 ",
+          "level": "INFO",
+          "createdOn": "2020-05-27T14:59:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "validFrom": "2020-07-28T14:59:36.000+0000",
+          "expiresOn": "2021-09-28T14:59:36.000+0000",
+          "read": false,
+          "origin": "Accounts"
+        },
+        {
+          "id": "1234-5678-9026",
+          "title": "Payment status change",
+          "message": "Your payment to Acme Corp of EUR 100.00 has changed to rejected.",
+          "level": "INFO",
+          "createdOn": "2020-05-26T15:55:36.000+0000",
+          "read": false,
+          "origin": "Payment",
+          "routing": {
+            "where-to": "payment-view",
+            "data": {
+              "id": "d3d3a955-aa94-44ba-a90c-c9eafab81213"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9111",
+          "title": "Payments summary",
+          "message": "You have 4 payments to approve since 2021-05-05 16:00:00.",
+          "level": "INFO",
+          "origin": "Payment",
+          "createdOn": "2020-05-05T08:09:27.000+0000",
+          "read": false,
+          "routing": {
+            "where-to": "payments-list-view"
+          }
+        },
+        {
+          "id": "1234-5678-9027",
+          "title": "Contact status change",
+          "message": "The status for Contact: Kenya Coffee Beans has changed to rejected.",
+          "level": "INFO",
+          "createdOn": "2020-05-25T16:53:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "read": false,
+          "origin": "Contact",
+          "routing": {
+            "where-to": "party-view",
+            "data": {
+              "id": "4b9eb675-65ad-4247-8ff4-d549e3b340c6"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9028",
+          "title": "Payment to approve",
+          "message": "You have a new payment of EUR 100.00 to approve.",
+          "level": "INFO",
+          "createdOn": "2020-04-24T17:54:36.000+0000",
+          "expiresOn": "2021-09-24T18:54:36.000+0000",
+          "read": true,
+          "origin": "Payment",
+          "routing": {
+            "where-to": "payment-approve-view",
+            "data": {
+              "id": "d3d3a955-aa94-44ba-a90c-c9eafab81213"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9029",
+          "title": "Contact to approve",
+          "message": "You have new contact to approve.",
+          "level": "INFO",
+          "createdOn": "2020-04-15T17:13:36.000+0000",
+          "expiresOn": "2021-09-22T18:54:36.000+0000",
+          "read": true,
+          "origin": "Contact",
+          "routing": {
+            "where-to": "party-approve-view",
+            "data": {
+              "id": "4b9eb675-65ad-4247-8ff4-d549e3b340c6"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9030",
+          "title": "Planned maintenance",
+          "message": "The server will be down at October 4 due to some problems you should not care about. Sorry for inconvenience. For more information check the {{link}}.",
+          "level": "WARNING",
+          "createdOn": "2020-04-10T19:54:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "validFrom": "2020-04-17T19:54:36.000+0000",
+          "expiresOn": "2021-09-17T19:54:36.000+0000",
+          "read": false,
+          "origin": "Maintenance"
+        },
+        {
+          "id": "1234-5678-9031",
+          "title": "Export complete",
+          "message": "The CSV you requested for export is complete and ready to {{link}}",
+          "level": "SUCCESS",
+          "createdOn": "2020-04-09T21:54:36.000+0000",
+          "read": false,
+          "origin": "Audit",
+          "link": "http://support.dashboard.backbase.com"
+        },
+        {
+          "id": "1234-5678-9032",
+          "title": "Export failed",
+          "message": "The CSV you requested for export failed to complete",
+          "level": "WARNING",
+          "createdOn": "2020-03-12T22:54:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "read": false,
+          "origin": "Audit"
+        },
+        {
+          "id": "1234-5678-9033",
+          "title": "Scheduled payment alert",
+          "message": "Don't forget: 50,- will be withdrawn from the account on 2021-10-04",
+          "level": "ALERT",
+          "createdOn": "2020-03-10T14:54:36.000+0000",
+          "expiresOn": "2021-09-10T14:54:36.000+0000",
+          "read": true,
+          "origin": "Security"
+        },
+        {
+          "id": "1234-5678-9034",
+          "title": "Updates",
+          "message": "You are using an old version of application. Please update it as soon as possible. To get the new version click the {{link}}.",
+          "level": "WARNING",
+          "createdOn": "2020-03-05T13:13:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "expiresOn": "2021-11-22T15:54:36.000+0000",
+          "read": true,
+          "origin": "Security"
+        },
+        {
+          "id": "1234-5678-9038",
+          "title": "Sticky message",
+          "message": "Sticky message",
+          "level": "WARNING",
+          "createdOn": "2020-02-16T14:42:36.000+0000",
+          "expiresOn": "2021-10-04T14:54:36.000+0000",
+          "read": true,
+          "origin": "Security"
+        },
+        {
+          "id": "1234-5678-9039",
+          "title": "Message shown in future (unless it's past June 2021 :)",
+          "message": "Message shown in future (unless it's past June 2021 :)",
+          "level": "WARNING",
+          "createdOn": "2020-02-14T10:48:36.000+0000",
+          "validFrom": "2020-02-15T11:48:36.000+0000",
+          "expiresOn": "2021-06-03T11:48:36.000+0000",
+          "read": false,
+          "origin": "Maintenance"
+        },
+        {
+          "id": "1234-5678-9040",
+          "title": "Account statement is ready",
+          "message": "Your monthly account statement is ready to download",
+          "level": "SUCCESS",
+          "createdOn": "2020-02-12T14:01:36.000+0000",
+          "read": true,
+          "origin": "AccountStatement"
+        },
+        {
+          "id": "1234-5678-9041",
+          "title": "New message - Unassigned",
+          "message": "From: J.Smith<br/>Subject: Credit<br/>Topic: Currency",
+          "level": "INFO",
+          "createdOn": "2020-02-10T15:30:36.000+0000",
+          "read": true,
+          "origin": "MessageCenter",
+          "routing": {
+            "where-to": "conversation-view",
+            "data": {
+              "id": "12345"
+            }
+          }
+        },
+        {
+          "id": "1234-5678-9042",
+          "title": "Saving goal",
+          "message": "Congrats, you successfully completed your saving goal for J.Smith",
+          "level": "INFO",
+          "createdOn": "2020-02-08T15:30:36.000+0000",
+          "link": "http://support.dashboard.backbase.com",
+          "read": true,
+          "origin": "PFM"
+        },
+        {
+          "id": "1234-5678-9044",
+          "title": "Limit consumption warning",
+          "message": "You are getting close to limits threshold. Please contact Administrator",
+          "level": "WARNING",
+          "createdOn": "2020-02-04T15:30:36.000+0000",
+          "read": true,
+          "origin": "Limits"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

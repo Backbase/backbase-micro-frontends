@@ -1,0 +1,100 @@
+{
+  "name": "/client-api/v2/policy-assignments/approvable-business-functions_GET",
+  "request": {
+    "url": "/client-api/v2/policy-assignments/approvable-business-functions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvableBusinessFunctions": [
+          {
+            "resource": "Payments",
+            "function": "SEPA CT",
+            "status": "ACTIVE",
+            "assignedPolicies": [
+              {
+                "id": "4a12d988-bac2-42b7-980c-f09686e3d7db",
+                "policyId": "ac007558-970f-45fc-9939-48f78d8622fa",
+                "name": "No-op policy",
+                "description": "A policy that does not require any approval"
+              }
+            ],
+            "dataGroupSpecificPolicies": [
+              {
+                "dataGroups": [
+                  {
+                    "id": "8a49404e7750618601775066a0130006",
+                    "name": "Salary Accounts",
+                    "deleted": false
+                  },
+                  {
+                    "id": "8a49404e7750618601775066a0130006",
+                    "name": "Tax Accounts",
+                    "deleted": false
+                  }
+                ],
+                "assignedPolicies": [
+                  {
+                    "id": "03de4365-43c1-4e1d-aa6f-dc687dcdffec",
+                    "policyId": "38e4c392-de63-4b1a-b15b-9ea6b56b9e1b",
+                    "name": "Simple policy",
+                    "description": "A simple policy that requires one approval of type A",
+                    "upperBound": {
+                      "amount": "100.00",
+                      "currencyCode": "EUR"
+                    }
+                  },
+                  {
+                    "id": "6546c424-d3b1-4848-bbda-31cd44ab6916",
+                    "policyId": "75419243-3d83-40ce-98b2-d2313bf3cf13",
+                    "name": "Default policy",
+                    "description": "A default policy that requires two approvals of different types: A + B",
+                    "upperBound": {
+                      "amount": "200.00",
+                      "currencyCode": "EUR"
+                    }
+                  }
+                ]
+              },
+              {
+                "dataGroups": [
+                  {
+                    "id": "8a49404e7750618601775066a0130034",
+                    "name": "Marketing US",
+                    "deleted": false
+                  }
+                ],
+                "assignedPolicies": [
+                  {
+                    "id": "03de4365-43c1-4e1d-aa6f-dc687dcdffec",
+                    "policyId": "38e4c392-de63-4b1a-b15b-9ea6b56b9e1b",
+                    "name": "Simple policy",
+                    "description": "A simple policy that requires one approval of type A"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

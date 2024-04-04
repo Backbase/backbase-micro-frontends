@@ -1,0 +1,26 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/serviceagreements/context_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/serviceagreements/context(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "a1198a20-5a40-4eb7-b47f-a553db920429",
+        "externalId": "external-id-1",
+        "name": "Broker deal 1",
+        "description": "Agreement between Backbase and Apple",
+        "creatorLegalEntity": "6e83bf0d-0d77-4320-b854-4a704e1d50c3",
+        "isMaster": true,
+        "status": "ENABLED",
+        "validFromDate": "2017-03-31",
+        "validFromTime": "08:30:00",
+        "validUntilDate": "2019-03-31",
+        "validUntilTime": "17:30:00"
+      },
+      "default": true
+    }
+  }
+}

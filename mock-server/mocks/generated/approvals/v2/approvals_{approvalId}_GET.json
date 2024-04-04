@@ -1,0 +1,130 @@
+{
+  "name": "/client-api/v2/approvals/{approvalId}_GET",
+  "request": {
+    "url": "/client-api/v2/approvals/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalDetails": {
+          "id": "b3e4692d-6772-4fb2-9446-b8f4607f49b1",
+          "userId": "606d4532-f8d9-4a5f-840a-887baf88fa24",
+          "userFullName": "Paddy Brian",
+          "externalUserId": "paddy-brian",
+          "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+          "itemId": "4cf9a1da-2f48-4f9b-8a97-204c8cd43aa0",
+          "dataAccessItemId": "975809ca-008c-4732-9ae0-a2531d4800bc",
+          "resource": "Payments",
+          "function": "SEPA_CT",
+          "status": "PENDING",
+          "createdAt": "2018-07-22T13:44:02Z",
+          "records": [
+            {
+              "id": "59f23015-9007-4391-a604-1d17e85ab3c0",
+              "userId": "606d4532-f8d9-4a5f-840a-887baf88fa24",
+              "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+              "externalUserId": "robin-green",
+              "userFullName": "Robin Green",
+              "approvalTypeId": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "status": "APPROVED",
+              "createdAt": "2018-01-22T13:44:02Z"
+            }
+          ],
+          "approvalTypes": [
+            {
+              "id": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "name": "A",
+              "description": "1st approval",
+              "rank": 100
+            },
+            {
+              "id": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+              "name": "B",
+              "description": "2nd approval",
+              "rank": 101
+            }
+          ],
+          "policy": {
+            "id": "6546c424-d3b1-4848-bbda-31cd44ab6915",
+            "name": "Default policy",
+            "description": "A default policy that requires two approvals of different types: A + B",
+            "items": [
+              {
+                "approvalTypeId": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+                "approvalType": {
+                  "id": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+                  "name": "A",
+                  "description": "1st approval",
+                  "rank": 100
+                },
+                "numberOfApprovals": 1
+              },
+              {
+                "approvalTypeId": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+                "approvalType": {
+                  "id": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+                  "name": "B",
+                  "description": "2nd approval",
+                  "rank": 101
+                },
+                "numberOfApprovals": 1
+              }
+            ]
+          },
+          "canApprove": false,
+          "canReject": false,
+          "finalApprover": false
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

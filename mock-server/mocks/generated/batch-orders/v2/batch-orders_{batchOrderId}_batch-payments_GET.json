@@ -1,0 +1,145 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}/batch-payments_GET",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+/batch-payments(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "batchPayments": [
+          {
+            "counterpartyName": "A. Hamers",
+            "counterpartyAccountNumber": "NL62ABNA0609476343",
+            "instructedAmount": {
+              "amount": "4102.00",
+              "currencyCode": "EUR"
+            },
+            "description": "Bank payments are the digital equivalent of paper checks. Customers can use bank payments to pay for products and services online. Instead o",
+            "extendedDescriptionSize": 99999
+          },
+          {
+            "counterpartyName": "E. Gutierrez",
+            "counterpartyAccountNumber": "NL50ABNA4418364501",
+            "instructedAmount": {
+              "amount": "5287.00",
+              "currencyCode": "EUR"
+            },
+            "description": "Salaray Feb 2019 empl.no:256869",
+            "extendedDescriptionSize": 0
+          },
+          {
+            "counterpartyName": "C.M. McAlister",
+            "counterpartyAccountNumber": "BE98735114499693",
+            "instructedAmount": {
+              "amount": "3398.00",
+              "currencyCode": "EUR"
+            },
+            "description": "Bank payments are the digital equivalent of paper checks. Customers can use bank payments to pay for products and services online. Instead o",
+            "extendedDescriptionSize": 456768
+          },
+          {
+            "counterpartyName": "K.C. Bennis",
+            "counterpartyAccountNumber": "NL67ABNA5515439724",
+            "instructedAmount": {
+              "amount": "4334.00",
+              "currencyCode": "EUR"
+            },
+            "description": "Salaray Feb 2019 empl.no:191872",
+            "extendedDescriptionSize": 0
+          },
+          {
+            "counterpartyName": "M. Frederiksen",
+            "counterpartyAccountNumber": "DE49500105174361358418",
+            "instructedAmount": {
+              "amount": "5576.00",
+              "currencyCode": "EUR"
+            },
+            "description": "Salaray Feb 2019 empl.no:068572",
+            "extendedDescriptionSize": 123,
+            "status": "REJECTED",
+            "bankStatus": "UNPROCESSABLE",
+            "reasonCode": "RJ05",
+            "reasonText": "Rejected by counterparty bank",
+            "errorDescription": "Target account has been closed."
+          }
+        ],
+        "totalBatchPayments": 5,
+        "batchOrder": {
+          "id": "2f3a6d96-f671-4f03-994d-8f6caaa53cab",
+          "name": "Employee salaries",
+          "type": "SEPACT",
+          "status": "ACCEPTED",
+          "totalTransactionsCount": 5,
+          "totalInstructedAmount": {
+            "amount": "2400123.00",
+            "currencyCode": "EUR"
+          },
+          "account": {
+            "name": "Main Current",
+            "identification": {
+              "identification": "CH8739215260566920524",
+              "schemeName": "IBAN"
+            }
+          },
+          "requestedExecutionDate": "2019-02-18",
+          "fileName": "salaries-2019-02.csv",
+          "userFullName": "Davy Jones",
+          "uploadCompletedAt": "2019-02-22T14:08:34Z",
+          "confidentialType": "confidential type"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

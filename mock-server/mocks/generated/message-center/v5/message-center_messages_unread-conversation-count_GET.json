@@ -1,0 +1,31 @@
+{
+  "name": "/client-api/v5/message-center/messages/unread-conversation-count_GET",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/unread-conversation-count(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "unreadCount": 5
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

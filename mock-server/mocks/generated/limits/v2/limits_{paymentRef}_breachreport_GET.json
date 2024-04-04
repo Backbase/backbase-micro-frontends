@@ -1,0 +1,221 @@
+{
+  "name": "/client-api/v2/limits/{paymentRef}/breachreport_GET",
+  "request": {
+    "url": "/client-api/v2/limits/[^/]+/breachreport(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "payment": {
+            "refNo": "4563-3474-34553-24556",
+            "user-BBID": "550e8400-e29b-41d4-a716-446655440000",
+            "amount": "599.99",
+            "effectiveDate": "2017-01-31T12:12:12.000Z",
+            "currency": "EUR",
+            "paymentType": "Domestic Payments",
+            "state": "NEW"
+          },
+          "matchedLimits": 1,
+          "consumption": [
+            {
+              "limitId": "4563-3474-34553-24556",
+              "limitCcy": "EUR",
+              "consumedAmount": "599.99",
+              "consumedOn": "2017-01-31T12:12:12.000Z",
+              "state": "CONSUMED"
+            }
+          ],
+          "checkTime": "2017-01-31T12:12:12.000Z",
+          "breachReport": [
+            {
+              "alias": "Personal Service Agreement Limit",
+              "user-BBID": "oleksii",
+              "limitedEntity": [
+                {
+                  "ref": "1234567-12312-123123",
+                  "type": "Service Agreement",
+                  "description": "Kuhic, Gislason and Kemmer. SERVICE AGREEMENT"
+                }
+              ],
+              "shadow": false,
+              "currency": "EUR",
+              "breachInfo": [
+                {
+                  "breachType": "THRESHOLD",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "daily",
+                    "startTime": "2017-01-31T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "250.0",
+                  "currentThreshold": "499.9"
+                },
+                {
+                  "breachType": "CONSUMPTION",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "monthly",
+                    "startTime": "2017-01-01T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "9950.0",
+                  "currentThreshold": "10000.0"
+                }
+              ]
+            },
+            {
+              "alias": "Personal Limit",
+              "user-BBID": "oleksii",
+              "shadow": false,
+              "currency": "EUR",
+              "breachInfo": [
+                {
+                  "breachType": "CONSUMPTION",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "daily",
+                    "startTime": "2017-01-31T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "500.0",
+                  "currentThreshold": "1000.0"
+                }
+              ]
+            },
+            {
+              "alias": "Common Job Profile Limit",
+              "limitedEntity": [
+                {
+                  "ref": "1234567-12312-123123",
+                  "type": "Function Access Group",
+                  "description": "Payments approvers"
+                },
+                {
+                  "ref": "1234567-12312-123123",
+                  "type": "Function",
+                  "description": "Domestic payments"
+                },
+                {
+                  "ref": "Approve",
+                  "type": "Privilege",
+                  "description": "Approve"
+                },
+                {
+                  "ref": "1234567-12312-123123",
+                  "type": "Service Agreement",
+                  "description": "Kuhic, Gislason and Kemmer. SERVICE AGREEMENT"
+                }
+              ],
+              "shadow": false,
+              "currency": "EUR",
+              "breachInfo": [
+                {
+                  "breachType": "THRESHOLD",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "daily",
+                    "startTime": "2017-01-31T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "250.0",
+                  "currentThreshold": "499.9"
+                }
+              ]
+            },
+            {
+              "alias": "",
+              "limitedEntity": [
+                {
+                  "ref": "1234567-12312-123123",
+                  "type": "Legal Entity",
+                  "description": "Kuhic, Gislason and Kemmer"
+                }
+              ],
+              "shadow": false,
+              "currency": "EUR",
+              "breachInfo": [
+                {
+                  "breachType": "CONSUMPTION",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "quarterly",
+                    "startTime": "2017-01-01T00:00:00.000Z",
+                    "endTime": "2017-03-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "99950.0",
+                  "currentThreshold": "100000.0"
+                },
+                {
+                  "breachType": "THRESHOLD",
+                  "breachedLimitType": "TRANSACTIONAL",
+                  "currentThreshold": "499.9"
+                }
+              ]
+            }
+          ],
+          "globalBreachReport": [
+            {
+              "alias": "Service Agreement Limit",
+              "currency": "EUR",
+              "limitedEntity": [
+                {
+                  "type": "Service Agreement"
+                }
+              ],
+              "breachInfo": [
+                {
+                  "breachType": "THRESHOLD",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "daily",
+                    "startTime": "2017-01-31T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "250.0",
+                  "currentThreshold": "499.9"
+                },
+                {
+                  "breachType": "CONSUMPTION",
+                  "breachedLimitType": "PERIODIC",
+                  "timeframe": {
+                    "period": "monthly",
+                    "startTime": "2017-01-01T00:00:00.000Z",
+                    "endTime": "2017-01-31T23:59:59.000Z"
+                  },
+                  "currentConsumption": "9950.0",
+                  "currentThreshold": "10000.0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

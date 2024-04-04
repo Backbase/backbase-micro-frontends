@@ -1,0 +1,65 @@
+{
+  "name": "/client-api/v1/batch-templates/{batchTemplateId}/batch-template-payments/bulk_POST",
+  "request": {
+    "url": "/client-api/v1/batch-templates/[^/]+/batch-template-payments/bulk(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 207,
+      "data": {
+        "reports": [
+          {
+            "status": 200,
+            "successResponse": {
+              "id": "cad9e668-15a4-44bf-832d-67e7b41387ac"
+            },
+            "errorResponse": null
+          },
+          {
+            "status": 400,
+            "successResponse": null,
+            "errorResponse": {
+              "message": "Manual batch template validation failed",
+              "errors": [
+                {
+                  "message": "Amount must be greater than zero.",
+                  "key": "payment-order.api.Validation.batch-template-payment-amount-is-greater-than-zero",
+                  "context": {
+                    "batchOrderId": "3322bb58-9f2a-4365-81de-88060cedbee1",
+                    "batchPaymentId": "5b76e92c-6e93-4098-a06f-0bba5a40bde2"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Batch template not found",
+        "errors": []
+      }
+    }
+  }
+}

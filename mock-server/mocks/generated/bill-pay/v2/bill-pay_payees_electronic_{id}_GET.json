@@ -1,0 +1,154 @@
+{
+  "name": "/client-api/v2/bill-pay/payees/electronic/{id}_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payees/electronic/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "payee": {
+          "id": "123456789",
+          "name": "Backbase",
+          "nickName": "My Backbase",
+          "accountNumber": "987654321",
+          "paymentServices": [
+            {
+              "cutoffTime": "2019-02-25T15:00:00.000-04:00",
+              "earliestPaymentDate": "2019-02-26",
+              "nextPaymentDate": "2019-02-27",
+              "paymentServiceType": "REGULAR_PAYMENT"
+            },
+            {
+              "cutoffTime": "2019-02-18T15:00:00.000-04:00",
+              "earliestPaymentDate": "2019-02-19",
+              "nextPaymentDate": "2019-02-20",
+              "paymentServiceType": "OVERNIGHT_CHECK",
+              "deliveryDays": 3,
+              "fee": {
+                "amount": "9.99",
+                "currencyCode": "USD"
+              }
+            }
+          ],
+          "ebill": {
+            "capable": true,
+            "enabled": true,
+            "status": "ACTIVE",
+            "latestBill": {
+              "id": "20141219140239655590",
+              "amount": {
+                "amount": "100.99",
+                "currencyCode": "USD"
+              },
+              "minAmountDue": {
+                "amount": "20.50",
+                "currencyCode": "USD"
+              },
+              "outstandingBalance": {
+                "amount": "201.98",
+                "currencyCode": "USD"
+              },
+              "paymentDate": "2019-03-01",
+              "status": "PAID",
+              "url": "http://my.ebill.pdf",
+              "statementAvailable": false,
+              "paymentId": "abc0192802"
+            },
+            "autopay": {
+              "paymentAccount": {
+                "accountNumber": "11111111",
+                "routingNumber": "000000022",
+                "accountType": "SAVINGS_ACCOUNT",
+                "accountNickName": "Current Account"
+              },
+              "daysBeforePayOn": 3,
+              "maxPaymentAmount": {
+                "amount": "123",
+                "currencyCode": "USD"
+              },
+              "payOn": "BILL_ARRIVAL",
+              "payAmount": "FULL_AMOUNT",
+              "paymentScheduledAlert": false,
+              "paymentSentAlert": true,
+              "paymentCompleteAlert": true
+            }
+          }
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

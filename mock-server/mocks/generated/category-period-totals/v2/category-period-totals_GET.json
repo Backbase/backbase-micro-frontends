@@ -1,0 +1,201 @@
+{
+  "name": "/client-api/v2/category-period-totals_GET",
+  "request": {
+    "url": "/client-api/v2/category-period-totals(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "total": {
+          "amount": "3666.03",
+          "currencyCode": "EUR"
+        },
+        "intervalDuration": "MONTH",
+        "periods": [
+          {
+            "total": {
+              "amount": "1128.2",
+              "currencyCode": "EUR"
+            },
+            "intervalStartDate": "2018-03-01",
+            "items": [
+              {
+                "category": "Home",
+                "totalAmount": {
+                  "amount": "862",
+                  "currencyCode": "EUR"
+                },
+                "trend": 15,
+                "portion": 22
+              },
+              {
+                "category": "Food & Drinks",
+                "totalAmount": {
+                  "amount": "20.2",
+                  "currencyCode": "EUR"
+                },
+                "trend": -3,
+                "portion": 1
+              },
+              {
+                "category": "Transportation",
+                "totalAmount": {
+                  "amount": "246",
+                  "currencyCode": "EUR"
+                },
+                "trend": 0,
+                "portion": 6
+              }
+            ]
+          },
+          {
+            "total": {
+              "amount": "1228.83",
+              "currencyCode": "EUR"
+            },
+            "intervalStartDate": "2018-04-01",
+            "items": [
+              {
+                "category": "Home",
+                "totalAmount": {
+                  "amount": "962.33",
+                  "currencyCode": "EUR"
+                },
+                "trend": 15,
+                "portion": 27
+              },
+              {
+                "category": "Food & Drinks",
+                "totalAmount": {
+                  "amount": "120",
+                  "currencyCode": "EUR"
+                },
+                "trend": 57,
+                "portion": 7
+              },
+              {
+                "category": "Transportation",
+                "totalAmount": {
+                  "amount": "146.5",
+                  "currencyCode": "EUR"
+                },
+                "trend": -43,
+                "portion": 6
+              }
+            ]
+          },
+          {
+            "total": {
+              "amount": "1309",
+              "currencyCode": "EUR"
+            },
+            "intervalStartDate": "2018-05-01",
+            "items": [
+              {
+                "category": "Home",
+                "totalAmount": {
+                  "amount": "777",
+                  "currencyCode": "EUR"
+                },
+                "trend": -20,
+                "portion": 19
+              },
+              {
+                "category": "Food & Drinks",
+                "totalAmount": {
+                  "amount": "320",
+                  "currencyCode": "EUR"
+                },
+                "trend": 77,
+                "portion": 14
+              },
+              {
+                "category": "Transportation",
+                "totalAmount": {
+                  "amount": "212",
+                  "currencyCode": "EUR"
+                },
+                "trend": 84,
+                "portion": 9
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

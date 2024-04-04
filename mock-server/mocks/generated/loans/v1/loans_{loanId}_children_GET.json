@@ -1,0 +1,163 @@
+{
+  "name": "/client-api/v1/loans/{loanId}/children_GET",
+  "request": {
+    "url": "/client-api/v1/loans/[^/]+/children(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "$schema": "../schemas/loans.yaml",
+        "loans": [
+          {
+            "id": "9ed25bae-11eb-4840-b4fc-37bbe2e5f9c9",
+            "loanType": "LineOfCredit",
+            "name": "Line of credit 1",
+            "accountNumber": "NL98RABO5242052503",
+            "loanStatus": "Pending",
+            "currencyCode": "EUR",
+            "paymentOptions": {
+              "paymentOptions": [
+                {
+                  "name": "LoanPayment",
+                  "operationType": "Credit",
+                  "allowed": true,
+                  "errorCodes": []
+                },
+                {
+                  "name": "LoanAdvance",
+                  "operationType": "Debit",
+                  "allowed": true,
+                  "errorCodes": []
+                }
+              ]
+            },
+            "minimumDueAmount": "1444.90",
+            "lastPaymentAmount": "500000.90",
+            "lastPaymentDate": "2022-04-16T17:00:00.000Z"
+          },
+          {
+            "id": "764ac5bb-f462-412f-8aee-a218737e1d2a",
+            "name": "Term loan 1",
+            "loanType": "TermLoan",
+            "accountNumber": "NL88ABNA4242739303",
+            "loanStatus": "Active",
+            "currencyCode": "EUR",
+            "paidAmount": "55567.23",
+            "outstandingAmount": "54432.77",
+            "paymentOptions": {
+              "paymentOptions": [
+                {
+                  "name": "LoanPayment",
+                  "operationType": "Credit",
+                  "allowed": true,
+                  "errorCodes": []
+                }
+              ]
+            },
+            "minimumDueAmount": "1444.90",
+            "lastPaymentAmount": "500000.90",
+            "lastPaymentDate": "2022-04-16T17:00:00.000Z"
+          },
+          {
+            "id": "7688bd60-dfad-45ba-b1ce-abc6e9ea5208",
+            "loanType": "Mortgage",
+            "name": "Mortgage 1",
+            "accountNumber": "MR3731835513862558214883344",
+            "loanStatus": "Inactive",
+            "currencyCode": "MRU",
+            "paymentOptions": {
+              "paymentOptions": [
+                {
+                  "name": "LoanPayment",
+                  "operationType": "Credit",
+                  "allowed": false,
+                  "errorCodes": ["not.allowed.for.inactive.loan"]
+                },
+                {
+                  "name": "LoanAdvance",
+                  "operationType": "Debit",
+                  "allowed": false,
+                  "errorCodes": ["not.allowed.for.inactive.loan"]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

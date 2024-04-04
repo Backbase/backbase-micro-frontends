@@ -1,0 +1,61 @@
+{
+  "name": "/client-api/v2/users/approvals/{approvalId}/details_GET",
+  "request": {
+    "url": "/client-api/v2/users/approvals/[^/]+/details(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "changelogDetails": [
+          {
+            "type": "LOCK_USER",
+            "key": "User Status",
+            "from": "Locked",
+            "to": "Enabled"
+          }
+        ],
+        "userDetails": {
+          "username": "john.doe",
+          "legalEntityName": "Bank 001",
+          "fullName": "John Doe",
+          "emailAddress": "john.doe@example.test",
+          "mobileNumber": "012345 67890",
+          "dateCreated": "2019-07-11T11:11:11.000Z"
+        }
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/user-context_POST",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/user-context(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    }
+  }
+}

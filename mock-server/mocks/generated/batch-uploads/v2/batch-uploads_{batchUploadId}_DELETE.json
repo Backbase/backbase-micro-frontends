@@ -1,0 +1,45 @@
+{
+  "name": "/client-api/v2/batch-uploads/{batchUploadId}_DELETE",
+  "request": {
+    "url": "/client-api/v2/batch-uploads/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict",
+        "errors": [
+          {
+            "message": "The current status of the batch upload ({{currentStatus}}) does not allow deleting the batch upload.",
+            "key": "BatchUploadCannotBeDeleted",
+            "context": {
+              "currentStatus": "OPEN"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

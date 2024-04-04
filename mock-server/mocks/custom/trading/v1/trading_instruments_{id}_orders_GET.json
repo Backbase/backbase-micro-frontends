@@ -1,0 +1,661 @@
+{
+  "name": "/client-api/v1/trading/instruments/{id}/orders_GET",
+  "request": {
+    "url": "/client-api/v1/trading/instruments/[^/]+/orders(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "x-total-count": 25
+      },
+      "data": {
+        "cursor": "55bbeace-274e-22ec-5487-0242ac130001",
+        "hasMoreItems": true,
+        "orders": [
+          {
+            "id": "55bbeace-274e-22ec-5487-0242ac130003",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Canceled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 9946,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 9947,
+            "totalValue": {
+              "amount": 9177,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "1299895152563283500",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Failed",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "AAPL",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 3577,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 1197,
+            "totalValue": {
+              "amount": 6215,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "5716628272261736000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Sony",
+              "ticker": "UIUB",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 3801,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 1988,
+            "totalValue": {
+              "amount": 3316,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "1921475268679194600",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Netflix",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 4190,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 8988,
+            "totalValue": {
+              "amount": 5998,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "5657147480929199000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1288,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 979,
+            "totalValue": {
+              "amount": 8702,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "5735930318318818000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Filled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "UIUB",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 9255,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 5332,
+            "totalValue": {
+              "amount": 9202,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "2105074599573177600",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Tesla",
+              "ticker": "UIUB",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 2551,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 4782,
+            "totalValue": {
+              "amount": 3671,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "6179052606916550000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending Cancel",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Johnson",
+              "ticker": "UIUB",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 9640,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 707,
+            "totalValue": {
+              "amount": 8873,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "7603017445617615000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Discarded",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "SDAD",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1651,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 8812,
+            "totalValue": {
+              "amount": 8828,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "3643859249926375000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending Cancel",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Microsoft",
+              "ticker": "TREW",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 7829,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 3993,
+            "totalValue": {
+              "amount": 4267,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "6197653094644534000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Sent",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Apple",
+              "ticker": "UIUB",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 8846,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 260,
+            "totalValue": {
+              "amount": 5518,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "5172116495987953000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Canceled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Microsoft",
+              "ticker": "AAPL",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 4945,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 736,
+            "totalValue": {
+              "amount": 2104,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "6926310190977417000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Sent",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Yahoo",
+              "ticker": "CHVG",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 3154,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 9224,
+            "totalValue": {
+              "amount": 5307,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "3501825773486188500",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Discarded",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Johnson",
+              "ticker": "UIUB",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 9447,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 9606,
+            "totalValue": {
+              "amount": 5292,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "7602471702141180000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Filled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Netflix",
+              "ticker": "CHVG",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 2856,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 6152,
+            "totalValue": {
+              "amount": 3535,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "3805718691635077000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Sent",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Google",
+              "ticker": "TREW",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 8556,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 3516,
+            "totalValue": {
+              "amount": 4015,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "3807410320335069700",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Netflix",
+              "ticker": "CHVG",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 9033,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 4795,
+            "totalValue": {
+              "amount": 3042,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "2828764699005810700",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending Cancel",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Sony",
+              "ticker": "AAPL",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 7365,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 6459,
+            "totalValue": {
+              "amount": 6189,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "1426660389477146600",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending Cancel",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Nvidia",
+              "ticker": "UIUB",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 6092,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 4205,
+            "totalValue": {
+              "amount": 5412,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "6102677696792018000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Yahoo",
+              "ticker": "SDAD",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1302,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 3093,
+            "totalValue": {
+              "amount": 8155,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "5799901418660700000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Discarded",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Google",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 7456,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 912,
+            "totalValue": {
+              "amount": 5417,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "5697739318533282000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Rejected",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Apple",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 1535,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 542,
+            "totalValue": {
+              "amount": 8014,
+              "currency": "USD"
+            },
+            "external": true
+          },
+          {
+            "id": "2996823014604972000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Pending Cancel",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Sony",
+              "ticker": "TREW",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 2968,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 6755,
+            "totalValue": {
+              "amount": 7468,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "2148407588667738600",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Filled",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Tesla",
+              "ticker": "SDAD",
+              "exchange": "CHVG",
+              "price": {
+                "amount": 2664,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 3156,
+            "totalValue": {
+              "amount": 1090,
+              "currency": "USD"
+            },
+            "external": false
+          },
+          {
+            "id": "7238260604869962000",
+            "date": "2022-02-05T01:30:00.000-05:00",
+            "type": "Market Order",
+            "tradeDirection": "Sell",
+            "status": "Draft",
+            "instrument": {
+              "id": "68bbeace-423e-11ec-9621-0242ac130002",
+              "name": "Tesla",
+              "ticker": "SDAD",
+              "exchange": "NASDAQ",
+              "price": {
+                "amount": 4849,
+                "currency": "USD"
+              },
+              "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+            },
+            "quantity": 3282,
+            "totalValue": {
+              "amount": 2361,
+              "currency": "USD"
+            },
+            "external": true
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

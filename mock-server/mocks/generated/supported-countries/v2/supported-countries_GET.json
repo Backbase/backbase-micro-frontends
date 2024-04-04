@@ -1,0 +1,51 @@
+{
+  "name": "/client-api/v2/supported-countries_GET",
+  "request": {
+    "url": "/client-api/v2/supported-countries(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        "AR",
+        "AU",
+        "AT",
+        "BE",
+        "BR",
+        "CA",
+        "CN",
+        "CO",
+        "HR",
+        "CZ",
+        "DK",
+        "EC",
+        "EG",
+        "ET",
+        "FR",
+        "DE",
+        "GR",
+        "HN",
+        "HK",
+        "HU",
+        "IN",
+        "ID",
+        "IE",
+        "IT",
+        "JM",
+        "MY",
+        "MX",
+        "MA",
+        "NA",
+        "NL",
+        "NZ",
+        "NO",
+        "PL",
+        "PT",
+        "RU",
+        "SN"
+      ],
+      "default": true
+    }
+  }
+}

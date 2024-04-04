@@ -1,0 +1,32 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/data-groups_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/data-groups(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "138a7683-e9da-4ffa-a257-b78626790cd7",
+          "name": "Salaries",
+          "description": "Contains accounts used for paying salaries",
+          "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b14",
+          "type": "ARRANGEMENTS",
+          "items": ["1cdb2224-8926-4b4d-a99f-1c9dfbbb4699"]
+        },
+        {
+          "id": "109104933dcc42bc89ac5f960a6e1776",
+          "name": "All Accounts",
+          "description": "Contains all accounts",
+          "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b15",
+          "type": "ARRANGEMENTS",
+          "items": ["3cdb2224-8926-4b4d-a99f-1c9dfbbb4699", "6c1261e8-7b6b-4c14-9bb4-e976d834c730"],
+          "approvalId": "7a3fe8c4-ea29-4251-9883-f9f3d06305e2"
+        }
+      ],
+      "default": true
+    }
+  }
+}

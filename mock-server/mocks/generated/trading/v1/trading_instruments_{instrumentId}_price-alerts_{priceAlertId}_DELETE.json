@@ -1,0 +1,37 @@
+{
+  "name": "/client-api/v1/trading/instruments/{instrumentId}/price-alerts/{priceAlertId}_DELETE",
+  "request": {
+    "url": "/client-api/v1/trading/instruments/[^/]+/price-alerts/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": {},
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

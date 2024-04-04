@@ -1,0 +1,112 @@
+{
+  "name": "/client-api/v2/bill-pay/payments/recurring/{id}_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payments/recurring/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "payment": {
+          "id": "8a9483495f058d2f015f058d366a003c",
+          "payeeID": "0005",
+          "payeeName": "Citibank",
+          "payeeAccountNumber": "100000001",
+          "payeeElectronic": true,
+          "amount": {
+            "amount": "100.99",
+            "currencyCode": "USD"
+          },
+          "paymentDate": "2019-02-22",
+          "paymentAccount": {
+            "id": "1",
+            "accountNumber": "000000001",
+            "routingNumber": "000000011",
+            "accountType": "CHECKING_ACCOUNT"
+          },
+          "paymentMemo": "Here is some money",
+          "recurring": true,
+          "frequency": "MONTHLY",
+          "numberOfInstances": 2,
+          "paymentScheduledAlert": true,
+          "paymentSentAlert": true,
+          "modelExpirationAlert": true,
+          "status": "PENDING"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

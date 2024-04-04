@@ -1,0 +1,250 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}_PUT",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict",
+        "errors": [
+          {
+            "message": "The current status of the batch order ({{currentStatus}}) does not allow cancellation.",
+            "key": "BatchOrderCannotBeCancelled",
+            "context": {
+              "currentStatus": "PROCESSED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "f7e4f0bf-6080-46be-bd5d-7dad2b054495",
+        "name": "Employee salaries",
+        "type": "SEPACT",
+        "creditDebitMixedIndicator": "CREDIT",
+        "status": "CANCELLED",
+        "totalTransactionsCount": 120,
+        "totalCreditTransactionsCount": 120,
+        "totalInstructedAmount": {
+          "amount": "322038.00",
+          "currencyCode": "EUR"
+        },
+        "totalCreditInstructedAmount": {
+          "amount": "322038.00",
+          "currencyCode": "EUR"
+        },
+        "account": {
+          "name": "Main Current",
+          "identification": {
+            "identification": "NL54ABNA2366058993",
+            "schemeName": "IBAN"
+          }
+        },
+        "requestedExecutionDate": "2012-01-01",
+        "fileName": "salaries-2020-01.csv",
+        "userFullName": "John Davis",
+        "uploadCompletedAt": "2019-12-31T23:55:31Z",
+        "canDelete": false,
+        "canCancel": false,
+        "canReverse": false,
+        "approval": {
+          "id": "ac150312-1bec-4075-934f-23600886cb4e",
+          "userId": "64350fcf-ddd1-4cdc-b725-f6c76f89f7c2",
+          "externalUserId": "jdavis",
+          "userFullName": "John Davis",
+          "serviceAgreementId": "c94dc22f-381f-4127-a9f2-db2f5a314e41",
+          "itemId": "f7e4f0bf-6080-46be-bd5d-7dad2b054495",
+          "dataAccessItemId": "e8daae6b-0276-4533-b64d-e3c73afb47a0",
+          "resource": "Batches",
+          "function": "SEPACT",
+          "status": "PENDING",
+          "createdAt": "2019-12-31T23:56:08Z",
+          "records": [
+            {
+              "id": "9e61d96d-fea3-44a4-8903-88d95eb266a8",
+              "userId": "f34feccc-0d0d-4365-982b-d6d1779e5aaf",
+              "externalUserId": "twilliams",
+              "userFullName": "Tobi Williams",
+              "approvalTypeId": "16f655f3-3abf-438d-8351-2c667d5a3c86",
+              "status": "APPROVED",
+              "createdAt": "2019-12-31T23:57:20Z"
+            }
+          ],
+          "canApprove": false,
+          "canReject": false,
+          "finalApprover": false
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "The requested status ({{requestedStatus}}) is not valid. The status can be set to {{expectedStatus}}.",
+            "key": "BatchOrderCannotBeUpdated",
+            "context": {
+              "requestedStatus": "READY",
+              "expectedStatus": "CANCELLED"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:3ea92d30-f460-4dde-b40a-e83a2f266a3a"
+          }
+        ],
+        "data": {
+          "confirmationType": "initiate-batch",
+          "batchOrderId": "9E2F9AC5-DD09-40C0-805E-147B0C565901",
+          "totalAmount": "12.95",
+          "totalTransactionsCount": "10",
+          "currency": "EUR",
+          "fromAccount": "NL06ABNA9691012820"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "forbidden_1": {
+      "status": 403,
+      "data": {
+        "message": "Limits has been breached, check the report for more details",
+        "checkTime": "2022-01-31T12:12:12Z",
+        "breachReport": [
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Service Agreement",
+                "description": "Kuhic, Gislason and Kemmer. SERVICE AGREEMENT"
+              }
+            ],
+            "shadow": false,
+            "currency": "USD",
+            "user-BBID": "oleksii",
+            "breachInfo": [
+              {
+                "breachType": "THRESHOLD",
+                "breachedLimitType": "PERIODIC",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2022-01-31T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "250.0",
+                "currentThreshold": "499.9"
+              },
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "monthly",
+                  "startTime": "2022-01-01T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "9950.0",
+                "currentThreshold": "10000.0"
+              }
+            ]
+          },
+          {
+            "user-BBID": "oleksii",
+            "shadow": false,
+            "currency": "USD",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2022-01-31T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "500.0",
+                "currentThreshold": "1000.0"
+              }
+            ]
+          },
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Legal Entity",
+                "description": "Kuhic, Gislason and Kemmer"
+              }
+            ],
+            "shadow": false,
+            "currency": "USD",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "quarterly",
+                  "startTime": "2022-01-01T00:00:00Z",
+                  "endTime": "2022-03-31T23:59:59Z"
+                },
+                "currentConsumption": "99950.0",
+                "currentThreshold": "100000.0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "409_1": {
+      "status": 409,
+      "data": {
+        "message": "Conflict",
+        "errors": [
+          {
+            "message": "Only partially approved batch orders can be cancelled.",
+            "key": "BatchOrderWithoutApprovalsCannotBeCancelled"
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

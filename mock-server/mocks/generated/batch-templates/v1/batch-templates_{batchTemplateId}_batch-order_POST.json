@@ -1,0 +1,85 @@
+{
+  "name": "/client-api/v1/batch-templates/{batchTemplateId}/batch-order_POST",
+  "request": {
+    "url": "/client-api/v1/batch-templates/[^/]+/batch-order(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "c1263fd6-8bd3-4a0b-be02-5db5cb1d6d06",
+        "name": "Europe branches cash distribution",
+        "type": "INTRACOMPANY_PAYMENT_CREDIT_USA",
+        "status": "DRAFT",
+        "creditDebitMixedIndicator": "CREDIT",
+        "totalCreditTransactionsCount": 120,
+        "totalCreditInstructedAmount": {
+          "amount": "322038.00",
+          "currencyCode": "USD"
+        },
+        "entryClass": "CCD",
+        "account": {
+          "name": "Main Current",
+          "identification": {
+            "identification": "4902331374",
+            "schemeName": "BBAN"
+          }
+        },
+        "companyId": "1800948594",
+        "companyName": "Your Company",
+        "bankBranchCode": "113105452"
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

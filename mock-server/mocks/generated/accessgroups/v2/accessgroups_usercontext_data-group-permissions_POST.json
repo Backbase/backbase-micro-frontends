@@ -1,0 +1,80 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/usercontext/data-group-permissions_POST",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/usercontext/data-group-permissions(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "permissionsData": [
+          {
+            "permissions": [
+              {
+                "resourceName": "Payments",
+                "functionName": "SEPA CT",
+                "privileges": ["view"]
+              },
+              {
+                "resourceName": "Payments",
+                "functionName": "Domestic Payments",
+                "privileges": ["view", "create"]
+              }
+            ],
+            "dataGroups": [
+              [
+                {
+                  "dataGroupType": "ARRANGAMENTS",
+                  "dataGroupIds": ["a9393b23-62f5-4f07-ae8f-ba0dbea86c36"]
+                },
+                {
+                  "dataGroupType": "PAYEES",
+                  "dataGroupIds": ["a29c3cf2-9bda-41ee-8998-031f594a66b4"]
+                }
+              ],
+              [
+                {
+                  "dataGroupType": "ARRANGEMENTS",
+                  "dataGroupIds": ["f6677897-7a75-4bd5-8fc4-25695ca5b4de"]
+                }
+              ]
+            ]
+          },
+          {
+            "permissions": [
+              {
+                "resourceName": "Payments",
+                "functionName": "Domestic Payments",
+                "privileges": ["create"]
+              }
+            ],
+            "dataGroups": [
+              [
+                {
+                  "dataGroupType": "ARRANGEMENTS",
+                  "dataGroupIds": ["f6677897-7a75-4bd5-8fc4-25695ca5b4de"]
+                }
+              ]
+            ]
+          }
+        ],
+        "dataGroupsData": [
+          {
+            "dataGroupId": "a9393b23-62f5-4f07-ae8f-ba0dbea86c36",
+            "dataItemIds": ["d308ae19-d170-4967-b185-dceb8d356cfa"]
+          },
+          {
+            "dataGroupId": "a29c3cf2-9bda-41ee-8998-031f594a66b4",
+            "dataItemIds": ["66893fed-bbbb-42d6-a5c3-320b6d4a781f"]
+          },
+          {
+            "dataGroupId": "f6677897-7a75-4bd5-8fc4-25695ca5b4de",
+            "dataItemIds": ["d0c8dd02-99be-46e9-8ff0-8021a71552a7"]
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

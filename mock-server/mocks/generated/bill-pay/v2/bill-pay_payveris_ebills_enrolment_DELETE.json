@@ -1,0 +1,85 @@
+{
+  "name": "/client-api/v2/bill-pay/payveris/ebills/enrolment_DELETE",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payveris/ebills/enrolment(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

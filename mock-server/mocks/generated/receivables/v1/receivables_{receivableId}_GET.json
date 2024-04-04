@@ -1,0 +1,105 @@
+{
+  "name": "/client-api/v1/receivables/{receivableId}_GET",
+  "request": {
+    "url": "/client-api/v1/receivables/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "status": "Submitted",
+        "id": "08849602-262b-40b4-a7be-ecd9db00d048",
+        "referenceNumber": "1050",
+        "issueDate": "2020-08-13T00:00:00Z",
+        "dueDate": "2020-12-02T00:00:00Z",
+        "expectedDate": "2020-12-02T00:00:00Z",
+        "dueAmount": "9055.30000",
+        "paidAmount": "0.00000",
+        "totalAmount": "9055.30000",
+        "currencyCode": "USD",
+        "counterparty": {
+          "id": "85c069ea-4f65-45de-9e56-a3f3592e0db7",
+          "name": "Cool Cars",
+          "type": "Customer"
+        },
+        "chartOfAccounts": [
+          {
+            "id": "f934846d-8461-44dd-89be-3d4cc7b59a53",
+            "name": "Design income",
+            "nominalCode": "82",
+            "category": "Income"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

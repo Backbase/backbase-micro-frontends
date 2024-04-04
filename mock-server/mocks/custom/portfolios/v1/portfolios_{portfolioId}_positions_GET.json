@@ -1,0 +1,764 @@
+{
+  "name": "/client-api/v1/portfolios/{portfolioId}/positions_GET",
+  "request": {
+    "url": "/client-api/v1/portfolios/[^/]+/positions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "headers": {
+        "x-total-count": 30
+      },
+      "data": {
+        "positions": [
+          {
+            "id": "25e59608-d6b2-4bb2-9426-996b83916a4f",
+            "instrument": {
+              "id": "e12f2f49-0f84-411c-90c2-2022d651816a",
+              "name": "Automatic Data Processing, Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "ADP",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "ADP",
+              "available": true
+            },
+            "quantity": 100,
+            "price": {
+              "amount": 202.23,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 202.23,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 202.23,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -376.15,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": -0.31,
+            "assetClassPct": 0.04,
+            "portfolioPct": 0.04,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "393f9c0c-3d46-4ddb-a024-e74df55460d8",
+            "instrument": {
+              "id": "920a6f41-adaa-4f54-b1c0-8dcf4e8d29d7",
+              "name": "JD.com, Inc. American Depositary Shares",
+              "currency": "USD",
+              "ticker": "JD",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "JD",
+              "available": true
+            },
+            "quantity": 192,
+            "price": {
+              "amount": 83.24,
+              "currency": "UAH"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 83.24,
+              "currency": "UAH"
+            },
+            "accruedInterest": {
+              "amount": 3170.61,
+              "currency": "UAH"
+            },
+            "costPrice": {
+              "amount": 83.24,
+              "currency": "UAH"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 3170.61,
+              "currency": "UAH"
+            },
+            "unrealizedPLPct": 2.93,
+            "assetClassPct": 0.04,
+            "portfolioPct": 0.04,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "4019225e-c5e9-49d6-b6c6-53ffb162fdc1",
+            "instrument": {
+              "id": "62ed11f4-70e2-4797-953e-3d50f184dd28",
+              "name": "CrowdStrike Holdings, Inc. Class A Common Stock",
+              "currency": "USD",
+              "ticker": "CRWD",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "CRWD",
+              "available": true
+            },
+            "quantity": 27,
+            "price": {
+              "amount": 269.68,
+              "currency": "JPY"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 269.68,
+              "currency": "JPY"
+            },
+            "accruedInterest": {
+              "amount": 1698.98,
+              "currency": "JPY"
+            },
+            "costPrice": {
+              "amount": 269.68,
+              "currency": "JPY"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 1698.98,
+              "currency": "JPY"
+            },
+            "unrealizedPLPct": 1.26,
+            "assetClassPct": 0.05,
+            "portfolioPct": 0.05,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "035bb94c-930e-4d9c-bb52-961acac2de91",
+            "instrument": {
+              "id": "410fe894-1bd4-4524-92da-b02dae96c833",
+              "name": "CDW Corporation Common Stock",
+              "currency": "USD",
+              "ticker": "CDW",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "CDW",
+              "available": true
+            },
+            "quantity": 56,
+            "price": {
+              "amount": 201.25,
+              "currency": "GBP"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 201.25,
+              "currency": "GBP"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "GBP"
+            },
+            "costPrice": {
+              "amount": 201.25,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -422.63,
+              "currency": "GBP"
+            },
+            "unrealizedPLPct": -0.21,
+            "assetClassPct": 0.07,
+            "portfolioPct": 0.07,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "66d2ed0b-2a8a-4d82-96e4-b4acd85cb1ea",
+            "instrument": {
+              "id": "123a7b45-84ef-4fcb-a9ab-c0d3b8a9ce06",
+              "name": "Keurig Dr Pepper Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "KDP",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "KDP",
+              "available": true
+            },
+            "quantity": 97,
+            "price": {
+              "amount": 34.77,
+              "currency": "EUR"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 34.77,
+              "currency": "EUR"
+            },
+            "accruedInterest": {
+              "amount": 3248.21,
+              "currency": "EUR"
+            },
+            "costPrice": {
+              "amount": 34.77,
+              "currency": "EUR"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 3248.21,
+              "currency": "EUR"
+            },
+            "unrealizedPLPct": 1.73,
+            "assetClassPct": 0.07,
+            "portfolioPct": 0.07,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "0187a77e-8713-484a-8e07-251a92841448",
+            "instrument": {
+              "id": "092e7c8f-e0fc-4456-8935-ab7a7d435b90",
+              "name": "Dollar Tree Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "DLTR",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "DLTR",
+              "available": true
+            },
+            "quantity": 87,
+            "price": {
+              "amount": 92.22,
+              "currency": "EUR"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 92.22,
+              "currency": "EUR"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "EUR"
+            },
+            "costPrice": {
+              "amount": 92.22,
+              "currency": "EUR"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -84.84,
+              "currency": "EUR"
+            },
+            "unrealizedPLPct": -0.04,
+            "assetClassPct": 0.08,
+            "portfolioPct": 0.08,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "f9adb289-53dc-4bfd-aebf-8b3271579ce8",
+            "instrument": {
+              "id": "61e2e403-1cc9-45bf-9582-123be919cbc1",
+              "name": "Broadcom Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "AVGO",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "AVGO",
+              "available": true
+            },
+            "quantity": 194,
+            "price": {
+              "amount": 496.59,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 496.59,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 695.23,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 496.59,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 695.23,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 0.28,
+            "assetClassPct": 0.09,
+            "portfolioPct": 0.09,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "7dcce0c3-a308-43b0-9513-0c413c0235c1",
+            "instrument": {
+              "id": "371405c2-a70f-49f8-b938-5c622620cdd7",
+              "name": "eBay Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "EBAY",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "EBAY",
+              "available": true
+            },
+            "quantity": 98,
+            "price": {
+              "amount": 74.71,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 74.71,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 2032.11,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 74.71,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 2032.11,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 0.68,
+            "assetClassPct": 0.11,
+            "portfolioPct": 0.11,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "3c310dff-3c4b-42d5-abfa-5bfb88d3e890",
+            "instrument": {
+              "id": "b326369d-b0b5-4b6d-b16a-4c938a04a01a",
+              "name": "Moderna, Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "MRNA",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "MRNA",
+              "available": true
+            },
+            "quantity": 17,
+            "price": {
+              "amount": 436.39,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 436.39,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 1130.25,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 436.39,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 1130.25,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 0.37,
+            "assetClassPct": 0.11,
+            "portfolioPct": 0.11,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "0c39430c-874d-4086-a8ca-a1e7201172f7",
+            "instrument": {
+              "id": "e0e27613-89aa-4587-8af7-0902f5a82900",
+              "name": "Marriott International Class A Common Stock",
+              "currency": "USD",
+              "ticker": "MAR",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "MAR",
+              "available": true
+            },
+            "quantity": 160,
+            "price": {
+              "amount": 134.05,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 134.05,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 134.05,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -1986.62,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": -0.57,
+            "assetClassPct": 0.12,
+            "portfolioPct": 0.12,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "480a09b1-e117-4b60-b9a5-eaea3a255984",
+            "instrument": {
+              "id": "93c9e3f7-c814-47c4-928c-552abb01cade",
+              "name": "Intel Corporation Common Stock",
+              "currency": "USD",
+              "ticker": "INTC",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "INTC",
+              "available": true
+            },
+            "quantity": 31,
+            "price": {
+              "amount": 53.65,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 53.65,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 3304.84,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 53.65,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 3304.84,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 0.88,
+            "assetClassPct": 0.13,
+            "portfolioPct": 0.13,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "d3ebd1b9-0306-4b77-b3b5-049541d5a0cd",
+            "instrument": {
+              "id": "5a487d13-0fdc-4433-92f3-2f89e8dfb5ee",
+              "name": "Advanced Micro Devices, Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "AMD",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "AMD",
+              "available": true
+            },
+            "quantity": 55,
+            "price": {
+              "amount": 109.15,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 109.15,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 14669.76,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 109.15,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 14669.76,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 3.2,
+            "assetClassPct": 0.16,
+            "portfolioPct": 0.16,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "e4d944d6-767b-4fe9-91cc-2ddc9a8ed716",
+            "instrument": {
+              "id": "5c0d13fd-d719-485d-9c38-2958ff00b198",
+              "name": "Fox Corporation Class B Common Stock",
+              "currency": "USD",
+              "ticker": "FOX",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "FOX",
+              "available": true
+            },
+            "quantity": 172,
+            "price": {
+              "amount": 34.04,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 34.04,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 12545.44,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 34.04,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": 12545.44,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": 2.73,
+            "assetClassPct": 0.16,
+            "portfolioPct": 0.16,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "c3591f24-2317-4e54-a2c0-aca823da8037",
+            "instrument": {
+              "id": "6c7faa82-42b3-48d8-9c05-0503ce8c27b1",
+              "name": "Comcast Corporation Class A Common Stock",
+              "currency": "USD",
+              "ticker": "CMCSA",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "CMCSA",
+              "available": true
+            },
+            "quantity": 63,
+            "price": {
+              "amount": 60.3,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 60.3,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 60.3,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -11867.04,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": -2.46,
+            "assetClassPct": 0.17,
+            "portfolioPct": 0.17,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          },
+          {
+            "id": "d45422a4-ced1-4eb8-be9e-c1416afe83c6",
+            "instrument": {
+              "id": "ee17e790-6acc-4969-b09f-ee49fe141990",
+              "name": "Align Technology, Inc. Common Stock",
+              "currency": "USD",
+              "ticker": "ALGN",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "aefa6769-a8bc-45c4-8f30-588c176538d4",
+                "name": "Equities"
+              },
+              "code": "ALGN",
+              "available": true
+            },
+            "quantity": 138,
+            "price": {
+              "amount": 716.21,
+              "currency": "USD"
+            },
+            "exchangeRate": 1,
+            "valuation": {
+              "amount": 716.21,
+              "currency": "USD"
+            },
+            "accruedInterest": {
+              "amount": 0,
+              "currency": "USD"
+            },
+            "costPrice": {
+              "amount": 716.21,
+              "currency": "USD"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": -6066.3,
+              "currency": "USD"
+            },
+            "unrealizedPLPct": -1.21,
+            "assetClassPct": 0.18,
+            "portfolioPct": 0.18,
+            "country": {
+              "id": "country-id-USA",
+              "code": "USA",
+              "name": "United States"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

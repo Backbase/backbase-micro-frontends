@@ -1,0 +1,17 @@
+{
+  "name": "/client-api/v2/contacts_POST",
+  "request": {
+    "url": "/client-api/v2/contacts(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {
+        "id": "0955e686-d31e-4216-b3dd-5d66161d536d",
+        "status": "ACTIVE"
+      },
+      "default": true
+    }
+  }
+}

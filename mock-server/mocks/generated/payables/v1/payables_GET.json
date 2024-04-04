@@ -1,0 +1,316 @@
+{
+  "name": "/client-api/v1/payables_GET",
+  "request": {
+    "url": "/client-api/v1/payables(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "syncDatetime": "2020-01-31T12:12:12Z",
+        "payables": [
+          {
+            "id": "1234-5678-9012-3457",
+            "dueDate": "2020-01-31T12:12:12Z",
+            "expectedDate": "2020-02-24T12:12:12Z",
+            "dueAmount": "2.00",
+            "paidAmount": "0.00",
+            "totalAmount": "2.00",
+            "currencyCode": "USD",
+            "referenceNumber": "123-bill-number",
+            "issueDate": "2020-01-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4444-3333",
+              "name": "Richard Brautigan",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-65a7effsfr52",
+                "name": "Unknown",
+                "category": "Uncategorised"
+              }
+            ],
+            "status": "Open"
+          },
+          {
+            "id": "1234-5678-9012-3458",
+            "dueDate": "2020-01-31T12:12:12Z",
+            "expectedDate": "2020-02-12T12:12:12Z",
+            "dueAmount": "10.00",
+            "paidAmount": "0.00",
+            "totalAmount": "10.00",
+            "currencyCode": "CAD",
+            "referenceNumber": "125-bill-number",
+            "issueDate": "2020-01-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3334",
+              "name": "Walt Whitman",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-65a7eff72345",
+                "name": "Accounts Payable",
+                "category": "Asset"
+              },
+              {
+                "id": "b068a7bb-917d-4484-8dd6-71cb2a9c9873",
+                "name": "It Consults",
+                "category": "Expenses"
+              }
+            ],
+            "status": "Draft"
+          },
+          {
+            "id": "1234-5678-9012-3459",
+            "dueDate": "2019-12-31T12:12:12Z",
+            "expectedDate": "2020-03-13T12:12:12Z",
+            "dueAmount": "0",
+            "paidAmount": "155.00",
+            "totalAmount": "155.00",
+            "currencyCode": "EUR",
+            "referenceNumber": "124-bill-number",
+            "issueDate": "2019-10-10T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3335",
+              "name": "Paul Celan",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-65a7eff98fh6",
+                "name": "Accounts Payable",
+                "category": "Liability"
+              }
+            ],
+            "status": "Paid"
+          },
+          {
+            "id": "1234-5678-9012-3460",
+            "dueDate": "2020-01-31T12:12:12Z",
+            "expectedDate": "2020-04-15T12:12:12Z",
+            "dueAmount": "20020.00",
+            "paidAmount": "20000.00",
+            "totalAmount": "40020.00",
+            "currencyCode": "USD",
+            "referenceNumber": "123-bill-number",
+            "issueDate": "2020-01-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4444-3336",
+              "name": "Sylvia Plath",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "b068a7bb-917d-4484-8dd6-71cb2ad8t528",
+                "name": "Accounts Payable",
+                "category": "Liability"
+              },
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-65a7ef0nfh67",
+                "name": "It Consults",
+                "category": "Expenses"
+              },
+              {
+                "id": "6hfy2e6d-bb31-463a-802f-65a7eff98fh6",
+                "name": "Business Bank Account",
+                "category": "Asset"
+              }
+            ],
+            "status": "PartiallyPaid"
+          },
+          {
+            "id": "1234-5678-9012-3461",
+            "dueDate": "2020-02-28T12:12:12Z",
+            "expectedDate": "2020-05-15T12:12:12Z",
+            "dueAmount": "10000.00",
+            "paidAmount": "10000.00",
+            "totalAmount": "20000.00",
+            "currencyCode": "USD",
+            "referenceNumber": "125-bill-number",
+            "issueDate": "2019-12-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3337",
+              "name": "Jeff Beck",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-65a7eff9ufy6",
+                "name": "Accounts Payable",
+                "category": "Liability"
+              }
+            ],
+            "status": "PartiallyPaid"
+          },
+          {
+            "id": "1234-5678-9012-3462",
+            "dueDate": "2019-12-21T12:12:12Z",
+            "expectedDate": "2020-06-17T12:12:12Z",
+            "dueAmount": "10000.00",
+            "paidAmount": "20000.00",
+            "totalAmount": "30000.00",
+            "currencyCode": "RUB",
+            "referenceNumber": "124-bill-number",
+            "issueDate": "2019-11-10T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3338",
+              "name": "Boris Ryzhyi",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "4a0a5e6d-bb31-463a-802f-78ahy3f98fh6",
+                "name": "Unknown",
+                "category": "Uncategorised"
+              }
+            ],
+            "status": "PartiallyPaid"
+          },
+          {
+            "id": "1234-5678-9012-3463",
+            "dueDate": "2020-01-19T12:12:12Z",
+            "expectedDate": "2019-11-30T12:12:12Z",
+            "dueAmount": "0",
+            "paidAmount": "400000.00",
+            "totalAmount": "400000.00",
+            "currencyCode": "CAD",
+            "referenceNumber": "125-bill-number",
+            "issueDate": "2019-11-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3339",
+              "name": "Emily Dickinson",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "7hn1f542-bb31-463a-802f-78ahy3f98fh6",
+                "name": "It Consults",
+                "category": "Expenses"
+              }
+            ],
+            "status": "Paid"
+          },
+          {
+            "id": "1234-5678-9012-3464",
+            "dueDate": "2019-12-26T12:12:12Z",
+            "expectedDate": "2020-07-17T12:12:12Z",
+            "dueAmount": "2000.00",
+            "paidAmount": "8000.00",
+            "totalAmount": "10000.00",
+            "currencyCode": "EUR",
+            "referenceNumber": "124-bill-number",
+            "issueDate": "2019-10-15T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4443-3340",
+              "name": "Mary Jane",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "13bgf542-bb31-463a-802f-78ahy3f98fh6",
+                "name": "It Consults",
+                "category": "Expenses"
+              }
+            ],
+            "status": "PartiallyPaid"
+          },
+          {
+            "id": "1234-5678-9012-3465",
+            "dueDate": "2019-11-30T12:12:12Z",
+            "expectedDate": "2019-11-30T12:12:12Z",
+            "dueAmount": "20020.00",
+            "paidAmount": "0.00",
+            "totalAmount": "20020.00",
+            "currencyCode": "USD",
+            "referenceNumber": "123-bill-number",
+            "issueDate": "2019-10-20T12:12:12Z",
+            "counterparty": {
+              "id": "1234-4444-4444-3341",
+              "name": "William Yeats",
+              "type": "Supplier"
+            },
+            "chartOfAccounts": [
+              {
+                "id": "7hn1f542-bb31-463a-802f-1gtr23f98fh6",
+                "name": "Business Bank Account",
+                "category": "Asset"
+              }
+            ],
+            "status": "Unknown"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

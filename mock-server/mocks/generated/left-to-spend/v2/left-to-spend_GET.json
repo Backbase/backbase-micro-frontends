@@ -1,0 +1,121 @@
+{
+  "name": "/client-api/v2/left-to-spend_GET",
+  "request": {
+    "url": "/client-api/v2/left-to-spend(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "daysLeft": 15,
+        "incomeToDate": {
+          "amount": "1000.00",
+          "currencyCode": "EUR"
+        },
+        "spentToDate": {
+          "amount": "200.00",
+          "currencyCode": "EUR"
+        },
+        "schedulePayments": {
+          "total": {
+            "amount": "400.00",
+            "currencyCode": "EUR"
+          },
+          "paymentItems": [
+            {
+              "total": {
+                "amount": "300.00",
+                "currencyCode": "EUR"
+              },
+              "name": "paymentOrders"
+            },
+            {
+              "total": {
+                "amount": "100.00",
+                "currencyCode": "EUR"
+              },
+              "name": "billPayPayments"
+            }
+          ]
+        },
+        "leftToSpend": {
+          "amount": "400.00",
+          "currencyCode": "EUR"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

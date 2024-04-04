@@ -1,0 +1,54 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}/batch-payments/{batchPaymentId}_PUT",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+/batch-payments/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "7dc95f0a-deba-47be-8f5d-6d0454ef271c",
+        "counterpartyName": "Uriel Johnson",
+        "counterpartyAccountNumber": "HU65109180019369738837536884",
+        "instructedAmount": {
+          "amount": "830.00",
+          "currencyCode": "EUR"
+        },
+        "description": "Order 00023162"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Batch order not found",
+        "errors": []
+      }
+    },
+    "notFound_1": {
+      "status": 404,
+      "data": {
+        "message": "Batch payment not found",
+        "errors": []
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "/api/v1/client-api/v1/news/search_GET",
+  "request": {
+    "url": "/client-api/v1/news/search(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "entries": [
+          {
+            "title": "What’s holding back the self-driving car revolution?",
+            "text": "According to promises made a few years ago by automakers and the tech industry, we should all be sharing the road with millions of driverless cars by now.",
+            "link": "https://www.lipsum.com/feed/html",
+            "media": {
+              "url": "https://via.placeholder.com/300/09f/fff.png",
+              "contentType": "image/png",
+              "alt": "Car on the road"
+            }
+          },
+          {
+            "title": "Apple Car could be WINDOWLESS.",
+            "text": "Apple's long-awaited Apple Car could have virtual displays on the inside instead of clear windows, according to a new patent. ",
+            "link": "https://www.inspiringquotes.us/quotes/iWxM_ugtKSnXq",
+            "publishDate": "2022-05-20T19:25:00",
+            "tickers": [
+              {
+                "name": "AAPL",
+                "performanceChange": -3.2
+              }
+            ],
+            "media": {
+              "url": "https://via.placeholder.com/300/09f/fff.png",
+              "contentType": "image/png",
+              "alt": "Concept-car"
+            }
+          },
+          {
+            "title": "Tesla releases new Full Self-Driving Beta update, and it’s a big one.",
+            "text": "Tesla has started to push a new Full Self-Driving (FSD) Beta software update with improvements based on over 250,000 training video clips from its fleet.",
+            "link": "https://www.lipsum.com/feed/html",
+            "publishDate": "2022-05-20T19:40:00",
+            "tickers": [
+              {
+                "name": "AAPL"
+              },
+              {
+                "name": "TSLA"
+              }
+            ],
+            "media": {
+              "url": "https://via.placeholder.com/300/09f/fff.png",
+              "contentType": "image/png",
+              "alt": "Tesla Model S"
+            }
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

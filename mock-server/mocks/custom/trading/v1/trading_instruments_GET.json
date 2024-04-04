@@ -1,0 +1,113 @@
+{
+  "name": "/client-api/v1/trading/instruments_GET",
+  "request": {
+    "url": "/client-api/v1/trading/instruments(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "x-total-count": 3
+      },
+      "data": {
+        "instruments": [
+          {
+            "exchange": "NASDAQ",
+            "id": "4277867260258033000",
+            "iconUrl": "https://landportal.org/sites/landportal.org/files/styles/220heightmax/public/abn-amro-logo-vertikaal.png",
+            "name": "Apple",
+            "ticker": "CHVG",
+            "price": {
+              "amount": 353.05,
+              "currency": "USD"
+            },
+            "pricePerformance": 3.62,
+            "pricePerformanceAbs": {
+              "amount": 2.48,
+              "currency": "USD"
+            },
+            "totalVolume": 189.16,
+            "favorite": true
+          },
+          {
+            "exchange": "NASDAQ",
+            "id": "4119765083657070600",
+            "iconUrl": "https://landportal.org/sites/landportal.org/files/styles/220heightmax/public/abn-amro-logo-vertikaal.png",
+            "name": "Nvidia",
+            "ticker": "SDAD",
+            "price": {
+              "amount": 345.1,
+              "currency": "USD"
+            },
+            "pricePerformance": 0.67,
+            "pricePerformanceAbs": {
+              "amount": 2.48,
+              "currency": "USD"
+            },
+            "totalVolume": 281.21,
+            "favorite": false
+          },
+          {
+            "exchange": "NASDAQ",
+            "id": "5445324864653265000",
+            "iconUrl": "https://landportal.org/sites/landportal.org/files/styles/220heightmax/public/abn-amro-logo-vertikaal.png",
+            "name": "Sony",
+            "ticker": "UIUB",
+            "price": {
+              "amount": 453.04,
+              "currency": "USD"
+            },
+            "pricePerformance": -3.04,
+            "pricePerformanceAbs": {
+              "amount": 2.48,
+              "currency": "USD"
+            },
+            "totalVolume": 217,
+            "favorite": false
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

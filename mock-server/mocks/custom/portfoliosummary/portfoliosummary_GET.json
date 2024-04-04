@@ -1,0 +1,410 @@
+{
+  "name": "/client-api/v2/portfoliosummary_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": [
+        {
+          "IBAN": "OL52001456017513",
+          "portfolioId": "080b3e59-0aa0-450a-be7e-7917bfa7aa95",
+          "clientName": "Meriel Petschel",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "1895982.86",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "7588636.44",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "19877350.80",
+            "currencyCode": "EUR"
+          },
+          "netCashTotal": {
+            "amount": "-12288714.36",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24156315.31",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.82,
+          "performanceYTD": {
+            "amount": "30156280.18",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "performanceYTDpct": 2.02,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 41.05,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 27.58,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 14.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 8.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 5.2,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 1.4,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "051f1b8f-8369-4587-89c2-856ee9990f2d",
+              "name": "Maud Karpets"
+            },
+            {
+              "id": "7a781a6a-f6b2-4c33-9d48-0c5be1a07f1b",
+              "name": "Brina Godart"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "80eef010-055c-43f1-94a8-d2b58b4e1680",
+              "name": "Daisey Meconi"
+            }
+          ]
+        },
+        {
+          "IBAN": "HS19915622324357",
+          "portfolioId": "ce985e11-978f-4f94-a3ef-422347f49073",
+          "clientName": "Wat Coltherd",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "10963980.58",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "520560.20",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "17025296.92",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "7410143.97",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.32,
+          "performanceYTD": {
+            "amount": "50573059.51",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "performanceYTDpct": -4.59,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "628fad8d-3a60-4e71-839a-4b11ed3c97ed",
+              "name": "Zollie Webben"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "4d9f2778-e7ee-4b5d-aa47-0e4228de1702",
+              "name": "Rachelle Laimable"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-16504736.72",
+            "currencyCode": "EUR"
+          }
+        },
+        {
+          "IBAN": "ZR29916810575455",
+          "portfolioId": "3b6431cf-4776-4631-a2c1-f14dee93632d",
+          "clientName": "Boycey Linner",
+          "alias": "Father",
+          "valuation": {
+            "amount": "12110112.83",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "2733568.13",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "19794850.26",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24344705.12",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.51,
+          "performanceYTD": {
+            "amount": "47832224.89",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "performanceYTDpct": 4.92,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 70.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 20.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 5.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "d0fcc688-3b22-4366-88ca-cf64ff15fe84",
+              "name": "Darleen Scourgie"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e6b38c1f-8565-40f9-8d0d-676c3add3723",
+              "name": "Aube Keunemann"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-17061282.13",
+            "currencyCode": "EUR"
+          }
+        },
+        {
+          "IBAN": "OY33315843075119",
+          "portfolioId": "3b6431cf-4776-4631-a2c1-f14dee93632d",
+          "clientName": "Kristofer McElree",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "1558025.67",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "23810348.23",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "24874781.72",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "29860262.37",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.67,
+          "performanceYTD": {
+            "amount": "38487837.18",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "performanceYTDpct": 5.24,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "2253170f-99ae-4643-87c1-fd9a7fe8ed2c",
+              "name": "Gerry Brim"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "6371ed48-8374-4c21-82e4-6686cffd7e61",
+              "name": "Shepperd Sibson"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-1064433.49",
+            "currencyCode": "EUR"
+          }
+        },
+        {
+          "IBAN": "QM77989770003666",
+          "portfolioId": "3b6431cf-4776-4631-a2c1-f14dee93632d",
+          "clientName": "Guthrey Tumini",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "11154673.81",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "18442037.76",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "48942347.36",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24506814.22",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.84,
+          "performanceYTD": {
+            "amount": "34842842.52",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "performanceYTDpct": -1.67,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "f789b1ec-5c31-4135-9f9e-2a4a12756f78",
+              "name": "Cicely Cunnah"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "18ddab80-6bde-4d08-ae45-b44961a76c6f",
+              "name": "Erwin Phettiplace"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-30500309.60",
+            "currencyCode": "EUR"
+          }
+        }
+      ]
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

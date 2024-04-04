@@ -1,0 +1,47 @@
+{
+  "name": "/client-api/v1/rtc/conversations/{conversationId}/status_PUT",
+  "request": {
+    "url": "/client-api/v1/rtc/conversations/[^/]+/status(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "conversationId": "CH0c17647bed78463291d80a72acc7c58c",
+        "status": "assigned"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

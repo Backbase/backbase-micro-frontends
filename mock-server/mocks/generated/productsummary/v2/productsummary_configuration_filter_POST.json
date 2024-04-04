@@ -1,0 +1,288 @@
+{
+  "name": "/client-api/v2/productsummary/configuration/filter_POST",
+  "request": {
+    "url": "/client-api/v2/productsummary/configuration/filter(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "totalCount": 2,
+        "items": [
+          {
+            "id": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "externalArrangementId": "bcf10f4d-4b2f-4413-9bab-31ff693608b5",
+            "externalLegalEntityId": "c7a382786d514262b75ab9531b749a2b",
+            "externalProductId": "fade7867-533e-465e-90cb-e41675c54400",
+            "displayName": "Our joined account Smith",
+            "name": "Mr and Mrs J. Smith",
+            "bankAlias": "Our joined account",
+            "sourceId": "LJBASI2XXXX",
+            "bookedBalance": 1000,
+            "availableBalance": 1500,
+            "creditLimit": 442.12,
+            "IBAN": "CY3887370130MJFTJ3B8Y9W7IGRO",
+            "BBAN": "K8873701303897",
+            "currency": "AED",
+            "externalTransferAllowed": true,
+            "urgentTransferAllowed": true,
+            "accruedInterest": 0.54,
+            "number": "2718281",
+            "principalAmount": 620.54,
+            "currentInvestmentValue": 0.16,
+            "legalEntityIds": ["257da57a-11e4-4553-9175-54baf755069b", "cd83683b-13f2-43d8-882b-39c9ab27d499"],
+            "productId": "36c8fc42-ec97-4f83-8a7c-d622625007f3",
+            "productNumber": "ffdd939c-ac4a-4441-ae47-70a7259899e7",
+            "productKindName": "Current Account",
+            "productTypeName": "Current Account",
+            "BIC": "AABAFI22",
+            "bankBranchCode": "bankBranchCode",
+            "visible": false,
+            "accountOpeningDate": "2016-01-28T16:41:41.090Z",
+            "accountInterestRate": 100.2,
+            "valueDateBalance": 100.1,
+            "creditLimitUsage": 100.3,
+            "creditLimitInterestRate": 100.4,
+            "creditLimitExpiryDate": "2019-09-28T16:41:41.090Z",
+            "startDate": "2016-02-28T16:41:41.090Z",
+            "termUnit": "Y",
+            "termNumber": 50,
+            "interestPaymentFrequencyUnit": "M",
+            "interestPaymentFrequencyNumber": 15,
+            "maturityDate": "2017-02-28T16:41:41.090Z",
+            "maturityAmount": 99.5,
+            "autoRenewalIndicator": true,
+            "interestSettlementAccount": "interestSettlementAccount1",
+            "outstandingPrincipalAmount": 100.2,
+            "monthlyInstalmentAmount": 100.1,
+            "amountInArrear": 100.3,
+            "minimumRequiredBalance": 80.4,
+            "creditCardAccountNumber": "••3456",
+            "validThru": "2019-02-28T16:41:41.090Z",
+            "applicableInterestRate": 101.2,
+            "remainingCredit": 50,
+            "outstandingPayment": 105.5,
+            "minimumPayment": 51.1,
+            "minimumPaymentDueDate": "2018-02-28T16:41:41.090Z",
+            "totalInvestmentValue": 110.2,
+            "debitCards": [
+              {
+                "number": "322383",
+                "expiryDate": "2020-08-22",
+                "cardId": "id1",
+                "cardholderName": "John Doe",
+                "cardType": "Visa Electron",
+                "cardStatus": "Active"
+              },
+              {
+                "number": "480770",
+                "expiryDate": "2019-01-14",
+                "cardId": "id2",
+                "cardholderName": "John Doe",
+                "cardType": "Visa",
+                "cardStatus": "Active"
+              }
+            ],
+            "cardDetails": {
+              "cardProvider": "Provider 3",
+              "secured": true,
+              "availableCashCredit": 4300.3,
+              "cashCreditLimit": 4300.32,
+              "lastPaymentDate": "2021-01-11",
+              "lastPaymentAmount": 20.23,
+              "latePaymentFee": "0.3%",
+              "previousStatementDate": "2021-01-10",
+              "previousStatementBalance": -43.37,
+              "statementBalance": 43.37,
+              "additions": {
+                "prop0": "value03",
+                "prop1": "value13"
+              }
+            },
+            "accountHolderAddressLine1": "accountHolderAddressLine11",
+            "accountHolderAddressLine2": "accountHolderAddressLine12",
+            "accountHolderStreetName": "accountHolderStreetName1",
+            "town": "Paris",
+            "postCode": "2000",
+            "countrySubDivision": "countrySubDivision1",
+            "accountHolderNames": "Danthe Mohr,Toso Malerot",
+            "accountHolderCountry": "FR",
+            "creditAccount": true,
+            "debitAccount": true,
+            "lastUpdateDate": "2016-01-28T16:41:41.090Z",
+            "favorite": true,
+            "userPreferences": {
+              "arrangementId": "9aabca5b-63ae-47d9-8d63-c5ed0e831dfa",
+              "alias": "Our joined account",
+              "visible": true,
+              "favorite": false
+            },
+            "product": {
+              "externalId": "externalProductidId",
+              "externalTypeId": "externalProductTypeId",
+              "typeName": "Current Account",
+              "productKind": {
+                "id": 1,
+                "externalKindId": "kind1",
+                "kindName": "Current Account",
+                "kindUri": "current-account"
+              }
+            },
+            "state": {
+              "externalStateId": "externalStateId1",
+              "state": "Active"
+            },
+            "financialInstitutionId": 1,
+            "lastSyncDate": "2020-09-28T16:41:41.090Z",
+            "unmaskableAttributes": []
+          },
+          {
+            "id": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "externalArrangementId": "bcf10f4d-4b2f-4413-9bab-31ff693608b5",
+            "externalLegalEntityId": "c7a382786d514262b75ab9531b749a2b",
+            "externalProductId": "fade7867-533e-465e-90cb-e41675c54400",
+            "name": "Howlin Wolf",
+            "displayName": "Royalties account",
+            "bankAlias": "Royalties account",
+            "sourceId": "LJBASI2XXXX",
+            "bookedBalance": 15000,
+            "availableBalance": 21500,
+            "creditLimit": 3442.12,
+            "IBAN": "••••••••••••••••••9133",
+            "BBAN": "••••••••••••9133",
+            "currency": "AED",
+            "externalTransferAllowed": true,
+            "urgentTransferAllowed": true,
+            "accruedInterest": 0.54,
+            "number": "•••3478",
+            "principalAmount": 620.54,
+            "currentInvestmentValue": 0.16,
+            "legalEntityIds": ["257da57a-11e4-4553-9175-54baf755069b", "cd83683b-13f2-43d8-882b-39c9ab27d499"],
+            "productId": "36c8fc42-ec97-4f83-8a7c-d622625007f3",
+            "productNumber": "ffdd939c-ac4a-4441-ae47-70a7259899e7",
+            "productKindName": "Current Account",
+            "productTypeName": "Current Account",
+            "BIC": "AABAFI22",
+            "bankBranchCode": "bankBranchCode",
+            "visible": false,
+            "accountOpeningDate": "2016-01-28T16:41:41.090Z",
+            "accountInterestRate": 100.2,
+            "valueDateBalance": 100.1,
+            "creditLimitUsage": 100.3,
+            "creditLimitInterestRate": 100.4,
+            "creditLimitExpiryDate": "2019-09-28T16:41:41.090Z",
+            "startDate": "2016-02-28T16:41:41.090Z",
+            "termUnit": "Y",
+            "termNumber": 50,
+            "interestPaymentFrequencyUnit": "M",
+            "interestPaymentFrequencyNumber": 15,
+            "maturityDate": "2017-02-28T16:41:41.090Z",
+            "maturityAmount": 99.5,
+            "autoRenewalIndicator": true,
+            "interestSettlementAccount": "interestSettlementAccount1",
+            "outstandingPrincipalAmount": 100.2,
+            "monthlyInstalmentAmount": 100.1,
+            "amountInArrear": 100.3,
+            "minimumRequiredBalance": 80.4,
+            "creditCardAccountNumber": "••3456",
+            "validThru": "2019-02-28T16:41:41.090Z",
+            "applicableInterestRate": 101.2,
+            "remainingCredit": 50,
+            "outstandingPayment": 105.5,
+            "minimumPayment": 51.1,
+            "minimumPaymentDueDate": "2018-02-28T16:41:41.090Z",
+            "totalInvestmentValue": 110.2,
+            "debitCards": [
+              {
+                "number": "4578",
+                "expiryDate": "2020-08-22",
+                "cardId": "id1",
+                "cardholderName": "John Doe",
+                "cardType": "Visa Electron",
+                "cardStatus": "Active"
+              },
+              {
+                "number": "3241",
+                "expiryDate": "2019-01-14",
+                "cardId": "id2",
+                "cardholderName": "John Doe",
+                "cardType": "Visa",
+                "cardStatus": "Active"
+              }
+            ],
+            "accountHolderAddressLine1": "accountHolderAddressLine11",
+            "accountHolderAddressLine2": "accountHolderAddressLine12",
+            "accountHolderStreetName": "accountHolderStreetName1",
+            "town": "Skopje",
+            "postCode": "2000",
+            "countrySubDivision": "countrySubDivision1",
+            "accountHolderNames": "Toso Malerot,Danthe Mohr",
+            "accountHolderCountry": "MK",
+            "creditAccount": true,
+            "debitAccount": true,
+            "lastUpdateDate": "2016-01-28T16:41:41.090Z",
+            "favorite": true,
+            "userPreferences": {
+              "arrangementId": "9aabca5b-63ae-47d9-8d63-c5ed0e831dfa",
+              "alias": "Royalties account",
+              "visible": true,
+              "favorite": false
+            },
+            "product": {
+              "externalId": "externalProductidId",
+              "externalTypeId": "externalProductTypeId",
+              "typeName": "Current Account",
+              "productKind": {
+                "id": 1,
+                "externalKindId": "kind1",
+                "kindName": "Current Account",
+                "kindUri": "current-account"
+              }
+            },
+            "state": {
+              "externalStateId": "externalStateId2",
+              "state": "InActive"
+            },
+            "financialInstitutionId": 1,
+            "lastSyncDate": "2020-09-28T16:41:41.090Z"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

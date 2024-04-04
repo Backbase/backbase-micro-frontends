@@ -1,0 +1,191 @@
+{
+  "name": "/client-api/v2/categorytotals_GET",
+  "request": {
+    "url": "/client-api/v2/categorytotals(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "total": {
+          "amount": "3996.66",
+          "currencyCode": "EUR"
+        },
+        "items": [
+          {
+            "category": "Hobbies & Entertainment",
+            "totalAmount": {
+              "amount": "34.04",
+              "currencyCode": "EUR"
+            },
+            "trend": 12,
+            "portion": 1
+          },
+          {
+            "category": "Food & Drinks",
+            "totalAmount": {
+              "amount": "20",
+              "currencyCode": "EUR"
+            },
+            "trend": -3,
+            "portion": 1
+          },
+          {
+            "category": "Transfers",
+            "totalAmount": {
+              "amount": "720.42",
+              "currencyCode": "EUR"
+            },
+            "trend": -32,
+            "portion": 18
+          },
+          {
+            "category": "Home",
+            "totalAmount": {
+              "amount": "862",
+              "currencyCode": "EUR"
+            },
+            "trend": 15,
+            "portion": 22
+          },
+          {
+            "category": "Health & Beauty",
+            "totalAmount": {
+              "amount": "25.22",
+              "currencyCode": "EUR"
+            },
+            "trend": 5,
+            "portion": 1
+          },
+          {
+            "category": "Transportation",
+            "totalAmount": {
+              "amount": "246",
+              "currencyCode": "EUR"
+            },
+            "trend": 0,
+            "portion": 6
+          },
+          {
+            "category": "Shopping",
+            "totalAmount": {
+              "amount": "523",
+              "currencyCode": "EUR"
+            },
+            "trend": 20,
+            "portion": 13
+          },
+          {
+            "category": "Bills & Utilities",
+            "totalAmount": {
+              "amount": "160.98",
+              "currencyCode": "EUR"
+            },
+            "trend": 0,
+            "portion": 4
+          },
+          {
+            "category": "Income",
+            "totalAmount": {
+              "amount": "1060",
+              "currencyCode": "EUR"
+            },
+            "trend": 120,
+            "portion": 26
+          },
+          {
+            "category": "Other Income",
+            "totalAmount": {
+              "amount": "4",
+              "currencyCode": "EUR"
+            },
+            "trend": -2,
+            "portion": 1
+          },
+          {
+            "category": "Uncategorised",
+            "totalAmount": {
+              "amount": "341",
+              "currencyCode": "EUR"
+            },
+            "trend": -4,
+            "portion": 7
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

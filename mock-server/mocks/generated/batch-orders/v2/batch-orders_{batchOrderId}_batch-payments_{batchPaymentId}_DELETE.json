@@ -1,0 +1,44 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}/batch-payments/{batchPaymentId}_DELETE",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+/batch-payments/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict error",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "The request could not be completed due to a conflict with the current state of the resource.",
+            "key": "transactions.api.billingstatus.transaction",
+            "context": {
+              "billingStatus": "BILLED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Batch order not found",
+        "errors": []
+      }
+    },
+    "notFound_1": {
+      "status": 404,
+      "data": {
+        "message": "Batch payment not found",
+        "errors": []
+      }
+    }
+  }
+}

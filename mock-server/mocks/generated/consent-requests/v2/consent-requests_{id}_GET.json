@@ -1,0 +1,132 @@
+{
+  "name": "/consent/client-api/v2/consent-requests/{id}_GET",
+  "request": {
+    "url": "/consent/client-api/v2/consent-requests/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "34bf3478-4187-46b1-aab1-20577c5d339c",
+        "tpp": {
+          "id": "0dbbf48e-53dc-4968-8167-6337718f9781",
+          "externalId": "amazon",
+          "name": "Amazon",
+          "website": "https://amazon.com",
+          "imageUrl": "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-48.png",
+          "isTrusted": true,
+          "mail": "primary@amazon.com",
+          "phonenumber": "8882803321",
+          "address": "Amazon.com, Inc. Customer Service PO Box 81226 Seattle, WA 98108-1226",
+          "country": "US"
+        },
+        "expiryDate": "2019-03-28T16:41:41.090Z",
+        "permissions": ["ReadAccountsDetail", "ReadBalances", "ReadTransactionsDetail"],
+        "allowConsentRedirectUrl": "https://amazon.com",
+        "rejectConsentRedirectUrl": "https://google.com",
+        "accounts": [
+          {
+            "id": "9bf23657-511a-4022-a474-c3617cf1589e",
+            "number": "LV20GOWNKDCDIA03FAQD5",
+            "name": "Ricardo Norton's Current Account",
+            "type": "currentAccount",
+            "currency": "USD",
+            "balance": "9763.34"
+          },
+          {
+            "id": "dd98797a-a464-4702-ae2f-2214c81a8e69",
+            "number": "AD6548375906DIXVOJTD558B",
+            "name": "Ricardo Norton's Savings Account",
+            "type": "savingsAccount",
+            "currency": "USD",
+            "balance": "3788.61"
+          },
+          {
+            "id": "c5566c1b-2ebe-45b5-a32e-cf83c3669bbd",
+            "number": "EE511790690392885115",
+            "name": "Ricardo Norton's Credit Card",
+            "type": "creditCard",
+            "currency": "USD",
+            "balance": "2876.76"
+          },
+          {
+            "id": "cf916772-3676-43a8-89c0-86bd545f84dd",
+            "number": "HR1964204918384144019",
+            "name": "Ricardo Norton's Investment Account",
+            "type": "investmentAccount",
+            "currency": "USD",
+            "balance": "2676.23"
+          },
+          {
+            "id": "7eaee238-d5a9-40d3-80b9-75a29fea908b",
+            "number": "IE37QNJQ34395947171968",
+            "name": "Ricardo Norton's Mortgage Loan",
+            "type": "mortgage",
+            "currency": "USD",
+            "balance": -150000
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "value": {
+          "value": {
+            "message": "Bad Request",
+            "errors": [
+              {
+                "message": "Value Exceeded. Must be between {min} and {max}.",
+                "key": "common.api.shoesize",
+                "context": {
+                  "max": "50",
+                  "min": "1"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "value": {
+          "value": {
+            "message": "Access to requested resource denied.",
+            "errors": [
+              {
+                "message": "Resource access denied due to an insufficient user quota of {quota}.",
+                "key": "common.api.quota",
+                "context": {
+                  "quota": "someQuota"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "value": {
+          "value": {
+            "message": "Resource not found.",
+            "errors": [
+              {
+                "message": "Unable to find the resource requested resource: {resource}.",
+                "key": "common.api.resource",
+                "context": {
+                  "resource": "aResource"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

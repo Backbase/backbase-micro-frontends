@@ -1,0 +1,29 @@
+{
+  "name": "/client-api/v2/approval-type-assignments/{id}_DELETE",
+  "request": {
+    "url": "/client-api/v2/approval-type-assignments/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

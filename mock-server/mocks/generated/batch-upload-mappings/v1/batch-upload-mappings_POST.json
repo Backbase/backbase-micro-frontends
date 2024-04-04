@@ -1,0 +1,86 @@
+{
+  "name": "/client-api/v1/batch-upload-mappings_POST",
+  "request": {
+    "url": "/client-api/v1/batch-upload-mappings(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "647c2ee5-68f5-47ad-a98c-73211887009f",
+        "name": "Default upload mapping",
+        "details": {
+          "fieldDelimiter": ";",
+          "skipFirstRows": 1,
+          "columnMapping": {
+            "counterpartyName": 2,
+            "counterpartyBankBranchCode": 3,
+            "counterpartyAccountNumber": 6,
+            "amount": 5,
+            "accountType": 9,
+            "reference": 8
+          },
+          "valueColumnMappings": [
+            {
+              "from": "accountType",
+              "to": "transactionCode",
+              "valueMapping": {
+                "SAV": "32",
+                "CH": "22"
+              }
+            }
+          ],
+          "fixedValueMapping": {
+            "description": "salary"
+          },
+          "version": 1
+        },
+        "header": {
+          "serviceAgreementId": "8a49cb097b538069017b540190140542",
+          "batchType": "ACH_CREDIT_MANUAL",
+          "entryClass": "PPD",
+          "version": 1
+        },
+        "createdAt": "2022-04-10T10:29:10.577981Z",
+        "createdBy": "Ulli Ulrich",
+        "updatedAt": "2022-05-05T11:50:17.019533Z",
+        "updatedBy": "Jinnu Ulrich"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

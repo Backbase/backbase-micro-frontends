@@ -1,0 +1,127 @@
+{
+  "name": "/client-api/v2/pockets_GET",
+  "request": {
+    "url": "/client-api/v2/pockets(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "pockets": [
+          {
+            "id": "546abc12",
+            "arrangementId": "11da7d70-ed15-11ea-adc1-0242ac120002",
+            "name": "Travel Europe",
+            "icon": "travel",
+            "goal": {
+              "amountCurrency": {
+                "amount": "2000.00",
+                "currencyCode": "EUR"
+              },
+              "deadline": "2021-02-28",
+              "progress": 35.5
+            },
+            "balance": {
+              "amount": "-20.00",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "id": "gy2345dff",
+            "arrangementId": "3cdb2224-8926-4b4d-a99f-012331c94699",
+            "name": "Christmas gifts",
+            "icon": "gift",
+            "balance": {
+              "amount": "789.13",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "id": "cd1235dff",
+            "arrangementId": "2331c9469-09a8-4b4d-a91c946999f-01233",
+            "name": "Adventure holidays",
+            "icon": "holidays",
+            "goal": {
+              "deadline": "2021-09-18"
+            },
+            "balance": {
+              "amount": "89.13",
+              "currencyCode": "EUR"
+            }
+          },
+          {
+            "id": "987abc12",
+            "arrangementId": "c7dgh-a7d70-ed15-11ea-fec1-0242120002",
+            "name": "Home Renovation",
+            "icon": "home",
+            "goal": {
+              "amountCurrency": {
+                "amount": "50000.00",
+                "currencyCode": "EUR"
+              },
+              "progress": 0.5
+            },
+            "balance": {
+              "amount": "250.00",
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "/client-api/v2/policy-assignments_POST",
+  "request": {
+    "url": "/client-api/v2/policy-assignments(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": {},
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Policy not found",
+        "errors": [
+          {
+            "message": "Policy not found",
+            "key": "approval.api.PolicyNotFound",
+            "context": {
+              "policy id": "7d466fef-de4d-48f2-8e72-c31ca5774b5a"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Policy assignment already exists",
+        "errors": [
+          {
+            "message": "Policy assignment already exists",
+            "key": "approval.api.PolicyAssignmentAlreadyExists",
+            "context": {
+              "policy id": "b212069e-b6e3-4b40-add3-80f1b12d67a6",
+              "service agreement id": "8a48e61a69918d12016994f9d9160001",
+              "business function": "SEPA CT"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_2": {
+      "status": 400,
+      "data": {
+        "message": "Policy assignment with no bounds already exists",
+        "errors": [
+          {
+            "message": "Policy assignment with no bounds already exists",
+            "key": "approval.api.PolicyAssignmentAlreadyUnbounded",
+            "context": {
+              "policy id": "b212069e-b6e3-4b40-add3-80f1b12d67a6",
+              "service agreement id": "8a48e61a69918d12016994f9d9160001",
+              "business function": "SEPA CT"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_3": {
+      "status": 400,
+      "data": {
+        "message": "Policy assignment has invalid bounds",
+        "errors": [
+          {
+            "message": "Policy assignment has invalid bounds",
+            "key": "approval.api.PolicyAssignmentInvalidBound",
+            "context": {
+              "amount": "-10"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

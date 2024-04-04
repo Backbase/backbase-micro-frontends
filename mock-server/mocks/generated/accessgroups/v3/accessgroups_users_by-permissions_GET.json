@@ -1,0 +1,16 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/users/by-permissions_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/users/by-permissions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "userIds": ["4e4def6f-d7dc-40ef-9031-3a62938a859c", "f7552b61-5f17-45d4-bdbe-fa3a12217bdd"]
+      },
+      "default": true
+    }
+  }
+}

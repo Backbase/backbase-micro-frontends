@@ -1,0 +1,332 @@
+{
+  "name": "/client-api/v2/arrangement-views/{viewName}/groups/{groupName}_GET",
+  "request": {
+    "url": "/client-api/v2/arrangement-views/[^/]+/groups/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "metadata": {
+          "totalCount": 12,
+          "nextCursor": "N2MxOWQzMTMtNmY0ZC00ZmQwLWI1NTUtMjA1YTdmYzU0N2Ex"
+        },
+        "elements": [
+          {
+            "id": "bc2ef4f2-f21e-4f82-a16b-a689967e67c7",
+            "attributes": {
+              "productKindUri": {
+                "value": "loan",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "2",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Loan ING #0219",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "My Mortgage Loan",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "2000.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL12INGB7189610219",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-09-10",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "15e0e452-8461-4d1b-be29-dcd5e6955d83",
+            "attributes": {
+              "productKindUri": {
+                "value": "credit-card",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "2",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Credit Card VISA ING #1332",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "Credit Card VISA",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "100.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "••••••••••••1332",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-09-12",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "0ca4732c-7745-4152-8f40-e490b8ad3fe5",
+            "attributes": {
+              "productKindUri": {
+                "value": "loan",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Loan ABNA #4839",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "My Car Loan",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "300.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL82ABNA7134534839",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-10-16",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "365ad13d-cd04-4430-977a-036c98daf761",
+            "attributes": {
+              "productKindUri": {
+                "value": "loan",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "3",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Loan RABO #4385",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "My Business Loan",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "100.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL22RABO8845464385",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-12-10",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "5688348b-f0a8-4924-a085-1dac9bb50143",
+            "attributes": {
+              "productKindUri": {
+                "value": "credit-card",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "3",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Credit Card RABO #6234",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "Master Card Rabobank",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "90.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "••••••••••••6234",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-12-15",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "ac0470be-1e5f-4e64-9c6c-f5bf01c7c5ae",
+            "attributes": {
+              "productKindUri": {
+                "value": "loan",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "1",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Travel Loan",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "Loan RABO #6168",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "80.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL71RABO7659536168",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-12-10",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "7400bcbd-4831-4148-baa0-1c1a24ca004e",
+            "attributes": {
+              "productKindUri": {
+                "value": "current-account",
+                "type": "STRING"
+              },
+              "institutionId": {
+                "value": "4",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Checking Account BUNQ #9723",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "Checking Account Mr. Johnson",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "4000.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL20BUNQ6161309723",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-10-10",
+                "type": "DATE"
+              }
+            }
+          },
+          {
+            "id": "3a83ba9e-4e8b-4511-964d-c4da6116436e",
+            "attributes": {
+              "productKindUri": {
+                "value": "current-account",
+                "type": "STRING"
+              },
+              "name": {
+                "value": "Checking Account ABNA #8558",
+                "type": "STRING"
+              },
+              "displayName": {
+                "value": "Checking Account Mrs. Julens",
+                "type": "STRING"
+              },
+              "amountInArrear": {
+                "value": "20.00",
+                "type": "NUMBER"
+              },
+              "accountNumber": {
+                "value": "NL30ABNA8727958558",
+                "type": "STRING"
+              },
+              "overdueSince": {
+                "value": "2021-08-10",
+                "type": "DATE"
+              }
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

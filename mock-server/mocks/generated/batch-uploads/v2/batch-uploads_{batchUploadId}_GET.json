@@ -1,0 +1,211 @@
+{
+  "name": "/client-api/v2/batch-uploads/{batchUploadId}_GET",
+  "request": {
+    "url": "/client-api/v2/batch-uploads/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+        "status": "OPEN",
+        "file": {
+          "name": "salaries-2019-02.csv",
+          "size": 94371840,
+          "uploadedSize": 18874368
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 3,
+        "createdAt": "2019-02-22T13:44:02Z",
+        "errors": []
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+        "status": "OPEN",
+        "file": {
+          "name": "salaries-2019-02.csv",
+          "size": 94371840,
+          "uploadedSize": 42467328
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 3,
+        "createdAt": "2019-02-22T13:44:02Z",
+        "errors": []
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+        "status": "OPEN",
+        "file": {
+          "name": "salaries-2019-02.csv",
+          "size": 94371840,
+          "uploadedSize": 70778880
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 3,
+        "createdAt": "2019-02-22T13:44:02Z",
+        "errors": []
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+        "status": "UPLOADED",
+        "file": {
+          "name": "salaries-2019-02.csv",
+          "size": 94371840,
+          "uploadedSize": 94371840
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 3,
+        "createdAt": "2019-02-22T13:44:02Z",
+        "completedAt": "2019-02-22T14:08:34Z",
+        "errors": []
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+        "status": "DONE",
+        "file": {
+          "name": "salaries-2019-12.csv",
+          "size": 54371840,
+          "uploadedSize": 54371840,
+          "lastModified": "2019-12-22T08:06:00Z"
+        },
+        "digest": {
+          "value": "07c8445c33bba054e7abc463cd351db465e6b90f00d2e658d0250d13aba8fe4c",
+          "algorithm": "SHA-256"
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 1,
+        "createdAt": "2019-12-24T07:09:33Z",
+        "completedAt": "2019-12-24T07:11:09Z",
+        "errors": []
+      }
+    },
+    "success_5": {
+      "status": 200,
+      "data": {
+        "id": "3650f774-2a95-4bfb-9f00-1c58fc1af0c6",
+        "status": "DUPLICATE",
+        "file": {
+          "name": "salaries-2019-12.csv",
+          "size": 54371840,
+          "uploadedSize": 54371840,
+          "lastModified": "2019-12-22T08:06:00Z"
+        },
+        "digest": {
+          "value": "07c8445c33bba054e7abc463cd351db465e6b90f00d2e658d0250d13aba8fe4c",
+          "algorithm": "SHA-256"
+        },
+        "batchFileType": "BB_SEPACT_CSV",
+        "totalBatchOrdersCount": 1,
+        "createdAt": "2019-12-28T09:11:13Z",
+        "completedAt": "2019-12-28T09:13:23Z",
+        "duplicates": [
+          {
+            "id": "0e4e5d67-d7d8-4695-87ad-58746c94ec63",
+            "status": "DONE",
+            "file": {
+              "name": "salaries-2019-12.csv",
+              "size": 54371840,
+              "uploadedSize": 54371840,
+              "lastModified": "2019-12-22T08:06:00Z"
+            },
+            "digest": {
+              "value": "07c8445c33bba054e7abc463cd351db465e6b90f00d2e658d0250d13aba8fe4c",
+              "algorithm": "SHA-256"
+            },
+            "batchFileType": "BB_SEPACT_CSV",
+            "totalBatchOrdersCount": 1,
+            "createdAt": "2019-12-24T07:09:33Z",
+            "completedAt": "2019-12-24T07:11:09Z"
+          }
+        ],
+        "errors": []
+      }
+    },
+    "success_6": {
+      "status": 200,
+      "data": {
+        "id": "80467759-0178-4231-af61-003bf1bc842b",
+        "totalBatchOrdersCount": 3,
+        "size": 94371840,
+        "uploadedSize": 94371840,
+        "status": "FAILED",
+        "errors": [
+          {
+            "message": "The actual total amount ({{totalAmount}}) does not match the expected total amount ({{headerTotalAmount}})",
+            "key": "TotalAmountMismatch",
+            "context": {
+              "totalAmount": "2400123.00",
+              "headerTotalAmount": "2398675.00"
+            }
+          }
+        ]
+      }
+    },
+    "success_7": {
+      "status": 200,
+      "data": {
+        "id": "9151b4d0-f058-4b01-8bed-474dfc34831e",
+        "totalBatchOrdersCount": 4,
+        "size": 94371840,
+        "uploadedSize": 94371840,
+        "status": "FAILED",
+        "errors": [
+          {
+            "message": "Total number of batches ({{actual}}) does not match the expected number ({{expected}})",
+            "key": "TotalBatchMismatch",
+            "context": {
+              "actual": "3",
+              "expected": "4"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

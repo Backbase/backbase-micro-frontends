@@ -1,0 +1,16 @@
+{
+  "name": "/client-api/v1/client-api/v1/account-recovery/{id}/status_GET",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/account-recovery/[^/]+/status(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "status": "COMPLETE"
+      },
+      "default": true
+    }
+  }
+}

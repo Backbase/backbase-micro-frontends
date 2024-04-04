@@ -1,0 +1,33 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/approvals/{approvalId}/data-group_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/approvals/[^/]+/data-group(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "dataGroupId": "0955e686d31e4216b3dd5d66161d536d",
+        "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b14",
+        "serviceAgreementName": "Sa name",
+        "type": "ARRANGEMENTS",
+        "approvalId": "606d4532-f8d9-4a5f-36kl-887baf88fa24",
+        "action": "EDIT",
+        "oldState": {
+          "name": "DG name",
+          "description": "DG desc"
+        },
+        "newState": {
+          "name": "new DG name",
+          "description": "new DG desc"
+        },
+        "addedDataItems": ["1cdb2224-8926-4b4d-a99f-1c9dfbbb4612", "1cdb2224-8926-4b4d-a99f-1c9dfbbb4613"],
+        "removedDataItems": ["1cdb2224-8926-4b4d-a99f-1c9dfbbb4699", "1cdb2224-8926-4b4d-a99f-1c9dfbbb4614"],
+        "unmodifiedDataItems": ["1cdb2224-8926-4b4d-a99f-1c9dfbbb4615", "1cdb2224-8926-4b4d-a99f-1c9dfbbb4611"],
+        "legalEntityIds": ["cd0968b3-3520-4280-8699-cd46c4d6df72", "3c684e80-c646-4148-bc20-37718eab4d97"]
+      },
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "/client-api/v1/corporate-actions/{id}_GET",
+  "request": {
+    "url": "/client-api/v1/corporate-actions/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "$ref": "examples/corporate-action/list/corporate-action-details.json"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "lib/examples/bad-request-validation-error.json"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "lib/examples/not-found-error.json"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "lib/examples/internal-server-error.json"
+      }
+    }
+  }
+}

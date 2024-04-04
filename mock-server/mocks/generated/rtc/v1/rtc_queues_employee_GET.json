@@ -1,0 +1,84 @@
+{
+  "name": "/client-api/v1/rtc/queues/employee_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/queues/employee(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "8d096ab7-b895-4a11-b839-049e976b80c1",
+          "name": "queue1",
+          "publicName": "Queue 1",
+          "availableEmployees": 15,
+          "status": "AVAILABLE",
+          "visibility": "INTERNAL",
+          "default": true
+        },
+        {
+          "id": "fccacd7c-ddf3-42e3-945d-4f5d788ad277",
+          "name": "queue2",
+          "publicName": "Queue 2",
+          "availableEmployees": 8,
+          "status": "AVAILABLE",
+          "visibility": "INTERNAL",
+          "default": false
+        },
+        {
+          "id": "abcbb155-586a-4dfb-83a4-21047ac1d514",
+          "name": "queue3",
+          "publicName": "Queue 3",
+          "availableEmployees": 4,
+          "status": "UNAVAILABLE",
+          "visibility": "EXTERNAL",
+          "default": false
+        },
+        {
+          "id": "f85d30bc-477b-4430-93db-50e7a4a7d1ea",
+          "name": "queue4",
+          "publicName": "Queue 4",
+          "availableEmployees": 6,
+          "status": "UNAVAILABLE",
+          "visibility": "INTERNAL",
+          "default": false
+        },
+        {
+          "id": "17a508b5-5d70-434b-9b37-52cb31fb7d8f",
+          "name": "queue5",
+          "publicName": "Queue 5",
+          "availableEmployees": 6,
+          "status": "ARCHIVED",
+          "visibility": "INTERNAL",
+          "default": false
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

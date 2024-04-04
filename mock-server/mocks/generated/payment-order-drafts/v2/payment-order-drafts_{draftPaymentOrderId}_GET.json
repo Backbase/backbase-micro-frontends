@@ -1,0 +1,107 @@
+{
+  "name": "/client-api/v2/payment-order-drafts/{draftPaymentOrderId}_GET",
+  "request": {
+    "url": "/client-api/v2/payment-order-drafts/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ACCEPTED",
+        "version": 1,
+        "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+        "reasonCode": "AC01",
+        "reasonText": "Accepted by bank",
+        "originatorAccount": {
+          "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "externalArrangementId": "729190421493794513132",
+          "identification": {
+            "identification": "NL53RABO0309349755",
+            "schemeName": "IBAN"
+          }
+        },
+        "instructionPriority": "NORM",
+        "requestedExecutionDate": "2017-07-16",
+        "paymentType": "SEPA_CREDIT_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "5000.55",
+            "currencyCode": "EUR"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "FR708933019952AUNHQNQ0KZ",
+              "schemeName": "IBAN"
+            },
+            "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+            "externalArrangementId": "9669274787995385962"
+          },
+          "counterparty": {
+            "name": "Backbase",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+              "country": "NL"
+            }
+          },
+          "remittanceInformation": {
+            "type": "UNSTRUCTURED",
+            "content": "Return a debt"
+          }
+        },
+        "actions": [],
+        "createdBy": "U00243",
+        "createdAt": "2017-05-12T14:33:13.452Z"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

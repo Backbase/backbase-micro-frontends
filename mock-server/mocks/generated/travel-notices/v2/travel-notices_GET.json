@@ -1,0 +1,143 @@
+{
+  "name": "/client-api/v2/travel-notices_GET",
+  "request": {
+    "url": "/client-api/v2/travel-notices(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "value": [
+          {
+            "id": "sara-travel-notice-1",
+            "cardIds": ["sara-card-1", "sara-card-4"],
+            "departureDate": "2020-01-09",
+            "arrivalDate": "2020-01-18",
+            "destinations": [
+              {
+                "country": "MEX"
+              },
+              {
+                "country": "USA",
+                "region": "US-TX"
+              }
+            ]
+          },
+          {
+            "id": "sara-travel-notice-2",
+            "cardIds": ["sara-card-1", "sara-card-2", "sara-card-4", "sara-card-5"],
+            "departureDate": "2019-12-10",
+            "arrivalDate": "2019-12-23",
+            "destinations": [
+              {
+                "country": "JPN"
+              },
+              {
+                "country": "USA",
+                "region": "US-CA"
+              }
+            ],
+            "contact": {
+              "phoneNumber": "+1 646 432 3000"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "value": [
+          {
+            "id": "elon-travel-notice-1",
+            "cardIds": ["elon-card-1"],
+            "departureDate": "2020-05-06",
+            "arrivalDate": "2020-05-10",
+            "destinations": [
+              {
+                "country": "USA",
+                "region": "US-TX"
+              },
+              {
+                "country": "MEX"
+              }
+            ]
+          },
+          {
+            "id": "elon-travel-notice-2",
+            "cardIds": ["elon-card-1", "elon-card-2", "elon-card-3", "elon-card-4"],
+            "departureDate": "2019-12-10",
+            "arrivalDate": "2019-12-23",
+            "destinations": [
+              {
+                "country": "JPN"
+              },
+              {
+                "country": "USA",
+                "region": "US-CA"
+              }
+            ],
+            "contact": {
+              "phoneNumber": "+1 646 432 3000"
+            }
+          },
+          {
+            "id": "elon-travel-notice-3",
+            "cardIds": ["elon-card-4"],
+            "departureDate": "2019-07-23",
+            "arrivalDate": "2020-08-11",
+            "destinations": [
+              {
+                "country": "KHM"
+              },
+              {
+                "country": "KOR"
+              },
+              {
+                "country": "IND"
+              }
+            ],
+            "contact": {
+              "phoneNumber": "+1 646 432 3000"
+            }
+          }
+        ]
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "value": [
+          {
+            "id": "john-travel-notice-1",
+            "cardIds": ["john-card-1", "john-card-2"],
+            "departureDate": "2020-01-09",
+            "arrivalDate": "2020-01-18",
+            "destinations": [
+              {
+                "country": "NL"
+              }
+            ],
+            "contact": {
+              "phoneNumber": "+1 646 432 3000"
+            }
+          }
+        ]
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "value": []
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "value": []
+      }
+    }
+  }
+}

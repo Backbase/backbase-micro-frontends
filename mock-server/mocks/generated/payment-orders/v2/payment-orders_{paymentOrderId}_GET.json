@@ -1,0 +1,554 @@
+{
+  "name": "/client-api/v2/payment-orders/{paymentOrderId}_GET",
+  "request": {
+    "url": "/client-api/v2/payment-orders/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ACCEPTED",
+        "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+        "reasonCode": "AC01",
+        "reasonText": "Accepted by bank",
+        "originatorAccount": {
+          "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "externalArrangementId": "729190421493794513132",
+          "identification": {
+            "identification": "NL53RABO0309349755",
+            "schemeName": "IBAN"
+          }
+        },
+        "instructionPriority": "NORM",
+        "requestedExecutionDate": "2021-07-16",
+        "deliveryDate": "2021-07-16",
+        "paymentType": "SEPA_CREDIT_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "5000.55",
+            "currencyCode": "EUR"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "FR708933019952AUNHQNQ0KZ",
+              "schemeName": "IBAN"
+            },
+            "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+            "externalArrangementId": "9669274787995385962"
+          },
+          "counterparty": {
+            "name": "Backbase",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+              "country": "NL"
+            }
+          },
+          "remittanceInformation": {
+            "type": "UNSTRUCTURED",
+            "content": "Return a debt"
+          }
+        },
+        "actions": ["EDIT"],
+        "permissibleActions": {
+          "approve": false,
+          "finalApprove": false,
+          "reject": false,
+          "cancel": false,
+          "delete": false,
+          "edit": true,
+          "create": true,
+          "export": true
+        },
+        "createdBy": "U00243",
+        "createdAt": "2021-05-12T14:33:13.452Z",
+        "contextualInformation": {
+          "externalUserId": "b3e4692d-6772-4fb2-9446-132435465768",
+          "internalUserId": "b3e4692d-6772-4fb2-9446-374857684932",
+          "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+          "legalEntityId": "27263171-94d5-4d82-975c-61d8c41644d0",
+          "origin": "actions"
+        },
+        "originatorAccountCurrency": "EUR",
+        "version": 1
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ACCEPTED",
+        "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+        "reasonCode": "AC01",
+        "reasonText": "Accepted by bank",
+        "originatorAccount": {
+          "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "externalArrangementId": "729190421493794513132",
+          "identification": {
+            "identification": "NL53RABO0309349755",
+            "schemeName": "IBAN"
+          }
+        },
+        "instructionPriority": "NORM",
+        "requestedExecutionDate": "2021-07-01",
+        "paymentType": "SEPA_CREDIT_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "5000.55",
+            "currencyCode": "EUR"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "FR708933019952AUNHQNQ0KZ",
+              "schemeName": "IBAN"
+            },
+            "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+            "externalArrangementId": "9669274787995385962"
+          },
+          "counterparty": {
+            "name": "Backbase",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+              "country": "NL"
+            }
+          },
+          "remittanceInformation": {
+            "type": "UNSTRUCTURED",
+            "content": "Return a debt"
+          }
+        },
+        "actions": ["EDIT"],
+        "permissibleActions": {
+          "approve": false,
+          "finalApprove": false,
+          "reject": false,
+          "cancel": false,
+          "delete": false,
+          "edit": true,
+          "create": true,
+          "export": true
+        },
+        "createdBy": "U00243",
+        "createdAt": "2017-05-12T14:33:13.452Z",
+        "contextualInformation": {
+          "externalUserId": "b3e4692d-6772-4fb2-9446-132435465768",
+          "internalUserId": "b3e4692d-6772-4fb2-9446-374857684932",
+          "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+          "legalEntityId": "27263171-94d5-4d82-975c-61d8c41644d0",
+          "origin": "actions"
+        },
+        "originatorAccountCurrency": "EUR",
+        "edited": true,
+        "editedPaymentOrder": {
+          "id": "df341c28-6714-11e7-907b-a6006ad3asa0",
+          "approvalId": "49dad7ab-604b-407a-ba47-a61ad93df4ce",
+          "status": "ENTERED",
+          "originatorAccount": {
+            "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+            "externalArrangementId": "729190421493794513132",
+            "identification": {
+              "identification": "NL53RABO0309349755",
+              "schemeName": "IBAN"
+            }
+          },
+          "instructionPriority": "NORM",
+          "requestedExecutionDate": "2021-07-01",
+          "paymentType": "SEPA_CREDIT_TRANSFER",
+          "transferTransactionInformation": {
+            "instructedAmount": {
+              "amount": "6000",
+              "currencyCode": "EUR"
+            },
+            "counterpartyAccount": {
+              "identification": {
+                "identification": "FR708933019952AUNHQNQ0KZ",
+                "schemeName": "IBAN"
+              },
+              "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+              "externalArrangementId": "9669274787995385962"
+            },
+            "counterparty": {
+              "name": "Backbase",
+              "postalAddress": {
+                "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+                "country": "NL"
+              }
+            },
+            "remittanceInformation": {
+              "type": "UNSTRUCTURED",
+              "content": "Return a debt"
+            }
+          },
+          "actions": ["EDIT"],
+          "permissibleActions": {
+            "approve": false,
+            "finalApprove": false,
+            "reject": false,
+            "cancel": false,
+            "delete": false,
+            "edit": true,
+            "create": true
+          },
+          "createdBy": "U00243",
+          "createdAt": "2017-05-12T15:33:13.452Z",
+          "contextualInformation": {
+            "externalUserId": "b3e4692d-6772-4fb2-9446-132435465768",
+            "internalUserId": "b3e4692d-6772-4fb2-9446-374857684932",
+            "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+            "legalEntityId": "27263171-94d5-4d82-975c-61d8c41644d0",
+            "origin": "actions"
+          },
+          "originatorAccountCurrency": "EUR",
+          "edited": false,
+          "version": 1
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ENTERED",
+        "originatorAccount": {
+          "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "externalArrangementId": "729190421493794513132",
+          "identification": {
+            "identification": "NL53RABO0309349755",
+            "schemeName": "IBAN"
+          }
+        },
+        "instructionPriority": "NORM",
+        "requestedExecutionDate": "2018-07-22",
+        "paymentType": "SEPA_CREDIT_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "5000.55",
+            "currencyCode": "EUR"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "FR708933019952AUNHQNQ0KZ",
+              "schemeName": "IBAN"
+            },
+            "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+            "externalArrangementId": "9669274787995385962"
+          },
+          "counterparty": {
+            "name": "Backbase",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+              "country": "NL"
+            }
+          },
+          "remittanceInformation": {
+            "type": "UNSTRUCTURED",
+            "content": "Return a debt"
+          }
+        },
+        "version": 1,
+        "actions": [],
+        "createdBy": "U00243",
+        "createdAt": "2018-07-22T13:44:02Z",
+        "originatorAccountCurrency": "EUR",
+        "approvalDetails": {
+          "id": "b3e4692d-6772-4fb2-9446-b8f4607f49b1",
+          "userId": "b3e4692d-6772-4fb2-9446-bebebebebebe",
+          "externalUserId": "davyJones88",
+          "userFullName": "Davy Jones",
+          "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+          "itemId": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "dataAccessItemId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "resource": "Payments",
+          "function": "SEPA_CREDIT_TRANSFER",
+          "status": "PENDING",
+          "createdAt": "2018-07-22T13:44:02Z",
+          "records": [
+            {
+              "id": "59f23015-9007-4391-a604-1d17e85ab3c0",
+              "userId": "b3e4692d-6772-4fb2-9446-babababababa",
+              "externalUserId": "flying-dutchman",
+              "userFullName": "Jack Sparrow",
+              "approvalTypeId": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "status": "APPROVED",
+              "createdAt": "2018-07-22T13:44:02Z"
+            }
+          ],
+          "approvalTypes": [
+            {
+              "id": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "name": "A",
+              "description": "1st approval",
+              "rank": 100
+            },
+            {
+              "id": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+              "name": "B",
+              "description": "2nd approval",
+              "rank": 101
+            }
+          ],
+          "policy": {
+            "id": "6546c424-d3b1-4848-bbda-31cd44ab6915",
+            "name": "Default policy",
+            "description": "A default policy that requires two approvals of different types: A + B",
+            "items": [
+              {
+                "approvalTypeId": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+                "numberOfApprovals": 1
+              },
+              {
+                "approvalTypeId": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+                "numberOfApprovals": 1
+              }
+            ]
+          },
+          "canApprove": false,
+          "canReject": false,
+          "finalApprover": false
+        }
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ENTERED",
+        "originatorAccount": {
+          "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "externalArrangementId": "729190421493794513132",
+          "identification": {
+            "identification": "NL53RABO0309349755",
+            "schemeName": "IBAN"
+          }
+        },
+        "instructionPriority": "NORM",
+        "requestedExecutionDate": "2018-07-22",
+        "paymentType": "SEPA_CREDIT_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "5000.55",
+            "currencyCode": "EUR"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "FR708933019952AUNHQNQ0KZ",
+              "schemeName": "IBAN"
+            },
+            "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+            "externalArrangementId": "9669274787995385962"
+          },
+          "counterparty": {
+            "name": "Backbase",
+            "postalAddress": {
+              "addressLine1": "Jacob Bontiusplaats 9, 1018LL, Amsterdam",
+              "country": "NL"
+            }
+          },
+          "remittanceInformation": {
+            "type": "UNSTRUCTURED",
+            "content": "Return a debt"
+          }
+        },
+        "version": 1,
+        "actions": [],
+        "createdBy": "U00243",
+        "createdAt": "2018-07-22T13:44:02Z",
+        "originatorAccountCurrency": "EUR",
+        "approvalDetails": {
+          "id": "b3e4692d-6772-4fb2-9446-b8f4607f49b1",
+          "userId": "b3e4692d-6772-4fb2-9446-bebebebebebe",
+          "externalUserId": "davyJones88",
+          "userFullName": "Davy Jones",
+          "serviceAgreementId": "c3f62ff9-2894-47d9-a34a-2c8b54e6e9be",
+          "itemId": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "dataAccessItemId": "729190df-a421-4937-94fd-5e1a3da132cc",
+          "resource": "Payments",
+          "function": "SEPA_CREDIT_TRANSFER",
+          "status": "PENDING",
+          "createdAt": "2018-07-22T13:44:02Z",
+          "records": [
+            {
+              "id": "59f23015-9007-4391-a604-1d17e85ab3c0",
+              "userId": "b3e4692d-6772-4fb2-9446-babababababa",
+              "externalUserId": "flying-dutchman",
+              "userFullName": "Jack Sparrow",
+              "approvalTypeId": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "status": "APPROVED",
+              "createdAt": "2018-07-22T13:44:02Z"
+            }
+          ],
+          "approvalTypes": [
+            {
+              "id": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+              "name": "A",
+              "description": "1st approval",
+              "rank": 100
+            },
+            {
+              "id": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+              "name": "B",
+              "description": "2nd approval",
+              "rank": 101
+            }
+          ],
+          "policy": {
+            "id": "8ac202da-273b-4d2b-8aa6-c12f9d9fa736",
+            "name": "Or policy",
+            "description": "A policy that requires A OR B approvals",
+            "logicalItems": [
+              {
+                "rank": 1,
+                "operator": "OR",
+                "items": [
+                  {
+                    "approvalType": {
+                      "id": "ed47a5d7-1626-4e8c-819c-8c1851cb0357",
+                      "name": "A",
+                      "description": "Or A approval",
+                      "rank": 100
+                    },
+                    "numberOfApprovals": 1
+                  },
+                  {
+                    "approvalType": {
+                      "id": "5fa97eb5-277f-4b2c-b05d-f13d630e05c8",
+                      "name": "B",
+                      "description": "Or B approval",
+                      "rank": 101
+                    },
+                    "numberOfApprovals": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "canApprove": false,
+          "canReject": false,
+          "finalApprover": false
+        }
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+        "approvalId": "49dad7ab-604b-407a-ba47-a61ad93f31ce",
+        "status": "ACCEPTED",
+        "bankStatus": "ACCEPTEDTECHNICALVALIDATION",
+        "reasonCode": "AC01",
+        "reasonText": "Accepted by bank",
+        "originatorAccount": {
+          "identification": {
+            "identification": "8a48e08c60daa5940160dac699050088",
+            "schemeName": "ID"
+          }
+        },
+        "requestedExecutionDate": "2021-02-15",
+        "paymentType": "INTERNATIONAL_TRANSFER",
+        "transferTransactionInformation": {
+          "instructedAmount": {
+            "amount": "100",
+            "currencyCode": "INR"
+          },
+          "counterparty": {
+            "name": "John Doe"
+          },
+          "counterpartyAccount": {
+            "identification": {
+              "identification": "4902331374",
+              "schemeName": "BBAN"
+            }
+          },
+          "counterpartyBank": {
+            "bankBranchCode": "IDIA000A001",
+            "bic": "IBKLINBBXXR",
+            "name": "IDBA BANK",
+            "postalAddress": {
+              "addressLine1": "FINANCIAL PLAZA INDIA",
+              "country": "IN"
+            }
+          },
+          "correspondentBank": {
+            "bankBranchCode": "011000015",
+            "name": "FEDERAL RESERVE BANK"
+          },
+          "intermediaryBank": {
+            "bankBranchCode": "122105155",
+            "name": "SNSB2886803298"
+          },
+          "messageToBank": "My international payment explanation.",
+          "chargeBearer": "SHA",
+          "exchangeRateInformation": {
+            "currencyCode": "INR",
+            "rate": "89.00",
+            "rateType": "AGREED",
+            "contractIdentification": "/tbill/2018/T102993"
+          },
+          "transferFee": {
+            "amount": "15",
+            "currencyCode": "EUR"
+          },
+          "purposeOfPayment": {
+            "code": "P1004",
+            "description": "Legal services"
+          }
+        }
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

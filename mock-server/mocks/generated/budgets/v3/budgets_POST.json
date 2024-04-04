@@ -1,0 +1,90 @@
+{
+  "name": "/client-api/v3/budgets_POST",
+  "request": {
+    "url": "/client-api/v3/budgets(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "2955e686-d31e-4216-b3dd-5d66161d536d",
+        "categoryId": 23,
+        "categoryName": "Travel",
+        "spendingLimit": {
+          "amount": "700.00",
+          "currencyCode": "EUR"
+        },
+        "spent": {
+          "amount": "550.00",
+          "currencyCode": "EUR"
+        },
+        "spentPercentage": 78.5,
+        "available": {
+          "amount": "150.00",
+          "currencyCode": "EUR"
+        },
+        "overspent": {
+          "amount": "0",
+          "currencyCode": "EUR"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "name": "/client-api/v5/employee/conversations/search_GET",
+  "request": {
+    "url": "/client-api/v5/employee/conversations/search(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "assignee": {
+            "fullName": "John Snow",
+            "internalId": "1234-5678-9012-3456",
+            "isRequester": true
+          },
+          "client": {
+            "fullName": "John Doe",
+            "internalId": "97234tyi23rfiy325r3i7r"
+          },
+          "deletable": true,
+          "hasAttachments": true,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7",
+          "important": false,
+          "read": false,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i7r",
+            "name": "John Doe"
+          },
+          "subject": "Application Rejected",
+          "timestamp": "2017-10-02T10:51:30.275+0000",
+          "topic": {
+            "deleted": false,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+            "name": "Savings"
+          }
+        },
+        {
+          "assignee": {
+            "fullName": "Ned Stark",
+            "internalId": "0987-6543-2109-8765",
+            "isRequester": false
+          },
+          "client": {
+            "fullName": "John Doe",
+            "internalId": "97234tyi23rfiy325r3i7r"
+          },
+          "deletable": true,
+          "hasAttachments": false,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395c9",
+          "important": false,
+          "read": true,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i8o",
+            "name": "John Snow"
+          },
+          "subject": "Loan Rejected",
+          "timestamp": "2019-01-02T10:51:30.000+0000",
+          "topic": {
+            "deleted": true,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064b7",
+            "name": "Loan rejected"
+          }
+        },
+        {
+          "assignee": {
+            "fullName": "John Snow",
+            "internalId": "1234-5678-9012-3456",
+            "isRequester": true
+          },
+          "client": {
+            "fullName": "John Doe",
+            "internalId": "97234tyi23rfiy325r3i7r"
+          },
+          "deletable": true,
+          "hasAttachments": false,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7",
+          "important": true,
+          "read": false,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i7r",
+            "name": "John Doe"
+          },
+          "subject": "Important Application",
+          "timestamp": "2017-10-02T10:51:30.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+            "name": "Savings"
+          }
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

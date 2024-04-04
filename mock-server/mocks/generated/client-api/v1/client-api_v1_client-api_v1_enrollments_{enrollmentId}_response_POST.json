@@ -1,0 +1,162 @@
+{
+  "name": "/client-api/v1/client-api/v1/enrollments/{enrollmentId}/response_POST",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/enrollments/[^/]+/response(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "challengeType": "INSTRUCTIONS",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362"
+      }
+    },
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "challengeType": "TWOFASELECTION",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "otpChannels": [
+            {
+              "channelType": "EMAIL",
+              "channelValue": "xxxxxxxyz@backbase.com"
+            },
+            {
+              "channelType": "SMS",
+              "channelValue": "xxxxxx789"
+            }
+          ]
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "challengeType": "TWOFAENTRY",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "resendDelay": 60,
+          "resendsRemaining": 1,
+          "attemptsRemaining": 2,
+          "otpSize": 6,
+          "otpChannel": {
+            "channelType": "EMAIL",
+            "channelValue": "xxxxxxxyz@backbase.com"
+          }
+        }
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "challengeType": "PASSWORD",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "redirectUrl": "https://identity-url-here/auth/realms/backbase/protocol/openid-connect/auth?redirect_uri=http://completion-url-here&client_id=self-enrollment&response_type=code&scope=openid"
+        }
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "challengeType": "INSTRUCTIONS",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362"
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "challengeType": "TWOFASELECTION",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "otpChannels": [
+            {
+              "channelType": "EMAIL",
+              "channelValue": "xxxxxxxyz@backbase.com"
+            },
+            {
+              "channelType": "SMS",
+              "channelValue": "xxxxxx789"
+            }
+          ]
+        }
+      }
+    },
+    "badRequest_2": {
+      "status": 400,
+      "data": {
+        "challengeType": "TWOFAENTRY",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "resendDelay": 60,
+          "resendsRemaining": 1,
+          "attemptsRemaining": 2,
+          "otpSize": 6,
+          "otpChannel": {
+            "channelType": "EMAIL",
+            "channelValue": "xxxxxxxyz@backbase.com"
+          }
+        }
+      }
+    },
+    "409_1": {
+      "status": 409,
+      "data": {
+        "challengeType": "TWOFASELECTION",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "otpChannels": [
+            {
+              "channelType": "EMAIL",
+              "channelValue": "xxxxxxxyz@backbase.com"
+            },
+            {
+              "channelType": "SMS",
+              "channelValue": "xxxxxx789"
+            }
+          ]
+        }
+      }
+    },
+    "409_2": {
+      "status": 409,
+      "data": {
+        "challengeType": "TWOFAENTRY",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "resendDelay": 60,
+          "resendsRemaining": 1,
+          "attemptsRemaining": 2,
+          "otpSize": 6,
+          "otpChannel": {
+            "channelType": "EMAIL",
+            "channelValue": "xxxxxxxyz@backbase.com"
+          }
+        }
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "enrollmentId": "enrollmentId",
+        "challenge": "challenge"
+      }
+    }
+  }
+}

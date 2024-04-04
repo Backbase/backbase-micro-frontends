@@ -1,0 +1,43 @@
+{
+  "name": "/api/v1/client-api/v1/news/instrument/{ticker}_GET",
+  "request": {
+    "url": "/api/v1/client-api/v1/news/instrument/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "entries": [
+          {
+            "title": "The space company reaches 100th landing",
+            "text": "Another successful launch ignites competition in the space delivery market.",
+            "link": "https://www.lipsum.com/feed/html",
+            "tickers": [
+              {
+                "name": "SPCX"
+              }
+            ]
+          },
+          {
+            "title": "A new proposal on the Martian calendar gets traction.",
+            "text": "We might not be too close to martian missions now. But when we'll step onto the red planet the timekeeping will be essential",
+            "link": "https://www.inspiringquotes.us/quotes/iWxM_ugtKSnXq",
+            "publishDate": "2022-05-20T19:25:00",
+            "tickers": [
+              {
+                "name": "SPCX"
+              }
+            ],
+            "media": {
+              "url": "https://via.placeholder.com/300/09f/fff.png",
+              "contentType": "image/png",
+              "alt": "Image of martian calendar"
+            }
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

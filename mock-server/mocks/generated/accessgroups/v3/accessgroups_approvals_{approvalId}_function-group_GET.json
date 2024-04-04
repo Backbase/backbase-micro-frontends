@@ -1,0 +1,170 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/approvals/{approvalId}/function-group_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/approvals/[^/]+/function-group(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "functionGroupId": "0955e686d31e4216b3dd5d66161d536d",
+        "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b14",
+        "serviceAgreementName": "saName",
+        "approvalId": "606d4532-f8d9-4a5f-36kl-887baf88fa24",
+        "action": "EDIT",
+        "oldState": {
+          "name": "FG1",
+          "description": "FG1 description",
+          "approvalTypeId": "approvalTypeIdA",
+          "validFromDate": "2020-01-01",
+          "validFromTime": "00:00:00",
+          "validUntilDate": "2025-01-01",
+          "validUntilTime": 86399
+        },
+        "newState": {
+          "name": "FG2",
+          "description": "FG2 description",
+          "approvalTypeId": "approvalTypeIdB",
+          "validFromDate": "2020-06-10",
+          "validFromTime": "04:32:24",
+          "validUntilDate": "2023-01-01",
+          "validUntilTime": 86031
+        },
+        "permissionMatrix": [
+          {
+            "functionId": "1012",
+            "functionCode": "manage.limits",
+            "resource": "Limits",
+            "name": "Manage Limits",
+            "action": "changed",
+            "privileges": {
+              "view": {
+                "oldValue": true,
+                "newValue": false
+              },
+              "create": {
+                "oldValue": false,
+                "newValue": true
+              },
+              "edit": {
+                "oldValue": true,
+                "newValue": false
+              },
+              "delete": {
+                "oldValue": false,
+                "newValue": false
+              },
+              "approve": {
+                "oldValue": true,
+                "newValue": true
+              },
+              "cancel": {
+                "oldValue": false,
+                "newValue": true
+              },
+              "execute": {
+                "oldValue": false,
+                "newValue": true
+              }
+            }
+          },
+          {
+            "functionId": "1009",
+            "functionCode": "assign.permissions",
+            "resource": "Service Agreement",
+            "name": "Assign Permissions",
+            "action": "added",
+            "privileges": {
+              "view": {
+                "newValue": true
+              },
+              "create": {
+                "newValue": true
+              },
+              "edit": {
+                "newValue": false
+              },
+              "delete": {
+                "newValue": true
+              },
+              "approve": {
+                "newValue": false
+              },
+              "cancel": {
+                "newValue": true
+              },
+              "execute": {
+                "newValue": true
+              }
+            }
+          },
+          {
+            "functionId": "1046",
+            "functionCode": "ach.debit",
+            "resource": "Payments",
+            "name": "ACH Debit",
+            "action": "removed",
+            "privileges": {
+              "view": {
+                "oldValue": true
+              },
+              "create": {
+                "oldValue": true
+              },
+              "edit": {
+                "oldValue": false
+              },
+              "delete": {
+                "oldValue": true
+              },
+              "approve": {
+                "oldValue": false
+              },
+              "cancel": {
+                "oldValue": true
+              },
+              "execute": {
+                "oldValue": true
+              }
+            }
+          },
+          {
+            "functionId": "1010",
+            "functionCode": "manage.users",
+            "resource": "User",
+            "name": "Manage Users",
+            "action": "unchanged",
+            "privileges": {
+              "view": {
+                "oldValue": true,
+                "newValue": true
+              },
+              "create": {
+                "oldValue": true,
+                "newValue": true
+              },
+              "edit": {
+                "oldValue": true,
+                "newValue": true
+              },
+              "delete": {
+                "oldValue": false,
+                "newValue": false
+              },
+              "approve": {
+                "oldValue": true,
+                "newValue": true
+              },
+              "cancel": {
+                "oldValue": false,
+                "newValue": false
+              }
+            }
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

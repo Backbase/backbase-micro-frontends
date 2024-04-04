@@ -1,0 +1,35 @@
+{
+  "name": "/access-control/client-api/v2/legalentities/external-data_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/legalentities/external-data(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "c7a382786d514262b75ab9531b749a2b",
+          "externalId": "Bank",
+          "name": "Bank",
+          "type": "BANK"
+        },
+        {
+          "id": "77f8c4cd11c8436ba77f8ca34e6a173d",
+          "externalId": "Backbase",
+          "name": "Backbase",
+          "type": "CUSTOMER"
+        },
+        {
+          "externalId": "Backbase Amsterdam",
+          "name": "Backbase Amsterdam"
+        },
+        {
+          "externalId": "Backbase Cardiff",
+          "name": "Backbase Cardiff"
+        }
+      ],
+      "default": true
+    }
+  }
+}

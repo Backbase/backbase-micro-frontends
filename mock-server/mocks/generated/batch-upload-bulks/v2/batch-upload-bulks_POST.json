@@ -1,0 +1,107 @@
+{
+  "name": "/client-api/v2/batch-upload-bulks_POST",
+  "request": {
+    "url": "/client-api/v2/batch-upload-bulks(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {
+        "batchUploadBulkId": "4caad77d-8f22-4d80-9b0a-3d514571b3f6",
+        "batchUploadIds": [
+          "db4f46ef-647c-412e-a367-f4289bbc799e",
+          "b9f15455-9612-43f0-9fbb-24e8b008026a",
+          "84f68cc0-dc75-4c91-93cf-773d5b5b5675",
+          "db258a5c-5780-4099-a2af-fc2c500f7e0f"
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "File extension ({{actual}}) is not one of the supported ones {{expected}}",
+            "key": "UploadFileExtensionInvalid",
+            "context": {
+              "actual": "xls",
+              "expected": "{csv}"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_2": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "File size ({{actual}}) exceeds the configured maximum ({{expected}})",
+            "key": "UploadMaxFileSize",
+            "context": {
+              "actual": "115343360",
+              "expected": "104857600"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:3ea92d30-f460-4dde-b40a-e83a2f266a3a"
+          }
+        ],
+        "data": {
+          "confirmationType": "batch-upload-bulk",
+          "batchUploadBulkId": "6a9aff66-19b8-45e8-b8e3-9afc2d0e571b",
+          "fileType": "NACHA_CREDIT",
+          "file1": "3,10,827.22,USD",
+          "file2": "2,4,56.12,USD",
+          "file3": "4,14,5656.62,USD"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/users/permissions/summary_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/users/permissions/summary(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "resource": "Contacts",
+          "function": "Contacts",
+          "permissions": {
+            "view": true,
+            "edit": true
+          }
+        },
+        {
+          "resource": "Payments",
+          "function": "US Domestic Wire",
+          "permissions": {
+            "create": true,
+            "view": true,
+            "approve": true
+          }
+        },
+        {
+          "resource": "Payments",
+          "function": "US Foreign Wire",
+          "permissions": {
+            "create": true,
+            "view": true,
+            "approve": true
+          }
+        },
+        {
+          "resource": "Payments",
+          "function": "SEPA CT",
+          "permissions": {
+            "create": true,
+            "view": true,
+            "approve": true
+          }
+        },
+        {
+          "resource": "Entitlements",
+          "function": "Manage Data Groups",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Entitlements",
+          "function": "Manage Function Groups",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Limits",
+          "function": "Manage Limits",
+          "permissions": {
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Actions",
+          "function": "Manage Action Recipes",
+          "permissions": {
+            "execute": true,
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "User",
+          "function": "Manage Users",
+          "permissions": {
+            "execute": true,
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Service Agreement",
+          "function": "Assign Users",
+          "permissions": {
+            "execute": true,
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Service Agreement",
+          "function": "Assign Permissions",
+          "permissions": {
+            "execute": true,
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true,
+            "approve": true
+          }
+        },
+        {
+          "resource": "Service Agreement",
+          "function": "Manage Service Agreements",
+          "permissions": {
+            "execute": true,
+            "view": true,
+            "edit": true,
+            "create": true,
+            "delete": true
+          }
+        },
+        {
+          "resource": "Legal Entity",
+          "function": "Manage Legal Entities",
+          "permissions": {
+            "view": true
+          }
+        },
+        {
+          "resource": "Approvals",
+          "function": "Assign Approval Policies",
+          "permissions": {
+            "create": true,
+            "delete": true,
+            "edit": true,
+            "view": true
+          }
+        }
+      ],
+      "default": true
+    }
+  }
+}

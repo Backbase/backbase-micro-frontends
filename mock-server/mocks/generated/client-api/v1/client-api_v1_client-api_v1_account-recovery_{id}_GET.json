@@ -1,0 +1,72 @@
+{
+  "name": "/client-api/v1/client-api/v1/account-recovery/{id}_GET",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/account-recovery/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "challengeType": "IDENTIFICATION",
+        "challenge": "59a46d16-351b-497c-86ca-0f02a3b8dfbb",
+        "id": "f12219a9-2315-4215-9049-bf89c875f17e",
+        "_links": {
+          "response": {
+            "href": "http://localhost:9191/client-api/v1/account-recovery/f12219a9-2315-4215-9049-bf89c875f17e/response"
+          }
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "challengeType": "TWOFASELECTION",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "id": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "otpChannels": [
+            {
+              "channelType": "EMAIL",
+              "channelValue": "xxxxxxxyz@backbase.com"
+            },
+            {
+              "channelType": "SMS",
+              "channelValue": "xxxxxx789"
+            }
+          ]
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "challengeType": "TWOFAENTRY",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "id": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "resendDelay": 60,
+          "resendsRemaining": 1,
+          "attemptsRemaining": 2,
+          "otpSize": 6,
+          "otpChannel": {
+            "channelType": "EMAIL",
+            "channelValue": "xxxxxxxyz@backbase.com"
+          }
+        }
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "challengeType": "PASSWORD",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "id": "eb101331-f6cd-4d44-81c8-7b325619a362",
+        "challengePayload": {
+          "redirectUrl": "https://identity-url-here/auth/realms/backbase/protocol/openid-connect/auth?redirect_uri=http://completion-url-here&client_id=account-recovery&response_type=code&scope=openid"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "/access-control/client-api/v3/wizard/service-agreements/{serviceAgreementId}/setup_POST",
+  "request": {
+    "url": "/access-control/client-api/v3/wizard/service-agreements/[^/]+/setup(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalStatus": "PENDING"
+      },
+      "default": true
+    }
+  }
+}

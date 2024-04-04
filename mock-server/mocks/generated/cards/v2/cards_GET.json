@@ -1,0 +1,493 @@
+{
+  "name": "/client-api/v2/cards_GET",
+  "request": {
+    "url": "/client-api/v2/cards(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "summary": "Sara examples are used to demo features and are always the first example",
+        "value": [
+          {
+            "id": "sara-card-1",
+            "brand": "mastercard",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Gold Card",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Sara Williams"
+            },
+            "expiryDate": {
+              "year": "2022",
+              "month": "12"
+            },
+            "currency": "USD",
+            "maskedNumber": "5235"
+          },
+          {
+            "id": "sara-card-2",
+            "brand": "visa",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Green Card",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Sara Williams"
+            },
+            "expiryDate": {
+              "year": "2022",
+              "month": "01"
+            },
+            "currency": "USD",
+            "maskedNumber": "5236"
+          },
+          {
+            "id": "sara-card-3",
+            "brand": "mastercard",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Gold Card",
+            "status": "Inactive",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Sara Williams"
+            },
+            "expiryDate": {
+              "year": "2022",
+              "month": "12"
+            },
+            "currency": "USD",
+            "maskedNumber": "5237",
+            "delivery": {
+              "transitSteps": [
+                {
+                  "name": "Ordered",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2020-05-04T12:52:20.906+00:00"
+                },
+                {
+                  "name": "Processed",
+                  "status": "PENDING"
+                },
+                {
+                  "name": "In Transit",
+                  "status": "PENDING"
+                },
+                {
+                  "name": "Delivered",
+                  "status": "PENDING"
+                }
+              ]
+            }
+          },
+          {
+            "id": "sara-card-4",
+            "brand": "mastercard",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Black Card",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Sara Williams"
+            },
+            "expiryDate": {
+              "year": "2022",
+              "month": "12"
+            },
+            "currency": "USD",
+            "maskedNumber": "6235"
+          },
+          {
+            "id": "sara-card-5",
+            "brand": "visa",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Blue Card",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Sara Williams"
+            },
+            "expiryDate": {
+              "year": "2022",
+              "month": "12"
+            },
+            "currency": "USD",
+            "maskedNumber": "6236"
+          }
+        ]
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "summary": "Elon examples are used for scenarios with a lot of high tier cards",
+        "value": [
+          {
+            "id": "elon-card-1",
+            "brand": "mastercard",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "World Elite",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2050",
+              "month": "12"
+            },
+            "currency": "EUR",
+            "maskedNumber": "5235",
+            "delivery": {
+              "transitSteps": [
+                {
+                  "name": "Ordered",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-19T12:52:20.906Z"
+                },
+                {
+                  "name": "Processed",
+                  "status": "PENDING"
+                },
+                {
+                  "name": "In Transit",
+                  "status": "PENDING"
+                },
+                {
+                  "name": "Delivered",
+                  "status": "PENDING",
+                  "stepDateTime": "2019-06-20T14:21:25.001Z"
+                }
+              ]
+            }
+          },
+          {
+            "id": "elon-card-2",
+            "brand": "visa",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Infinite Privilege",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2045",
+              "month": "01"
+            },
+            "currency": "EUR",
+            "maskedNumber": "6782"
+          },
+          {
+            "id": "elon-card-3",
+            "brand": "american_express",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Reserve",
+            "status": "Cancelled",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "UnderReplacement",
+              "reason": "Lost",
+              "replacedById": "4"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2048",
+              "month": "06"
+            },
+            "currency": "EUR",
+            "maskedNumber": "1262"
+          },
+          {
+            "id": "elon-card-4",
+            "brand": "american_express",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Reserve",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2048",
+              "month": "07"
+            },
+            "currency": "EUR",
+            "maskedNumber": "1289"
+          },
+          {
+            "id": "elon-card-5",
+            "brand": "mastercard",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Platinum",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2050",
+              "month": "11"
+            },
+            "currency": "EUR",
+            "maskedNumber": "4627",
+            "delivery": {
+              "transitSteps": [
+                {
+                  "name": "Ordered",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-19T12:52:20.906Z"
+                },
+                {
+                  "name": "Processed",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-20T14:32:20.906Z"
+                },
+                {
+                  "name": "In Transit",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-20T15:12:20.906Z"
+                },
+                {
+                  "name": "Delivered",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-21T11:28:25.001Z"
+                }
+              ]
+            }
+          },
+          {
+            "id": "elon-card-6",
+            "brand": "american_express",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Reserve",
+            "status": "Active",
+            "lockStatus": "LOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Elon"
+            },
+            "expiryDate": {
+              "year": "2047",
+              "month": "03"
+            },
+            "currency": "EUR",
+            "maskedNumber": "8291"
+          }
+        ]
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "summary": "John examples are used for average scenarios and most edge cases",
+        "value": [
+          {
+            "id": "john-card-1",
+            "brand": "visa",
+            "type": "Credit",
+            "subType": "ATM",
+            "name": "Gold",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "John Doe"
+            },
+            "expiryDate": {
+              "year": "2030",
+              "month": "06"
+            },
+            "currency": "EUR",
+            "maskedNumber": "5827",
+            "delivery": {
+              "transitSteps": [
+                {
+                  "name": "Ordered",
+                  "status": "SUCCESS",
+                  "stepDateTime": "2019-06-19T12:52:20.906Z"
+                },
+                {
+                  "name": "Processed",
+                  "status": "SUCCESS"
+                },
+                {
+                  "name": "In Transit",
+                  "status": "SUCCESS"
+                },
+                {
+                  "name": "Delivered",
+                  "status": "SUCCESS"
+                }
+              ]
+            },
+            "limits": [
+              {
+                "id": "john-limit-1",
+                "channel": "ATM",
+                "frequency": "DAILY",
+                "amount": 3000,
+                "maxAmount": 9000,
+                "minAmount": 0
+              },
+              {
+                "id": "john-limit-2",
+                "channel": "ONLINE",
+                "frequency": "DAILY",
+                "amount": 20000,
+                "maxAmount": 9000,
+                "minAmount": 0
+              }
+            ]
+          },
+          {
+            "id": "john-card-2",
+            "brand": "mastercard",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Gold",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "John Doe"
+            },
+            "expiryDate": {
+              "year": "2031",
+              "month": "02"
+            },
+            "currency": "EUR",
+            "maskedNumber": "8299"
+          }
+        ]
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "summary": "Kim examples are used for low volumes of data and more obscure edge cases",
+        "value": [
+          {
+            "id": "kim-card-1",
+            "brand": "mastercard",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Copper",
+            "status": "Active",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Kim Sook"
+            },
+            "expiryDate": {
+              "year": "2027",
+              "month": "03"
+            },
+            "currency": "EUR",
+            "maskedNumber": "9292"
+          },
+          {
+            "id": "kim-card-2",
+            "brand": "visa",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Iron",
+            "status": "Inactive",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Kim Sook"
+            },
+            "expiryDate": {
+              "year": "2010",
+              "month": "04"
+            },
+            "currency": "EUR",
+            "maskedNumber": "9494"
+          },
+          {
+            "id": "kim-card-3",
+            "brand": "visa",
+            "type": "Debit",
+            "subType": "ATM",
+            "name": "Iron",
+            "status": "Expired",
+            "lockStatus": "UNLOCKED",
+            "replacement": {
+              "status": "NotUnderReplacement"
+            },
+            "holder": {
+              "name": "Kim Sook"
+            },
+            "expiryDate": {
+              "year": "2010",
+              "month": "04"
+            },
+            "currency": "EUR",
+            "maskedNumber": "9494"
+          }
+        ]
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "summary": "Leo examples are used for empty state scenario",
+        "value": []
+      }
+    }
+  }
+}

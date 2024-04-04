@@ -1,0 +1,116 @@
+{
+  "name": "/positive-pay-check/client-api/v1/resolved-exceptions/filter",
+  "request": {
+    "url": "/positive-pay-check/client-api/v1/exceptions/filter$",
+    "method": "POST",
+    "body": {
+      "resolved": true
+    }
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "exceptions": [
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f32",
+            "checkNumber": "111",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "issueDate": "2020-11-01",
+            "payeeName": "Robin Green",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "100150150.54"
+            },
+            "actionType": "PAY",
+            "resolutionDate": "2020-12-01T11:00:00Z"
+          },
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f44",
+            "checkNumber": "112",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "issueDate": "2021-01-05",
+            "payeeName": "Robert Plant",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "120.00"
+            },
+            "actionType": "PAY",
+            "resolvedBy": "Jimmy Page",
+            "rejectionReason": "Invalid amount",
+            "resolutionDate": "2020-12-01T11:00:00Z"
+          },
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f44",
+            "checkNumber": "112",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "issueDate": "2021-01-05",
+            "payeeName": "John Bonham",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "120.00"
+            },
+            "actionType": "REJECT",
+            "resolvedBy": "Robert Plant",
+            "rejectionReason": "Invalid amount",
+            "resolutionDate": "2020-12-01T11:00:00Z"
+          },
+          {
+            "id": "849d66ae-c942-2ba7-8739-c5a38a596f44",
+            "checkNumber": "112",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "issueDate": "2021-01-05",
+            "payeeName": "Robert Plant",
+            "amountDetails": {
+              "currencyCode": "USD",
+              "amount": "120.00"
+            },
+            "actionType": "PAY",
+            "resolvedBy": "Jimmy Page",
+            "resolutionDate": "2020-12-01T11:00:00Z"
+          }
+        ]
+      }
+    }
+  }
+}

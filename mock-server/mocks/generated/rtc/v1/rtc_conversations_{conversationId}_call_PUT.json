@@ -1,0 +1,47 @@
+{
+  "name": "/client-api/v1/rtc/conversations/{conversationId}/call_PUT",
+  "request": {
+    "url": "/client-api/v1/rtc/conversations/[^/]+/call(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "conversationToken": "",
+        "callTimeout": 120
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}/reversals_POST",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+/reversals(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict",
+        "errors": [
+          {
+            "message": "The current state of the batch order does not allow for a reversal.",
+            "key": "BatchOrderCannotBeReversed"
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "c1263fd6-8bd3-4a0b-be02-5db5cb1d6d06",
+        "status": "ACKNOWLEDGED"
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 201,
+      "data": {
+        "id": "c1263fd6-8bd3-4a0b-be02-5db5cb1d6d06",
+        "status": "ENTERED"
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:3ea92d30-f460-4dde-b40a-e83a2f266a3a"
+          }
+        ],
+        "data": {
+          "confirmationType": "initiate-reversal-batch",
+          "batchOrderId": "9E2F9AC5-DD09-40C0-805E-147B0C565901",
+          "totalAmount": "12.95",
+          "totalTransactionsCount": "10",
+          "currency": "EUR",
+          "fromAccount": "NL06ABNA9691012820"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "forbidden_1": {
+      "status": 403,
+      "data": {
+        "message": "Limits has been breached, check the report for more details",
+        "checkTime": "2022-01-31T12:12:12Z",
+        "breachReport": [
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Service Agreement",
+                "description": "Kuhic, Gislason and Kemmer. SERVICE AGREEMENT"
+              }
+            ],
+            "shadow": false,
+            "currency": "USD",
+            "user-BBID": "oleksii",
+            "breachInfo": [
+              {
+                "breachType": "THRESHOLD",
+                "breachedLimitType": "PERIODIC",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2022-01-31T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "250.0",
+                "currentThreshold": "499.9"
+              },
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "monthly",
+                  "startTime": "2022-01-01T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "9950.0",
+                "currentThreshold": "10000.0"
+              }
+            ]
+          },
+          {
+            "user-BBID": "oleksii",
+            "shadow": false,
+            "currency": "USD",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2022-01-31T00:00:00Z",
+                  "endTime": "2022-01-31T23:59:59Z"
+                },
+                "currentConsumption": "500.0",
+                "currentThreshold": "1000.0"
+              }
+            ]
+          },
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Legal Entity",
+                "description": "Kuhic, Gislason and Kemmer"
+              }
+            ],
+            "shadow": false,
+            "currency": "USD",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "quarterly",
+                  "startTime": "2022-01-01T00:00:00Z",
+                  "endTime": "2022-03-31T23:59:59Z"
+                },
+                "currentConsumption": "99950.0",
+                "currentThreshold": "100000.0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

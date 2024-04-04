@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/data-groups/{id}_PUT",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/data-groups/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {},
+      "default": true
+    }
+  }
+}

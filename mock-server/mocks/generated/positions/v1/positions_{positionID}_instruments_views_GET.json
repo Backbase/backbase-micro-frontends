@@ -1,0 +1,117 @@
+{
+  "name": "/client-api/v1/positions/{positionID}/instruments/views_GET",
+  "request": {
+    "url": "/client-api/v1/positions/[^/]+/instruments/views(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "f6739265-aed1-47b6-8423-63518ce9caa5",
+        "name": "Apple",
+        "code": "US0378331005",
+        "absolutePerformance": 1.46,
+        "relativePerformance": 1.2,
+        "price": 123.24,
+        "currency": "USD",
+        "pricePerformance": 7.81,
+        "pricePerformanceAbs": {
+          "amount": 1.48,
+          "currency": "USD"
+        },
+        "assetClassName": "Equity",
+        "subAssetClassName": "Tech Sector",
+        "ticker": "AAPL",
+        "exchange": "NASDAQ",
+        "countryCode": "USA",
+        "about": {
+          "about": "about",
+          "address": "address",
+          "phoneNumber": "phoneNumber",
+          "link": "link"
+        },
+        "keyStatistics": {
+          "country": "United States of America",
+          "purchasePrice": 118.34,
+          "exchangeRate": 1.21,
+          "unrealizedPLPct": 4.14,
+          "unrealizedPL": 4.9,
+          "changeInNetAssetValue": 7.81,
+          "fundStatus": "open-ended fund",
+          "totalAssets": 134.3,
+          "trailingTwelveMonthsYield": 1.4,
+          "oneYearReturn": 68.97,
+          "effectiveDuration": 4.51,
+          "portfolioAssetsAllocation": "Equity",
+          "quantity": 187,
+          "turnover": 30,
+          "creditRating": "AAA",
+          "priceToEarningsRatio": 37.59,
+          "estPriceToEarningsRatio": 31.06,
+          "priceToEarningsToGrowthRatio": 3.09,
+          "sharesOutstanding": 17.002,
+          "priceToBookRatio": 32.07,
+          "earningsPerShare": 1.39,
+          "dividendYield": 0.66,
+          "lastDividendReported": 0.2,
+          "nextEarningsAnnouncement": "2021-01-26",
+          "coupon": 5.63,
+          "accruedInterestOnBond": 5.52,
+          "maturity": "2028-01-04",
+          "yieldToMaturity": 0,
+          "duration": 7.63,
+          "couponFrequency": "annually",
+          "additionalKeyStatistics": {
+            "purchasePrice": "118.34",
+            "totalAssets": "50",
+            "coupon": "false"
+          }
+        },
+        "additions": {
+          "someKey": "someValue"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

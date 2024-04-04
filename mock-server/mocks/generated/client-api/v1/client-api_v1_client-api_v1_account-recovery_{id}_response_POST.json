@@ -1,0 +1,35 @@
+{
+  "name": "/client-api/v1/client-api/v1/account-recovery/{id}/response_POST",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/account-recovery/[^/]+/response(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "challenge": "challenge",
+        "id": "id"
+      }
+    },
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "challenge": "challenge",
+        "id": "id"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "challenge": "challenge",
+        "id": "id"
+      }
+    }
+  }
+}

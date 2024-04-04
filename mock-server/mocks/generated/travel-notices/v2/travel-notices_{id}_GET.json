@@ -1,0 +1,67 @@
+{
+  "name": "/client-api/v2/travel-notices/{id}_GET",
+  "request": {
+    "url": "/client-api/v2/travel-notices/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "value": {
+          "id": "sara-travel-notice-1",
+          "cardIds": ["sara-card-1"],
+          "departureDate": "2020-05-06",
+          "arrivalDate": "2020-05-10",
+          "destinations": [
+            {
+              "country": "USA",
+              "region": "US-TX"
+            }
+          ]
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "id": "elon-travel-notice-1",
+        "cardIds": ["elon-card-1", "elon-card-6"],
+        "departureDate": "2020-05-06",
+        "arrivalDate": "2020-05-10",
+        "destinations": [
+          {
+            "country": "USA",
+            "region": "US-TX"
+          },
+          {
+            "country": "MEX"
+          }
+        ],
+        "contact": {
+          "phoneNumber": "+1 646 432 3000"
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "value": {
+          "id": "john-travel-notice-1",
+          "cardIds": ["john-card-1", "john-card-2"],
+          "departureDate": "2020-01-09",
+          "arrivalDate": "2020-01-18",
+          "destinations": [
+            {
+              "country": "NL"
+            }
+          ],
+          "contact": {
+            "phoneNumber": "+1 646 432 3000"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "name": "/client-api/v1/corporate-actions_GET",
+  "request": {
+    "url": "/client-api/v1/corporate-actions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "x-total-count": 25
+      },
+      "data": {
+        "totalCount": 25,
+        "corporateActions": [
+          {
+            "id": "55bbeace-274e-22ec-5487-0242ac130003",
+            "corporateActionId": "55bbeace-274e-22ec-5487-0242ac130003",
+            "corporateActionName": "Dividends",
+            "instrumentId": "1426740245562510600",
+            "instrumentName": "Amazon",
+            "portfolioId": "5000079995645403000",
+            "portfolioName": "Portfolio 1",
+            "electionQuantity": 13,
+            "electionValue": {
+              "amount": 219,
+              "currency": "USD"
+            },
+            "amountPerShare": {
+              "amount": 37,
+              "currency": "USD"
+            },
+            "responseDeadline": "Thu Dec 26 2019",
+            "responseDate": "Fri Jan 14 2022",
+            "cardType": "PENDING",
+            "actionRequired": true,
+            "typeKey": "dividend-payout",
+            "expectedPayment": "2022-01-10"
+          },
+          {
+            "id": "8232169347348074000",
+            "corporateActionId": "1120417518347769000",
+            "corporateActionName": "Apple Dividend",
+            "instrumentId": "3805071554525320700",
+            "instrumentName": "Sony",
+            "portfolioId": "2101303071427897000",
+            "portfolioName": "Portfolio 1",
+            "electionQuantity": 92,
+            "electionValue": {
+              "amount": 219,
+              "currency": "USD"
+            },
+            "amountPerShare": {
+              "amount": 21,
+              "currency": "USD"
+            },
+            "responseDeadline": "Sun Jul 11 2021",
+            "responseDate": "Sat Oct 09 2021",
+            "cardType": "PENDING",
+            "actionRequired": true,
+            "typeKey": "dividend-payout",
+            "expectedPayment": "2022-01-10"
+          },
+          {
+            "id": "5217317261223639000",
+            "corporateActionId": "4953103427010957000",
+            "corporateActionName": "Dividends",
+            "instrumentId": "5056536835571587000",
+            "instrumentName": "Yahoo",
+            "portfolioId": "2348190912732398600",
+            "portfolioName": "Portfolio 1",
+            "electionQuantity": 91,
+            "electionValue": {
+              "amount": 291,
+              "currency": "USD"
+            },
+            "amountPerShare": {
+              "amount": 26,
+              "currency": "USD"
+            },
+            "responseDeadline": "Tue Mar 10 2020",
+            "responseDate": "Fri Nov 11 2022",
+            "cardType": "PENDING",
+            "actionRequired": true,
+            "typeKey": "dividend-payout",
+            "expectedPayment": "2022-01-10"
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

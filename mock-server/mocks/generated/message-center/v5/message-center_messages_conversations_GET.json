@@ -1,0 +1,93 @@
+{
+  "name": "/client-api/v5/message-center/messages/conversations_GET",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/conversations(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "deletable": true,
+          "hasAttachments": true,
+          "hasDraft": true,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7",
+          "important": false,
+          "read": false,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i7r",
+            "name": "John Doe"
+          },
+          "subject": "Application Rejected",
+          "timestamp": "2017-10-02T10:51:30.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+            "name": "Savings"
+          }
+        },
+        {
+          "deletable": true,
+          "hasAttachments": false,
+          "hasDraft": false,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395c9",
+          "important": false,
+          "read": true,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i8o",
+            "name": "John Snow"
+          },
+          "subject": "Loan Rejected",
+          "timestamp": "2019-01-02T10:51:30.000+0000",
+          "topic": {
+            "deleted": true,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064b7",
+            "name": "Loan rejected"
+          }
+        },
+        {
+          "deletable": true,
+          "hasAttachments": true,
+          "hasDraft": false,
+          "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395b7",
+          "important": true,
+          "read": false,
+          "read-only": false,
+          "sender": {
+            "deleted": false,
+            "id": "97234tyi23rfiy325r3i7r",
+            "name": "John Doe"
+          },
+          "subject": "Application Rejected",
+          "timestamp": "2017-10-02T10:51:30.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+            "name": "Savings"
+          }
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

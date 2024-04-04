@@ -1,0 +1,44 @@
+{
+  "name": "/client-api/v1/rtc/conversations/{conversationId}/call_DELETE",
+  "request": {
+    "url": "/client-api/v1/rtc/conversations/[^/]+/call(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

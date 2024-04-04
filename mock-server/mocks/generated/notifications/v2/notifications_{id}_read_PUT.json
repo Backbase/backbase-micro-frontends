@@ -1,0 +1,88 @@
+{
+  "name": "/client-api/v2/notifications/{id}/read_PUT",
+  "request": {
+    "url": "/client-api/v2/notifications/[^/]+/read(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "422": {
+      "status": 422,
+      "data": {
+        "message": "Validation error(s) occurred during creation of the notification",
+        "errorFields": [
+          {
+            "fieldName": "message",
+            "message": "Message must contain '{{link}}' placeholder to replace presented link. Remove link or insert placeholder into your message text"
+          },
+          {
+            "fieldName": "validFrom",
+            "message": "The notification should be valid from some time in future"
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": {
+        "isRead": true,
+        "notificationId": "1dad5515-ec74-471b-ac93-1d5ef7133ea3"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

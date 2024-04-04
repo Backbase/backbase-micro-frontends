@@ -1,0 +1,19 @@
+{
+  "name": "/client-api/v2/account/statements/categories_GET",
+  "request": {
+    "url": "/client-api/v2/account/statements/categories(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "categories": ["Account", "Credit Card", "Mortgage", "Tax Form", "LOC", "EELOC"],
+        "additions": {
+          "categoryId": "1"
+        }
+      },
+      "default": true
+    }
+  }
+}

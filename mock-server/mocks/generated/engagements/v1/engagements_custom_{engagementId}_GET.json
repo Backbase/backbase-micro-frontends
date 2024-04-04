@@ -1,0 +1,123 @@
+{
+  "name": "/engagement/client-api/v1/engagements/custom/{engagementId}_GET",
+  "request": {
+    "url": "/engagement/client-api/v1/engagements/custom/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "name": "Engagement sample",
+        "uuid": "0c8b3e8b-fbff-4a4c-bb7b-9ff47aba1154",
+        "version": 1,
+        "locale": "en",
+        "startDate": "2022-03-09T23:00:00Z",
+        "endDate": "2022-03-13T23:00:00Z",
+        "audience": null,
+        "channels": [
+          {
+            "type": "banner",
+            "enabled": true,
+            "uuid": "1ae944c1-6053-461d-8270-c9f9360a3dd3",
+            "targetUrl": "https://google.com",
+            "targetUrlDisplayMode": "blank",
+            "priority": "high",
+            "creatives": [
+              {
+                "uuid": "aa5f32a0-28e6-45b1-be3a-567cabaef2a0",
+                "dimensions": "328x430",
+                "filename": "traveling-with-cards-red.html",
+                "draftContentId": "/engagement/c57b9aee-a71c-4cb8-91a0-a036037d70ea/banner/32610c85-4a3e-4f97-8745-34ed78ff3093/dimensions/328x430/0/traveling-with-cards-red.html",
+                "draftRepositoryId": "engagement-template-custom"
+              },
+              {
+                "uuid": "61689aef-a82c-45ec-b932-1ef0a9d81f62",
+                "dimensions": "328x430",
+                "filename": "traveling-with-cards-blue.html",
+                "draftContentId": "/engagement/c57b9aee-a71c-4cb8-91a0-a036037d70ea/banner/6a05d039-e7fd-4bb3-83fc-4f883cb549e3/dimensions/328x430/0/traveling-with-cards-blue.html",
+                "draftRepositoryId": "engagement-template-custom"
+              }
+            ],
+            "campaignSlots": [
+              {
+                "portalName": "retail-app",
+                "pageName": "page-index-ezc2na",
+                "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+              }
+            ],
+            "startDate": "2022-03-03T00:01:00Z",
+            "endDate": "2022-03-03T23:45:00Z"
+          }
+        ],
+        "status": "draft"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

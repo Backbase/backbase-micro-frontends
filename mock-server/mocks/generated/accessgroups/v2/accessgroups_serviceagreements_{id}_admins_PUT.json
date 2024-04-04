@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/serviceagreements/{id}/admins_PUT",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/serviceagreements/[^/]+/admins(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {},
+      "default": true
+    }
+  }
+}

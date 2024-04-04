@@ -1,0 +1,121 @@
+{
+  "name": "/engagement/client-api/v1/notification-preferences_POST",
+  "request": {
+    "url": "/engagement/client-api/v1/notification-preferences(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "b1ac32e8-a8e6-11eb-bcbc-0242ac130002",
+        "generalNotificationId": "account-balance-low",
+        "active": true,
+        "channels": [
+          {
+            "channel": "in-app-notification",
+            "enabled": true,
+            "userCanChange": true
+          },
+          {
+            "channel": "push",
+            "enabled": true,
+            "userCanChange": true
+          }
+        ],
+        "userConditions": {
+          "eType": "arrangement",
+          "eRef": "b1ac32e8-a8e6-11eb-bcbc-0242ac130002",
+          "conditions": {
+            "amount": 5000
+          }
+        },
+        "createdOn": "2020-01-17T12:52:34.000+0000",
+        "lastUpdatedAt": "2020-01-17T12:52:34.000+0000"
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 201,
+      "data": {
+        "id": "9737d520-c4bf-453f-a28f-9ff4eb0e7029",
+        "generalNotificationId": "payment-to-approve",
+        "active": true,
+        "channels": [
+          {
+            "channel": "in-app-notification",
+            "enabled": true,
+            "userCanChange": false
+          },
+          {
+            "channel": "push",
+            "enabled": true,
+            "userCanChange": false
+          }
+        ],
+        "userConditions": {
+          "eType": "none",
+          "eRef": null,
+          "conditions": null
+        },
+        "createdOn": "2022-01-17T12:52:34.000+0000",
+        "lastUpdatedAt": "2022-01-17T12:52:34.000+0000"
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "/client-api/v1/trading/instruments/{instrumentId}/price-alerts_POST",
+  "request": {
+    "url": "/client-api/v1/trading/instruments/[^/]+/price-alerts(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "36ba1654-274e-11ec-9621-0242ac130002",
+        "targetPrice": {
+          "amount": 160,
+          "currency": "USD"
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

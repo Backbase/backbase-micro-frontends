@@ -1,0 +1,233 @@
+{
+  "name": "ACH resolved exceptions",
+  "request": {
+    "url": "/positive-pay-ach/client-api/v1/exceptions(\\?.*)?$",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "status": "resolved"
+    }
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "exceptions": [
+          {
+            "id": "53e87839-d0b5-42fc-a98f-95ae8721e6da",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Credit",
+            "standardEntryClass": "CIE",
+            "originatorId": "9714123273",
+            "originatorName": "Elyse Ferry",
+            "amount": {
+              "amount": "101308478.60000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:08",
+            "userFullName": null,
+            "isSystemDefaultDecision": true,
+            "rejectionReason": "Already paid"
+          },
+          {
+            "id": "54fce260-9066-496c-8181-9500e4ed96e9",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "ABC",
+            "originatorId": "7537880883",
+            "originatorName": "Shaunna Hegmann",
+            "amount": {
+              "amount": "446219.00000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:08",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Blocked Originator"
+          },
+          {
+            "id": "247ce783-4fdb-495a-9cec-38c4f30fd935",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "CCD",
+            "originatorId": "2955008672",
+            "originatorName": "Kennith Schinner",
+            "amount": {
+              "amount": "38622.00000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:07",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Already paid"
+          },
+          {
+            "id": "257bbe0b-e980-4513-9602-70fad539980d",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Credit",
+            "standardEntryClass": "PPD",
+            "originatorId": "2898251849",
+            "originatorName": "Rogelio Flatley",
+            "amount": {
+              "amount": "414129.50000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:07",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Already paid"
+          },
+          {
+            "id": "47e3f663-45a5-440e-9764-82a9b1f6db51",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Credit",
+            "standardEntryClass": "PPD",
+            "originatorId": "9561640111",
+            "originatorName": "Mozell Metz",
+            "amount": {
+              "amount": "711039.60000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:07",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Not authorized Originator"
+          },
+          {
+            "id": "4e58f253-e8ba-498e-9c53-24d5b9652bf2",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "PPD",
+            "originatorId": "2968910275",
+            "originatorName": "Efren Mertz",
+            "amount": {
+              "amount": "654989.20000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:07",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Not authorized SEC"
+          },
+          {
+            "id": "513d7463-dc86-4908-bdba-0e5886ee2884",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "CIE",
+            "originatorId": "2624986185",
+            "originatorName": "Solange Bins",
+            "amount": {
+              "amount": "669822.50000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:07",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Already paid"
+          },
+          {
+            "id": "1156733b-f39b-4f4c-a670-ad72fd1cd254",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "XYZ",
+            "originatorId": "3618675633",
+            "originatorName": "Harland Leuschke",
+            "amount": {
+              "amount": "496064.40000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "REJECT",
+            "decisionDate": "2022-10-20T00:26:06",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false,
+            "rejectionReason": "Not authorized Originator"
+          },
+          {
+            "id": "14854965-5177-4d5e-a2c8-c065ad72e08a",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+            "paymentType": "ACH Debit",
+            "standardEntryClass": "CIE",
+            "originatorId": "1289396612",
+            "originatorName": "Letitia Emmerich",
+            "amount": {
+              "amount": "105738.50000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "PAY",
+            "decisionDate": "2022-11-20T00:26:06",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false
+          },
+          {
+            "id": "2477de0b-1dfd-4d37-9159-b58d08f17cbd",
+            "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+            "paymentType": "ACH Credit",
+            "standardEntryClass": "ABC",
+            "originatorId": "9484904856",
+            "originatorName": "Mark Funk",
+            "amount": {
+              "amount": "560592.00000",
+              "currencyCode": "USD"
+            },
+            "decisionStatus": "PAY",
+            "decisionDate": "2022-12-20T00:26:06",
+            "userFullName": "U0001080 U0001080",
+            "isSystemDefaultDecision": false
+          }
+        ]
+      },
+      "headers": {
+        "x-total-count": 100
+      }
+    }
+  }
+}

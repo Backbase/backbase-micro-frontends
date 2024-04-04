@@ -1,0 +1,98 @@
+{
+  "name": "/client-api/v2/bill-pay/accounts_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/accounts(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "accounts": [
+          {
+            "id": "1",
+            "accountNumber": "000000001",
+            "accountNickName": "Joint Account",
+            "accountType": "CHECKING_ACCOUNT",
+            "routingNumber": "000000011",
+            "accountBalance": {
+              "amount": "1000.01",
+              "currencyCode": "USD"
+            }
+          },
+          {
+            "id": "2",
+            "accountNumber": "000000002",
+            "accountType": "SAVINGS_ACCOUNT",
+            "routingNumber": "000000022"
+          },
+          {
+            "accountNumber": "000000003",
+            "accountType": "CHECKING_ACCOUNT",
+            "routingNumber": "000000033",
+            "accountBalance": {
+              "amount": "1000.03",
+              "currencyCode": "USD"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

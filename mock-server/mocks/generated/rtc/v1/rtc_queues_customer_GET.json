@@ -1,0 +1,65 @@
+{
+  "name": "/client-api/v1/rtc/queues/customer_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/queues/customer(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "8d096ab7-b895-4a11-b839-049e976b80c1",
+          "publicName": "Queue 1"
+        },
+        {
+          "id": "fccacd7c-ddf3-42e3-945d-4f5d788ad277",
+          "publicName": "Queue 2"
+        },
+        {
+          "id": "abcbb155-586a-4dfb-83a4-21047ac1d514",
+          "publicName": "Queue 3"
+        },
+        {
+          "id": "f85d30bc-477b-4430-93db-50e7a4a7d1ea",
+          "publicName": "Queue 4"
+        },
+        {
+          "id": "17a508b5-5d70-434b-9b37-52cb31fb7d8f",
+          "publicName": "Queue 5"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "$ref": "#/components/examples/NotImplementedExample"
+      }
+    }
+  }
+}

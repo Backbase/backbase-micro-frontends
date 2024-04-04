@@ -1,0 +1,54 @@
+{
+  "name": "/access-control/client-api/v2/legalentities_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/legalentities(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "c7a382786d514262b75ab9531b749a2b",
+          "externalId": "Bank",
+          "name": "Bank",
+          "type": "BANK",
+          "isParent": true
+        },
+        {
+          "id": "dbc9e566d44f4cd9a1f09ad3f6729f15",
+          "externalId": "KPMG",
+          "name": "KPMG",
+          "parentId": "c7a382786d514262b75ab9531b749a2b",
+          "type": "CUSTOMER",
+          "isParent": false
+        },
+        {
+          "id": "77f8c4cd11c8436ba77f8ca34e6a173d",
+          "externalId": "Backbase",
+          "name": "Backbase",
+          "parentId": "c7a382786d514262b75ab9531b749a2b",
+          "type": "CUSTOMER",
+          "isParent": true
+        },
+        {
+          "id": "c9fc30f4e5fb492c97ed0a05f926aecc",
+          "externalId": "Backbase Amsterdam",
+          "name": "Backbase Amsterdam",
+          "parentId": "77f8c4cd11c8436ba77f8ca34e6a173d",
+          "type": "CUSTOMER",
+          "isParent": false
+        },
+        {
+          "id": "0f6d14f40e064deeaee351befd53d3e7",
+          "externalId": "Backbase Cardiff",
+          "name": "Backbase Cardiff",
+          "parentId": "77f8c4cd11c8436ba77f8ca34e6a173d",
+          "type": "CUSTOMER",
+          "isParent": false
+        }
+      ],
+      "default": true
+    }
+  }
+}

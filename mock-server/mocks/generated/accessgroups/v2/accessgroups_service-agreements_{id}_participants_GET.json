@@ -1,0 +1,29 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/service-agreements/{id}/participants_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/service-agreements/[^/]+/participants(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "a1198a20-5a40-4eb7-b47f-a553db958963",
+          "externalId": "KPMG",
+          "name": "KPMG",
+          "sharingUsers": true,
+          "sharingAccounts": false
+        },
+        {
+          "id": "a1198a20-5a40-4eb7-b47f-a553db920429",
+          "externalId": "Backbase",
+          "name": "Backbase",
+          "sharingUsers": false,
+          "sharingAccounts": true
+        }
+      ],
+      "default": true
+    }
+  }
+}

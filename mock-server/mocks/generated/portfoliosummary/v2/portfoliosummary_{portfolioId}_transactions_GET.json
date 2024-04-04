@@ -1,0 +1,1588 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/transactions_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/transactions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": 1,
+          "transactionDate": "2021-04-22T01:46:55.000Z",
+          "category": "Fee",
+          "assetClass": "Stock",
+          "instrumentName": "Roob-Boyer",
+          "quantity": 24158.75,
+          "price": {
+            "amount": "77635.65",
+            "currencyCode": "RUB"
+          },
+          "amount": {
+            "amount": "64266.77",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 76873,
+          "balanceAmount": {
+            "amount": "65287.51",
+            "currencyCode": "USD"
+          },
+          "assetKey": "SU18321655890859",
+          "counterpartyName": "Murphy Group",
+          "statusId": "B9K2WKRK5L",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 2,
+          "transactionDate": "2021-07-18T17:41:37.000Z",
+          "category": "Income",
+          "assetClass": "Bonds",
+          "instrumentName": "Kris and Sons",
+          "quantity": 6387.7,
+          "price": {
+            "amount": "95031.25",
+            "currencyCode": "BRL"
+          },
+          "amount": {
+            "amount": "31617.45",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 90969,
+          "balanceAmount": {
+            "amount": "74499.41",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "MI00191859187781",
+          "counterpartyName": "Green-Ortiz",
+          "statusId": "KSTJBMDVL0",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 3,
+          "transactionDate": "2021-05-15T16:27:14.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Leannon, Hartmann and Okuneva",
+          "quantity": 24417.82,
+          "price": {
+            "amount": "21607.9",
+            "currencyCode": "ILS"
+          },
+          "amount": {
+            "amount": "97867.69",
+            "currencyCode": "ARS"
+          },
+          "balanceAsset": 51268,
+          "balanceAmount": {
+            "amount": "37340.08",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "IN36248209027796",
+          "counterpartyName": "Nader-Walter",
+          "statusId": "JQG9LDQ8UR",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 4,
+          "transactionDate": "2020-12-22T20:59:11.000Z",
+          "category": "Income",
+          "assetClass": "Commodities",
+          "instrumentName": "Connelly-McKenzie",
+          "quantity": 65128.79,
+          "price": {
+            "amount": "13037.16",
+            "currencyCode": "ETB"
+          },
+          "amount": {
+            "amount": "8294.84",
+            "currencyCode": "CDF"
+          },
+          "balanceAsset": 49439,
+          "balanceAmount": {
+            "amount": "24151.74",
+            "currencyCode": "RUB"
+          },
+          "assetKey": "SQ26392039550368",
+          "counterpartyName": "O'Connell-Graham",
+          "statusId": "ACDT72IRS3",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 5,
+          "transactionDate": "2021-09-05T20:22:49.000Z",
+          "category": "Buy",
+          "assetClass": "Stock",
+          "instrumentName": "Feeney Group",
+          "quantity": 39450.01,
+          "price": {
+            "amount": "95439.79",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "78851.03",
+            "currencyCode": "DOP"
+          },
+          "balanceAsset": 85436,
+          "balanceAmount": {
+            "amount": "85112.26",
+            "currencyCode": "HTG"
+          },
+          "assetKey": "XM08464905050121",
+          "counterpartyName": "Kessler, Altenwerth and Kuphal",
+          "statusId": "9J569EIEYM",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 6,
+          "transactionDate": "2020-11-24T14:44:24.000Z",
+          "category": "Buy",
+          "assetClass": "Bonds",
+          "instrumentName": "Aufderhar-Bashirian",
+          "quantity": 70612.15,
+          "price": {
+            "amount": "67089.41",
+            "currencyCode": "PHP"
+          },
+          "amount": {
+            "amount": "56396.61",
+            "currencyCode": "PLN"
+          },
+          "balanceAsset": 29985,
+          "balanceAmount": {
+            "amount": "75489.0",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "NZ13411760745230",
+          "counterpartyName": "O'Kon, Hauck and O'Conner",
+          "statusId": "5K1DJ4I9UA",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 7,
+          "transactionDate": "2021-02-08T08:46:13.000Z",
+          "category": "Fee",
+          "assetClass": "Commodities",
+          "instrumentName": "Gislason LLC",
+          "quantity": 92117.09,
+          "price": {
+            "amount": "27005.39",
+            "currencyCode": "BRL"
+          },
+          "amount": {
+            "amount": "42040.95",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 22567,
+          "balanceAmount": {
+            "amount": "56300.46",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "YC36790231199175",
+          "counterpartyName": "Pollich-Altenwerth",
+          "statusId": "B0QTSSIJ4A",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 8,
+          "transactionDate": "2020-10-06T05:25:55.000Z",
+          "category": "Sell",
+          "assetClass": "Bonds",
+          "instrumentName": "Kirlin, Shanahan and Dooley",
+          "quantity": 42995.8,
+          "price": {
+            "amount": "96682.61",
+            "currencyCode": "VND"
+          },
+          "amount": {
+            "amount": "40928.9",
+            "currencyCode": "PHP"
+          },
+          "balanceAsset": 50974,
+          "balanceAmount": {
+            "amount": "75251.96",
+            "currencyCode": "MYR"
+          },
+          "assetKey": "OK20811491044545",
+          "counterpartyName": "Zboncak, Renner and Bergstrom",
+          "statusId": "5YFXZZUBIS",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 9,
+          "transactionDate": "2021-06-19T04:46:53.000Z",
+          "category": "Sell",
+          "assetClass": "Commodities",
+          "instrumentName": "Kuvalis and Sons",
+          "quantity": 91776.15,
+          "price": {
+            "amount": "42097.56",
+            "currencyCode": "PLN"
+          },
+          "amount": {
+            "amount": "85905.38",
+            "currencyCode": "NGN"
+          },
+          "balanceAsset": 56085,
+          "balanceAmount": {
+            "amount": "71959.27",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "YQ82588503761970",
+          "counterpartyName": "Tromp, Kling and Powlowski",
+          "statusId": "0AOEYO5HLI",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 10,
+          "transactionDate": "2021-07-22T17:20:36.000Z",
+          "category": "Income",
+          "assetClass": "Commodities",
+          "instrumentName": "Halvorson, Kuhlman and Daugherty",
+          "quantity": 36229.87,
+          "price": {
+            "amount": "94105.85",
+            "currencyCode": "USD"
+          },
+          "amount": {
+            "amount": "51589.54",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 86993,
+          "balanceAmount": {
+            "amount": "22904.44",
+            "currencyCode": "BGN"
+          },
+          "assetKey": "VT46572899244613",
+          "counterpartyName": "Lind, Doyle and Schamberger",
+          "statusId": "CNHYN7W260",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 11,
+          "transactionDate": "2021-04-03T11:02:50.000Z",
+          "category": "Income",
+          "assetClass": "Stock",
+          "instrumentName": "Treutel, Hermann and Gerhold",
+          "quantity": 78751.9,
+          "price": {
+            "amount": "2414.59",
+            "currencyCode": "RUB"
+          },
+          "amount": {
+            "amount": "2472.3",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 15107,
+          "balanceAmount": {
+            "amount": "29670.24",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "VK52770928467139",
+          "counterpartyName": "Morissette, Beatty and Stiedemann",
+          "statusId": "C73JZ7E396",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 12,
+          "transactionDate": "2021-07-07T06:15:18.000Z",
+          "category": "Fee",
+          "assetClass": "Commodities",
+          "instrumentName": "Koepp-Skiles",
+          "quantity": 43836.68,
+          "price": {
+            "amount": "11149.19",
+            "currencyCode": "IDR"
+          },
+          "amount": {
+            "amount": "71704.5",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 5691,
+          "balanceAmount": {
+            "amount": "33436.57",
+            "currencyCode": "LKR"
+          },
+          "assetKey": "AV55412895729265",
+          "counterpartyName": "Schumm, Kuphal and Kihn",
+          "statusId": "ZCFBL8JBSM",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 13,
+          "transactionDate": "2021-04-23T00:19:56.000Z",
+          "category": "Income",
+          "assetClass": "Stock",
+          "instrumentName": "Corkery Group",
+          "quantity": 10805.1,
+          "price": {
+            "amount": "49844.59",
+            "currencyCode": "BRL"
+          },
+          "amount": {
+            "amount": "24353.0",
+            "currencyCode": "BRL"
+          },
+          "balanceAsset": 66503,
+          "balanceAmount": {
+            "amount": "70040.01",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "PO75041962350326",
+          "counterpartyName": "Dickens, VonRueden and Monahan",
+          "statusId": "J1FYCTBSAB",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 14,
+          "transactionDate": "2021-01-01T18:10:42.000Z",
+          "category": "Redemption",
+          "assetClass": "Bonds",
+          "instrumentName": "Wyman-Rodriguez",
+          "quantity": 21645.65,
+          "price": {
+            "amount": "57567.04",
+            "currencyCode": "IDR"
+          },
+          "amount": {
+            "amount": "91727.4",
+            "currencyCode": "CDF"
+          },
+          "balanceAsset": 81048,
+          "balanceAmount": {
+            "amount": "34399.23",
+            "currencyCode": "PLN"
+          },
+          "assetKey": "OM53473489208679",
+          "counterpartyName": "Powlowski-Paucek",
+          "statusId": "H23DXPYNDF",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 15,
+          "transactionDate": "2021-02-01T10:08:08.000Z",
+          "category": "Buy",
+          "assetClass": "Commodities",
+          "instrumentName": "Smith LLC",
+          "quantity": 68265.47,
+          "price": {
+            "amount": "72049.64",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "27411.48",
+            "currencyCode": "COP"
+          },
+          "balanceAsset": 60053,
+          "balanceAmount": {
+            "amount": "8626.96",
+            "currencyCode": "BOB"
+          },
+          "assetKey": "AL78954924787434",
+          "counterpartyName": "Weissnat and Sons",
+          "statusId": "77I6055Z5D",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 16,
+          "transactionDate": "2020-09-14T15:55:43.000Z",
+          "category": "Redemption",
+          "assetClass": "Bonds",
+          "instrumentName": "Halvorson, Rohan and Brekke",
+          "quantity": 54886.52,
+          "price": {
+            "amount": "62421.98",
+            "currencyCode": "RUB"
+          },
+          "amount": {
+            "amount": "69293.18",
+            "currencyCode": "PHP"
+          },
+          "balanceAsset": 43876,
+          "balanceAmount": {
+            "amount": "29769.37",
+            "currencyCode": "ILS"
+          },
+          "assetKey": "VN57340524095337",
+          "counterpartyName": "Collins-Hessel",
+          "statusId": "4X1RF5USYI",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 17,
+          "transactionDate": "2021-04-02T13:49:16.000Z",
+          "category": "Redemption",
+          "assetClass": "Bonds",
+          "instrumentName": "Spinka-Hilpert",
+          "quantity": 69422.69,
+          "price": {
+            "amount": "23629.81",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "41620.04",
+            "currencyCode": "BWP"
+          },
+          "balanceAsset": 64164,
+          "balanceAmount": {
+            "amount": "91118.29",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "BL99831989612143",
+          "counterpartyName": "Kshlerin-Lueilwitz",
+          "statusId": "CIDXINMIXB",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 18,
+          "transactionDate": "2021-08-31T18:25:34.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Bahringer-Bahringer",
+          "quantity": 23725.03,
+          "price": {
+            "amount": "86549.19",
+            "currencyCode": "USD"
+          },
+          "amount": {
+            "amount": "30945.95",
+            "currencyCode": "PHP"
+          },
+          "balanceAsset": 45135,
+          "balanceAmount": {
+            "amount": "72734.16",
+            "currencyCode": "KES"
+          },
+          "assetKey": "TU64136780631154",
+          "counterpartyName": "Davis-Kub",
+          "statusId": "TEMSRWNTU1",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 19,
+          "transactionDate": "2021-03-25T10:20:41.000Z",
+          "category": "Redemption",
+          "assetClass": "Commodities",
+          "instrumentName": "McCullough and Sons",
+          "quantity": 46023.88,
+          "price": {
+            "amount": "78165.51",
+            "currencyCode": "IDR"
+          },
+          "amount": {
+            "amount": "84461.74",
+            "currencyCode": "UYU"
+          },
+          "balanceAsset": 10574,
+          "balanceAmount": {
+            "amount": "18141.52",
+            "currencyCode": "RUB"
+          },
+          "assetKey": "PW51789419235614",
+          "counterpartyName": "McDermott Group",
+          "statusId": "KN7UIZDQJ0",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 20,
+          "transactionDate": "2020-11-25T02:56:15.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Kihn and Sons",
+          "quantity": 21763.67,
+          "price": {
+            "amount": "34306.15",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "78025.71",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 17960,
+          "balanceAmount": {
+            "amount": "79360.23",
+            "currencyCode": "PHP"
+          },
+          "assetKey": "QF46778407567378",
+          "counterpartyName": "Beahan-Parisian",
+          "statusId": "ETPGAQCTVC",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 21,
+          "transactionDate": "2021-01-05T09:16:35.000Z",
+          "category": "Redemption",
+          "assetClass": "Bonds",
+          "instrumentName": "Brakus-Hauck",
+          "quantity": 75154.02,
+          "price": {
+            "amount": "77393.52",
+            "currencyCode": "GEL"
+          },
+          "amount": {
+            "amount": "68197.22",
+            "currencyCode": "VND"
+          },
+          "balanceAsset": 35855,
+          "balanceAmount": {
+            "amount": "13104.22",
+            "currencyCode": "SEK"
+          },
+          "assetKey": "OT76760891885177",
+          "counterpartyName": "Buckridge-Boehm",
+          "statusId": "5DEHN4C6DQ",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 22,
+          "transactionDate": "2021-04-18T06:29:36.000Z",
+          "category": "Sell",
+          "assetClass": "Stock",
+          "instrumentName": "Gislason and Sons",
+          "quantity": 30997.01,
+          "price": {
+            "amount": "63450.64",
+            "currencyCode": "RUB"
+          },
+          "amount": {
+            "amount": "91229.54",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 82284,
+          "balanceAmount": {
+            "amount": "7948.12",
+            "currencyCode": "CUP"
+          },
+          "assetKey": "UX73293066820081",
+          "counterpartyName": "Lubowitz, Johnston and Gottlieb",
+          "statusId": "7FSKIZUM4G",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 23,
+          "transactionDate": "2020-09-27T20:12:38.000Z",
+          "category": "Income",
+          "assetClass": "Stock",
+          "instrumentName": "Breitenberg, Sipes and Robel",
+          "quantity": 98518.86,
+          "price": {
+            "amount": "4046.8",
+            "currencyCode": "ZAR"
+          },
+          "amount": {
+            "amount": "72553.59",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 98835,
+          "balanceAmount": {
+            "amount": "65923.43",
+            "currencyCode": "RWF"
+          },
+          "assetKey": "QT05620832422410",
+          "counterpartyName": "Monahan and Sons",
+          "statusId": "8EMU17IRZU",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 24,
+          "transactionDate": "2021-02-13T12:59:16.000Z",
+          "category": "Buy",
+          "assetClass": "Commodities",
+          "instrumentName": "Hahn Inc",
+          "quantity": 7051.86,
+          "price": {
+            "amount": "37834.4",
+            "currencyCode": "EUR"
+          },
+          "amount": {
+            "amount": "62709.68",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 76321,
+          "balanceAmount": {
+            "amount": "45257.12",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "GB83948419145591",
+          "counterpartyName": "Kertzmann and Sons",
+          "statusId": "1DVSOO9PR9",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 25,
+          "transactionDate": "2021-06-16T01:11:27.000Z",
+          "category": "Sell",
+          "assetClass": "Commodities",
+          "instrumentName": "Wiza, O'Hara and Bradtke",
+          "quantity": 78693.82,
+          "price": {
+            "amount": "59932.93",
+            "currencyCode": "BTN"
+          },
+          "amount": {
+            "amount": "14449.13",
+            "currencyCode": "BRL"
+          },
+          "balanceAsset": 69650,
+          "balanceAmount": {
+            "amount": "42137.0",
+            "currencyCode": "IDR"
+          },
+          "assetKey": "JH48975093430605",
+          "counterpartyName": "Berge-Rempel",
+          "statusId": "BYTZ0LZ2LO",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 26,
+          "transactionDate": "2020-10-12T16:54:50.000Z",
+          "category": "Redemption",
+          "assetClass": "Stock",
+          "instrumentName": "Satterfield-Abshire",
+          "quantity": 67689.97,
+          "price": {
+            "amount": "46940.7",
+            "currencyCode": "IDR"
+          },
+          "amount": {
+            "amount": "795.87",
+            "currencyCode": "BRL"
+          },
+          "balanceAsset": 76707,
+          "balanceAmount": {
+            "amount": "88138.99",
+            "currencyCode": "UYU"
+          },
+          "assetKey": "OG03895899758620",
+          "counterpartyName": "Pollich, Brown and Kemmer",
+          "statusId": "O2JMWXKNUE",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 27,
+          "transactionDate": "2021-04-18T23:38:25.000Z",
+          "category": "Redemption",
+          "assetClass": "Commodities",
+          "instrumentName": "Kozey and Sons",
+          "quantity": 16990.88,
+          "price": {
+            "amount": "32356.73",
+            "currencyCode": "SEK"
+          },
+          "amount": {
+            "amount": "92837.38",
+            "currencyCode": "RUB"
+          },
+          "balanceAsset": 66187,
+          "balanceAmount": {
+            "amount": "10855.28",
+            "currencyCode": "BGN"
+          },
+          "assetKey": "SO30123430329468",
+          "counterpartyName": "Lubowitz-Medhurst",
+          "statusId": "ECT0D0XEEL",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 28,
+          "transactionDate": "2021-05-25T10:55:12.000Z",
+          "category": "Sell",
+          "assetClass": "Bonds",
+          "instrumentName": "Hills Inc",
+          "quantity": 6891.52,
+          "price": {
+            "amount": "29606.2",
+            "currencyCode": "AUD"
+          },
+          "amount": {
+            "amount": "3364.08",
+            "currencyCode": "UAH"
+          },
+          "balanceAsset": 89270,
+          "balanceAmount": {
+            "amount": "25916.9",
+            "currencyCode": "ETB"
+          },
+          "assetKey": "EG68345751086650",
+          "counterpartyName": "Sauer, Toy and Satterfield",
+          "statusId": "UM80MTRKQ0",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 29,
+          "transactionDate": "2021-07-07T02:38:51.000Z",
+          "category": "Income",
+          "assetClass": "Commodities",
+          "instrumentName": "Paucek and Sons",
+          "quantity": 97291.31,
+          "price": {
+            "amount": "36293.48",
+            "currencyCode": "KMF"
+          },
+          "amount": {
+            "amount": "22222.96",
+            "currencyCode": "PAB"
+          },
+          "balanceAsset": 65411,
+          "balanceAmount": {
+            "amount": "13600.98",
+            "currencyCode": "PHP"
+          },
+          "assetKey": "GY14393689933872",
+          "counterpartyName": "Grimes Group",
+          "statusId": "HG3SPUYQY6",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 30,
+          "transactionDate": "2021-06-26T01:20:53.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Osinski-Nienow",
+          "quantity": 83715.23,
+          "price": {
+            "amount": "32876.44",
+            "currencyCode": "JPY"
+          },
+          "amount": {
+            "amount": "88959.08",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 47347,
+          "balanceAmount": {
+            "amount": "29338.63",
+            "currencyCode": "PHP"
+          },
+          "assetKey": "OF21202506609945",
+          "counterpartyName": "Heidenreich Inc",
+          "statusId": "TACZPH08WR",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 31,
+          "transactionDate": "2020-11-27T09:35:23.000Z",
+          "category": "Fee",
+          "assetClass": "Commodities",
+          "instrumentName": "Casper-Brekke",
+          "quantity": 1308.74,
+          "price": {
+            "amount": "28520.03",
+            "currencyCode": "NGN"
+          },
+          "amount": {
+            "amount": "95907.66",
+            "currencyCode": "MXN"
+          },
+          "balanceAsset": 33120,
+          "balanceAmount": {
+            "amount": "66825.46",
+            "currencyCode": "HUF"
+          },
+          "assetKey": "EL87636932512578",
+          "counterpartyName": "Strosin, Kohler and Schaden",
+          "statusId": "RF9PTATLWN",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 32,
+          "transactionDate": "2021-01-28T07:47:48.000Z",
+          "category": "Sell",
+          "assetClass": "Stock",
+          "instrumentName": "Kemmer, Heller and Herman",
+          "quantity": 88572.3,
+          "price": {
+            "amount": "55851.67",
+            "currencyCode": "PHP"
+          },
+          "amount": {
+            "amount": "82325.51",
+            "currencyCode": "IDR"
+          },
+          "balanceAsset": 65510,
+          "balanceAmount": {
+            "amount": "8212.6",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "NI32628845492851",
+          "counterpartyName": "VonRueden Inc",
+          "statusId": "80OENWMGP7",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 33,
+          "transactionDate": "2020-12-07T23:31:22.000Z",
+          "category": "Income",
+          "assetClass": "Commodities",
+          "instrumentName": "Wunsch Group",
+          "quantity": 13341.19,
+          "price": {
+            "amount": "905.07",
+            "currencyCode": "HRK"
+          },
+          "amount": {
+            "amount": "30044.05",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 75811,
+          "balanceAmount": {
+            "amount": "74708.47",
+            "currencyCode": "IDR"
+          },
+          "assetKey": "IZ26964199771590",
+          "counterpartyName": "Abbott-Koch",
+          "statusId": "V2MJ9QRBU8",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 34,
+          "transactionDate": "2021-08-13T17:04:30.000Z",
+          "category": "Income",
+          "assetClass": "Stock",
+          "instrumentName": "Cartwright-O'Kon",
+          "quantity": 87352.02,
+          "price": {
+            "amount": "83009.12",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "90038.68",
+            "currencyCode": "MXN"
+          },
+          "balanceAsset": 56971,
+          "balanceAmount": {
+            "amount": "24000.37",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "RA43037657979221",
+          "counterpartyName": "Parker-Ritchie",
+          "statusId": "S2ARSA6DKY",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 35,
+          "transactionDate": "2021-09-11T16:32:17.000Z",
+          "category": "Sell",
+          "assetClass": "Stock",
+          "instrumentName": "Stark and Sons",
+          "quantity": 1734.14,
+          "price": {
+            "amount": "41382.95",
+            "currencyCode": "USD"
+          },
+          "amount": {
+            "amount": "49004.48",
+            "currencyCode": "CAD"
+          },
+          "balanceAsset": 88413,
+          "balanceAmount": {
+            "amount": "66142.8",
+            "currencyCode": "PLN"
+          },
+          "assetKey": "AN44177774973763",
+          "counterpartyName": "Watsica, Quitzon and Farrell",
+          "statusId": "MTT88U5NWH",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 36,
+          "transactionDate": "2021-04-22T02:46:12.000Z",
+          "category": "Income",
+          "assetClass": "Bonds",
+          "instrumentName": "Lowe, Lesch and Hane",
+          "quantity": 82924.6,
+          "price": {
+            "amount": "40020.7",
+            "currencyCode": "PLN"
+          },
+          "amount": {
+            "amount": "51223.69",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 29523,
+          "balanceAmount": {
+            "amount": "74980.4",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "BE74784262639210",
+          "counterpartyName": "Gibson and Sons",
+          "statusId": "KJTJS0VWCM",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 37,
+          "transactionDate": "2021-06-29T11:06:12.000Z",
+          "category": "Sell",
+          "assetClass": "Stock",
+          "instrumentName": "Hodkiewicz Inc",
+          "quantity": 12172.58,
+          "price": {
+            "amount": "47136.67",
+            "currencyCode": "ALL"
+          },
+          "amount": {
+            "amount": "84711.19",
+            "currencyCode": "RUB"
+          },
+          "balanceAsset": 38985,
+          "balanceAmount": {
+            "amount": "34463.03",
+            "currencyCode": "IDR"
+          },
+          "assetKey": "CU71268393638863",
+          "counterpartyName": "Hills-Barton",
+          "statusId": "CDYKTZTJB1",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 38,
+          "transactionDate": "2020-11-11T21:59:07.000Z",
+          "category": "Buy",
+          "assetClass": "Bonds",
+          "instrumentName": "Wolf, Kohler and Collier",
+          "quantity": 9471.61,
+          "price": {
+            "amount": "98919.43",
+            "currencyCode": "XOF"
+          },
+          "amount": {
+            "amount": "52888.6",
+            "currencyCode": "ARS"
+          },
+          "balanceAsset": 49647,
+          "balanceAmount": {
+            "amount": "23683.65",
+            "currencyCode": "IDR"
+          },
+          "assetKey": "WC13352324413470",
+          "counterpartyName": "Morissette, Schuster and O'Kon",
+          "statusId": "9LFXMGYKBL",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 39,
+          "transactionDate": "2021-01-26T18:12:39.000Z",
+          "category": "Fee",
+          "assetClass": "Stock",
+          "instrumentName": "Ward Group",
+          "quantity": 70042.26,
+          "price": {
+            "amount": "98479.23",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "28392.3",
+            "currencyCode": "ILS"
+          },
+          "balanceAsset": 51598,
+          "balanceAmount": {
+            "amount": "53334.55",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "GW27869938235069",
+          "counterpartyName": "Wunsch Inc",
+          "statusId": "599HVY1I04",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 40,
+          "transactionDate": "2021-08-17T14:31:05.000Z",
+          "category": "Buy",
+          "assetClass": "Bonds",
+          "instrumentName": "Ratke Group",
+          "quantity": 37713.04,
+          "price": {
+            "amount": "76095.81",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "9797.66",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 10337,
+          "balanceAmount": {
+            "amount": "18099.07",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "KC24038349979110",
+          "counterpartyName": "Yost Group",
+          "statusId": "T6HKPLWIF7",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 41,
+          "transactionDate": "2020-12-22T22:44:05.000Z",
+          "category": "Redemption",
+          "assetClass": "Stock",
+          "instrumentName": "Hagenes Inc",
+          "quantity": 79335.22,
+          "price": {
+            "amount": "14056.64",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "80407.74",
+            "currencyCode": "EGP"
+          },
+          "balanceAsset": 71404,
+          "balanceAmount": {
+            "amount": "51623.59",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "WM10181284519118",
+          "counterpartyName": "Doyle, Conroy and Bogan",
+          "statusId": "KNWFMY3OCX",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 42,
+          "transactionDate": "2021-06-15T01:15:47.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Kovacek, Cormier and Bartell",
+          "quantity": 11927.31,
+          "price": {
+            "amount": "69190.82",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "26935.66",
+            "currencyCode": "IDR"
+          },
+          "balanceAsset": 2088,
+          "balanceAmount": {
+            "amount": "61502.06",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "AI24545742642429",
+          "counterpartyName": "Bayer-Dickens",
+          "statusId": "DSBNJHEB80",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 43,
+          "transactionDate": "2020-12-07T22:12:09.000Z",
+          "category": "Sell",
+          "assetClass": "Commodities",
+          "instrumentName": "Jast, Grant and Langosh",
+          "quantity": 83184.97,
+          "price": {
+            "amount": "4252.47",
+            "currencyCode": "ILS"
+          },
+          "amount": {
+            "amount": "39116.59",
+            "currencyCode": "CNY"
+          },
+          "balanceAsset": 58799,
+          "balanceAmount": {
+            "amount": "21846.18",
+            "currencyCode": "PHP"
+          },
+          "assetKey": "KA22344396846982",
+          "counterpartyName": "Hansen LLC",
+          "statusId": "LXULPQQKI3",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 44,
+          "transactionDate": "2020-09-14T14:48:44.000Z",
+          "category": "Fee",
+          "assetClass": "Stock",
+          "instrumentName": "MacGyver and Sons",
+          "quantity": 82891.36,
+          "price": {
+            "amount": "60919.08",
+            "currencyCode": "CZK"
+          },
+          "amount": {
+            "amount": "82384.05",
+            "currencyCode": "AUD"
+          },
+          "balanceAsset": 2232,
+          "balanceAmount": {
+            "amount": "42966.6",
+            "currencyCode": "HNL"
+          },
+          "assetKey": "QQ04063391822298",
+          "counterpartyName": "Kuhlman-Harber",
+          "statusId": "XIZXB2UAUA",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 45,
+          "transactionDate": "2021-05-17T03:02:00.000Z",
+          "category": "Sell",
+          "assetClass": "Commodities",
+          "instrumentName": "Roob-Lynch",
+          "quantity": 63322.21,
+          "price": {
+            "amount": "42249.74",
+            "currencyCode": "BGN"
+          },
+          "amount": {
+            "amount": "65094.62",
+            "currencyCode": "VND"
+          },
+          "balanceAsset": 61941,
+          "balanceAmount": {
+            "amount": "13880.2",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "YD24161752660270",
+          "counterpartyName": "Kessler-Schneider",
+          "statusId": "3R0VRZR5B5",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 46,
+          "transactionDate": "2021-03-24T14:52:15.000Z",
+          "category": "Income",
+          "assetClass": "Bonds",
+          "instrumentName": "Greenfelder-Wehner",
+          "quantity": 88892.12,
+          "price": {
+            "amount": "22069.73",
+            "currencyCode": "AZN"
+          },
+          "amount": {
+            "amount": "92545.84",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 81216,
+          "balanceAmount": {
+            "amount": "67480.47",
+            "currencyCode": "PLN"
+          },
+          "assetKey": "ED96793784636915",
+          "counterpartyName": "Graham, West and Johnston",
+          "statusId": "WSE3M9T6QI",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 47,
+          "transactionDate": "2021-02-15T13:14:12.000Z",
+          "category": "Buy",
+          "assetClass": "Commodities",
+          "instrumentName": "Kessler and Sons",
+          "quantity": 36099.18,
+          "price": {
+            "amount": "8322.31",
+            "currencyCode": "DKK"
+          },
+          "amount": {
+            "amount": "68012.98",
+            "currencyCode": "PHP"
+          },
+          "balanceAsset": 95741,
+          "balanceAmount": {
+            "amount": "15629.25",
+            "currencyCode": "IDR"
+          },
+          "assetKey": "EO20651954014717",
+          "counterpartyName": "Ledner-Reichert",
+          "statusId": "EB9ZWNBQTJ",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Security",
+          "counterpartyAccount": "KLM97756433363629",
+          "subPortfolioId": "IDV42524523452355",
+          "positionId": "657fb242-98i9-8455-j795-i57d272uj37",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 48,
+          "transactionDate": "2020-10-19T15:31:37.000Z",
+          "category": "Fee",
+          "assetClass": "Bonds",
+          "instrumentName": "Kessler, Marks and Botsford",
+          "quantity": 72727.78,
+          "price": {
+            "amount": "74138.03",
+            "currencyCode": "CNY"
+          },
+          "amount": {
+            "amount": "29077.87",
+            "currencyCode": "RUB"
+          },
+          "balanceAsset": 68344,
+          "balanceAmount": {
+            "amount": "74882.31",
+            "currencyCode": "PHP"
+          },
+          "assetKey": "OX82046324419628",
+          "counterpartyName": "Harvey, Volkman and Koelpin",
+          "statusId": "687NP1Y31K",
+          "statusName": "Closed",
+          "statusAbbr": "C",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 49,
+          "transactionDate": "2021-06-25T23:11:20.000Z",
+          "category": "Redemption",
+          "assetClass": "Commodities",
+          "instrumentName": "Romaguera Inc",
+          "quantity": 82735.59,
+          "price": {
+            "amount": "31501.41",
+            "currencyCode": "CAD"
+          },
+          "amount": {
+            "amount": "22516.52",
+            "currencyCode": "TJS"
+          },
+          "balanceAsset": 28648,
+          "balanceAmount": {
+            "amount": "50083.7",
+            "currencyCode": "CNY"
+          },
+          "assetKey": "ZG58567103939197",
+          "counterpartyName": "Gislason LLC",
+          "statusId": "H85SAE6IL3",
+          "statusName": "Open",
+          "statusAbbr": "O",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        },
+        {
+          "id": 50,
+          "transactionDate": "2020-11-09T23:45:01.000Z",
+          "category": "Sell",
+          "assetClass": "Bonds",
+          "instrumentName": "Romaguera, Hand and Crooks",
+          "quantity": 79981.58,
+          "price": {
+            "amount": "49176.91",
+            "currencyCode": "EUR"
+          },
+          "amount": {
+            "amount": "32709.51",
+            "currencyCode": "EUR"
+          },
+          "balanceAsset": 39338,
+          "balanceAmount": {
+            "amount": "45378.33",
+            "currencyCode": "EUR"
+          },
+          "assetKey": "BA18667893921299",
+          "counterpartyName": "Kerluke Inc",
+          "statusId": "XK79ZKXN3S",
+          "statusName": "Pending",
+          "statusAbbr": "P",
+          "positionType": "Cash",
+          "counterpartyAccount": "BGF70736413363656",
+          "subPortfolioId": "BGF70736413363656",
+          "positionId": "189ba245-67f9-4655-a895-d88d272bd78",
+          "iSIN": "UB23025390831277"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

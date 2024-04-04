@@ -1,0 +1,47 @@
+{
+  "name": "/client-api/v2/payment-orders/currencies_GET",
+  "request": {
+    "url": "/client-api/v2/payment-orders/currencies(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "code": "EUR"
+        },
+        {
+          "code": "USD"
+        },
+        {
+          "code": "GBP"
+        },
+        {
+          "code": "ISK"
+        },
+        {
+          "code": "KWD"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

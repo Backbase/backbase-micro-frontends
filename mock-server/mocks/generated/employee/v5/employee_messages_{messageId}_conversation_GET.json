@@ -1,0 +1,149 @@
+{
+  "name": "/client-api/v5/employee/messages/{messageId}/conversation_GET",
+  "request": {
+    "url": "/client-api/v5/employee/messages/[^/]+/conversation(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "assignee": {
+          "fullName": "John Snow",
+          "internalId": "1234-5678-9012-3456",
+          "isRequester": true
+        },
+        "attachments": [
+          {
+            "createdAt": "2017-10-02T10:51:50.000+0000",
+            "filename": "message-attachment-filename.pdf",
+            "id": "5d869ea0-d3a3-4b83-888f-767bdcdcd565",
+            "size": 2592836
+          },
+          {
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "filename": "another-message-attachment-filename.pdf",
+            "id": "ae4658a4-073c-4d8b-ab5d-55e9238d3ff0",
+            "size": 15982836
+          }
+        ],
+        "deletable": true,
+        "important": true,
+        "messages": [
+          {
+            "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7",
+            "isMyMessage": true,
+            "sender": {
+              "id": "97234tyi23rfiy325r3i7r",
+              "name": "John Doe"
+            }
+          },
+          {
+            "body": "PGRpdj48b2w+PGxpPkNhc3RsZXMgaW4gR3JlYXQgQnJpdGFpbiBhbmQgSXJlbGFuZDxicj48L2xpPjxsaT5MaXN0IG9mIGNhc3RsZXMgaW4gV2FsZXM8YnI+PC9saT48bGk+TGlzdCBvZiBnYXJkZW5zIGluIFdhbGVzPGJyPjwvbGk+PC9vbD48L2Rpdj4=",
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e1",
+            "isMyMessage": false,
+            "sender": {
+              "id": "97234tyi23rfiy325r3i72",
+              "name": "John Doe 2"
+            }
+          },
+          {
+            "attachments": [
+              {
+                "createdAt": "2017-10-02T10:51:30.000+0000",
+                "filename": "another-message-attachment-filename.pdf",
+                "id": "ae4658a4-073c-4d8b-ab5d-55e9238d3ff0",
+                "size": 15982836
+              }
+            ],
+            "body": "PGRpdj48b2w+PGxpPiA8Yj4iQ2hpcmsgQ2FzdGxlLCBDaGlyayI8L2I+LiBCcml0aXNoIExpc3RlZCBidWlsZGluZ3MuIFJldHJpZXZlZCAyMyBKdWx5IDIwMTUuPGJyPjwvbGk+PGxpPiA8Yj4iQ2hpcmsgQ2FzdGxlIOKAkyBPZmZpY2lhbCBHdWlkZWJvb2siLjwvYj4gQ2FzdGxlIFdhbGVzLjxicj48L2xpPjxsaT4gPGI+IkNoaXJrIENhc3RsZSIuPC9iPiBOYXRpb25hbCBUcnVzdC48YnI+PC9saT48bGk+IDxiPiJUaGUgT2FrIGF0IHRoZSBHYXRlIG9mIHRoZSBEZWFkIjwvYj4uIFBlb3BsZSdzIENvbGxlY3Rpb24gV2FsZXMuIFJldHJpZXZlZCAxIE1hcmNoIDIwMTguPGJyPjwvbGk+PC9vbD48L2Rpdj4=",
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e2",
+            "isMyMessage": true,
+            "sender": {
+              "id": "97234tyi23rfiy325r3i73",
+              "name": "John Doe 3"
+            }
+          },
+          {
+            "attachments": [
+              {
+                "createdAt": "2017-10-02T10:51:50.000+0000",
+                "filename": "message-attachment-filename.pdf",
+                "id": "5d869ea0-d3a3-4b83-888f-767bdcdcd565",
+                "size": 2592836
+              }
+            ],
+            "body": "VGhlIGNhc3RsZSB3YXMgdXNlZCBhcyBhIHNwZWNpYWwgc3RhZ2UgaW4gdGhlIDxiPjIwMTM8L2I+IFdhbGVzIFJhbGx5IEdCLiA8ZGl2PjxpPjxiPjx1Pjxicj48L3U+PC9iPjwvaT48L2Rpdj48ZGl2PjxpPjxiPjx1PlRoZSBPYWsgYXQgdGhlIEdhdGUgb2YgdGhlIERlYWQ8L3U+PC9iPjwvaT4gbGllcyAzMDBtIGZyb20gPGI+Q2hpcmsgQ2FzdGxlPC9iPiBhbmQgbWFya3MgdGhlIHNpdGUgb2YgdGhlIDExNjUgPGI+QmF0dGxlIG9mIENyb2dlbjwvYj4uPC9kaXY+",
+            "createdAt": "2017-10-02T10:51:30.000+0000",
+            "id": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e3",
+            "isMyMessage": false,
+            "sender": {
+              "id": "97234tyi23rfiy325r3i74",
+              "name": "John Doe 4"
+            }
+          }
+        ],
+        "read": false,
+        "read-only": false,
+        "rootMessageId": "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7",
+        "subject": "Application Rejected (your efforts are futile)",
+        "topic": {
+          "deleted": false,
+          "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+          "name": "Savings"
+        },
+        "workflowStatus": "NEW"
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

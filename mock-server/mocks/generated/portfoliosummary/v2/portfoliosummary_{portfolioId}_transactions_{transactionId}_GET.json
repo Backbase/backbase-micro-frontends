@@ -1,0 +1,90 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/transactions/{transactionId}_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/transactions/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": 1828514,
+        "instrumentNameLong": "Veeco Instruments Inc.",
+        "transactionDate": "2020-06-13T13:03:47.000Z",
+        "valueDate": "2020-04-09T09:04:25.000Z",
+        "category": "Redemption",
+        "market": "Euronext",
+        "orderType": "Stop order",
+        "quantity": 7822.93,
+        "price": {
+          "amount": "61.08",
+          "currencyCode": "EUR"
+        },
+        "amount": {
+          "amount": "17965.99",
+          "currencyCode": "EUR"
+        },
+        "balanceAmount": {
+          "amount": "545545.93",
+          "currencyCode": "EUR"
+        },
+        "grossAmount": {
+          "amount": "576706.29",
+          "currencyCode": "EUR"
+        },
+        "exchangeRate": 1.51,
+        "taxesLocal": {
+          "amount": "1265.35",
+          "currencyCode": "EUR"
+        },
+        "taxesForeign": {
+          "amount": "3421.45",
+          "currencyCode": "CNY"
+        },
+        "feesLocal": {
+          "amount": "1118.72",
+          "currencyCode": "EUR"
+        },
+        "feesForeign": {
+          "amount": "573.48",
+          "currencyCode": "IDR"
+        },
+        "instrumentCodeCustom": "OV70008413341656",
+        "officialCode": "QG82611161281766",
+        "assetClass": "Bonds",
+        "assetSubClass": "Government Bonds",
+        "assetKey": "QM94003377461533",
+        "notes": "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+        "counterpartyName": "Oceanic Airlines",
+        "instrumentCurrency": "EUR",
+        "statusId": "an5fke68fik54l",
+        "statusAbbr": "O",
+        "positionType": "Cash"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

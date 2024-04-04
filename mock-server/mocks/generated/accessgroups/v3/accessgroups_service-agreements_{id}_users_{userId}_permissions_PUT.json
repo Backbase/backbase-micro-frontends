@@ -1,0 +1,16 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/service-agreements/{id}/users/{userId}/permissions_PUT",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/service-agreements/[^/]+/users/[^/]+/permissions(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalStatus": "PENDING"
+      },
+      "default": true
+    }
+  }
+}

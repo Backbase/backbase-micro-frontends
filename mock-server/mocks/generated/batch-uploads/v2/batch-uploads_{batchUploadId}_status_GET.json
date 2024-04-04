@@ -1,0 +1,79 @@
+{
+  "name": "/client-api/v2/batch-uploads/{batchUploadId}/status_GET",
+  "request": {
+    "url": "/client-api/v2/batch-uploads/[^/]+/status(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_PENDING"
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_DECLINED",
+        "errors": [
+          {
+            "message": "Confirmation was user declined",
+            "key": "USRD",
+            "context": {
+              "confirmationId": "2434a2f1-23f2-4fc3-9c05-c31b567431eb"
+            }
+          }
+        ]
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_DECLINED",
+        "errors": [
+          {
+            "message": "Confirmation was system declined",
+            "key": "SYSD",
+            "context": {
+              "confirmationId": "2434a2f1-23f2-4fc3-9c05-c31b567431eb"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

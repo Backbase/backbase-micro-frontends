@@ -1,0 +1,32 @@
+{
+  "name": "/client-api/v5/employee/conversations/counters_GET",
+  "request": {
+    "url": "/client-api/v5/employee/conversations/counters(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "unassigned": 2,
+        "unreadAssigned": 5
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/users/user-privileges_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/users/user-privileges(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "privilege": "execute"
+        },
+        {
+          "privilege": "read"
+        }
+      ],
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "name": "/client-api/v2/bill-pay/payments_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payments(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "payments": [
+          {
+            "id": "8a9483495f058d2f015f058d366b0045",
+            "payeeID": "3",
+            "payeeName": "Soccer Shots",
+            "payeeNickName": "Kids Soccer",
+            "payeeElectronic": false,
+            "amount": {
+              "amount": "10.99",
+              "currencyCode": "USD"
+            },
+            "paymentDate": "2019-04-21",
+            "paymentAccount": {
+              "accountNumber": "11111111",
+              "routingNumber": "000000022",
+              "accountType": "SAVINGS_ACCOUNT",
+              "accountNickName": "Current Account"
+            },
+            "recurring": false,
+            "automaticPayment": false,
+            "status": "PENDING",
+            "fee": {
+              "amount": "9.99",
+              "currencyCode": "USD"
+            },
+            "ebillID": "20141219140239655590"
+          },
+          {
+            "id": "8a9483495f058d2f015f058d366a003c",
+            "payeeID": "4",
+            "payeeName": "Gas Bill",
+            "payeeAccountNumber": "100000001",
+            "payeeElectronic": true,
+            "amount": {
+              "amount": "100.99",
+              "currencyCode": "USD"
+            },
+            "paymentDate": "2019-02-22",
+            "paymentAccount": {
+              "id": "1",
+              "accountNumber": "22222222",
+              "routingNumber": "000000033",
+              "accountType": "CHECKING_ACCOUNT"
+            },
+            "recurring": true,
+            "automaticPayment": false,
+            "frequency": "MONTHLY",
+            "numberOfInstances": 2,
+            "paymentScheduledAlert": true,
+            "paymentSentAlert": true,
+            "modelExpirationAlert": true,
+            "status": "FAILED"
+          },
+          {
+            "id": "8a9483a96dd476f1016dd476f7e8001c",
+            "payeeID": "2",
+            "payeeName": "The Republic",
+            "payeeAccountNumber": "12345O",
+            "payeeElectronic": true,
+            "amount": {
+              "amount": "200.99",
+              "currencyCode": "USD"
+            },
+            "paymentDate": "2018-11-23",
+            "paymentMemo": "Order #66",
+            "paymentAccount": {
+              "accountNumber": "100001001",
+              "accountNickName": "Joint Account",
+              "accountType": "CHECKING_ACCOUNT",
+              "routingNumber": "110001001"
+            },
+            "recurring": false,
+            "automaticPayment": true,
+            "paymentScheduledAlert": true,
+            "paymentSentAlert": true,
+            "modelExpirationAlert": true,
+            "status": "PROCESSED"
+          }
+        ],
+        "totalCount": 3
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

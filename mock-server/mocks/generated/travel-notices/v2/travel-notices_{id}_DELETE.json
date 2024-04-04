@@ -1,0 +1,14 @@
+{
+  "name": "/client-api/v2/travel-notices/{id}_DELETE",
+  "request": {
+    "url": "/client-api/v2/travel-notices/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    }
+  }
+}

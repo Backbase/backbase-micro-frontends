@@ -1,0 +1,35 @@
+{
+  "name": "/client-api/v1/rtc/access/employee_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/access/employee(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "taskToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBQzFjOGFiYjViMzZjMGYxOGEyY2ZlOWQ0ZmQ1MDA3YmEyIiwiZXhwIjoxNjI4MTkwNDAwLCJ3b3JrZXJfc2lkIjoiV0s2NDk5MTY5ZDNjNDEzYzI4ZmZmZjQxODJhZGJiMDM5MCIsIndvcmtzcGFjZV9zaWQiOiJXUzExM2UwNjQxYTZmZGExMWRlM2MxYjc4ZjA0ZmU5ZWE5IiwiY2hhbm5lbCI6IldLNjQ5OTE2OWQzYzQxM2MyOGZmZmY0MTgyYWRiYjAzOTAiLCJwb2xpY2llcyI6W3sidXJsIjoiaHR0cHM6Ly90YXNrcm91dGVyLnR3aWxpby5jb20vdjEvV29ya3NwYWNlcy9XUzExM2UwNjQxYTZmZGExMWRlM2MxYjc4ZjA0ZmU5ZWE5L0FjdGl2aXRpZXMiLCJtZXRob2QiOiJHRVQiLCJhbGxvdyI6dHJ1ZX0seyJ1cmwiOiJodHRwczovL3Rhc2tyb3V0ZXIudHdpbGlvLmNvbS92MS9Xb3Jrc3BhY2VzL1dTMTEzZTA2NDFhNmZkYTExZGUzYzFiNzhmMDRmZTllYTkvVGFza3MvKioiLCJtZXRob2QiOiJHRVQiLCJhbGxvdyI6dHJ1ZX0seyJ1cmwiOiJodHRwczovL3Rhc2tyb3V0ZXIudHdpbGlvLmNvbS92MS9Xb3Jrc3BhY2VzL1dTMTEzZTA2NDFhNmZkYTExZGUzYzFiNzhmMDRmZTllYTkvV29ya2Vycy9XSzY0OTkxNjlkM2M0MTNjMjhmZmZmNDE4MmFkYmIwMzkwL1Jlc2VydmF0aW9ucy8qKiIsIm1ldGhvZCI6IkdFVCIsImFsbG93Ijp0cnVlfSx7InVybCI6Imh0dHBzOi8vdGFza3JvdXRlci50d2lsaW8uY29tL3YxL1dvcmtzcGFjZXMvV1MxMTNlMDY0MWE2ZmRhMTFkZTNjMWI3OGYwNGZlOWVhOS9Xb3JrZXJzL1dLNjQ5OTE2OWQzYzQxM2MyOGZmZmY0MTgyYWRiYjAzOTAiLCJtZXRob2QiOiJHRVQiLCJhbGxvdyI6dHJ1ZX0seyJ1cmwiOiJodHRwczovL2V2ZW50LWJyaWRnZS50d2lsaW8uY29tL3YxL3dzY2hhbm5lbHMvQWNjb3VudFNpZC9DaGFubmVsIiwibWV0aG9kIjoiR0VUIiwiYWxsb3ciOnRydWV9LHsidXJsIjoiaHR0cHM6Ly9ldmVudC1icmlkZ2UudHdpbGlvLmNvbS92MS93c2NoYW5uZWxzL0FjY291bnRTaWQvQ2hhbm5lbCIsIm1ldGhvZCI6IlBPU1QiLCJhbGxvdyI6dHJ1ZX0seyJ1cmwiOiJodHRwczovL3Rhc2tyb3V0ZXIudHdpbGlvLmNvbS92MS9Xb3Jrc3BhY2VzL1dTMTEzZTA2NDFhNmZkYTExZGUzYzFiNzhmMDRmZTllYTkvV29ya2Vycy9XSzY0OTkxNjlkM2M0MTNjMjhmZmZmNDE4MmFkYmIwMzkwIiwibWV0aG9kIjoiUE9TVCIsInBvc3RfZmlsdGVyIjp7IkFjdGl2aXR5U2lkIjp7InJlcXVpcmVkIjp0cnVlfX0sImFsbG93Ijp0cnVlfSx7InVybCI6Imh0dHBzOi8vdGFza3JvdXRlci50d2lsaW8uY29tL3YxL1dvcmtzcGFjZXMvV1MxMTNlMDY0MWE2ZmRhMTFkZTNjMWI3OGYwNGZlOWVhOS9UYXNrcy8qKiIsIm1ldGhvZCI6IlBPU1QiLCJhbGxvdyI6dHJ1ZX0seyJ1cmwiOiJodHRwczovL2V2ZW50LWJyaWRnZS50d2lsaW8uY29tL3YxL3dzY2hhbm5lbHMvQUMxYzhhYmI1YjM2YzBmMThhMmNmZTlkNGZkNTAwN2JhMi9XSzY0OTkxNjlkM2M0MTNjMjhmZmZmNDE4MmFkYmIwMzkwIiwibWV0aG9kIjoiR0VUIiwiYWxsb3ciOnRydWV9LHsidXJsIjoiaHR0cHM6Ly9ldmVudC1icmlkZ2UudHdpbGlvLmNvbS92MS93c2NoYW5uZWxzL0FDMWM4YWJiNWIzNmMwZjE4YTJjZmU5ZDRmZDUwMDdiYTIvV0s2NDk5MTY5ZDNjNDEzYzI4ZmZmZjQxODJhZGJiMDM5MCIsIm1ldGhvZCI6IlBPU1QiLCJhbGxvdyI6dHJ1ZX1dLCJhY2NvdW50X3NpZCI6IkFDMWM4YWJiNWIzNmMwZjE4YTJjZmU5ZDRmZDUwMDdiYTIiLCJ2ZXJzaW9uIjoidjEifQ.3qR5XvqS3saAsnpc6XzKc2O4bPr3MCvlf2nZwmCOOs0",
+        "conversationToken": ""
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

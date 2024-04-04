@@ -1,0 +1,208 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/function-groups_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/function-groups(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "00779897-253c-4bbb-b0c7-3c47fd0b0b08",
+          "name": "Manage Entitlements",
+          "description": "This profile will control managing of entitlements",
+          "serviceAgreementId": "51c95177-0d29-43f6-978c-be8c0b9126ab",
+          "permissions": [
+            {
+              "functionId": "1012",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            },
+            {
+              "functionId": "1011",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            },
+            {
+              "functionId": "1010",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            },
+            {
+              "functionId": "1009",
+              "assignedPrivileges": [
+                {
+                  "privilege": "create"
+                },
+                {
+                  "privilege": "view"
+                },
+                {
+                  "privilege": "edit"
+                }
+              ]
+            }
+          ],
+          "validFromDate": "2019-08-16",
+          "validFromTime": "16:43:52",
+          "validUntilDate": "2019-08-23",
+          "validUntilTime": "16:43:52",
+          "type": "REGULAR"
+        },
+        {
+          "id": "98f8531d-9bf4-4f3f-a49b-7cf331d6eead",
+          "name": "Viewer of Product Summary and Transactions",
+          "description": "This profile will control viewing of Product Summary and Transactions",
+          "legalEntityId": "be2a6940-91f9-4cba-9c35-0b1f55f4071d",
+          "serviceAgreementId": "f34f7587-5ded-4f51-94c3-3a89d1b64539",
+          "permissions": [
+            {
+              "functionId": "1006",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            },
+            {
+              "functionId": "1003",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            }
+          ],
+          "approvalId": "98f8531d-9bf4-4f3f-a49b-7cf331d6eead",
+          "validFromDate": "2019-09-17",
+          "validFromTime": "16:43:57",
+          "validUntilDate": "2019-10-25",
+          "validUntilTime": "16:55:23",
+          "type": "TEMPLATE"
+        },
+        {
+          "id": "98f8531d-9bf4-4f3f-a49b-7cf331d6eeae",
+          "name": "Limits Manager",
+          "description": "This profile will control managing of limits",
+          "legalEntityId": "be2a6940-91f9-4cba-9c35-0b1f55f4071d",
+          "serviceAgreementId": "f34f7587-5ded-4f51-94c3-3a89d1b64539",
+          "permissions": [
+            {
+              "functionId": "1012",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                },
+                {
+                  "privilege": "create"
+                },
+                {
+                  "privilege": "edit"
+                },
+                {
+                  "privilege": "delete"
+                }
+              ]
+            },
+            {
+              "functionId": "1014",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            }
+          ],
+          "validFromDate": "2019-09-17",
+          "validFromTime": "16:43:57",
+          "validUntilDate": "2019-10-25",
+          "validUntilTime": "16:55:23",
+          "type": "TEMPLATE"
+        },
+        {
+          "id": "98f8531d-9bf4-4f3f-a49b-7cf331d6eeaf",
+          "name": "Permissions Approvals Manager",
+          "description": "This profile will control approving of Permissions",
+          "legalEntityId": "be2a6940-91f9-4cba-9c35-0b1f55f4071d",
+          "serviceAgreementId": "f34f7587-5ded-4f51-94c3-3a89d1b64539",
+          "permissions": [
+            {
+              "functionId": "1009",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                },
+                {
+                  "privilege": "delete"
+                }
+              ]
+            },
+            {
+              "functionId": "1020",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            },
+            {
+              "functionId": "1019",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                }
+              ]
+            }
+          ],
+          "validFromDate": "2019-09-17",
+          "validFromTime": "16:43:57",
+          "validUntilDate": "2019-10-25",
+          "validUntilTime": "16:55:23",
+          "type": "TEMPLATE"
+        },
+        {
+          "id": "98f8531d-9bf4-4f3f-a49b-7cf331d6feaf",
+          "name": "Salary Manager",
+          "description": "This profile will control paying salaries",
+          "legalEntityId": "be2a6940-91f9-4cba-9c35-0b1f55f4071d",
+          "serviceAgreementId": "f34f7587-5ded-4f51-94c3-3a89d1b64539",
+          "permissions": [
+            {
+              "functionId": "1015",
+              "assignedPrivileges": [
+                {
+                  "privilege": "view"
+                },
+                {
+                  "privilege": "create"
+                },
+                {
+                  "privilege": "edit"
+                },
+                {
+                  "privilege": "delete"
+                }
+              ]
+            }
+          ],
+          "validFromDate": "2019-09-17",
+          "validFromTime": "16:43:57",
+          "validUntilDate": "2019-10-25",
+          "validUntilTime": "16:55:23",
+          "type": "REGULAR"
+        }
+      ],
+      "default": true
+    }
+  }
+}

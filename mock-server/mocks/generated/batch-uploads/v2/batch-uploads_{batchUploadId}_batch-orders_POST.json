@@ -1,0 +1,170 @@
+{
+  "name": "/client-api/v2/batch-uploads/{batchUploadId}/batch-orders_POST",
+  "request": {
+    "url": "/client-api/v2/batch-uploads/[^/]+/batch-orders(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict error",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "The request could not be completed due to a conflict with the current state of the resource.",
+            "key": "transactions.api.billingstatus.transaction",
+            "context": {
+              "billingStatus": "BILLED"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 202,
+      "data": {
+        "id": "b51c4261-54c9-42e5-b5ae-4c1390b890d8",
+        "status": "DONE",
+        "totalBatchOrdersCount": 3,
+        "totalTransactionsCount": 10211,
+        "size": 94371840,
+        "uploadedSize": 94371840
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 202,
+      "data": {
+        "id": "0288dde3-9b89-4997-9e57-54684bf3c3c1",
+        "status": "DUPLICATE",
+        "totalBatchOrdersCount": 3,
+        "totalTransactionsCount": 10211,
+        "size": 94371840,
+        "uploadedSize": 94371840
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "The request was rejected because its size exceeds the configured maximum ({{maxSize}})",
+            "key": "UploadExceedsMaxSize",
+            "context": {
+              "maxSize": "104857600"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_2": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "Total amount of batch ({{actual}}) does not match the expected amount ({{expected}})",
+            "key": "TotalAmountMismatch",
+            "context": {
+              "actual": "2400123.00",
+              "expected": "2398675.00"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_3": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "Total number of batches ({{actual}}) does not match the expected number ({{expected}})",
+            "key": "TotalBatchMismatch",
+            "context": {
+              "actual": "3",
+              "expected": "4"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_4": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "The integer part of '{{amount}}' for '{{fieldName}}' exceeds the maximum number of digits {{maximum}}",
+            "key": "AmountContainsTooManyDigits",
+            "context": {
+              "amount": "1234567890123456789.123456",
+              "fieldName": "batchTotalAmount",
+              "maximum": "18"
+            }
+          },
+          {
+            "message": "The fractional part of '{{amount}}' for '{{fieldName}}' exceeds the maximum number of decimal digits {{maximum}}",
+            "key": "AmountContainsTooManyDecimalDigits",
+            "context": {
+              "amount": "1234567890123456789.123456",
+              "fieldName": "batchTotalAmount",
+              "maximum": "5"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "/client-api/v1/client-api/v1/enrollments/{enrollmentId}_GET",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/enrollments/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "challengeType": "INSTRUCTIONS",
+        "challenge": "2740f44c-c4ab-42a4-bbf1-1ad46b53b743",
+        "enrollmentId": "eb101331-f6cd-4d44-81c8-7b325619a362"
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

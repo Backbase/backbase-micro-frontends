@@ -1,0 +1,67 @@
+{
+  "name": "/client-api/v5/employee/topics_GET",
+  "request": {
+    "url": "/client-api/v5/employee/topics(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "code": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+          "id": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+          "mailoutTopic": true,
+          "name": "Mortgage application",
+          "subscribersCount": 21
+        },
+        {
+          "code": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+          "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+          "mailoutTopic": true,
+          "name": "Loans",
+          "subscribersCount": 102
+        },
+        {
+          "code": "4fb026ec-62e5-41c8-aa28-149d7544b704",
+          "id": "4fb026ec-62e5-41c8-aa28-149d7544b704",
+          "mailoutTopic": false,
+          "name": "Problems with making a payment",
+          "subscribersCount": 4
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "/client-api/v2/users/me/authorized-users/{authorizedUserId}/permissions_GET",
+  "request": {
+    "url": "/client-api/v2/users/me/authorized-users/[^/]+/permissions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "accountId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+          "level": "BASIC-001"
+        },
+        {
+          "accountId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4692",
+          "level": "PARTIAL-002"
+        },
+        {
+          "accountId": "3cdb2224-8926-4b4d-a99f-1c9dfbbb4600",
+          "level": "FULL-003"
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "/client-api/v1/client-api/v1/enrollments/{enrollmentId}/provisioning/status_GET",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/enrollments/[^/]+/provisioning/status(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "provisioningStatus": "COMPLETE"
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

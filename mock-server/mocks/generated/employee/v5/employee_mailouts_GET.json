@@ -1,0 +1,76 @@
+{
+  "name": "/client-api/v5/employee/mailouts_GET",
+  "request": {
+    "url": "/client-api/v5/employee/mailouts(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "20a52c18-c4b1-4c1e-8f27-9e0998ff3ef7",
+          "initiationDate": "2020-03-04T10:51:30.275+0000",
+          "mailoutName": "Happy b-day to users",
+          "senderDisplayName": "The bank you love",
+          "status": "READY",
+          "subject": "Happy Birthday!",
+          "topic": {
+            "deleted": false,
+            "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+            "name": "News"
+          }
+        },
+        {
+          "id": "122ca40f-1671-4d1d-9925-ca4df3d34617",
+          "initiationDate": "2020-03-02T12:40:30+0000",
+          "senderDisplayName": "The bank you love",
+          "status": "DONE",
+          "subject": "Special proposal",
+          "topic": {
+            "deleted": false,
+            "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+            "name": "News"
+          }
+        },
+        {
+          "id": "2738c5dd-88fa-436e-abd3-140f53c5cc08",
+          "initiationDate": "2020-03-02T18:30:10+0000",
+          "senderDisplayName": "The bank you love",
+          "status": "ERROR",
+          "subject": "Extended credit limit",
+          "topic": {
+            "deleted": false,
+            "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+            "name": "News"
+          }
+        },
+        {
+          "id": "6ad3b1f0-d1e8-4c9e-9231-870bac707f21",
+          "initiationDate": "2020-03-01T11:25:30+0000",
+          "senderDisplayName": "The bank you love",
+          "status": "CANCELLED",
+          "subject": "New terms of deposits",
+          "topic": {
+            "deleted": false,
+            "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+            "name": "News"
+          }
+        },
+        {
+          "id": "0c5bcdee-f76e-4737-b0d1-3c8fc696c86f",
+          "initiationDate": "2020-03-01T11:25:30+0000",
+          "senderDisplayName": "The bank you love",
+          "status": "CANCELLATION_IN_PROCESS",
+          "subject": "New terms of deposits",
+          "topic": {
+            "deleted": false,
+            "id": "ea151612-e2f9-403e-825d-9169afa0d2ac",
+            "name": "News"
+          }
+        }
+      ],
+      "default": true
+    }
+  }
+}

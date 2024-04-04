@@ -1,0 +1,23 @@
+{
+  "name": "/client-api/v1/client-api/v1/account-recovery_POST",
+  "request": {
+    "url": "/client-api/v1/client-api/v1/account-recovery(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "challengeType": "IDENTIFICATION",
+        "challenge": "59a46d16-351b-497c-86ca-0f02a3b8dfbb",
+        "id": "f12219a9-2315-4215-9049-bf89c875f17e",
+        "_links": {
+          "response": {
+            "href": "http://localhost:9191/client-api/v1/account-recovery/f12219a9-2315-4215-9049-bf89c875f17e/response"
+          }
+        }
+      },
+      "default": true
+    }
+  }
+}

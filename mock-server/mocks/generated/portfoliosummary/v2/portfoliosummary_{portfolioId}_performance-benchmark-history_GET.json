@@ -1,0 +1,237 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/performance-benchmark-history_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/performance-benchmark-history(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "uuid": "c7ab6eda-14c3-4c5c-b988-29c4e6367213",
+        "data": [
+          {
+            "dateFrom": "2020-01-01T00:00:00.000Z",
+            "dateTo": "2020-01-01T00:00:00.000Z",
+            "value": 0
+          },
+          {
+            "dateFrom": "2020-02-01T00:00:00.000Z",
+            "dateTo": "2020-02-01T00:00:00.000Z",
+            "value": 5
+          },
+          {
+            "dateFrom": "2020-03-01T00:00:00.000Z",
+            "dateTo": "2020-03-01T00:00:00.000Z",
+            "value": -5
+          },
+          {
+            "dateFrom": "2020-04-01T00:00:00.000Z",
+            "dateTo": "2020-04-01T00:00:00.000Z",
+            "value": 1
+          },
+          {
+            "dateFrom": "2020-05-01T00:00:00.000Z",
+            "dateTo": "2020-05-01T00:00:00.000Z",
+            "value": 10
+          },
+          {
+            "dateFrom": "2020-06-01T00:00:00.000Z",
+            "dateTo": "2020-06-01T00:00:00.000Z",
+            "value": 3
+          },
+          {
+            "dateFrom": "2020-07-01T00:00:00.000Z",
+            "dateTo": "2020-07-01T00:00:00.000Z",
+            "value": -1
+          },
+          {
+            "dateFrom": "2020-08-01T00:00:00.000Z",
+            "dateTo": "2020-08-01T00:00:00.000Z",
+            "value": -10
+          },
+          {
+            "dateFrom": "2020-09-01T00:00:00.000Z",
+            "dateTo": "2020-09-01T00:00:00.000Z",
+            "value": -3
+          },
+          {
+            "dateFrom": "2020-10-01T00:00:00.000Z",
+            "dateTo": "2020-10-01T00:00:00.000Z",
+            "value": 0
+          },
+          {
+            "dateFrom": "2020-11-01T00:00:00.000Z",
+            "dateTo": "2020-11-01T00:00:00.000Z",
+            "value": -1
+          },
+          {
+            "dateFrom": "2020-12-01T00:00:00.000Z",
+            "dateTo": "2020-12-01T00:00:00.000Z",
+            "value": -2
+          },
+          {
+            "dateFrom": "2021-01-01T00:00:00.000Z",
+            "dateTo": "2021-01-01T00:00:00.000Z",
+            "value": 0
+          },
+          {
+            "dateFrom": "2021-02-01T00:00:00.000Z",
+            "dateTo": "2021-02-01T00:00:00.000Z",
+            "value": 2
+          },
+          {
+            "dateFrom": "2021-03-01T00:00:00.000Z",
+            "dateTo": "2021-03-01T00:00:00.000Z",
+            "value": 0.5
+          },
+          {
+            "dateFrom": "2021-04-01T00:00:00.000Z",
+            "dateTo": "2021-04-01T00:00:00.000Z",
+            "value": 0
+          },
+          {
+            "dateFrom": "2021-05-01T00:00:00.000Z",
+            "dateTo": "2021-05-01T00:00:00.000Z",
+            "value": 1
+          },
+          {
+            "dateFrom": "2021-06-01T00:00:00.000Z",
+            "dateTo": "2021-06-01T00:00:00.000Z",
+            "value": -2
+          },
+          {
+            "dateFrom": "2021-07-01T00:00:00.000Z",
+            "dateTo": "2021-07-01T00:00:00.000Z",
+            "value": 0
+          },
+          {
+            "dateFrom": "2021-08-01T00:00:00.000Z",
+            "dateTo": "2021-08-01T00:00:00.000Z",
+            "value": 1
+          },
+          {
+            "dateFrom": "2021-09-01T00:00:00.000Z",
+            "dateTo": "2021-09-01T00:00:00.000Z",
+            "value": 2.2
+          },
+          {
+            "dateFrom": "2021-10-01T00:00:00.000Z",
+            "dateTo": "2021-10-01T00:00:00.000Z",
+            "value": 2.9
+          },
+          {
+            "dateFrom": "2021-11-01T00:00:00.000Z",
+            "dateTo": "2021-11-01T00:00:00.000Z",
+            "value": 3
+          },
+          {
+            "dateFrom": "2021-12-01T00:00:00.000Z",
+            "dateTo": "2021-12-01T00:00:00.000Z",
+            "value": 2
+          },
+          {
+            "dateFrom": "2022-01-01T00:00:00.000Z",
+            "dateTo": "2022-01-01T00:00:00.000Z",
+            "value": 19
+          },
+          {
+            "dateFrom": "2022-02-01T00:00:00.000Z",
+            "dateTo": "2022-02-01T00:00:00.000Z",
+            "value": 25.1
+          },
+          {
+            "dateFrom": "2022-03-01T00:00:00.000Z",
+            "dateTo": "2022-03-01T00:00:00.000Z",
+            "value": 25.6
+          },
+          {
+            "dateFrom": "2022-04-01T00:00:00.000Z",
+            "dateTo": "2022-04-01T00:00:00.000Z",
+            "value": 36
+          },
+          {
+            "dateFrom": "2022-05-01T00:00:00.000Z",
+            "dateTo": "2022-05-01T00:00:00.000Z",
+            "value": 44.3
+          },
+          {
+            "dateFrom": "2022-06-01T00:00:00.000Z",
+            "dateTo": "2022-06-01T00:00:00.000Z",
+            "value": 44.9
+          },
+          {
+            "dateFrom": "2022-07-01T00:00:00.000Z",
+            "dateTo": "2022-07-01T00:00:00.000Z",
+            "value": 50.7
+          },
+          {
+            "dateFrom": "2022-08-01T00:00:00.000Z",
+            "dateTo": "2022-08-01T00:00:00.000Z",
+            "value": 45.3
+          },
+          {
+            "dateFrom": "2022-09-01T00:00:00.000Z",
+            "dateTo": "2022-09-01T00:00:00.000Z",
+            "value": 40.7
+          },
+          {
+            "dateFrom": "2022-10-01T00:00:00.000Z",
+            "dateTo": "2022-10-01T00:00:00.000Z",
+            "value": 42.2
+          },
+          {
+            "dateFrom": "2022-11-01T00:00:00.000Z",
+            "dateTo": "2022-11-01T00:00:00.000Z",
+            "value": 30.3
+          },
+          {
+            "dateFrom": "2022-12-01T00:00:00.000Z",
+            "dateTo": "2022-12-01T00:00:00.000Z",
+            "value": 40.6
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

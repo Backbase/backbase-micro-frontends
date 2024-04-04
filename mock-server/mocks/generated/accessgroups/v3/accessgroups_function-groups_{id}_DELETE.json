@@ -1,0 +1,14 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/function-groups/{id}_DELETE",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/function-groups/[^/]+(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    }
+  }
+}

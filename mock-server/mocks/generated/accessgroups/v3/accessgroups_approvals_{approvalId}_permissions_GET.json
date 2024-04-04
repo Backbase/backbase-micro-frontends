@@ -1,0 +1,124 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/approvals/{approvalId}/permissions_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/approvals/[^/]+/permissions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalId": "606d4532-f8d9-4a5f-36kl-887baf88fa24",
+        "creatorUserId": "69ef5b3c-3997-4ee9-9f11-cb14447cf572",
+        "userId": "606d4532-f8d9-4a5f-840a-887baf88fa24",
+        "userFullName": "Jack Sparrow",
+        "serviceAgreementId": "606d4532-f8d9-4a5f-840a-887baf88fa24",
+        "serviceAgreementName": "Backbase SA",
+        "serviceAgreementDescription": "Detailed desscription of the SA.",
+        "action": "EDIT",
+        "category": "Assign Permissions",
+        "newFunctionGroups": [
+          {
+            "id": "c18dda63-27fa-4e4f-8882-24b24b0d46df",
+            "name": "FGName",
+            "type": "REGULAR",
+            "description": "Function Group Description",
+            "dataGroups": [
+              {
+                "id": "c18dda63-27fa-4e4f-8882-24b24b0d46df",
+                "name": "DGName",
+                "description": "Function Group Description",
+                "type": "CONTACTS"
+              }
+            ],
+            "selfApprovalPolicies": [
+              {
+                "businessFunctionCode": "manage.users",
+                "canSelfApprove": false
+              }
+            ]
+          }
+        ],
+        "removedFunctionGroups": [
+          {
+            "id": "0955e686-d31e-4216-b3dd-5d66161d536d",
+            "name": "FGName",
+            "type": "TEMPLATE",
+            "description": "Function Group Description",
+            "dataGroups": [
+              {
+                "id": "d9b299b0-ca28-4683-a3c1-9a339abfb5e4",
+                "name": "DGName",
+                "description": "Data Group Description",
+                "type": "CONTACTS"
+              }
+            ],
+            "selfApprovalPolicies": [
+              {
+                "businessFunctionCode": "manage.users",
+                "canSelfApprove": false
+              }
+            ]
+          }
+        ],
+        "modifiedFunctionGroups": [
+          {
+            "id": "d9b299b0-ca28-4683-a3c1-9a339abfb5e4",
+            "name": "FGName",
+            "type": "TEMPLATE",
+            "description": "Function Group Description",
+            "newDataGroups": [
+              {
+                "id": "5690bd25-b9db-493a-9659-3d5e505c7358",
+                "name": "DGName",
+                "description": "Data Group Description",
+                "type": "CONTACTS"
+              }
+            ],
+            "removedDataGroups": [
+              {
+                "id": "5f5c3714-289e-4f0c-bdb0-0b5a749f8beb",
+                "name": "DGName",
+                "description": "Data Group Description",
+                "type": "CUSTOMERS"
+              }
+            ],
+            "unmodifiedDataGroups": [
+              {
+                "id": "10c387f2-4348-483e-ba98-f9b73926df4b",
+                "name": "DGName",
+                "description": "Data Group Description",
+                "type": "ARRANGEMENTS"
+              }
+            ]
+          }
+        ],
+        "unmodifiedFunctionGroups": [
+          {
+            "id": "08cb2ed4-2691-4a28-8219-37378917e58d",
+            "name": "FGName",
+            "type": "REGULAR",
+            "description": "Function Group Description",
+            "dataGroups": [
+              {
+                "id": "619f3d39-9647-46c7-ac70-6218382ebc4d",
+                "name": "DGName",
+                "description": "Data Group Description",
+                "type": "CUSTOMERS"
+              }
+            ],
+            "selfApprovalPolicies": [
+              {
+                "businessFunctionCode": "manage.users",
+                "canSelfApprove": false
+              }
+            ]
+          }
+        ],
+        "requiredApproves": 3,
+        "completedApproves": 1
+      },
+      "default": true
+    }
+  }
+}

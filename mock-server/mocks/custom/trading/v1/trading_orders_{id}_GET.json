@@ -1,0 +1,98 @@
+{
+  "name": "/client-api/v1/trading/orders/{id}_GET",
+  "request": {
+    "url": "/client-api/v1/trading/orders/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "x-total-count": 25
+      },
+      "data": {
+        "id": "55bbeace-274e-22ec-5487-0242ac130003",
+        "date": "2021-09-07T12:00:00.000Z",
+        "type": "Market Order",
+        "tradeDirection": "Buy",
+        "status": "Filled",
+        "instrument": {
+          "id": "24aaeace-274e-22ec-5487-0242ac130003",
+          "name": "Apple",
+          "ticker": "AAPL",
+          "exchange": "NASDAQ",
+          "price": {
+            "amount": 1247.15,
+            "currency": "USD"
+          },
+          "iconUrl": "/client-api/v1/trading/instruments/24aaeace-274e-22ec-5487-0242ac130003/icons"
+        },
+        "portfolio": {
+          "id": "66bbeace-274e-55ec-5487-0242ac130008",
+          "name": "Trading portfolio 2",
+          "iban": "NL79RABO5373380477",
+          "alias": "My second portfolio to trade"
+        },
+        "account": {
+          "id": "66bbeace-274e-55ec-5487-0242ac130009",
+          "name": "Trading account",
+          "iban": "NL79RABO5373380477"
+        },
+        "value": {
+          "amount": 13095.1,
+          "currency": "USD"
+        },
+        "quantity": 10.5,
+        "totalValue": {
+          "amount": 13160.6,
+          "currency": "USD"
+        },
+        "commissionFee": {
+          "amount": 65.5,
+          "currency": "USD"
+        },
+        "transactionId": "TN0908310923"
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

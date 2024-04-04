@@ -1,0 +1,31 @@
+{
+  "name": "/client-api/verification/v1/android/challenges_POST",
+  "request": {
+    "url": "/client-api/verification/v1/android/challenges(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "nonce": "base64 encoded long string"
+      },
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

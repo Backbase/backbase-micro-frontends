@@ -1,0 +1,14 @@
+{
+  "name": "/client-api/v3/audit-log/stored-content_GET",
+  "request": {
+    "url": "/client-api/v3/audit-log/stored-content(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": "\"timestamp\",\"eventCategory\",\"objectType\",\"eventAction\",\"eventDescription\",\"status\",\"username\",\"userId\",\"messageSetId\",\"eventMetaData__AccountGroup Name\",\"eventMetaData__Account Added\",\"ipAddress\",\"legalEntityId\",\"serviceAgreementId\",\"schemaVersion\",\"userAgent\",\"error\"\n\"2020-09-24T13:28:57.896Z\",\"Access Control\",\"Data Group\",\"Update\",\"JBloggs changed Account Group 'MyAccountGroup'. Added account: ABC123\",\"Initiated\",\"JBloggs\",\"8ad6818b682e6e7201682f853a8f0002\",\"8ab2b95874742cc201748cf9a8a106768305\",\"MyAccountGroup\",\"ABC123\",\"\",\"\",\"\",\"\",\"\",\"\"\n\"2020-09-24T13:29:01.549Z\",\"Access Control\",\"Data Group\",\"Update\",\"JBloggs changed Account Group 'MyAccountGroup'. Added account: ABC123\",\"Successful\",\"JBloggs\",\"8ad6818b682e6e7201682f853a8f0002\",\"8ab2b95874742cc201748cf9a8a106768305\",\"MyAccountGroup\",\"ABC123\",\"86.3.123.123\",\"8ad6818b682e6f3c01682f8536c60198\",\"8ad6818b682e6f3c01682f85381a0199\",\"1.2.3\",\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\",\"\"\n\"2020-09-24T13:29:01.549Z\",\"Access Control\",\"Data Group\",\"Update\",\"JBloggs changed Account Group 'MyAccountGroup'. Added account: ABC123\",\"Failed\",\"JBloggs\",\"8ad6818b682e6e7201682f853a8f0002\",\"8ab2b95874742cc201748cf9a8a106768305\",\"MyAccountGroup\",\"ABC123\",\"86.3.123.123\",\"8ad6818b682e6f3c01682f8536c60198\",\"8ad6818b682e6f3c01682f85381a0199\",\"1.2.3\",\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36\",\"Cannot update, account 'ABC123' does not exist.\"",
+      "default": true
+    }
+  }
+}

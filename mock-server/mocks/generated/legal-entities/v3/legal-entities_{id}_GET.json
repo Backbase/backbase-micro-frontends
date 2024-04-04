@@ -1,0 +1,22 @@
+{
+  "name": "/access-control/client-api/v3/legal-entities/{id}_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/legal-entities/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "e1d55a46-656a-491b-b6e0-443ff09bbe52",
+        "externalId": "ext1",
+        "name": "Endava",
+        "parentId": "e1d55a46-656a-491b-b6e0-443ff09bbe52",
+        "type": "CUSTOMER",
+        "isParent": false,
+        "customerCategory": "RETAIL"
+      },
+      "default": true
+    }
+  }
+}

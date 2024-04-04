@@ -1,0 +1,74 @@
+{
+  "name": "/client-api/v2/batch-upload-bulks/{batchUploadBulkId}/status_GET",
+  "request": {
+    "url": "/client-api/v2/batch-upload-bulks/[^/]+/status(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_PENDING"
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_DECLINED",
+        "reasonCode": "USRD"
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "status": "CONFIRMATION_DECLINED",
+        "reasonCode": "SYSD"
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "status": "READY",
+        "batchUploadIds": [
+          "1ce476e7-80f7-4242-80bf-a4046bfb5990",
+          "eebf02e4-107d-426e-9fa6-b49f103f172f",
+          "35b4465a-6ab7-4a70-a4fe-c17032039616"
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

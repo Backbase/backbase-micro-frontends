@@ -1,0 +1,58 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/performance-benchmarks_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/performance-benchmarks(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "uuid": "c7ab6eda-14c3-4c5c-b988-29c4e6367213",
+          "name": "Consumer Durables"
+        },
+        {
+          "uuid": "7ea777c5-5a12-4665-84d0-7fe3e8b3a2dd",
+          "name": "Armageddon"
+        },
+        {
+          "uuid": "aeb53dba-2e91-49d1-9e27-02e6e5ca2f40",
+          "name": "Consumer Services"
+        },
+        {
+          "uuid": "b3739def-ba74-4656-bf0c-f42ad2ce3711",
+          "name": "Wife"
+        },
+        {
+          "uuid": "6ad98bb2-a091-4d0f-8390-45f80818af90",
+          "name": "Technology"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

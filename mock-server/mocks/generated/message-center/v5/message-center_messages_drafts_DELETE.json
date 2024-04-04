@@ -1,0 +1,17 @@
+{
+  "name": "/client-api/v5/message-center/messages/drafts_DELETE",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/drafts(\\?.*)?$",
+    "method": "DELETE"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "deleted": ["e92bbe7d-10cf-4d7c-b7b5-eadb7632812a", "58ee5037-8dce-43ab-b734-e2b90a189b81"],
+        "failed": ["b0069a89-3dcb-4bdc-b7da-fc65643064a6", "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395c9"]
+      },
+      "default": true
+    }
+  }
+}

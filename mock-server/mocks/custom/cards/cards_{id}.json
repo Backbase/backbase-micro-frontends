@@ -1,0 +1,354 @@
+{
+  "name": "/client-api/v2/cards/{id}",
+  "request": {
+    "url": "/client-api/v2/cards/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "id": "sara-card-1",
+        "brand": "mastercard",
+        "type": "Credit",
+        "subType": "ATM",
+        "name": "Gold Card",
+        "status": "Active",
+        "lockStatus": "UNLOCKED",
+        "replacement": {
+          "status": "NotUnderReplacement"
+        },
+        "holder": {
+          "name": "Sara Williams"
+        },
+        "expiryDate": {
+          "year": "2022",
+          "month": "12"
+        },
+        "currency": "USD",
+        "maskedNumber": "5235",
+        "limits": [
+          {
+            "id": "sara-limit-1",
+            "channel": "ATM",
+            "frequency": "DAILY",
+            "amount": 3000,
+            "maxAmount": 10000,
+            "minAmount": 0
+          },
+          {
+            "id": "sara-limit-2",
+            "channel": "ONLINE",
+            "frequency": "DAILY",
+            "amount": 2000,
+            "maxAmount": 10000,
+            "minAmount": 0
+          }
+        ]
+      }
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "id": "elon-card-1",
+        "brand": "mastercard",
+        "type": "Credit",
+        "subType": "ATM",
+        "name": "World Elite",
+        "status": "Active",
+        "lockStatus": "UNLOCKED",
+        "replacement": {
+          "status": "NotUnderReplacement"
+        },
+        "holder": {
+          "name": "Elon"
+        },
+        "expiryDate": {
+          "year": "2050",
+          "month": "12"
+        },
+        "currency": "EUR",
+        "maskedNumber": "5235",
+        "delivery": {
+          "transitSteps": [
+            {
+              "name": "Ordered",
+              "status": "SUCCESS",
+              "stepDateTime": "2019-06-19T12:52:20.906Z"
+            },
+            {
+              "name": "Processed",
+              "status": "PENDING"
+            },
+            {
+              "name": "In Transit",
+              "status": "PENDING"
+            },
+            {
+              "name": "Delivered",
+              "status": "PENDING",
+              "stepDateTime": "2019-06-20T14:21:25.001Z"
+            }
+          ]
+        },
+        "limits": [
+          {
+            "id": "elon-limit-1",
+            "channel": "ATM",
+            "frequency": "DAILY",
+            "amount": 500000,
+            "maxAmount": 100000,
+            "minAmount": 0
+          },
+          {
+            "id": "elon-limit-2",
+            "channel": "ONLINE",
+            "frequency": "DAILY",
+            "amount": 1000000,
+            "maxAmount": 800000,
+            "minAmount": 10000
+          }
+        ]
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "id": "john-card-1",
+        "brand": "visa",
+        "type": "Credit",
+        "subType": "ATM",
+        "name": "Gold",
+        "status": "Active",
+        "lockStatus": "UNLOCKED",
+        "replacement": {
+          "status": "NotUnderReplacement"
+        },
+        "holder": {
+          "name": "John Doe"
+        },
+        "expiryDate": {
+          "year": "2030",
+          "month": "06"
+        },
+        "currency": "EUR",
+        "maskedNumber": "5827",
+        "delivery": {
+          "transitSteps": [
+            {
+              "name": "Ordered",
+              "status": "SUCCESS",
+              "stepDateTime": "2019-06-19T12:52:20.906Z"
+            },
+            {
+              "name": "Processed",
+              "status": "SUCCESS"
+            },
+            {
+              "name": "In Transit",
+              "status": "SUCCESS"
+            },
+            {
+              "name": "Delivered",
+              "status": "SUCCESS"
+            }
+          ]
+        },
+        "limits": [
+          {
+            "id": "john-limit-1",
+            "channel": "ATM",
+            "frequency": "DAILY",
+            "amount": 5000,
+            "maxAmount": 1000,
+            "minAmount": 0
+          },
+          {
+            "id": "john-limit-2",
+            "channel": "ONLINE",
+            "frequency": "DAILY",
+            "amount": 20000,
+            "maxAmount": 9000,
+            "minAmount": 0
+          }
+        ]
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "id": "kim-card-1",
+        "brand": "mastercard",
+        "type": "Debit",
+        "subType": "ATM",
+        "name": "Copper",
+        "status": "Inactive",
+        "lockStatus": "UNLOCKED",
+        "replacement": {
+          "status": "NotUnderReplacement"
+        },
+        "holder": {
+          "name": "Kim Sook"
+        },
+        "expiryDate": {
+          "year": "2027",
+          "month": "03"
+        },
+        "currency": "EUR",
+        "maskedNumber": "9292"
+      }
+    },
+    "success_4": {
+      "status": 200,
+      "data": {
+        "delivery": {
+          "additions": {
+            "key": "additions"
+          },
+          "transitSteps": [
+            {
+              "additions": {
+                "key": "additions"
+              },
+              "name": "name",
+              "stepDateTime": "2000-01-23T04:56:07.000+00:00",
+              "status": "SUCCESS"
+            },
+            {
+              "additions": {
+                "key": "additions"
+              },
+              "name": "name",
+              "stepDateTime": "2000-01-23T04:56:07.000+00:00",
+              "status": "SUCCESS"
+            }
+          ]
+        },
+        "additions": {
+          "key": "additions"
+        },
+        "holder": {
+          "additions": {
+            "key": "additions"
+          },
+          "name": "name"
+        },
+        "type": "type",
+        "expiryDate": {
+          "month": "month",
+          "additions": {
+            "key": "additions"
+          },
+          "year": "year"
+        },
+        "maskedNumber": "maskedNumber",
+        "name": "name",
+        "subType": "subType",
+        "currency": "currency",
+        "id": "id",
+        "brand": "brand",
+        "replacement": {
+          "reason": "reason",
+          "replacingId": "replacingId",
+          "additions": {
+            "key": "additions"
+          },
+          "replacedById": "replacedById",
+          "status": "status"
+        },
+        "limits": [
+          {
+            "minAmount": 1.4658129805029452,
+            "amount": 0.8008281904610115,
+            "additions": {
+              "key": "additions"
+            },
+            "channel": "channel",
+            "id": "id",
+            "maxAmount": 6.027456183070403,
+            "frequency": "frequency"
+          },
+          {
+            "minAmount": 1.4658129805029452,
+            "amount": 0.8008281904610115,
+            "additions": {
+              "key": "additions"
+            },
+            "channel": "channel",
+            "id": "id",
+            "maxAmount": 6.027456183070403,
+            "frequency": "frequency"
+          }
+        ],
+        "status": "status"
+      }
+    },
+    "success_5": {
+      "status": "200",
+      "data": {
+        "id": "kim-card-1",
+        "brand": "mastercard",
+        "type": "Debit",
+        "subType": "ATM",
+        "name": "Copper",
+        "status": "Active",
+        "lockStatus": "UNLOCKED",
+        "replacement": {
+          "status": "NotUnderReplacement"
+        },
+        "holder": {
+          "name": "Kim Sook"
+        },
+        "expiryDate": {
+          "year": "2027",
+          "month": "03"
+        },
+        "currency": "EUR",
+        "maskedNumber": "9292",
+        "additions": {
+          "img": "assets/creatives/cards-custom-bg.jpg"
+        }
+      }
+    }
+  }
+}

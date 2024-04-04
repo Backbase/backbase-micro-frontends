@@ -1,0 +1,110 @@
+{
+  "name": "/client-api/v2/bill-pay/payments_POST",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payments(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "payments": [
+          {
+            "payeeID": "payee1",
+            "paymentID": "payment1",
+            "errors": []
+          },
+          {
+            "payeeID": "payee2",
+            "paymentID": "payment2",
+            "errors": []
+          },
+          {
+            "payeeID": "payee3",
+            "errors": [
+              {
+                "message": "Invalid next payment date",
+                "key": "billpay.api.invalidNextPaymentDate"
+              },
+              {
+                "message": "Payment already exists",
+                "key": "billpay.api.paymentAlreadyExists"
+              }
+            ]
+          },
+          {
+            "payeeID": "payee4",
+            "paymentID": "payment4",
+            "errors": []
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [],
+        "payments": [
+          {
+            "payeeID": "1",
+            "errors": [
+              {
+                "message": "The payee is invalid",
+                "key": "billpay.api.invalidPayee"
+              }
+            ]
+          },
+          {
+            "payeeID": "2",
+            "errors": [
+              {
+                "message": "The payee is invalid",
+                "key": "billpay.api.invalidPayee"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "name": "/client-api/v2/limits/global/approvals/{approvalId}_GET",
+  "request": {
+    "url": "/client-api/v2/limits/global/approvals/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "approvalId": "bc1c03f2-6483-46ca-a7ec-192a2d963a8d",
+        "currency": "EUR",
+        "limits": [
+          {
+            "alias": "Personal",
+            "uuid": "e211eded-572f-48b1-8940-ae7a301838cb",
+            "entities": [
+              {
+                "type": "USER"
+              }
+            ],
+            "bounds": [
+              {
+                "type": "daily",
+                "effectiveAmount": "200.00",
+                "pendingAmount": "300.00"
+              },
+              {
+                "type": "weekly",
+                "effectiveAmount": "1000.00",
+                "pendingAmount": ""
+              },
+              {
+                "type": "transactional",
+                "effectiveAmount": "",
+                "pendingAmount": "300.00"
+              }
+            ]
+          },
+          {
+            "alias": "Service Agreement",
+            "uuid": "ac825135-96ac-4883-8f46-aa5bd9497745",
+            "entities": [
+              {
+                "type": "SA"
+              }
+            ],
+            "bounds": [
+              {
+                "type": "daily",
+                "effectiveAmount": "400.00",
+                "pendingAmount": ""
+              },
+              {
+                "type": "weekly",
+                "effectiveAmount": "800.00",
+                "pendingAmount": "600"
+              },
+              {
+                "type": "transactional",
+                "effectiveAmount": "300.00",
+                "pendingAmount": "300.00"
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

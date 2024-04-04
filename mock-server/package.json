@@ -1,0 +1,13 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node mock-server.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "@ng-apimock/core": "^3.11.2",
+    "@ng-apimock/dev-interface": "^3.3.1",
+    "express": "^4.19.1"
+  }
+}

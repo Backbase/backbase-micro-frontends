@@ -1,0 +1,71 @@
+{
+  "name": "/client-api/v1/payment-options_POST",
+  "request": {
+    "url": "/client-api/v1/payment-options(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "options": [
+          {
+            "paymentType": "US_FOREIGN_WIRE",
+            "paymentOptions": [
+              {
+                "instructionPriority": "NORM",
+                "transferFee": {
+                  "amount": "15.29",
+                  "currencyCode": "USD"
+                },
+                "chargeBearer": ["OUR", "SHA"],
+                "executionTimeFrame": {
+                  "unit": "BUSINESS_DAY",
+                  "max": 1
+                },
+                "cutOffTime": "16:00"
+              },
+              {
+                "instructionPriority": "HIGH",
+                "transferFee": {
+                  "amount": "20.00",
+                  "currencyCode": "USD"
+                },
+                "chargeBearer": ["OUR", "SHA"],
+                "executionTimeFrame": {
+                  "unit": "HOUR",
+                  "min": 1,
+                  "max": 2
+                },
+                "cutOffTime": "16:00"
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

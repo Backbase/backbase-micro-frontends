@@ -1,0 +1,75 @@
+{
+  "name": "/client-api/v1/trading/instruments/watchlist_GET",
+  "request": {
+    "url": "/client-api/v1/trading/instruments/watchlist(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "instruments": [
+          {
+            "id": "117c6345-0fee-11ec-82a8-0242ac130003",
+            "name": "Apple",
+            "ticker": "AAPL",
+            "exchange": "NASDAQ",
+            "price": {
+              "amount": 147.15,
+              "currency": "USD"
+            },
+            "pricePerformance": 7.81,
+            "pricePerformanceAbs": {
+              "amount": 1.48,
+              "currencyCode": "USD"
+            },
+            "totalVolume": 200,
+            "iconUrl": "/client-api/v1/trading/instruments/117c6345-0fee-11ec-82a8-0242ac130003/icons"
+          },
+          {
+            "id": "17bbeace-274e-22ec-9621-0242ac130003",
+            "name": "Tesla",
+            "instrumentNameLong": "Tesla",
+            "ticker": "TSLA",
+            "exchange": "NASDAQ",
+            "price": {
+              "amount": 127.15,
+              "currency": "USD"
+            },
+            "pricePerformance": 6.81,
+            "pricePerformanceAbs": {
+              "amount": 1.32,
+              "currencyCode": "USD"
+            },
+            "totalVolume": 100,
+            "iconUrl": "/client-api/v1/trading/instruments/17bbeace-274e-22ec-9621-0242ac130003/icons"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "name": "/client-api/v1/sanctioned-countries_GET",
+  "request": {
+    "url": "/client-api/v1/sanctioned-countries(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "countries": [
+          {
+            "country": "AE",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "IBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification",
+                "regex": "/^[a-zA-Z0-9]{23}$/"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["AED", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "AU",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "bsb": "BSB code"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{6}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["AUD", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "BR",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "IBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification",
+                "regex": "/^[a-zA-Z0-9]{29}$/"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["BRL", "EUR", "GBP", "USD"]
+              },
+              {
+                "key": "purpose-of-payment",
+                "mandatory": true
+              }
+            ]
+          },
+          {
+            "country": "CA",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "routing-number": "Routing number"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{9}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["CAD", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "CN",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["EUR", "GBP", "USD"]
+              },
+              {
+                "key": "purpose-of-payment",
+                "mandatory": true,
+                "notApplicable": false,
+                "predefinedValues": true
+              }
+            ],
+            "purposesOfPayment": [
+              {
+                "code": "PAYT/02123",
+                "description": "Individual Payment"
+              },
+              {
+                "code": "PAYT/02112",
+                "description": "Trade related Payment"
+              },
+              {
+                "code": "PAYT/02114",
+                "description": "Service related Payment"
+              }
+            ]
+          },
+          {
+            "country": "GB",
+            "isDefault": true,
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "sort-code": "Sort code"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{6}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "HK",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "clearing": "Clearing code"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{3}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["HKD", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "IN",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "ifsc": "IFSC"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[a-zA-Z0-9]{3}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["INR", "EUR", "GBP", "USD"]
+              },
+              {
+                "key": "purpose-of-payment",
+                "mandatory": true,
+                "notApplicable": false,
+                "predefinedValues": true
+              }
+            ],
+            "purposesOfPayment": [
+              {
+                "code": "P1004",
+                "description": "Legal services"
+              },
+              {
+                "code": "P0401",
+                "description": "Postal services"
+              },
+              {
+                "code": "P0402",
+                "description": "Courier services"
+              }
+            ]
+          },
+          {
+            "country": "JO",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "IBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification",
+                "regex": "/^[a-zA-Z0-9]{30}$/"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["JOD", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "JP",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["JPY", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "NL",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "IBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification",
+                "regex": "/^[a-zA-Z0-9]{18}$/"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "RU",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "bik": "BIK"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{9}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["RUB", "EUR", "GBP", "USD"]
+              },
+              {
+                "key": "purpose-of-payment",
+                "mandatory": true,
+                "notApplicable": false,
+                "predefinedValues": true
+              }
+            ],
+            "purposesOfPayment": [
+              {
+                "code": "01010",
+                "description": "Selling by Residents of foreign currencies for Russian Roubles"
+              },
+              {
+                "code": "99010",
+                "description": "The return to Residents, of erroneously debited (credited) funds"
+              },
+              {
+                "code": "01030",
+                "description": "Purchases by Residents of foreign currencies for Russian Roubles"
+              }
+            ]
+          },
+          {
+            "country": "SA",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "za-code": "ZA code"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{6}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["ZAR", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "SG",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "notApplicable": true,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["SGD", "EUR", "GBP", "USD"]
+              }
+            ]
+          },
+          {
+            "country": "US",
+            "inputFormSettings": [
+              {
+                "key": "account-number",
+                "format": "BBAN",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyAccount.identification.identification"
+              },
+              {
+                "key": "bank-code",
+                "label": {
+                  "routing-number": "Routing transit number (ABA)"
+                },
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.counterpartyBank.bankBranchCode",
+                "regex": "/^[0-9]{9}$/"
+              },
+              {
+                "key": "currency",
+                "mandatory": true,
+                "notApplicable": false,
+                "apiField": "transferTransactionInformation.instructedAmount.currencyCode",
+                "values": ["EUR", "GBP", "USD"]
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

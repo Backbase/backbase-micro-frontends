@@ -1,0 +1,110 @@
+{
+  "name": "/client-api/v2/portfoliosummary/custom-list_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/custom-list(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "name": "Consumer Durables",
+          "uuid": "c7ab6eda-14c3-4c5c-b988-29c4e6367213"
+        },
+        {
+          "name": "Armageddon",
+          "uuid": "7ea777c5-5a12-4665-84d0-7fe3e8b3a2dd"
+        },
+        {
+          "name": "Consumer Services",
+          "uuid": "aeb53dba-2e91-49d1-9e27-02e6e5ca2f40"
+        },
+        {
+          "name": "Wife",
+          "uuid": "b3739def-ba74-4656-bf0c-f42ad2ce3711"
+        },
+        {
+          "name": "Technology",
+          "uuid": "6ad98bb2-a091-4d0f-8390-45f80818af90"
+        },
+        {
+          "name": "Capital Goods",
+          "uuid": "20fd897a-a4ab-4a96-924f-b89386ad860f"
+        },
+        {
+          "name": "Car Industry",
+          "uuid": "d91dc92f-1cb2-464f-9e1e-3e1f770d9ba2"
+        },
+        {
+          "name": "Finance",
+          "uuid": "173a42fd-3298-4abf-91f6-1d05abbaaaa4"
+        },
+        {
+          "name": "Energy",
+          "uuid": "54232a85-f8ad-4fb4-ba42-7f45fbcb58bc"
+        },
+        {
+          "name": "Parents",
+          "uuid": "502dfbeb-bd23-477b-b345-796891b15f72"
+        },
+        {
+          "name": "Kids",
+          "uuid": "10154998-7eff-42d8-84ec-0a76c09c7cea"
+        },
+        {
+          "name": "Future Technology",
+          "uuid": "d9596a95-ac0f-42c3-b7db-7e7a37ed05c6"
+        },
+        {
+          "name": "Electronics",
+          "uuid": "879aac8c-6e4d-431e-a9b1-cc2851748ff1"
+        },
+        {
+          "name": "John Gold",
+          "uuid": "941900e8-0034-4d2e-a338-5aafeb09f386"
+        },
+        {
+          "name": "Yacht",
+          "uuid": "1b4a837f-5e05-433f-b09f-d91842f5ee80"
+        },
+        {
+          "name": "Islands",
+          "uuid": "c5e0cbe3-c070-417e-ab86-ed7ec6e23964"
+        },
+        {
+          "name": "Record Company",
+          "uuid": "1ecbc630-24e4-42fd-bd1b-9bec00c5dedc"
+        },
+        {
+          "name": "My Film",
+          "uuid": "b798361f-c59e-455b-a51c-66668d1eab2c"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "name": "/client-api/v2/bill-pay/payees/electronic/{id}/ebills_GET",
+  "request": {
+    "url": "/client-api/v2/bill-pay/payees/electronic/[^/]+/ebills(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "ebills": [
+          {
+            "id": "20141219140239655592",
+            "payeeID": "0001",
+            "paymentDate": "2019-04-01",
+            "amount": {
+              "amount": "100.99",
+              "currencyCode": "USD"
+            },
+            "minAmountDue": {
+              "amount": "20.50",
+              "currencyCode": "USD"
+            },
+            "outstandingBalance": {
+              "amount": "101.98",
+              "currencyCode": "USD"
+            },
+            "status": "UNPAID",
+            "statementAvailable": true
+          },
+          {
+            "id": "20141219140239655591",
+            "payeeID": "0001",
+            "paymentDate": "2019-03-01",
+            "amount": {
+              "amount": "100.99",
+              "currencyCode": "USD"
+            },
+            "minAmountDue": {
+              "amount": "20.50",
+              "currencyCode": "USD"
+            },
+            "outstandingBalance": {
+              "amount": "201.98",
+              "currencyCode": "USD"
+            },
+            "status": "PAID",
+            "statementAvailable": true,
+            "paymentId": "abc0192802"
+          },
+          {
+            "id": "20141219140239655590",
+            "payeeID": "0001",
+            "paymentDate": "2019-02-01",
+            "amount": {
+              "amount": "100.99",
+              "currencyCode": "USD"
+            },
+            "minAmountDue": {
+              "amount": "20.50",
+              "currencyCode": "USD"
+            },
+            "outstandingBalance": {
+              "amount": "301.98",
+              "currencyCode": "USD"
+            },
+            "status": "PAID",
+            "url": "http://my.ebill.pdf",
+            "statementAvailable": false
+          }
+        ],
+        "totalCount": 3
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "notSupported": {
+      "status": 501,
+      "data": {
+        "message": "Operation not supported"
+      }
+    },
+    "badGateway": {
+      "status": 502,
+      "data": {
+        "message": "Bad Gateway",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Internal error calling API provider",
+            "key": "common.api.providerInternalError"
+          }
+        ]
+      }
+    },
+    "gatewayTimeout": {
+      "status": 504,
+      "data": {
+        "message": "Gateway Timeout",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "API provider unavailable.",
+            "key": "common.api.providerUnavailable"
+          }
+        ]
+      }
+    }
+  }
+}

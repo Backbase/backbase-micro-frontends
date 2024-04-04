@@ -1,0 +1,95 @@
+{
+  "name": "/client-api/v1/forecast-configurations_GET",
+  "request": {
+    "url": "/client-api/v1/forecast-configurations(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "configurations": [
+          {
+            "currencyCode": "EUR",
+            "bankAccountIds": [
+              "99bae364-1aa4-45a7-87e5-249d5b22242c",
+              "4d3740af-11f3-4bd8-915e-4850184ede9f",
+              "473ec899-85a7-49f0-9fca-961bfb133d9c"
+            ],
+            "chartOfAccountIds": [
+              "43032a1e-f466-40fd-8ed7-f92acbd0ecb6",
+              "846bdab7-5b95-4977-a71f-3a8fdd28770b",
+              "860acb60-ddcb-4a56-a773-947b1883eaf0"
+            ]
+          },
+          {
+            "currencyCode": "USD",
+            "bankAccountIds": [
+              "fecfcdc6-8675-457d-b3b1-07b254bc7445",
+              "02556b90-d759-4efe-ac74-4fa6286b07ab",
+              "2c04b8e1-4fdf-4317-870e-d2caf5474b75"
+            ],
+            "chartOfAccountIds": [
+              "0bd55bdb-f407-4b1b-a049-995a534a6877",
+              "6e37e319-c753-4f70-8842-50dec650ed67",
+              "0f52a8d1-66a7-4a0c-94fb-3f7f3644c913"
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

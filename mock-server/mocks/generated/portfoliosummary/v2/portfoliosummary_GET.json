@@ -1,0 +1,3318 @@
+{
+  "name": "/client-api/v2/portfoliosummary_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "IBAN": "OL52001456017513",
+          "clientName": "Meriel Petschel",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "1895982.86",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "7588636.44",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "19877350.80",
+            "currencyCode": "EUR"
+          },
+          "netCashTotal": {
+            "amount": "-12288714.36",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24156315.31",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.82,
+          "performanceYTD": {
+            "amount": "30156280.18",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "favorite": true,
+          "performanceYTDpct": 2.02,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 41.05,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 27.58,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 14.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 8.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 5.2,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 1.4,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "051f1b8f-8369-4587-89c2-856ee9990f2d",
+              "name": "Maud Karpets"
+            },
+            {
+              "id": "7a781a6a-f6b2-4c33-9d48-0c5be1a07f1b",
+              "name": "Brina Godart"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "80eef010-055c-43f1-94a8-d2b58b4e1680",
+              "name": "Daisey Meconi"
+            }
+          ],
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "HS19915622324357",
+          "clientName": "Wat Coltherd",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "10963980.58",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "520560.20",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "17025296.92",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "7410143.97",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.32,
+          "performanceYTD": {
+            "amount": "50573059.51",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "favorite": true,
+          "performanceYTDpct": -4.59,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "628fad8d-3a60-4e71-839a-4b11ed3c97ed",
+              "name": "Zollie Webben"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "4d9f2778-e7ee-4b5d-aa47-0e4228de1702",
+              "name": "Rachelle Laimable"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-16504736.72",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "TC24995049762082",
+          "clientName": "Jean Riggoll",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "24632359.96",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "19347556.83",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "47854103.77",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "52268906.79",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.06,
+          "performanceYTD": {
+            "amount": "3447178.99",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 4.55,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "793834b6-5e62-4926-bbe5-436caaed9c46",
+              "name": "Ber Battyll"
+            },
+            {
+              "id": "c160404f-48ba-4e07-8e2f-e4e39422a8de",
+              "name": "Christian Arnao"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "8a828248-52d6-4f66-985e-9084e43e419f",
+              "name": "Regine Kaesmans"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-28506546.94",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "MQ25729403022801",
+          "clientName": "Frieda Blower",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "28433531.31",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "15875429.02",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "6207453.08",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "54384364.50",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.33,
+          "performanceYTD": {
+            "amount": "21299496.69",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 0.16,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 58.23,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 24.98,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 13.11,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 5.8,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 2.11,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": -4.23,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "93b5b7c5-0193-42cd-8f5c-70af3519c6c8",
+              "name": "Hyacinthie McCart"
+            },
+            {
+              "id": "a28e12f4-f843-461f-a158-d70a8b254fd0",
+              "name": "Ermanno Pettyfer"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "fdd4e528-63ed-4a42-aa51-ec07a61e003c",
+              "name": "Corrine Bullen"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "9667975.94",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "ER61365546077005",
+          "clientName": "Evita Oakman",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "24872048.03",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "47107407.98",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "29116022.20",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "51440288.58",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.48,
+          "performanceYTD": {
+            "amount": "9995294.91",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 6.82,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.05,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 24.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 5.17,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 2.59,
+              "name": "Obligations"
+            }
+          ],
+          "managers": [
+            {
+              "id": "a0fddbf9-83de-4336-9170-ad9da5d20011",
+              "name": "Nelli Colvill"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "14efd93a-4450-45be-9028-c5e409829305",
+              "name": "Gertruda Ubee"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "17991385.78",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "ZR29916810575455",
+          "clientName": "Boycey Linner",
+          "alias": "Father",
+          "valuation": {
+            "amount": "12110112.83",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "2733568.13",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "19794850.26",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24344705.12",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.51,
+          "performanceYTD": {
+            "amount": "47832224.89",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 4.92,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 70.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 20.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 5.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "d0fcc688-3b22-4366-88ca-cf64ff15fe84",
+              "name": "Darleen Scourgie"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e6b38c1f-8565-40f9-8d0d-676c3add3723",
+              "name": "Aube Keunemann"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-17061282.13",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VX31822038217983",
+          "clientName": "Melisandra Oughton",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "33857576.85",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "9466730.68",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "17822102.70",
+            "currencyCode": "EUR"
+          },
+          "isFavorite": true,
+          "favorite": true,
+          "performanceMTD": {
+            "amount": "10875736.04",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.48,
+          "performanceYTD": {
+            "amount": "19690044.87",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.89,
+          "riskClass": "High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "066d3710-8c3d-4ef1-a62a-a15a7b581726",
+              "name": "Carlye Woolger"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "63adf29d-aac4-43f0-be44-8d9b615eb459",
+              "name": "Tabitha Nurden"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-8355372.02",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "OY33315843075119",
+          "clientName": "Kristofer McElree",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "1558025.67",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "23810348.23",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "24874781.72",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "29860262.37",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.67,
+          "performanceYTD": {
+            "amount": "38487837.18",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 5.24,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "2253170f-99ae-4643-87c1-fd9a7fe8ed2c",
+              "name": "Gerry Brim"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "6371ed48-8374-4c21-82e4-6686cffd7e61",
+              "name": "Shepperd Sibson"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-1064433.49",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VD66399164472100",
+          "clientName": "Zelma Parlatt",
+          "alias": "Father",
+          "valuation": {
+            "amount": "36699354.89",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "41037925.97",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "14660094.08",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "46179088.38",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.2,
+          "performanceYTD": {
+            "amount": "33848068.86",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 6.63,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "22a31e27-1cad-4eb3-92dc-e082669915db",
+              "name": "Rosita Winslow"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "f39be2bd-8416-456a-9f2c-2abe64e494fb",
+              "name": "Andriette Bennellick"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "26377831.89",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "QM77989770003666",
+          "clientName": "Guthrey Tumini",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "11154673.81",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "18442037.76",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "48942347.36",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24506814.22",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.84,
+          "performanceYTD": {
+            "amount": "34842842.52",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -1.67,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "f789b1ec-5c31-4135-9f9e-2a4a12756f78",
+              "name": "Cicely Cunnah"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "18ddab80-6bde-4d08-ae45-b44961a76c6f",
+              "name": "Erwin Phettiplace"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-30500309.60",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "AZ40373921742317",
+          "clientName": "Penni Jansen",
+          "alias": "Father",
+          "valuation": {
+            "amount": "24942491.33",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "40788330.23",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "1246886.68",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "28020832.77",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.74,
+          "performanceYTD": {
+            "amount": "3809680.39",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.81,
+          "riskClass": "High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "c9de25eb-806f-4bae-890c-7f13f332a033",
+              "name": "Bevan Dallewater"
+            },
+            {
+              "id": "17a54741-514a-409c-b7d3-a9c7fc6ba6f9",
+              "name": "Guenevere Di Pietro"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "ffde16ec-f5a3-4249-9b19-fe551c856bc5",
+              "name": "Modesta McCrystal"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "39541443.55",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VX97947747921015",
+          "clientName": "Florri Reford",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "18855857.20",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "25856053.73",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "47139144.13",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "16025041.67",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -0.4,
+          "performanceYTD": {
+            "amount": "18248565.25",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.9,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "6589723b-0f35-45d1-a5e7-1d36d4bdec48",
+              "name": "Stanfield Josifovitz"
+            },
+            {
+              "id": "b19f6c73-99e3-45cf-b40a-0e212a15017b",
+              "name": "Cybil Caplen"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "b0242bce-b3a5-41ff-afdf-3362aa5806b0",
+              "name": "Franklin Baskwell"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-21283090.40",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VQ09176733755407",
+          "clientName": "Rudolfo Galler",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "38981101.62",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "45953484.77",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "16438933.00",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "37561213.47",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.28,
+          "performanceYTD": {
+            "amount": "41390632.29",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -0.7,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "f228af60-58f9-4d79-8025-3a8f15e9b046",
+              "name": "Liz MacArthur"
+            },
+            {
+              "id": "a304f93c-d516-45f5-9cf9-330b7aeb8c09",
+              "name": "Estrellita Costerd"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "84d73751-2f2c-43b6-8b75-e39dec5921a8",
+              "name": "Lou Gilluley"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "29514551.77",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VK60249166853598",
+          "clientName": "Ava Civitillo",
+          "alias": "Father",
+          "valuation": {
+            "amount": "8659023.86",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "10563165.43",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "22725696.35",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "44736133.42",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.3,
+          "performanceYTD": {
+            "amount": "30758596.45",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 3.12,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 34.55634,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 30.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 15.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": -2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "b164e6a3-709e-4aaa-94fd-faca5a04be12",
+              "name": "Ab Neising"
+            },
+            {
+              "id": "24dd30fe-0a99-437d-8e70-c460ed56505d",
+              "name": "Robinet Spacy"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "00a48323-eff3-41f5-8bfd-014786f3426c",
+              "name": "Ardine Renvoise"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-12162530.92",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "YZ34893216423248",
+          "clientName": "Justina Kenyam",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "13880120.25",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "1883928.96",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "16068548.96",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "2821559.09",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.96,
+          "performanceYTD": {
+            "amount": "8182023.25",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -0.47,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "edf2b5ee-7441-4492-b74c-a95611decc9c",
+              "name": "Michel Gussin"
+            },
+            {
+              "id": "c4140246-eefb-40d1-b2c0-5cb98235540b",
+              "name": "Durante Winson"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "42f0ccd9-4bb7-4680-8177-bdc9ff70f1ec",
+              "name": "Datha Dear"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-14184620.00",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "RZ39562375106712",
+          "clientName": "Gillian Durrand",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "45089074.34",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "21338595.26",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "40166332.91",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "16298349.28",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.2,
+          "performanceYTD": {
+            "amount": "28690099.58",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -4.92,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "8319992d-a9a4-40ab-82a6-938962b8ee84",
+              "name": "Rivi Horsell"
+            },
+            {
+              "id": "49961fc2-5896-4434-a40b-a85950e0eae2",
+              "name": "Dara Ohlsen"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "d09c737a-6b74-4c52-b823-7cfb52db2f0d",
+              "name": "Freddie Chatelot"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-18827737.65",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "FW07615448080014",
+          "clientName": "Chic Rainy",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "24079920.80",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "3750314.77",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "10814200.00",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "12256671.28",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -0.25,
+          "performanceYTD": {
+            "amount": "50538009.45",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 5.69,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "60c977f6-7dd4-4759-925f-807400195ab1",
+              "name": "Thain Life"
+            },
+            {
+              "id": "88942478-132e-4dcb-8ae5-34e733cadd26",
+              "name": "Vassily Blenkiron"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "0e5fc148-cd1f-4fde-950b-a73b58c31a41",
+              "name": "Jillian Alldre"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-7063885.23",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "RM45114736646773",
+          "clientName": "Dunc Cardenas",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "5242649.53",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "9727238.30",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "53097925.84",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "36097830.39",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.96,
+          "performanceYTD": {
+            "amount": "11114648.46",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 0.79,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "7ccef01a-7509-4127-b225-056a75473b62",
+              "name": "Harold Challens"
+            },
+            {
+              "id": "c871fd47-279a-4138-8f0d-d1841cbbc5e6",
+              "name": "Pail Dillinton"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "7c111f23-d6c9-4eec-b311-0a209614724a",
+              "name": "Bessy Northam"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-43370687.54",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "PY43008723212556",
+          "clientName": "Ring Burgill",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "30506286.32",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "21914475.33",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "41116453.79",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "48203222.70",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.19,
+          "performanceYTD": {
+            "amount": "52867745.73",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 0.96,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "77d98b50-a8f4-4b00-baf8-3ff6810222ba",
+              "name": "Dionysus Gregoletti"
+            },
+            {
+              "id": "bd9d60e6-f5cd-40e4-ae82-c7618a747d10",
+              "name": "Jany Rippingall"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "5c4cf9d2-6e47-4ce3-9118-e9c233134465",
+              "name": "Blair Joseph"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-19201978.46",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "WA67683751780773",
+          "clientName": "Jedidiah Forty",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "39299828.15",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "27104235.65",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "2582387.40",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "30939426.98",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.38,
+          "performanceYTD": {
+            "amount": "42422714.52",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -4.86,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "0eabb21e-287b-4795-ac22-d04c6a119977",
+              "name": "Biron Roast"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e33a44f5-7312-48fd-bc7e-6cfffaafc3e9",
+              "name": "Sterling Taaffe"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "24521848.25",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "AQ27894161617268",
+          "clientName": "Robyn Jenner",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "31766004.14",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "7987263.13",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "51312613.47",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "40214728.48",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.71,
+          "performanceYTD": {
+            "amount": "12726984.28",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -0.33,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "85af702b-6ccb-4f1c-be84-08323798128a",
+              "name": "Agneta Gaskamp"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e79f3bb1-9c9f-4041-95f1-c859f7f0ff12",
+              "name": "Brice Cleall"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-43325350.34",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "UB18839670684683",
+          "clientName": "Emili Fletcher",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "42316760.27",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "45969653.05",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "22349032.47",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "32559662.15",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.38,
+          "performanceYTD": {
+            "amount": "1537728.86",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 3.71,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "26c03d26-76b1-4a9e-b9ab-6f396b9c8ccf",
+              "name": "Carmelle Ambrogioni"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "62dd46b5-7ce2-4254-87d9-4c294d401428",
+              "name": "Gale Alvarado"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "23620620.58",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "BG46146471092151",
+          "clientName": "Joyous Hanstock",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "17404640.12",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "25937649.89",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "17985819.62",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "2613670.67",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -0.03,
+          "performanceYTD": {
+            "amount": "30005036.11",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -4.87,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "8f33fa81-fe67-41a9-a29e-987fd34c4d7d",
+              "name": "Aleda Iacoviello"
+            },
+            {
+              "id": "a9f1fb8c-23f2-42e3-a7a1-c3e4484de84a",
+              "name": "Arly Boniface"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e0d06172-e8b3-4f6c-acb5-6c5af091b847",
+              "name": "Chilton Vaneschi"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "7951830.27",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "VG98227751363045",
+          "clientName": "Conroy Hallad",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "3164636.13",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "23402326.68",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "44229800.67",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "8124896.19",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.84,
+          "performanceYTD": {
+            "amount": "21215633.95",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -3.92,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "adb33f9b-1955-4de6-b525-422a30a53275",
+              "name": "Brett Vinnicombe"
+            },
+            {
+              "id": "c834fd92-d466-4f82-94ac-fcdb87826224",
+              "name": "Merrile Ghent"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "cc4f2a42-313d-4dab-9d30-59ff52a5db35",
+              "name": "Turner Phillpot"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-20827473.99",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "OC62012852912746",
+          "clientName": "Malachi Reicherz",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "30711043.76",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "38380140.61",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "11595094.38",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "20536958.35",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.54,
+          "performanceYTD": {
+            "amount": "34002364.36",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 5.7,
+          "riskClass": "High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "c6161340-340a-49c3-8a2e-0cf18b51f2a0",
+              "name": "Julieta Rose"
+            },
+            {
+              "id": "4147f058-7494-482d-8b37-8910cf91ea3a",
+              "name": "Liesa Plumstead"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "91f9f05f-b61c-48b7-8b6d-02fe2f4ee281",
+              "name": "Elly Wimbush"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "26785046.23",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "UB20420129827693",
+          "clientName": "Davina Snow",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "49010569.48",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "36669762.12",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "42396476.78",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "46592223.47",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.13,
+          "performanceYTD": {
+            "amount": "17192637.05",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -3.31,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "f42e3a08-f7ab-4474-9d59-933b16d07843",
+              "name": "Udale Phorsby"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "51a446df-6306-4373-b701-c702b9b2a197",
+              "name": "Shay Bande"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-5726714.66",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "JU14696556580348",
+          "clientName": "Pepita Trenear",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "35747926.29",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "35343375.38",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "18936199.96",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "34788329.66",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.39,
+          "performanceYTD": {
+            "amount": "36966116.86",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -0.52,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "ce632947-640c-4a7d-a9d2-0b386ecbb786",
+              "name": "Karlee Breen"
+            },
+            {
+              "id": "3b067b82-9ce3-4e76-9a78-6d3100c508bb",
+              "name": "Casie Trengrove"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "86faa96b-a85d-4405-ad26-aae45d99fb61",
+              "name": "Celina Course"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "16407175.42",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "RN38311871195433",
+          "clientName": "Emogene Di Nisco",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "21861545.76",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "46530694.67",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "49035102.70",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "17936290.90",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.47,
+          "performanceYTD": {
+            "amount": "14390660.24",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 6.31,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "42275e03-1c90-4a89-b70c-fba5cf5fc1e7",
+              "name": "Dela Nightingale"
+            },
+            {
+              "id": "a38d34d2-e0ad-4ee0-b1ce-1e5c3e83e08d",
+              "name": "Joly Hanson"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "58e156b9-4712-47d3-aad7-8ff274ad68c8",
+              "name": "Ruthy Pitney"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-2504408.03",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "UR01135487961474",
+          "clientName": "Nari Everard",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "29681456.67",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "28389944.81",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "3878090.48",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "2121576.67",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.1,
+          "performanceYTD": {
+            "amount": "18016336.41",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.69,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "3ed7cc1e-0c75-4a51-bf60-18a78523793b",
+              "name": "Katee Tennison"
+            },
+            {
+              "id": "ebf63376-e6d1-4292-8bbe-f2131e550cbb",
+              "name": "Derron Izkovicz"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "d98c0741-ee45-4299-a553-1eff274f133c",
+              "name": "Odette Fryatt"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "24511854.33",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "SI58382767532475",
+          "clientName": "Saleem Mea",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "16501115.38",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "24282821.32",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "44312810.63",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "45691849.31",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.11,
+          "performanceYTD": {
+            "amount": "14148112.10",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 0.98,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "241ad375-5e02-40eb-9690-7bf8fc455409",
+              "name": "Hermione Jillions"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "98c230f2-ab13-4202-8b32-3d36da4a39e8",
+              "name": "Buddie Mathe"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-20029989.31",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "TV72237240577783",
+          "clientName": "Ginnifer Winks",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "5831197.04",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "27379973.89",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "40785759.21",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "32228944.97",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.1,
+          "performanceYTD": {
+            "amount": "15560716.06",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -1.49,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "7652fb25-8d09-4ebb-8364-dcf068e7c7cf",
+              "name": "Kalinda Shutler"
+            },
+            {
+              "id": "dc82b834-9f81-42e2-bce3-6d4640907200",
+              "name": "Odie Joffe"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "562e6453-5e28-4eb1-9aae-70f48b5bbee4",
+              "name": "Karney Ambroz"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-13405785.32",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "TS42684630147728",
+          "clientName": "Ingrim Dickerson",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "30028934.07",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "40813568.86",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "46766665.58",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "52672846.40",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.2,
+          "performanceYTD": {
+            "amount": "47573277.95",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 5.48,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "67491c13-bc0f-4dd8-b1c2-a51bafb498be",
+              "name": "Rosalind Crothers"
+            },
+            {
+              "id": "c3aa062b-d875-4224-bb0d-531f2bacc2fd",
+              "name": "Wilburt McIntee"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "f60bd2c0-7b43-4708-99a0-2a184aae9412",
+              "name": "Armstrong Matten"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-5953096.72",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "GL57563793567575",
+          "clientName": "Dicky Graybeal",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "48549426.40",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "20764703.81",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "48778773.15",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "41435383.86",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.18,
+          "performanceYTD": {
+            "amount": "45609374.24",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -1.54,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "7c8055e2-3512-4cf5-a6a7-8fc27b19c8f6",
+              "name": "Murdock Kenway"
+            },
+            {
+              "id": "317bd048-23e9-4195-a80d-6921da390ec8",
+              "name": "Park Quick"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "807b7750-f69c-41d8-8a98-b371705c6a83",
+              "name": "Bennie Ingleton"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-28014069.34",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "CS93322739623703",
+          "clientName": "Bonni Eller",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "31884935.00",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "30082423.61",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "49843927.51",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "49505175.77",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.17,
+          "performanceYTD": {
+            "amount": "51484585.72",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 3,
+          "riskClass": "Low",
+          "assetClasses": [],
+          "managers": [
+            {
+              "id": "cd809b07-ce9f-46d8-8d27-f7303f0f657b",
+              "name": "Micki Mouan"
+            },
+            {
+              "id": "02f6d84b-57ce-486a-8cbe-28081ff60c1c",
+              "name": "Corella Atwool"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "139e8d54-ba08-43de-bd32-435aa84b23c7",
+              "name": "Sim O'Bruen"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-19761503.90",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "MY27735152141199",
+          "clientName": "Pedro Imloch",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "4843097.49",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "18370801.13",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "40181558.43",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "12729988.61",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.9,
+          "performanceYTD": {
+            "amount": "14680636.59",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.97,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "fe4a64bd-173e-4d3a-9e35-186d1e368c92",
+              "name": "Dud Cruces"
+            },
+            {
+              "id": "b5751b07-fcf0-481c-ab72-b09ec7c0ac1e",
+              "name": "Cob Barkhouse"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e661528b-f2df-46fb-ae21-39cf82d27daf",
+              "name": "Clair Romke"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-21810757.30",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "NK30086034330698",
+          "clientName": "Hewet Awcock",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "45177578.62",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "42639075.41",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "14476200.27",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "32725425.88",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.89,
+          "performanceYTD": {
+            "amount": "45424520.27",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 3.74,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "7a59f76c-5403-4173-a6ed-7493ba02f1c5",
+              "name": "Amil Boissier"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "efa58264-fc24-400e-b9de-a60b19e908cb",
+              "name": "Ulla Yglesia"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "28162875.14",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "CN74460033886889",
+          "clientName": "Rozelle Attwoull",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "29355502.79",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "44246498.75",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "53460385.65",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "54203309.40",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.6,
+          "performanceYTD": {
+            "amount": "51649156.07",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 4.32,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "ac9ed3ee-4cbc-4e6f-8d4c-1108e0d43a77",
+              "name": "Ardeen Singyard"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "568c0cc0-fba8-4059-a726-c2c36598e831",
+              "name": "Giffer Douthwaite"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-9213886.90",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "KZ09408991701031",
+          "clientName": "Gregorius Kruschev",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "39813140.68",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "12555690.26",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "37803043.69",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "7552762.57",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.67,
+          "performanceYTD": {
+            "amount": "21487805.00",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 6.09,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "00038ece-377e-4968-964a-caae725e0ed2",
+              "name": "Imelda Lawland"
+            },
+            {
+              "id": "76796624-2c01-43b5-ae6d-c4ea5ad76084",
+              "name": "Maegan Denney"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "ca87a296-5a0d-4c4f-b0c5-56278767c049",
+              "name": "Archy Fernehough"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-25247353.43",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "ZS00173220848807",
+          "clientName": "Llewellyn Sellar",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "46913045.06",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "51695328.05",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "34889346.33",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "44203033.26",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 0.28,
+          "performanceYTD": {
+            "amount": "48289397.29",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 5.58,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "7f41f11e-ed7f-483d-b9a7-89ce261a4f36",
+              "name": "Josepha Doleman"
+            },
+            {
+              "id": "d8902549-e742-4a17-a0eb-f2ed3977da71",
+              "name": "Antoine McLuckie"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e76d05ff-52c9-4b69-b07b-2003ce0ae598",
+              "name": "Franky St. Clair"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "16805981.72",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "OS93612441973856",
+          "clientName": "Geno Williscroft",
+          "alias": "Retirement",
+          "valuation": {
+            "amount": "30654635.55",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "6152965.84",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "54333667.77",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "34436486.63",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -0.4,
+          "performanceYTD": {
+            "amount": "24991733.15",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 0.89,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "ac8a6a35-c4de-4649-9dcd-a658402221df",
+              "name": "Hugibert Oddey"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "e55367cc-5089-47a0-9113-9f513baafacc",
+              "name": "Ozzy Hullah"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-48180701.93",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "RM13177780921386",
+          "clientName": "Whitney McSherry",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "39652286.85",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "21605285.53",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "38674667.62",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "10018524.55",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.59,
+          "performanceYTD": {
+            "amount": "53332303.13",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 4.96,
+          "riskClass": "Med-High",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "8438fbd0-f495-4c1c-9ee9-f3d5bac1250c",
+              "name": "Perren Atlay"
+            },
+            {
+              "id": "66714205-4891-4ca5-9e8c-a1b91a338292",
+              "name": "Dorolisa Charlesworth"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "b3989f55-d41e-4614-8bfd-e522989306b2",
+              "name": "Steffen Dyne"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-17069382.09",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "FB13002870995518",
+          "clientName": "Jasmin Jzhakov",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "34403379.99",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "40985885.22",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "46450889.01",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "54792944.50",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 2.95,
+          "performanceYTD": {
+            "amount": "46363781.71",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 6.53,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "c99dcc0f-eda2-4b1a-a8ad-2565bbca23ee",
+              "name": "Jule Yanshin"
+            },
+            {
+              "id": "83587894-56b2-41ec-a00e-b4d40461bf9c",
+              "name": "Bonnie Vittore"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "9a907877-c5eb-4036-9404-cbc314f099b7",
+              "name": "Ron Chessil"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-5465003.79",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "YK86789464888525",
+          "clientName": "Celeste Langley",
+          "alias": "Personal",
+          "valuation": {
+            "amount": "16575423.41",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "9212586.92",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "3396863.83",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "24968128.66",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": 1.93,
+          "performanceYTD": {
+            "amount": "45546708.24",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 4.95,
+          "riskClass": "Med",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "e6d511d8-3168-4f3e-9ba2-7719381dd00d",
+              "name": "Grannie Donisthorpe"
+            },
+            {
+              "id": "28a5f137-d641-4c49-9e8b-f50e649459bf",
+              "name": "Darsie Killner"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "1e7f2771-955f-4a52-ab9d-cb8d9ef4c08b",
+              "name": "Eward Aphale"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "5815723.09",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "YH74295196204265",
+          "clientName": "Marthena Ladyman",
+          "alias": "Kids",
+          "valuation": {
+            "amount": "4998717.74",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "501223.81",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "30489569.64",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "1029753.88",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.32,
+          "performanceYTD": {
+            "amount": "48629688.82",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": -0.97,
+          "riskClass": "Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "a124398b-002b-4c1d-bcb0-7e17d0831b8f",
+              "name": "Alma Atter"
+            },
+            {
+              "id": "a4d3ef04-304b-467e-aced-05aad2234e72",
+              "name": "Anjela Brandone"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "f106eacf-4f90-48f9-a044-01b4b34eba37",
+              "name": "Walliw Stirtle"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "-29988345.83",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        },
+        {
+          "IBAN": "WS09298585470860",
+          "clientName": "Kanya Extill",
+          "alias": "Wife",
+          "valuation": {
+            "amount": "51450036.46",
+            "currencyCode": "EUR"
+          },
+          "inCashTotal": {
+            "amount": "54782726.85",
+            "currencyCode": "EUR"
+          },
+          "outCashTotal": {
+            "amount": "22480853.00",
+            "currencyCode": "EUR"
+          },
+          "performanceMTD": {
+            "amount": "41417454.84",
+            "currencyCode": "EUR"
+          },
+          "performanceMTDpct": -1.03,
+          "performanceYTD": {
+            "amount": "29961513.15",
+            "currencyCode": "EUR"
+          },
+          "performanceYTDpct": 2.57,
+          "riskClass": "Med-Low",
+          "assetClasses": [
+            {
+              "valuePct": 45.55,
+              "name": "Bonds"
+            },
+            {
+              "valuePct": 23.08,
+              "name": "Liquidities"
+            },
+            {
+              "valuePct": 17.11,
+              "name": "Invested Funds"
+            },
+            {
+              "valuePct": 5.57,
+              "name": "Obligations"
+            },
+            {
+              "valuePct": 4,
+              "name": "Cash"
+            },
+            {
+              "valuePct": 2.6,
+              "name": "Assets"
+            }
+          ],
+          "managers": [
+            {
+              "id": "c25db4c1-6934-4bce-94e3-d43b59cb66aa",
+              "name": "Karlyn Laffan"
+            },
+            {
+              "id": "e1343acc-0ca4-483a-a534-7bce40422218",
+              "name": "Andres Loverock"
+            }
+          ],
+          "attorneys": [
+            {
+              "id": "abc792ce-e6a8-4d1e-9579-8b568184f85b",
+              "name": "Lacie Stelfax"
+            }
+          ],
+          "netCashTotal": {
+            "amount": "32301873.85",
+            "currencyCode": "EUR"
+          },
+          "valuationRefreshDate": "2022-06-05T01:30:00.000-05:00"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

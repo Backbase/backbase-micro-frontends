@@ -1,0 +1,46 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/users/data-item-permissions_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/users/data-item-permissions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "dataItem": {
+            "id": "9fa0961eb3d04dd3a5e48748d27e7275",
+            "dataType": "ARRANGEMENTS"
+          },
+          "permissions": [
+            {
+              "resource": "Payments",
+              "businessFunction": "SEPA CT",
+              "privileges": ["view"]
+            },
+            {
+              "resource": "Payments",
+              "businessFunction": "Domestic Payments",
+              "privileges": ["view", "create"]
+            }
+          ]
+        },
+        {
+          "dataItem": {
+            "id": "9fa0961eb3d046d3a5e48748d27e7275",
+            "dataType": "ARRANGEMENTS"
+          },
+          "permissions": [
+            {
+              "resource": "Payments",
+              "businessFunction": "Domestic Payments",
+              "privileges": ["approve"]
+            }
+          ]
+        }
+      ],
+      "default": true
+    }
+  }
+}

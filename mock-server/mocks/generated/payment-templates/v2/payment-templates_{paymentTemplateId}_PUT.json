@@ -1,0 +1,101 @@
+{
+  "name": "/client-api/v2/payment-templates/{paymentTemplateId}_PUT",
+  "request": {
+    "url": "/client-api/v2/payment-templates/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {
+        "template": {
+          "id": "7d341c28-6714-11e7-907b-a6006ad3dba0",
+          "name": "Salary for John",
+          "createdAt": "2020-04-12T14:33:13.452Z",
+          "serviceAgreementId": "d6fdc581-1306-412a-9e40-86d851190acf",
+          "details": {
+            "paymentType": "SEPA_CREDIT_TRANSFER",
+            "originatorAccount": {
+              "arrangementId": "729190df-a421-4937-94fd-5e1a3da132cc",
+              "externalArrangementId": "729190421493794513132",
+              "identification": {
+                "identification": "NL53RABO0309349755",
+                "schemeName": "IBAN"
+              }
+            },
+            "instructionPriority": "NORM",
+            "transferTransactionInformation": {
+              "counterparty": {
+                "name": "John Smith",
+                "postalAddress": {
+                  "addressLine1": "Schippersstraat 15, 1011AZ, Amsterdam",
+                  "country": "NL"
+                }
+              },
+              "counterpartyAccount": {
+                "identification": {
+                  "identification": "FR708933019952AUNHQNQ0KZ",
+                  "schemeName": "IBAN"
+                },
+                "arrangementId": "fe9d66ae-b927-4ac7-8799-c5a38a596ff2",
+                "externalArrangementId": "9669274787995385962"
+              },
+              "instructedAmount": {
+                "amount": "5000.55",
+                "currencyCode": "EUR"
+              },
+              "remittanceInformation": "Salary"
+            }
+          }
+        }
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

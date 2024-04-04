@@ -1,0 +1,269 @@
+{
+  "name": "/client-api/v2/categories_GET",
+  "request": {
+    "url": "/client-api/v2/categories(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "categoryId": 1,
+          "externalId": "1",
+          "categoryName": "Home",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 2,
+              "externalId": "2",
+              "categoryName": "Mortgage",
+              "categoryType": "Expenses",
+              "parentId": 1
+            },
+            {
+              "categoryId": 3,
+              "externalId": "3",
+              "categoryName": "Rent",
+              "categoryType": "Expenses",
+              "parentId": 1
+            }
+          ]
+        },
+        {
+          "categoryId": 4,
+          "externalId": "4",
+          "categoryName": "Food & Drinks",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 5,
+              "externalId": "5",
+              "categoryName": "Alcohol & Bars",
+              "categoryType": "Expenses",
+              "parentId": 4
+            },
+            {
+              "categoryId": 6,
+              "externalId": "600",
+              "categoryName": "Fast Food",
+              "categoryType": "Expenses",
+              "parentId": 4
+            },
+            {
+              "categoryId": 7,
+              "externalId": "7",
+              "categoryName": "Groceries",
+              "categoryType": "Expenses",
+              "parentId": 4
+            },
+            {
+              "categoryId": 8,
+              "externalId": "8",
+              "categoryName": "Restaurants",
+              "categoryType": "Expenses",
+              "parentId": 4
+            }
+          ]
+        },
+        {
+          "categoryId": 9,
+          "externalId": "9",
+          "categoryName": "Health & Beauty",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 10,
+              "externalId": "10",
+              "categoryName": "Beauty",
+              "categoryType": "Expenses",
+              "parentId": 9
+            },
+            {
+              "categoryId": 11,
+              "externalId": "11",
+              "categoryName": "Health & Fitness",
+              "categoryType": "Expenses",
+              "parentId": 9
+            }
+          ]
+        },
+        {
+          "categoryId": 12,
+          "externalId": "12",
+          "categoryName": "Transportation",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 13,
+              "externalId": "13",
+              "categoryName": "Car",
+              "categoryType": "Expenses",
+              "parentId": 12
+            },
+            {
+              "categoryId": 14,
+              "externalId": "14",
+              "categoryName": "Public Transport",
+              "categoryType": "Expenses",
+              "parentId": 12
+            }
+          ]
+        },
+        {
+          "categoryId": 15,
+          "externalId": "15",
+          "categoryName": "Shopping",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 16,
+              "externalId": "16",
+              "categoryName": "Clothing",
+              "categoryType": "Expenses",
+              "parentId": 15
+            },
+            {
+              "categoryId": 17,
+              "externalId": "17",
+              "categoryName": "Electronics",
+              "categoryType": "Expenses",
+              "parentId": 15
+            }
+          ]
+        },
+        {
+          "categoryId": 18,
+          "externalId": "18",
+          "categoryName": "Hobbies & Entertainment",
+          "categoryType": "Expenses"
+        },
+        {
+          "categoryId": 19,
+          "externalId": "19",
+          "categoryName": "Bills & Utilities",
+          "categoryType": "Expenses",
+          "subCategories": [
+            {
+              "categoryId": 20,
+              "externalId": "20",
+              "categoryName": "Internet",
+              "categoryType": "Expenses",
+              "parentId": 19
+            },
+            {
+              "categoryId": 21,
+              "externalId": "21",
+              "categoryName": "Mobile Phone",
+              "categoryType": "Expenses",
+              "parentId": 19
+            },
+            {
+              "categoryId": 22,
+              "externalId": "22",
+              "categoryName": "Utilities",
+              "categoryType": "Expenses",
+              "parentId": 19
+            }
+          ]
+        },
+        {
+          "categoryId": 23,
+          "externalId": "23",
+          "categoryName": "Income",
+          "categoryType": "Income",
+          "subCategories": [
+            {
+              "categoryId": 24,
+              "externalId": "24",
+              "categoryName": "Bonus",
+              "categoryType": "Income",
+              "parentId": 23
+            },
+            {
+              "categoryId": 25,
+              "externalId": "25",
+              "categoryName": "Salary/Wages",
+              "categoryType": "Income",
+              "parentId": 23
+            }
+          ]
+        },
+        {
+          "categoryId": 26,
+          "externalId": "26",
+          "categoryName": "Other Income",
+          "categoryType": "Income",
+          "subCategories": [
+            {
+              "categoryId": 27,
+              "externalId": "27",
+              "categoryName": "Interest Income",
+              "categoryType": "Income",
+              "parentId": 26
+            },
+            {
+              "categoryId": 28,
+              "externalId": "28",
+              "categoryName": "Rental Income",
+              "categoryType": "Income",
+              "parentId": 26
+            }
+          ]
+        },
+        {
+          "categoryId": 29,
+          "externalId": "29",
+          "categoryName": "Transfers",
+          "categoryType": "Transfer"
+        },
+        {
+          "categoryId": 30,
+          "externalId": "30",
+          "categoryName": "Uncategorised",
+          "categoryType": "General"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

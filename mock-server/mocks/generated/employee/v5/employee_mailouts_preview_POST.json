@@ -1,0 +1,32 @@
+{
+  "name": "/client-api/v5/employee/mailouts/preview_POST",
+  "request": {
+    "url": "/client-api/v5/employee/mailouts/preview(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "body": "PHRhYmxlIHdpZHRoPSIxMDAlIiBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCI+PHRib2R5Pjx0cj48dGQgYWxpZ249ImNlbnRlciIgdmFsaWduPSJtaWRkbGUiIHN0eWxlPSJmb250LWZhbWlseTomIzM5O2dlb3JnaWEmIzM5OyAsICYjMzk7dGltZXMgbmV3IHJvbWFuJiMzOTsgLCAmIzM5O3RpbWVzJiMzOTsgLCBzZXJpZjtjb2xvcjojMDAwMDAwO2ZvbnQtc2l6ZToyNHB4O3BhZGRpbmctYm90dG9tOjVweCI+CiAgPGk+V2VsY29tZSAgJHt1c2VyfQogIDwvaT4KPC90ZD48L3RyPjx0cj48dGQgYWxpZ249ImxlZnQiIHZhbGlnbj0ibWlkZGxlIiBzdHlsZT0iZm9udC1mYW1pbHk6JiMzOTtnZW9yZ2lhJiMzOTsgLCAmIzM5O3RpbWVzIG5ldyByb21hbiYjMzk7ICwgJiMzOTt0aW1lcyYjMzk7ICwgc2VyaWY7Y29sb3I6IzAwMDAwMDtmb250LXNpemU6MTVweCI+CiAgPHA+dG8gdGhlICR7d29ybGR9IFdvcmxkCiAgICBUaGlzIGlzIG91ciB3aXNoIGZvciB5b3UuLi4gJHt3aXNofQogIDwvcD4KPC90ZD48L3RyPjwvdGJvZHk+PC90YWJsZT4="
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

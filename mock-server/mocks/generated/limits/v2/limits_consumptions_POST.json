@@ -1,0 +1,107 @@
+{
+  "name": "/client-api/v2/limits/consumptions_POST",
+  "request": {
+    "url": "/client-api/v2/limits/consumptions(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "422": {
+      "status": 422,
+      "data": {
+        "message": "Unprocessable Entity",
+        "errors": [
+          {
+            "message": "Array size is over {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "100"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "limit": {
+            "alias": "",
+            "uuid": "1234-5678-9101-1121",
+            "user-BBID": "uuid-user-id",
+            "entities": [
+              {
+                "etype": "LE",
+                "eref": "550e8400-e29b-41d4-a716-446655440000"
+              }
+            ],
+            "currency": "EUR",
+            "periodic-limits-bounds": {
+              "daily": "100.0",
+              "weekly": "120.0",
+              "monthly": "300.0",
+              "quarterly": "600.0",
+              "customPeriods": [
+                {
+                  "period": "biweekly",
+                  "amount": "100"
+                }
+              ]
+            },
+            "shadow": true
+          },
+          "consumptions": {
+            "daily": "0.0",
+            "weekly": "50.0",
+            "monthly": "60.0",
+            "quarterly": "160.0",
+            "customPeriods": [
+              {
+                "period": "biweekly",
+                "amount": "50"
+              }
+            ]
+          },
+          "checkTime": "2017-01-31T12:12:12.000Z"
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

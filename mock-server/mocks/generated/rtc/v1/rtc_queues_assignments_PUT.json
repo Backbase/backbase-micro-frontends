@@ -1,0 +1,50 @@
+{
+  "name": "/client-api/v1/rtc/queues/assignments_PUT",
+  "request": {
+    "url": "/client-api/v1/rtc/queues/assignments(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 207,
+      "data": [
+        {
+          "userId": "dcf2fecc-fc98-4568-b1e7-e74eef875e12",
+          "queueId": "8d096ab7-b895-4a11-b839-049e976b80c1",
+          "status": "200"
+        },
+        {
+          "userId": "9c5d077f-b7de-4aba-a83d-8d619765186f",
+          "queueId": "8d096ab7-b895-4a11-b839-049e976b80c1",
+          "status": "404",
+          "errors": [
+            {
+              "key": "The requested resource cannot be found.",
+              "message": "rtc.api.resourceMissing",
+              "context": {}
+            }
+          ]
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "name": "/client-api/v2/limits/global_GET",
+  "request": {
+    "url": "/client-api/v2/limits/global(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "limits": [
+          {
+            "alias": "User Limit",
+            "uuid": "dfab7e60-064e-4af5-b54d-96d28fef0573",
+            "entities": [
+              {
+                "type": "USER"
+              }
+            ],
+            "periodic-limits-bounds": {
+              "daily": "100.0",
+              "weekly": "120.0",
+              "monthly": "300.0",
+              "quarterly": "600.0",
+              "customPeriods": [
+                {
+                  "period": "biweekly",
+                  "amount": "100"
+                }
+              ]
+            },
+            "transactional-limits-bound": {
+              "amount": "100.0"
+            }
+          },
+          {
+            "alias": "Service Agreement Limit",
+            "uuid": "a93cf136-ef7a-48eb-bde8-7f50e42540c8",
+            "entities": [
+              {
+                "type": "SA"
+              }
+            ],
+            "periodic-limits-bounds": {
+              "daily": "1000.0",
+              "weekly": "1200.0",
+              "monthly": "3000.0",
+              "quarterly": "6000.0",
+              "customPeriods": [
+                {
+                  "period": "biweekly",
+                  "amount": "1000"
+                }
+              ]
+            },
+            "transactional-limits-bound": {
+              "amount": "1000.0"
+            }
+          },
+          {
+            "alias": "Legal Entity Limit",
+            "uuid": "a93cf136-ef7a-48eb-bde8-7f50e42540c8",
+            "entities": [
+              {
+                "type": "LE"
+              }
+            ],
+            "periodic-limits-bounds": {
+              "daily": "1000.0",
+              "weekly": "1200.0",
+              "monthly": "3000.0",
+              "quarterly": "6000.0",
+              "customPeriods": [
+                {
+                  "period": "biweekly",
+                  "amount": "1000"
+                }
+              ]
+            },
+            "transactional-limits-bound": {
+              "amount": "1000.0"
+            }
+          }
+        ],
+        "currency": "EUR"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

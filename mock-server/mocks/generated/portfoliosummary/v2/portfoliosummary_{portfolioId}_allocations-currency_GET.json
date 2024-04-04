@@ -1,0 +1,388 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/allocations-currency_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/allocations-currency(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "allocations": [
+          {
+            "name": "EUR",
+            "allocationPct": 63,
+            "allocationMinPct": 60,
+            "allocationMaxPct": 65,
+            "valuation": {
+              "amount": "48810.16",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Equity",
+                "allocationPct": 14.29,
+                "valuation": {
+                  "amount": "6974.97",
+                  "currencyCode": "XOF"
+                }
+              },
+              {
+                "name": "Commodities",
+                "allocationPct": 2.82,
+                "valuation": {
+                  "amount": "1376.45",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "Bonds",
+                "allocationPct": 52.89,
+                "valuation": {
+                  "amount": "25815.69",
+                  "currencyCode": "SEK"
+                }
+              },
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 29.99,
+                "valuation": {
+                  "amount": "14638.17",
+                  "currencyCode": "IDR"
+                }
+              }
+            ]
+          },
+          {
+            "name": "USD",
+            "allocationPct": 15,
+            "allocationMinPct": 5,
+            "allocationMaxPct": 15,
+            "valuation": {
+              "amount": "143979.96",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Commodities",
+                "allocationPct": 95.88,
+                "valuation": {
+                  "amount": "138047.99",
+                  "currencyCode": "KGS"
+                }
+              },
+              {
+                "name": "Commodities",
+                "allocationPct": 4.12,
+                "valuation": {
+                  "amount": "5931.97",
+                  "currencyCode": "CZK"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GBP",
+            "allocationPct": 3,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 10,
+            "valuation": {
+              "amount": "148378.86",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 100,
+                "valuation": {
+                  "amount": "148378.86",
+                  "currencyCode": "EUR"
+                }
+              }
+            ]
+          },
+          {
+            "name": "AUD",
+            "allocationPct": 3,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "146790.16",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Commodities",
+                "allocationPct": 9.92,
+                "valuation": {
+                  "amount": "14561.58",
+                  "currencyCode": "EUR"
+                }
+              },
+              {
+                "name": "Bonds",
+                "allocationPct": 17.98,
+                "valuation": {
+                  "amount": "26392.87",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "Derivatives",
+                "allocationPct": 21.81,
+                "valuation": {
+                  "amount": "32014.93",
+                  "currencyCode": "MGA"
+                }
+              },
+              {
+                "name": "Derivatives",
+                "allocationPct": 7.75,
+                "valuation": {
+                  "amount": "11376.24",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "Bonds",
+                "allocationPct": 11.96,
+                "valuation": {
+                  "amount": "17556.10",
+                  "currencyCode": "PKR"
+                }
+              },
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 14.06,
+                "valuation": {
+                  "amount": "20638.70",
+                  "currencyCode": "ARS"
+                }
+              },
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 11.85,
+                "valuation": {
+                  "amount": "17394.63",
+                  "currencyCode": "PHP"
+                }
+              },
+              {
+                "name": "Bonds",
+                "allocationPct": 4.67,
+                "valuation": {
+                  "amount": "6855.10",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "CHF",
+            "allocationPct": 4,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 10,
+            "valuation": {
+              "amount": "96775.54",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Equity",
+                "allocationPct": 100,
+                "valuation": {
+                  "amount": "96775.54",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "NOK",
+            "allocationPct": 4,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "63373.81",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Equity",
+                "allocationPct": 2.29,
+                "valuation": {
+                  "amount": "1451.26",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "Bonds",
+                "allocationPct": 39.93,
+                "valuation": {
+                  "amount": "25305.16",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "Derivatives",
+                "allocationPct": 8.23,
+                "valuation": {
+                  "amount": "5215.66",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "Equity",
+                "allocationPct": 49.54,
+                "valuation": {
+                  "amount": "31395.39",
+                  "currencyCode": "CNY"
+                }
+              }
+            ]
+          },
+          {
+            "name": "JPY",
+            "allocationPct": 5,
+            "allocationMinPct": 5,
+            "allocationMaxPct": 10,
+            "valuation": {
+              "amount": "4716.56",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Derivatives",
+                "allocationPct": 14.57,
+                "valuation": {
+                  "amount": "687.20",
+                  "currencyCode": "IDR"
+                }
+              },
+              {
+                "name": "Commodities",
+                "allocationPct": 18.5,
+                "valuation": {
+                  "amount": "872.56",
+                  "currencyCode": "PKR"
+                }
+              },
+              {
+                "name": "Derivatives",
+                "allocationPct": 17,
+                "valuation": {
+                  "amount": "801.82",
+                  "currencyCode": "COP"
+                }
+              },
+              {
+                "name": "Derivatives",
+                "allocationPct": 13.34,
+                "valuation": {
+                  "amount": "629.19",
+                  "currencyCode": "LKR"
+                }
+              },
+              {
+                "name": "Equity",
+                "allocationPct": 6.87,
+                "valuation": {
+                  "amount": "324.03",
+                  "currencyCode": "PLN"
+                }
+              },
+              {
+                "name": "Commodities",
+                "allocationPct": 23.39,
+                "valuation": {
+                  "amount": "1103.20",
+                  "currencyCode": "CNY"
+                }
+              },
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 6.32,
+                "valuation": {
+                  "amount": "298.09",
+                  "currencyCode": "PHP"
+                }
+              }
+            ]
+          },
+          {
+            "name": "THB",
+            "allocationPct": 2,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "42397.2",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Liquid Assets",
+                "allocationPct": 100,
+                "valuation": {
+                  "amount": "42397.20",
+                  "currencyCode": "CAD"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Other",
+            "allocationPct": 1,
+            "allocationMinPct": 0,
+            "allocationMaxPct": 5,
+            "valuation": {
+              "amount": "143979.96",
+              "currencyCode": "EUR"
+            },
+            "allocations": [
+              {
+                "name": "Commodities",
+                "allocationPct": 95.88,
+                "valuation": {
+                  "amount": "138047.99",
+                  "currencyCode": "KGS"
+                }
+              },
+              {
+                "name": "Commodities",
+                "allocationPct": 4.12,
+                "valuation": {
+                  "amount": "5931.97",
+                  "currencyCode": "CZK"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

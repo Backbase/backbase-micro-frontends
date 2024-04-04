@@ -1,0 +1,83 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/approvals/{approvalId}/service-agreement_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/approvals/[^/]+/service-agreement(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "serviceAgreementId": "0889e686d31e4216b3dd5d66163d2b14",
+        "approvalId": "606d4532-f8d9-4a5f-36kl-887baf88fa24",
+        "action": "EDIT",
+        "oldState": {
+          "name": "FG1",
+          "description": "FG1 description",
+          "validFromDate": "2020-01-01",
+          "validFromTime": "00:00:00",
+          "validUntilDate": "2025-01-01",
+          "validUntilTime": "23:59:59",
+          "admins": [
+            "0955e686d31e4216b3dd5d76561d536d",
+            "0955e686d31e4216b3dd5d76164d536d",
+            "0955e686d31e4216b3aa5d76161d536d"
+          ],
+          "legalEntities": [
+            {
+              "name": "LEName1",
+              "id": "f41c4f3fea444cd2bfcf861dd13d2a1c",
+              "externalId": "C000001",
+              "contributeUsers": true,
+              "contributeAccount": true
+            },
+            {
+              "name": "LEName2",
+              "id": "f41c4f3fea444cd2bfcf861dd13d2a2c",
+              "externalId": "C000002",
+              "contributeUsers": true,
+              "contributeAccount": false
+            }
+          ]
+        },
+        "newState": {
+          "name": "FG1",
+          "description": "FG1 description",
+          "validFromDate": "2020-01-01",
+          "validFromTime": "00:00:00",
+          "validUntilDate": "2025-01-01",
+          "validUntilTime": "23:59:59",
+          "admins": [
+            "0955e686d31e4216b3dd5d76561d536d",
+            "0955e686d31e4216b3dd5d76164d536d",
+            "0955e686d31e4216b3aa5d76161d522d"
+          ],
+          "legalEntities": [
+            {
+              "name": "LEName1",
+              "id": "f41c4f3fea444cd2bfcf861dd13d2a1c",
+              "externalId": "C000001",
+              "contributeUsers": true,
+              "contributeAccount": true
+            },
+            {
+              "name": "LEName2",
+              "id": "f41c4f3fea444cd2bfcf861dd13d2a2c",
+              "externalId": "C000002",
+              "contributeUsers": true,
+              "contributeAccount": false
+            },
+            {
+              "name": "LEName3",
+              "id": "f41c4f3fea444cd2bfcf861dd13d2a4c",
+              "externalId": "C000003",
+              "contributeUsers": false,
+              "contributeAccount": true
+            }
+          ]
+        }
+      },
+      "default": true
+    }
+  }
+}

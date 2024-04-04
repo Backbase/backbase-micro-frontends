@@ -1,0 +1,16 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/data-groups_POST",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/data-groups(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {
+        "id": "0955e686d31e4216b3dd5d66161d536d"
+      },
+      "default": true
+    }
+  }
+}

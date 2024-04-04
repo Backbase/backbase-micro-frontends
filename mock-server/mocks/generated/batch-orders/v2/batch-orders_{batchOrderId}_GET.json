@@ -1,0 +1,213 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}_GET",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "2f3a6d96-f671-4f03-994d-8f6caaa53cab",
+        "name": "Employee salaries",
+        "type": "SEPACT",
+        "creditDebitMixedIndicator": "CREDIT",
+        "status": "ACCEPTED",
+        "totalTransactionsCount": 73500,
+        "totalCreditTransactionsCount": 73500,
+        "totalInstructedAmount": {
+          "amount": "2400123.00",
+          "currencyCode": "EUR"
+        },
+        "totalCreditInstructedAmount": {
+          "amount": "2400123.00",
+          "currencyCode": "EUR"
+        },
+        "account": {
+          "name": "Main Current",
+          "identification": {
+            "identification": "CH8739215260566920524",
+            "schemeName": "IBAN"
+          }
+        },
+        "requestedExecutionDate": "2019-02-18",
+        "fileName": "salaries-2019-02.csv",
+        "userFullName": "Davy Jones",
+        "uploadCompletedAt": "2019-02-22T14:08:34Z",
+        "canDelete": false,
+        "canCancel": false,
+        "canReverse": false
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "id": "2fd15c69-c4da-4c58-986f-d46082057bf5",
+        "name": "End of Q2 payments",
+        "type": "SEPACT",
+        "status": "ENTERED",
+        "totalTransactionsCount": 2109,
+        "totalInstructedAmount": {
+          "amount": "280810.00",
+          "currencyCode": "EUR"
+        },
+        "account": {
+          "name": "Main",
+          "identification": {
+            "identification": "NO0741575812927",
+            "schemeName": "IBAN"
+          }
+        },
+        "requestedExecutionDate": "2019-05-31",
+        "fileName": "2019-Q2-payments.csv",
+        "userFullName": "Tommy Perrotti",
+        "uploadCompletedAt": "2019-05-16T14:09:30Z",
+        "approval": {
+          "id": "9966c07c-1547-42a5-9bc7-91986ff33993",
+          "userId": "c3608888-faa3-4f23-9c5a-269dd39caea5",
+          "externalUserId": "judi-miles",
+          "userFullName": "Judi Miles",
+          "serviceAgreementId": "64f538bf-3f5d-4dd9-8de7-ba7082da198d",
+          "itemId": "2fd15c69-c4da-4c58-986f-d46082057bf5",
+          "dataAccessItemId": "f094b702-e912-434c-8e49-12c56fc78551",
+          "resource": "Batches",
+          "function": "SEPACT",
+          "status": "PENDING",
+          "createdAt": "2019-05-16T14:09:40Z",
+          "records": [
+            {
+              "id": "9e61d96d-fea3-44a4-8903-88d95eb266a8",
+              "userId": "f34feccc-0d0d-4365-982b-d6d1779e5aaf",
+              "externalUserId": "bigWillie",
+              "userFullName": "Willie Iles",
+              "approvalTypeId": "ece87cfe-33f9-45a4-8c51-a04a9f905c66",
+              "status": "APPROVED",
+              "createdAt": "2019-05-17T13:44:02Z"
+            }
+          ],
+          "canApprove": false,
+          "canReject": false,
+          "finalApprover": false
+        },
+        "canDelete": false,
+        "canCancel": true,
+        "canReverse": false
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "id": "b438751d-6e6a-4601-8009-a82fa22bddcc",
+        "name": "Employee salaries",
+        "type": "SEPACT",
+        "status": "REJECTED",
+        "totalTransactionsCount": 9208,
+        "totalInstructedAmount": {
+          "amount": "50343009.00",
+          "currencyCode": "EUR"
+        },
+        "account": {
+          "name": "Main Account 8",
+          "identification": {
+            "identification": "NL18ABNA4956451237",
+            "schemeName": "IBAN"
+          }
+        },
+        "requestedExecutionDate": "2019-09-15",
+        "description": "Salary Sep 2019",
+        "bankStatus": "UNPROCESSABLE",
+        "reasonCode": "RJ08",
+        "reasonText": "Insufficient funds",
+        "errorDescription": "Target account has not enough funds to execute batch payments",
+        "fileName": "salaries-2019-02.csv",
+        "userFullName": "Davy Jones",
+        "uploadCompletedAt": "2019-02-22T14:08:34Z",
+        "canDelete": false,
+        "canCancel": false,
+        "canReverse": false
+      }
+    },
+    "success_3": {
+      "status": 200,
+      "data": {
+        "id": "2f4c4bb6-c107-473a-adbd-7343b8f0ea80",
+        "name": "Salaries 2020-12",
+        "type": "ACH_CREDIT",
+        "status": "ACCEPTED",
+        "totalTransactionsCount": 401,
+        "totalInstructedAmount": {
+          "amount": "650980.25",
+          "currencyCode": "USD"
+        },
+        "account": {
+          "name": "Current Account",
+          "identification": {
+            "identification": "7649373647",
+            "schemeName": "BBAN"
+          }
+        },
+        "bankBranchCode": "113105452",
+        "companyId": "1800948594",
+        "companyName": "Your Company",
+        "batchReference": "80001919213904343400",
+        "requestedExecutionDate": "2020-12-18",
+        "fileName": "salaries-2020-12.ach",
+        "userFullName": "Ben Jones",
+        "uploadCompletedAt": "2020-12-15T15:28:10Z",
+        "canDelete": false,
+        "canCancel": false,
+        "canReverse": false
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

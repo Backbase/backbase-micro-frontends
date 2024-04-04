@@ -1,0 +1,32 @@
+{
+  "name": "/client-api/v5/employee/mailouts_POST",
+  "request": {
+    "url": "/client-api/v5/employee/mailouts(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 201,
+      "data": {
+        "id": "3d72a290-00f8-4f65-a16d-65d8f0b29b5a"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

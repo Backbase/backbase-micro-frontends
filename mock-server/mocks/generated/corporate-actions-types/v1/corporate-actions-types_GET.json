@@ -1,0 +1,22 @@
+{
+  "name": "/client-api/v1/corporate-actions-types_GET",
+  "request": {
+    "url": "/client-api/v1/corporate-actions-types(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "$ref": "examples/corporate-action/corporate-action-types-get-response-body.json"
+      },
+      "default": true
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "lib/examples/internal-server-error.json"
+      }
+    }
+  }
+}

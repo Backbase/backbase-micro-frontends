@@ -1,0 +1,31 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/users/user-privileges/arrangements_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/users/user-privileges/arrangements(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "arrangementId": "9fa0961eb3d04dd3a5e48748d27e7275",
+          "privileges": [
+            {
+              "privilege": "view"
+            }
+          ]
+        },
+        {
+          "arrangementId": "149f7e8d26904fc38bd0fdfc83394116",
+          "privileges": [
+            {
+              "privilege": "view"
+            }
+          ]
+        }
+      ],
+      "default": true
+    }
+  }
+}

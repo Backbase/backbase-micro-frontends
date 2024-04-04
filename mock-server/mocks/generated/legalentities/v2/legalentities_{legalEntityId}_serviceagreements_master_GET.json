@@ -1,0 +1,8 @@
+{
+  "name": "/access-control/client-api/v2/legalentities/{legalEntityId}/serviceagreements/master_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/legalentities/[^/]+/serviceagreements/master(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {}
+}

@@ -1,0 +1,955 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/positions_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/positions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "accounts": [
+          {
+            "id": "189ba245-67f9-4655-a895-d838d272bd78",
+            "name": "Sub-Portfolio 1",
+            "valuation": {
+              "amount": "5059834.0",
+              "currencyCode": "EUR"
+            },
+            "performancePct": 48.03,
+            "parentPct": 27.19
+          },
+          {
+            "id": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "name": "Sub-Portfolio 2",
+            "valuation": {
+              "amount": "4237345.19",
+              "currencyCode": "EUR"
+            },
+            "performancePct": 4.21,
+            "parentPct": 23.01
+          },
+          {
+            "id": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "name": "Sub-Portfolio 3",
+            "valuation": {
+              "amount": "8054936.75",
+              "currencyCode": "EUR"
+            },
+            "performancePct": 97.04,
+            "parentPct": 19.17
+          }
+        ],
+        "assetClasses": [
+          {
+            "id": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "name": "Equity",
+            "accruedInterest": {
+              "amount": "38699.18",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "63616174.8",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "2251.58",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 15.19,
+            "parentPct": 11.94,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "name": "Equity",
+            "accruedInterest": {
+              "amount": "37537.38",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "117159586.07",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "2157.58",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 27.19,
+            "parentPct": 15.24,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "name": "Bonds",
+            "accruedInterest": {
+              "amount": "37302.01",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "43219365.02",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "2111.44",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 21.42,
+            "parentPct": 18,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "name": "Real Estate",
+            "accruedInterest": {
+              "amount": "20372.58",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "91134775.22",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "8233.67",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 28.42,
+            "parentPct": 17.82,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "78fd063e-ed8a-4a3f-962c-7fd70eb5327b",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "name": "Cash",
+            "accruedInterest": {
+              "amount": "33940.44",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "60458414.88",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "6383.4",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 34.59,
+            "parentPct": 12.3,
+            "instrumentAvailable": true
+          }
+        ],
+        "regions": [
+          {
+            "id": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "name": "Europe",
+            "accruedInterest": {
+              "amount": "8617.86",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "1186195.62",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "8437.56",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 20.93,
+            "parentPct": 6.48,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "8b3b6168-2b56-40cd-89fc-5cd1c34b8dab",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "name": "North America",
+            "accruedInterest": {
+              "amount": "3989.98",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "5443660.38",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "3127.06",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 14.79,
+            "parentPct": 8.68,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "04d31294-3069-4d23-bfee-4a11046d6ca4",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "name": "North America",
+            "accruedInterest": {
+              "amount": "7225.49",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "7717418.0",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "6725.56",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 29.49,
+            "parentPct": 4,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "name": "EMEA",
+            "accruedInterest": {
+              "amount": "4125.23",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "4383742.36",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "4257.64",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 14.45,
+            "parentPct": 5.15,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "b1bab9e6-8f61-4854-93e4-d4043f3e78ce",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "name": "EMEA",
+            "accruedInterest": {
+              "amount": "2099.28",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "5583646.9",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "6432.66",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 11.44,
+            "parentPct": 4.11,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "3a566185-2a70-4c63-89d5-b0a19137fdce",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "f1b0286a-106c-4296-820c-648cf1bcc73b",
+            "name": "Europe",
+            "accruedInterest": {
+              "amount": "9038.87",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "5107055.65",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "9421.86",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 15.46,
+            "parentPct": 9.86,
+            "instrumentAvailable": true
+          },
+          {
+            "id": "ee34e731-7e95-400b-83d3-00b2e5de63d8",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "78fd063e-ed8a-4a3f-962c-7fd70eb5327b",
+            "name": "North America",
+            "accruedInterest": {
+              "amount": "4517.25",
+              "currencyCode": "EUR"
+            },
+            "valuation": {
+              "amount": "4394385.0",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPL": {
+              "amount": "1835.64",
+              "currencyCode": "EUR"
+            },
+            "portfolioPct": 36.27,
+            "parentPct": 5.02,
+            "instrumentAvailable": true
+          }
+        ],
+        "countries": [
+          {
+            "id": "ae5b40d1-0123-4191-846c-336108fabb0c",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "regionId": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "name": "Indonesia"
+          },
+          {
+            "id": "a8fe9bb7-8e86-46b4-a5eb-ab2c7d255e0d",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "regionId": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "name": "Portugal"
+          },
+          {
+            "id": "9cf9d381-1048-4278-b159-6a7d881cd97f",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "regionId": "b1bab9e6-8f61-4854-93e4-d4043f3e78ce",
+            "name": "Ukraine"
+          },
+          {
+            "id": "87e60938-370d-4e71-9b42-244a40f83501",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "regionId": "8b3b6168-2b56-40cd-89fc-5cd1c34b8dab",
+            "name": "Indonesia"
+          },
+          {
+            "id": "69396553-48f8-4ef2-a473-19981f41bbdc",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "regionId": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "name": "Greece"
+          },
+          {
+            "id": "d5429cd2-3d0c-495c-9629-74e89167a53d",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "regionId": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "name": "Gabon"
+          },
+          {
+            "id": "8fe8e2b4-d40f-488d-977c-030a4a3fc8cc",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "regionId": "04d31294-3069-4d23-bfee-4a11046d6ca4",
+            "name": "Argentina"
+          },
+          {
+            "id": "11b356b4-aff0-425e-becc-8005d235907d",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "regionId": "04d31294-3069-4d23-bfee-4a11046d6ca4",
+            "name": "China"
+          },
+          {
+            "id": "5e03d53f-34b5-4d88-aa2d-eda0165e34f4",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "78fd063e-ed8a-4a3f-962c-7fd70eb5327b",
+            "regionId": "ee34e731-7e95-400b-83d3-00b2e5de63d8",
+            "name": "Sweden"
+          }
+        ],
+        "positions": [
+          {
+            "id": "b516e3e3-4671-46a5-8414-4bb86c6bd5b2",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "regionId": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "countryId": "ae5b40d1-0123-4191-846c-336108fabb0c",
+            "instrumentName": "MFS Charter Income Trust",
+            "instrumentCurrency": "CNY",
+            "instrumentCode": "JD18242992439384",
+            "quantity": 496.19,
+            "price": {
+              "amount": "116.54",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 3.68,
+            "valuation": {
+              "amount": "9987931.0",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "516.15",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "165.3",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 0.91,
+            "unrealizedPL": {
+              "amount": "888.97",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 22.16,
+            "todayPL": {
+              "amount": "88.97",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLLocalPct": 22.26,
+            "unrealizedPLLocal": {
+              "amount": "888.97",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 2.16,
+            "assetClassPct": 9.82,
+            "portfolioPct": 1.48,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            }
+          },
+          {
+            "id": "0a293087-ae5f-4a38-8dbf-f5f6df7cfd85",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "regionId": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "countryId": "ae5b40d1-0123-4191-846c-336108fabb0c",
+            "instrumentName": "Brown Forman Corporation",
+            "instrumentCurrency": "RUB",
+            "instrumentCode": "SE42422076512162",
+            "quantity": 735.37,
+            "price": {
+              "amount": "120.64",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 4.05,
+            "valuation": {
+              "amount": "4091419.0",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1757.09",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "121.67",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.51,
+            "unrealizedPL": {
+              "amount": "438.48",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 19.35,
+            "todayPL": {
+              "amount": "38.48",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 9.35,
+            "assetClassPct": 8.92,
+            "portfolioPct": 1.31,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "5a3b0c63-5311-4c82-8295-4817fb70e687",
+            "accountId": "189ba245-67f9-4655-a895-d838d272bd78",
+            "assetClassId": "cb632686-720b-4b9a-b19f-b0a0d1eef43e",
+            "regionId": "d171b87d-3ba5-4b2e-b7b6-01df4bfcb5ee",
+            "countryId": "a8fe9bb7-8e86-46b4-a5eb-ab2c7d255e0d",
+            "instrumentName": "Time Warner Inc.",
+            "instrumentCurrency": "BRL",
+            "instrumentCode": "HB98230710071324",
+            "quantity": 350.34,
+            "price": {
+              "amount": "84.73",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 0.61,
+            "valuation": {
+              "amount": "88028423.58",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1422.48",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "242.39",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.44,
+            "unrealizedPL": {
+              "amount": "539.2",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 19.65,
+            "todayPL": {
+              "amount": "39.2",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 9.65,
+            "assetClassPct": 6.92,
+            "portfolioPct": 1.81,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "1c13a681-4a02-44bb-b6be-da55880f44f0",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "regionId": "b1bab9e6-8f61-4854-93e4-d4043f3e78ce",
+            "countryId": "9cf9d381-1048-4278-b159-6a7d881cd97f",
+            "instrumentName": "Tsakos Energy Navigation Ltd",
+            "instrumentCurrency": "CNY",
+            "instrumentCode": "BZ24397666821737",
+            "quantity": 876.55,
+            "price": {
+              "amount": "45.34",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 2.98,
+            "valuation": {
+              "amount": "73564982.62",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1375.22",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "199.31",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.72,
+            "unrealizedPL": {
+              "amount": "431.68",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 18.9,
+            "todayPL": {
+              "amount": "31.68",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 8.9,
+            "assetClassPct": 8.66,
+            "portfolioPct": 0.66,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "87e60938-370d-4e71-9b42-244a40f83501",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "regionId": "8b3b6168-2b56-40cd-89fc-5cd1c34b8dab",
+            "countryId": "87e60938-370d-4e71-9b42-244a40f83501",
+            "instrumentName": "First Trust Low Beta Income ETF",
+            "instrumentCurrency": "UGX",
+            "instrumentCode": "PQ37594073636599",
+            "quantity": 414.38,
+            "price": {
+              "amount": "65.87",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 1.53,
+            "valuation": {
+              "amount": "37558610.02",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1089.55",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "176.48",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.25,
+            "unrealizedPL": {
+              "amount": "642.03",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 23.07,
+            "todayPL": {
+              "amount": "42.03",
+              "currencyCode": "EUR"
+            },
+            "todayLPct": 3.07,
+            "assetClassPct": 9.04,
+            "portfolioPct": 1.79,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "9608eef1-3fa6-41b7-a882-9ca9b8b89c92",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "c4e576f0-1a0c-452a-9f31-2fa82d1c046e",
+            "regionId": "8b3b6168-2b56-40cd-89fc-5cd1c34b8dab",
+            "countryId": "87e60938-370d-4e71-9b42-244a40f83501",
+            "instrumentName": "Accenture plc",
+            "instrumentCurrency": "CNY",
+            "instrumentCode": "HA11969712272920",
+            "quantity": 35,
+            "price": {
+              "amount": "156.23",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 1.77,
+            "valuation": {
+              "amount": "40293276.77",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "563.37",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "110.96",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 0.87,
+            "unrealizedPL": {
+              "amount": "306.23",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 20.47,
+            "todayPL": {
+              "amount": "26.23",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 1.47,
+            "assetClassPct": 5.51,
+            "portfolioPct": 1.47,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "d6dff013-ec58-4e6d-9505-c44a3c133e4f",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "regionId": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "countryId": "69396553-48f8-4ef2-a473-19981f41bbdc",
+            "instrumentName": "Moleculin Biotech, Inc.",
+            "instrumentCurrency": "USD",
+            "instrumentCode": "ZO25765182558314",
+            "quantity": 670.7,
+            "price": {
+              "amount": "115.71",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 2.78,
+            "valuation": {
+              "amount": "2319117.22",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1839.4",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "169.77",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1,
+            "unrealizedPL": {
+              "amount": "396.95",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 26.54,
+            "todayPL": {
+              "amount": "96.95",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 6.54,
+            "assetClassPct": 9.55,
+            "portfolioPct": 0.87,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "fbb082c7-9ce9-47ff-b3a3-c7eae697a00e",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "regionId": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "countryId": "d5429cd2-3d0c-495c-9629-74e89167a53d",
+            "instrumentName": "U.S. Silica Holdings, Inc.",
+            "instrumentCurrency": "USD",
+            "instrumentCode": "ZK75647183509785",
+            "quantity": 899.65,
+            "price": {
+              "amount": "59.82",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 0.76,
+            "valuation": {
+              "amount": "67843708.11",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1434.41",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "102.63",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.71,
+            "unrealizedPL": {
+              "amount": "261.33",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 21.99,
+            "todayPL": {
+              "amount": "61.33",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 1.99,
+            "assetClassPct": 7.34,
+            "portfolioPct": 0.81,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "00c0dbce-3f07-4a84-9c71-50e271d5fe77",
+            "accountId": "a59160c1-8f56-4eb4-b36d-441c4d510335",
+            "assetClassId": "1480a59f-dd55-4c3a-8ec5-299bb1a95edc",
+            "regionId": "3cbc10e7-3e61-4403-b4ad-8f1bc049dc92",
+            "countryId": "d5429cd2-3d0c-495c-9629-74e89167a53d",
+            "instrumentName": "Haemonetics Corporation",
+            "instrumentCurrency": "USD",
+            "instrumentCode": "OK64945713806803",
+            "quantity": 374.72,
+            "price": {
+              "amount": "21.37",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 3.15,
+            "valuation": {
+              "amount": "4942279.0",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1465.5",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "182.03",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 0.84,
+            "unrealizedPL": {
+              "amount": "403.3",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 16.1,
+            "todayPL": {
+              "amount": "13.3",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 6.1,
+            "assetClassPct": 9.74,
+            "portfolioPct": 0.34,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "11d7e57a-d65b-4823-9f51-6cb413b79e3b",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "regionId": "04d31294-3069-4d23-bfee-4a11046d6ca4",
+            "countryId": "8fe8e2b4-d40f-488d-977c-030a4a3fc8cc",
+            "instrumentName": "Yulong Eco-Materials Limited",
+            "instrumentCurrency": "UAH",
+            "instrumentCode": "PE18113041661950",
+            "quantity": 550.14,
+            "price": {
+              "amount": "42.88",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 1.84,
+            "valuation": {
+              "amount": "43932317.67",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1173.25",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "208.61",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 1.05,
+            "unrealizedPL": {
+              "amount": "198.95",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 27.26,
+            "todayPL": {
+              "amount": "98.95",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 7.26,
+            "assetClassPct": 6.1,
+            "portfolioPct": 0.19,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "83b67100-4fed-4841-997e-7d59c1d8a2bd",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "b8c570d3-0135-45a1-8d47-602190bfa83f",
+            "regionId": "04d31294-3069-4d23-bfee-4a11046d6ca4",
+            "countryId": "11b356b4-aff0-425e-becc-8005d235907d",
+            "instrumentName": "Wheeler Real Estate Investment Trust, Inc.",
+            "instrumentCurrency": "CNY",
+            "instrumentCode": "GJ42291042823084",
+            "quantity": 400.7,
+            "price": {
+              "amount": "42.35",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 4.1,
+            "valuation": {
+              "amount": "38200859.76",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1711.28",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "114.68",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 0.86,
+            "unrealizedPL": {
+              "amount": "113.48",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 19.08,
+            "todayPL": {
+              "amount": "13.48",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 9.08,
+            "assetClassPct": 9.76,
+            "portfolioPct": 0.61,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          },
+          {
+            "id": "83b67100-4fed-4841-997e-7d59c1d8a2bd",
+            "accountId": "96504021-b1c9-4944-a3f7-ae3d5d84e405",
+            "assetClassId": "78fd063e-ed8a-4a3f-962c-7fd70eb5327b",
+            "regionId": "ee34e731-7e95-400b-83d3-00b2e5de63d8",
+            "countryId": "5e03d53f-34b5-4d88-aa2d-eda0165e34f4",
+            "instrumentName": "National Instruments Corporation",
+            "instrumentCurrency": "USD",
+            "instrumentCode": "GJ42291042823084",
+            "quantity": 525.17,
+            "price": {
+              "amount": "45.32",
+              "currencyCode": "EUR"
+            },
+            "exchangeRate": 5.3,
+            "valuation": {
+              "amount": "37201859.78",
+              "currencyCode": "EUR"
+            },
+            "accruedInterest": {
+              "amount": "1771.25",
+              "currencyCode": "EUR"
+            },
+            "costPrice": {
+              "amount": "124.64",
+              "currencyCode": "EUR"
+            },
+            "costExchangeRate": 0.76,
+            "unrealizedPL": {
+              "amount": "121.47",
+              "currencyCode": "EUR"
+            },
+            "unrealizedPLPct": 18.07,
+            "todayPL": {
+              "amount": "21.47",
+              "currencyCode": "EUR"
+            },
+            "todayPLPct": 8.07,
+            "assetClassPct": 9.57,
+            "portfolioPct": 0.72,
+            "countryCode": "USA",
+            "additions": {
+              "someKey": "someValue"
+            },
+            "instrumentAvailable": true,
+            "instrumentId": "4277867260258033000"
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

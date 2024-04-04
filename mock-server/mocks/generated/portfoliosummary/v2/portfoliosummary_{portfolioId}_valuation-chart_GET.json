@@ -1,0 +1,1455 @@
+{
+  "name": "/client-api/v2/portfoliosummary/{portfolioId}/valuation-chart_GET",
+  "request": {
+    "url": "/client-api/v2/portfoliosummary/[^/]+/valuation-chart(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "chartData": [
+          {
+            "dateFrom": "2020-01-01T00:00:00.000Z",
+            "dateTo": "2020-01-08T00:00:00.000Z",
+            "value": {
+              "amount": "6152293",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2020-01-08T00:00:00.001Z",
+            "dateTo": "2020-01-15T00:00:00.001Z",
+            "value": {
+              "amount": "6671963",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2020-01-15T00:00:00.002Z",
+            "dateTo": "2020-01-22T00:00:00.002Z",
+            "value": {
+              "amount": "6927310",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2020-01-22T00:00:00.003Z",
+            "dateTo": "2020-01-29T00:00:00.003Z",
+            "value": {
+              "amount": "6844270",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-01-29T00:00:00.004Z",
+            "dateTo": "2020-02-05T00:00:00.004Z",
+            "value": {
+              "amount": "7176271",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2020-02-05T00:00:00.005Z",
+            "dateTo": "2020-02-12T00:00:00.005Z",
+            "value": {
+              "amount": "6939634",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2020-02-12T00:00:00.006Z",
+            "dateTo": "2020-02-19T00:00:00.006Z",
+            "value": {
+              "amount": "6701290",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2020-02-19T00:00:00.007Z",
+            "dateTo": "2020-02-26T00:00:00.007Z",
+            "value": {
+              "amount": "6051191",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2020-02-26T00:00:00.008Z",
+            "dateTo": "2020-03-04T00:00:00.008Z",
+            "value": {
+              "amount": "7205372",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-03-04T00:00:00.009Z",
+            "dateTo": "2020-03-11T00:00:00.009Z",
+            "value": {
+              "amount": "6349985",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2020-03-11T00:00:00.010Z",
+            "dateTo": "2020-03-18T00:00:00.010Z",
+            "value": {
+              "amount": "6027673",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-03-18T00:00:00.011Z",
+            "dateTo": "2020-03-25T00:00:00.011Z",
+            "value": {
+              "amount": "6796056",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-03-25T00:00:00.012Z",
+            "dateTo": "2020-04-01T00:00:00.012Z",
+            "value": {
+              "amount": "7209203",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-04-01T00:00:00.013Z",
+            "dateTo": "2020-04-08T00:00:00.013Z",
+            "value": {
+              "amount": "5791407",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-04-08T00:00:00.014Z",
+            "dateTo": "2020-04-15T00:00:00.014Z",
+            "value": {
+              "amount": "6692875",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-04-15T00:00:00.015Z",
+            "dateTo": "2020-04-22T00:00:00.015Z",
+            "value": {
+              "amount": "7179146",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2020-04-22T00:00:00.016Z",
+            "dateTo": "2020-04-29T00:00:00.016Z",
+            "value": {
+              "amount": "6801755",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2020-04-29T00:00:00.017Z",
+            "dateTo": "2020-05-06T00:00:00.017Z",
+            "value": {
+              "amount": "5900856",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2020-05-06T00:00:00.018Z",
+            "dateTo": "2020-05-13T00:00:00.018Z",
+            "value": {
+              "amount": "6178198",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2020-05-13T00:00:00.019Z",
+            "dateTo": "2020-05-20T00:00:00.019Z",
+            "value": {
+              "amount": "6082348",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2020-05-20T00:00:00.020Z",
+            "dateTo": "2020-05-27T00:00:00.020Z",
+            "value": {
+              "amount": "7210449",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2020-05-27T00:00:00.021Z",
+            "dateTo": "2020-06-03T00:00:00.021Z",
+            "value": {
+              "amount": "6632729",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-06-03T00:00:00.022Z",
+            "dateTo": "2020-06-10T00:00:00.022Z",
+            "value": {
+              "amount": "6058817",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2020-06-10T00:00:00.023Z",
+            "dateTo": "2020-06-17T00:00:00.023Z",
+            "value": {
+              "amount": "6754445",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-06-17T00:00:00.024Z",
+            "dateTo": "2020-06-24T00:00:00.024Z",
+            "value": {
+              "amount": "5946610",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2020-06-24T00:00:00.025Z",
+            "dateTo": "2020-07-01T00:00:00.025Z",
+            "value": {
+              "amount": "7068235",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2020-07-01T00:00:00.026Z",
+            "dateTo": "2020-07-08T00:00:00.026Z",
+            "value": {
+              "amount": "7159931",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-07-08T00:00:00.027Z",
+            "dateTo": "2020-07-15T00:00:00.027Z",
+            "value": {
+              "amount": "6982782",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-07-15T00:00:00.028Z",
+            "dateTo": "2020-07-22T00:00:00.028Z",
+            "value": {
+              "amount": "5687576",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-07-22T00:00:00.029Z",
+            "dateTo": "2020-07-29T00:00:00.029Z",
+            "value": {
+              "amount": "6801987",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2020-07-29T00:00:00.030Z",
+            "dateTo": "2020-08-05T00:00:00.030Z",
+            "value": {
+              "amount": "5839448",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2020-08-05T00:00:00.031Z",
+            "dateTo": "2020-08-12T00:00:00.031Z",
+            "value": {
+              "amount": "6612833",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2020-08-12T00:00:00.032Z",
+            "dateTo": "2020-08-19T00:00:00.032Z",
+            "value": {
+              "amount": "7112499",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2020-08-19T00:00:00.033Z",
+            "dateTo": "2020-08-26T00:00:00.033Z",
+            "value": {
+              "amount": "5901031",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-08-26T00:00:00.034Z",
+            "dateTo": "2020-09-02T00:00:00.034Z",
+            "value": {
+              "amount": "6192466",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-09-02T00:00:00.035Z",
+            "dateTo": "2020-09-09T00:00:00.035Z",
+            "value": {
+              "amount": "6834784",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2020-09-09T00:00:00.036Z",
+            "dateTo": "2020-09-16T00:00:00.036Z",
+            "value": {
+              "amount": "7227194",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2020-09-16T00:00:00.037Z",
+            "dateTo": "2020-09-23T00:00:00.037Z",
+            "value": {
+              "amount": "6982829",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2020-09-23T00:00:00.038Z",
+            "dateTo": "2020-09-30T00:00:00.038Z",
+            "value": {
+              "amount": "6966514",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2020-09-30T00:00:00.039Z",
+            "dateTo": "2020-10-07T00:00:00.039Z",
+            "value": {
+              "amount": "5937315",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2020-10-07T00:00:00.040Z",
+            "dateTo": "2020-10-14T00:00:00.040Z",
+            "value": {
+              "amount": "5910950",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2020-10-14T00:00:00.041Z",
+            "dateTo": "2020-10-21T00:00:00.041Z",
+            "value": {
+              "amount": "6491943",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-10-21T00:00:00.042Z",
+            "dateTo": "2020-10-28T00:00:00.042Z",
+            "value": {
+              "amount": "6286096",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-10-28T00:00:00.043Z",
+            "dateTo": "2020-11-04T00:00:00.043Z",
+            "value": {
+              "amount": "5806196",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-11-04T00:00:00.044Z",
+            "dateTo": "2020-11-11T00:00:00.044Z",
+            "value": {
+              "amount": "5903492",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2020-11-11T00:00:00.045Z",
+            "dateTo": "2020-11-18T00:00:00.045Z",
+            "value": {
+              "amount": "6123345",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-11-18T00:00:00.046Z",
+            "dateTo": "2020-11-25T00:00:00.046Z",
+            "value": {
+              "amount": "6653837",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-11-25T00:00:00.047Z",
+            "dateTo": "2020-12-02T00:00:00.047Z",
+            "value": {
+              "amount": "7171462",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2020-12-02T00:00:00.048Z",
+            "dateTo": "2020-12-09T00:00:00.048Z",
+            "value": {
+              "amount": "5764554",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2020-12-09T00:00:00.049Z",
+            "dateTo": "2020-12-16T00:00:00.049Z",
+            "value": {
+              "amount": "7120949",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-12-16T00:00:00.050Z",
+            "dateTo": "2020-12-23T00:00:00.050Z",
+            "value": {
+              "amount": "6957210",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2020-12-23T00:00:00.051Z",
+            "dateTo": "2020-12-30T00:00:00.051Z",
+            "value": {
+              "amount": "6952720",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2020-12-30T00:00:00.052Z",
+            "dateTo": "2021-01-06T00:00:00.052Z",
+            "value": {
+              "amount": "6633135",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-01-06T00:00:00.053Z",
+            "dateTo": "2021-01-13T00:00:00.053Z",
+            "value": {
+              "amount": "6237072",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2021-01-13T00:00:00.054Z",
+            "dateTo": "2021-01-20T00:00:00.054Z",
+            "value": {
+              "amount": "6541372",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-01-20T00:00:00.055Z",
+            "dateTo": "2021-01-27T00:00:00.055Z",
+            "value": {
+              "amount": "6359252",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-01-27T00:00:00.056Z",
+            "dateTo": "2021-02-03T00:00:00.056Z",
+            "value": {
+              "amount": "6583568",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2021-02-03T00:00:00.057Z",
+            "dateTo": "2021-02-10T00:00:00.057Z",
+            "value": {
+              "amount": "5749892",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2021-02-10T00:00:00.058Z",
+            "dateTo": "2021-02-17T00:00:00.058Z",
+            "value": {
+              "amount": "7095650",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2021-02-17T00:00:00.059Z",
+            "dateTo": "2021-02-24T00:00:00.059Z",
+            "value": {
+              "amount": "7143473",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-02-24T00:00:00.060Z",
+            "dateTo": "2021-03-03T00:00:00.060Z",
+            "value": {
+              "amount": "5791789",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-03-03T00:00:00.061Z",
+            "dateTo": "2021-03-10T00:00:00.061Z",
+            "value": {
+              "amount": "6671002",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2021-03-10T00:00:00.062Z",
+            "dateTo": "2021-03-17T00:00:00.062Z",
+            "value": {
+              "amount": "6493951",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-03-17T00:00:00.063Z",
+            "dateTo": "2021-03-24T00:00:00.063Z",
+            "value": {
+              "amount": "5766593",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2021-03-24T00:00:00.064Z",
+            "dateTo": "2021-03-31T00:00:00.064Z",
+            "value": {
+              "amount": "6544906",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-03-31T00:00:00.065Z",
+            "dateTo": "2021-04-07T00:00:00.065Z",
+            "value": {
+              "amount": "7183536",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2021-04-07T00:00:00.066Z",
+            "dateTo": "2021-04-14T00:00:00.066Z",
+            "value": {
+              "amount": "7125443",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-04-14T00:00:00.067Z",
+            "dateTo": "2021-04-21T00:00:00.067Z",
+            "value": {
+              "amount": "5774725",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2021-04-21T00:00:00.068Z",
+            "dateTo": "2021-04-28T00:00:00.068Z",
+            "value": {
+              "amount": "6800604",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-04-28T00:00:00.069Z",
+            "dateTo": "2021-05-05T00:00:00.069Z",
+            "value": {
+              "amount": "6305900",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2021-05-05T00:00:00.070Z",
+            "dateTo": "2021-05-12T00:00:00.070Z",
+            "value": {
+              "amount": "6135538",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2021-05-12T00:00:00.071Z",
+            "dateTo": "2021-05-19T00:00:00.071Z",
+            "value": {
+              "amount": "6021537",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2021-05-19T00:00:00.072Z",
+            "dateTo": "2021-05-26T00:00:00.072Z",
+            "value": {
+              "amount": "6456169",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2021-05-26T00:00:00.073Z",
+            "dateTo": "2021-06-02T00:00:00.073Z",
+            "value": {
+              "amount": "6400229",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2021-06-02T00:00:00.074Z",
+            "dateTo": "2021-06-09T00:00:00.074Z",
+            "value": {
+              "amount": "6139152",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-06-09T00:00:00.075Z",
+            "dateTo": "2021-06-16T00:00:00.075Z",
+            "value": {
+              "amount": "6617987",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2021-06-16T00:00:00.076Z",
+            "dateTo": "2021-06-23T00:00:00.076Z",
+            "value": {
+              "amount": "5831302",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-06-23T00:00:00.077Z",
+            "dateTo": "2021-06-30T00:00:00.077Z",
+            "value": {
+              "amount": "6850927",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-06-30T00:00:00.078Z",
+            "dateTo": "2021-07-07T00:00:00.078Z",
+            "value": {
+              "amount": "6610681",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2021-07-07T00:00:00.079Z",
+            "dateTo": "2021-07-14T00:00:00.079Z",
+            "value": {
+              "amount": "6872820",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-07-14T00:00:00.080Z",
+            "dateTo": "2021-07-21T00:00:00.080Z",
+            "value": {
+              "amount": "6753237",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-07-21T00:00:00.081Z",
+            "dateTo": "2021-07-28T00:00:00.081Z",
+            "value": {
+              "amount": "5912079",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-07-28T00:00:00.082Z",
+            "dateTo": "2021-08-04T00:00:00.082Z",
+            "value": {
+              "amount": "6609486",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2021-08-04T00:00:00.083Z",
+            "dateTo": "2021-08-11T00:00:00.083Z",
+            "value": {
+              "amount": "5791748",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2021-08-11T00:00:00.084Z",
+            "dateTo": "2021-08-18T00:00:00.084Z",
+            "value": {
+              "amount": "5888493",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2021-08-18T00:00:00.085Z",
+            "dateTo": "2021-08-25T00:00:00.085Z",
+            "value": {
+              "amount": "6014889",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2021-08-25T00:00:00.086Z",
+            "dateTo": "2021-09-01T00:00:00.086Z",
+            "value": {
+              "amount": "6285114",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2021-09-01T00:00:00.087Z",
+            "dateTo": "2021-09-08T00:00:00.087Z",
+            "value": {
+              "amount": "7184468",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2021-09-08T00:00:00.088Z",
+            "dateTo": "2021-09-15T00:00:00.088Z",
+            "value": {
+              "amount": "6722616",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-09-15T00:00:00.089Z",
+            "dateTo": "2021-09-22T00:00:00.089Z",
+            "value": {
+              "amount": "6689229",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2021-09-22T00:00:00.090Z",
+            "dateTo": "2021-09-29T00:00:00.090Z",
+            "value": {
+              "amount": "5842472",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2021-09-29T00:00:00.091Z",
+            "dateTo": "2021-10-06T00:00:00.091Z",
+            "value": {
+              "amount": "5926391",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2021-10-06T00:00:00.092Z",
+            "dateTo": "2021-10-13T00:00:00.092Z",
+            "value": {
+              "amount": "6633499",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-10-13T00:00:00.093Z",
+            "dateTo": "2021-10-20T00:00:00.093Z",
+            "value": {
+              "amount": "5786299",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2021-10-20T00:00:00.094Z",
+            "dateTo": "2021-10-27T00:00:00.094Z",
+            "value": {
+              "amount": "6879682",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2021-10-27T00:00:00.095Z",
+            "dateTo": "2021-11-03T00:00:00.095Z",
+            "value": {
+              "amount": "5872714",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2021-11-03T00:00:00.096Z",
+            "dateTo": "2021-11-10T00:00:00.096Z",
+            "value": {
+              "amount": "6167084",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2021-11-10T00:00:00.097Z",
+            "dateTo": "2021-11-17T00:00:00.097Z",
+            "value": {
+              "amount": "5850056",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-11-17T00:00:00.098Z",
+            "dateTo": "2021-11-24T00:00:00.098Z",
+            "value": {
+              "amount": "7209755",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-11-24T00:00:00.099Z",
+            "dateTo": "2021-12-01T00:00:00.099Z",
+            "value": {
+              "amount": "7034770",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2021-12-01T00:00:00.100Z",
+            "dateTo": "2021-12-08T00:00:00.100Z",
+            "value": {
+              "amount": "6856104",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2021-12-08T00:00:00.101Z",
+            "dateTo": "2021-12-15T00:00:00.101Z",
+            "value": {
+              "amount": "5951966",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2021-12-15T00:00:00.102Z",
+            "dateTo": "2021-12-22T00:00:00.102Z",
+            "value": {
+              "amount": "6314427",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-12-22T00:00:00.103Z",
+            "dateTo": "2021-12-29T00:00:00.103Z",
+            "value": {
+              "amount": "7204678",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2021-12-29T00:00:00.104Z",
+            "dateTo": "2022-01-05T00:00:00.104Z",
+            "value": {
+              "amount": "6970868",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-01-05T00:00:00.105Z",
+            "dateTo": "2022-01-12T00:00:00.105Z",
+            "value": {
+              "amount": "6025910",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2022-01-12T00:00:00.106Z",
+            "dateTo": "2022-01-19T00:00:00.106Z",
+            "value": {
+              "amount": "5982725",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-01-19T00:00:00.107Z",
+            "dateTo": "2022-01-26T00:00:00.107Z",
+            "value": {
+              "amount": "7196733",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-01-26T00:00:00.108Z",
+            "dateTo": "2022-02-02T00:00:00.108Z",
+            "value": {
+              "amount": "6524555",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-02-02T00:00:00.109Z",
+            "dateTo": "2022-02-09T00:00:00.109Z",
+            "value": {
+              "amount": "6708153",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-02-09T00:00:00.110Z",
+            "dateTo": "2022-02-16T00:00:00.110Z",
+            "value": {
+              "amount": "7173597",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2022-02-16T00:00:00.111Z",
+            "dateTo": "2022-02-23T00:00:00.111Z",
+            "value": {
+              "amount": "6812083",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2022-02-23T00:00:00.112Z",
+            "dateTo": "2022-03-02T00:00:00.112Z",
+            "value": {
+              "amount": "6246861",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-03-02T00:00:00.113Z",
+            "dateTo": "2022-03-09T00:00:00.113Z",
+            "value": {
+              "amount": "7035636",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2022-03-09T00:00:00.114Z",
+            "dateTo": "2022-03-16T00:00:00.114Z",
+            "value": {
+              "amount": "5725747",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-03-16T00:00:00.115Z",
+            "dateTo": "2022-03-23T00:00:00.115Z",
+            "value": {
+              "amount": "6308332",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-03-23T00:00:00.116Z",
+            "dateTo": "2022-03-30T00:00:00.116Z",
+            "value": {
+              "amount": "5720112",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2022-03-30T00:00:00.117Z",
+            "dateTo": "2022-04-06T00:00:00.117Z",
+            "value": {
+              "amount": "6715068",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-04-06T00:00:00.118Z",
+            "dateTo": "2022-04-13T00:00:00.118Z",
+            "value": {
+              "amount": "5867264",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-04-13T00:00:00.119Z",
+            "dateTo": "2022-04-20T00:00:00.119Z",
+            "value": {
+              "amount": "6034599",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-04-20T00:00:00.120Z",
+            "dateTo": "2022-04-27T00:00:00.120Z",
+            "value": {
+              "amount": "6997007",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -4
+          },
+          {
+            "dateFrom": "2022-04-27T00:00:00.121Z",
+            "dateTo": "2022-05-04T00:00:00.121Z",
+            "value": {
+              "amount": "6453228",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-05-04T00:00:00.122Z",
+            "dateTo": "2022-05-11T00:00:00.122Z",
+            "value": {
+              "amount": "6313486",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-05-11T00:00:00.123Z",
+            "dateTo": "2022-05-18T00:00:00.123Z",
+            "value": {
+              "amount": "6860518",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-05-18T00:00:00.124Z",
+            "dateTo": "2022-05-25T00:00:00.124Z",
+            "value": {
+              "amount": "7063918",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-05-25T00:00:00.125Z",
+            "dateTo": "2022-06-01T00:00:00.125Z",
+            "value": {
+              "amount": "6386710",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2022-06-01T00:00:00.126Z",
+            "dateTo": "2022-06-08T00:00:00.126Z",
+            "value": {
+              "amount": "6017920",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2022-06-08T00:00:00.127Z",
+            "dateTo": "2022-06-15T00:00:00.127Z",
+            "value": {
+              "amount": "5832544",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2022-06-15T00:00:00.128Z",
+            "dateTo": "2022-06-22T00:00:00.128Z",
+            "value": {
+              "amount": "6960513",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-06-22T00:00:00.129Z",
+            "dateTo": "2022-06-29T00:00:00.129Z",
+            "value": {
+              "amount": "6471256",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2022-06-29T00:00:00.130Z",
+            "dateTo": "2022-07-06T00:00:00.130Z",
+            "value": {
+              "amount": "5724608",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-07-06T00:00:00.131Z",
+            "dateTo": "2022-07-13T00:00:00.131Z",
+            "value": {
+              "amount": "6255234",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 5
+          },
+          {
+            "dateFrom": "2022-07-13T00:00:00.132Z",
+            "dateTo": "2022-07-20T00:00:00.132Z",
+            "value": {
+              "amount": "6754423",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2022-07-20T00:00:00.133Z",
+            "dateTo": "2022-07-27T00:00:00.133Z",
+            "value": {
+              "amount": "6858731",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2022-07-27T00:00:00.134Z",
+            "dateTo": "2022-08-03T00:00:00.134Z",
+            "value": {
+              "amount": "6803701",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2022-08-03T00:00:00.135Z",
+            "dateTo": "2022-08-10T00:00:00.135Z",
+            "value": {
+              "amount": "6497574",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-08-10T00:00:00.136Z",
+            "dateTo": "2022-08-17T00:00:00.136Z",
+            "value": {
+              "amount": "5985219",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-08-17T00:00:00.137Z",
+            "dateTo": "2022-08-24T00:00:00.137Z",
+            "value": {
+              "amount": "6048879",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2022-08-24T00:00:00.138Z",
+            "dateTo": "2022-08-31T00:00:00.138Z",
+            "value": {
+              "amount": "5994574",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2022-08-31T00:00:00.139Z",
+            "dateTo": "2022-09-07T00:00:00.139Z",
+            "value": {
+              "amount": "6520831",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-09-07T00:00:00.140Z",
+            "dateTo": "2022-09-14T00:00:00.140Z",
+            "value": {
+              "amount": "7055581",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 2
+          },
+          {
+            "dateFrom": "2022-09-14T00:00:00.141Z",
+            "dateTo": "2022-09-21T00:00:00.141Z",
+            "value": {
+              "amount": "5891402",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2022-09-21T00:00:00.142Z",
+            "dateTo": "2022-09-28T00:00:00.142Z",
+            "value": {
+              "amount": "6293978",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -5
+          },
+          {
+            "dateFrom": "2022-09-28T00:00:00.143Z",
+            "dateTo": "2022-10-05T00:00:00.143Z",
+            "value": {
+              "amount": "6340691",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-10-05T00:00:00.144Z",
+            "dateTo": "2022-10-12T00:00:00.144Z",
+            "value": {
+              "amount": "6199942",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-10-12T00:00:00.145Z",
+            "dateTo": "2022-10-19T00:00:00.145Z",
+            "value": {
+              "amount": "6939834",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-10-19T00:00:00.146Z",
+            "dateTo": "2022-10-26T00:00:00.146Z",
+            "value": {
+              "amount": "6656636",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 4
+          },
+          {
+            "dateFrom": "2022-10-26T00:00:00.147Z",
+            "dateTo": "2022-11-02T00:00:00.147Z",
+            "value": {
+              "amount": "5775172",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 3
+          },
+          {
+            "dateFrom": "2022-11-02T00:00:00.148Z",
+            "dateTo": "2022-11-09T00:00:00.148Z",
+            "value": {
+              "amount": "6245014",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-11-09T00:00:00.149Z",
+            "dateTo": "2022-11-16T00:00:00.149Z",
+            "value": {
+              "amount": "6404055",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 1
+          },
+          {
+            "dateFrom": "2022-11-16T00:00:00.150Z",
+            "dateTo": "2022-11-23T00:00:00.150Z",
+            "value": {
+              "amount": "5931842",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-11-23T00:00:00.151Z",
+            "dateTo": "2022-11-30T00:00:00.151Z",
+            "value": {
+              "amount": "7181715",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2022-11-30T00:00:00.152Z",
+            "dateTo": "2022-12-07T00:00:00.152Z",
+            "value": {
+              "amount": "5796852",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -2
+          },
+          {
+            "dateFrom": "2022-12-07T00:00:00.153Z",
+            "dateTo": "2022-12-14T00:00:00.153Z",
+            "value": {
+              "amount": "6977254",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -1
+          },
+          {
+            "dateFrom": "2022-12-14T00:00:00.154Z",
+            "dateTo": "2022-12-21T00:00:00.154Z",
+            "value": {
+              "amount": "6405145",
+              "currencyCode": "EUR"
+            },
+            "valuePct": 0.5
+          },
+          {
+            "dateFrom": "2022-12-21T00:00:00.155Z",
+            "dateTo": "2022-12-28T00:00:00.155Z",
+            "value": {
+              "amount": "5805225",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          },
+          {
+            "dateFrom": "2022-12-28T00:00:00.156Z",
+            "dateTo": "2023-01-04T00:00:00.156Z",
+            "value": {
+              "amount": "6708041",
+              "currencyCode": "EUR"
+            },
+            "valuePct": -3
+          }
+        ],
+        "valueDataDisplay": true,
+        "valuePctDataDisplay": true
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

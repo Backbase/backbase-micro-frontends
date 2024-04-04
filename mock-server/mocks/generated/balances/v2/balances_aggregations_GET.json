@@ -1,0 +1,152 @@
+{
+  "name": "/client-api/v2/balances/aggregations_GET",
+  "request": {
+    "url": "/client-api/v2/balances/aggregations(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "aggregatedBalances": [
+            {
+              "currencyCode": "EUR",
+              "amount": "3289.0",
+              "numberOfArrangements": 3
+            },
+            {
+              "currencyCode": "USD",
+              "amount": "2500.0",
+              "numberOfArrangements": 10
+            }
+          ]
+        }
+      ],
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": [
+        {
+          "id": "871283172971234",
+          "productKindName": "Savings Account",
+          "balanceType": "Booked Balance",
+          "aggregatedBalances": [
+            {
+              "currencyCode": "EUR",
+              "amount": "3289.0",
+              "numberOfArrangements": 3
+            },
+            {
+              "currencyCode": "USD",
+              "amount": "2500.0",
+              "numberOfArrangements": 10
+            }
+          ]
+        },
+        {
+          "id": "85342342387123",
+          "productKindName": "Term Deposit",
+          "balanceType": "Outstanding Principal Amount",
+          "aggregatedBalances": [
+            {
+              "currencyCode": "USD",
+              "amount": "3543.0",
+              "numberOfArrangements": 3
+            }
+          ]
+        }
+      ]
+    },
+    "success_2": {
+      "status": 200,
+      "data": [
+        {
+          "aggregatedBalances": [
+            {
+              "currencyCode": "USD",
+              "amount": "6043.0",
+              "numberOfArrangements": 14
+            },
+            {
+              "currencyCode": "EUR",
+              "amount": "3289.0",
+              "numberOfArrangements": 3
+            }
+          ]
+        },
+        {
+          "id": "871283172971234",
+          "productKindName": "Savings Account",
+          "balanceType": "Booked Balance",
+          "numberOfArrangements": 13,
+          "aggregatedBalances": [
+            {
+              "currencyCode": "USD",
+              "amount": "2500.0",
+              "numberOfArrangements": 10
+            },
+            {
+              "currencyCode": "EUR",
+              "amount": "3289.0",
+              "numberOfArrangements": 3
+            }
+          ]
+        },
+        {
+          "id": "85342342387123",
+          "productKindName": "Term Deposit",
+          "balanceType": "OutstandingPrincipalAmount",
+          "numberOfArrangements": 4,
+          "aggregatedBalances": [
+            {
+              "currencyCode": "USD",
+              "amount": "3543.0",
+              "numberOfArrangements": 4
+            }
+          ]
+        }
+      ]
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

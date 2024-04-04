@@ -1,0 +1,16 @@
+{
+  "name": "/client-api/v2/notifications/read_PUT",
+  "request": {
+    "url": "/client-api/v2/notifications/read(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "allReadStatus": true
+      },
+      "default": true
+    }
+  }
+}

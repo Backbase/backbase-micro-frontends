@@ -1,0 +1,29 @@
+{
+  "name": "/access-control/client-api/v2/accessgroups/service-agreements/{id}/users/{userId}/permissions_GET",
+  "request": {
+    "url": "/access-control/client-api/v2/accessgroups/service-agreements/[^/]+/users/[^/]+/permissions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "items": [
+          {
+            "functionGroupId": "98f8531d-9bf4-4f3f-a49b-7cf331d6eead",
+            "dataGroupIds": [
+              {
+                "id": "138a7683-e9da-4ffa-a257-b78626790cd7"
+              }
+            ]
+          },
+          {
+            "functionGroupId": "00779897-253c-4bbb-b0c7-3c47fd0b0b08",
+            "dataGroupIds": []
+          }
+        ]
+      },
+      "default": true
+    }
+  }
+}

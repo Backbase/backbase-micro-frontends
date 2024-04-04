@@ -1,0 +1,63 @@
+{
+  "name": "/client-api/v5/message-center/messages/conversations/read_PUT",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/conversations/read(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "changedItems": ["ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395e7", "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395b7"],
+        "failedItems": ["b0069a89-3dcb-4bdc-b7da-fc65643064a6", "ae9f9fdd-f4ed-4a6e-bc19-9eeeb17395c9"]
+      },
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

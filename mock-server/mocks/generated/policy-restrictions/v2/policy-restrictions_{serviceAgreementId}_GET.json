@@ -1,0 +1,57 @@
+{
+  "name": "/client-api/v2/policy-restrictions/{serviceAgreementId}_GET",
+  "request": {
+    "url": "/client-api/v2/policy-restrictions/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "restrictions": [
+          {
+            "functionName": "SEPA CT",
+            "resourceName": "Payments",
+            "bounds": [
+              {
+                "minimumApprovesCount": 2,
+                "currencyBound": {
+                  "upperBound": 100.45,
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "minimumApprovesCount": 1
+              }
+            ]
+          },
+          {
+            "functionName": "SEPA CT",
+            "resourceName": "Payments",
+            "bounds": [
+              {
+                "minimumApprovesCount": 5
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

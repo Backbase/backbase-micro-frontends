@@ -1,0 +1,238 @@
+{
+  "name": "/positive-pay-check/client-api/v1/checks/{id}-GET",
+  "request": {
+    "url": "/positive-pay-check/client-api/v1/checks/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "unauthorized": {
+      "status": 401,
+      "data": {
+        "errors": [
+          {
+            "message": "Unathorized",
+            "key": "common.api.unathorized"
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    },
+    "success_exception": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "createdAt": "2020-12-31T01:30:00.000",
+        "issueStatus": "SUBMITTED",
+        "createdBy": "Robin Green",
+        "updatedBy": "Maria Doe",
+        "updatedAt": "2021-01-02T11:50:23",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z"
+      }
+    },
+    "success_exception_file": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "issueStatus": "EXCEPTION",
+        "createdBy": "Robin Green",
+        "updatedBy": "Maria Doe",
+        "updatedAt": "2021-01-02T11:50:23",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z",
+        "fileName": "checks_2022_September.csv",
+        "createdAt": "2022-09-18T01:30:00.000"
+      }
+    },
+    "success_resolved": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "createdAt": "2020-12-31T01:30:00.000",
+        "issueStatus": "RESOLVED",
+        "createdBy": "Robin Green",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z",
+        "resolutionDate": "2020-12-02T10:10:28Z",
+        "resolvedBy": "Robin Green",
+        "actionType": "PAY"
+      }
+    },
+    "success_resolved_file": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "issueStatus": "RESOLVED",
+        "createdBy": "Robin Green",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z",
+        "resolutionDate": "2020-12-02T10:10:28Z",
+        "resolvedBy": "Robin Green",
+        "actionType": "PAY",
+        "fileName": "checks_2022_November.csv",
+        "createdAt": "2022-11-18T01:30:00.000"
+      }
+    },
+    "success_submitted": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "createdAt": "2020-12-31T01:30:00.000",
+        "issueStatus": "SUBMITTED",
+        "createdBy": "Robin Green"
+      }
+    },
+    "success_submitted_file": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "issueStatus": "SUBMITTED",
+        "createdBy": "Robin Green",
+        "fileName": "checks_2022_March.csv",
+        "createdAt": "2022-03-18T01:30:00.000"
+      }
+    },
+    "success_rejected": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "createdAt": "2020-12-31T01:30:00.000",
+        "issueStatus": "REJECTED",
+        "createdBy": "Robin Green",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z",
+        "resolutionDate": "2020-12-02T10:10:28Z",
+        "resolvedBy": "Robin Green",
+        "actionType": "REJECT",
+        "rejectionReason": "Amount mismatch"
+      }
+    },
+    "success_rejected_file": {
+      "status": 200,
+      "data": {
+        "id": "849d66ae-c942-2ba7-8739-c5a38a596f31",
+        "arrangementId": "1cdb2224-8926-4b4d-a99f-1c9dfbbb4691",
+        "payeeName": "Sarah Lee",
+        "amountDetails": {
+          "currencyCode": "USD",
+          "amount": "99.99"
+        },
+        "checkNumber": "111456789123456789123456789111",
+        "issueDate": "2020-11-01",
+        "voidCheck": false,
+        "issueStatus": "REJECTED",
+        "createdBy": "Robin Green",
+        "exceptionCheckId": "969d66ae-c435-2aa7-8739-c5a38a606f31",
+        "exceptionDate": "2020-12-01T10:05:28Z",
+        "resolutionDate": "2020-12-02T10:10:28Z",
+        "resolvedBy": "Robin Green",
+        "actionType": "REJECT",
+        "rejectionReason": "Amount mismatch",
+        "fileName": "checks_2022_October.csv",
+        "uploadInitiatedAt": "2022-10-18T01:30:00.000"
+      }
+    }
+  }
+}

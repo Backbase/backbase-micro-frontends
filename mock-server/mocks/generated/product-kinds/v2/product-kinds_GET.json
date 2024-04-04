@@ -1,0 +1,108 @@
+{
+  "name": "/client-api/v2/product-kinds_GET",
+  "request": {
+    "url": "/client-api/v2/product-kinds(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "productKinds": [
+          {
+            "id": 1,
+            "externalKindId": "123123-123f",
+            "kindName": "Current Account",
+            "kindUri": "current-account",
+            "translations": [
+              {
+                "locale": "de_DE",
+                "localeTranslations": [
+                  {
+                    "fieldName": "kind_name",
+                    "fieldValue": "Aktuelles Konto"
+                  }
+                ]
+              },
+              {
+                "locale": "ar_JO",
+                "localeTranslations": [
+                  {
+                    "fieldName": "kind_name",
+                    "fieldValue": "الحساب الحالي"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "externalKindId": "asdads67-asd",
+            "kindName": "Savings Account",
+            "kindUri": "savings-account",
+            "translations": [
+              {
+                "locale": "de_DE",
+                "localeTranslations": [
+                  {
+                    "fieldName": "kind_name",
+                    "fieldValue": "Sparkonto"
+                  }
+                ]
+              },
+              {
+                "locale": "ar_JO",
+                "localeTranslations": [
+                  {
+                    "fieldName": "kind_name",
+                    "fieldValue": "حساب التوفير"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

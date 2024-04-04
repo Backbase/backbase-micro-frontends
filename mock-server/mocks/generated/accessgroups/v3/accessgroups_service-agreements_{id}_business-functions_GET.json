@@ -1,0 +1,1247 @@
+{
+  "name": "/access-control/client-api/v3/accessgroups/service-agreements/{id}/business-functions_GET",
+  "request": {
+    "url": "/access-control/client-api/v3/accessgroups/service-agreements/[^/]+/business-functions(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "functionId": "1026",
+          "functionCode": "us.billpay.enrolment",
+          "resource": "Billpay",
+          "name": "US Billpay Enrolment",
+          "privileges": [
+            {
+              "privilege": "execute",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1006",
+          "functionCode": "product.summary",
+          "resource": "Product Summary",
+          "name": "Product Summary",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1046",
+          "functionCode": "ach.debit",
+          "resource": "Payments",
+          "name": "ACH Debit",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1013",
+          "functionCode": "audit",
+          "resource": "Audit",
+          "name": "Audit",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1043",
+          "functionCode": "sepa.credit.transfer.intc",
+          "resource": "Payments",
+          "name": "SEPA CT - Intracompany",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1021",
+          "functionCode": "us.billpay.payments",
+          "resource": "Payments",
+          "name": "US Billpay Payments",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1011",
+          "functionCode": "manage.legalentities",
+          "resource": "Legal Entity",
+          "name": "Manage Legal Entities",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1032",
+          "functionCode": "assign.approval.policies",
+          "resource": "Approvals",
+          "name": "Assign Approval Policies",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1050",
+          "functionCode": "unlock.user",
+          "resource": "Identities",
+          "name": "Unlock User",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1049",
+          "functionCode": "lock.user",
+          "resource": "Identities",
+          "name": "Lock User",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1014",
+          "functionCode": "manage.shadow.limits",
+          "resource": "Limits",
+          "name": "Manage Shadow Limits",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1009",
+          "functionCode": "assign.permissions",
+          "resource": "Service Agreement",
+          "name": "Assign Permissions",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1037",
+          "functionCode": "batch.sepa",
+          "resource": "Batch",
+          "name": "Batch - SEPA CT",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1017",
+          "functionCode": "us.domestic.wire",
+          "resource": "Payments",
+          "name": "US Domestic Wire",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1010",
+          "functionCode": "manage.users",
+          "resource": "User",
+          "name": "Manage Users",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1022",
+          "functionCode": "us.billpay.payees",
+          "resource": "Contacts",
+          "name": "US Billpay Payees",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1019",
+          "functionCode": "manage.data.groups",
+          "resource": "Entitlements",
+          "name": "Manage Data Groups",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1015",
+          "functionCode": "intra.company.payments",
+          "resource": "Payments",
+          "name": "Intra Company Payments",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1044",
+          "functionCode": "us.domestic.wire.intc",
+          "resource": "Payments",
+          "name": "US Domestic Wire - Intracompany",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1028",
+          "functionCode": "manage.service.agreements",
+          "resource": "Service Agreement",
+          "name": "Manage Service Agreements",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1025",
+          "functionCode": "us.billpay.payees.summary",
+          "resource": "Contacts",
+          "name": "US Billpay Payees-Summary",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1038",
+          "functionCode": "manage.messages",
+          "resource": "Message Center",
+          "name": "Manage Messages",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1045",
+          "functionCode": "us.foreign.wire.intc",
+          "resource": "Payments",
+          "name": "US Foreign Wire - Intracompany",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1040",
+          "functionCode": "manage.default.limits",
+          "resource": "Limits",
+          "name": "Manage Default Limits",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1031",
+          "functionCode": "manage.topics",
+          "resource": "Message Center",
+          "name": "Manage Topics",
+          "privileges": [
+            {
+              "privilege": "execute",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1042",
+          "functionCode": "ach.credit.intc",
+          "resource": "Payments",
+          "name": "ACH Credit - Intracompany",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1034",
+          "functionCode": "manage.identities",
+          "resource": "Identities",
+          "name": "Manage Identities",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1002",
+          "functionCode": "payments.sepa",
+          "resource": "Payments",
+          "name": "SEPA CT",
+          "privileges": [
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1023",
+          "functionCode": "us.billpay.accounts",
+          "resource": "Arrangements",
+          "name": "US Billpay Accounts",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1047",
+          "functionCode": "manage.budgets",
+          "resource": "Personal Finance Management",
+          "name": "Manage Budgets",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1033",
+          "functionCode": "manage.approval.policy.level",
+          "resource": "Approvals",
+          "name": "Manage Approval Policy and Level",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1035",
+          "functionCode": "manage.user.profiles",
+          "resource": "User Profiles",
+          "name": "Manage User Profiles",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1003",
+          "functionCode": "transactions",
+          "resource": "Transactions",
+          "name": "Transactions",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1039",
+          "functionCode": "supervise.messages",
+          "resource": "Message Center",
+          "name": "Supervise Messages",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1005",
+          "functionCode": "contacts",
+          "resource": "Contacts",
+          "name": "Contacts",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1012",
+          "functionCode": "manage.limits",
+          "resource": "Limits",
+          "name": "Manage Limits",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1041",
+          "functionCode": "ach.credit.transfer",
+          "resource": "Payments",
+          "name": "ACH Credit Transfer",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1029",
+          "functionCode": "manage.actions.recipes",
+          "resource": "Actions",
+          "name": "Manage Action Recipes",
+          "privileges": [
+            {
+              "privilege": "execute",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1027",
+          "functionCode": "access.actions.history",
+          "resource": "Actions",
+          "name": "Access Actions History",
+          "privileges": [
+            {
+              "privilege": "execute",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1016",
+          "functionCode": "manage.statements",
+          "resource": "Account Statements",
+          "name": "Manage Statements",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1048",
+          "functionCode": "manage.saving.goals",
+          "resource": "Personal Finance Management",
+          "name": "Manage Saving Goals",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1030",
+          "functionCode": "manage.notifications",
+          "resource": "Notifications",
+          "name": "Manage Notifications",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1020",
+          "functionCode": "manage.function.groups",
+          "resource": "Entitlements",
+          "name": "Manage Function Groups",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1007",
+          "functionCode": "assign.users",
+          "resource": "Service Agreement",
+          "name": "Assign Users",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1018",
+          "functionCode": "us.foreign.wire",
+          "resource": "Payments",
+          "name": "US Foreign Wire",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1036",
+          "functionCode": "support.access.payments",
+          "resource": "Support Access",
+          "name": "Support Access for Payments",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1024",
+          "functionCode": "us.billpay.payees.search",
+          "resource": "Contacts",
+          "name": "US Billpay Payees-Search",
+          "privileges": [
+            {
+              "privilege": "execute",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1051",
+          "functionCode": "manage.devices",
+          "resource": "Device",
+          "name": "Manage Devices",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": false
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": false
+            }
+          ]
+        },
+        {
+          "functionId": "1052",
+          "functionCode": "sepa.credit.transfer.closed",
+          "resource": "Payments",
+          "name": "SEPA CT - closed",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        },
+        {
+          "functionId": "1053",
+          "functionCode": "a2a.transfer",
+          "resource": "Payments",
+          "name": "A2A Transfer",
+          "privileges": [
+            {
+              "privilege": "view",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "create",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "edit",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "delete",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "approve",
+              "supportsLimit": true
+            },
+            {
+              "privilege": "cancel",
+              "supportsLimit": true
+            }
+          ]
+        }
+      ],
+      "default": true
+    }
+  }
+}

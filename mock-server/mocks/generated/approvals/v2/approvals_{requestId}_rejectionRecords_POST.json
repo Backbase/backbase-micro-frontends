@@ -1,0 +1,21 @@
+{
+  "name": "/client-api/v2/approvals/{requestId}/rejectionRecords_POST",
+  "request": {
+    "url": "/client-api/v2/approvals/[^/]+/rejectionRecords(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "key": "ContactAlreadyRejected",
+        "message": "Contact request has already been rejected, please refresh"
+      }
+    },
+    "success": {
+      "status": 201,
+      "data": "",
+      "default": true
+    }
+  }
+}

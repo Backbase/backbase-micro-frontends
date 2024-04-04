@@ -1,0 +1,93 @@
+{
+  "name": "/client-api/v2/limits/retrieval_POST",
+  "request": {
+    "url": "/client-api/v2/limits/retrieval(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "422": {
+      "status": 422,
+      "data": {
+        "message": "Unprocessable Entity",
+        "errors": [
+          {
+            "message": "Array size is over {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "100"
+            }
+          }
+        ]
+      }
+    },
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "alias": "Personal Service Agreement Limit",
+          "uuid": "1234-5678-9101-1121",
+          "user-BBID": "uuid-user-id",
+          "entities": [
+            {
+              "etype": "SA",
+              "eref": "550e8400-e29b-41d4-a716-446655440000"
+            }
+          ],
+          "approvalId": "710d559b-a922-424d-a21c-7e63b6351661",
+          "currency": "EUR",
+          "periodic-limits-bounds": {
+            "daily": "100.0",
+            "weekly": "120.0",
+            "monthly": "300.0",
+            "quarterly": "600.0",
+            "customPeriods": [
+              {
+                "period": "biweekly",
+                "amount": "100"
+              }
+            ]
+          },
+          "shadow": true
+        }
+      ],
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

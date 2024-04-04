@@ -1,0 +1,173 @@
+{
+  "name": "/client-api/v1/trading/instruments/{id}_GET",
+  "request": {
+    "url": "/client-api/v1/trading/instruments/[^/]+(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "id": "68bbeace-423e-11ec-9621-0242ac130002",
+        "name": "Apple",
+        "favorite": true,
+        "country": "USA",
+        "ticker": "AAPL",
+        "exchange": "NASDAQ",
+        "assetClassName": "Equity",
+        "subAssetClassName": "Tech Sector",
+        "code": "US0378331005",
+        "price": {
+          "amount": 1247.15,
+          "currency": "USD"
+        },
+        "buyPrice": {
+          "amount": 1247.15,
+          "currency": "USD"
+        },
+        "sellPrice": {
+          "amount": 1249.15,
+          "currency": "USD"
+        },
+        "pricePerformance": 7.81,
+        "pricePerformanceAbs": {
+          "amount": 1.48,
+          "currencyCode": "USD"
+        },
+        "canBuy": true,
+        "canSell": false,
+        "about": {
+          "about": "about",
+          "address": "address",
+          "phoneNumber": "phoneNumber",
+          "link": "link"
+        },
+        "holdings": {
+          "totalHoldings": {
+            "quantity": 100.8,
+            "valuation": {
+              "amount": 1245.45,
+              "currency": "USD"
+            },
+            "buyPrice": {
+              "amount": 4245.45,
+              "currency": "USD"
+            },
+            "transactionsNumber": 111,
+            "unrealizedPL": {
+              "amount": 245.45,
+              "currency": "USD"
+            }
+          },
+          "holdingsPerPortfolio": [
+            {
+              "portfolio": {
+                "id": "68bbeace-274e-11ec-9621-0242ac130002",
+                "name": "Trading portfolio",
+                "iban": "NL79RABO5373380466",
+                "alias": "My portfolio to trade"
+              },
+              "holdings": {
+                "quantity": 40.8,
+                "valuation": {
+                  "amount": 245,
+                  "currency": "USD"
+                },
+                "transactionsNumber": 89,
+                "unrealizedPL": {
+                  "amount": 245.45,
+                  "currency": "USD"
+                }
+              }
+            },
+            {
+              "portfolio": {
+                "id": "72ba1654-274e-11ec-9621-0242ac130002",
+                "name": "Trading portfolio 2",
+                "iban": "NL79RABO5373380477",
+                "alias": "My second portfolio to trade"
+              },
+              "holdings": {
+                "quantity": 60.8,
+                "valuation": {
+                  "amount": 1000.45,
+                  "currency": "USD"
+                },
+                "transactionsNumber": 22,
+                "unrealizedPL": {
+                  "amount": 245.45,
+                  "currency": "USD"
+                }
+              }
+            }
+          ]
+        },
+        "keyStatistics": {
+          "exchangeRate": 1.21,
+          "changeInNetAssetValue": 7.81,
+          "fundStatus": "open-ended fund",
+          "totalAssets": 134.3,
+          "trailingTwelveMonthsYield": 1.4,
+          "oneYearReturn": 68.97,
+          "effectiveDuration": 4.51,
+          "portfolioAssetsAllocation": "Equity",
+          "turnover": 30,
+          "creditRating": "AAA",
+          "priceToEarningsRatio": 37.59,
+          "estPriceToEarningsRatio": 31.06,
+          "priceToEarningsToGrowthRatio": 3.09,
+          "sharesOutstanding": 17.002,
+          "priceToBookRatio": 32.07,
+          "earningsPerShare": 1.39,
+          "dividendYield": 0.66,
+          "lastDividendReported": 0.2,
+          "nextEarningsAnnouncement": "2021-01-26",
+          "coupon": 5.63,
+          "maturity": "2028-01-04",
+          "yieldToMaturity": 0,
+          "duration": 7.63,
+          "couponFrequency": "annually",
+          "unrealizedPLPct": 4.14,
+          "unrealizedPL": 4.14,
+          "accruedInterestOnBond": 4.14,
+          "marketCapitalization": 14.8,
+          "priceToSalesRatio": 10.5,
+          "averageVolume": 1.12,
+          "additionalKeyStatistics": {
+            "purchasePrice": "118.34",
+            "totalAssets": "50",
+            "coupon": "false"
+          }
+        },
+        "additions": {
+          "someKey": "someValue"
+        },
+        "iconUrl": "/client-api/v1/trading/instruments/68bbeace-423e-11ec-9621-0242ac130002/icons"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

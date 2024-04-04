@@ -1,0 +1,80 @@
+{
+  "name": "/client-api/v5/message-center/messages/drafts_GET",
+  "request": {
+    "url": "/client-api/v5/message-center/messages/drafts(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+          "conversationId": "f57684de-2a63-4646-ace3-bf83b3ef74ct",
+          "hasAttachments": false,
+          "id": "7da6b793-bb3b-411d-b10e-21c0ca205cb2",
+          "subject": "Conversation with draft",
+          "timestamp": "2019-11-18T11:23:50.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "4fb026ec-62e5-41c8-aa28-149d7544b704",
+            "name": "Problems with making a payment"
+          }
+        },
+        {
+          "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+          "hasAttachments": true,
+          "id": "754cd7fd-a9dd-489e-9933-4f0ef556a5cd",
+          "subject": "Draft subject",
+          "timestamp": "2019-11-17T10:51:50.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+            "name": "Mortgage application"
+          }
+        },
+        {
+          "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+          "hasAttachments": false,
+          "id": "f57684de-2a63-4646-ace3-bf83b3ef74cc",
+          "subject": "Draft 2 subject",
+          "timestamp": "2019-11-18T11:23:50.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "40219526-aa79-4a81-a0a5-ffd12ffed8a3",
+            "name": "Mortgage application"
+          }
+        },
+        {
+          "body": "VGhlIGNhc3RsZSB3YXMgYnVpbHQgaW4gPGI+MTI5NTwvYj4gYnkgPHU+Um9nZXIgTW9ydGltZXIgZGUgQ2hpcms8L3U+LCB1bmNsZSBvZiA8dT5Sb2dlciBNb3J0aW1lcjwvdT4sIDFzdCBFYXJsIG9mIE1hcmNoIGFzIHBhcnQgb2YgS2luZyBFZHdhcmQgSSdzIGNoYWluIG9mIGZvcnRyZXNzZXMgYWNyb3NzIHRoZSBub3J0aCBvZiBXYWxlcy4gPGRpdj5JdCBndWFyZHMgdGhlIGVudHJhbmNlIHRvIHRoZSA8dT5DZWlyaW9nIFZhbGxleTwvdT4uIDxkaXY+SXQgd2FzIHRoZSBhZG1pbmlzdHJhdGl2ZSBjZW50cmUgZm9yIHRoZSA8dT5NYXJjaGVyIExvcmRzaGlwIG9mIENoaXJrbGFuZDwvdT4uPC9kaXY+PC9kaXY+",
+          "conversationId": "f57684de-2a63-4646-ace3-bf83b3ef74ce",
+          "hasAttachments": true,
+          "id": "f29d7a93-337b-4bb4-856d-5a65ba4d1038",
+          "subject": "Conversation with draft 2",
+          "timestamp": "2019-11-18T11:23:50.000+0000",
+          "topic": {
+            "deleted": false,
+            "id": "b0069a89-3dcb-4bdc-b7da-fc65643064a6",
+            "name": "Loans"
+          }
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

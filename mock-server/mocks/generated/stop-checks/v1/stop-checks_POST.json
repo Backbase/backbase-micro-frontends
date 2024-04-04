@@ -1,0 +1,108 @@
+{
+  "name": "/client-api/v1/stop-checks_POST",
+  "request": {
+    "url": "/client-api/v1/stop-checks(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "stopCheck": {
+          "id": "cb881630-0860-4d2b-b0e1-ff288c531b91",
+          "originatorAccount": {
+            "name": "Main Current",
+            "identification": "0256108927",
+            "schemeName": "BBAN"
+          },
+          "reason": "Invalid name",
+          "status": "REJECTED",
+          "check": {
+            "number": "10000001337900112340"
+          },
+          "dateOfRequest": "2019-09-24T12:00:00.000Z",
+          "expirationDate": "2019-09-30"
+        }
+      },
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": {
+        "stopCheck": {
+          "id": "b60a8955-1523-429d-bdbe-905d95225a9c",
+          "originatorAccount": {
+            "name": "Main Checking Current",
+            "identification": "0256108963",
+            "schemeName": "BBAN"
+          },
+          "reason": "Insufficient funds",
+          "status": "PENDING",
+          "check": {
+            "number": "10000001337900112344",
+            "amount": {
+              "currencyCode": "USD",
+              "amount": "913.32"
+            },
+            "payeeName": "Jack S. P. Arrow",
+            "dateIssued": "2018-10-18"
+          },
+          "dateOfRequest": "2019-10-24T12:00:00.000Z",
+          "expirationDate": "2019-10-30"
+        }
+      }
+    },
+    "success_2": {
+      "status": 200,
+      "data": {
+        "stopCheck": {
+          "id": "d201e455-d744-44e5-8fc6-458be1cc99e7",
+          "originatorAccount": {
+            "name": "Shared Current",
+            "identification": "0256108944",
+            "schemeName": "BBAN"
+          },
+          "reason": "Checks stolen",
+          "status": "ACCEPTED",
+          "checkNumberRange": {
+            "firstNumber": "10000001337900112345",
+            "lastNumber": "10000001337900112355"
+          },
+          "dateOfRequest": "2019-09-30T16:00:00.000Z",
+          "expirationDate": "2019-10-07"
+        }
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

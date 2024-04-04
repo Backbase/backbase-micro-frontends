@@ -1,0 +1,88 @@
+{
+  "name": "/client-api/v1/portfolios/{portfolioId}/positions/stream_GET",
+  "request": {
+    "url": "/client-api/v1/portfolios/[^/]+/positions/stream(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "cursor": "554e02e5-67fb-4434-9c97-91fde8ec3ce4",
+        "hasMoreItems": false,
+        "positions": [
+          {
+            "id": "554e02e5-67fb-4434-9c97-91fde8ec3ce4",
+            "region": {
+              "id": "96821684-70c0-46a9-8e05-2c1f0526cdd9",
+              "name": "Europe"
+            },
+            "country": {
+              "id": "51a95a45-63e0-4e43-9619-8ffb679f5d9b",
+              "name": "Ukraine",
+              "code": "UA"
+            },
+            "instrument": {
+              "id": "3e35104b-03e9-42be-b58f-8ee5d23d6ca8",
+              "name": "Apples and Plums",
+              "ticker": "UAPL",
+              "exchange": "NASDAQ",
+              "assetClass": {
+                "id": "6153577f-ad4c-47a4-bab2-b2e7c7b172cd",
+                "name": "Equities"
+              }
+            },
+            "assetClassPct": 0.24,
+            "valuation": {
+              "amount": 43630,
+              "currency": "USD"
+            },
+            "additions": {
+              "someKey": "someValue"
+            }
+          }
+        ]
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

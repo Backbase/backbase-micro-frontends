@@ -1,0 +1,48 @@
+{
+  "name": "/client-api/v3/audit-log/legal-entities_GET",
+  "request": {
+    "url": "/client-api/v3/audit-log/legal-entities(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "c7a382786d514262b75ab9531b749a2b",
+          "externalId": "Bank",
+          "name": "My Bank",
+          "type": "BANK"
+        },
+        {
+          "id": "0f6d14f40e064deeaee351befd53d3e7",
+          "externalId": "Backbase Cardiff",
+          "name": "Backbase Cardiff",
+          "type": "CUSTOMER"
+        }
+      ],
+      "default": true
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "message": "Description of error"
+      }
+    }
+  }
+}

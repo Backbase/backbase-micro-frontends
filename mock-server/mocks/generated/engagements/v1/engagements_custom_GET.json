@@ -1,0 +1,447 @@
+{
+  "name": "/engagement/client-api/v1/engagements/custom_GET",
+  "request": {
+    "url": "/engagement/client-api/v1/engagements/custom(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "name": "Engagement sample",
+          "uuid": "0c8b3e8b-fbff-4a4c-bb7b-9ff47aba1154",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-03T00:01:00Z",
+          "endDate": "2022-03-03T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "banner",
+              "enabled": true,
+              "uuid": "1ae944c1-6053-461d-8270-c9f9360a3dd3",
+              "targetUrl": "https://google.com",
+              "targetUrlDisplayMode": "blank",
+              "priority": "high",
+              "creatives": [
+                {
+                  "uuid": "aa5f32a0-28e6-45b1-be3a-567cabaef2a0",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-red.html",
+                  "draftContentId": "/engagement/c57b9aee-a71c-4cb8-91a0-a036037d70ea/banner/32610c85-4a3e-4f97-8745-34ed78ff3093/dimensions/328x430/0/traveling-with-cards-red.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                },
+                {
+                  "uuid": "61689aef-a82c-45ec-b932-1ef0a9d81f62",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-blue.html",
+                  "draftContentId": "/engagement/c57b9aee-a71c-4cb8-91a0-a036037d70ea/banner/6a05d039-e7fd-4bb3-83fc-4f883cb549e3/dimensions/328x430/0/traveling-with-cards-blue.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                }
+              ],
+              "campaignSlots": [
+                {
+                  "portalName": "retail-app",
+                  "pageName": "page-index-ezc2na",
+                  "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+                }
+              ],
+              "startDate": "2022-03-03T00:01:00Z",
+              "endDate": "2022-03-03T23:45:00Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": {
+            "clicks": 0,
+            "impressions": 0
+          },
+          "status": "final"
+        },
+        {
+          "name": "MC_Engagement_126542",
+          "uuid": "6cecb120-3b24-42b9-9b1a-808d97d06227",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-03T00:01:00Z",
+          "endDate": "2022-03-03T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "message-center",
+              "enabled": true,
+              "uuid": "5231f345-6127-4070-b534-737478320ca1",
+              "topicId": "06844396-9260-43ee-8312-995d10d411cf",
+              "draftContentId": "/engagement/lot-of-cards-message-center/message-center/6cecb120-3b24-42b9-9b1a-808d97d06227/1/engagementTemplate",
+              "draftRepositoryId": "engagement-template-custom",
+              "scheduledAt": "2022-03-03T00:15:00Z",
+              "deliveredAt": "2022-03-03T21:02:28Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": null,
+          "status": "final"
+        },
+        {
+          "name": "Banner_Engagement_193459",
+          "uuid": "de575e14-ceb0-4ad4-8419-afdb23aa3f66",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-04T00:01:00Z",
+          "endDate": "2022-03-04T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "banner",
+              "enabled": true,
+              "uuid": "1428c148-cb91-4eb2-95bd-f789d1cb8f25",
+              "targetUrl": "https://google.com",
+              "targetUrlDisplayMode": "blank",
+              "priority": "high",
+              "creatives": [
+                {
+                  "uuid": "39501cfe-2d8b-493c-96ce-cba768f44c47",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-red.html",
+                  "draftContentId": "/engagement/de575e14-ceb0-4ad4-8419-afdb23aa3f66/banner/6b895647-937e-4b16-8042-97ba1efc7396/dimensions/328x430/0/traveling-with-cards-red.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                },
+                {
+                  "uuid": "ee69d525-8925-4e3d-835e-ad9919abc66e",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-blue.html",
+                  "draftContentId": "/engagement/de575e14-ceb0-4ad4-8419-afdb23aa3f66/banner/6cbbf130-1c3c-404b-b29c-d251b2ced0f0/dimensions/328x430/0/traveling-with-cards-blue.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                }
+              ],
+              "campaignSlots": [
+                {
+                  "portalName": "retail-app",
+                  "pageName": "page-index-ezc2na",
+                  "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+                }
+              ],
+              "startDate": "2022-03-04T00:01:00Z",
+              "endDate": "2022-03-04T23:45:00Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": {
+            "clicks": 0,
+            "impressions": 0
+          },
+          "status": "final"
+        },
+        {
+          "name": "MC_Engagement_757451",
+          "uuid": "6c594472-7ed9-4ae4-9bff-b8b5a89df589",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-04T00:01:00Z",
+          "endDate": "2022-03-04T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "message-center",
+              "enabled": true,
+              "uuid": "842f0cf2-c92b-4ea8-b50a-2412300a33d4",
+              "topicId": "06844396-9260-43ee-8312-995d10d411cf",
+              "draftContentId": "/engagement/lot-of-cards-message-center/message-center/6c594472-7ed9-4ae4-9bff-b8b5a89df589/1/engagementTemplate",
+              "draftRepositoryId": "engagement-template-custom",
+              "scheduledAt": "2022-03-04T00:15:00Z",
+              "deliveredAt": "2022-03-04T21:02:40Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": null,
+          "status": "final"
+        },
+        {
+          "name": "Banner_Engagement_528131",
+          "uuid": "0342f6dd-1da7-4a13-a26c-720398c6a8b8",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-05T00:01:00Z",
+          "endDate": "2022-03-05T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "banner",
+              "enabled": true,
+              "uuid": "76935042-a1a9-4617-8515-b6bb6149a0ed",
+              "targetUrl": "https://google.com",
+              "targetUrlDisplayMode": "blank",
+              "priority": "high",
+              "creatives": [
+                {
+                  "uuid": "920aa1a1-56a6-4f9d-a132-b1e816deef39",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-blue.html",
+                  "draftContentId": "/engagement/0342f6dd-1da7-4a13-a26c-720398c6a8b8/banner/1d96160b-5b67-4a70-b8c8-cc9612d21d3f/dimensions/328x430/0/traveling-with-cards-blue.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                },
+                {
+                  "uuid": "6b8347f1-e98c-4d72-9b29-6d5363848d0f",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-red.html",
+                  "draftContentId": "/engagement/0342f6dd-1da7-4a13-a26c-720398c6a8b8/banner/8dbf21a0-50c2-4281-a668-9771c7220794/dimensions/328x430/0/traveling-with-cards-red.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                }
+              ],
+              "campaignSlots": [
+                {
+                  "portalName": "retail-app",
+                  "pageName": "page-index-ezc2na",
+                  "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+                }
+              ],
+              "startDate": "2022-03-05T00:01:00Z",
+              "endDate": "2022-03-05T23:45:00Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": {
+            "clicks": 0,
+            "impressions": 0
+          },
+          "status": "final"
+        },
+        {
+          "name": "MC_Engagement_332905",
+          "uuid": "31f3a5e0-108d-444b-a791-ac98c00eaa00",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-05T00:01:00Z",
+          "endDate": "2022-03-05T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "message-center",
+              "enabled": true,
+              "uuid": "3d20092d-386b-41e0-9f0d-ccaeeb47955e",
+              "topicId": "06844396-9260-43ee-8312-995d10d411cf",
+              "draftContentId": "/engagement/lot-of-cards-message-center/message-center/31f3a5e0-108d-444b-a791-ac98c00eaa00/1/engagementTemplate",
+              "draftRepositoryId": "engagement-template-custom",
+              "scheduledAt": "2022-03-05T00:15:00Z",
+              "deliveredAt": "2022-03-05T21:01:51Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": null,
+          "status": "final"
+        },
+        {
+          "name": "Banner_Engagement_938957",
+          "uuid": "f4c96414-47f2-4047-a05d-ea8a15c90139",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-06T00:01:00Z",
+          "endDate": "2022-03-06T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "banner",
+              "enabled": true,
+              "uuid": "a5f708a5-1fae-47aa-85e4-e353b8dd65e1",
+              "targetUrl": "https://google.com",
+              "targetUrlDisplayMode": "blank",
+              "priority": "high",
+              "creatives": [
+                {
+                  "uuid": "1527656d-3970-4d26-8747-51f6a4b54c1d",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-red.html",
+                  "draftContentId": "/engagement/f4c96414-47f2-4047-a05d-ea8a15c90139/banner/36614d1a-7e1a-4ae4-b04b-afdb4cdc7add/dimensions/328x430/0/traveling-with-cards-red.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                },
+                {
+                  "uuid": "bd64fd40-d07b-4367-9b80-c5e8f405eeea",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-blue.html",
+                  "draftContentId": "/engagement/f4c96414-47f2-4047-a05d-ea8a15c90139/banner/ea9cf521-183d-4e2c-9086-d6e708cfeb98/dimensions/328x430/0/traveling-with-cards-blue.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                }
+              ],
+              "campaignSlots": [
+                {
+                  "portalName": "retail-app",
+                  "pageName": "page-index-ezc2na",
+                  "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+                }
+              ],
+              "startDate": "2022-03-06T00:01:00Z",
+              "endDate": "2022-03-06T23:45:00Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": {
+            "clicks": 0,
+            "impressions": 0
+          },
+          "status": "final"
+        },
+        {
+          "name": "MC_Engagement_918079",
+          "uuid": "46d9a68d-f139-4445-a3c0-bc79c390c6c0",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-06T00:01:00Z",
+          "endDate": "2022-03-06T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "message-center",
+              "enabled": true,
+              "uuid": "11b49ee2-9953-47f7-8e03-7ad4ab220ae4",
+              "topicId": "06844396-9260-43ee-8312-995d10d411cf",
+              "draftContentId": "/engagement/lot-of-cards-message-center/message-center/46d9a68d-f139-4445-a3c0-bc79c390c6c0/1/engagementTemplate",
+              "draftRepositoryId": "engagement-template-custom",
+              "scheduledAt": "2022-03-06T00:15:00Z",
+              "deliveredAt": "2022-03-06T21:02:02Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": null,
+          "status": "final"
+        },
+        {
+          "name": "Banner_Engagement_679642",
+          "uuid": "17204a9f-ce13-410d-a24b-57fc8da0ba90",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-07T00:01:00Z",
+          "endDate": "2022-03-07T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "banner",
+              "enabled": true,
+              "uuid": "23d203d5-39ea-43f5-812e-d8b3851fe879",
+              "targetUrl": "https://google.com",
+              "targetUrlDisplayMode": "blank",
+              "priority": "high",
+              "creatives": [
+                {
+                  "uuid": "ea210b92-ddef-41cf-b549-2342b2d6a0b3",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-red.html",
+                  "draftContentId": "/engagement/17204a9f-ce13-410d-a24b-57fc8da0ba90/banner/4b160736-e6a6-4623-9770-02e37a9e1e3a/dimensions/328x430/0/traveling-with-cards-red.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                },
+                {
+                  "uuid": "4ae9b7e0-8e63-46f1-b063-ec43f3999f3c",
+                  "dimensions": "328x430",
+                  "filename": "traveling-with-cards-blue.html",
+                  "draftContentId": "/engagement/17204a9f-ce13-410d-a24b-57fc8da0ba90/banner/eeefdf4a-ed53-4a5c-8f9f-5ce2f13ec9e2/dimensions/328x430/0/traveling-with-cards-blue.html",
+                  "draftRepositoryId": "engagement-template-custom"
+                }
+              ],
+              "campaignSlots": [
+                {
+                  "portalName": "retail-app",
+                  "pageName": "page-index-230ajj",
+                  "widgetName": "bb-campaign-space-ang-_-245931b4340d"
+                }
+              ],
+              "startDate": "2022-03-07T00:01:00Z",
+              "endDate": "2022-03-07T23:45:00Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": {
+            "clicks": 0,
+            "impressions": 0
+          },
+          "status": "final"
+        },
+        {
+          "name": "MC_Engagement_282435",
+          "uuid": "03a6c7cb-dc88-4058-9233-8bde503bf2c4",
+          "version": 1,
+          "locale": "en",
+          "startDate": "2022-03-07T00:01:00Z",
+          "endDate": "2022-03-07T23:45:00Z",
+          "audience": {
+            "type": "id",
+            "id": "7ef02b1b-35eb-4b23-8cdf-b9e00be4a8d3"
+          },
+          "channels": [
+            {
+              "type": "message-center",
+              "enabled": true,
+              "uuid": "3326acbf-5c0a-44b3-b9b9-a743bd791d5e",
+              "topicId": "06844396-9260-43ee-8312-995d10d411cf",
+              "draftContentId": "/engagement/lot-of-cards-message-center/message-center/03a6c7cb-dc88-4058-9233-8bde503bf2c4/1/engagementTemplate",
+              "draftRepositoryId": "engagement-template-custom",
+              "scheduledAt": "2022-03-07T00:15:00Z",
+              "deliveredAt": "2022-03-07T21:02:33Z"
+            }
+          ],
+          "hasChanges": false,
+          "metrics": null,
+          "status": "final"
+        }
+      ],
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to invalid credentials.",
+            "key": "common.api.token",
+            "context": {
+              "accessToken": "expired"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

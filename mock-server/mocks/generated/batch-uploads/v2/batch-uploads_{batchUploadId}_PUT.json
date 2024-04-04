@@ -1,0 +1,56 @@
+{
+  "name": "/client-api/v2/batch-uploads/{batchUploadId}_PUT",
+  "request": {
+    "url": "/client-api/v2/batch-uploads/[^/]+(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "409": {
+      "status": 409,
+      "data": {
+        "message": "Conflict",
+        "errors": [
+          {
+            "message": "The current status of the batch upload ({{currentStatus}}) does not allow updating the status.",
+            "key": "BatchUploadCannotBeUpdated",
+            "context": {
+              "currentStatus": "OPEN"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "The requested status ({{requestedStatus}}) is not valid. The status can be set to {{expectedStatus}}.",
+            "key": "BatchUploadCannotBeUpdated",
+            "context": {
+              "requestedStatus": "OPEN",
+              "expectedStatus": "DONE"
+            }
+          }
+        ]
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "message": "Resource not found.",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Unable to find the resource requested resource: {resource}.",
+            "key": "common.api.resource",
+            "context": {
+              "resource": "aResource"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

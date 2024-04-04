@@ -1,0 +1,59 @@
+{
+  "name": "/client-api/v2/approval-type-assignments_POST",
+  "request": {
+    "url": "/client-api/v2/approval-type-assignments(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 204,
+      "data": "",
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "Job profile is already assigned to an approval type",
+            "key": "approval.api.ApprovalTypeAssignmentConflict",
+            "context": {
+              "conflictingJobProfileId": "0f5cfbb507054d589d149e921838dc80"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "Approval type not found",
+            "key": "approval.api.ApprovalTypeNotFound",
+            "context": {
+              "invalidApprovalTypeId": "7c59fed4-b737-11e8-96f8-529269fb1459"
+            }
+          }
+        ]
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Access to requested resource denied.",
+        "errors": [
+          {
+            "message": "Resource access denied due to an insufficient user quota of {quota}.",
+            "key": "common.api.quota",
+            "context": {
+              "quota": "someQuota"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

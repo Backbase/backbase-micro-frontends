@@ -1,0 +1,213 @@
+{
+  "name": "/client-api/v2/batch-orders/{batchOrderId}/approvals_PUT",
+  "request": {
+    "url": "/client-api/v2/batch-orders/[^/]+/approvals(\\?.*)?$",
+    "method": "PUT"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": {
+        "batchOrder": {
+          "id": "72d17d02-20a9-4f0b-b2b8-f83959eb187e",
+          "name": "Salaries May 2019",
+          "type": "SEPACT",
+          "creditDebitMixedIndicator": "CREDIT",
+          "status": "ENTERED",
+          "totalTransactionsCount": 6504,
+          "totalCreditTransactionsCount": 6504,
+          "totalInstructedAmount": {
+            "amount": "14009055.00",
+            "currencyCode": "EUR"
+          },
+          "totalCreditInstructedAmount": {
+            "amount": "14009055.00",
+            "currencyCode": "EUR"
+          },
+          "account": {
+            "name": "Salaries account",
+            "identification": {
+              "identification": "NL78ABNA3470416656",
+              "schemeName": "IBAN"
+            }
+          },
+          "requestedExecutionDate": "2019-05-26",
+          "approval": {
+            "id": "00b5ca29-eddd-49f4-a898-c3f185ab9a3a",
+            "userId": "4840854b-0597-47a6-8984-87cb50f970eb",
+            "externalUserId": "judi-miles",
+            "userFullName": "Judi Miles",
+            "serviceAgreementId": "ea7b3dfd-29b8-4559-872a-91f5576b56ef",
+            "itemId": "72d17d02-20a9-4f0b-b2b8-f83959eb187e",
+            "dataAccessItemId": "606c7afa-3c8a-4210-ad25-fc83893a4e49",
+            "resource": "Batches",
+            "function": "SEPACT",
+            "status": "PENDING",
+            "createdAt": "2019-08-10T18:09:21Z",
+            "records": [],
+            "canApprove": true,
+            "canReject": true,
+            "finalApprover": false
+          }
+        },
+        "approvalStatus": "PENDING"
+      },
+      "default": true
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:3ea92d30-f460-4dde-b40a-e83a2f266a3a"
+          }
+        ],
+        "data": {
+          "batchOrderId": "9E2F9AC5-DD09-40C0-805E-147B0C565901",
+          "approvalRecordId": "DEDFDF28-690E-4B83-8BAF-C8ABF31EF70B",
+          "confirmationType": "approve-batch",
+          "totalAmount": "12.95",
+          "totalTransactionsCount": "10",
+          "currency": "EUR",
+          "fromAccount": "NL06ABNA9691012820"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Limits has been breached, check the report for more details",
+        "checkTime": "2019-10-31T12:12:12Z",
+        "breachReport": [
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Service Agreement",
+                "description": "Kuhic, Gislason and Kemmer. SERVICE AGREEMENT"
+              }
+            ],
+            "shadow": false,
+            "currency": "EUR",
+            "user-BBID": "oleksii",
+            "breachInfo": [
+              {
+                "breachType": "THRESHOLD",
+                "breachedLimitType": "PERIODIC",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2019-10-31T00:00:00Z",
+                  "endTime": "2019-10-31T23:59:59Z"
+                },
+                "currentConsumption": "250.0",
+                "currentThreshold": "499.9"
+              },
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "monthly",
+                  "startTime": "2019-10-01T00:00:00Z",
+                  "endTime": "2019-10-31T23:59:59Z"
+                },
+                "currentConsumption": "9950.0",
+                "currentThreshold": "10000.0"
+              }
+            ]
+          },
+          {
+            "user-BBID": "oleksii",
+            "shadow": false,
+            "currency": "EUR",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2019-10-31T00:00:00Z",
+                  "endTime": "2019-10-31T23:59:59Z"
+                },
+                "currentConsumption": "500.0",
+                "currentThreshold": "1000.0"
+              }
+            ]
+          },
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Function Access Group",
+                "description": "Batches approvers"
+              },
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Function",
+                "description": "Domestic batches"
+              },
+              {
+                "ref": "Approve",
+                "type": "Privilege",
+                "description": "Approve"
+              }
+            ],
+            "shadow": false,
+            "currency": "EUR",
+            "breachInfo": [
+              {
+                "breachType": "THRESHOLD",
+                "timeframe": {
+                  "period": "daily",
+                  "startTime": "2019-10-31T00:00:00Z",
+                  "endTime": "2019-10-31T23:59:59Z"
+                },
+                "currentConsumption": "250.0",
+                "currentThreshold": "499.9"
+              }
+            ]
+          },
+          {
+            "limitedEntity": [
+              {
+                "ref": "1234567-12312-123123",
+                "type": "Legal Entity",
+                "description": "Kuhic, Gislason and Kemmer"
+              }
+            ],
+            "shadow": false,
+            "currency": "EUR",
+            "breachInfo": [
+              {
+                "breachType": "CONSUMPTION",
+                "timeframe": {
+                  "period": "quarterly",
+                  "startTime": "2019-10-01T00:00:00Z",
+                  "endTime": "2019-12-31T23:59:59Z"
+                },
+                "currentConsumption": "99950.0",
+                "currentThreshold": "100000.0"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

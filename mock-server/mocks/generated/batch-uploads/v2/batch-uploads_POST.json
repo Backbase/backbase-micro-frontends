@@ -1,0 +1,104 @@
+{
+  "name": "/client-api/v2/batch-uploads_POST",
+  "request": {
+    "url": "/client-api/v2/batch-uploads(\\?.*)?$",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "status": 202,
+      "data": {
+        "batchUploadId": "5490bc83-9ea1-4b28-a465-2bb541e7c90b",
+        "status": "OPEN"
+      },
+      "default": true
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "message": "Bad Request",
+        "key": "GENERAL_ERROR",
+        "errors": [
+          {
+            "message": "Value Exceeded. Must be between {min} and {max}.",
+            "key": "common.api.shoesize",
+            "context": {
+              "max": "50",
+              "min": "1"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_1": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "File extension ({{actual}}) is not one of the supported ones {{expected}}",
+            "key": "UploadFileExtensionInvalid",
+            "context": {
+              "actual": "xls",
+              "expected": "{csv}"
+            }
+          }
+        ]
+      }
+    },
+    "badRequest_2": {
+      "status": 400,
+      "data": {
+        "message": "Bad request",
+        "errors": [
+          {
+            "message": "File size ({{actual}}) exceeds the configured maximum ({{expected}})",
+            "key": "UploadMaxFileSize",
+            "context": {
+              "actual": "115343360",
+              "expected": "104857600"
+            }
+          }
+        ]
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "challenges": [
+          {
+            "challengeType": "reauth",
+            "acrValues": "txn-signature-silver txn-signature-gold",
+            "scope": "confirmation:3ea92d30-f460-4dde-b40a-e83a2f266a3a"
+          }
+        ],
+        "data": {
+          "confirmationType": "upload-batch",
+          "batchUploadId": "6a9aff66-19b8-45e8-b8e3-9afc2d0e571b",
+          "fileName": "uploading_file_name.ach",
+          "fileType": "NACHA_CREDIT",
+          "totalBatchesCount": "3",
+          "totalTransactionsCount": "10",
+          "totalAmount": "12.95",
+          "currency": "EUR"
+        }
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "message": "Forbidden to create confidential batches of type payroll",
+        "errors": [
+          {
+            "key": "ForbiddenAccessConfidentialBatch",
+            "context": {
+              "action": "create",
+              "confidentialType": "payroll"
+            },
+            "message": "Forbidden to {{action}} confidential batches of type {{confidentialType}}"
+          }
+        ]
+      }
+    }
+  }
+}

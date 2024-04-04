@@ -1,0 +1,180 @@
+{
+  "name": "/client-api/v1/rtc/users/{userId}/conversations_GET",
+  "request": {
+    "url": "/client-api/v1/rtc/users/[^/]+/conversations(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "CH1",
+          "dateCreated": "2021-09-16T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1",
+              "preferredName": "John Smith"
+            },
+            {
+              "id": "supervisor1",
+              "preferredName": "David Jones"
+            }
+          ]
+        },
+        {
+          "id": "CH2",
+          "dateCreated": "2021-09-16T20:18:37Z",
+          "participants": [
+            {
+              "id": "employee1",
+              "preferredName": "John Smith"
+            }
+          ]
+        },
+        {
+          "id": "CH3",
+          "dateCreated": "2019-12-26T22:18:37Z",
+          "participants": []
+        },
+        {
+          "id": "CH4",
+          "dateCreated": "2019-12-25T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee2"
+            }
+          ]
+        },
+        {
+          "id": "CH524234",
+          "dateCreated": "2017-12-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1",
+              "preferredName": "John Smith"
+            },
+            {
+              "id": "supervisor1",
+              "preferredName": "David Jones"
+            }
+          ]
+        },
+        {
+          "id": "CH6",
+          "dateCreated": "2016-12-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1"
+            }
+          ]
+        },
+        {
+          "id": "CH7",
+          "dateCreated": "2015-12-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1"
+            }
+          ]
+        },
+        {
+          "id": "CH8",
+          "dateCreated": "2014-12-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee8"
+            }
+          ]
+        },
+        {
+          "id": "CH9",
+          "dateCreated": "2014-10-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee9"
+            }
+          ]
+        },
+        {
+          "id": "CH10",
+          "dateCreated": "2014-09-26T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee10"
+            }
+          ]
+        }
+      ],
+      "default": true
+    },
+    "success_1": {
+      "status": 200,
+      "data": []
+    },
+    "success_2": {
+      "status": 200,
+      "data": [
+        {
+          "id": "CH1",
+          "dateCreated": "2020-12-16T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1",
+              "preferredName": "John Smith"
+            },
+            {
+              "id": "supervisor1",
+              "preferredName": "David Jones"
+            }
+          ]
+        },
+        {
+          "id": "CH2",
+          "dateCreated": "2019-12-16T22:18:37Z",
+          "participants": [
+            {
+              "id": "employee1",
+              "preferredName": "John Smith"
+            }
+          ]
+        },
+        {
+          "id": "CH3",
+          "dateCreated": "2019-11-26T22:18:37Z",
+          "participants": []
+        }
+      ]
+    },
+    "badRequest": {
+      "status": 400,
+      "data": {
+        "$ref": "#/components/examples/BadRequestExample"
+      }
+    },
+    "notAuthorized": {
+      "status": 401,
+      "data": {
+        "$ref": "#/components/examples/UnauthorizedExample"
+      }
+    },
+    "forbidden": {
+      "status": 403,
+      "data": {
+        "$ref": "#/components/examples/ForbiddenExample"
+      }
+    },
+    "notFound": {
+      "status": 404,
+      "data": {
+        "$ref": "#/components/examples/NotFoundExample"
+      }
+    },
+    "systemError": {
+      "status": 500,
+      "data": {
+        "$ref": "#/components/examples/InternalServerErrorExample"
+      }
+    }
+  }
+}
