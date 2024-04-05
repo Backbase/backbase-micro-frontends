@@ -26,6 +26,8 @@
     "@backbase/backbase-theme-business-preset": "1.25.0",
     "@backbase/data-ang": "4.2.0",
     "@backbase/foundation-ang": "6.25.1",
+    "@backbase/product-summary-account-details-widget-ang": "5.3.0",
+    "@backbase/product-summary-account-picker-ang": "5.4.0",
     "@backbase/product-summary-accounts-overview-ang": "5.3.0",
     "@backbase/product-summary-ui": "6.8.0",
     "@backbase/ui-ang": "^7.9.7",
