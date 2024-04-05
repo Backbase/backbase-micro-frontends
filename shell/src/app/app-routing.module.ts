@@ -38,7 +38,10 @@ const routes: Routes = [
        */
       {
         path: 'accounts',
-        children: [],
+        loadChildren: () =>
+          import('./journeys/accounts-journey/accounts-journey.module').then(
+            (m) => m.AccountsJourneyModule,
+          ),
         data: {
           title: $localize`:@@accounts.nav.item.title:Accounts`,
         },

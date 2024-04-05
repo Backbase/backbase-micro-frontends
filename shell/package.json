@@ -7,7 +7,7 @@
     "lint:fix": "ng lint --fix",
     "ng": "ng",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.mocks.conf.js",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular-architects/module-federation": "^12.5.3",
     "@angular/animations": "~12.2.0",
+    "@angular/cdk": "~12.2.13",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
@@ -23,7 +24,12 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@backbase/backbase-theme-business-preset": "1.25.0",
+    "@backbase/data-ang": "4.2.0",
+    "@backbase/foundation-ang": "6.25.1",
+    "@backbase/product-summary-accounts-overview-ang": "5.3.0",
+    "@backbase/product-summary-ui": "6.8.0",
     "@backbase/ui-ang": "^7.9.7",
+    "@swimlane/ngx-charts": "^19.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -38,6 +44,8 @@
     "@angular/cli": "~12.2.18",
     "@angular/compiler-cli": "~12.2.0",
     "@angular/localize": "^12.2.17",
+    "@types/d3-scale": "^4.0.8",
+    "@types/d3-selection": "^3.0.10",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
