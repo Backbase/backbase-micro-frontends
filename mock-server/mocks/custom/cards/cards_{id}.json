@@ -1,5 +1,5 @@
 {
-  "name": "/client-api/v2/cards/{id}",
+  "name": "/client-api/v2/cards/{id}_GET",
   "request": {
     "url": "/client-api/v2/cards/[^/]+(\\?.*)?$",
     "method": "GET"

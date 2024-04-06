@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'cards',
+    loadChildren: () =>
+      import('./journeys/cards-management-journey-bundle.module').then(
+        (m) => m.CardsManagementJourneyBundleModule,
+      ),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

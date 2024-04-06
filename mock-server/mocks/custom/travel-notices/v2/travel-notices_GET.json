@@ -1,0 +1,56 @@
+{
+  "name": "/client-api/v2/travel-notices_GET",
+  "request": {
+    "url": "/client-api/v2/travel-notices(\\?.*)?$",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "status": 200,
+      "data": [
+        {
+          "id": "sara-travel-notice-1",
+          "cardIds": [
+            "sara-card-1",
+            "sara-card-4"
+          ],
+          "departureDate": "2020-01-09",
+          "arrivalDate": "2020-01-18",
+          "destinations": [
+            {
+              "country": "MEX"
+            },
+            {
+              "country": "USA",
+              "region": "US-TX"
+            }
+          ]
+        },
+        {
+          "id": "sara-travel-notice-2",
+          "cardIds": [
+            "sara-card-1",
+            "sara-card-2",
+            "sara-card-4",
+            "sara-card-5"
+          ],
+          "departureDate": "2019-12-10",
+          "arrivalDate": "2019-12-23",
+          "destinations": [
+            {
+              "country": "JPN"
+            },
+            {
+              "country": "USA",
+              "region": "US-CA"
+            }
+          ],
+          "contact": {
+            "phoneNumber": "+1 646 432 3000"
+          }
+        }
+      ],
+      "default": true
+    }
+  }
+}

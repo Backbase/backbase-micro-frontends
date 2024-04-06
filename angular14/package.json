@@ -23,6 +23,9 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@backbase/cards-management-journey-ang": "~4.8.0",
+    "@backbase/foundation-ang": "^8.0.0",
+    "ngx-mask": "~13.1.15",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
