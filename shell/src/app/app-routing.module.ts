@@ -47,7 +47,7 @@ const routes: Routes = [
         },
       },
       {
-        path: 'cards',
+        path: 'angular14/cards',
         component: WrapperComponent,
         data: {
           elementName: 'angular14-element',
@@ -56,9 +56,11 @@ const routes: Routes = [
         },
       },
       {
-        path: 'loans',
-        children: [],
+        path: 'angular14/loans',
+        component: WrapperComponent,
         data: {
+          elementName: 'angular14-element',
+          importName: 'angular14',
           title: $localize`:@@loans.nav.item.title:Loans`,
         },
       },

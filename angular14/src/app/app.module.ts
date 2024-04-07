@@ -2,20 +2,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { TemplateRegistry } from '@backbase/foundation-ang/core';
+import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { ServicePathsModule } from './service-paths.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     ServicePathsModule,
+    ...appModuleImports,
   ],
-  providers: [],
+  providers: [TemplateRegistry],
   bootstrap: [],
 })
 export class AppModule implements DoBootstrap {

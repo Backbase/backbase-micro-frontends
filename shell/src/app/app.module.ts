@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { NgModule, NgZone } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TemplateRegistry } from '@backbase/foundation-ang/core';
 import { appModuleImports } from './app-module-imports';
@@ -12,4 +12,8 @@ import { AppComponent } from './app.component';
   providers: [TemplateRegistry],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private ngZone: NgZone) {
+    (window as any).ngZone = this.ngZone;
+  }
+}
