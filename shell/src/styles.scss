@@ -1,1 +1,46 @@
 @import '@backbase/backbase-theme-business-preset/scss/main';
+
+.angular14-theme {
+  // Bootstrap 5
+  .input-group {
+    &:not(.has-validation) {
+      > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+      > .dropdown-toggle:nth-last-child(n + 3),
+      > .form-floating:not(:last-child) > .form-control,
+      > .form-floating:not(:last-child) > .form-select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  .visually-hidden {
+    @extend .sr-only;
+  }
+
+  // UI-Ang 9
+  .input-group {
+    > .btn {
+      &:not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        &:not(:last-child),
+        &:not(:first-child) {
+          border: $input-border-width solid $input-border-color;
+        }
+      }
+    }
+  }
+
+
+  .input-group {
+    > .form-control[type="text"],
+    > .form-control[type="number"],
+    > .form-control[type="email"],
+    > .form-control[type="password"],
+    > .form-control[type="search"] {
+      &:not(:first-child),
+      &:not(:first-child).ng-invalid.ng-touched {
+        margin-left: -1px;
+      }
+    }
+  }
+}

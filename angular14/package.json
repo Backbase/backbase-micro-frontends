@@ -7,7 +7,7 @@
     "lint:fix": "ng lint --fix",
     "ng": "ng",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.mocks.conf.js",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@backbase/backbase-theme-business-preset": "1.25.4",
     "@backbase/cards-management-journey-ang": "~4.8.0",
     "@backbase/foundation-ang": "^8.0.0",
     "@backbase/loans-business-journey": "~1.5.2",
