@@ -13,10 +13,7 @@ export class AccountsListViewComponent {
   resourceName = 'Product Summary';
   size = 50;
 
-  constructor(
-    private readonly route: ActivatedRoute,
-    private readonly router: Router,
-  ) {}
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) {}
 
   onNavigateToDetails(accountId: string): void {
     this.router.navigate(['details', { selectedAccount: accountId }, 'info'], {

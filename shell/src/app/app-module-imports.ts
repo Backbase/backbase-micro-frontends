@@ -6,12 +6,23 @@
  *
  */
 
+import { IdentityAuthModule } from '@backbase/identity-auth';
+import { authConfig, environment } from '../environments/environment';
 import { AppDataModule } from './app-data.module';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 import { LayoutModule } from './layout/layout.module';
+import { SharedAppCoreModule } from './shared-app-core.module';
 
 /**
  * Modules in this array are added to the `imports` array of the AppModule
  * in app.module.ts.
  */
-export const appModuleImports = [AppDataModule, AppRoutingModule, LayoutModule];
+export const appModuleImports = [
+  AppDataModule,
+  AppRoutingModule,
+  AuthModule.forRoot(environment.apiRoot, authConfig),
+  IdentityAuthModule,
+  LayoutModule,
+  SharedAppCoreModule.forRoot(environment),
+];

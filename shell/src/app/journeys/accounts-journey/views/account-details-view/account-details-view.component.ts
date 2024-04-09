@@ -16,10 +16,7 @@ export class AccountDetailsViewComponent {
   resourceName = 'Product Summary';
   size = 50;
 
-  constructor(
-    private readonly route: ActivatedRoute,
-    private readonly router: Router,
-  ) {}
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router) {}
 
   onNavigateBack(): void {
     this.router.navigate(['..'], { relativeTo: this.route.parent });
@@ -27,11 +24,8 @@ export class AccountDetailsViewComponent {
 
   onSelectAccount(accountId: string): void {
     const selectedTab = this.route.snapshot.firstChild?.routeConfig?.path || '';
-    this.router.navigate(
-      ['details', { selectedAccount: accountId }, selectedTab],
-      {
-        relativeTo: this.route.parent,
-      },
-    );
+    this.router.navigate(['details', { selectedAccount: accountId }, selectedTab], {
+      relativeTo: this.route.parent,
+    });
   }
 }

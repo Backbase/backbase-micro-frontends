@@ -1,10 +1,4 @@
-import {
-  AfterContentInit,
-  Component,
-  ElementRef,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
+import { AfterContentInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { registry } from './registry';
 
@@ -28,9 +22,7 @@ export class WrapperComponent implements AfterContentInit {
           console.debug(`element ${elementName} loaded!`);
           this.module = m;
         })
-        .catch((err: any) =>
-          console.error(`error loading ${elementName}:`, err),
-        );
+        .catch((err: any) => console.error(`error loading ${elementName}:`, err));
     }
     const element = this.renderer.createElement(elementName) as HTMLElement;
     this.renderer.appendChild(this.vc.nativeElement, element);

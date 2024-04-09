@@ -1,8 +1,7 @@
 <div class="bb-heading-widget bb-heading-widget--de-elevated heading-widget">
   <bb-header-ui
     heading="Account details"
-    i18n-heading="
-      Account details@@accounts-journey.accounts-details-view.header"
+    i18n-heading="Account details@@accounts-journey.accounts-details-view.header"
     headingClasses="bb-heading-widget__heading"
     headingType="h1"
   ></bb-header-ui>
@@ -11,11 +10,7 @@
     class="bb-block bb-block--lg bb-heading-widget__button btn btn-link-text-light btn-sm"
   >
     <i aria-hidden="true" class="bb-icon bb-icon-arrow-back bb-icon--sm"></i>
-    <span
-      i18n="
-        Back to Accounts
-        Overview@@accounts-journey.accounts-details-view.button.back"
-    >
+    <span i18n="Back to Accounts Overview@@accounts-journey.accounts-details-view.button.back">
       Back to Accounts Overview
     </span>
   </button>
@@ -61,10 +56,7 @@
           </a>
         </div>
       </div>
-      <div
-        class="bb-tab-container__content tab-content"
-        [attr.role]="'tabpanel'"
-      >
+      <div class="bb-tab-container__content tab-content" [attr.role]="'tabpanel'">
         <router-outlet></router-outlet>
       </div>
     </div>

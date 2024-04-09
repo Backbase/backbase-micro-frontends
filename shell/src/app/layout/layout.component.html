@@ -2,18 +2,14 @@
   class="bb-layout bb-layout--vertical-nav"
   [ngClass]="{
     'bb-layout--nav-expanded': layoutService.navigationExpanded$ | async,
-    'bb-layout--high-resolution-view':
-      layoutService.isHighResolutionView$ | async
+    'bb-layout--high-resolution-view': layoutService.isHighResolutionView$ | async
   }"
 >
   <!-- Top Bar Area -->
   <app-top-bar-menu></app-top-bar-menu>
 
   <!-- Backdrop Area -->
-  <div
-    class="bb-layout__nav-backdrop"
-    (click)="layoutService.toggleNav()"
-  ></div>
+  <div class="bb-layout__nav-backdrop" (click)="layoutService.toggleNav()"></div>
 
   <!-- Main Content Area -->
   <div class="bb-layout__main min-vh-100">
@@ -21,9 +17,7 @@
       <button
         class="bb-layout__sidebar-toggler"
         aria-label="Toggle sidebar"
-        i18n-aria-label="
-          Sidebar Toggler|Button for toggling sidebar
-          state@@bb-layout.sidebar_toggler"
+        i18n-aria-label="Sidebar Toggler|Button for toggling sidebar state@@bb-layout.sidebar_toggler"
         (click)="layoutService.toggleNav()"
       >
         <span class="bb-icon"></span>

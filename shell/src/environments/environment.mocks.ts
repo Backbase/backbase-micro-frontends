@@ -1,34 +1,38 @@
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+
 import { AuthConfig } from 'angular-oauth2-oidc';
 import { Environment } from './type';
 
 export const environment: Environment = {
   /**
    * Whether to run the app in production mode.
-   * Default: true
+   * Default: false
    */
-  production: true,
+  production: false,
 
   /**
    * Whether to enable animation capabilities
    * Default: true
    */
-  animation: true,
+  animation: false,
 
   googleApiKey: '',
   landingPageUrl: '/',
-  apiRoot: '${API_ROOT::-1}',
-  baseHref: '${BASE_HREF}',
+  apiRoot: '/api',
+  baseHref: '/',
 };
 
-export const authConfig: (baseUrl: string) => AuthConfig = (locale = '') => ({
+export const authConfig: (baseUrl: string) => AuthConfig = () => ({
   // Url of the Identity Provider
-  issuer: '${AUTH_URL}realms/${AUTH_REALM}',
+  issuer: `http://localhost:8180/auth/realms/backbase`,
 
   // URL of the SPA to redirect the user to after login
-  redirectUri: document.location.origin + '${BASE_HREF}' + locale + '/select-context',
+  redirectUri: document.location.origin + '/select-context',
 
   // The SPA's id. The SPA is registered with this id at the auth-server
-  clientId: '${AUTH_CLIENT_ID}',
+  clientId: 'bb-web-client',
 
   // Just needed if your auth server demands a secret. In general, this
   // is a sign that the auth server is not configured with SPAs in mind
@@ -41,9 +45,9 @@ export const authConfig: (baseUrl: string) => AuthConfig = (locale = '') => ({
   // set the scope for the permissions the client should request
   // The first four are defined by OIDC.
   // Important: Request offline_access to get a refresh token
-  scope: '${AUTH_SCOPE}',
+  scope: 'openid',
 
   requireHttps: false,
   showDebugInformation: true,
-  logoutUrl: window.location.origin + '${BASE_HREF}' + locale + '/logout',
+  logoutUrl: document.location.origin + '/logout',
 });
