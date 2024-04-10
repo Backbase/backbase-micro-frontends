@@ -1,3 +1,4 @@
+import { shareNgZone } from '@angular-architects/module-federation-tools';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, NgZone } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,6 @@ import { AppComponent } from './app.component';
 })
 export class AppModule {
   constructor(private ngZone: NgZone) {
-    (window as any).ngZone = this.ngZone;
+    shareNgZone(this.ngZone);
   }
 }
