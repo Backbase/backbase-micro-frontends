@@ -6,10 +6,7 @@ import {
   LOANS_TRANSACTIONS_BASE_PATH,
   LoansJourneyModule,
 } from '@backbase/loans-business-journey';
-import {
-  APP_ARRANGEMENT_MANAGER_BASE_PATH,
-  APP_TRANSACTIONS_BASE_PATH,
-} from '../service-paths.module';
+import { APP_ARRANGEMENT_MANAGER_BASE_PATH, APP_TRANSACTIONS_BASE_PATH } from '../service-paths.module';
 
 @NgModule({
   imports: [LoansJourneyModule.forRoot()],

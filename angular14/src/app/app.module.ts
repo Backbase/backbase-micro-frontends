@@ -9,12 +9,7 @@ import { ServicePathsModule } from './service-paths.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ServicePathsModule,
-    ...appModuleImports,
-  ],
+  imports: [BrowserModule, HttpClientModule, ServicePathsModule, ...appModuleImports],
   providers: [TemplateRegistry],
   bootstrap: [],
 })

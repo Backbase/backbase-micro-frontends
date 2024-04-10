@@ -16,6 +16,10 @@ import { CookieService } from 'ngx-cookie-service';
 import { AuthEventsHandlerService } from './auth-events-handler.service';
 import { AuthInterceptor } from './auth.interceptor';
 
+/**
+ * This is a temporary workaround for capabilities that has download functionality working only via cookies
+ * TODO: remove it as soon as capabilities work with auth header
+ */
 const cookiePaths = [
   '/api/account-statement/client-api/v2/account/statements/download',
   '/api/transaction-manager/client-api/v2/transactions/export',
@@ -36,7 +40,11 @@ export class AuthModule {
     }
   }
 
-  static forRoot(apiRoot: string, authConfig: (baseUrl: string) => AuthConfig): ModuleWithProviders<AuthModule> {
+  static forRoot(
+    apiRoot: string,
+    authConfig: (baseUrl: string) => AuthConfig,
+    mocksEnabled = false,
+  ): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
       providers: [
@@ -51,6 +59,32 @@ export class AuthModule {
           deps: [[new Optional(), LOCALE_ID]],
         },
         { provide: OAuthStorage, useFactory: () => localStorage },
+        mocksEnabled
+          ? []
+          : {
+              provide: APP_INITIALIZER,
+              multi: true,
+              deps: [OAuthService, CookieService, ImpersonationService, AuthEventsHandlerService],
+              useFactory:
+                (
+                  oAuthService: OAuthService,
+                  cookieService: CookieService,
+                  impersonationService: ImpersonationService,
+                ) =>
+                async () => {
+                  // todo: delete when files download works without cookies
+                  oAuthService.events.subscribe((authEvent: OAuthEvent) => {
+                    if (authEvent.type === 'token_received' || authEvent.type === 'token_refreshed') {
+                      cookiePaths.forEach((path) =>
+                        cookieService.set('Authorization', oAuthService.getAccessToken(), { path }),
+                      );
+                    }
+                  });
+
+                  await impersonationService.checkImpersonationStatus();
+                  await oAuthService.loadDiscoveryDocumentAndTryLogin();
+                },
+            },
         {
           provide: OAuthModuleConfig,
           useValue: {
@@ -59,27 +93,6 @@ export class AuthModule {
               sendAccessToken: true,
             },
           },
-        },
-        {
-          provide: APP_INITIALIZER,
-          multi: true,
-          deps: [OAuthService, CookieService, ImpersonationService, AuthEventsHandlerService],
-          useFactory:
-            (oAuthService: OAuthService, cookieService: CookieService, impersonationService: ImpersonationService) =>
-            async () => {
-              // todo: delete when files download works without cookies
-              oAuthService.events.subscribe((authEvent: OAuthEvent) => {
-                if (authEvent.type === 'token_received' || authEvent.type === 'token_refreshed') {
-                  cookiePaths.forEach((path) =>
-                    cookieService.set('Authorization', oAuthService.getAccessToken(), { path }),
-                  );
-                }
-              });
-
-              await impersonationService.checkImpersonationStatus();
-
-              await oAuthService.loadDiscoveryDocumentAndTryLogin();
-            },
         },
       ],
     };

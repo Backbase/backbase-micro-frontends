@@ -29,6 +29,8 @@
     "@backbase/loans-business-journey": "~1.5.2",
     "@ngrx/effects": "^14.3.3",
     "@ngrx/store": "^14.3.3",
+    "angular-oauth2-oidc": "~14.0.1",
+    "ngx-cookie-service": "~14.0.1",
     "ngx-mask": "~13.1.15",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

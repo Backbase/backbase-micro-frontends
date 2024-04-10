@@ -1,12 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import {
-  ENTITLEMENTS_CONFIG,
-  EntitlementsModule,
-} from '@backbase/foundation-ang/entitlements';
-import {
-  PubSubService,
-  SetLocaleService,
-} from '@backbase/foundation-ang/web-sdk';
+import { ENTITLEMENTS_CONFIG, EntitlementsModule } from '@backbase/foundation-ang/entitlements';
+import { PubSubService, SetLocaleService } from '@backbase/foundation-ang/web-sdk';
 
 export type CommonConfig = {
   production: boolean;
@@ -23,9 +17,7 @@ export type CommonConfig = {
   providers: [PubSubService, SetLocaleService],
 })
 export class SharedAppCoreModule {
-  static forRoot(
-    config: CommonConfig,
-  ): ModuleWithProviders<SharedAppCoreModule> {
+  static forRoot(config: CommonConfig): ModuleWithProviders<SharedAppCoreModule> {
     return {
       ngModule: SharedAppCoreModule,
       providers: [
