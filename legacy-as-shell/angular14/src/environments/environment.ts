@@ -33,7 +33,7 @@ export const authConfig: (baseUrl: string) => AuthConfig = () => ({
   issuer: 'https://identity.exp.sdbxaz.azure.backbaseservices.com/auth/realms/customer',
 
   // URL of the SPA to redirect the user to after login
-  redirectUri: document.location.origin + '/seleccionar-contexto',
+  redirectUri: document.location.origin + '/select-context',
 
   // The SPA's id. The SPA is registered with this id at the auth-server
   clientId: 'bb-web-client',

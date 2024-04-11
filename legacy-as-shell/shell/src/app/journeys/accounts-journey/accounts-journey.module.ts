@@ -7,8 +7,8 @@ import { ProductSummaryAccountsOverviewModule } from '@backbase/product-summary-
 import { ProductSummaryAccountsService } from '@backbase/product-summary-common-ang';
 import { HeaderModule } from '@backbase/ui-ang/header';
 import { accountsJourneyRoutes } from './accounts-journey.routes';
-import { AccountsListViewComponent } from './views/accounts-list-view/accounts-list-view.component';
 import { AccountDetailsViewComponent } from './views/account-details-view/account-details-view.component';
+import { AccountsListViewComponent } from './views/accounts-list-view/accounts-list-view.component';
 
 @NgModule({
   declarations: [AccountsListViewComponent, AccountDetailsViewComponent],

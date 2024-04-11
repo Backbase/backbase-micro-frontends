@@ -58,12 +58,32 @@
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
+							"aot": true,
 							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
 							"extractLicenses": false,
+							"localize": false,
+							"namedChunks": true,
+							"optimization": false,
+							"outputHashing": "all",
 							"sourceMap": true,
-							"namedChunks": true
+							"vendorChunk": true
+						},
+						"mocks": {
+							"aot": true,
+							"buildOptimizer": false,
+							"extractLicenses": false,
+							"localize": false,
+							"namedChunks": true,
+							"optimization": false,
+							"outputHashing": "all",
+							"sourceMap": true,
+							"vendorChunk": true,
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.mocks.ts"
+								}
+							]
 						}
 					},
 					"defaultConfiguration": "production"
@@ -76,7 +96,12 @@
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "angular14:build:development"
+							"browserTarget": "angular14:build:development",
+							"proxyConfig": "proxy.env.conf.js"
+						},
+						"mocks": {
+							"browserTarget": "angular14:build:mocks",
+							"proxyConfig": "proxy.mocks.conf.js"
 						}
 					},
 					"defaultConfiguration": "development",

@@ -7,7 +7,7 @@
     "lint:fix": "ng lint --fix",
     "ng": "ng",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "start": "ng serve --configuration=development",
+    "start": "ng serve",
     "start:mocks": "ng serve --configuration=mocks",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
