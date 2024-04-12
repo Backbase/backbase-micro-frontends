@@ -1,6 +1,10 @@
 # Angular CLI
 .angular/
 
+# IDE
+.idea/
+.vscode/
+
 # Node
 coverage/
 dist/
