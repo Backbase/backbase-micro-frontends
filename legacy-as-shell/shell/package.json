@@ -25,6 +25,8 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@backbase/accesscontrol-http-ang": "~3.1.0",
+    "@backbase/arrangement-manager-http-ang": "~2.2.0",
     "@backbase/backbase-theme-business-preset": "1.25.0",
     "@backbase/consolidated-approvals-beta-http-ang": "1.0.3-beta",
     "@backbase/data-ang": "4.2.0",

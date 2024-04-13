@@ -7,8 +7,6 @@
  *
  */
 import { InjectionToken, NgModule } from '@angular/core';
-import { AccessControlApiModule, AccessControlConfiguration } from '@backbase/accesscontrol-http-ang';
-import { ArrangementManagerApiModule, ArrangementManagerConfiguration } from '@backbase/arrangement-manager-http-ang';
 import { ACCESS_CONTROL_BASE_PATH } from '@backbase/data-ang/accesscontrol';
 import { ACCOUNT_STATEMENT_BASE_PATH } from '@backbase/data-ang/account-statements';
 import { ACTIONS_BASE_PATH } from '@backbase/data-ang/actions';
@@ -74,20 +72,6 @@ const dataModulePaths: [InjectionToken<string>, string][] = [
 ];
 
 @NgModule({
-  imports: [
-    AccessControlApiModule.forRoot(
-      () =>
-        new AccessControlConfiguration({
-          basePath: `${environment.apiRoot}/access-control`,
-        }),
-    ),
-    ArrangementManagerApiModule.forRoot(
-      () =>
-        new ArrangementManagerConfiguration({
-          basePath: `${environment.apiRoot}/arrangement-manager`,
-        }),
-    ),
-  ],
   providers: [
     ...dataModulePaths.map(([token, servicePath]) => ({
       provide: token,
