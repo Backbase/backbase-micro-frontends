@@ -54,14 +54,15 @@ const routes: Routes = [
       },
       {
         path: 'cards',
-        children: [],
+        loadChildren: () =>
+          import('./journeys/cards-management-journey-bundle.module').then((m) => m.CardsManagementJourneyBundleModule),
         data: {
           title: $localize`:@@cards.nav.item.title:Cards`,
         },
       },
       {
         path: 'loans',
-        children: [],
+        loadChildren: () => import('./journeys/loans-journey-bundle.module').then((m) => m.LoansJourneyBundleModule),
         data: {
           title: $localize`:@@loans.nav.item.title:Loans`,
         },

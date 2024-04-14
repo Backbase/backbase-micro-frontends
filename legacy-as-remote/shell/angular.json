@@ -76,7 +76,8 @@
               "extraWebpackConfig": "webpack.prod.config.js"
             },
             "development": {
-              "browserTarget": "shell:build:development"
+              "browserTarget": "shell:build:development",
+              "proxyConfig": "proxy.mocks.conf.js"
             }
           },
           "defaultConfiguration": "development",
