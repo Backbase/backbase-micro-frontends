@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductSummaryCommon, ProductSummaryUserPermissionsService } from '@backbase/product-summary-common-ang';
+import { ProductSummaryUiModule } from '@backbase/product-summary-ui';
 
 const routes: Routes = [
   {
@@ -15,7 +17,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ProductSummaryCommon, ProductSummaryUiModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [ProductSummaryUserPermissionsService],
 })
 export class AppRoutingModule {}

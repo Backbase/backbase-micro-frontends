@@ -1,4 +1,6 @@
+import { connectRouter } from '@angular-architects/module-federation-tools';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular12';
+
+  constructor(private router: Router) {
+    connectRouter(this.router);
+  }
 }

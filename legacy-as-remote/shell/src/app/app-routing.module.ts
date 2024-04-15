@@ -6,9 +6,17 @@
  *
  *
  */
+import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+
+const angular12WrapperOptions = {
+  remoteEntry: 'http://localhost:4202/remoteEntry.js',
+  remoteName: 'angular12',
+  exposedModule: './web-components',
+  elementName: 'angular12-element',
+} as WebComponentWrapperOptions;
 
 const routes: Routes = [
   {
@@ -46,10 +54,11 @@ const routes: Routes = [
        * Accounts & Cards
        */
       {
-        path: 'accounts',
-        children: [],
+        path: 'angular12/accounts',
+        component: WebComponentWrapper,
         data: {
           title: $localize`:@@accounts.nav.item.title:Accounts`,
+          ...angular12WrapperOptions,
         },
       },
       {
@@ -203,7 +212,7 @@ const routes: Routes = [
   {
     path: '**',
     pathMatch: 'full',
-    redirectTo: 'accounts',
+    redirectTo: 'dashboard',
   },
 ];
 

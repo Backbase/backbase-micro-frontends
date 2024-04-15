@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { DoBootstrap, Injector, NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
 import { TemplateRegistry } from '@backbase/foundation-ang/core';
 import { appModuleImports } from './app-module-imports';
@@ -9,6 +10,12 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [BrowserModule, HttpClientModule, ...appModuleImports],
   providers: [TemplateRegistry],
-  bootstrap: [AppComponent],
+  bootstrap: [],
 })
-export class AppModule {}
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector) {}
+  ngDoBootstrap(): void {
+    const ce = createCustomElement(AppComponent, { injector: this.injector });
+    customElements.define('angular12-element', ce);
+  }
+}
