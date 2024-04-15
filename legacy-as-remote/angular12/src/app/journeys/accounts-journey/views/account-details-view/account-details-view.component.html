@@ -1,0 +1,64 @@
+<div class="bb-heading-widget bb-heading-widget--de-elevated heading-widget">
+  <bb-header-ui
+    heading="Account details"
+    i18n-heading="Account details@@accounts-journey.accounts-details-view.header"
+    headingClasses="bb-heading-widget__heading"
+    headingType="h1"
+  ></bb-header-ui>
+  <button
+    (click)="onNavigateBack()"
+    class="bb-block bb-block--lg bb-heading-widget__button btn btn-link-text-light btn-sm"
+  >
+    <i aria-hidden="true" class="bb-icon bb-icon-arrow-back bb-icon--sm"></i>
+    <span i18n="Back to Accounts Overview@@accounts-journey.accounts-details-view.button.back">
+      Back to Accounts Overview
+    </span>
+  </button>
+</div>
+<div class="container-fluid container--drag-up">
+  <bb-account-picker-widget
+    class="d-block bb-block bb-block--xl"
+    [accountsBeforeLoadingMore]="accountsBeforeLoadingMore"
+    [accountsForVirtualScroll]="accountsForVirtualScroll"
+    [businessFunction]="businessFunction"
+    [debounceTime]="debounceTime"
+    [dropdownPosition]="'bottom'"
+    [favoriteFirst]="favoriteFirst"
+    [multiple]="multiple"
+    [privilege]="privilege"
+    [resourceName]="resourceName"
+    [size]="size"
+    (selectedAccount)="onSelectAccount($event)"
+  ></bb-account-picker-widget>
+  <div class="bb-card bb-card--lg">
+    <div class="bb-card__body">
+      <div class="bb-tab-container bb-tab">
+        <div class="bb-tab-container__tabs nav nav-tabs" role="tablist">
+          <a
+            routerLink="info"
+            routerLinkActive="active"
+            class="nav-link nav-item"
+            data-role="accounts-journey-tab-link"
+            i18n="@@accounts-journey.accounts-details-view.tab-link.info"
+            role="tab"
+          >
+            Account details
+          </a>
+          <a
+            routerLink="balance"
+            routerLinkActive="active"
+            class="nav-link nav-item"
+            data-role="accounts-journey-tab-link"
+            i18n="@@accounts-journey.accounts-details-view.tab-link.balance"
+            role="tab"
+          >
+            Account balance history
+          </a>
+        </div>
+      </div>
+      <div class="bb-tab-container__content tab-content" [attr.role]="'tabpanel'">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="bb-heading-widget bb-heading-widget--de-elevated heading-widget">
+  <bb-header-ui
+    heading="Accounts"
+    i18n-heading="Accounts@@accounts-journey.accounts-list-view.header"
+    headingClasses="bb-heading-widget__heading"
+    headingType="h1"
+  ></bb-header-ui>
+</div>
+<div class="container--drag-up container-fluid">
+  <bb-accounts-overview-widget
+    [activeView]="activeView"
+    [aggregatedBalancesPosition]="aggregatedBalancesPosition"
+    [businessFunction]="businessFunction"
+    [privilege]="privilege"
+    [resourceName]="resourceName"
+    [size]="size"
+    (navigateToDetails)="onNavigateToDetails($event)"
+  ></bb-accounts-overview-widget>
+</div>

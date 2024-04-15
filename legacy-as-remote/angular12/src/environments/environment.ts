@@ -2,8 +2,25 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+import { Environment } from './type';
+
+export const environment: Environment = {
+  /**
+   * Whether to run the app in production mode.
+   * Default: false
+   */
   production: false,
+
+  /**
+   * Whether to enable animation capabilities
+   * Default: true
+   */
+  animation: false,
+
+  googleApiKey: '',
+  landingPageUrl: '/',
+  apiRoot: '/api',
+  baseHref: '/',
 };
 
 /*
