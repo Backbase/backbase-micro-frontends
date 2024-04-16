@@ -9,7 +9,9 @@
 import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 import { LayoutComponent } from './layout/layout.component';
+import { SharedUserContextGuard } from './shared-user-context/shared-user-context.guard';
 
 const angular12WrapperOptions = {
   remoteEntry: 'http://localhost:4202/remoteEntry.js',
@@ -26,10 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'select-context',
-    children: [],
+    loadChildren: () => import('./user-context/user-context.module').then((m) => m.UserContextModule),
     data: {
       title: $localize`:@@context-selection.nav.item.title:Select Context`,
     },
+    canActivate: [AuthGuard],
   },
   {
     path: '',
@@ -208,6 +211,7 @@ const routes: Routes = [
         },
       },
     ],
+    canActivate: [AuthGuard, SharedUserContextGuard],
   },
   {
     path: '**',

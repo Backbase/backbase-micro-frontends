@@ -25,6 +25,7 @@ export const environment: Environment = {
   apiRoot: '/api',
   baseHref: '/',
   accountsUseArrangementViewsApi: false,
+  mocksEnabled: true,
   rtcEnabled: true,
 };
 
