@@ -7,6 +7,8 @@
  */
 
 import { IdentityAuthModule } from '@backbase/identity-auth';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { authConfig, environment } from '../environments/environment';
 import { AppDataModule } from './app-data.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +24,9 @@ export const appModuleImports = [
   AppDataModule,
   AppRoutingModule,
   AuthModule.forRoot(environment.apiRoot, authConfig),
+  EffectsModule.forRoot([]),
   IdentityAuthModule,
   LayoutModule,
   SharedAppCoreModule.forRoot(environment),
+  StoreModule.forRoot({}),
 ];

@@ -12,6 +12,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./journeys/accounts-journey/accounts-journey.module').then((m) => m.AccountsJourneyModule),
       },
+      {
+        path: 'account-statements',
+        loadChildren: () =>
+          import('./journeys/account-statement-business-journey/account-statement-business-journey.module').then(
+            (m) => m.AccountStatementBusinessJourneyModule,
+          ),
+      },
     ],
   },
 ];

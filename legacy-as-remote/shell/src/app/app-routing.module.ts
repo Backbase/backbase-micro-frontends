@@ -80,10 +80,11 @@ const routes: Routes = [
         },
       },
       {
-        path: 'account-statements',
-        children: [],
+        path: 'angular12/account-statements',
+        component: WebComponentWrapper,
         data: {
           title: $localize`:@@account-statements.nav.item.title:Account Statements`,
+          ...angular12WrapperOptions,
         },
       },
       {

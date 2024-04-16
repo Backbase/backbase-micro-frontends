@@ -73,7 +73,10 @@ const routes: Routes = [
       },
       {
         path: 'account-statements',
-        children: [],
+        loadChildren: () =>
+          import('./journeys/account-statement-business-journey/account-statement-business-journey.module').then(
+            (m) => m.AccountStatementBusinessJourneyModule,
+          ),
         data: {
           title: $localize`:@@account-statements.nav.item.title:Account Statements`,
         },

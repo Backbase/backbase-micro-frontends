@@ -1,0 +1,39 @@
+<div class="bb-heading-widget bb-heading-widget--de-elevated heading-widget">
+  <bb-header-ui
+    heading="Account Statements"
+    i18n-heading="Account Statements@@account-statement-business-journey.accounts-statement-business-view.header"
+    headingClasses="bb-heading-widget__heading"
+    headingType="h1"
+  ></bb-header-ui>
+</div>
+<div class="container-fluid container--drag-up">
+  <bb-account-picker-widget
+    class="d-block bb-block bb-block--xl"
+    [accountsBeforeLoadingMore]="accountsBeforeLoadingMore"
+    [accountsForVirtualScroll]="accountsForVirtualScroll"
+    [businessFunction]="businessFunction"
+    [debounceTime]="debounceTime"
+    [dropdownPosition]="'bottom'"
+    [favoriteFirst]="favoriteFirst"
+    [multiple]="multiple"
+    [privilege]="privilege"
+    [resourceName]="resourceName"
+    [size]="size"
+    (selectedAccount)="onSelectAccount($event)"
+  ></bb-account-picker-widget>
+  <div class="card">
+    <div class="card-body">
+      <bb-account-statement-business-widget
+        [absoluteDateLimit]="absoluteDateLimit"
+        [notificationDismissTime]="notificationDismissTime"
+        [pageSize]="pageSize"
+        [paginationType]="paginationType"
+        [relativeDateLimit]="relativeDateLimit"
+        [showBookDate]="showBookDate"
+        [showCategory]="showCategory"
+        [sortingDirection]="sortingDirection"
+        [sortingOrder]="sortingOrder"
+      ></bb-account-statement-business-widget>
+    </div>
+  </div>
+</div>
