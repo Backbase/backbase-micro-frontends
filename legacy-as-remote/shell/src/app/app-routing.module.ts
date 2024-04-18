@@ -18,6 +18,7 @@ const angular12WrapperOptions = {
   remoteName: 'angular12',
   exposedModule: './web-components',
   elementName: 'angular12-element',
+  type: 'script',
 } as WebComponentWrapperOptions;
 
 const routes: Routes = [

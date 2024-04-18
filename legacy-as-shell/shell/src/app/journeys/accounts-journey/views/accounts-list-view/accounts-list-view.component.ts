@@ -20,4 +20,10 @@ export class AccountsListViewComponent {
       relativeTo: this.route.parent,
     });
   }
+
+  onNavigateToStatements(accountId: string): void {
+    this.router.navigate(['..', 'account-statements', { selectedAccount: accountId }], {
+      relativeTo: this.route.parent,
+    });
+  }
 }
