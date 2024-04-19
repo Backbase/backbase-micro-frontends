@@ -15,9 +15,9 @@
   <div class="bb-layout__main">
     <div class="bb-layout__sidebar">
       <button
-        class="bb-layout__sidebar-toggler"
         aria-label="Toggle sidebar"
         i18n-aria-label="Sidebar Toggler|Button for toggling sidebar state@@bb-layout.sidebar_toggler"
+        class="bb-layout__sidebar-toggler"
         (click)="layoutService.toggleNav()"
       >
         <span class="bb-icon"></span>
@@ -31,7 +31,7 @@
     <div class="bb-page-layout__content">
       <div class="bb-page-layout__container container-fluid">
         <!--Header Area-->
-        <div class="bb-layout__main-content-header" aria-live="polite"></div>
+        <div aria-live="polite" class="bb-layout__main-content-header"></div>
 
         <!-- Main Content Area -->
         <div class="bb-layout__main-content-area">

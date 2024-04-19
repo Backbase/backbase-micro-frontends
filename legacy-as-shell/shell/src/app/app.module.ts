@@ -7,6 +7,7 @@ import { TemplateRegistry } from '@backbase/foundation-ang/core';
 import { environment } from '../environments/environment';
 import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
+import { MOCKS_TOKEN } from './auth/auth.guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,13 @@ import { AppComponent } from './app.component';
     environment.animation ? BrowserAnimationsModule : NoopAnimationsModule,
     ...appModuleImports,
   ],
-  providers: [TemplateRegistry],
+  providers: [
+    TemplateRegistry,
+    {
+      provide: MOCKS_TOKEN,
+      useValue: environment.mocksEnabled,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {

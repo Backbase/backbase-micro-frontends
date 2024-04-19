@@ -17,11 +17,11 @@
 
   <!-- Hamburger -->
   <button
-    [attr.aria-expanded]="layoutService.navigationExpanded$ | async"
-    (click)="layoutService.toggleNav()"
-    class="bb-layout__nav-expand-marker"
     aria-label="Toggle sidebar"
     i18n-aria-label="Sidebar Toggler|Button for toggling sidebar state@@bb-layout.sidebar_toggler"
+    class="bb-layout__nav-expand-marker"
+    [attr.aria-expanded]="layoutService.navigationExpanded$ | async"
+    (click)="layoutService.toggleNav()"
   >
     <span class="bb-icon"></span>
   </button>

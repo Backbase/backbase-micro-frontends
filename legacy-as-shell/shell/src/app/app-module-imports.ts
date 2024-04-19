@@ -23,7 +23,7 @@ import { SharedAppCoreModule } from './shared-app-core.module';
 export const appModuleImports = [
   AppDataModule,
   AppRoutingModule,
-  AuthModule.forRoot(environment.apiRoot, authConfig),
+  AuthModule.forRoot(environment.apiRoot, authConfig, environment.mocksEnabled),
   EffectsModule.forRoot([]),
   IdentityAuthModule,
   LayoutModule,

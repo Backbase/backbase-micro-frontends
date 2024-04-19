@@ -4,16 +4,13 @@
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/dashboard"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Dashboard"
-            i18n-aria-label="Dashboard navigation button aria-label@@dashboard.nav.item.area-label"
-            #dashboardRouterLink="routerLinkActive"
-            [attr.aria-current]="dashboardRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="dashboard"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@dashboard.nav.item.title">Dashboard</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.dashboard">Dashboard</span>
           </a>
         </li>
       </ul>
@@ -22,16 +19,16 @@
     <li class="bb-layout__vertical-nav-section">
       <div class="bb-layout__vertical-nav-header">
         <bb-header-ui
-          class="bb-inline-stack__item"
+          class="bb-inline-stack__item text-uppercase"
+          heading="Accounts & Cards"
+          i18n-heading="@@layout.nav.header.accounts"
           headingClasses="bb-layout__vertical-nav-header-title"
           headingType="h3"
-          heading=" ACCOUNTS & CARDS "
         ></bb-header-ui>
       </div>
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
-            aria-label="Accounts"
             class="bb-layout__vertical-nav-item-link"
             href="javascript:void(0)"
             [attr.aria-current]="isActive('/angular12/accounts') ? 'page' : undefined"
@@ -39,38 +36,33 @@
             (click)="handleNavigation('angular12', '/accounts')"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="accounts"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@accounts.nav.item.title">Accounts</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.accounts">Accounts</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/cards"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Cards"
-            #cardsRouterLink="routerLinkActive"
-            [attr.aria-current]="cardsRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="credit-card"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@cards.nav.item.title">Cards</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.cards">Cards</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/loans"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Loans"
-            #loansRouterLink="routerLinkActive"
-            [attr.aria-current]="loansRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="loans"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@loans.nav.item.title">Loans</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.loans">Loans</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
-            aria-label="Account Statements"
             class="bb-layout__vertical-nav-item-link"
             href="javascript:void(0)"
             [attr.aria-current]="isActive('/angular12/account-statements') ? 'page' : undefined"
@@ -78,22 +70,20 @@
             (click)="handleNavigation('angular12', '/account-statements')"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="description"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@account-statements.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.account-statements"
               >Account Statements</span
             >
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/transactions"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Transactions"
-            #transactionsRouterLink="routerLinkActive"
-            [attr.aria-current]="transactionsRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="transactions"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@transactions.nav.item.title">Transactions</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.transactions">Transactions</span>
           </a>
         </li>
       </ul>
@@ -103,78 +93,69 @@
     <li class="bb-layout__vertical-nav-section">
       <div class="bb-layout__vertical-nav-header">
         <bb-header-ui
-          class="bb-inline-stack__item"
+          class="bb-inline-stack__item text-uppercase"
+          heading="Move Money"
+          i18n-heading="@@layout.nav.header.move"
           headingClasses="bb-layout__vertical-nav-header-title"
           headingType="h3"
-          heading=" MOVE MONEY "
         ></bb-header-ui>
       </div>
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/transfers"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Transfers"
-            #transfersRouterLink="routerLinkActive"
-            [attr.aria-current]="transfersRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="payments"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@transfers.nav.item.title">Payments</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.transfers">Payments</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/batches"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Batches"
-            #batchesRouterLink="routerLinkActive"
-            [attr.aria-current]="batchesRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="batches"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@batches.nav.item.title">Batches</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.batches">Batches</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/stop-check-payments"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Stop check payments"
-            #stopCheckRouterLink="routerLinkActive"
-            [attr.aria-current]="stopCheckRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="cancel-presentation"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@stop-check.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.stop-check"
               >Stop check payments</span
             >
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/templates"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Templates"
-            #templatesRouterLink="routerLinkActive"
-            [attr.aria-current]="templatesRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="file-copy"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@templates.nav.item.title">Templates</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.templates">Templates</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/contacts"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Contacts"
-            #contactsRouterLink="routerLinkActive"
-            [attr.aria-current]="contactsRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="contacts"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@contacts.nav.item.title">Contacts</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.contacts">Contacts</span>
           </a>
         </li>
       </ul>
@@ -184,24 +165,23 @@
     <li class="bb-layout__vertical-nav-section">
       <div class="bb-layout__vertical-nav-header">
         <bb-header-ui
-          class="bb-inline-stack__item"
+          class="bb-inline-stack__item text-uppercase"
+          heading="Finance Management"
+          i18n-heading="@@layout.nav.header.finance"
           headingClasses="bb-layout__vertical-nav-header-title"
           headingType="h3"
-          heading=" FINANCE MANAGEMENT "
         ></bb-header-ui>
       </div>
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/cash-flow"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Cash Flow"
-            #cashFlowRouterLink="routerLinkActive"
-            [attr.aria-current]="cashFlowRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="currency-trade"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@cash-flow.nav.item.title">Cash Flow</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.titlecash-flow">Cash Flow</span>
           </a>
         </li>
       </ul>
@@ -211,50 +191,45 @@
     <li class="bb-layout__vertical-nav-section">
       <div class="bb-layout__vertical-nav-header">
         <bb-header-ui
-          class="bb-inline-stack__item"
+          class="bb-inline-stack__item text-uppercase"
+          heading="Personal"
+          i18n-heading="@@layout.nav.header.personal"
           headingClasses="bb-layout__vertical-nav-header-title"
           headingType="h3"
-          heading=" PERSONAL "
         ></bb-header-ui>
       </div>
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/messages"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Messages"
-            #messagesRouterLink="routerLinkActive"
-            [attr.aria-current]="messagesRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="mail"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@messages.nav.item.title">Messages</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.messages">Messages</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/my-profile"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="My Profile"
-            #myProfileRouterLink="routerLinkActive"
-            [attr.aria-current]="myProfileRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="user"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@my-profile.nav.item.title">My profile</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.my-profile">My profile</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/find-atm-branch"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Find ATM or Branch"
-            #placesRouterLink="routerLinkActive"
-            [attr.aria-current]="placesRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="location-on"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@find-atm-branch.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.find-atm-branch"
               >Find ATM or Branch</span
             >
           </a>
@@ -266,82 +241,73 @@
     <li class="bb-layout__vertical-nav-section">
       <div class="bb-layout__vertical-nav-header">
         <bb-header-ui
-          class="bb-inline-stack__item"
+          class="bb-inline-stack__item text-uppercase"
+          heading="Company Administration"
+          i18n-heading="@@layout.nav.header.company"
           headingClasses="bb-layout__vertical-nav-header-title"
           headingType="h3"
-          heading=" COMPANY ADMINISTRATION "
         ></bb-header-ui>
       </div>
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/audit"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Audit"
-            #auditPayRouterLink="routerLinkActive"
-            [attr.aria-current]="auditPayRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="audit"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@audit.nav.item.title">Audit</span>
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.audit">Audit</span>
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/company-permissions"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Company Permissions"
-            #companyPermissionsPayRouterLink="routerLinkActive"
-            [attr.aria-current]="companyPermissionsPayRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="users"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@company-permissions.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.company-permissions"
               >Company Permissions</span
             >
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/service-agreements"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Service Agreements"
-            #serviceAgreementsPayRouterLink="routerLinkActive"
-            [attr.aria-current]="serviceAgreementsPayRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="ballot"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@service-agreements.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.service-agreements"
               >Service Agreements</span
             >
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/legal-entities"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Legal Entities"
-            #legalEntitiesPayRouterLink="routerLinkActive"
-            [attr.aria-current]="legalEntitiesPayRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="domain"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@legal-entities.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.legal-entities"
               >Legal Entities</span
             >
           </a>
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
+            class="bb-layout__vertical-nav-item-link"
             routerLink="/global-restrictions"
             routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
-            aria-label="Global Restrictions"
-            #globalRestrictionsRouterLink="routerLinkActive"
-            [attr.aria-current]="globalRestrictionsRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="apps"></bb-icon-ui>
-            <span class="bb-layout__vertical-nav-item-title" i18n="@@global-restrictions.nav.item.title"
+            <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.global-restrictions"
               >Global Restrictions</span
             >
           </a>
