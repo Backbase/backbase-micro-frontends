@@ -9,8 +9,8 @@
             class="bb-layout__vertical-nav-item-link"
             aria-label="Dashboard"
             i18n-aria-label="Dashboard navigation button aria-label@@dashboard.nav.item.area-label"
-            #accountsRouterLink="routerLinkActive"
-            [attr.aria-current]="accountsRouterLink.isActive ? 'page' : undefined"
+            #dashboardRouterLink="routerLinkActive"
+            [attr.aria-current]="dashboardRouterLink.isActive ? 'page' : undefined"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="dashboard"></bb-icon-ui>
             <span class="bb-layout__vertical-nav-item-title" i18n="@@dashboard.nav.item.title">Dashboard</span>
@@ -31,12 +31,12 @@
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
-            routerLink="/angular12/accounts"
-            routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
             aria-label="Accounts"
-            #accountsRouterLink="routerLinkActive"
-            [attr.aria-current]="accountsRouterLink.isActive ? 'page' : undefined"
+            class="bb-layout__vertical-nav-item-link"
+            href="javascript:void(0)"
+            [attr.aria-current]="isActive('/angular12/accounts') ? 'page' : undefined"
+            [ngClass]="{ 'bb-layout__vertical-nav-item-link--active': isActive('/angular12/accounts') }"
+            (click)="handleNavigation('angular12', '/accounts')"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="accounts"></bb-icon-ui>
             <span class="bb-layout__vertical-nav-item-title" i18n="@@accounts.nav.item.title">Accounts</span>
@@ -70,12 +70,12 @@
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
-            routerLink="/angular12/account-statements"
-            routerLinkActive="bb-layout__vertical-nav-item-link--active"
-            class="bb-layout__vertical-nav-item-link"
             aria-label="Account Statements"
-            #accountStatementsRouterLink="routerLinkActive"
-            [attr.aria-current]="accountStatementsRouterLink.isActive ? 'page' : undefined"
+            class="bb-layout__vertical-nav-item-link"
+            href="javascript:void(0)"
+            [attr.aria-current]="isActive('/angular12/account-statements') ? 'page' : undefined"
+            [ngClass]="{ 'bb-layout__vertical-nav-item-link--active': isActive('/angular12/account-statements') }"
+            (click)="handleNavigation('angular12', '/account-statements')"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="description"></bb-icon-ui>
             <span class="bb-layout__vertical-nav-item-title" i18n="@@account-statements.nav.item.title"
