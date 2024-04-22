@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { AccountStatementBusinessViewComponent } from './account-statement-business-view.component';
 
@@ -9,6 +10,7 @@ describe('AccountStatementBusinessViewComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AccountStatementBusinessViewComponent],
+      imports: [RouterTestingModule],
     }).compileComponents();
   });
 
