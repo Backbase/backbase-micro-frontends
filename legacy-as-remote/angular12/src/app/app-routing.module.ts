@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductSummaryCommon, ProductSummaryUserPermissionsService } from '@backbase/product-summary-common-ang';
 import { ProductSummaryUiModule } from '@backbase/product-summary-ui';
+import { CssVariablesService } from '@backbase/ui-ang/css-variables-lib';
 
 const routes: Routes = [
   {
@@ -26,6 +27,6 @@ const routes: Routes = [
 @NgModule({
   imports: [ProductSummaryCommon, ProductSummaryUiModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [ProductSummaryUserPermissionsService],
+  providers: [CssVariablesService, ProductSummaryUserPermissionsService],
 })
 export class AppRoutingModule {}

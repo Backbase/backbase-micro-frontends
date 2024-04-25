@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ProductSummaryAccountDetailsWidgetModule } from '@backbase/product-summary-account-details-widget-ang';
 import { ProductSummaryAccountPickerModule } from '@backbase/product-summary-account-picker-ang';
 import { ProductSummaryAccountsOverviewModule } from '@backbase/product-summary-accounts-overview-ang';
+import { ProductSummaryBalanceHistoryWidgetModule } from '@backbase/product-summary-balance-history-widget-ang';
 import { ProductSummaryAccountsService } from '@backbase/product-summary-common-ang';
 import { HeaderModule } from '@backbase/ui-ang/header';
 import { accountsJourneyRoutes } from './accounts-journey.routes';
@@ -18,6 +19,7 @@ import { AccountsListViewComponent } from './views/accounts-list-view/accounts-l
     ProductSummaryAccountDetailsWidgetModule,
     ProductSummaryAccountPickerModule,
     ProductSummaryAccountsOverviewModule,
+    ProductSummaryBalanceHistoryWidgetModule,
     RouterModule.forChild(accountsJourneyRoutes),
   ],
   providers: [ProductSummaryAccountsService],
