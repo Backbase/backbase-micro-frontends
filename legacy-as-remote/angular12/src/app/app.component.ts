@@ -1,27 +1,49 @@
-import { connectRouter } from '@angular-architects/module-federation-tools';
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnDestroy {
-  eventName = 'angular12:navigate';
+export class AppComponent implements OnDestroy, OnInit {
   title = 'angular12';
 
-  constructor(private readonly router: Router) {
-    connectRouter(this.router);
-    window.addEventListener(this.eventName, this.navigationHandler as (e: Event) => void, false);
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    // https://stackoverflow.com/a/75354963/706246
+    const { pushState, replaceState } = window.history;
+
+    window.history.pushState = function (...args) {
+      pushState.apply(window.history, args);
+      window.dispatchEvent(new Event('pushState'));
+    };
+
+    window.history.replaceState = function (...args) {
+      replaceState.apply(window.history, args);
+      window.dispatchEvent(new Event('replaceState'));
+    };
+
+    window.addEventListener('popstate', this.navigationHandler as (e: Event) => void, false);
+    window.addEventListener('pushState', this.navigationHandler as (e: Event) => void, false);
+    window.addEventListener('replaceState', this.navigationHandler as (e: Event) => void, false);
+
+    this.navigationHandler();
   }
 
   ngOnDestroy(): void {
-    window.removeEventListener(this.eventName, this.navigationHandler as (e: Event) => void, false);
+    window.removeEventListener('popstate', this.navigationHandler as (e: Event) => void, false);
+    window.removeEventListener('pushState', this.navigationHandler as (e: Event) => void, false);
+    window.removeEventListener('replaceState', this.navigationHandler as (e: Event) => void, false);
   }
 
-  private navigationHandler = (event: CustomEvent): void => {
-    if (event.detail.url) {
-      this.router.navigateByUrl(event.detail.url);
+  private navigationHandler = (): void => {
+    const url = `${location.pathname.substr(1)}${location.search}`;
+    if (url.includes(this.title)) {
+      // Avoid conflicts with the browser navigation
+      setTimeout(() => {
+        this.router.navigateByUrl(url);
+      }, 0);
     }
   };
 }

@@ -6,19 +6,16 @@
  *
  *
  */
-import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
+import {
+  startsWith,
+  WebComponentWrapper,
+  WebComponentWrapperOptions,
+} from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedUserContextGuard } from './shared-user-context/shared-user-context.guard';
-
-const angular14WrapperOptions = {
-  remoteEntry: 'http://localhost:4204/remoteEntry.js',
-  remoteName: 'angular14',
-  exposedModule: './web-components',
-  elementName: 'angular14-element',
-} as WebComponentWrapperOptions;
 
 const routes: Routes = [
   {
@@ -44,6 +41,16 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'accounts',
       },
+      {
+        matcher: startsWith('angular14'),
+        component: WebComponentWrapper,
+        data: {
+          elementName: 'angular14-element',
+          exposedModule: './web-components',
+          remoteEntry: 'http://localhost:4204/remoteEntry.js',
+          remoteName: 'angular14',
+        } as WebComponentWrapperOptions,
+      },
       /**
        * Accounts & Cards
        */
@@ -53,22 +60,6 @@ const routes: Routes = [
           import('./journeys/accounts-journey/accounts-journey.module').then((m) => m.AccountsJourneyModule),
         data: {
           title: $localize`:@@accounts.nav.item.title:Accounts`,
-        },
-      },
-      {
-        path: 'angular14/cards',
-        component: WebComponentWrapper,
-        data: {
-          title: $localize`:@@cards.nav.item.title:Cards`,
-          ...angular14WrapperOptions,
-        },
-      },
-      {
-        path: 'angular14/loans',
-        component: WebComponentWrapper,
-        data: {
-          title: $localize`:@@loans.nav.item.title:Loans`,
-          ...angular14WrapperOptions,
         },
       },
       {

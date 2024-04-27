@@ -29,11 +29,10 @@
       <ul class="bb-layout__vertical-nav">
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
             class="bb-layout__vertical-nav-item-link"
-            href="javascript:void(0)"
-            [attr.aria-current]="isActive('/angular12/accounts') ? 'page' : undefined"
-            [ngClass]="{ 'bb-layout__vertical-nav-item-link--active': isActive('/angular12/accounts') }"
-            (click)="handleNavigation('angular12', '/accounts')"
+            routerLink="/angular12/accounts"
+            routerLinkActive="bb-layout__vertical-nav-item-link--active"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="accounts"></bb-icon-ui>
             <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.accounts">Accounts</span>
@@ -63,11 +62,10 @@
         </li>
         <li class="bb-layout__vertical-nav-item">
           <a
+            ariaCurrentWhenActive="page"
             class="bb-layout__vertical-nav-item-link"
-            href="javascript:void(0)"
-            [attr.aria-current]="isActive('/angular12/account-statements') ? 'page' : undefined"
-            [ngClass]="{ 'bb-layout__vertical-nav-item-link--active': isActive('/angular12/account-statements') }"
-            (click)="handleNavigation('angular12', '/account-statements')"
+            routerLink="/angular12/account-statements"
+            routerLinkActive="bb-layout__vertical-nav-item-link--active"
           >
             <bb-icon-ui class="bb-layout__vertical-nav-item-icon" name="description"></bb-icon-ui>
             <span class="bb-layout__vertical-nav-item-title" i18n="@@nav.item.title.account-statements"

@@ -6,20 +6,16 @@
  *
  *
  */
-import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
+import {
+  startsWith,
+  WebComponentWrapper,
+  WebComponentWrapperOptions,
+} from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { LayoutComponent } from './layout/layout.component';
 import { SharedUserContextGuard } from './shared-user-context/shared-user-context.guard';
-
-const angular12WrapperOptions = {
-  remoteEntry: 'http://localhost:4202/remoteEntry.js',
-  remoteName: 'angular12',
-  exposedModule: './web-components',
-  elementName: 'angular12-element',
-  type: 'script',
-} as WebComponentWrapperOptions;
 
 const routes: Routes = [
   {
@@ -44,6 +40,17 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'dashboard',
       },
+      {
+        matcher: startsWith('angular12'),
+        component: WebComponentWrapper,
+        data: {
+          elementName: 'angular12-element',
+          exposedModule: './web-components',
+          remoteEntry: 'http://localhost:4202/remoteEntry.js',
+          remoteName: 'angular12',
+          type: 'script',
+        } as WebComponentWrapperOptions,
+      },
       /**
        * Dashboard
        */
@@ -58,14 +65,6 @@ const routes: Routes = [
        * Accounts & Cards
        */
       {
-        path: 'angular12/accounts',
-        component: WebComponentWrapper,
-        data: {
-          title: $localize`:@@accounts.nav.item.title:Accounts`,
-          ...angular12WrapperOptions,
-        },
-      },
-      {
         path: 'cards',
         loadChildren: () =>
           import('./journeys/cards-management-journey-bundle.module').then((m) => m.CardsManagementJourneyBundleModule),
@@ -78,14 +77,6 @@ const routes: Routes = [
         loadChildren: () => import('./journeys/loans-journey-bundle.module').then((m) => m.LoansJourneyBundleModule),
         data: {
           title: $localize`:@@loans.nav.item.title:Loans`,
-        },
-      },
-      {
-        path: 'angular12/account-statements',
-        component: WebComponentWrapper,
-        data: {
-          title: $localize`:@@account-statements.nav.item.title:Account Statements`,
-          ...angular12WrapperOptions,
         },
       },
       {
