@@ -6,4 +6,5 @@ export interface Environment {
   baseHref: string;
   apiRoot: string;
   localize?: boolean;
+  mocksEnabled?: boolean;
 }

@@ -18,6 +18,7 @@ export const environment: Environment = {
   landingPageUrl: '/',
   apiRoot: '/api',
   baseHref: '/',
+  mocksEnabled: true,
 };
 
 export const authConfig: (baseUrl: string) => AuthConfig = () => ({

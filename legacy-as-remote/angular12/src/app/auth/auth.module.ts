@@ -36,7 +36,11 @@ export class AuthModule {
     }
   }
 
-  static forRoot(apiRoot: string, authConfig: (baseUrl: string) => AuthConfig): ModuleWithProviders<AuthModule> {
+  static forRoot(
+    apiRoot: string,
+    authConfig: (baseUrl: string) => AuthConfig,
+    mocksEnabled = false,
+  ): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
       providers: [
@@ -60,27 +64,33 @@ export class AuthModule {
             },
           },
         },
-        {
-          provide: APP_INITIALIZER,
-          multi: true,
-          deps: [OAuthService, CookieService, ImpersonationService, AuthEventsHandlerService],
-          useFactory:
-            (oAuthService: OAuthService, cookieService: CookieService, impersonationService: ImpersonationService) =>
-            async () => {
-              // todo: delete when files download works without cookies
-              oAuthService.events.subscribe((authEvent: OAuthEvent) => {
-                if (authEvent.type === 'token_received' || authEvent.type === 'token_refreshed') {
-                  cookiePaths.forEach((path) =>
-                    cookieService.set('Authorization', oAuthService.getAccessToken(), { path }),
-                  );
-                }
-              });
+        mocksEnabled
+          ? []
+          : {
+              provide: APP_INITIALIZER,
+              multi: true,
+              deps: [OAuthService, CookieService, ImpersonationService, AuthEventsHandlerService],
+              useFactory:
+                (
+                  oAuthService: OAuthService,
+                  cookieService: CookieService,
+                  impersonationService: ImpersonationService,
+                ) =>
+                async () => {
+                  // todo: delete when files download works without cookies
+                  oAuthService.events.subscribe((authEvent: OAuthEvent) => {
+                    if (authEvent.type === 'token_received' || authEvent.type === 'token_refreshed') {
+                      cookiePaths.forEach((path) =>
+                        cookieService.set('Authorization', oAuthService.getAccessToken(), { path }),
+                      );
+                    }
+                  });
 
-              await impersonationService.checkImpersonationStatus();
+                  await impersonationService.checkImpersonationStatus();
 
-              await oAuthService.loadDiscoveryDocumentAndTryLogin();
+                  await oAuthService.loadDiscoveryDocumentAndTryLogin();
+                },
             },
-        },
       ],
     };
   }

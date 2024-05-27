@@ -20,7 +20,7 @@ import { AuthModule } from './auth/auth.module';
 export const appModuleImports = [
   AppDataModule,
   AppRoutingModule,
-  AuthModule.forRoot(environment.apiRoot, authConfig),
+  AuthModule.forRoot(environment.apiRoot, authConfig, environment.mocksEnabled),
   EffectsModule.forRoot([]),
   StoreModule.forRoot({}),
 ];
