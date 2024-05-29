@@ -1,0 +1,43 @@
+<div class="bb-layout__topbar" role="banner">
+  <!-- Skip to content -->
+  <button
+    i18n-aria-label="
+      Move focus to beginning of content|Value for aria-label saying that this button will move the focus to the
+      beginning of the content
+    "
+    aria-label="skip to content"
+    class="bb-layout__skip-to-content"
+    (click)="$any($event).view?.window?.document?.querySelector('[role=\'main\']')?.focus()"
+    i18n="
+      Skip to content|Text to enforce the user to click to put focus on the main content
+      section@@bb-layout.topbar.skip_to_content.button"
+  >
+    Skip to Content
+  </button>
+
+  <!-- Hamburger -->
+  <button
+    [attr.aria-expanded]="layoutService.navigationExpanded$ | async"
+    (click)="layoutService.toggleNav()"
+    class="bb-layout__nav-expand-marker"
+    aria-label="Toggle sidebar"
+    i18n-aria-label="Sidebar Toggler|Button for toggling sidebar state@@bb-layout.sidebar_toggler"
+  >
+    <span class="bb-icon"></span>
+  </button>
+
+  <!-- Logo -->
+  <div class="bb-layout__branding-area">
+    <bb-logo-ui type="emblem"></bb-logo-ui>
+  </div>
+
+  <!-- Right Topbar Area -->
+  <div class="bb-layout__topbar-content-area">
+    <div>
+      <!-- Notifications Badge -->
+    </div>
+    <div>
+      <!-- User Context Menu -->
+    </div>
+  </div>
+</div>
