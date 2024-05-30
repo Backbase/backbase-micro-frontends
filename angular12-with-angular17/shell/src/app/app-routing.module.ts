@@ -1,3 +1,4 @@
+import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
@@ -24,6 +25,16 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: 'accounts',
       },
+      {
+        path: 'angular17',
+        component: WebComponentWrapper,
+        data: {
+          elementName: 'angular17-element',
+          exposedModule: './web-components',
+          remoteEntry: 'http://localhost:4207/remoteEntry.js',
+          remoteName: 'angular17',
+        } as WebComponentWrapperOptions,
+      },
       /**
        * Accounts & Cards
        */
@@ -32,13 +43,6 @@ const routes: Routes = [
         children: [],
         data: {
           title: $localize`:@@accounts.nav.item.title:Accounts`,
-        },
-      },
-      {
-        path: 'cards',
-        children: [],
-        data: {
-          title: $localize`:@@cards.nav.item.title:Cards`,
         },
       },
       {
