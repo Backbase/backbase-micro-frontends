@@ -40,6 +40,7 @@ export class AppComponent implements OnDestroy, OnInit {
   private navigationHandler = (): void => {
     const url = `${location.pathname.substr(1)}${location.search}`;
     if (url.includes(this.title)) {
+      // Avoid conflicts with the browser navigation
       setTimeout(() => {
         this.router.navigateByUrl(url);
       }, 0);

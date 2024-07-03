@@ -43,7 +43,7 @@
 								{
 									"type": "initial",
 									"maximumWarning": "500kb",
-									"maximumError": "1mb"
+									"maximumError": "1.5mb"
 								},
 								{
 									"type": "anyComponentStyle",
@@ -79,7 +79,8 @@
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "shell:build:development"
+							"browserTarget": "shell:build:development",
+              "proxyConfig": "proxy.mocks.conf.js"
 						}
 					},
 					"defaultConfiguration": "development",

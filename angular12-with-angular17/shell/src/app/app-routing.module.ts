@@ -40,7 +40,8 @@ const routes: Routes = [
        */
       {
         path: 'accounts',
-        children: [],
+        loadChildren: () =>
+          import('./journeys/accounts-journey/accounts-journey.module').then((m) => m.AccountsJourneyModule),
         data: {
           title: $localize`:@@accounts.nav.item.title:Accounts`,
         },
@@ -54,7 +55,10 @@ const routes: Routes = [
       },
       {
         path: 'account-statements',
-        children: [],
+        loadChildren: () =>
+          import('./journeys/account-statement-business-journey/account-statement-business-journey.module').then(
+            (m) => m.AccountStatementBusinessJourneyModule,
+          ),
         data: {
           title: $localize`:@@account-statements.nav.item.title:Account Statements`,
         },
