@@ -1,4 +1,8 @@
-import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
+import {
+  startsWith,
+  WebComponentWrapper,
+  WebComponentWrapperOptions,
+} from '@angular-architects/module-federation-tools';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
@@ -26,7 +30,7 @@ const routes: Routes = [
         redirectTo: 'accounts',
       },
       {
-        path: 'angular17',
+        matcher: startsWith('angular17'),
         component: WebComponentWrapper,
         data: {
           elementName: 'angular17-element',

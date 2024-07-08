@@ -1,10 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'angular17';
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    // https://stackoverflow.com/a/75354963/706246
+    const { pushState, replaceState } = window.history;
+
+    window.history.pushState = function (...args) {
+      pushState.apply(window.history, args);
+      window.dispatchEvent(new Event('pushState'));
+    };
+
+    window.history.replaceState = function (...args) {
+      replaceState.apply(window.history, args);
+      window.dispatchEvent(new Event('replaceState'));
+    };
+
+    window.addEventListener('popstate', this.navigationHandler as (e: Event) => void, false);
+    window.addEventListener('pushState', this.navigationHandler as (e: Event) => void, false);
+    window.addEventListener('replaceState', this.navigationHandler as (e: Event) => void, false);
+
+    this.navigationHandler();
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('popstate', this.navigationHandler as (e: Event) => void, false);
+    window.removeEventListener('pushState', this.navigationHandler as (e: Event) => void, false);
+    window.removeEventListener('replaceState', this.navigationHandler as (e: Event) => void, false);
+  }
+
+  private navigationHandler = (): void => {
+    const url = `${location.pathname.substr(1)}${location.search}`;
+    if (url.includes(this.title)) {
+      // Avoid conflicts with the browser navigation
+      setTimeout(() => {
+        this.router.navigateByUrl(url);
+      }, 0);
+    }
+  };
 }

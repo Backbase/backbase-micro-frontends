@@ -75,7 +75,8 @@
               "extraWebpackConfig": "webpack.prod.config.js"
             },
             "development": {
-              "buildTarget": "angular17:build:development"
+              "buildTarget": "angular17:build:development",
+              "proxyConfig": "proxy.mocks.conf.js"
             }
           },
           "defaultConfiguration": "development",
