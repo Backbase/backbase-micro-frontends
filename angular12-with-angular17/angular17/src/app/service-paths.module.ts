@@ -1,4 +1,9 @@
 import { InjectionToken, NgModule } from '@angular/core';
+import {
+  LOANS_JOURNEY_LOANS_BASE_PATH,
+  LOANS_JOURNEY_PAYMENT_ORDER_BASE_PATH,
+  LOANS_ACCOUNT_STATEMENT_BASE_PATH,
+} from '@backbase/loans-business-journey';
 import { environment } from '../environments/environment';
 
 export const APP_AUDIT_BASE_PATH = new InjectionToken<string>('ServicePathsModule::APP_AUDIT_BASE_PATH');
@@ -175,6 +180,18 @@ export const APP_DASHBOARD_BASE_PATH = new InjectionToken<string>('ServicePathsM
     {
       provide: APP_LOANS_JOURNEY_BASE_PATH,
       useValue: `${environment.apiRoot}/loan`,
+    },
+    {
+      provide: LOANS_JOURNEY_LOANS_BASE_PATH,
+      useExisting: APP_LOANS_JOURNEY_BASE_PATH,
+    },
+    {
+      provide: LOANS_JOURNEY_PAYMENT_ORDER_BASE_PATH,
+      useExisting: APP_PAYMENT_ORDER_BASE_PATH,
+    },
+    {
+      provide: LOANS_ACCOUNT_STATEMENT_BASE_PATH,
+      useExisting: APP_ACCOUNT_STATEMENT_BASE_PATH,
     },
     //Cards
     {

@@ -1,1 +1,124 @@
 @import '@backbase/backbase-theme-business-preset/scss/main';
+
+.angular17-theme {
+  // Bootstrap 5
+  .form-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .input-group {
+    &:not(.has-validation) {
+      > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
+      > .dropdown-toggle:nth-last-child(n + 3),
+      > .form-floating:not(:last-child) > .form-control,
+      > .form-floating:not(:last-child) > .form-select {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  .visually-hidden {
+    @extend .sr-only;
+  }
+
+  // UI-Ang 10
+  bb-input-password-ui,
+  bb-input-datepicker-ui,
+  bb-search-box-ui {
+    &.ng-touched.ng-invalid {
+      .btn,
+      .btn:not(.disabled):not(:disabled):hover,
+      .btn:not(.disabled):not(:disabled):focus,
+      .btn:not(.disabled):not(:disabled).focus {
+        &:not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(
+          .invalid-feedback
+        ) {
+          border-color: $color-danger;
+        }
+      }
+    }
+  }
+
+  .bb-dropdown-multi-select {
+    &__label {
+      display: inline-block;
+      font-weight: $font-weight-semi-bold;
+    }
+
+    &__toggle {
+      span:last-child {
+        display: flex;
+      }
+    }
+  }
+
+  .bb-manage-cards-details {
+    &__card-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    &__card-overview-container {
+      display: grid;
+      grid-template-columns: 20rem 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .bb-payment-card__type {
+    color: $color-neutral-white;
+    font-size: $font-size-subheader;
+    text-align: center;
+  }
+
+  .btn-on-color {
+    .btn-link-text {
+      background-color: transparent;
+      border-color: $color-primary;
+      color: $color-neutral-white;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border-color: $color-neutral-white;
+      color: $color-neutral-white;
+    }
+  }
+
+  .input-group {
+    > .btn {
+      &:not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        &:not(:last-child),
+        &:not(:first-child) {
+          background-color: $color-neutral-white;
+          border: $input-border-width solid $input-border-color;
+        }
+
+        &:not(:first-child) {
+          border-start-end-radius: 0.5rem;
+          border-end-end-radius: 0.5rem;
+          border-start-start-radius: 0;
+          border-end-start-radius: 0;
+          border-inline-start: none;
+        }
+      }
+    }
+
+    > .form-control[type="text"],
+    > .form-control[type="number"],
+    > .form-control[type="email"],
+    > .form-control[type="password"],
+    > .form-control[type="search"] {
+      &:not(:first-child),
+      &:not(:first-child).ng-invalid.ng-touched {
+        margin-left: -1px;
+      }
+    }
+  }
+}
+
+.modal {
+  z-index: 1055;
+}

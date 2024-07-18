@@ -2,23 +2,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
-import { AppDataModule } from './app-data.module';
-import { AppRoutingModule } from './app-routing.module';
+import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { ServicePathsModule } from './service-paths.module';
-import { SharedAppCoreModule } from './shared-app-core.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    AppDataModule,
-    AppRoutingModule,
-    BrowserModule,
-    HttpClientModule,
-    ServicePathsModule,
-    SharedAppCoreModule.forRoot(environment),
-  ],
+  imports: [BrowserModule, HttpClientModule, ServicePathsModule, ...appModuleImports],
   providers: [],
   bootstrap: [],
 })
