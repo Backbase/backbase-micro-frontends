@@ -8,9 +8,10 @@
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { environment } from '../environments/environment';
+import { authConfig, environment } from '../environments/environment';
 import { AppDataModule } from './app-data.module';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 import { SharedAppCoreModule } from './shared-app-core.module';
 
 /**
@@ -20,6 +21,7 @@ import { SharedAppCoreModule } from './shared-app-core.module';
 export const appModuleImports = [
   AppDataModule,
   AppRoutingModule,
+  AuthModule.forRoot(environment.apiRoot, authConfig, environment.mocksEnabled),
   EffectsModule.forRoot([]),
   SharedAppCoreModule.forRoot(environment),
   StoreModule.forRoot({}),

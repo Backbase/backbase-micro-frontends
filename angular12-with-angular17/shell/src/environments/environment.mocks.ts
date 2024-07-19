@@ -1,7 +1,3 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-
 import { AuthConfig } from 'angular-oauth2-oidc';
 import { Environment } from './type';
 
@@ -18,21 +14,16 @@ export const environment: Environment = {
    */
   animation: false,
 
-  googleApiKey: '${FE_MAPS_API_KEY}',
-  disputeTopicId: '',
-  inquireTopicId: '',
+  googleApiKey: '',
   landingPageUrl: '/',
   apiRoot: '/api',
   baseHref: '/',
-  accountsUseArrangementViewsApi: false,
-  rtcEnabled: true,
-  changeUsernameEnabled: true,
-  versionHeaderName: 'X-App-Version',
+  mocksEnabled: true,
 };
 
 export const authConfig: (baseUrl: string) => AuthConfig = () => ({
   // Url of the Identity Provider
-  issuer: 'https://identity.exp.sdbxaz.azure.backbaseservices.com/auth/realms/customer',
+  issuer: `http://localhost:8180/auth/realms/backbase`,
 
   // URL of the SPA to redirect the user to after login
   redirectUri: document.location.origin + '/select-context',

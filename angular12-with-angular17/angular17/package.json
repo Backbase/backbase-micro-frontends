@@ -7,6 +7,7 @@
     "lint:fix": "ng lint --fix",
     "ng": "ng",
     "start": "ng serve",
+    "start:mocks": "ng serve --configuration=mocks",
     "test": "ng test",
     "watch": "ng build --watch --configuration development"
   },
@@ -30,7 +31,9 @@
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@ng-select/ng-select": "^12.0.7",
     "@ngrx/effects": "~17.1.0",
+    "angular-oauth2-oidc": "^15.0.1",
     "ngx-build-plus": "^17.0.0",
+    "ngx-cookie-service": "^17.1.0",
     "ngx-quill": "^16.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

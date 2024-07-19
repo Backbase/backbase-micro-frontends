@@ -37,7 +37,17 @@
       <!-- Notifications Badge -->
     </div>
     <div>
-      <!-- User Context Menu -->
+      <bb-user-context-menu-widget
+        [closeModalOnSelectSuccess]="false"
+        [hasCardWrap]="false"
+        [includeCurrentContext]="true"
+        [pageSize]="7"
+        [showModalAfter]="3"
+        [showSearchAfter]="5"
+        [showSingleContext]="false"
+        (logout)="userContextService.logout()"
+        (selectContextSuccess)="userContextService.reload()"
+      ></bb-user-context-menu-widget>
     </div>
   </div>
 </div>
