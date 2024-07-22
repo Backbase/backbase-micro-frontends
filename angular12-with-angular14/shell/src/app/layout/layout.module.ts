@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HeaderModule } from '@backbase/ui-ang/header';
 import { IconModule } from '@backbase/ui-ang/icon';
+import { KeyboardClickModule } from '@backbase/ui-ang/keyboard-click-directive';
 import { LogoModule } from '@backbase/ui-ang/logo';
 import { MediaQueryModule } from '@backbase/ui-ang/media-query-lib';
 import { UserContextMenuWidgetModule } from '@backbase/user-context-menu-widget-ang';
@@ -17,6 +18,7 @@ import { TopBarMenuComponent } from './top-bar-menu/top-bar-menu.component';
     CommonModule,
     HeaderModule,
     IconModule,
+    KeyboardClickModule,
     LogoModule,
     MediaQueryModule,
     RouterModule,

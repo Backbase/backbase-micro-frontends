@@ -1,4 +1,4 @@
-# Legacy as shell
+# Angular 12 with Angular 14
 
 Angular 12 shell with widgets and Angular 14 remote with journeys.
 
