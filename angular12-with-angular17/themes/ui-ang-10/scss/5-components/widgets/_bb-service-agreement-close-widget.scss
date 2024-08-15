@@ -1,0 +1,55 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-service-agreement-close-background-color: $color-secondary !default;
+$bb-service-agreement-text-color: $color-neutral-white !default;
+$bb-service-agreement-close-border-radius: $border-radius-md !default;
+$bb-service-agreement-close-height: $page-layout-topbar-height !default;
+
+$layout-vertical-lg-topbar-height: $layout-vertical-topbar-height + 2 * $sizer-lg !default;
+$layout-vertical-md-topbar-height: $layout-vertical-topbar-height + 2 * $sizer-md !default;
+$layout-vertical-sm-topbar-height: $layout-vertical-topbar-height + 2 * $sizer-xs !default;
+
+/// Styles for Service Agreement Close Widget
+///
+/// @name bb-service-agreement-close-widget
+///
+/// @example html
+/// <div class="bb-service-agreement-close">
+///   <div class="bb-service-agreement-close__item bb-stack">
+///     <div class="bb-stack__item">
+///       <bb-icon-ui name="times" backgroundType="circle"></bb-icon-ui>
+///     </div>
+///     <div class="bb-stack__item bb-heading-2">
+///       Manage Service Agreement Some Name
+///     </div>
+///   </div>
+/// </div>
+.bb-service-agreement-close {
+  background-color: $bb-service-agreement-close-background-color;
+}
+
+.bb-service-agreement-close__in-page {
+  border-radius: $bb-service-agreement-close-border-radius;
+}
+
+.bb-service-agreement-close__in-header {
+  height: $layout-vertical-lg-topbar-height;
+
+  @include media-breakpoint-down(lg) {
+    height: $layout-vertical-md-topbar-height;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: $layout-vertical-sm-topbar-height;
+  }
+}
+
+.bb-service-agreement-close__item {
+  padding: $sizer;
+  color: $bb-service-agreement-text-color;
+  height: 100%;
+}

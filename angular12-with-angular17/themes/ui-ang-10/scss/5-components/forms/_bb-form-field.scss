@@ -1,0 +1,48 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$form-field-xl-width: 100% !default;
+$form-field-lg-width: 600px !default;
+$form-field-md-width: 400px !default;
+$form-field-sm-width: 200px !default;
+$form-field-xs-width: 150px !default;
+
+/// Generic class for modifying input widths.
+///
+/// @name bb-form-field
+///
+/// @example html - default
+///   <input class="form-control bb-form-field" />
+///
+/// @example html - size modifiers
+///   <input class="form-control bb-form-field bb-form-field--xl">
+///   <input class="form-control bb-form-field bb-form-field--lg">
+///   <input class="form-control bb-form-field bb-form-field--md">
+///   <input class="form-control bb-form-field bb-form-field--sm">
+///   <input class="form-control bb-form-field bb-form-field--xs">
+.bb-form-field {
+  display: block;
+}
+
+.bb-form-field--xl {
+  max-width: $form-field-xl-width;
+}
+
+.bb-form-field--lg {
+  max-width: $form-field-lg-width;
+}
+
+.bb-form-field--md {
+  max-width: $form-field-md-width;
+}
+
+.bb-form-field--sm {
+  max-width: $form-field-sm-width;
+}
+
+.bb-form-field--xs {
+  max-width: $form-field-xs-width;
+}

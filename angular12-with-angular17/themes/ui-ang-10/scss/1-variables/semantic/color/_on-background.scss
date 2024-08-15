@@ -1,0 +1,49 @@
+////
+/// Colors (global)
+/// @group 1-variables/semantic/color/on-background
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the on-background primary subtle color
+$color-on-background-primary-subtle: $color-light-primary-darkest;
+
+/// Configures the on-background primary color
+$color-on-background-primary: $color-light-primary-on-color;
+
+/// Configures the on-background secondary subtle color
+$color-on-background-secondary-subtle: $color-light-secondary-darkest;
+
+/// Configures the on-background secondary color
+$color-on-background-secondary: $color-light-secondary-on-color;
+
+/// Configures the on-background accent subtle color
+$color-on-background-accent-subtle: $color-light-accent-darkest;
+
+/// Configures the on-background accent color
+$color-on-background-accent: $color-light-accent-on-color;
+
+/// Configures the on-background info subtle color
+$color-on-background-info-subtle: $color-light-info-darkest;
+
+/// Configures the on-background info color
+$color-on-background-info: $color-light-info-on-color;
+
+/// Configures the on-background success subtle color
+$color-on-background-success-subtle: $color-light-success-darkest;
+
+/// Configures the on-background success color
+$color-on-background-success: $color-light-success-on-color;
+
+/// Configures the on-background warning subtle color
+$color-on-background-warning-subtle: $color-light-warning-darkest;
+
+/// Configures the on-background warning color
+$color-on-background-warning: $color-light-warning-on-color;
+
+/// Configures the on-background danger subtle color
+$color-on-background-danger-subtle: $color-light-danger-darkest;
+
+/// Configures the on-background danger color
+$color-on-background-danger: $color-light-danger-on-color;

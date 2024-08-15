@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$a2a-subheader-color: $color-primary !default;
+$a2a-input-text-color: $color-text-support !default;
+
+.bb-a2a-connect-steps__header {
+  display: inline-block;
+  margin-top: $spacer-lg;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
+}
+
+.bb-a2a-connect-step__subheader {
+  color: $a2a-subheader-color;
+}
+
+.bb-a2a-connect-account__input-text {
+  color: $a2a-input-text-color;
+}

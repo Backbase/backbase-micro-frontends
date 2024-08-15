@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/accent
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-accent-lightest: $color-accent-lightest; // #E9FFFF
+$color-light-accent-lighter: $color-accent-lighter; // #96FEFF
+$color-light-accent-default: $color-accent; // #69FEFF
+$color-light-accent-darker: $color-accent-darker; // #4AB2B2
+$color-light-accent-darkest: $color-accent-darkest; // #3A8C8C
+$color-light-accent-on-color: $color-neutral-black;

@@ -1,0 +1,88 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+.bb-phone {
+  display: flex;
+
+  .bb-phone-country-code {
+    &.ng-select {
+      margin-inline-end: $spacer-xs + $spacer-sm;
+
+      &.ng-select-single {
+        .ng-select-container {
+          @extend .form-control;
+          width: 120px;
+          height: 100%;
+          display: flex;
+          padding: 0;
+        }
+
+        &.ng-select-focused {
+          &:not(.ng-select-opened) > .ng-select-container {
+            overflow: visible;
+            box-shadow: $account-selector-focus-box-shadow;
+
+            > .ng-value-container::before {
+              position: absolute;
+              inset: $account-focus-outline-distance;
+              border: $account-focus-border-primary;
+              border-radius: $account-selector-border-radius;
+              content: "";
+            }
+          }
+        }
+      }
+      .ng-dropdown-panel {
+        > .ng-dropdown-panel-items {
+          margin-block-end: $spacer-md;
+        }
+        &.ng-select-bottom {
+          width: 300px;
+          margin-block-start: $spacer-md;
+          border-radius: $spacer-sm;
+        }
+        .ng-dropdown-header {
+          padding-block: ($sizer + $sizer-xs);
+          padding-inline: ($sizer-sm + $sizer-xs);
+          border-bottom: none;
+        }
+
+        .ng-dropdown-panel-items .ng-option {
+          padding-block: $sizer-sm;
+          padding-inline: 0;
+          .dropdown-option-item {
+            display: flex;
+            align-items: baseline;
+            .dropdown-option-item__country-name {
+              color: $color-neutral-dark;
+              white-space: break-spaces;
+              word-wrap: break-word;
+            }
+          }
+          .flag-icon {
+            margin-inline-start: $spacer-sm;
+          }
+          &.ng-option-selected {
+            background-color: $color-neutral-lighter;
+
+            .dropdown-option-item__check-icon {
+              align-self: flex-start;
+            }
+          }
+          &.ng-option-marked {
+            background-color: $color-neutral-lighter;
+            border: $account-focus-border-primary;
+          }
+
+          &.ng-option-disabled {
+            color: $color-neutral-dark;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}

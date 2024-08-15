@@ -1,0 +1,769 @@
+// Global annotations
+////
+/// Mega Menu
+/// @group navigation
+/// @access private
+////
+
+/// By default Mega Menu relies on the background color of the container
+$mega-menu-background-color: transparent !default;
+$mega-menu-color: $color-neutral-black !default;
+$mega-menu-dropdown-background-color: $color-primary !default;
+$mega-menu-dropdown-border-radius: $border-radius !default;
+$mega-menu-dropdown-box-shadow: $box-shadow-md !default;
+$mega-menu-dropdown-color: $color-neutral-white !default;
+$mega-menu-dropdown-zindex: $zindex-fixed + 1 !default;
+$mega-menu-item-icon-spacer: 1ch !default;
+$mega-menu-link-active-background-color: transparent !default;
+$mega-menu-link-active-border-color: $color-primary !default;
+$mega-menu-link-active-color: $color-primary !default;
+$mega-menu-link-background-color: transparent !default;
+$mega-menu-link-border-height: 4px !default;
+$mega-menu-link-color: $mega-menu-color !default;
+$mega-menu-link-hover-background-color: transparent !default;
+$mega-menu-link-hover-border-color: $color-neutral-greyer !default;
+$mega-menu-link-hover-color: $color-neutral-black !default;
+$mega-menu-menubar-height: 4.5rem !default;
+$mega-menu-submenu-column-width: 18.2 * $sizer !default;
+$mega-menu-submenu-header-link-active-background-color: $color-neutral-white !default;
+$mega-menu-submenu-header-link-hover-background-color: $color-neutral-white !default;
+$mega-menu-submenu-link-active-background-color: $color-primary-darkest !default;
+$mega-menu-submenu-link-border-radius: $border-radius-sm !default;
+$mega-menu-submenu-link-color: $color-neutral-white !default;
+$mega-menu-submenu-link-hover-background-color: $color-primary-darker !default;
+$mega-menu-submenu-min-width: 10em !default;
+$mega-menu-submenu-link-focus-outline: 2px !default;
+
+@mixin cxp-only {
+  [data-chrome] {
+    @content;
+  }
+}
+// Mega Menu container
+// Outermost container for the actual menubar as well as loading indicators and other status messages.
+.bb-mega-menu {
+  color: $mega-menu-color;
+  background: $mega-menu-background-color;
+}
+
+// Menubar
+// Implementations can either be horizontal or vertical, depending on the viewport
+// This will typically be a <ul> element
+.bb-mega-menu__items {
+  @include list-unstyled();
+  display: flex;
+}
+
+// Menubar link
+// This class must not be applied to links in the submenu
+// The link has two state modifiers: "expanded" and "active"
+.bb-mega-menu__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $sizer-lg $sizer-md;
+  color: $mega-menu-link-color;
+}
+
+.bb-mega-menu__link,
+.bb-mega-menu__submenu-header,
+.bb-mega-menu__submenu-link {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Menubar link for which the submenu is visible
+// .bb-mega-menu__link--expanded {
+//   color: $mega-menu-link-active-color;
+//   background-color: $mega-menu-link-active-background-color;
+//   border-bottom: $mega-menu-link-border-height solid transparent;
+// }
+
+.bb-mega-menu__expand-marker {
+  display: none;
+}
+
+// The horizontal version of the menu is typically displayed on desktop viewport widths
+@mixin mega-menu-menubar {
+  .bb-mega-menu__items {
+    flex-flow: row nowrap;
+    margin-bottom: 0;
+  }
+
+  .bb-mega-menu__expand-marker--vertical {
+    display: inline-flex;
+    padding-left: $sizer-sm;
+  }
+
+  .bb-mega-menu__item {
+    position: relative;
+  }
+
+  .bb-mega-menu__item--secondary {
+    /* Secondary menu description displayed for screen readers only, expand marker hidden */
+    .bb-mega-menu__item-description {
+      @include sr-only;
+    }
+
+    .bb-mega-menu__expand-marker {
+      display: none;
+    }
+  }
+
+  .bb-mega-menu__item-icon + .bb-mega-menu__item-description {
+    padding-left: $mega-menu-item-icon-spacer;
+  }
+
+  .bb-mega-menu__link {
+    height: $mega-menu-menubar-height;
+
+    @include cxp-only() {
+      // Override the CXP color for `<a>` elements without href using `!important`
+      color: $mega-menu-link-color !important;
+    }
+
+    @include cxp-only {
+      &:hover {
+        // Override the CXP color for `<a>` elements without href using `!important`
+        color: $mega-menu-link-hover-color !important;
+        background-color: $mega-menu-link-hover-background-color;
+      }
+
+      &.bb-mega-menu__link--expanded,
+      &:focus,
+      &:active {
+        // Override the CXP color for `<a>` elements without href using `!important`
+        color: $mega-menu-link-active-color !important;
+        background-color: $mega-menu-link-active-background-color;
+      }
+    }
+
+    white-space: nowrap;
+    background-color: $mega-menu-link-background-color;
+    border-bottom: $mega-menu-link-border-height solid transparent;
+    border-top: $mega-menu-link-border-height solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $mega-menu-link-hover-color;
+      background-color: $mega-menu-link-hover-background-color;
+      border-bottom-color: $mega-menu-link-hover-border-color;
+    }
+
+    &.bb-mega-menu__link--active,
+    &.bb-mega-menu__link--expanded {
+      color: $mega-menu-link-active-color;
+      border-bottom-color: $mega-menu-link-active-border-color;
+    }
+  }
+
+  .bb-mega-menu__submenu {
+    @include mega-menu-dropdown-menu();
+    @include mega-menu-dropdown-snap-to-bottom();
+  }
+
+  @include mega-menu-dropdown-menu-contents();
+
+  .bb-mega-menu__submenu-header {
+    display: none;
+  }
+
+  .bb-mega-menu__column {
+    width: $mega-menu-submenu-column-width;
+  }
+}
+
+// The sidebar version of the menu is typically displayed on smaller viewport widths
+@mixin mega-menu-vertical {
+  .bb-mega-menu__item--secondary {
+    .bb-mega-menu__item-icon {
+      display: none;
+    }
+  }
+
+  .bb-mega-menu__item-description {
+    display: block;
+    width: 100%;
+  }
+
+  .bb-mega-menu__link {
+    justify-content: space-between;
+    padding: $sizer-md $sizer-lg;
+  }
+
+  .bb-mega-menu__item-icon {
+    padding-right: $mega-menu-item-icon-spacer;
+  }
+
+  .bb-mega-menu__items {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    margin: 0;
+    padding-bottom: $sizer-xs;
+  }
+
+  .bb-mega-menu__expand-marker--horizontal {
+    display: inline-flex;
+  }
+
+  // .bb-mega-menu__link {
+  //   margin-right: $spacer-sm;
+  // }
+  /*
+  .page-flex-layout {
+    .bb-mega-menu {
+      position: fixed;
+      min-width: $mega-menu-submenu-column-width;
+    }
+    .bb-mega-menu--sidebar-visible {
+      display: block;
+    }
+    .bb-mega-menu--sidebar-hidden {
+      display: none;
+    }
+	}
+	*/
+}
+
+@mixin mega-menu-vertical-menu-link {
+  display: flex;
+  padding: $sizer-lg $sizer-md;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  &:hover {
+    // reset Bootstrap :hover styles
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin mega-menu-dropdown-menu-link {
+  @include mega-menu-vertical-menu-link();
+
+  color: $mega-menu-submenu-link-color;
+
+  @include cxp-only() {
+    // Override the CXP color for <a> elements without href using !important
+    color: $mega-menu-submenu-link-color !important;
+  }
+
+  font-weight: $font-weight-semi-bold;
+  border-radius: $mega-menu-submenu-link-border-radius;
+
+  &:hover {
+    color: $mega-menu-submenu-link-color;
+    background-color: $mega-menu-submenu-link-hover-background-color;
+  }
+
+  &:focus {
+    color: $mega-menu-submenu-link-color;
+    outline: $color-neutral-white auto $mega-menu-submenu-link-focus-outline;
+  }
+
+  &:active {
+    color: $mega-menu-submenu-link-color;
+    background-color: $mega-menu-submenu-link-active-background-color;
+  }
+}
+
+@mixin mega-menu-dropdown-snap-to-bottom() {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $mega-menu-dropdown-zindex;
+}
+
+@mixin mega-menu-dropdown-menu {
+  z-index: $zindex-popover;
+  padding: $sizer-lg;
+  color: $mega-menu-dropdown-color;
+  background-color: $mega-menu-dropdown-background-color;
+  border-radius: $mega-menu-dropdown-border-radius;
+  box-shadow: $mega-menu-dropdown-box-shadow;
+}
+
+@mixin mega-menu-dropdown-menu-contents {
+  .bb-mega-menu__submenu-header,
+  .bb-mega-menu__submenu-link {
+    @include mega-menu-dropdown-menu-link();
+  }
+}
+
+@mixin mega-menu-overflow-menu {
+  width: $mega-menu-submenu-column-width;
+
+  @include mega-menu-vertical();
+  @include mega-menu-dropdown-menu();
+
+  .bb-mega-menu__link,
+  .bb-mega-menu__submenu-link {
+    @include mega-menu-dropdown-menu-link();
+  }
+}
+
+.bb-mega-menu--menubar {
+  @include mega-menu-menubar;
+}
+
+/// @name bb-mega-menu
+/// @example - menubar
+/// <div class="bb-mega-menu bb-mega-menu--menubar">
+///   <div class="bb-mega-menu__items">
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link bb-mega-menu__link--active" href="#">
+///         <span class="bb-mega-menu__item-description">Item 1</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 2</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 3</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example - hamburger dropdown menu, level 1
+/// <div class="bb-mega-menu bb-mega-menu--overflow-menu bb-mega-menu--submenu-hidden">
+///   <div class="bb-mega-menu__items">
+///     <div class="bb-mega-menu__item">
+///       <div class="bb-mega-menu__header">
+///         <a class="bb-mega-menu__link bb-mega-menu__link--active" href="#">
+///           <span class="bb-mega-menu__item-description">Item 1</span>
+///           <span class="bb-mega-menu__expand-marker"></span>
+///         </a>
+///       </div>
+///       <div class="bb-mega-menu__submenu">
+///         <div class="bb-mega-menu__submenu-items">
+///           <a class="bb-mega-menu__submenu-link" href="#">
+///             <div class="bb-mega-menu__submenu-item-icon"></div>
+///             <div class="bb-mega-menu__submenu-item-label">
+///               <div class="bb-mega-menu__submenu-title">Item 1</div>
+///               <div class="bb-mega-menu__submenu-description">
+///                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+///                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
+///               </div>
+///             </div>
+///           </a>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 2</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 3</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example - hamburger dropdown menu, level 2
+/// <div class="bb-mega-menu bb-mega-menu--overflow-menu bb-mega-menu--submenu-visible">
+///   <div class="bb-mega-menu__items">
+///     <div class="bb-mega-menu__item">
+///       <div class="bb-mega-menu__header">
+///         <a class="bb-mega-menu__link bb-mega-menu__link--active" href="#">
+///           <span class="bb-mega-menu__item-description">Item 1</span>
+///           <span class="bb-mega-menu__expand-marker"></span>
+///         </a>
+///       </div>
+///       <div class="bb-mega-menu__submenu">
+///         <div class="bb-mega-menu__submenu-items">
+///           <a class="bb-mega-menu__submenu-link" href="#">
+///             <div class="bb-mega-menu__submenu-item-icon"></div>
+///             <div class="bb-mega-menu__submenu-item-label">
+///               <div class="bb-mega-menu__submenu-title">Item 1</div>
+///               <div class="bb-mega-menu__submenu-description">
+///                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+///                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
+///               </div>
+///             </div>
+///           </a>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 2</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 3</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example - menubar with secondary menu
+/// <div class="bb-mega-menu bb-mega-menu--menubar">
+///   <div class="bb-mega-menu__items">
+///     <div class="bb-mega-menu__item">
+///       <a class="bb-mega-menu__link bb-mega-menu__link" href="#">
+///         <span class="bb-mega-menu__item-description">Item 1</span>
+///         <span class="bb-mega-menu__expand-marker"></span>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__item bb-mega-menu__item--secondary">
+///       <div class="bb-mega-menu__header">
+///         <a class="bb-mega-menu__link bb-mega-menu__link--active" href="#">
+///           <span class="bb-mega-menu__item-description">More</span>
+///           <span class="bb-mega-menu__expand-marker"></span>
+///         </a>
+///       </div>
+///       <div class="bb-mega-menu__submenu bb-mega-menu__submenu--collapsed">...</div>
+///     </div>
+///   </div>
+/// </div>
+///
+/// Mega Menu Submenu
+///
+/// @example
+/// <div class="bb-mega-menu__submenu">
+///   <div class="bb-mega-menu__submenu-items">
+///     <a class="bb-mega-menu__submenu-link" href="#">
+///       <div class="bb-mega-menu__submenu-item-icon"></div>
+///       <div class="bb-mega-menu__submenu-item-label">
+///         <div class="bb-mega-menu__submenu-title">Item 1</div>
+///         <div class="bb-mega-menu__submenu-description">
+///           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+///           eiusmod tempor incididunt ut labore et dolore magna aliqua.
+///         </div>
+///       </div>
+///     </a>
+///   </div>
+/// </div>
+///
+/// @example - columns
+/// <div class="bb-mega-menu__submenu">
+///   <div class="bb-mega-menu__submenu-items">
+///     <div class="bb-mega-menu__column">
+///       <a class="bb-mega-menu__submenu-link" href="#">
+///         <div class="bb-mega-menu__submenu-item-label">
+///           <div class="bb-mega-menu__submenu-title">Column 1</div>
+///         </div>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__column">
+///       <a class="bb-mega-menu__submenu-link" href="#">
+///         <div class="bb-mega-menu__submenu-item-label">
+///           <div class="bb-mega-menu__submenu-title">Column 2</div>
+///         </div>
+///       </a>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example - sliding panels
+/// <div class="bb-mega-menu__dropdown">
+///   <div class="bb-mega-menu__submenu-items">
+///     <div class="bb-mega-menu__column">
+///       <a class="bb-mega-menu__submenu-link" href="#">
+///         <div class="bb-mega-menu__submenu-item-label">
+///           <div class="bb-mega-menu__submenu-title">Column 1</div>
+///         </div>
+///       </a>
+///     </div>
+///     <div class="bb-mega-menu__column">
+///       <a class="bb-mega-menu__submenu-link" href="#">
+///         <div class="bb-mega-menu__submenu-item-label">
+///           <div class="bb-mega-menu__submenu-title">Column 2</div>
+///         </div>
+///       </a>
+///     </div>
+///   </div>
+/// </div>
+.bb-mega-menu__dropdown {
+  @include mega-menu-dropdown-menu();
+}
+
+.bb-mega-menu__submenu--collapsed {
+  display: none;
+}
+
+// Submenu link
+// These contain styles that are common to all variations of the submenu,
+// specifically the dropdown and the sidebar variants.
+//
+// This will typically be an <a> element.
+.bb-mega-menu__submenu-link {
+  @include mega-menu-vertical-menu-link();
+  justify-content: space-between;
+  min-width: $mega-menu-submenu-min-width;
+  padding: $sizer-md $sizer-lg;
+}
+
+.bb-mega-menu__submenu-item-icon {
+  margin-right: $spacer-sm;
+  vertical-align: top;
+}
+
+.bb-mega-menu__submenu-item-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+// Submenu link title
+// This is the link text, and ideally this fits in one line
+.bb-mega-menu__submenu-title,
+.bb-mega-menu__submenu-description {
+  overflow-wrap: anywhere;
+}
+
+// Submenu link description
+// This element contains a longer description of the link, possible more than one line.
+.bb-mega-menu__submenu-description {
+  font-size: $font-size-sm;
+  line-height: $line-height-base;
+  word-wrap: break-word;
+}
+
+.bb-mega-menu__submenu-items {
+  display: flex;
+}
+
+.bb-mega-menu__submenu-header {
+  display: flex;
+  align-items: center;
+  padding: $sizer-sm $sizer-lg;
+  line-height: $line-height-base;
+  cursor: pointer;
+
+  .bb-mega-menu__submenu--close {
+    margin-right: $spacer-sm;
+  }
+}
+
+// Submenu variant: a dropdown menu below the menubar
+@mixin mega-menu-dropdown {
+  .bb-mega-menu__column {
+    display: flex;
+    flex-direction: column;
+    margin-right: $spacer-md;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Positions the submenu to the bottom of its container
+  .bb-mega-menu__submenu--snap-to-bottom {
+    @include mega-menu-dropdown-snap-to-bottom();
+  }
+
+  // Submenu items
+  .bb-mega-menu__submenu-items {
+    @include list-unstyled();
+    flex-direction: row;
+  }
+
+  .bb-mega-menu__item--expanded {
+    // Ensure the expanded menu is always positioned above any other menus
+    .bb-mega-menu__submenu {
+      z-index: $zindex-popover;
+    }
+
+    .bb-mega-menu__link {
+      z-index: $zindex-popover + 1;
+    }
+  }
+
+  .bb-mega-menu__column--children {
+    margin-left: $spacer-md;
+  }
+}
+
+// Submenu variant: horizontally sliding panels inside a sidebar
+@mixin mega-menu-horizontal-sliding-columns {
+  .bb-mega-menu__column--children {
+    display: flex;
+    justify-content: left;
+    padding: $sizer-sm;
+  }
+
+  // .bb-mega-menu__submenu {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: $zindex-popover;
+  //   padding: $sizer-md 0;
+  // }
+  .bb-mega-menu__submenu-items {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .bb-mega-menu__expand-marker--vertical {
+    // There are two expand-markers in the DOM. Only display the horizontal one.
+    display: none;
+  }
+}
+
+// Optionally animate the sliding panels inside a sidebar
+@mixin mega-menu-horizontal-sliding-columns-animation {
+  &.bb-mega-menu,
+  .bb-mega-menu {
+    overflow-y: auto;
+  }
+
+  .bb-mega-menu__items {
+    position: relative;
+    transition: $motion-duration-default $motion-timing-ease-in-out;
+    transition-property: left;
+  }
+
+  &.bb-mega-menu--submenu-hidden,
+  .bb-mega-menu--submenu-hidden {
+    .bb-mega-menu__items {
+      left: 0;
+    }
+  }
+
+  &.bb-mega-menu--submenu-visible,
+  .bb-mega-menu--submenu-visible {
+    .bb-mega-menu__items {
+      left: -100%;
+    }
+  }
+
+  .bb-mega-menu__submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+  }
+}
+
+.bb-mega-menu--overflow-menu {
+  @include mega-menu-overflow-menu();
+  @include mega-menu-horizontal-sliding-columns();
+  @include mega-menu-horizontal-sliding-columns-animation();
+}
+
+@mixin bb-sidebar() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $mega-menu-dropdown-zindex;
+  width: $mega-menu-submenu-column-width;
+  height: 100vh;
+  margin-top: $mega-menu-menubar-height;
+  // padding-top: ;
+  // padding-right: $sizer-lg;
+  // padding-left: $sizer-lg;
+  background-color: $color-neutral-white;
+  // box-shadow: none;
+  transform: translateX(-100%);
+}
+
+@mixin bb-sidebar--hidden() {
+  display: none;
+}
+
+@mixin bb-sidebar--visible() {
+  box-shadow: $box-shadow-md;
+  transform: translateX(0);
+  // @include box-shadow-with-fallback($box-shadow-md);
+}
+
+// Enable automatic sizing using media queries
+// The break points are opt-in, to make sure they don't interfere with SassDoc examples.
+// This is a modifier that you definitely want to use in the actual bb-mega-menu component.
+.bb-mega-menu--default-breakpoints {
+  @include media-breakpoint-up(xl) {
+    @include mega-menu-menubar;
+  }
+
+  &.bb-mega-menu--mobile-dropdown {
+    @include media-breakpoint-down(xl) {
+      @include mega-menu-overflow-menu();
+      // @include mega-menu-horizontal-sliding-columns();
+      @include mega-menu-horizontal-sliding-columns-animation();
+
+      .bb-topbar__navigation-area & {
+        @include mega-menu-dropdown-snap-to-bottom;
+      }
+      &.bb-mega-menu--submenu-visible,
+      .bb-mega-menu--submenu-visible {
+        .bb-mega-menu__items {
+          left: -100%;
+        }
+      }
+    }
+  }
+
+  &.bb-mega-menu--mobile-sidebar {
+    @include media-breakpoint-down(xl) {
+      @include bb-sidebar();
+      // @include bb-sidebar--hidden();
+      @include bb-sidebar--visible();
+      @include mega-menu-horizontal-sliding-columns-animation();
+      @include mega-menu-vertical();
+
+      .bb-mega-menu__submenu {
+        height: 100%;
+        color: $color-neutral-white;
+        background-color: $color-primary;
+      }
+      .bb-mega-menu__submenu-header,
+      .bb-mega-menu__submenu-link {
+        color: $color-neutral-white;
+
+        &:hover,
+        &:focus {
+          color: $mega-menu-submenu-link-color;
+          background-color: $mega-menu-submenu-link-hover-background-color;
+          outline: none;
+        }
+      }
+      .bb-mega-menu__link {
+        &:hover,
+        &:focus {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    @include mega-menu-horizontal-sliding-columns;
+    @include mega-menu-horizontal-sliding-columns-animation;
+  }
+}
+
+// Inside the Page Layout Container (horizontal navigation type) the Mega Menu
+// should be hidden until the hamburger menu is activated to expand the navigation.
+.bb-page-layout--horizontal-nav {
+  @include media-breakpoint-down(xl) {
+    &.bb-page-layout--nav-collapsed .bb-mega-menu--default-breakpoints {
+      display: none;
+    }
+    &.bb-page-layout--nav-expanded .bb-mega-menu--default-breakpoints {
+      display: block;
+    }
+  }
+}

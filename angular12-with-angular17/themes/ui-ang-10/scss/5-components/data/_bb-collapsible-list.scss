@@ -1,0 +1,79 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+
+$collapsible-list-card-header-background-color: $color-neutral-lightest !default;
+$collapsible-list-card-radius: unset !default;
+$collapsible-list-border: $border !default;
+
+/// Overwrites styles for collapsible card
+///
+/// @name bb-collapsible-list
+///
+/// @example
+///  <bb-collapsible-card-ui class="bb-collapsible-list">
+///    <bb-collapsible-ui class="bb-card">
+///      <div class="bb-card__header">
+///        <div class="bb-stack">
+///          <div class="bb-stack__item">
+///            <div bbCollapsibleTitle>Title</div>
+///          </div>
+///          <bb-icon-ui class="bb-stack__item--push-right"></bb-icon-ui>
+///        </div>
+///      </div>
+///      <div class="collapse show">
+///        <div class="bb-card__body">
+///          <div bbCollapsibleBody>
+///            <ul class="bb-list bb-list--density-none bb-list--infinite">
+///              <li class="bb-list__item">List item 1</li>
+///              <li class="bb-list__item">List item 2</li>
+///            </ul>
+///          </div>
+///        </div>
+///      </div>
+///    </bb-collapsible-ui>
+///  </bb-collapsible-card-ui>
+
+.bb-collapsible-list {
+  .bb-card:not(.bb-card--ignore) {
+    border-radius: $collapsible-list-card-radius;
+
+    .bb-card__header {
+      background-color: $collapsible-list-card-header-background-color;
+      border-bottom: $collapsible-list-border;
+      border-radius: $collapsible-list-card-radius;
+    }
+
+    .collapse,
+    .collapsing {
+      .bb-card__body {
+        padding: 0;
+      }
+    }
+  }
+
+  &:last-of-type {
+    .bb-card:not(.bb-card--ignore) {
+      .bb-card__header {
+        border-bottom: none;
+      }
+
+      .bb-list__item {
+        &:first-child {
+          border-top: $collapsible-list-border;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &.bb-collapsible-list--single:last-of-type
+    .bb-card:not(.bb-card--ignore)
+    .bb-list__item:first-child {
+    border-top: none;
+  }
+}

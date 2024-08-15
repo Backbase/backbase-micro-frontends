@@ -1,0 +1,21 @@
+////
+/// Shadows (global)
+/// @group base
+/// @access private
+////
+
+$box-shadow-sm-size: $box-shadow-sm-offset-x $box-shadow-sm-offset-y $box-shadow-sm-blur-radius
+  $box-shadow-sm-spread-radius;
+$box-shadow-sm: $box-shadow-sm;
+
+$box-shadow-md-size: $box-shadow-md-offset-x $box-shadow-md-offset-y $box-shadow-md-blur-radius
+  $box-shadow-md-spread-radius;
+$box-shadow-md: $box-shadow-md;
+
+$box-shadow-lg-size: $box-shadow-lg-offset-x $box-shadow-lg-offset-y $box-shadow-lg-blur-radius
+  $box-shadow-lg-spread-radius;
+$box-shadow-lg: $box-shadow-lg;
+
+$box-shadow-xl-size: $box-shadow-xl-offset-x $box-shadow-xl-offset-y $box-shadow-xl-blur-radius
+  $box-shadow-xl-spread-radius;
+$box-shadow-xl: $box-shadow-xl;

@@ -1,0 +1,61 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$entitlement-group-container-main-left-border: 1px solid !default;
+$entitlement-group-container-main-item-min-width: 40rem !default;
+$entitlement-group-container-main-payee-max-width: 16rem !default;
+
+/// @name bb-entitlement-group-container
+///
+/// @example html
+/// <div class="bb-entitlement-group-container">
+///   <div class="bb-entitlement-group-container__sidebar">
+///      Main Sidebar Example
+///      <div class="bb-entitlement-group-container__button">Button example.</div>
+///   </div>
+///   <div class="bb-entitlement-group-container__main">
+///     <div class="bb-entitlement-group-container__main__item">
+///       Main View Example
+///     </div>
+///   </div>
+/// </div>
+
+.bb-entitlement-group-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.bb-entitlement-group-container__sidebar {
+  align-self: stretch;
+  width: auto;
+}
+
+.bb-entitlement-group-container__main {
+  width: 100%;
+  padding-top: $sizer-xl;
+  padding-left: $sizer-xl;
+  overflow-x: auto;
+  border-left: $entitlement-group-container-main-left-border $hr-border-color;
+}
+
+.bb-entitlement-group-container__main__item {
+  min-width: $entitlement-group-container-main-item-min-width;
+}
+
+.bb-entitlement-group-container__button {
+  padding: $sizer-xl;
+}
+
+.bb-entitlement-group-container__main__payee {
+  overflow-x: unset;
+  border: 0;
+}
+
+.bb-entitlement-group-container__sidebar__payee {
+  max-width: $entitlement-group-container-main-payee-max-width;
+}

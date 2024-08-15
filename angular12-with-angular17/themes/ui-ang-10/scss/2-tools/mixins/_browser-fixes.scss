@@ -1,0 +1,48 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+// https://css-tricks.com/almanac/properties/a/appearance/
+@mixin appearance-toggle($value: none) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+}
+
+@mixin ms-ie-browsers-only() {
+  // hack for ie11
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin ms-edge-browsers-only() {
+  // hack for edge
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+// css hack for MS browsers only
+@mixin ms-browsers-only() {
+  // hack for ie11
+  @include ms-ie-browsers-only() {
+    @content;
+  }
+
+  // hack for edge
+  @include ms-edge-browsers-only() {
+    @content;
+  }
+}
+
+// css hack for Safari only
+@mixin safari-browsers-only {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      @content;
+    }
+  }
+}

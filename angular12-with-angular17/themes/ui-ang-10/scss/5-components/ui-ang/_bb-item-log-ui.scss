@@ -1,0 +1,159 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$item-log-icon-top-spacer: 0.125 * $spacer !default;
+$item-log-icon-size: 1.5 * $sizer !default;
+$item-log-border-width: 2px !default;
+$item-log-row-height: calc(
+  100% - (#{$item-log-icon-size} - 2 * #{$item-log-icon-top-spacer}) - #{$item-log-border-width}
+) !default;
+$item-log-item-left-position: calc(
+  (#{$item-log-icon-size} / 2) - #{$item-log-border-width * 0.5}
+) !default;
+$item-log-item-top-position: calc(
+  (#{$item-log-icon-size} - #{$item-log-icon-top-spacer}) + #{$item-log-border-width * 0.5}
+) !default;
+$item-log-item-border: $item-log-border-width solid $color-neutral-greyer !default;
+$item-log-pending-item-border: $item-log-border-width dashed $color-neutral-greyer !default;
+$item-log-time-color: $color-text-support !default;
+$item-log-bullet-margin-block-start: $spacer-sm !default;
+$item-log-bullet-border-width: $border-width !default;
+$item-log-bullet-size: calc(#{$sizer-sm} + #{$item-log-bullet-border-width}) !default;
+$item-log-bullet-color: $color-neutral-greyer !default;
+
+%item-log-icon-styles {
+  z-index: 1;
+  margin-inline-end: $spacer-sm;
+}
+
+/// Show a list of approval items.
+///
+/// @name bb-item-log
+///
+/// @example html - approval item log
+///   <div class="bb-item-log">
+///     <div class="bb-item-log__pending-record">
+///       <div class="bb-icon bb-icon--secondary bb-icon-watch-later bb-icon--sm bb-item-log-record__icon"></div>
+///       <div class="bb-item-log__pending-record--details">
+///         Waiting for further approval(s)
+///       </div>
+///     </div>
+///     <div class="bb-item-log__record">
+///       <div class="bb-icon bb-icon--sm bb-icon-cancel bb-icon--danger bb-item-log-record__icon"></div>
+///       <div class="bb-item-log-record__details">
+///         <span class="bb-text-bold">Approved</span>
+///         by John Doe
+///         <div>Jan 22, 2018 at 2:44 PM</div>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-item-log__record,
+.item-log__record {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-block-end: $sizer;
+
+  &::before {
+    position: absolute;
+    inset-block-start: $item-log-item-top-position;
+    inset-inline-start: $item-log-item-left-position;
+    display: inline-block;
+    height: $item-log-row-height;
+    border-inline-start: $item-log-item-border;
+    content: "";
+  }
+
+  &:last-child {
+    padding-block-end: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.bb-item-log-record__time,
+.item-log-record__time {
+  color: $item-log-time-color;
+}
+
+.bb-item-log-record__icon,
+.item-log-record__icon {
+  @extend %item-log-icon-styles;
+  margin-block-start: $item-log-icon-top-spacer;
+}
+
+.bb-item-log__pending-record,
+.item-log__pending-record {
+  @extend .item-log__record;
+
+  &::before {
+    border-inline-start: $item-log-pending-item-border;
+  }
+}
+
+/// <div class="bb-item-log bb-block bb-block--lg">
+///   <div class="bb-item-log__record bb-item-log__record--has-bullet">
+///     <div class="bb-item-log-record__bullet-icon bb-item-log-record__bullet-icon--bg"></div>
+///     <div class="bb-item-log-record__details">
+///       <span class="bb-text-bold">Approved</span>
+///       by John Doe
+///       <div>Jan 22, 2018 at 2:44 PM</div>
+///     </div>
+///   </div>
+///   <div class="bb-item-log__record bb-item-log__record--has-bullet">
+///     <div class="bb-item-log-record__bullet-icon"></div>
+///     <div class="bb-item-log-record__details">
+///       <span class="bb-text-bold">Approved</span>
+///        by John Doe
+///       <div>Jan 22, 2018 at 2:44 PM</div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-item-log-record__bullet-icon {
+  @extend %item-log-icon-styles;
+  width: $item-log-bullet-size;
+  height: $item-log-bullet-size;
+  margin-block-start: calc(
+    #{$item-log-bullet-margin-block-start} - #{$item-log-bullet-border-width}
+  );
+  border: $item-log-bullet-border-width $border-style $item-log-bullet-color;
+  border-radius: $border-radius-circle;
+}
+
+@each $sizeKey, $spacingValue in $spacing-map {
+  /// Sets the spacing between the bullet icon and the content
+  /// @name .bb-item-log-record__bullet-icon--spacing
+  /// @example html
+  ///   <span class="bb-item-log__record bb-item-log__record--has-bullet">
+  ///     <span class="bb-item-log-record__bullet-icon bb-item-log-record__bullet-icon--spacing-md">
+  ///       Tab
+  ///     </span>
+  ///     <span class="bb-item-log-record__bullet-icon bb-item-log-record__bullet-icon--spacing-md">
+  ///       Tab
+  ///     </span>
+  ///   </span>
+  .bb-item-log-record__bullet-icon--spacing-#{$sizeKey} {
+    margin-inline-end: $spacingValue;
+  }
+}
+
+.bb-item-log-record__bullet-icon--filled {
+  background-color: $item-log-bullet-color;
+}
+
+.bb-item-log__record--has-bullet,
+.item-log__record--has-bullet {
+  &::before {
+    inset-block-start: calc((#{$item-log-bullet-size} - #{$item-log-bullet-border-width}) * 2);
+    inset-inline-start: calc((#{$item-log-bullet-size} - #{$item-log-bullet-border-width}) / 2);
+    height: calc(100% - #{$item-log-bullet-size});
+    border-inline-start: $item-log-bullet-border-width $border-style $item-log-bullet-color;
+  }
+}

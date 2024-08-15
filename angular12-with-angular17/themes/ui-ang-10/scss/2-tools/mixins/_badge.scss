@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+// Extension from Bootstrap Badge's solid bgd badge-variant
+@mixin badge-outline-variant($color) {
+  color: $color;
+  border-color: $color;
+
+  &[href] {
+    &:hover,
+    &:focus {
+      color: darken($color, 10%);
+      text-decoration: none;
+      background-color: transparent;
+      border-color: darken($color, 10%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for Payee Group Pagination
+/// Overrides bootstrap pagination styles to make elements be transparent
+///
+/// @name bb-payee-group-pagination
+///
+/// @example html
+///<bb-pagination-ui class="bb-payee-group-pagination bb-payee-group-pagination--transparent">
+// </bb-pagination-ui>
+
+.bb-payee-group-pagination--transparent .page-link,
+.bb-payee-group-pagination--transparent .page-item.disabled .page-link {
+  background-color: transparent;
+}

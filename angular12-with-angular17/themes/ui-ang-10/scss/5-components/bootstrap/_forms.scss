@@ -1,0 +1,26 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+@import "../../../../bootstrap5/scss/forms";
+
+@include form-validation-state-nested-override("valid", $form-feedback-valid-color);
+@include form-validation-state-nested-override("invalid", $form-feedback-invalid-color);
+
+.form-control[type="text"],
+.form-control[type="number"],
+.form-control[type="email"],
+.form-control[type="password"],
+.form-control[type="tel"],
+.form-control[type="search"] {
+  &:focus {
+    border-color: $input-border-color;
+    border-style: $input-focus-border-style;
+    border-width: $input-focus-border-width;
+    outline: $form-focus-border-primary;
+    outline-offset: $form-focus-outline-distance;
+    box-shadow: $form-focus-box-shadow;
+  }
+}

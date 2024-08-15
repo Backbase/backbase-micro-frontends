@@ -1,0 +1,28 @@
+////
+/// z-index layering (global)
+///
+/// These variable names are the same as in Bootstrap.
+/// The values defined here apply to Bootstrap as well.
+////
+////
+/// @group base, css
+/// @access private
+////
+
+:root {
+  --zindex-dropdown: #{$zindex-dropdown};
+  --zindex-sticky: #{$zindex-sticky};
+  --zindex-fixed: #{$zindex-fixed};
+  --zindex-modal: #{$zindex-modal};
+  --zindex-modal: #{$zindex-modal};
+  --zindex-popover: #{$zindex-popover};
+  --zindex-tooltip: #{$zindex-tooltip};
+}
+
+$zindex-dropdown: var(--zindex-dropdown);
+$zindex-sticky: var(--zindex-sticky);
+$zindex-fixed: var(--zindex-fixed);
+$zindex-modal-backdrop: var(--zindex-modal-backdrop);
+$zindex-modal: var(--zindex-modal);
+$zindex-popover: var(--zindex-popover);
+$zindex-tooltip: var(--zindex-tooltip);

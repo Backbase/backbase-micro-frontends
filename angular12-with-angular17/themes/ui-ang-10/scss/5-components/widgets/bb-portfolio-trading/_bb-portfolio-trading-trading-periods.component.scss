@@ -1,0 +1,18 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-trading-periods-button-bar {
+  justify-content: flex-end;
+
+  .bb-trading-periods-button-bar__button {
+    border-radius: $border-radius-xs;
+    padding: 4px 11px;
+    margin: 5px 25px;
+    &:focus::before {
+      border-radius: $border-radius-xs;
+    }
+  }
+}

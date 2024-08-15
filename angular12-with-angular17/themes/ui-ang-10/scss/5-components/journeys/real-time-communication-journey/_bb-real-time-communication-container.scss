@@ -1,0 +1,186 @@
+$bb-rtc-chat-container-height: 83.5vh !default;
+$bb-rtc-chat-container-max-height: 47rem !default;
+$bb-rtc-chat-container-width: 24.938rem !default;
+$bb-rtc-chat-retry-load-button-border-top-width: 5 * $border-width !default;
+$bb-rtc-chat-retry-load-button-border-bottom-width: 6 * $border-width !default;
+$bb-rtc-chat-retry-load-button-padding-top: 2.5 * $spacer !default;
+$bb-rtc-chat-new-message-prompt-bottom: 3.125rem !default;
+$bb-rtc-empty-state-message-width: 15.938rem !default;
+$bb-rtc-conversation-margin-bottom: 7 * $spacer !default;
+$bb-rtc-chat-unread-count-margin-left: 0.875rem !default;
+$bb-rtc-conversation-mobile-view-width: 23.438rem !default;
+$bb-rtc-conversation-mobile-view-height: 41.688rem !default;
+$bb-rtc-minimize-section-mobile-view-height: 4.5rem !default;
+
+/// @example html
+/// <div class="bb-rtc-chat-container">
+///  <div class="bb-rtc-conversation bb-stack__item--push-right">
+///   <bb-retail-chat-conversation-layout>RTC chat window</bb-retail-chat-conversation-layout>
+///  </div>
+/// </div>
+///
+.bb-rtc-chat-container {
+  position: fixed;
+  inset-inline-end: 2rem;
+  bottom: 0;
+  width: 4.125rem;
+  z-index: $zindex-modal;
+
+  @include media-breakpoint-down(sm) {
+    inset-inline-end: 0;
+  }
+  .chat-button {
+    margin-block-end: 2 * $spacer;
+    @include media-breakpoint-between(md, xxl) {
+      margin-bottom: 0.5 * $spacer;
+    }
+  }
+}
+
+.bb-rtc-conversation {
+  padding: 0 $spacer-sm;
+  width: $bb-rtc-chat-container-width;
+  height: $bb-rtc-chat-container-height;
+  background-color: $color-neutral-grey;
+  border-radius: $border-radius-sm;
+  margin-bottom: $bb-rtc-conversation-margin-bottom;
+  max-height: $bb-rtc-chat-container-max-height;
+
+  .bb-state-container {
+    height: 100%;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: $bb-rtc-conversation-mobile-view-width;
+    height: $bb-rtc-conversation-mobile-view-height;
+    z-index: $zindex-modal;
+    padding: 0;
+    border-radius: $border-radius-none;
+    margin: 0;
+    margin-right: auto;
+  }
+  @include media-breakpoint-between(md, xxl) {
+    margin-bottom: 5 * $spacer;
+    height: 80.5vh;
+  }
+}
+
+.bb-rtc-web-view-hide {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+/// @example html
+///  <div class="bb-rtc-conversation bb-stack__item--push-right">
+///   <bb-loading-indicator-ui class="bb-state-container" data-role="change-status-loading-indicator">Empty State UI</bb-loading-indicator-ui>
+///   <div class="bb-rtc-chat-loader">
+//      <bb-empty-state-ui>
+//      <div class="bb-empty-state"><p data-role="empty-state-message" class="bb-empty-state__message">some text</p></div>
+//      </bb-empty-state-ui>
+//     <button class="bb-retry-button btn-primary btn-md btn" data-role="conversation-list-retry-load-tasks-button">
+//      </div>
+///  </div>
+
+.bb-rtc-chat-loader {
+  background-color: $background-color-neutral;
+  border-top: $bb-rtc-chat-retry-load-button-border-top-width $border-style $border-color;
+  border-bottom: $bb-rtc-chat-retry-load-button-border-bottom-width $border-style
+    $color-neutral-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $bb-rtc-chat-retry-load-button-padding-top 0;
+  height: 100%;
+  justify-content: center;
+
+  .bb-empty-state {
+    .bb-empty-state__message {
+      width: $bb-rtc-empty-state-message-width;
+    }
+  }
+
+  .bb-retry-button {
+    margin-top: $spacer-md;
+  }
+  @include media-breakpoint-down(sm) {
+    background-color: $color-neutral-light;
+  }
+  .bb-rtc-conversation-panel-header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    background-color: $color-neutral-light;
+    border-bottom: none;
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}
+
+.bb-rtc-conversation-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bb-rtc-conversation-panel__top {
+    min-height: $spacer-xl;
+    height: 100%;
+    position: relative;
+
+    .bb-rtc-conversation-panel__new-message-prompt {
+      bottom: $bb-rtc-chat-new-message-prompt-bottom;
+      text-align: center;
+      position: relative;
+    }
+
+    .bb-rtc-conversation-panel__topics {
+      position: absolute;
+      inset-inline-end: $spacer;
+      inset-block-end: $spacer-sm;
+      text-align: end;
+    }
+  }
+}
+
+.bb-rtc-minimize-section-mobile-view {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacer-xl;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    height: $bb-rtc-minimize-section-mobile-view-height;
+    background: $color-neutral-light;
+    box-shadow: $box-shadow-md;
+    margin-bottom: 0;
+  }
+
+  .bb-rtc-minimize-section-text {
+    padding: $spacer-lg 0;
+    display: flex;
+    margin: inherit;
+  }
+
+  .bb-rtc-live-chat-text {
+    font-weight: $font-weight-semi-bold;
+    margin-inline-end: $spacer-sm;
+  }
+
+  .bb-rtc-minimize-section-unread-counter {
+    position: inherit;
+    margin-inline-start: $bb-rtc-chat-unread-count-margin-left;
+  }
+}
+
+.bb-rtc-live-chat-submenu-item {
+  cursor: pointer;
+}

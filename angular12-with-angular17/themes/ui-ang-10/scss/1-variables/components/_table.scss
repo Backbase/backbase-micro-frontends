@@ -1,0 +1,25 @@
+////
+/// Tables (global)
+/// @group 1-variables/components/table
+/// @access public
+////
+
+/// Configures the default padding of table cells
+/// @require {variable} $sizer-sm
+$table-cell-padding-horizontal: $sizer-sm !default;
+
+/// Configures the default padding of table cells
+/// @require {variable} $sizer-sm
+$table-cell-padding-vertical: $sizer-sm !default;
+
+/// Configures the default horizontal padding of table headers
+/// @require {variable} $sizer-md
+$table-heading-padding-horizontal: $sizer-md !default;
+
+/// Configures the default vertical padding of table headers
+/// @require {variable} $sizer-md
+$table-heading-padding-vertical: $sizer-md !default;
+
+/// Configures the font size for tables. Defaults to $font-size-table-default
+/// @require {variable} $font-size-table-default
+$table-font-size: $font-size-table-default !default;

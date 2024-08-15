@@ -1,0 +1,138 @@
+// Global annotations
+////
+/// @group 5-components/structure/layout/bb-layout
+/// @access public
+////
+
+$layout-background-color: $background-color-neutral !default;
+$layout-padding-horizontal: $sizer-sm !default;
+$layout-topbar-background-color: $color-neutral-white !default;
+$layout-section-padding: $sizer-xl !default;
+$layout-section-padding-narrow: $sizer-lg !default;
+$layout-topbar-branding-area-img-height: $sizer-lg !default;
+$layout-nav-expand-marker-color: $color-neutral-black !default;
+
+$layout-text-color: $color-neutral-black !default;
+$layout-topbar-gradient-start-color: $color-primary !default;
+$layout-topbar-gradient-end-color: $color-neutral-lightest !default;
+$layout-topbar-gradient-angle: $gradient-angle-2 !default;
+
+$layout-horizontal-topbar-gradient: linear-gradient(
+  $layout-topbar-gradient-angle,
+  $layout-topbar-gradient-start-color,
+  $layout-topbar-gradient-end-color
+);
+//By default background color is white , it can be changed to any solid color or to gradient with $layout-horizontal-topbar-gradient variable.
+$layout-horizontal-background: $color-neutral-white !default;
+
+//new variable for background of the dropdown, it can be changed to $layout-horizontal-background for applying new background
+$layout-horizontal-nav-dropdown-background: $color-primary !default;
+
+//new variable for text color for dropdown, it can be changed to $layout-text-color for apply new test color
+$layout-horizontal-nav-submenu-text-color: $color-neutral-white !default;
+
+/// @name bb-layout
+/// @example expanded navigation layout
+/// <div class="bb-layout bb-layout--nav-expanded">
+/// </div>
+///
+/// @example The navigation menu is expanded by default if the screen resolution is above the Layout collapseBreakpoint
+/// <div class="bb-layout bb-layout--high-resolution-view">
+/// </div>
+
+.bb-layout {
+  min-height: 100vh;
+  padding-block-start: $layout-topbar-height;
+  background-color: $layout-background-color;
+
+  .bb-layout__topbar {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    display: flex;
+  }
+}
+
+.bb-layout__topbar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  height: $layout-topbar-height;
+  padding-inline: $layout-padding-horizontal;
+  background-color: $layout-topbar-background-color;
+
+  .bb-layout__skip-to-content {
+    height: 100%;
+  }
+}
+
+.bb-layout__main-content-header {
+  width: 100%;
+}
+
+.bb-layout__main-content-area {
+  width: 100%;
+}
+
+.bb-layout__skip-to-content {
+  &:focus {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 9999;
+    padding: $sizer-sm;
+  }
+  &:not(:focus) {
+    @include sr-only;
+  }
+}
+
+.bb-layout__nav-backdrop {
+  position: fixed;
+  inset-block-start: $layout-topbar-height;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-neutral-black;
+  opacity: 0.5;
+}
+
+.bb-layout__nav-expand-marker {
+  // `padding` is same as `.bb-navigation-item__link` to align hamburger item and menu icon
+  padding: $sizer-md;
+  line-height: 0.5;
+  background: transparent;
+  border: none;
+
+  .bb-icon {
+    color: $layout-nav-expand-marker-color;
+    line-height: 0.7;
+    &:before {
+      content: "menu";
+    }
+  }
+}
+
+.bb-layout__branding-area {
+  display: flex;
+  align-items: center;
+
+  // TODO: this shouldn't be here, but the img should have dimensions instead
+  img {
+    display: block;
+    height: $layout-topbar-branding-area-img-height;
+  }
+}
+
+.bb-layout__topbar-content-area {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+
+  @include media-breakpoint-down(md) {
+    margin-inline-end: $spacer-md;
+  }
+}

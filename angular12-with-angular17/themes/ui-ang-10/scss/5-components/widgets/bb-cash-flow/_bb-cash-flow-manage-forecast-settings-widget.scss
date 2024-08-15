@@ -1,0 +1,109 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cash-flow-manage-forecast-settings-widget-max-width: 48.5 * $sizer !default;
+$cash-flow-manage-forecast-settings-accounting-platform-logo-width: 4 * $sizer !default;
+$cash-flow-manage-forecast-settings-accounting-platform-logo-height: 4 * $sizer !default;
+$cash-flow-manage-forecast-settings-accounting-platform-logo-border-radius: $border-radius-circle !default;
+$cash-flow-manage-forecast-settings-accounting-platform-name-font-size: $font-size-highlight !default;
+$cash-flow-manage-forecast-settings-accounting-platform-name-font-weight: $font-weight-semi-bold !default;
+$cash-flow-manage-forecast-settings-widget-initial-setup-state-container-background-color: $color-neutral-lightest !default;
+$cash-flow-manage-forecast-settings-widget-initial-setup-state-container-border-radius: $border-radius-sm !default;
+
+$cash-flow-manage-forecast-settings-currency-code-background-color: $color-neutral-lightest !default;
+$cash-flow-manage-forecast-settings-currency-code-border-radius: $border-radius-sm !default;
+
+/// Styles for Cash Flow Manage Forecast Settings Widget
+///
+/// @name bb-cash-flow-manage-forecast-settings-widget-ang
+///
+/// <div class="card cash-flow-manage-forecast-settings-widget">
+///   <div class="bb-block bb-block--xl">
+///     <div class="bb-block bb-block--md">
+///       <bb-header-ui heading="Forecasting settings"
+///                     i18n-heading="Forecast settings header@@settings.forecast.header"
+///                     headingType="h2">
+///       </bb-header-ui>
+///     </div>
+///     <bb-cash-flow-forecast-settings-initial class="cash-flow-manage-forecast-settings-widget__initial-setup"></bb-cash-flow-forecast-settings-initial>
+///   </div>
+///   <div class="bb-block bb-block--md">
+///     <bb-header-ui heading="Connected software"
+///                   i18n-heading="Connected software header@@settings.connected-software.header"
+///                   headingType="h2">
+///     </bb-header-ui>
+///   </div>
+///   <div class="bb-stack cash-flow-manage-forecast-settings-accounting-platform">
+///     <img class="cash-flow-manage-forecast-settings-accounting-platform__logo"/>
+///     <div class="cash-flow-manage-forecast-settings-accounting-platform__name">...</div>
+///   </div>
+/// </div>
+
+.cash-flow-manage-forecast-settings-widget {
+  max-width: $cash-flow-manage-forecast-settings-widget-max-width;
+  margin: 0 auto;
+}
+
+.cash-flow-manage-forecast-settings-widget__initial-setup .bb-state-container {
+  padding: $sizer-xl 0;
+  background-color: $cash-flow-manage-forecast-settings-widget-initial-setup-state-container-background-color;
+  border-radius: $cash-flow-manage-forecast-settings-widget-initial-setup-state-container-border-radius;
+}
+
+.cash-flow-manage-forecast-settings-accounting-platform {
+  display: flex;
+  align-items: center;
+  padding: $sizer-md 0;
+}
+
+.cash-flow-manage-forecast-settings-accounting-platform__logo {
+  width: $cash-flow-manage-forecast-settings-accounting-platform-logo-width;
+  height: $cash-flow-manage-forecast-settings-accounting-platform-logo-height;
+  margin-right: $spacer-lg;
+  border-radius: $cash-flow-manage-forecast-settings-accounting-platform-logo-border-radius;
+}
+
+.cash-flow-manage-forecast-settings-accounting-platform__name {
+  font-weight: $cash-flow-manage-forecast-settings-accounting-platform-name-font-weight;
+  font-size: $cash-flow-manage-forecast-settings-accounting-platform-name-font-size;
+}
+
+// Forecast configuration
+
+.bb-cash-flow-forecast-settings-currency__code {
+  padding: $sizer-sm $sizer-md;
+  background-color: $cash-flow-manage-forecast-settings-currency-code-background-color;
+  border-radius: $cash-flow-manage-forecast-settings-currency-code-border-radius;
+  border: 1px solid $color-neutral-grey;
+}
+
+.bb-cash-flow-forecast-settings-button {
+  padding-left: $sizer-md;
+  padding-right: $sizer-md;
+}
+
+.bb-cash-flow-forecast-settings-button__label {
+  margin-left: $spacer-xs;
+}
+
+@include media-breakpoint-down(sm) {
+  .bb-cash-flow-forecast-settings-currency {
+    flex-wrap: wrap;
+  }
+
+  .bb-cash-flow-forecast-settings-currency__description {
+    order: 3;
+    margin-top: $spacer-md;
+  }
+
+  .bb-cash-flow-forecast-settings-button__label-suffix {
+    display: none;
+  }
+}
+
+.bb-cash-flow-forecast-settings__description {
+  color: $color-neutral-dark;
+}

@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+////
+
+$accessgroup-pending-icon-size: $sizer-xl !default;
+$accessgroup-pending-icon-size-sm: $sizer-lg !default;
+$accessgroup-pending-icon-bg-color: $color-warning !default;
+
+/// Styles for @backbase/accessgroup-shared-ui (Entitlements) - Pending icon Component
+/// This component shows visually that item is in pending state, waiting for approval
+/// This icon will be used across all the entitlements capabilities for job roles, account groups, etc.
+///
+/// @name bb-accessgroup-pending-icon
+///
+/// @example html
+/// <bb-pending-icon>
+///   <div class="bb-inline-stack bb-text-align-center bb-accessgroup-pending-icon bb-accessgroup-pending-icon--sm">
+///     <bb-icon-ui size="sm" name="authorizations">
+///       <em role="img" class="bb-icon bb-icon-authorizations bb-icon--sm"></em>
+///     </bb-icon-ui>
+///   </div>
+/// </bb-pending-icon>
+
+.bb-accessgroup-pending-icon {
+  border-radius: 50%;
+  justify-content: center;
+  background-color: $accessgroup-pending-icon-bg-color;
+  width: $accessgroup-pending-icon-size;
+  height: $accessgroup-pending-icon-size;
+}
+
+.bb-accessgroup-pending-icon--sm {
+  width: $accessgroup-pending-icon-size-sm;
+  height: $accessgroup-pending-icon-size-sm;
+}

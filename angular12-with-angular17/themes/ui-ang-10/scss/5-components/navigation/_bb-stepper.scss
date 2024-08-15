@@ -1,0 +1,223 @@
+// Global annotations
+////
+/// @group navigation
+/// @access private
+////
+
+$stepper-separator-height: 2px !default;
+$stepper-separator-background-color: $color-neutral-grey !default;
+
+$step-icon-size: $sizer-lg !default;
+$step-icon-size-sub-step: $sizer-lg * 0.34 !default;
+$step-icon-line-height: 1 !default;
+$step-icon-line-vertical-width: 2px !default;
+$step-icon-line-vertical-height: $step-icon-size * 1.3333 !default;
+$step-icon-color: $color-neutral-black !default;
+$step-icon-background-color: $color-neutral-grey !default;
+$step-icon-font-weight: $font-weight-semi-bold !default;
+$step-icon-font-size: $font-size-subtitle !default;
+$step-icon-checked-color: $chart-positive-color !default;
+$step-icon-active-color: $color-neutral-white !default;
+$step-icon-active-background-color: $color-primary !default;
+
+$step-label-color: $color-neutral-darker !default;
+$step-label-font-weight: $font-weight-regular !default;
+$step-label-font-size: $font-size-subtitle !default;
+$step-label-active-color: $color-neutral-darker !default;
+$step-label-active-font-weight: $font-weight-semi-bold !default;
+//stepper
+
+.bb-stepper {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: $sizer-md;
+}
+
+.bb-stepper--reset-padding {
+  .bb-stepper {
+    padding: 0;
+  }
+}
+
+.bb-stepper--vertical {
+  .bb-stepper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bb-stepper__separator {
+    margin: 0;
+  }
+
+  .bb-step__state-label {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding-top: $spacer-xs;
+    color: $step-label-color;
+    font-weight: normal;
+    font-size: $step-label-font-size * 0.85;
+  }
+
+  .bb-step__icon {
+    align-self: flex-start;
+  }
+
+  .bb-step {
+    padding-bottom: $spacer * 2.3;
+    background-image: linear-gradient(
+      to right,
+      $stepper-separator-background-color,
+      $stepper-separator-background-color 2px,
+      transparent 1px,
+      transparent 1px
+    );
+    background-repeat: no-repeat;
+    background-position: calc(#{$step-icon-size * 0.5} - #{$step-icon-line-vertical-width * 0.5})
+      calc(#{$step-icon-size} + #{$step-icon-line-vertical-width});
+
+    &.bb-step--child,
+    &.bb-step--last {
+      padding-bottom: 0;
+      background-image: none;
+    }
+    &.bb-step--container {
+      padding-bottom: $spacer * 0.3;
+      background-image: none;
+    }
+  }
+
+  .bb-step--child {
+    margin-bottom: $step-icon-size-sub-step * 0.6;
+
+    &.bb-step--last {
+      margin-bottom: 0;
+      padding-bottom: $spacer * 0.9;
+      background: linear-gradient(
+        to right,
+        $stepper-separator-background-color,
+        $stepper-separator-background-color 2px,
+        transparent 1px,
+        transparent 1px
+      );
+      background-repeat: no-repeat;
+      background-position: calc(#{$step-icon-size * 0.5} - #{$step-icon-line-vertical-width * 0.5})
+        calc(#{$step-icon-size-sub-step * 2} + #{$step-icon-line-vertical-width});
+    }
+
+    .bb-step__label {
+      font-weight: $step-label-font-weight;
+    }
+
+    &.bb-step--current {
+      .bb-step__label {
+        font-weight: $step-label-active-font-weight;
+        color: $step-label-active-color;
+      }
+    }
+
+    .bb-step__icon {
+      width: $step-icon-size-sub-step;
+      height: $step-icon-size-sub-step;
+      margin: $step-icon-size-sub-step;
+    }
+
+    bb-icon-ui {
+      &[name="check"] {
+        & .bb-icon:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.bb-stepper__separator {
+  flex-grow: 1;
+  max-width: 100%;
+  height: $stepper-separator-height;
+  margin: $spacer-sm * 0.4;
+  padding: 0;
+  background-color: $stepper-separator-background-color;
+}
+
+//step
+
+.bb-step {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: inherit;
+
+    .bb-step__state-label {
+      color: $step-icon-active-background-color;
+    }
+
+    &:hover {
+      color: $step-icon-active-background-color;
+      text-decoration: none;
+    }
+  }
+
+  bb-icon-ui {
+    &[name="check"] {
+      width: 100%;
+      height: 100%;
+      background: $step-icon-checked-color;
+      border-radius: 100%;
+      .bb-icon {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.bb-step--active {
+  .bb-step__icon {
+    color: $step-icon-active-color;
+    background-color: $step-icon-active-background-color;
+  }
+  .bb-step__label {
+    color: $step-label-active-color;
+  }
+}
+
+.bb-step--current {
+  .bb-step__label {
+    color: $step-icon-active-background-color;
+  }
+}
+
+.bb-step__icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: $step-icon-size;
+  height: $step-icon-size;
+  color: $step-icon-color;
+  font-weight: $step-icon-font-weight;
+  font-size: $step-icon-font-size;
+  line-height: $step-icon-line-height;
+  background-color: $step-icon-background-color;
+  border-radius: $border-radius-circle;
+}
+
+.bb-step__label {
+  margin-inline-start: $spacer-sm;
+  color: $step-label-color;
+  font-weight: $step-label-active-font-weight;
+  font-size: $step-label-font-size;
+
+  @include media-breakpoint-down(sm) {
+    @include text-truncate();
+
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: none;
+  }
+}

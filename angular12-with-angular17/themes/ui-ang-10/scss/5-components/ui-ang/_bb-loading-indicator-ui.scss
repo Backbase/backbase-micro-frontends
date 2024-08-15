@@ -1,0 +1,110 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$loading-overlay-cover-zindex: 1035 !default;
+$loading-overlay-spinner-zindex: 1037 !default;
+$loading-overlay-spinner-size: 5rem !default;
+$loading-overlay-cover-background: $color-neutral-light !default;
+$loading-overlay-cover-overlay-background: rgba($color-neutral-white, 0.6) !default;
+$loading-overlay-cover-opacity: 0.6 !default;
+
+$loading-indicator-container-width: 20rem !default;
+$loading-indicator-size-base: $sizer-md !default;
+$loading-indicator-stroke-width-base: 2 !default;
+$loading-indicator-sm-size: $loading-indicator-size-base !default;
+$loading-indicator-sm-stroke-width: $loading-indicator-stroke-width-base !default;
+$loading-indicator-md-size: $loading-indicator-size-base * 3 !default;
+$loading-indicator-md-stroke-width: $loading-indicator-stroke-width-base * 2 !default;
+$loading-indicator-lg-size: $loading-indicator-size-base * 4.5 !default;
+$loading-indicator-lg-stroke-width: $loading-indicator-stroke-width-base * 2 !default;
+$loading-indicator-color: $color-primary !default;
+$loading-indicator-background: $color-neutral-light !default;
+
+.bb-loading-indicator--with-background {
+  background-color: $loading-indicator-background;
+  border-radius: $border-radius-sm;
+}
+
+.bb-loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bb-loading-indicator--inline {
+  display: inline-flex;
+}
+
+.bb-loading-indicator__circle {
+  @include infinite-rotation();
+  width: $loading-indicator-md-size;
+  height: $loading-indicator-md-size;
+  stroke-width: $loading-indicator-md-stroke-width;
+  color: $loading-indicator-color;
+}
+
+.bb-loading-indicator--sm {
+  .bb-loading-indicator__circle {
+    stroke-width: $loading-indicator-sm-stroke-width;
+    width: $loading-indicator-sm-size;
+    height: $loading-indicator-sm-size;
+  }
+}
+
+.bb-loading-indicator--lg {
+  .bb-loading-indicator__circle {
+    stroke-width: $loading-indicator-lg-stroke-width;
+    width: $loading-indicator-lg-size;
+    height: $loading-indicator-lg-size;
+  }
+}
+
+.bb-loading-indicator__path {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1%, 300%;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 180%, 300%;
+      stroke-dashoffset: -70%;
+    }
+
+    100% {
+      stroke-dasharray: 180%, 300%;
+      stroke-dashoffset: -248%;
+    }
+  }
+}
+
+.bb-loading-indicator__text {
+  max-width: $loading-indicator-container-width;
+  padding-block-start: $spacer-sm;
+  text-align: center;
+}
+
+.bb-loading-indicator-container {
+  position: relative;
+}
+
+.bb-loading-indicator-wrapper--overlay {
+  position: absolute;
+  inset-block-start: 0;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $loading-overlay-cover-overlay-background;
+}

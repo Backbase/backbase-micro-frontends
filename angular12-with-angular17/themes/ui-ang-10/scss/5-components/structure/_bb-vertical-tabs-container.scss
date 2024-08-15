@@ -1,0 +1,77 @@
+////
+/// @group 5-components/structure/bb-vertical-tabs-container
+/// @access public
+////
+
+/// A vertical tabs layout structure where the Tabs are aligned on the
+/// left side of the main content area.
+///
+/// @example html
+/// <div class="bb-vertical-tabs-container">
+///   <div class="bb-vertical-tabs-container__sidebar">
+///      Main Sidebar Example
+///      <div class="bb-vertical-tabs-container__button">Button example.</div>
+///   </div>
+///   <div class="bb-vertical-tabs-container__main">
+///       Main View Example
+///   </div>
+/// </div>
+.bb-vertical-tabs-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/// Sets the width of the sidebar area.
+///
+/// @example html
+/// <div class="bb-vertical-tabs-container">
+///   <div class="bb-vertical-tabs-container__sidebar">
+///      Main Sidebar Example
+///      <div class="bb-vertical-tabs-container__button">Button example.</div>
+///   </div>
+///   <div class="bb-vertical-tabs-container__main">
+///       Main View Example
+///   </div>
+/// </div>
+.bb-vertical-tabs-container__sidebar {
+  width: 25%;
+}
+
+/// Sets the spacing and size of the main area.
+///
+/// @require {variable} sizer-xl
+/// @require {variable} hr-border-color
+/// @example html
+/// <div class="bb-vertical-tabs-container">
+///   <div class="bb-vertical-tabs-container__sidebar">
+///      Main Sidebar Example
+///      <div class="bb-vertical-tabs-container__button">Button example.</div>
+///   </div>
+///   <div class="bb-vertical-tabs-container__main">
+///       Main View Example
+///   </div>
+/// </div>
+.bb-vertical-tabs-container__main {
+  width: 75%;
+  padding-block-start: $sizer-xl;
+  padding-inline-start: $sizer-xl;
+  border-inline-start: 1px solid $hr-border-color;
+}
+
+/// Defines the spacing around the tab buttons.
+///
+/// @require {variable} sizer-xl
+/// @example html
+/// <div class="bb-vertical-tabs-container">
+///   <div class="bb-vertical-tabs-container__sidebar">
+///      Main Sidebar Example
+///      <div class="bb-vertical-tabs-container__button">Button example.</div>
+///   </div>
+///   <div class="bb-vertical-tabs-container__main">
+///       Main View Example
+///   </div>
+/// </div>
+.bb-vertical-tabs-container__button {
+  padding: $sizer-xl;
+}

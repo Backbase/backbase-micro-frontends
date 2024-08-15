@@ -1,0 +1,91 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$mode-header-foreground-color: $color-neutral-white !default;
+$mode-header-background-color: $color-secondary-darkest !default;
+$mode-header-padding-block-start: $sizer-md !default;
+$mode-header-padding-block-end: $mode-header-padding-block-start !default;
+$mode-header-padding-inline-start: $sizer-lg !default;
+$mode-header-padding-inline-end: $mode-header-padding-block-start !default;
+$mode-header-utility-area-spacing: $spacer-sm !default;
+$mode-header-text-button-hover-background: $color-neutral-white !default;
+$mode-header-text-margin-block-end: 0 !default;
+
+/// Shows a banner with context for the below information
+///
+/// @name bb-mode-header
+///
+/// @example html - mode header
+///   <div class="bb-mode-header">
+///     <div class="bb-stack bb-stack--density-md">
+///       <div *ngIf="showCloseButton" class="bb-stack__item">
+///         <button
+///           bbButton
+///           buttonSize="md"
+///           circle="true"
+///           color="primary"
+///           [attr.aria-label]="closeButtonAriaLabel"
+///           (click)="close.emit()"
+///           data-role="mode-header-close-button"
+///         >
+///           <bb-icon-ui name="clear"></bb-icon-ui>
+///         </button>
+///       </div>
+///       <div class="bb-stack__item" data-role="mode-header-icon">
+///         <ng-content select="[mode-header-icon]"></ng-content>
+///       </div>
+///       <div
+///         class="bb-stack__item bb-mode-header__title-area"
+///         [class.bb-mode-header__title-area--reversed]="reverseTitleOrder"
+///       >
+///         <div class="bb-stack">
+///           <bb-header-ui
+///             headingType="h2"
+///             headingClasses="bb-text--mode-header"
+///             [heading]="title"
+///             data-role="mode-header-primary-header"
+///             class="bb-stack__item"
+///           ></bb-header-ui>
+///           <div class="bb-stack__item" data-role="mode-header-status">
+///             <ng-content select="[mode-header-status]"></ng-content>
+///           </div>
+///         </div>
+///         <span *ngIf="secondaryTitle" class="bb-subtitle" data-role="mode-header-secondary-header">{{
+///           secondaryTitle
+///         }}</span>
+///       </div>
+///       <div class="bb-stack__item"></div>
+///       <div class="bb-stack__item bb-stack__item--push-right" data-role="mode-header-utility-area">
+///         <div class="bb-button-bar bb-button-bar--reverse">
+///           <ng-content select="[mode-header-utility-area]"></ng-content>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-text--mode-header {
+  margin-block-end: $mode-header-text-margin-block-end;
+  color: $mode-header-foreground-color;
+}
+
+.bb-mode-header {
+  padding-block-start: $mode-header-padding-block-start;
+  padding-block-end: $mode-header-padding-block-end;
+  padding-inline-start: $mode-header-padding-inline-start;
+  padding-inline-end: $mode-header-padding-inline-end;
+  color: $mode-header-foreground-color;
+  background-color: $mode-header-background-color;
+  box-shadow: $box-shadow;
+}
+
+.bb-mode-header__title-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-mode-header__title-area--reversed {
+  flex-direction: column-reverse;
+}

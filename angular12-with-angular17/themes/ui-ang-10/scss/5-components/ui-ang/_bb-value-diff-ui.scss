@@ -1,0 +1,50 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+/// @name bb-value-diff
+///
+/// @example html
+///   <div class="bb-data-differences--highlighted">
+///     Some new data
+///   </div>
+///   <i class="bb-value-diff--arrow-right"></i>
+///   <div class="bb-data-differences--highlighted">
+///     Old value
+///   </div>
+
+$value-diff-element-highlighted-background: $color-warning-lightest !default;
+$value-diff-element-padding: $sizer-sm !default;
+$value-diff-element-arrow-right-content: "—>" !default;
+$value-diff-element-arrow-left-content: "<—" !default;
+
+.bb-value-diff {
+  white-space: pre-wrap;
+}
+
+.bb-value-diff--crossed {
+  text-decoration: line-through;
+}
+
+.bb-value-diff--highlighted {
+  background-color: $value-diff-element-highlighted-background;
+}
+
+.bb-value-diff--arrow-right {
+  margin-block: 0;
+  margin-inline: $value-diff-element-padding;
+
+  &:before {
+    content: $value-diff-element-arrow-right-content;
+  }
+}
+
+.bb-value-diff--arrow-left {
+  margin-block: 0;
+  margin-inline: $value-diff-element-padding;
+
+  &:before {
+    content: $value-diff-element-arrow-left-content;
+  }
+}

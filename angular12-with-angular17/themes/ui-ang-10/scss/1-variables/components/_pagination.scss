@@ -1,0 +1,62 @@
+////
+/// Pagination (global)
+/// @group 1-variables/components/pagination
+/// @access public
+////
+
+/// Configures the horizontal padding for pagination
+/// @require {variable} $sizer-xs
+$pagination-padding-horizontal: $sizer-xs !default;
+
+/// Configures the vertical padding for pagination
+$pagination-padding-vertical: 0 !default;
+
+/// Configures the pagination line-height
+/// @require {variable} $sizer-lg
+$pagination-line-height: $sizer-lg !default;
+
+/// Configures the pagination border-width
+$pagination-border-width: 0 !default;
+
+/// Configures the pagination border-radius
+/// @require {variable} $sizer-sm
+$pagination-border-radius: $sizer-sm !default;
+
+/// Configures the pagination border-color
+$pagination-border-color: transparent !default;
+
+/// Configures the pagination color
+/// @require {variable} $color-primary
+$pagination-color: $color-primary !default;
+
+/// Configures the pagination background-color
+/// @require {variable} $color-neutral-white
+$pagination-background-color: $color-neutral-white !default;
+
+/// Configures the pagination:disabled background-color. Defaults to $pagination-background-color
+/// @require {variable} $pagination-background-color
+$pagination-disabled-background-color: $pagination-background-color !default;
+
+/// Configures the pagination:disabled color
+/// @require {variable} $color-text-disabled
+$pagination-disabled-color: $color-text-disabled !default;
+
+/// Configures the pagination:disabled border-color. Defaults to $pagination-disabled-color
+/// @require {variable} $pagination-disabled-color
+$pagination-disabled-border-color: $pagination-disabled-color !default;
+
+/// Configures the pagination:active background-color
+/// @require {variable} $color-primary-lightest
+$pagination-active-background-color: $color-primary-lightest !default;
+
+/// Configures the pagination:active border-color. Defaults to $pagination-active-background-color
+/// @require {variable} $pagination-active-background-color
+$pagination-active-border-color: $pagination-active-background-color !default;
+
+/// Configures the pagination:active color
+/// @require {variable} $color-info-darkest
+$pagination-active-color: $color-info-darkest !default;
+
+/// Configures the focus of the table  (experimental) Used to configure when table is focused
+/// @require {variable} $focus-border-primary
+$pagination-focus-border-primary: $focus-border-primary !default;

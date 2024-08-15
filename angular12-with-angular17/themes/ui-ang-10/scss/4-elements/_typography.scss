@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group elements
+/// @access private
+////
+
+@import "../../../bootstrap5/scss/type";
+
+strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+blockquote {
+  margin-block-end: $spacer;
+  font-size: $font-size-base * 1.5;
+}

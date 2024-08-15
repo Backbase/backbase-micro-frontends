@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+/// @name bb-product-summary-account-logo
+///
+/// @example
+/// <img data-role="product-summary-account-logo-img"
+///      class="bb-product-summary-account-logo__img"/>
+
+.bb-product-summary-account-logo__img {
+  max-width: 100%;
+  max-height: 100%;
+}

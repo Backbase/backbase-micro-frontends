@@ -1,0 +1,66 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+////
+
+/**
+ * --------------------------------------------------------------------------
+ * Chart component
+ * --------------------------------------------------------------------------
+ * @description
+ * General styles for chartjs charts
+ *
+ */
+
+// Expose as css variables, so @backbase/foundation-ang/ui#getCssVariable can access them
+:root {
+  --chart-primary-color: #{$chart-primary-color};
+  --chart-primary-light-color: #{$chart-primary-light-color};
+  --chart-negative-light-color: #{$chart-negative-light-color};
+  --chart-negative-color: #{$chart-negative-color};
+  --chart-positive-color: #{$chart-positive-color};
+  --chart-secondary-color: #{$chart-secondary-color};
+  --chart-benchmark-color: #{$chart-color-1-lighter};
+  --chart-neutral-color: #{$chart-neutral-color};
+  --chart-neutral-grey-color: #{$chart-neutral-grey-color};
+  --chart-accent-color: #{$chart-color-4};
+  --chart-alert-color: #{$chart-alert-color};
+  --chart-colors: #{$chart-colors};
+  --wealth-chart-colors: #{$wealth-chart-colors};
+}
+
+.chart-colors {
+  --chart-color-6: #{$chart-color-6};
+  --chart-color-2: #{$chart-color-2};
+  --chart-color-4: #{$chart-color-4};
+  --chart-color-1: #{$chart-color-1};
+}
+
+@at-root {
+  @include generate-chart-color-classes($chart-colors);
+
+  .chart-positive-color {
+    color: $chart-positive-color;
+  }
+
+  .chart-positive-background {
+    background-color: $chart-positive-color;
+  }
+
+  .chart-negative-color {
+    color: $chart-negative-color;
+  }
+
+  .chart-negative-background {
+    background-color: $chart-negative-color;
+  }
+
+  .chart-primary-color {
+    color: $chart-primary-color;
+  }
+
+  .chart-primary-background {
+    background-color: $chart-primary-color;
+  }
+}

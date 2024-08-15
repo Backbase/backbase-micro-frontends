@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/warning
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-warning-lightest: $color-warning-lightest; // #FEF6E0
+$color-light-warning-lighter: $color-warning-lighter; // #FCD36C
+$color-light-warning-default: $color-warning; // #FBC02D
+$color-light-warning-darker: $color-warning-darker; // #B08620
+$color-light-warning-darkest: $color-warning-darkest; // #8A6A19
+$color-light-warning-on-color: $color-neutral-black;

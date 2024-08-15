@@ -1,0 +1,108 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$layout-sidebar-icon-size: $font-size-base * 1.5 !default;
+$layout-sidebar-font-size: $font-size-subtitle !default;
+$layout-sidebar-color: $color-text-support !default;
+$layout-sidebar-toparea-bottom-padding: $sizer-lg !default;
+$layout-sidebar-toggler-y-padding: $sizer-md !default;
+$layout-sidebar-toggler-x-padding: $sizer-md !default;
+
+/// @name bb-layout__sidebar
+.bb-layout__sidebar {
+  color: $layout-sidebar-color;
+  font-size: $layout-sidebar-font-size;
+  background-color: $page-layout-background-color;
+  transform: translateX(0);
+  transition: transform 200ms 0ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/// @name bb-layout__sidebar
+/// @example - bb-layout__sidebar
+/// <div class="bb-layout__sidebar">
+///   <button class="bb-layout__sidebar-toggler"></button>
+///   <nav>
+///     <ul class="bb-layout__vertical-nav"></ul>
+///   </nav>
+/// </div>
+
+/// @name bb-layout__sidebar
+/// @example - bb-layout__sidebar Sidebar collapsed
+/// <div class="bb-layout__sidebar">
+///   <button class="bb-layout__sidebar-toggler"></button>
+///   <nav>
+///     <ul class="bb-layout__vertical-nav"></ul>
+///   </nav>
+/// </div>
+
+// The "sidebar toggler" element is the button to collapse the sidebar
+// It is only displayed in designs where the sidebar is not visible at all times.
+.bb-layout__sidebar-toggler {
+  height: $page-layout-topbar-height;
+  padding-block: $layout-sidebar-toggler-y-padding;
+  padding-inline: $layout-sidebar-toggler-x-padding;
+  line-height: 0.5;
+  background: transparent;
+  border: none;
+
+  .bb-icon {
+    &:before {
+      content: "arrow_back";
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.bb-layout__sidebar-toggler--horizontal-nav {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+@mixin bb-layout__sidebar--hidden() {
+  // Disable box shadow, to prevent it from peaking out at the edge of the screen
+  box-shadow: none;
+  transform: translateX(-100%);
+}
+
+@mixin bb-layout__sidebar--visible() {
+  box-shadow: $box-shadow-md;
+  transform: translateX(0);
+}
+
+@include media-breakpoint-up(lg) {
+  .bb-layout__sidebar {
+    @include bb-layout__vertical-nav--collapsed();
+    @include bb-layout__vertical-nav-item--collapsed();
+  }
+
+  .bb-layout--nav-expanded .bb-layout__sidebar {
+    @include bb-layout__vertical-nav--expanded();
+    @include bb-layout__vertical-nav-item--expanded();
+  }
+}
+
+@include media-breakpoint-between(xs, lg) {
+  .bb-layout__sidebar {
+    padding-inline: $page-layout-section-padding-narrow;
+  }
+  .bb-layout__sidebar {
+    @include bb-layout__sidebar--hidden();
+  }
+
+  .bb-layout--nav-expanded .bb-layout__sidebar {
+    @include bb-layout__sidebar--visible();
+  }
+}
+
+.bb-layout__sidebar--horizontal-nav {
+  width: unset;
+  max-width: unset;
+  padding-inline-start: 0;
+}

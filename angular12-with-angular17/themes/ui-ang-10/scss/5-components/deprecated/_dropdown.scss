@@ -1,0 +1,107 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+// Custom
+$dropdown-scrollable-max-height: $pre-scrollable-max-height !default; // ???
+$dropdown-menu-duration: $motion-duration-default !default; // ???
+
+.btn-dropdown-toggle {
+  &:hover,
+  &:focus {
+    @include gradient-bg($dropdown-link-hover-bg);
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+  }
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+// full-width typeahead (to align with input component width)
+.full-width-typeahead {
+  .dropdown-menu {
+    width: 100%;
+  }
+}
+
+// scrollable typeahead
+.pre-scrollable-typeahead {
+  .dropdown-menu {
+    max-height: $dropdown-scrollable-max-height;
+    overflow-y: scroll;
+  }
+}
+
+//.dropdown-item {
+//  .dropdown-item-content {
+//    align-items: center;
+//    display: flex;
+//    justify-content: space-between;
+//  }
+//
+//  &.active {
+//    .dropdown-item-content::after {
+//      visibility: visible;
+//    }
+//  }
+//}
+
+//.rb-navbar-top,
+//.rb-sidebar {
+//  .dropdown-menu {
+//    @include animation(transform, $dropdown-menu-duration);
+//    border: unset;
+//    box-shadow: $box-shadow-md;
+//    display: inline-block;
+//    font-size: $font-size-base;
+//    transform: scale(0);
+//    width: 100%;
+//
+//    .dropdown-header {
+//      font-size: $font-size-base;
+//    }
+//
+//    .dropdown-option {
+//      a {
+//        color: $color-neutral-black;
+//        display: inline-block;
+//        padding: 0.625rem 0.9375rem;
+//
+//        &:hover {
+//          text-decoration: none;
+//        }
+//      }
+//    }
+//  }
+//}
+
+//.dropdown-menu.modal.in,
+//.dropdown-menu.show,
+//.dropdown {
+//  .bicon-caret-down,
+//  .bicon-toggle-down,
+//  .fa-chevron-down {
+//    transform: rotate3d(1, 0, 0, 0deg);
+//    transition: transform $dropdown-menu-duration $mdc-animation-deceleration-curve-timing-function;
+//  }
+//
+//  &.open {
+//    .dropdown-menu {
+//      @include animation(transform, $dropdown-menu-duration);
+//
+//      transform: scale(1);
+//    }
+//
+//    .bicon-caret-down,
+//    .bicon-toggle-down,
+//    .fa-chevron-down {
+//      transform: rotate3d(1, 0, 0, 180deg);
+//      transition: transform $dropdown-menu-duration $mdc-animation-deceleration-curve-timing-function;
+//    }
+//  }
+//}

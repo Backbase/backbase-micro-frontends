@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-fx-rates-changed-modal > .modal-dialog {
+  padding: $spacer-sm;
+
+  .bg-new-rates {
+    background-color: $color-warning-lighter;
+  }
+
+  .bb-fx-rates-changed-arrow {
+    transform: rotate(90deg);
+  }
+}

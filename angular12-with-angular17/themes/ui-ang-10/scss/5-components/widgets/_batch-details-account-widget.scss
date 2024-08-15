@@ -1,0 +1,9 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.batch-details-account__type--code:not(:empty)::after {
+  content: "•";
+}

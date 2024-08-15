@@ -1,0 +1,43 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-portfolio-trading__trade-input-wrapper {
+  border-radius: $border-radius-sm;
+  border: $portfolio-trading-component-border;
+  padding: $sizer;
+}
+.bb-portfolio-trading__trade-input {
+  .form-control {
+    border: none;
+    padding-right: 0;
+    padding-left: 75px;
+    color: $portfolio-trading-color-grey;
+    font-weight: $font-weight-semi-bold;
+    &:focus {
+      border: none;
+      outline: none;
+      font-weight: bold;
+    }
+  }
+  .bb-amount-input__symbol {
+    top: auto;
+    bottom: 0;
+    font-weight: $font-weight-semi-bold;
+    padding-left: 0;
+    color: $portfolio-trading-color-grey;
+    &:focus {
+      color: $color-neutral-black;
+    }
+  }
+}
+
+.bb-portfolio-trading__trade-input--inactive {
+  color: $portfolio-trading-color-grey;
+}
+
+.bb-portfolio-trading__trade-input--active {
+  color: $color-neutral-black;
+}

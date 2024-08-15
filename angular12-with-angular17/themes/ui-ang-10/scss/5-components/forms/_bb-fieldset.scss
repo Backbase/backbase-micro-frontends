@@ -1,0 +1,40 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$fieldset-margin-bottom: $spacer-xl !default;
+$fieldset-heading-margin-bottom: $spacer-md !default;
+$fieldset-heading-font-weight: $font-weight-bold !default;
+$fieldset-heading-font-size: $font-size-h2 !default;
+$fieldset-heading-line-height: $line-height-heading !default;
+
+/// Groups related elements in a form.
+///
+/// @name bb-fieldset
+///
+/// @example html
+///   <fieldset class="bb-fieldset">
+///     <legend class="bb-fieldset__heading">
+///       Fieldset heading
+///     </legend>
+///     <label>Label</label>
+///     <input class="form-control">
+///   </fieldset>
+.bb-fieldset {
+  margin-bottom: $fieldset-margin-bottom;
+}
+
+.bb-fieldset__heading {
+  margin-bottom: $fieldset-heading-margin-bottom;
+  font-weight: $fieldset-heading-font-weight;
+  font-size: $fieldset-heading-font-size;
+  line-height: $fieldset-heading-line-height;
+}
+
+.bb-fieldset__no-outline {
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,30 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+$bb-separator-icon-size: 2.5rem !default;
+
+/// Adds a separator line with an optional icon in the middle, used to separate form sections
+///
+/// @name bb-separator
+///
+/// @example html
+///   <div class="bb-separator">
+///     <hr>
+///     <bb-icon-ui name="add" class="bb-separator__icon"></bb-icon-ui>
+///   </div>
+.bb-separator {
+  @extend .position-relative;
+}
+
+.bb-separator__icon {
+  @extend .absolute-center;
+  align-items: center;
+  justify-content: center;
+  width: $bb-separator-icon-size;
+  height: $bb-separator-icon-size;
+  background-color: $background-color-neutral;
+  border: $border;
+  border-radius: $border-radius-circle;
+}

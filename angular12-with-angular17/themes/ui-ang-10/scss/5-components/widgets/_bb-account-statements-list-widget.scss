@@ -1,0 +1,89 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$account-statements-filter-form-container-bg-color: $color-neutral-lighter !default;
+$account-statements-filter-form-container-margin-horizontal: $spacer-lg !default;
+$account-statements-download-header-back-navigation-space: 3.5rem !default;
+
+/// A collapsible filter for account statements list.
+///
+/// @name bb-account-statements-filter
+///
+/// @example html
+/// <bb-collapsible-ui>
+///   <form>
+///     <ng-template bbCollapsibleHeader let-isOpen="isOpen" let-toggle="toggle">
+///       <div class="bb-block bb-block--md">
+///         <div class="bb-stack bb-stack--wrap">
+///           <button
+///             class="bb-stack__item bb-stack__item--spacing-lg bb-stack__item--push-left-sm-down bb-stack__break--md-down bb-block bb-block--md-md-down"
+///             bbButton
+///             [color]="!isOpen ? 'primary' : 'secondary'"
+///             [ngClass]="{ active: isOpen }"
+///             (click)="toggle()"
+///           >
+///             <bb-icon-ui [cropped]="true" name="filter"></bb-icon-ui>
+///             <span>Filter</span>
+///           </button>
+///         </div>
+///       </div>
+///     </ng-template>
+///     <ng-template bbCollapsibleBody let-toggle="toggle">
+///       <div class="card-body account-statements-filter__form-container">
+///         <div class="row">
+///           <div class="bb-block bb-block--md col-12 col-sm-6">
+///             <div class="account-statements-filter__date-field-wrapper">
+///               <bb-input-datepicker-ui
+///                 label="Date range"
+///                 labelClasses="form-label"
+///                 [rangeSelection]="true"
+///               ></bb-input-datepicker-ui>
+///               <bb-input-validation-message-ui class="account-statements-filter__validation-message">
+///                 <span>Invalid date format</span>
+///               </bb-input-validation-message-ui>
+///             </div>
+///           </div>
+///         </div>
+///         <div class="bb-button-bar">
+///           <button bbButton type="submit" buttonSize="sm" class="bb-button-bar__button">Apply</button>
+///           <button bbButton color="secondary" buttonSize="sm" class="bb-button-bar__button" (click)="toggle()">Close</button>
+///         </div>
+///       </div>
+///     </ng-template>
+///   </form>
+/// </bb-collapsible-ui>
+
+.account-statements-filter__form-container {
+  margin-top: $spacer-xl;
+  background-color: $account-statements-filter-form-container-bg-color;
+
+  // this should be used when widget does not have internal `cards` container
+  &.account-statements-filter__form-container--no-container {
+    margin-right: -#{$account-statements-filter-form-container-margin-horizontal};
+    margin-left: -#{$account-statements-filter-form-container-margin-horizontal};
+  }
+}
+
+.account-statements-filter__validation-message {
+  position: absolute;
+}
+
+.account-statements-filter__date-field-column {
+  @include media-breakpoint-down(sm) {
+    padding-bottom: $spacer-xl;
+  }
+}
+
+.account-statements-filter__date-error-width {
+  width: inherit;
+  word-break: break-word;
+  max-width: fit-content;
+}
+
+.account-statements-download__navigation-back-button {
+  position: absolute;
+  margin-block-start: -#{$account-statements-download-header-back-navigation-space};
+}

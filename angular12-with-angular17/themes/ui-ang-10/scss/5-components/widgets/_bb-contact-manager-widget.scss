@@ -1,0 +1,63 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+$navbar-height: $layout-vertical-topbar-height + 2 * $layout-vertical-lg-topbar-padding !default;
+$heading-height: $heading-widget-padding-block-start + $heading-widget-de-elevated-padding-block-end -
+  $spacer-lg - $tabs-container-tabs-margin !default;
+$heading-and-navbar-height: $navbar-height + $heading-height !default;
+$contact-manager-create-option-border-radius: 1rem !default;
+$table-column-mapping-include-width: 4.5rem !default;
+////
+
+@include media-breakpoint-up(lg) {
+  .contact-details-container {
+    border-inline-start: $border;
+  }
+
+  .contact-all-contacts-container {
+    max-height: calc(100vh - #{$heading-and-navbar-height});
+  }
+
+  .contact-details-container,
+  .contact-list-container {
+    overflow: auto;
+    max-height: inherit;
+  }
+}
+
+.contact-create-option {
+  padding: $spacer;
+  background-color: $color-neutral-lightest;
+  border-radius: $contact-manager-create-option-border-radius;
+}
+
+.contacts-upload-container {
+  background-color: transparent;
+  opacity: 1;
+  border: 2px dashed $color-neutral-greyer;
+  border-radius: 10px;
+  padding: $sizer-lg $sizer;
+
+  &.drag-over {
+    opacity: 0.8;
+    background-color: $color-neutral-grey-light;
+  }
+}
+
+.contacts-upload-column-mapping__table {
+  width: 100%;
+  white-space: nowrap;
+  table-layout: fixed;
+}
+
+.contacts-upload-include-column {
+  width: $table-column-mapping-include-width;
+}
+
+.contacts-upload-include-td {
+  max-width: 50%;
+  display: inline-block;
+  margin-bottom: $spacer-md;
+  margin-top: $spacer-sm;
+}

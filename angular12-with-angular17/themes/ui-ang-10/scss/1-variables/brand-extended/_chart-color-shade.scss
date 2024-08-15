@@ -1,0 +1,170 @@
+////
+/// Chart color gradients (global)
+/// @group 1-variables/brand-extended/chart-color-shade
+/// @access private
+////
+
+$color-shade-lighter: 30%;
+$color-shade-lightest: 85%;
+$color-shade-darker: 30%;
+$color-shade-darkest: 45%;
+
+/// The 30% lighter shade of $chart-color-1 (read-only)
+/// @access public
+$chart-color-1-lighter: mix($color-neutral-white, $chart-color-1, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-1 (read-only)
+/// @access public
+$chart-color-1-lightest: mix($color-neutral-white, $chart-color-1, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-1 (read-only)
+/// @access public
+$chart-color-1-darker: mix($color-neutral-black, $chart-color-1, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-1 (read-only)
+/// @access public
+$chart-color-1-darkest: mix($color-neutral-black, $chart-color-1, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-2 (read-only)
+/// @access public
+$chart-color-2-lighter: mix($color-neutral-white, $chart-color-2, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-2 (read-only)
+/// @access public
+$chart-color-2-lightest: mix($color-neutral-white, $chart-color-2, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-2 (read-only)
+/// @access public
+$chart-color-2-darker: mix($color-neutral-black, $chart-color-2, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-2 (read-only)
+/// @access public
+$chart-color-2-darkest: mix($color-neutral-black, $chart-color-2, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-3 (read-only)
+/// @access public
+$chart-color-3-lighter: mix($color-neutral-white, $chart-color-3, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-3 (read-only)
+/// @access public
+$chart-color-3-lightest: mix($color-neutral-white, $chart-color-3, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-3 (read-only)
+/// @access public
+$chart-color-3-darker: mix($color-neutral-black, $chart-color-3, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-3 (read-only)
+/// @access public
+$chart-color-3-darkest: mix($color-neutral-black, $chart-color-3, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-4 (read-only)
+/// @access public
+$chart-color-4-lighter: mix($color-neutral-white, $chart-color-4, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-4 (read-only)
+/// @access public
+$chart-color-4-lightest: mix($color-neutral-white, $chart-color-4, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-4 (read-only)
+/// @access public
+$chart-color-4-darker: mix($color-neutral-black, $chart-color-4, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-4 (read-only)
+/// @access public
+$chart-color-4-darkest: mix($color-neutral-black, $chart-color-4, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-5 (read-only)
+/// @access public
+$chart-color-5-lighter: mix($color-neutral-white, $chart-color-5, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-5 (read-only)
+/// @access public
+$chart-color-5-lightest: mix($color-neutral-white, $chart-color-5, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-5 (read-only)
+/// @access public
+$chart-color-5-darker: mix($color-neutral-black, $chart-color-5, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-5 (read-only)
+/// @access public
+$chart-color-5-darkest: mix($color-neutral-black, $chart-color-5, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-6 (read-only)
+/// @access public
+$chart-color-6-lighter: mix($color-neutral-white, $chart-color-6, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-6 (read-only)
+/// @access public
+$chart-color-6-lightest: mix($color-neutral-white, $chart-color-6, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-6 (read-only)
+/// @access public
+$chart-color-6-darker: mix($color-neutral-black, $chart-color-6, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-6 (read-only)
+/// @access public
+$chart-color-6-darkest: mix($color-neutral-black, $chart-color-6, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-7 (read-only)
+/// @access public
+$chart-color-7-lighter: mix($color-neutral-white, $chart-color-7, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-7 (read-only)
+/// @access public
+$chart-color-7-lightest: mix($color-neutral-white, $chart-color-7, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-7 (read-only)
+/// @access public
+$chart-color-7-darker: mix($color-neutral-black, $chart-color-7, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-7 (read-only)
+/// @access public
+$chart-color-7-darkest: mix($color-neutral-black, $chart-color-7, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-8 (read-only)
+/// @access public
+$chart-color-8-lighter: mix($color-neutral-white, $chart-color-8, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-8 (read-only)
+/// @access public
+$chart-color-8-lightest: mix($color-neutral-white, $chart-color-8, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-8 (read-only)
+/// @access public
+$chart-color-8-darker: mix($color-neutral-black, $chart-color-8, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-8 (read-only)
+/// @access public
+$chart-color-8-darkest: mix($color-neutral-black, $chart-color-8, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-9 (read-only)
+/// @access public
+$chart-color-9-lighter: mix($color-neutral-white, $chart-color-9, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-9 (read-only)
+/// @access public
+$chart-color-9-lightest: mix($color-neutral-white, $chart-color-9, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-9 (read-only)
+/// @access public
+$chart-color-9-darker: mix($color-neutral-black, $chart-color-9, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-9 (read-only)
+/// @access public
+$chart-color-9-darkest: mix($color-neutral-black, $chart-color-9, $color-shade-darkest);
+
+/// The 30% lighter shade of $chart-color-10 (read-only)
+/// @access public
+$chart-color-10-lighter: mix($color-neutral-white, $chart-color-10, $color-shade-lighter);
+
+/// The 85% lighter shade of $chart-color-10 (read-only)
+/// @access public
+$chart-color-10-lightest: mix($color-neutral-white, $chart-color-10, $color-shade-lightest);
+
+/// The 30% darker shade of $chart-color-10 (read-only)
+/// @access public
+$chart-color-10-darker: mix($color-neutral-black, $chart-color-10, $color-shade-darker);
+
+/// The 45% darker shade of $chart-color-10 (read-only)
+/// @access public
+$chart-color-10-darkest: mix($color-neutral-black, $chart-color-10, $color-shade-darkest);

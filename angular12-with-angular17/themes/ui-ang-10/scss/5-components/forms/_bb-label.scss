@@ -1,0 +1,46 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$label-margin-bottom: $spacer-sm !default;
+$label-font-weight: $font-weight-semi-bold !default;
+$label-annotation-color: $color-neutral-dark !default;
+$label-annotation-font-weight: $font-weight-regular !default;
+
+/// Displays a label above an input, optionally with a muted annotation.
+///
+/// @name bb-label
+///
+/// @example html - default
+///   <div class="form-group">
+///     <label class="bb-label" for="example-default">Label</label>
+///     <input id="example-default" class="form-control">
+///   </div>
+///
+/// @example html - label tag around input
+///   <div class="form-group">
+///     <label>
+///       <div class="bb-label">Label</div>
+///       <input class="form-control">
+///     </label>
+///   </div>
+///
+/// @example html - label with annotation
+///   <div class="form-group">
+///     <label class="bb-label" for="example-annotation">
+///       Label
+///       <span class="bb-label__annotation">(annotation)</span>
+///     </label>
+///     <input id="example-annotation" class="form-control">
+///   </div>
+.bb-label {
+  margin-bottom: $label-margin-bottom;
+  font-weight: $label-font-weight;
+}
+
+.bb-label__annotation {
+  color: $label-annotation-color;
+  font-weight: $label-annotation-font-weight;
+}

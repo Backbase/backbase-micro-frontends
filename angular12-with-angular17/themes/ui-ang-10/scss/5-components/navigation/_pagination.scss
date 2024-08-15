@@ -1,0 +1,97 @@
+// Global annotations
+////
+/// @group navigation
+/// @access private
+////
+
+$pagination-item-height: $sizer-lg !default;
+$pagination-item-margin-left: $sizer-sm !default;
+$pagination-item-min-width: $sizer-md !default;
+$pagination-item-font-weight: $font-weight-semi-bold !default;
+$pagination-icon-margin: 0 !default;
+$pagination-item-font-size: $sizer-md * 0.875 !default;
+$pagination-ellipsis-color: $link-color !default;
+
+@import "../../../../bootstrap5/scss/pagination";
+
+.bb-pagination {
+  display: flex;
+  justify-content: center;
+  font-size: $pagination-item-font-size;
+}
+
+.bb-pagination--transparent {
+  .page-link,
+  .page-item.disabled .page-link {
+    background-color: transparent;
+  }
+}
+
+.bb-pagination__ellipsis {
+  color: $pagination-ellipsis-color;
+}
+
+//
+// Pagination
+//
+.pagination {
+  align-items: center;
+}
+
+.page-item {
+  &:not(:first-child) {
+    margin-left: $pagination-item-margin-left;
+  }
+
+  &:not(:first-child) .page-link {
+    margin: $focus-border-width-primary;
+    &:focus {
+      margin: 0;
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    .page-link {
+      @include border-radius($pagination-border-radius);
+    }
+  }
+  &.active .page-link:focus {
+    border-color: $pagination-color;
+  }
+  &:first-child .page-link {
+    margin: $focus-border-width-primary;
+    &:focus {
+      margin: 0;
+    }
+  }
+}
+
+.page-link {
+  box-sizing: content-box;
+  min-width: $pagination-item-min-width;
+  height: $pagination-item-height;
+  margin: $focus-border-width-primary;
+  padding: $pagination-padding-y $pagination-padding-x;
+  font-weight: $pagination-item-font-weight;
+  line-height: $pagination-line-height;
+  text-align: center;
+  @include border-radius($pagination-border-radius);
+  &:focus {
+    margin: 0;
+    border: $pagination-focus-border-primary;
+    box-shadow: none;
+  }
+  .bicon,
+  .bb-icon {
+    margin: $pagination-icon-margin;
+    line-height: $pagination-item-height;
+  }
+}
+
+.page-link.disabled {
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+}

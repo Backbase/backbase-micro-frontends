@@ -1,0 +1,21 @@
+/// @example html
+/// <bb-positive-pay-pagination class="positive-pay-check-file-details__pagination"> </bb-positive-pay-pagination>
+
+.bb-positive-pay-pagination {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-block-start: $sizer-lg;
+
+  .pagination {
+    margin-block-end: 0;
+  }
+
+  .page-link {
+    background-color: transparent;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: transparent;
+  }
+}

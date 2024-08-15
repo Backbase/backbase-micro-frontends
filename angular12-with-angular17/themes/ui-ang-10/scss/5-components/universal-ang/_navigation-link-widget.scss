@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+.navigation-link-widget .nav-item {
+  flex: 1;
+}
+
+.navigation-link-widget .dropdown-menu.show,
+ul.navigation-link-widget,
+ul.navigation-link-widget > li {
+  width: 100%;
+}

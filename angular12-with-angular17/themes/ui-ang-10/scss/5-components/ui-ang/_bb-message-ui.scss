@@ -1,0 +1,10 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+.bb-message-ui {
+  border-color: $color-neutral-greyest;
+  border-block-start: $border-width $border-style $border-color;
+}

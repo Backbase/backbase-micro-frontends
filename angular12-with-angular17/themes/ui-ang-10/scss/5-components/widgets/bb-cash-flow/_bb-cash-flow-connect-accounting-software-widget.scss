@@ -1,0 +1,221 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cash-flow-connect-accounting-software-text-font-size: $font-size-subtitle !default;
+$cash-flow-accounting-platform-border-color: $color-neutral-grey !default;
+$cash-flow-accounting-platform-selected-background-color: $color-primary-lightest !default;
+$cash-flow-accounting-platform-list-height-lg: calc(100vh - 286px) !default;
+$cash-flow-accounting-platform-list-height-md: calc(100vh - 487px) !default;
+$cash-flow-accounting-platform-list-error-height-lg: calc(100vh - 358px) !default;
+$cash-flow-accounting-platform-list-error-height-md: calc(100vh - 559px) !default;
+$cash-flow-accounting-platform-item-logo-width-lg: 4 * $sizer;
+$cash-flow-accounting-platform-item-logo-height-lg: 4 * $sizer;
+$cash-flow-accounting-platform-item-logo-width-sm: 3 * $sizer;
+$cash-flow-accounting-platform-item-logo-height-sm: 3 * $sizer;
+
+/// Styles for Cash Flow Connect Accounting Software Widget
+///
+/// @name bb-cash-flow-connect-accounting-software-widget-ang
+///
+/// @example html - select-accounting-platform
+///
+/// <div>
+///   <div class="row">
+///     <div class="col-12">
+///       <bb-alert-ui *ngIf="isNoPlatformsSelectedError"
+///                    title="Something went wrong. Try again or refresh the page."
+///                    modifier="error">
+///       </bb-alert-ui>
+///     </div>
+///   </div>
+///   <div class="row cash-flow-select-accounting-platform-list-wrapper">
+///     <div class="col-lg-8 col-md-12 cash-flow-select-accounting-platform-list"
+///          [class.cash-flow-select-accounting-platform-list_error]="isNoPlatformsSelectedError">
+///       <p class="bb-block bb-block--md">...</p>
+///       <bb-input-radio-group-ui [formControl]="accountingPlatformControl">
+///         <bb-input-radio-ui *ngFor="let platform of accountingPlatforms"
+///                            [labelTemplate]="accountingPlatformTemplate"
+///                            [labelTemplateContext]="platform"
+///                            [value]="platform.id">
+///         </bb-input-radio-ui>
+///       </bb-input-radio-group-ui>
+///
+///       <ng-template #accountingPlatformTemplate let-platform="labelTemplateContext">
+///         <div class="bb-stack cash-flow-select-accounting-platform-item">
+///           <img [src]="platform.logoUrl"
+///                [alt]="platform.name"
+///                class="bb-stack__item cash-flow-select-accounting-platform-item__logo">
+///           <div class="bb-stack__item">{{platform.name}}</div>
+///         </div>
+///       </ng-template>
+///     </div>
+///     <div class="col-lg-4 col-md-12 cash-flow-select-accounting-info">
+///       <div class="row">
+///         ...
+///         <div class="col-lg-12 col-md-6">
+///           <div class="bb-block bb-block--lg cash-flow-select-accounting-info-support-item">
+///             <bb-icon-ui name="security" size="xl" color="primary"></bb-icon-ui>
+///             <div class="cash-flow-select-accounting-info-support-item__text">....</div>
+///           </div>
+///           <div class="bb-block bb-block--lg cash-flow-select-accounting-info-support-item">
+///             <bb-icon-ui name="help-outline" size="xl" color="primary"></bb-icon-ui>
+///             <div class="cash-flow-select-accounting-info-support-item__text">....</div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+///   <div class="row cash-flow-select-accounting-platform-footer">
+///     <div class="col-lg-8 col-md-12 bb-text-support cash-flow-select-accounting-platform-footer__policy-text">...</div>
+///     <div class="bb-stack col-lg-4 col-md-12 cash-flow-select-accounting-platform-footer__buttons">
+///       <button class="bb-stack__item--push-right bb-stack__item--spacing-sm">....</button>
+///       <button>....</button>
+///     </div>
+///   </div>
+/// </div>
+
+.cash-flow-select-accounting-platform-modal .modal-content {
+  overflow: auto;
+}
+
+.cash-flow-select-accounting-platform-list-wrapper {
+  margin-bottom: $spacer-lg;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 0;
+  }
+}
+
+.cash-flow-select-accounting-info {
+  padding-left: $sizer-xl;
+  font-size: $cash-flow-connect-accounting-software-text-font-size;
+  border-left: 1px solid $cash-flow-accounting-platform-border-color;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: $sizer-md;
+    border-left: none;
+  }
+}
+
+.cash-flow-select-accounting-info-support-item {
+  text-align: center;
+
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    .cash-flow-select-accounting-info-support-item__text {
+      margin-left: $sizer-md;
+    }
+  }
+}
+
+.cash-flow-select-accounting-platform-footer__policy-text {
+  color: $color-neutral-dark;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: $sizer-md;
+  }
+}
+
+.cash-flow-select-accounting-platform-footer__buttons {
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap-reverse;
+
+    button {
+      width: 100%;
+      margin: $sizer-md 0 0 0;
+    }
+  }
+}
+
+.cash-flow-select-accounting-platform-item__logo {
+  width: $cash-flow-accounting-platform-item-logo-width-lg;
+  height: $cash-flow-accounting-platform-item-logo-height-lg;
+  border-radius: 50%;
+
+  @include media-breakpoint-down(md) {
+    width: 3 * $sizer $cash-flow-accounting-platform-item-logo-width-sm;
+    height: 3 * $sizer $cash-flow-accounting-platform-item-logo-height-sm;
+  }
+}
+
+.cash-flow-select-accounting-platform-list {
+  padding-right: $sizer-xl;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: $sizer-lg;
+    padding-right: $sizer-md;
+  }
+
+  .bb-input-radio-group__list {
+    max-height: $cash-flow-accounting-platform-list-height-lg;
+    overflow: auto;
+
+    @include media-breakpoint-only(md) {
+      max-height: $cash-flow-accounting-platform-list-height-md;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-height: none;
+    }
+  }
+
+  .bb-input-radio-group__radio {
+    margin: 0;
+    padding: $sizer-md 0 $sizer-md 4.5 * $sizer;
+    border-bottom: 1px solid $cash-flow-accounting-platform-border-color;
+    border-radius: 0;
+
+    &.selected {
+      background-color: $cash-flow-accounting-platform-selected-background-color;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      left: $sizer-lg;
+    }
+
+    &::after {
+      left: 1.75 * $sizer;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-left: 3.5 * $sizer;
+
+      &::before {
+        left: $sizer-md;
+      }
+
+      &::after {
+        left: 1.25 * $sizer;
+      }
+    }
+  }
+
+  .bb-input-radio-group__label {
+    display: none;
+  }
+}
+
+.cash-flow-select-accounting-platform-list_error {
+  .bb-input-radio-group__list {
+    max-height: $cash-flow-accounting-platform-list-error-height-lg;
+
+    @include media-breakpoint-only(md) {
+      max-height: $cash-flow-accounting-platform-list-error-height-md;
+    }
+  }
+}
+
+.cash-flow-select-accounting-platform-footer__link-text {
+  color: $color-neutral-dark;
+  font-weight: $font-weight-semibold;
+}

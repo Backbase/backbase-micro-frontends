@@ -1,0 +1,9 @@
+////
+/// Optional (global)
+/// @group 1-variables/utils/optional
+/// @access private
+////
+
+/// Can be used for declaring component specific API variables without overriding default style cascading initially
+/// Using an empty map will cause the CSS selector this variable is used on to be ignored
+$optional: false;

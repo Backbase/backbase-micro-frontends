@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+.sortable-table-icon-color {
+  color: $color-neutral-greyer;
+}
+
+.custom-approval-sortable-table-header:hover .sortable-table-icon {
+  display: inline-flex;
+}

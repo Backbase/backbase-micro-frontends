@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group elements
+/// @access private
+////
+
+$ordered-list-padding-inline-start: $spacer * 1.2 !default;
+$ordered-list-line-height: 2rem !default;
+
+ul {
+  padding-inline-start: $spacer-md;
+}
+
+ol.bb-ordered-list {
+  padding-inline-start: $ordered-list-padding-inline-start;
+  line-height: $ordered-list-line-height;
+}

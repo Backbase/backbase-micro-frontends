@@ -1,0 +1,21 @@
+////
+/// @group 1-variables/components/navigation
+/// @access public
+////
+
+/// Configures the header-color for bb-navigation
+$navigation-header-color: inherit !default;
+
+/// Configures the header-color for app vertical navigation
+$layout-vertical-nav-header-color: inherit !default;
+
+/// Configures the border-radius for bb-navigation items
+/// @require {variable} $border-radius-pill
+$navigation-item-border-radius: $border-radius-pill !default;
+
+/// Configures the border-radius for app vertical navigation items
+/// @require {variable} $border-radius-pill
+$layout-vertical-nav-item-border-radius: $border-radius-pill !default;
+
+/// Configures the border-radius for app horizontal navigation header
+$layout-horizontal-topbar-border: $border-radius-none !default;

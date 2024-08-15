@@ -1,0 +1,32 @@
+////
+/// Motion (global)
+/// @group 1-variables/brand/motion
+/// @access public
+////
+
+/// Configures the delay in seconds for slow motions (experimental)
+$motion-delay-slow: 0.5s !default;
+
+/// Configures the default delay in seconds motions (experimental)
+$motion-delay-default: 0.2s !default;
+
+/// Configures the delay in seconds for fast motions (experimental)
+$motion-delay-fast: 0.1s !default;
+
+/// Configures the duration in seconds for slow motions (experimental)
+$motion-duration-slow: 0.5s !default;
+
+/// Configures the default duration in seconds for motions (experimental)
+$motion-duration-default: 0.2s !default;
+
+/// Configures the duration in seconds for fast motions (experimental)
+$motion-duration-fast: 0.1s !default;
+
+/// Configures the ease-in timing used for motions (experimental)
+$motion-timing-ease-in: cubic-bezier(0.89, 0.03, 0.68, 0.22) !default;
+
+/// Configures the ease-out timing used for motions (experimental)
+$motion-timing-ease-out: cubic-bezier(0.16, 0.84, 0.44, 1) !default;
+
+/// Configures the ease-in-out timing used for motions (experimental)
+$motion-timing-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1) !default;

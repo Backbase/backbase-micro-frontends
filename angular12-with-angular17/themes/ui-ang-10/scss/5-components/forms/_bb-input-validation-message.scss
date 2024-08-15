@@ -1,0 +1,14 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$input-validation-spacer: $spacer-sm !default;
+
+.bb-input-validation-message {
+  display: block;
+  margin-top: $input-validation-spacer;
+  color: $color-danger;
+  font-size: $font-size-subheader;
+}

@@ -1,0 +1,45 @@
+////
+/// Typography (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --font-family: #{$font-family};
+  --font-family-heading: #{$font-family-heading};
+  --font-size-base: #{$font-size-base};
+  --line-height-base: #{$line-height-base};
+  --line-height-headings: #{$line-height-headings};
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-semi-bold: #{$font-weight-semi-bold};
+  --font-weight-bold: #{$font-weight-bold};
+  --font-size-hero: #{$font-size-hero};
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-highlight: #{$font-size-highlight};
+  --font-size-default: #{$font-size-default};
+  --font-size-subtitle: #{$font-size-subtitle};
+  --font-size-subheader: #{$font-size-subheader};
+  --font-size-table-default: #{$font-size-table-default};
+  --font-size-table-header: #{$font-size-table-header};
+}
+
+$font-family: var(--font-family);
+$font-family-heading: var(--font-family-heading);
+// $font-size-base: var(--font-size-base);
+// $line-height-base: var(--line-height-base);
+$line-height-headings: var(--line-height-headings);
+$font-weight-regular: var(--font-weight-regular);
+$font-weight-semi-bold: var(--font-weight-semi-bold);
+$font-weight-bold: var(--font-weight-bold);
+$font-size-hero: var(--font-size-hero);
+$font-size-h1: var(--font-size-h1);
+$font-size-h2: var(--font-size-h2);
+$font-size-h3: var(--font-size-h3);
+$font-size-highlight: var(--font-size-highlight);
+$font-size-default: var(--font-size-default);
+$font-size-subtitle: var(--font-size-subtitle);
+$font-size-subheader: var(--font-size-subheader);
+$font-size-table-default: var(--font-size-table-default);
+$font-size-table-header: var(--font-size-table-header);

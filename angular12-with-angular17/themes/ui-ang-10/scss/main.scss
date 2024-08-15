@@ -1,0 +1,8 @@
+// The path `scss/main.scss` is referenced from `angular.json` in projects such as ui-ang.
+// This file is also the "main" module in "package.json".
+@import "1-variables/variables";
+@import "2-tools/tools";
+@import "3-generic/generic";
+@import "4-elements/elements";
+@import "5-components/components";
+@import "6-utilities/utilities";

@@ -1,0 +1,33 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// Displays a card vendor's logo.  Use in conjunction with a modifier.
+///
+/// To add a new vendor, add the image and its dimensions to the `$card-vendor-map` variable.
+///
+/// @name bb-card-vendor
+///
+/// @example html - mastercard
+///   <div class="bb-card-vendor bb-card-vendor--mastercard"></div>
+///
+/// @example html - visa
+///   <div class="bb-card-vendor bb-card-vendor--visa"></div>
+@use "sass:math";
+
+.bb-card-vendor {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@each $vendor, $value in $card-vendor-map {
+  .bb-card-vendor-#{$vendor}, // this class kept for backwards compatibility
+  .bb-card-vendor--#{$vendor} {
+    height: map-get($value, "height") + px;
+    padding-top: math.div(map-get($value, "height"), map-get($value, "width")) * 100%;
+    background-image: map-get($value, "image");
+  }
+}

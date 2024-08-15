@@ -1,0 +1,26 @@
+@import "bootstrap/bootstrap";
+@import "ng-bootstrap/ng-bootstrap";
+@import "ui-ang/ui-ang";
+@import "universal-ang/universal-ang";
+
+@import "banking/banking";
+@import "buttons/buttons";
+@import "data/data";
+@import "feedback-indicators/feedback-indicators";
+@import "forms/forms";
+@import "images-and-icons/images-and-icons";
+@import "navigation/navigation";
+@import "overlay/overlay";
+@import "structure/structure";
+@import "typography/typography";
+
+//Commented: Depends on wc2-theme-modules for @extend .classes D:
+// @import 'universal-ng/universal-ng';
+
+// Legacy classes, kept for compatibility with WC2
+@import "deprecated/deprecated";
+
+// Widget-specific hacks - needs to be on bottom for these styles to take precedence
+@import "widgets/widgets";
+
+@import "journeys/journeys";

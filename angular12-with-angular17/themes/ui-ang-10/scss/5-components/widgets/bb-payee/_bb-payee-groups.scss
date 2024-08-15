@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for Payee Groups widget
+///
+
+.bb-payee-item-ellipsis-md {
+  width: 28 * $spacer;
+}
+
+.bb-payee-item-ellipsis_lg {
+  width: 42 * $spacer;
+}
+
+.bb-payee-item-table-cell {
+  margin-right: auto;
+}
+
+.account-details-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payee-input-fields {
+  width: 50%;
+}
+
+.payee-search-fields {
+  width: 40%;
+}

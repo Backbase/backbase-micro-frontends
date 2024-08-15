@@ -1,0 +1,28 @@
+/// @group widgets
+/// @access private
+////
+$bb-portfolio-trading-instrument-list__item_padding_h: $spacer-lg !default;
+$bb-portfolio-trading-instrument-list__item-icon_size: 40px !default;
+
+.bb-portfolio-trading-instrument-list {
+  .bb-portfolio-trading-instrument {
+    &__item {
+      &-name-col {
+        width: 35%;
+        padding-top: $bb-portfolio-trading-instrument-list__item_padding_h;
+        padding-bottom: $bb-portfolio-trading-instrument-list__item_padding_h;
+        padding-left: 0;
+      }
+      &-price-col,
+      &-volume-col {
+        width: 20%;
+      }
+    }
+  }
+}
+.bb-portfolio-trading-instrument__item-icon {
+  width: $bb-portfolio-trading-instrument-list__item-icon_size;
+  height: $bb-portfolio-trading-instrument-list__item-icon_size;
+  border-radius: $border-radius-sm;
+  object-fit: cover;
+}

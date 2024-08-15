@@ -1,0 +1,267 @@
+////
+/// @group 5-components/structure/bb-button-bar
+/// @access public
+////
+
+/// Sets the standard vertical margin value.
+/// Extending from `$spacer-lg`
+/// @name button-bar-margin-y
+/// @type Number
+$button-bar-margin-y: $spacer-lg !default;
+
+/// Sets the horizontal margin value (sm).
+/// Extending from `$spacer-sm`
+/// @name button-bar-button-sm-margin-x
+/// @type Number
+$button-bar-button-sm-margin-x: $spacer-sm !default;
+
+/// Sets the vertical margin value (sm).
+/// Extending from `$spacer-md`
+/// @name button-bar-button-sm-margin-y
+/// @type Number
+$button-bar-button-sm-margin-y: $spacer-md !default;
+
+/// Sets the horizontal margin value (md).
+/// Extending from `$spacer-sm`
+/// @name button-bar-button-md-margin-x
+/// @type Number
+$button-bar-button-md-margin-x: $spacer-sm !default;
+
+/// Sets the vertical margin value (md).
+/// Extending from `$spacer-md`
+/// @name button-bar-button-md-margin-y
+/// @type Number
+$button-bar-button-md-margin-y: $spacer-md !default;
+
+/// Sets the horizontal margin value (md) for the most left button.
+/// Extending from `$spacer-sm`
+/// @name button-bar-left-button-sm-margin-x
+/// @type Number
+$button-bar-left-button-sm-margin-x: $spacer-sm !default;
+
+/// Sets the horizontal margin value for the reverse ordered button-bar.
+/// Extending from `$spacer-sm`
+/// @name button-bar-reverse-button-margin-x
+/// @type Number
+$button-bar-reverse-button-margin-x: $spacer-sm !default;
+
+/// Sets the background color value for sticky button-bar.
+/// Extending from `$background-color-neutral`
+/// @name button-bar-sticky-bg-color
+/// @type String
+$button-bar-sticky-bg-color: $background-color-neutral !default;
+
+/// Creates a group of buttons vertically (mobile) with primary actions on top, and horizontally on larger
+/// screens with primary actions aligned to the right and margins between the buttons.
+/// In the template, include the primary button first for accessibility.
+/// Use the `bbButton` directive and not the `bb-button-ui` element selector.
+///
+/// @name .bb-button-bar
+///
+/// @example html
+///   <div class="bb-button-bar">
+///     <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+///     <button class="bb-button-bar__button btn btn-secondary">Secondary action</button>
+///     <button class="bb-button-bar__button btn btn-link">Tertiary action</button>
+///   </div>
+///
+/// @example html - Button order reversed: `bb-button-bar--reverse`
+///   <div class="bb-button-bar bb-button-bar--reverse">
+///     <button class="bb-button-bar__button btn btn-link">Tertiary action</button>
+///     <button class="bb-button-bar__button btn btn-secondary">Secondary action</button>
+///     <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+///   </div>
+///
+/// @example html - Buttons aligned in center: `bb-button-bar--center`
+///   <div class="bb-button-bar bb-button-bar--center">
+///     <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+///     <button class="bb-button-bar__button btn btn-secondary">Secondary action</button>
+///     <button class="bb-button-bar__button btn btn-link">Tertiary action</button>
+///   </div>
+///
+/// @example html - Extra top spacing: `bb-button-bar--spacing-md`
+///   <div class="bb-button-bar bb-button-bar--spacing-md">
+///     <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+///     <button class="bb-button-bar__button btn btn-secondary">Secondary action</button>
+///     <button class="bb-button-bar__button btn btn-link">Tertiary action</button>
+///   </div>
+///
+/// @example html - Bigger spacing between button elements: `bb-button-bar--density-lg`
+///   <div class="bb-button-bar bb-button-bar--density-lg">
+///     <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+///     <button class="bb-button-bar__button btn btn-secondary">Secondary action</button>
+///     <button class="bb-button-bar__button btn btn-link">Tertiary action</button>
+///   </div>
+///
+.bb-button-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row-reverse;
+  }
+}
+
+/// Default class required for each button placed within the button-bar.
+///
+/// @name .bb-button-bar__button
+///
+/// @require .bb-button-bar Elements with this class should be wrapped within a button-bar component.
+/// @example html
+///    <button class="bb-button-bar__button btn btn-primary">Primary action</button>
+.bb-button-bar__button {
+  @include media-breakpoint-only(xs) {
+    width: 100%;
+    margin-block-end: $button-bar-button-md-margin-y;
+
+    .btn {
+      width: 100%;
+    }
+
+    &.btn-sm {
+      margin-block-end: $button-bar-button-sm-margin-y;
+    }
+
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-inline-end: $button-bar-button-md-margin-x;
+
+    &.btn-sm {
+      margin-inline-end: $button-bar-button-sm-margin-x;
+    }
+
+    &:first-child {
+      margin-inline-end: 0;
+    }
+  }
+}
+
+/// Class to apply when the button(s) need to be spread out across the width of the button-bar,
+/// creating space
+///
+/// When applied to a button, any button aside from that button will move along.
+///
+/// @name .bb-button-bar__button--across
+///
+/// @require .bb-button-bar Elements with this class should be wrapped within a button-bar component.
+/// @example html
+///    <button class="bb-button-bar__button--across btn btn-primary">Primary action</button>
+.bb-button-bar__button--across {
+  @include media-breakpoint-up(sm) {
+    margin-inline-end: auto;
+  }
+}
+
+/// Class to apply when the buttons need to be aligned to the left side of the button-bar.
+///
+/// The class needs to be applied on the parent element, along with the `bb-button-bar` class.
+///
+/// @name .bb-button-bar--reverse
+///
+/// @require .bb-button-bar Initial class is required for the reverse order to be applied successfully
+/// @example html
+///   <div class="bb-button-bar bb-button-bar--reverse">
+///     ...
+///   </div>
+.bb-button-bar--reverse {
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+
+    .bb-button-bar__button {
+      &:first-child {
+        margin-inline-end: $button-bar-reverse-button-margin-x;
+
+        &.btn-sm {
+          margin-inline-end: $button-bar-button-sm-margin-x;
+        }
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  .bb-button-bar__button--across {
+    margin-inline-start: auto;
+  }
+}
+
+/// Class to apply when the buttons within the button-bar need to be center aligned.
+///
+/// The class needs to be applied on the parent element, along with the `bb-button-bar` class.
+///
+/// @name .bb-button-bar--center
+///
+/// @require .bb-button-bar Initial class is required for the reverse order to be applied successfully
+/// @example html
+///   <div class="bb-button-bar bb-button-bar--center">
+///     ...
+///   </div>
+.bb-button-bar--center {
+  justify-content: center;
+}
+
+/// Adds a top border and a background color to the entire button-bar.
+///
+/// The class needs to be applied on the parent element, along with the `bb-button-bar` class.
+///
+/// @name .bb-button-bar--sticky
+///
+/// @require .bb-button-bar Initial class is required for the reverse order to be applied successfully
+/// @require .fixed-bottom Required to make the button-bar sticky
+/// @example html
+///   <div class="bb-button-bar bb-button-bar--sticky">
+///     ...
+///   </div>
+.bb-button-bar--sticky {
+  background-color: $button-bar-sticky-bg-color;
+  border-block-start: $border-width $border-style rgba(0, 0, 0, 0.1);
+}
+
+/* prettier-ignore */
+@each $sizeKey, $spacingValue in $spacing-map {
+/// Adds spacing to the top of the button-bar, using keys of `$spacing-map` as responsive modifier
+///
+/// The class needs to be applied on the parent element, along with the `bb-button-bar` class.
+///
+/// @name .bb-button-bar--spacing-*
+///
+/// @require .bb-button-bar Initial class is required for the reverse order to be applied successfully
+/// @example html
+///   <div class="bb-button-bar bb-button-bar--spacing-md">
+///     ...
+///   </div>
+  .bb-button-bar--spacing-#{$sizeKey} {
+    margin-block-start: $spacingValue;
+  }
+}
+
+@each $sizeKey, $spacingValue in $spacing-map {
+  /// Adds spacing between the button element of button-bar, using keys of `$spacing-map` as responsive modifier.
+  /// Spacing is applied for both horizontal and vertical arrangement.
+  ///
+  /// The class needs to be applied on the component element, along with the `bb-button-bar` class.
+  ///
+  /// @name .bb-button-bar--density--*
+  ///
+  /// @require .bb-button-bar Component class of `bb-button-bar` is required.
+  /// @example html
+  ///   <div class="bb-button-bar bb-button-bar--density-xs">
+  ///     ...
+  ///   </div>
+  .bb-button-bar--density-#{$sizeKey} {
+    column-gap: $spacingValue;
+    row-gap: $spacingValue;
+
+    & .bb-button-bar__button,
+    &.bb-button-bar--reverse .bb-button-bar__button:first-child {
+      margin: 0;
+    }
+  }
+}

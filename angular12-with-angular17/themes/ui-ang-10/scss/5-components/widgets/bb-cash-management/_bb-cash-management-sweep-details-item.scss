@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$sweep-details-item-content-color: $color-neutral-darker !default;
+
+.bb-sweep-details-item__content {
+  color: $sweep-details-item-content-color;
+}

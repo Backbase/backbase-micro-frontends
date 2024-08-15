@@ -1,0 +1,38 @@
+////
+/// @group 1-variables/brand/border-radius
+/// @access public
+////
+
+/// Border radius default value
+$border-radius: 1rem !default;
+
+/// Border radius none. Fixed to be 0 to reflect no border-radius (read-only)
+/// @todo for using at as read-only Sass compiler complains we should figure out how to fix it
+$border-radius-none: 0;
+
+/// Border radius circle. Fixed to be 50% as it reflects all components with circle styling (read-only)
+/// @todo Maybe rename -round to -circle, so people will not confuse it with -pill
+$border-radius-circle: 50%;
+
+/// Border radius with exta small modifier. Defaults to 25% of the $border-radius.
+/// @require {variable} $border-radius
+$border-radius-xs: $border-radius * 0.25 !default;
+
+/// Border radius with small modifier. Defaults to 50% of the $border-radius
+/// @require {variable} $border-radius
+$border-radius-sm: $border-radius * 0.5 !default;
+
+/// Border radius with medium modifier. Defaults to 100% of $border-radius
+/// @require {variable} $border-radius
+$border-radius-md: $border-radius !default;
+
+/// Border radius with large modifier. Defaults to a round border
+/// @require {variable} $border-radius-circle
+$border-radius-lg: $border-radius-circle !default;
+
+/// Border radius with a pill modifier. Defaults to 20 * $border-radius
+/// @require {variable} $border-radius
+$border-radius-pill: $border-radius * 20 !default;
+
+/// Global toggle to enable rounded corners (experimental)
+$border-radius-enabled: true !default;

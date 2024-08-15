@@ -1,0 +1,63 @@
+////
+/// Payment card
+/// @group 1-variables/components/payment-card
+/// @access public
+////
+
+/// Configures the color for the payment-card
+/// @require {variable} $color-neutral-white
+$payment-card-color: $color-neutral-white !default;
+
+/// Configures the shadow for the payment-card
+/// @require {variable} $box-shadow-sm
+$payment-card-box-shadow: $box-shadow-sm !default;
+
+/// Configures the border-radius for the payment-card
+/// @todo this probably shoudn't be depending on the default border-radius variable
+/// @require {variable} $border-radius
+$payment-card-border-radius: $border-radius !default;
+
+/// Configures the font weight for the payment card number
+/// @require {variable} $optional
+$payment-card-number-font-weight: $optional !default;
+
+/// Configures the font size for the payment card number
+/// @todo this probably shoudn't be depending on the highlight variable
+/// @require {variable} $font-size-highlight
+$payment-card-number-font-size: $font-size-highlight !default;
+
+/// Configures the font size of the payment card name
+/// @require {variable} $optional
+$payment-card-name-font-size: $optional !default;
+
+/// Configures the font-weight of the payment card name
+/// @require {variable} $font-weight-semi-bold
+$payment-card-name-font-weight: $font-weight-semi-bold !default;
+
+/// Configures the font size of the payment-card experition label
+/// @todo this probably shoudn't be depending on the sub-header variable
+/// @require {variable} $font-size-subheader
+$payment-card-label-font-size: $font-size-subheader !default;
+
+/// Configures the font weight of the payment-card expiration label
+/// @require {variable} $optional
+$payment-card-label-font-weight: $optional !default;
+
+/// Configures the font weight of the payment-card expiration date
+/// @require {variable} $font-weight-semi-bold
+$payment-card-expiration-date-font-weight: $font-weight-semi-bold !default;
+
+/// Configures the font size of the payment-card expiration date
+/// @todo this probably shoudn't be depending on the subtitle font-size variable
+/// @require {variable} $font-size-subtitle
+$payment-card-expiration-date-font-size: $font-size-subtitle !default;
+
+/// Configures the minimum width of the payment-card
+$payment-card-min-width: 17.375rem !default;
+
+/// Configures the maximum width of the payment-card
+$payment-card-max-width: 20rem !default;
+
+/// Configures a map of custom colors ([name]: [background value]), use existing keys to override the colors
+/// To add new colors, keys can be added, but those need to be added in the html with corresponding class--modifiers as well
+$payment-card-custom-background-map: () !default;

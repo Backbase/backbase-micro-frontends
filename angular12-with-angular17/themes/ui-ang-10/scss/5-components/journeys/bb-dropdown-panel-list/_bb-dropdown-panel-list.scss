@@ -1,0 +1,66 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access public
+////
+
+/// Configure the spacing around the dropdown toggle button
+$dropdown-panel-list-toggle-spacing: $spacer-md !default;
+/// Configure the border of the dropdown toggle button
+$dropdown-panel-list-border: $border-width * 2 $border-style $border-color !default;
+/// Configure the border radius of the dropdown toggle button
+$dropdown-panel-list-border-radius: 1rem !default;
+/// Configure the focus border color of the dropdown toggle button
+$dropdown-panel-list-border-focus-color: $color-primary-darker !default;
+/// Configure the background color of dropdown list items
+$dropdown-panel-list-item-hover-background: $dropdown-link-hover-bg !default;
+
+/// Styles for adjusting Dropdown Panel List modifications to bootstrap dropdown
+/// menu classes.
+///
+/// @name bb-dropdown-panel-list
+/// @example html
+///  <div class="dropdown bb-dropdown-panel-list">
+///    <button
+///      bbButton
+///      color="unstyled"
+///      class="dropdown-toggle"
+///    >
+///      ...
+///    </button>
+///    <div class="dropdown-menu">
+///      <ng-container *ngFor="let item of items;">
+///        <button
+///          bbButton
+///          color="unstyled"
+///          class="dropdown-item"
+///        >
+///          ...
+///        </button>
+///        <div class="dropdown-divider"></div>
+///      </ng-container>
+///    </div>
+///  </div>
+.bb-dropdown-panel-list button.dropdown-toggle {
+  width: 100%;
+  padding: $dropdown-panel-list-toggle-spacing;
+  border: $dropdown-panel-list-border;
+  border-radius: $dropdown-panel-list-border-radius;
+
+  // Primary border color
+  &:focus {
+    border-color: $dropdown-panel-list-border-focus-color;
+  }
+}
+
+.bb-dropdown-panel-list .dropdown-menu {
+  width: 100%;
+}
+
+.bb-dropdown-panel-list .dropdown-divider {
+  margin: 0;
+}
+
+.bb-dropdown-panel-list button.btn-unstyled.dropdown-item:hover {
+  background-color: $dropdown-panel-list-item-hover-background;
+}

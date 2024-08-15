@@ -1,0 +1,31 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-approval-log-item-bound-value-bg: $color-warning-lightest !default;
+$bb-approval-log-item-bound-label-border: 1px solid $color-neutral-dark !default;
+
+/// Approval log limit item bound related classes
+///
+/// @name bb-approval-log-item-bound
+///
+/// @example html
+///   <div>
+///     <div class="bb-approval-log-item-bound-label">Business functions</div>
+///     <div class="bb-approval-log-item-bound-value bb-approval-log-item-bound-value--highlight bb-approval-log-item-bound-value--line-through"></div>
+///   </div>
+
+.bb-approval-log-item-bound-label {
+  border-bottom: $bb-approval-log-item-bound-label-border;
+  border-bottom-style: dashed;
+}
+
+.bb-approval-log-item-bound-value--highlight {
+  background-color: $bb-approval-log-item-bound-value-bg;
+}
+
+.bb-approval-log-item-bound-value--line-through {
+  text-decoration: line-through;
+}

@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+///
+$portfolio-trading-instrument-chart-min-height: 324px !default;
+
+.bb-portfolio-trading__instrument-chart {
+  min-height: $portfolio-trading-instrument-chart-min-height;
+}

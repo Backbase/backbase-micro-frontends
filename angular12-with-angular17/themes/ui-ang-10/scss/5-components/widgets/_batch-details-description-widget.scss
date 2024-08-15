@@ -1,0 +1,22 @@
+.batch-details-description__see-more {
+  display: none;
+}
+
+.batch-details-description__has-more-description {
+  .batch-details-description__description::after {
+    content: "…";
+  }
+
+  .batch-details-description__see-more {
+    display: block;
+  }
+}
+
+.batch-details-description__see-more--button {
+  margin-top: $spacer * 0.375;
+  padding: 0;
+  color: $color-primary;
+  font-weight: bold;
+  background: none;
+  border: none;
+}

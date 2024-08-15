@@ -1,0 +1,83 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$account-details-balance-border-color: $color-neutral-grey !default;
+$account-details-info-block-spacer: $spacer-lg !default;
+
+/// Styles for Accounts details widget
+///
+/// @name bb-accounts-details
+///
+/// @example html
+/// <div>
+///   <div class="bb-block bb-block--lg">
+///     <div>Account header</div>
+///     <div class="bb-state-container">
+///       <div class="bb-empty-state">Account error</div>
+///     </div>
+///   </div>
+///   <div>
+///     <div class="bb-account-details-row bb-stack bb-stack--wrap">
+///       <div class="bb-account-details-item bb-stack__item bb-stack__item--fill">
+///         <div class="bb-block bb-block--sm bb-text-bold">Name</div>
+///         <div>Account Name</div>
+///       </div>
+///       <div class="bb-account-details-item bb-stack__item bb-stack__item--fill">
+///         <div class="bb-block bb-block--sm bb-text-bold">Type</div>
+///         <div>Current Account</div>
+///       </div>
+///     </div>
+///     <div class="bb-account-details-row bb-stack bb-stack--wrap">
+///       <div class="bb-account-details-item bb-stack__item bb-stack__item--fill">
+///         <div class="bb-block bb-block--sm bb-text-bold">Currency</div>
+///         <div>EUR</div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+/// Styles for Accounts details header component
+///
+/// @name bb-accounts-details-header
+///
+/// @example html
+/// <div class="bb-stack">
+///   <div class="bb-stack__item bb-stack__item--fill">
+///     <div class="bb-heading-2">Account title</div>
+///   </div>
+///   <div class="bb-stack__item">
+///     <button class="bb-account-details-header__print-icon btn-secondary btn btn-md btn-circle">
+///       <i class="bb-icon bb-icon--md bb-icon-print"></i>
+///     </button>
+///   </div>
+/// </div>
+
+.bb-account-details-header__print-icon {
+  flex-shrink: 0;
+}
+
+.account-details__balance {
+  padding-top: $spacer-md;
+  border-top: 1px solid $account-details-balance-border-color;
+  border-bottom: 1px solid $account-details-balance-border-color;
+}
+
+.account-details__balance--empty {
+  display: flex;
+  flex-direction: column;
+  margin: $spacer-xl;
+}
+
+.bb-account-details-row:not(:last-of-type) {
+  margin-bottom: $account-details-info-block-spacer;
+}
+
+.bb-account-details-item:not(:last-of-type) {
+  @include media-breakpoint-down(md) {
+    flex-basis: 100%;
+    margin-bottom: $account-details-info-block-spacer;
+  }
+}

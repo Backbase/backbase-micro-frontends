@@ -1,0 +1,156 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+$btn-icon-bg-color: transparent !default;
+$btn-icon-color: $color-neutral-greyest !default;
+$btn-icon-hover-color: $color-neutral-white !default;
+$btn-icon-active-color: $color-primary-lightest !default;
+
+$btn-icon-padding-x: 0.25rem !default;
+$btn-icon-padding-y: 0.25rem !default;
+$btn-icon-font-size: 2rem !default;
+$btn-icon-width: $btn-icon-font-size + ($btn-icon-padding-x * 2) !default;
+$btn-icon-height: $btn-icon-font-size + ($btn-icon-padding-y * 2) !default;
+
+$btn-icon-padding-x-sm: 0.5rem !default;
+$btn-icon-padding-y-sm: 0.5rem !default;
+$btn-icon-font-size-sm: 1.125rem !default;
+$btn-icon-width-sm: $btn-icon-font-size-sm + ($btn-icon-padding-x-sm * 2) !default;
+$btn-icon-height-sm: $btn-icon-font-size-sm + ($btn-icon-padding-y-sm * 2) !default;
+
+// WC2/UCH content
+.btn-icon {
+  @include gradient-bg(transparent);
+  position: relative;
+  width: $btn-icon-width;
+
+  height: $btn-icon-height;
+  padding: $btn-icon-padding-y $btn-icon-padding-x;
+  color: transparent;
+  line-height: $btn-icon-height;
+  border: unset;
+  border-color: transparent;
+
+  &:hover {
+    @include gradient-bg(transparent);
+
+    color: transparent;
+    border-color: transparent;
+  }
+
+  > i {
+    color: $btn-icon-color;
+    font-size: $btn-icon-font-size;
+  }
+
+  &.btn-sm {
+    width: $btn-icon-width-sm;
+    height: $btn-icon-height-sm;
+    padding: $btn-icon-padding-y-sm $btn-icon-padding-x-sm;
+    line-height: $btn-icon-height-sm;
+
+    > i {
+      font-size: $btn-icon-font-size-sm;
+    }
+  }
+
+  &-glow {
+    z-index: 2;
+
+    &:not(:disabled):not(.disabled) {
+      &::after {
+        @include animation(transform);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: inline-block;
+        margin: 0;
+        background-color: $btn-icon-bg-color;
+        border-radius: $btn-border-radius;
+        transform: scale(0);
+        transform-origin: 50% 50%;
+        content: "";
+      }
+
+      &:hover::after {
+        @include animation(transform);
+        background-color: $btn-icon-hover-color;
+        transform: scale(1);
+
+        transform-origin: 50% 50%;
+      }
+
+      &:active::after {
+        @include animation(background-color);
+        background-color: $btn-icon-active-color;
+      }
+    }
+  }
+
+  @each $color, $value in $theme-default-colors {
+    $hover-color: map-get($theme-alert-colors, $color);
+
+    &.btn-icon-#{$color} {
+      &,
+      &:not(:disabled):not(.disabled) > i {
+        color: $value;
+      }
+
+      &.btn-icon-glow:not(:disabled):not(.disabled) {
+        &:hover::after {
+          @include animation(background-color);
+          background-color: $hover-color;
+        }
+
+        &:active::after {
+          @include animation(background-color);
+          background-color: darken($hover-color, 10%);
+        }
+      }
+
+      &.btn-icon-solid {
+        @include animation(background-color);
+        background-color: $value;
+        border-color: transparent;
+
+        &,
+        &:not(:disabled):not(.disabled) > i {
+          color: $color-neutral-white;
+        }
+
+        &.btn-icon-glow:not(:disabled):not(.disabled) {
+          &:hover::after {
+            @include animation(background-color);
+            background-color: darken($value, 10%);
+          }
+
+          &:active::after {
+            @include animation(background-color);
+            background-color: darken($value, 15%);
+          }
+        }
+      }
+    }
+
+    // Fix active and disabled state from regular buttons
+    &.btn-#{$color} {
+      &:not(:disabled):not(.disabled):active,
+      &.disabled,
+      &:disabled {
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &-shade {
+    @include animation(background-color);
+    background-color: $color-neutral-light;
+    transform: scale(1);
+  }
+}

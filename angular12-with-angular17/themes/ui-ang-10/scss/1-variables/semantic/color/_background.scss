@@ -1,0 +1,124 @@
+////
+/// Colors (global)
+/// @group 1-variables/semantic/color/background
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the background primary subtle color
+$color-background-primary-subtle: $color-light-info-lightest;
+
+/// Configures the background primary color
+$color-background-primary: $color-light-primary-default;
+
+/// Configures the background primary pressed color
+$color-background-primary-pressed: $color-light-info-darker;
+
+/// Configures the background primary hovered color
+$color-background-primary-hovered: $color-light-info-darkest;
+
+/// Configures the background secondary subtle color
+$color-background-secondary-subtle: $color-light-secondary-lightest;
+
+/// Configures the background secondary color
+$color-background-secondary: $color-light-secondary-default;
+
+/// Configures the background secondary pressed color
+$color-background-secondary-pressed: $color-light-secondary-darker;
+
+/// Configures the background secondary hovered color
+$color-background-secondary-hovered: $color-light-secondary-darkest;
+
+/// Configures the background accent subtle color
+$color-background-accent-subtle: $color-light-accent-lightest;
+
+/// Configures the background accent  color
+$color-background-accent: $color-light-accent-default;
+
+/// Configures the background accent pressed color
+$color-background-accent-pressed: $color-light-accent-darker;
+
+/// Configures the background accent hovered color
+$color-background-accent-hovered: $color-light-accent-darkest;
+
+/// Configures the background info subtle color
+$color-background-info-subtle: $color-light-info-lightest;
+
+/// Configures the background info color
+$color-background-info: $color-light-info-default;
+
+/// Configures the background info pressed color
+$color-background-info-pressed: $color-light-info-darker;
+
+/// Configures the background info hovered color
+$color-background-info-hovered: $color-light-info-darkest;
+
+/// Configures the background success subtle color
+$color-background-success-subtle: $color-light-success-lightest;
+
+/// Configures the background success  color
+$color-background-success: $color-light-success-default;
+
+/// Configures the background success pressed color
+$color-background-success-pressed: $color-light-success-darker;
+
+/// Configures the background success hovered color
+$color-background-success-hovered: $color-light-success-darkest;
+
+/// Configures the background warning subtle color
+$color-background-warning-subtle: $color-light-warning-lightest;
+
+/// Configures the background warning  color
+$color-background-warning: $color-light-warning-default;
+
+/// Configures the background warning pressed color
+$color-background-warning-pressed: $color-light-warning-darker;
+
+/// Configures the background warning hovered color
+$color-background-warning-hovered: $color-light-warning-darkest;
+
+/// Configures the background danger subtle color
+$color-background-danger-subtle: $color-light-danger-lightest;
+
+/// Configures the background danger color
+$color-background-danger: $color-light-danger-default;
+
+/// Configures the background danger pressed color
+$color-background-danger-pressed: $color-light-danger-darker;
+
+/// Configures the background danger hovered color
+$color-background-danger-hovered: $color-light-danger-darkest;
+
+/// Configures the surface none color
+$color-background-none: $color-light-neutral-transparent;
+
+/// Configures the surface foundation color
+$color-background-page: $color-light-neutral-lightest;
+
+/// Configures the surface primary color
+$color-background-surface-1: $color-light-neutral-white;
+
+/// Configures the surface primary hovered color
+$color-background-surface-1-hovered: $color-light-neutral-light;
+
+/// Configures the surface primary pressed color
+$color-background-surface-1-pressed: $color-light-neutral-grey;
+
+/// Configures the surface secondary color
+$color-background-surface-2: $color-light-neutral-lightest;
+
+/// Configures the surface secondary hovered color
+$color-background-surface-2-hovered: $color-light-neutral-light;
+
+/// Configures the surface secondary pressed color
+$color-background-surface-2-pressed: $color-light-neutral-grey;
+
+/// Configures the background disabled color
+$color-background-disabled: $color-light-neutral-grey;
+
+/// Configures the background shimmer color
+$color-background-shimmer: $color-light-neutral-light;
+
+/// Configures the background selected color
+$color-background-selected: $color-light-primary-lightest;

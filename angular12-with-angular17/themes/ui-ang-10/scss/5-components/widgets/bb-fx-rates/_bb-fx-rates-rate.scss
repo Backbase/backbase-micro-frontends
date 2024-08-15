@@ -1,0 +1,47 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-fx-rate-label-color: $color-neutral-greyest !default;
+$bb-fx-rate-label-font-size: $font-size-subheader !default;
+$bb-fx-rate-value-color: $color-neutral-greyest !default;
+$bb-fx-rate-value-font-size: $font-size-highlight !default;
+$bb-fx-rate-active-label-color: $color-neutral-dark !default;
+$bb-fx-rate-active-value-color: $color-neutral-black !default;
+
+/// Block of bid or ask values. Include label and value.
+/// Highlight active block by different color.
+///
+/// @name bb-fx-rate
+///
+/// @example html
+///   <div class="bb-fx-rate" [ngClass]="{'bb-fx-rate--active': order}">
+///     <div class="bb-fx-rate__label">Bid</div>
+///     <h5 class="bb-fx-rate__value">{{hostRef.bid | number:'1.0-8'}}</h5>
+///   </div>
+.bb-fx-rate__label {
+  color: $bb-fx-rate-label-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $bb-fx-rate-label-font-size;
+  line-height: $line-height-base;
+}
+
+.bb-fx-rate__value {
+  margin: 0;
+  color: $bb-fx-rate-value-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $bb-fx-rate-value-font-size;
+  line-height: $line-height-base;
+}
+
+.bb-fx-rate--active {
+  .bb-fx-rate__label {
+    color: $bb-fx-rate-active-label-color;
+  }
+
+  .bb-fx-rate__value {
+    color: $bb-fx-rate-active-value-color;
+  }
+}

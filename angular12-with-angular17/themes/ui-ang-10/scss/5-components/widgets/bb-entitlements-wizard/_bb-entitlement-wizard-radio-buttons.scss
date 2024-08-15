@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$entitlement-wizard-radio-button-max-width: 280px !default;
+$entitlement-wizard-selected-radio-button-color: $color-neutral-white !default;
+$entitlement-wizard-disabled-radio-button-opacity: 0.5 !default;
+
+/// Styles for Entitlement Wizard Custom Radio Buttons
+/// This component visually represent the custom radio options to select
+///
+/// @name bb-wizard-radio-buttons
+///
+/// @example html
+/// <div class="bb-wizard-radio-buttons row">
+///   <div class="bb-wizard-radio-buttons__col col-lg-12 col-xl-6 bb-block bb-block--xl">
+///     <div class="bb-wizard-radio-buttons__option bb-card bb-card--highlight h-100" >
+///       <div class="bb-card__body">
+///         <div class="bb-stack bb-stack--density-md bb-stack--align-top">
+///           <!-- Template -->
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-wizard-radio-buttons {
+  &__col {
+    @include media-breakpoint-up(xl) {
+      max-width: $entitlement-wizard-radio-button-max-width;
+    }
+  }
+
+  &__option {
+    &:not(.disabled) {
+      cursor: pointer;
+    }
+
+    &.selected {
+      i,
+      h5,
+      p,
+      span,
+      button {
+        color: $entitlement-wizard-selected-radio-button-color;
+      }
+    }
+
+    &.disabled {
+      box-shadow: none;
+
+      .bb-card__body {
+        opacity: $entitlement-wizard-disabled-radio-button-opacity;
+      }
+    }
+  }
+}

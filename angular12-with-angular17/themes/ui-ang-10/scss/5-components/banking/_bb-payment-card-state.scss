@@ -1,0 +1,57 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// Greys out a payment card and displays an icon on top of it, indicating its status.
+///
+/// @name bb-payment-card-state
+///
+/// @example html
+///   <div class="bb-payment-card-state">
+///     <div class="bb-payment-card-state__container">
+///       <i aria-hidden="true" class="bb-payment-card-state__icon bb-icon bb-icon-not-interested bb-icon--xxl bb-icon--white"></i>
+///       <span class="bb-payment-card-state__label badge badge-secondary">Deactivated</span>
+///     </div>
+///     <div class="bb-payment-card-state__overlay">
+///       <div class="bb-payment-card">
+///         <div class="bb-payment-card__container"></div>
+///       </div>
+///     </div>
+///   </div>
+.bb-payment-card-state {
+  position: relative;
+}
+
+.bb-payment-card-state__container {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: $payment-card-min-width;
+  max-width: $payment-card-max-width;
+  height: 100%;
+  color: $color-neutral-white;
+}
+
+.bb-payment-card-state__overlay::after {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  display: block;
+  width: 100%;
+  min-width: $payment-card-min-width;
+  max-width: $payment-card-max-width;
+  height: 100%;
+  background-color: rgba($color-neutral-black, 0.6);
+  border-radius: $payment-card-border-radius;
+  content: "";
+}
+
+.bb-payment-card-state__icon {
+  margin-bottom: $spacer-sm;
+}

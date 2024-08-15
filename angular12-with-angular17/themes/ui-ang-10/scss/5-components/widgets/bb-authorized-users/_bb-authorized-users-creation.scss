@@ -1,0 +1,48 @@
+$authorized-users-disclaimer-padding: $sizer !default;
+$authorized-users-highlight-color: $color-primary !default;
+$authorized-users-terms-color: $color-neutral-dark !default;
+$authorized-users-terms-background-color: $color-neutral-lightest !default;
+$authorized-users-terms-padding: $sizer-sm !default;
+$authorized-users-terms-border-color: $color-neutral-grey !default;
+$authorized-users-terms-border-radius: $border-radius-sm !default;
+$authorized-users-terms-content-height: $sizer-xxl * 5 !default;
+$authorized-users-permission-card-color: $color-neutral-dark !default;
+$authorized-users-permission-card-background-color: $color-neutral-lightest !default;
+
+.bb-authorized-users-permission-card {
+  cursor: pointer;
+}
+
+.bb-authorized-users-permission-card--selected {
+  border: 2px solid $authorized-users-highlight-color;
+}
+
+.bb-authorized-users-permission-card--disabled {
+  color: $authorized-users-permission-card-color;
+  background-color: $authorized-users-permission-card-background-color;
+
+  .bb-authorized-user-permission-card__radio {
+    visibility: hidden;
+  }
+}
+
+.bb-authorized-users-permission-card__disclaimer {
+  padding-block-start: $authorized-users-disclaimer-padding;
+  color: $authorized-users-highlight-color;
+  text-align: center;
+}
+
+.bb-authorized-users-stepper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bb-authorized-users-terms {
+  height: $authorized-users-terms-content-height;
+  padding: $authorized-users-terms-padding;
+  overflow-y: auto;
+  color: $authorized-users-terms-color;
+  background-color: $authorized-users-terms-background-color;
+  border: 1px solid $authorized-users-terms-border-color;
+  border-radius: $authorized-users-terms-border-radius;
+}

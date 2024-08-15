@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-order-header {
+  padding: $sizer;
+  &:hover {
+    text-decoration: none;
+    background-color: $portfolio-trading-background-color-neutral;
+  }
+}

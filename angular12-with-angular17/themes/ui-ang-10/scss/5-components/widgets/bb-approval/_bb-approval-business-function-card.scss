@@ -1,0 +1,56 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$business-function-card-sizer: $sizer-md !default;
+$business-functions-card-color: $color-neutral-black !default;
+$business-functions-card-background-color: $color-neutral-lightest !default;
+$business-functions-card-font-size: $font-size-table-default !default;
+$business-functions-card-list-max-height: 8rem !default;
+
+/// Block for displaying list of business function names
+///
+/// @name bb-business-functions-card
+///
+/// @example html
+///   <div class="bb-business-functions-card">
+///      <h3 class="bb-business-functions-card__title">Business functions selected (2)</div>
+///      <ul class="bb-business-functions-card__list bb-business-function-card__list--scrollable">
+///        <li>Manage Service Agreements</li>
+///        <li>SEPA CT</li>
+///      </ul>
+///    </div>
+
+.bb-business-functions-card {
+  margin-bottom: $spacer-md;
+  padding-top: $business-function-card-sizer;
+  padding-bottom: $business-function-card-sizer;
+  padding-left: $business-function-card-sizer;
+  color: $business-functions-card-color;
+  font-size: $business-functions-card-font-size;
+  line-height: $line-height-base;
+  background-color: $business-functions-card-background-color;
+  border-radius: $border-radius;
+}
+
+.bb-business-functions-card__title {
+  margin-bottom: 0;
+  padding-right: $business-function-card-sizer;
+  color: $business-functions-card-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $business-functions-card-font-size;
+  line-height: $line-height-base;
+}
+
+.bb-business-functions-card__list {
+  margin-top: $spacer-xs;
+  margin-bottom: 0;
+  padding-right: $business-function-card-sizer;
+}
+
+.bb-business-function-card__list--scrollable {
+  max-height: $business-functions-card-list-max-height;
+  overflow: auto;
+}

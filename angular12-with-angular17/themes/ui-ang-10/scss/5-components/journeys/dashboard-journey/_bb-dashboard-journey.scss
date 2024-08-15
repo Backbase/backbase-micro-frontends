@@ -1,0 +1,65 @@
+/// Adds classes for a dashboard journey in productised applications.
+/// This journey is in work for business, but potentially would be used in retail.
+
+.bb-dashboard-journey__balance-details {
+  &__row-container {
+    gap: $sizer-sm;
+    &:not(:last-child) {
+      border-bottom: $color-neutral-light $border-width $border-style;
+    }
+  }
+}
+
+.bb-dashboard-journey__total-balances {
+  &__detailed-info {
+    position: absolute;
+    z-index: $zindex-dropdown;
+    top: 100%;
+    max-width: 100%;
+    margin-top: -$sizer-sm;
+    padding: $sizer-sm;
+    border-radius: $sizer-sm;
+    opacity: 0;
+    transition: opacity $motion-delay-default;
+    display: block;
+    visibility: hidden;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__list-container {
+    .bb-dashboard-journey__total-balances__balance-container {
+      transition: opacity $motion-delay-default;
+    }
+
+    &__separator {
+      height: $sizer-xxxl;
+      border-right: $color-neutral-light $border-width $border-style;
+    }
+  }
+
+  &__balance-container {
+    &:not(:last-of-type) {
+      bb-balance {
+        padding-right: $sizer-lg;
+      }
+    }
+
+    &:not(:first-of-type) {
+      bb-balance {
+        padding-left: $sizer-lg;
+      }
+    }
+  }
+}
+
+.bb-quick-actions-button__groups-separator {
+  border-bottom: $color-neutral-light $border-width $border-style;
+}

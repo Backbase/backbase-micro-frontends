@@ -1,0 +1,78 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$manual-batches-type-select-btn-width: 186px !default;
+$manual-batches-type-select-height: 92px !default;
+$manual-batches-type-select-bg-color: $color-neutral-light !default;
+$manual-batches-type-select-selected-bg-color: $color-primary !default;
+$manual-batches-type-select-hover-text-color: #fff !default;
+$manual-batches-type-select-hover-bg-color: $color-primary-darkest !default;
+
+bb-batch-template-select-button {
+  height: 100%;
+}
+
+.manual-batches-type-select {
+  width: 100%;
+  height: $manual-batches-type-select-height;
+}
+
+.manual-batches-type-select__card-menu {
+  margin: -$spacer-sm;
+  padding: $spacer-sm;
+}
+
+.manual-batches-type-select__button {
+  width: $manual-batches-type-select-btn-width;
+  height: 100%;
+  padding: $sizer-md;
+  background-color: $manual-batches-type-select-bg-color;
+  border-radius: $border-radius;
+
+  &.selected {
+    color: $manual-batches-type-select-hover-text-color;
+    background-color: $manual-batches-type-select-selected-bg-color;
+    cursor: default;
+  }
+
+  &:hover:not(.manual-batches-type-select__button.selected) {
+    color: $manual-batches-type-select-hover-text-color;
+    background-color: $manual-batches-type-select-hover-bg-color;
+  }
+
+  &:focus {
+    border-color: $manual-batches-type-select-selected-bg-color;
+    outline: 3px solid $manual-batches-type-select-selected-bg-color;
+    outline-offset: 4px;
+    box-shadow: none;
+  }
+}
+
+.manual-batches-type-select__button-group {
+  height: 100%;
+
+  & > .manual-batches-type-select__button {
+    width: auto;
+    max-width: $manual-batches-type-select-btn-width;
+  }
+
+  & > .manual-batches-type-select__button:first-child:not(:last-child) {
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  & > .manual-batches-type-select__button:last-child:not(:first-child) {
+    border-left: 1px solid #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.manual-batches-type-select__separator {
+  width: 1px;
+  height: 100%;
+  border-left: $border;
+}

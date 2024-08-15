@@ -1,0 +1,69 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access public
+////
+
+// Configure the vertical spacing for filter container
+$positive-pay-filter-container-lg-spacer: $spacer-lg;
+
+// Configure the horizontal sizing for filter container media breakpoints
+$positive-pay-filter-container-sizer: $sizer;
+
+// Configure the horizontal sizing for filter container media breakpoints
+$positive-pay-filter-container-lg-sizer: $sizer-lg;
+
+// Configure the horizontal sizing for filter container media breakpoints
+$positive-pay-filter-container-xl-sizer: $sizer-xl;
+
+// Configure the horizontal spacing for filter container
+$positive-pay-filter-container-xl-spacer: $spacer-xl;
+
+// Configure the background color for filter container
+$positive-pay-filter-container-color: $color-neutral-lighter;
+
+/// Configure the spacing for amount range filter field
+$positive-pay-amount-range-md-sizer: $sizer-md !default;
+
+/// @example html
+/// <div class="bb-positive-pay-filter-container">
+///   <div class="bb-d-sm-block bb-d-md-flex bb-positive-pay-amount-range">
+///     <div class="bb-positive-pay-amount-range__min">
+///       <input type="number" [formControl]="min"></bb-input-number-ui>
+///     </div>
+///     <div class="bb-positive-pay-amount-range__max">
+///       <input type="number" [formControl]="max"></bb-input-number-ui>
+///     </div>
+///   <div>
+///  </div>
+/// </div>
+///
+
+.bb-positive-pay-filter-container {
+  padding: $positive-pay-filter-container-lg-spacer $positive-pay-filter-container-xl-spacer;
+  background-color: $positive-pay-filter-container-color;
+
+  @include media-breakpoint-down(sm) {
+    margin-inline: -$positive-pay-filter-container-sizer;
+    padding-inline: $positive-pay-filter-container-sizer;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-inline: -$positive-pay-filter-container-lg-sizer;
+    padding-inline: $positive-pay-filter-container-lg-sizer;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-inline: -$positive-pay-filter-container-xl-sizer;
+    padding-inline: $positive-pay-filter-container-xl-sizer;
+  }
+}
+
+.bb-positive-pay-amount-range__min {
+  margin-right: 0;
+  margin-bottom: $positive-pay-amount-range-md-sizer;
+  @include media-breakpoint-up(md) {
+    margin-right: $positive-pay-amount-range-md-sizer;
+    margin-bottom: 0;
+  }
+}

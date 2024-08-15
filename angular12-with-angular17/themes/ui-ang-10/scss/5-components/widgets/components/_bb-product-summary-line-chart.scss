@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+/// @name bb-product-summary-line-chart
+///
+/// @example
+/// <div class="bb-product-summary-line-chart-tooltip">
+/// <div data-role="tooltip-header">Jul 2, 2017</div>
+/// </div>
+
+$product-summary-line-chart-tooltip-spacing: $spacer-xs !default;
+$product-summary-line-chart-tooltip-font-size: $font-size-subheader !default;
+
+.bb-product-summary-line-chart__tooltip {
+  padding: $product-summary-line-chart-tooltip-spacing;
+  font-size: $product-summary-line-chart-tooltip-font-size;
+}

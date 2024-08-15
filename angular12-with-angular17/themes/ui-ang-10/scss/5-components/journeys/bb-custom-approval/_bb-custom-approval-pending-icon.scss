@@ -1,0 +1,14 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+.custom-approval-pending-icon {
+  display: flex;
+  width: $sizer-xl;
+  height: $sizer-xl;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-warning;
+}

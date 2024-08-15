@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-new-sweep-btn__text {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: inline;
+  }
+}

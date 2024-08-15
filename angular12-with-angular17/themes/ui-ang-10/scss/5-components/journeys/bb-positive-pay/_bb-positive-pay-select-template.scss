@@ -1,0 +1,19 @@
+// Configure styles for select template modal
+////
+/// @group journey-specific
+/// @access public
+////
+
+// Configure the max height of select template list
+$positive-pay-select-template-list-max-height: 19rem !default;
+// Configure the color of active element in select template list
+$positive-pay-select-template-list-item-active: $color-neutral-grey-light !default;
+
+.positive-pay-select-template-list {
+  max-height: $positive-pay-select-template-list-max-height;
+  overflow: auto;
+}
+
+.positive-pay-select-template-list-item--active {
+  background-color: $positive-pay-select-template-list-item-active;
+}

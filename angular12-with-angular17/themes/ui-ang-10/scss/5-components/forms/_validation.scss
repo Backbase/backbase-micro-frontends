@@ -1,0 +1,60 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.form-control[type="tel"],
+.form-control[type="text"],
+.form-control[type="number"],
+.form-control[type="email"],
+.form-control[type="password"],
+.form-control[type="button"] {
+  &.ng-touched.ng-invalid {
+    border: $input-invalid-border;
+  }
+}
+
+bb-input-password-ui,
+bb-input-datepicker-ui,
+bb-search-box-ui {
+  &.ng-touched.ng-invalid {
+    .btn,
+    .btn:not(.disabled):not(:disabled):hover,
+    .btn:not(.disabled):not(:disabled):focus,
+    .btn:not(.disabled):not(:disabled).focus {
+      &:not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(
+          .invalid-feedback
+        ) {
+        border-color: $input-invalid-border-color;
+      }
+    }
+  }
+}
+
+bb-currency-amount-selector {
+  &.ng-touched.ng-invalid {
+    bb-currency-selector .form-control {
+      border-color: $input-invalid-border-color;
+    }
+  }
+}
+
+bb-amount-input-ui,
+bb-currency-selector,
+bb-input-password-ui {
+  &.ng-touched.ng-invalid {
+    .form-control {
+      border-color: $input-invalid-border-color;
+    }
+  }
+}
+
+bb-payord-debit-account-selector {
+  .ng-touched.ng-invalid {
+    .bb-form-field {
+      border: $border-width $border-style $input-invalid-border-color;
+      border-radius: $border-radius;
+    }
+  }
+}

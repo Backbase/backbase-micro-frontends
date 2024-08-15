@@ -1,0 +1,29 @@
+////
+/// @group 5-components/structure/bb-tabs-container
+/// @access public
+////
+
+/// @require {variable} spacer-xl
+$tabs-container-tabs-margin: $spacer-xl !default;
+
+/// Adds bottom spacing towards the elements below the tabs
+///
+/// @require {variable} tabs-container-tabs-margin
+/// @example html
+///   <div class="bb-tabs-container">
+///     <div class="bb-tabs-container__tabs">
+///       <bb-tab-group-ui [initialSelection]="0" (select)="onTabSelect($event)" (click)="onClick($event)">
+///         <bb-tab-ui>First</bb-tab-ui>
+///         <bb-tab-ui>Second</bb-tab-ui>
+///         <bb-tab-ui>Third</bb-tab-ui>
+///       </bb-tab-group-ui>
+///     </div>
+///     <div class="tab-main-content">
+///       <div data-role="first-tab" *ngIf="index === 0">First tab content here</div>
+///       <div data-role="second-tab" *ngIf="index === 1">Second tab content here</div>
+///       <div data-role="third-tab" *ngIf="index === 2">Third tab content here</div>
+///     </div>
+///   </div>
+.bb-tabs-container__tabs {
+  margin-block-end: $tabs-container-tabs-margin;
+}

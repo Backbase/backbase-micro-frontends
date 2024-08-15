@@ -1,0 +1,29 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$form-control-disabled-color: $color-text-disabled;
+$form-control-disabled-placeholder-color: $color-neutral-greyest;
+
+.form-control:disabled,
+.form-control[readonly] {
+  color: $input-disabled-color;
+
+  &::-webkit-input-placeholder {
+    color: $form-control-disabled-placeholder-color;
+  }
+
+  &:-moz-placeholder {
+    color: $form-control-disabled-placeholder-color;
+  }
+
+  &::-moz-placeholder {
+    color: $form-control-disabled-placeholder-color;
+  }
+
+  &::-ms-input-placeholder {
+    color: $form-control-disabled-placeholder-color;
+  }
+}

@@ -1,0 +1,79 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$favorite-accounts-spacer-vertical: $spacer-lg !default;
+$favorite-accounts-title-color: $color-neutral-white !default;
+$favorite-accounts-card-spacer-vertical: $spacer !default;
+$favorite-accounts-loader-min-height: 14.62rem !default;
+
+/// A list of favorite accounts. They us the same bb-accounts-overview__cards components,
+/// except it doesn't wrap items. It will display horizontal scroll.
+///
+/// @name bb-account-favorites
+///
+/// @example html
+/// <div class="bb-block bb-block--md bb-account-favorites" style="background-color: blue">
+///   <h2 class="bb-block bb-block--md bb-account-favorites__title">Favorites (1)</h2>
+///   <div class="bb-stack bb-accounts-favorite__card-list">
+///     <div class="bb-stack__item bb-account-favorites__card">
+///       <div class="card bb-accounts-investment-account">
+///         <div class="card-body">
+///           <div class="bb-product-item-card">
+///             <div class="bb-product-item-card__header">
+///               <div class="bb-product-item-card__kind">
+///                 <span class="bb-text-bold bb-product-item-card__kind-text">Investment Account</span>
+///               </div>
+///             </div>
+///             <div class="bb-product-item-card__body">
+///                 <div>
+///                   <div class="bb-product-item-card__name">Mrs J. Smith Execution only portfolio</div>
+///                 </div>
+///                 <div class="bb-account-info__product-number">SI08 9651 4176 1504 424</div>
+///             </div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-account-favorites {
+  margin-top: $favorite-accounts-spacer-vertical;
+}
+
+.bb-account-favorites__title {
+  color: $favorite-accounts-title-color;
+}
+
+.bb-account-favorites__card-list {
+  overflow: auto;
+}
+
+.bb-account-favorites__card {
+  @extend .bb-accounts-overview-grid__card;
+  margin-bottom: $favorite-accounts-card-spacer-vertical;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+/// Block containing the loader component with some default min-height
+///
+/// @name bb-accounts-favorites-loader
+///
+/// @example html
+/// <div class="bb-account-favorites-loader">
+/// <bb-loading-indicator-ui text="Loading Accounts"></bb-loading-indicator-ui>
+/// </div>
+
+.bb-account-favorites-loader {
+  min-height: $favorite-accounts-loader-min-height;
+}

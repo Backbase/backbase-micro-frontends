@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group elements
+/// @access private
+////
+
+@import "../../../bootstrap5/scss/maps";
+@import "../../../bootstrap5/scss/root";
+
+// This piece of code was moved from Bootstrap 4.6, since it was removed in Bootstrap 5.
+// These CSS variables are used by MediaQueryService from `@backbase/ui-ang/layout`
+:root {
+  @each $bp, $value in $grid-breakpoints {
+    --breakpoint-#{$bp}: #{$value};
+  }
+}

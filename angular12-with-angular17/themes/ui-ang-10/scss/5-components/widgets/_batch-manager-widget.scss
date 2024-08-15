@@ -1,0 +1,99 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.batch-manager--table {
+  margin-bottom: $spacer-md;
+}
+
+.batch-manager__table--header {
+  vertical-align: middle;
+}
+
+.batch-manager__table--status {
+  text-align: left;
+}
+
+.batch-manager__table--name {
+  font-weight: $font-weight-semi-bold;
+}
+
+.batch-manager__table--file {
+  color: $color-neutral-dark;
+}
+
+.batch-manager__table--icon-header {
+  width: 0;
+}
+
+.batch-manager__table--your-account {
+  text-align: left;
+}
+
+.batch-manager__table--account {
+  color: $color-neutral-dark;
+}
+
+.batch-manager__table--amount {
+  font-weight: $font-weight-semi-bold;
+  text-align: right;
+}
+
+.batch-manager__table--credits {
+  text-align: right;
+}
+
+.batch-manager__table--date {
+  text-align: right;
+}
+
+.batch-manager__table--tools {
+  width: 1%;
+  text-align: right;
+}
+
+.batch-manager__button--reject {
+  margin: 0 $spacer-sm;
+}
+
+.batch-manager__table--tools-small {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.batch-manager__table-tools-button {
+  width: 50%;
+  padding-right: $spacer-sm;
+}
+
+.batch-manager__table-tools-button + .batch-manager__table-tools-button {
+  padding-right: 0;
+  padding-left: $spacer-sm;
+}
+
+.batch-manager-stack--reverse {
+  @include media-breakpoint-down(sm) {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+.batch-manager-confidential-icon__wrapper {
+  padding-top: $spacer * 4;
+  overflow: hidden;
+}
+
+.batch-manager-confidential-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $spacer * 2.5;
+  background-color: $color-neutral-grey;
+  padding: $spacer-sm $spacer * 1.25;
+  color: $color-neutral-black;
+  font-size: $font-size-base;
+}

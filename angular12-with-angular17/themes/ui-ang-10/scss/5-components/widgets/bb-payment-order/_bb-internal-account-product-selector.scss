@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-internal-account-selector
+
+.bb-internal-account-selector__subheader {
+  width: 100%;
+  padding: $spacer-lg $spacer-xl 0;
+  outline: none;
+}
+
+.bb-internal-account-selector__product-selector {
+  .bb-product-selector__item-content {
+    overflow: hidden;
+  }
+}

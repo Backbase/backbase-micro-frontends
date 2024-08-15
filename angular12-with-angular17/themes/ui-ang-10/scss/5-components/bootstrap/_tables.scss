@@ -1,0 +1,320 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+$small-table-col-margin: 120px !default;
+$table-heading-sortable-right-padding: $sizer-xxl !default;
+$table-heading-icon-right-position: -($spacer-xl) !default;
+$table-row-background-selected: $color-neutral-light !default;
+$table-heading-border-bottom: $border-width $border-style $color-neutral-grey !default;
+
+$table-row-focus-state-color: rgba($color-primary, 1) !default;
+$table-row-first-child-focus-box-shadow: inset 0px 3px 0px 0px $table-row-focus-state-color,
+  inset 0px -3px 0px 0px $table-row-focus-state-color,
+  inset 3px 0px 0px 0px $table-row-focus-state-color !default;
+
+$table-row-middle-child-focus-box-shadow: inset 0px 3px 0px 0px $table-row-focus-state-color,
+  inset 0px -3px 0px 0px $table-row-focus-state-color !default;
+
+$table-row-last-child-focus-box-shadow: inset 0px 3px 0px 0px $table-row-focus-state-color,
+  inset 0px -3px 0px 0px $table-row-focus-state-color,
+  inset -3px 0px 0px 0px $table-row-focus-state-color !default;
+
+$table-heading-focus-shadow: 0 0 0 $btn-focus-width $table-row-focus-state-color inset !default;
+$table-responsive-breakpoint: md !default;
+
+@import "../../../../bootstrap5/scss/tables";
+
+.table-responsive > .table {
+  // if max-width is set to 100%,
+  // safari counts table width to be the width of container.
+  // If table contains sticky columns (not scrollable horizontally),
+  // they start to move after table is scrolled (width of container)px.
+  @include safari-browsers-only {
+    max-width: inherit;
+  }
+}
+
+.table {
+  font-size: $table-font-size;
+
+  :not(caption) > * > td {
+    // preserve styles for table-in-table by
+    // overriding Bootstrap 5 https://github.com/twbs/bootstrap/blob/main/scss/_tables.scss#L31
+    // issue mentioned in https://github.com/backbase-rnd/bat-batch-frontend-ang/pull/20#issuecomment-1346175811
+    border-bottom-width: 0;
+  }
+
+  thead {
+    border-bottom: $table-heading-border-bottom;
+
+    tr {
+      border-top: none;
+    }
+
+    th {
+      padding: $table-heading-padding-vertical $table-heading-padding-horizontal;
+      font-size: $font-size-table-header;
+      font-weight: $font-weight-semi-bold;
+      vertical-align: middle;
+      border: none;
+
+      &.sortable {
+        white-space: nowrap;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-neutral-lighter;
+        }
+
+        &.asc,
+        &.desc {
+          padding-right: $table-heading-sortable-right-padding;
+        }
+
+        &:focus {
+          outline: 0;
+          box-shadow: $table-heading-focus-shadow;
+        }
+
+        .th-content {
+          position: relative;
+
+          [aria-hidden="true"]::before {
+            /* stylelint-disable-next-line */
+            @extend .bb-icon;
+
+            position: absolute;
+            right: $table-heading-icon-right-position;
+          }
+        }
+
+        &.asc .th-content [aria-hidden="true"]::before,
+        &.asc .th-content [aria-hidden="true"]::before:hover {
+          /* stylelint-disable-next-line */
+          @extend .bb-icon-caret-up;
+        }
+
+        &.desc .th-content [aria-hidden="true"]::before,
+        &.desc .th-content [aria-hidden="true"]::before:hover {
+          /* stylelint-disable-next-line */
+          @extend .bb-icon-caret-down;
+        }
+
+        .th-dropdown-menu {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: block;
+          & > .bb-dropdown-btn-group-wrapper {
+            height: 100%;
+            & > .btn:focus {
+              box-shadow: $table-heading-focus-shadow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    & > tr {
+      & > th {
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+
+        display: block;
+        border-top: 0;
+      }
+    }
+    & > tr:last-child > * {
+      border-bottom: unset;
+    }
+  }
+
+  td {
+    padding: $table-cell-padding-vertical $table-heading-padding-horizontal;
+    vertical-align: middle;
+    border-top: unset;
+    &.bb-table__cell--no-space-right {
+      padding-right: 0;
+    }
+  }
+
+  tr {
+    border-top: $table-border-width solid $table-border-color;
+    &:first-child {
+      border-top: unset;
+    }
+
+    &.selected {
+      &:not(:hover) {
+        td {
+          background-color: $table-row-background-selected;
+        }
+      }
+    }
+    &[tabindex="-1"]:focus {
+      outline: 0 !important;
+    }
+
+    &.active:focus {
+      outline: 0;
+
+      td {
+        box-shadow: $table-row-middle-child-focus-box-shadow;
+
+        &:first-child {
+          box-shadow: $table-row-first-child-focus-box-shadow;
+        }
+
+        &:last-child {
+          box-shadow: $table-row-last-child-focus-box-shadow;
+        }
+      }
+
+      th {
+        &:first-child {
+          + td {
+            box-shadow: $table-row-first-child-focus-box-shadow;
+          }
+        }
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: $table-heading-focus-shadow;
+  }
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-responsive-clipping-off {
+  overflow: visible;
+}
+
+@include media-breakpoint-down($table-responsive-breakpoint) {
+  .table-responsive {
+    overflow: hidden;
+    border: 0;
+
+    .table {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+
+        td {
+          @include clearfix;
+          display: block;
+          padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
+          text-align: left;
+
+          input {
+            float: left;
+          }
+        }
+
+        td::before {
+          float: left;
+          width: $small-table-col-margin;
+          color: $color-neutral-darkest;
+          font-weight: $headings-font-weight;
+          content: attr(data-label);
+        }
+
+        td:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      tr {
+        display: block;
+        border-color: $color-neutral-lighter;
+        border-bottom: $border-width $border-style $border-color;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        td {
+          white-space: normal;
+          text-align: left;
+
+          // cell with icons and button
+          &.control-container {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            & .btn {
+              line-height: inherit;
+            }
+          }
+        }
+
+        &.active:focus {
+          outline: 0;
+
+          td {
+            box-shadow: none;
+
+            &:first-child {
+              box-shadow: none;
+            }
+
+            &:last-child {
+              box-shadow: none;
+            }
+          }
+
+          th {
+            &:first-child {
+              + td {
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Used to wrap the table cell content. Adds a left marging to the stacked data on responsive view
+    .table-small {
+      margin-left: $small-table-col-margin;
+    }
+
+    // Makes the button group span to 100% of the available width on responsive view
+    .btn-group {
+      width: 100%;
+
+      button {
+        line-height: $font-size-sm * 2;
+      }
+
+      // Tooltip text is in one line
+      .tooltip-inner {
+        max-width: none;
+        white-space: nowrap;
+      }
+    }
+
+    // Forces the default table font-size on responsive view
+    > .table-font-xs {
+      font-size: $font-size-base;
+    }
+  }
+}

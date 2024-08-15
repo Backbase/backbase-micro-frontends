@@ -1,0 +1,9 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+.nav-tabs {
+  @extend .bb-tabs-container__tabs;
+}

@@ -1,0 +1,50 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$saving-goals-success-image-size: 36% !default;
+$saving-goals-invalid-font-size: $font-size-subheader !default;
+$saving-goals-success-color: $color-success !default;
+$saving-goals-hint-text: $color-neutral-dark !default;
+
+.bb-saving-goals__form {
+  padding-block: 0;
+  padding-inline: $sizer-xl;
+
+  @include media-breakpoint-up(sm) {
+    max-width: $sizer * 27.5;
+    margin-inline: auto;
+    margin-block-start: 0;
+    margin-block-end: $spacer-xl;
+  }
+}
+
+.bb-saving-goals__steps {
+  max-width: 75%;
+  margin-block: $spacer-md;
+  margin-inline: auto;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 40%;
+    margin-block: $spacer-xl;
+    margin-inline: auto;
+  }
+}
+
+.bb-saving-goals__invalid-text {
+  font-size: $saving-goals-invalid-font-size;
+}
+
+.bb-saving-goals__hint-text {
+  color: $saving-goals-hint-text;
+}
+
+.bb-saving-goals__success-icon {
+  width: $saving-goals-success-image-size;
+  margin-block-start: $saving-goals-success-image-size * -0.5;
+  margin-block-end: $spacer-lg;
+  background: $saving-goals-success-color;
+  border-radius: $border-radius-circle;
+}

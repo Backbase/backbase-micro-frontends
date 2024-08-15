@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.fx-rates-account-selector--invalid .ng-select-container {
+  border: 1px solid $form-feedback-invalid-color;
+}
+
+// need for making full width for button inside bb-load-button-ui
+.bb-fx-rates-trade-order-modal__load-button {
+  .bb-load-button {
+    width: 100%;
+  }
+}

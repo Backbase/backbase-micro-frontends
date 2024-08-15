@@ -1,0 +1,165 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.snow.css";
+
+$bb-rich-text-editor-content-height: 100px !default;
+$bb-rich-text-editor-content-placeholder-color: $input-placeholder-color !default;
+$bb-rich-text-editor-content-border-color: $color-neutral-grey !default;
+$bb-rich-text-editor-content-invalid-border: $input-invalid-border !default;
+$bb-rich-text-editor-content-focus-border-color: $input-focus-border-color !default;
+$bb-rich-text-editor-content-btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$bb-rich-text-editor-char-counter-color: $color-neutral-dark !default;
+$bb-rich-text-editor-char-counter-margin-top: $spacer-sm !default;
+$bb-rich-text-editor-toolbar-separator-width: $spacer-lg !default;
+$bb-rich-text-editor-input-font-size: $font-size-base !default;
+$bb-rich-text-editor-list-side-margin: $sizer-lg !default;
+
+bb-rich-text-editor-ui {
+  .form-control:focus,
+  &.is-focused .form-control,
+  &:focus-visible .form-control {
+    box-shadow: unset;
+    border-color: $bb-rich-text-editor-content-border-color;
+
+    &:not(.is-disabled) {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: $input-focus-outline-distance * 2;
+        right: $input-focus-outline-distance * 2;
+        bottom: $input-focus-outline-distance * 2;
+        left: $input-focus-outline-distance * 2;
+        border: $input-focus-border-primary;
+        border-radius: inherit;
+        content: "";
+      }
+    }
+  }
+
+  .form-control:read-only {
+    background-color: $color-neutral-white;
+  }
+
+  &.ng-invalid.ng-touched:not(.is-focused) .form-control:not(:focus) {
+    border: $bb-rich-text-editor-content-invalid-border;
+  }
+}
+
+html[dir="rtl"] {
+  quill-editor {
+    ul:not(.ql-format-group),
+    ol {
+      padding-right: $bb-rich-text-editor-list-side-margin;
+    }
+    ul > li:not(.ql-format-group_type),
+    ol > li:not(.ql-format-group_type) {
+      padding-right: $bb-rich-text-editor-list-side-margin;
+      text-align: right;
+      direction: rtl;
+    }
+    // for rtl, but to override styles
+    li:not(.ql-direction-rtl, .ql-format-group_type)::before,
+    ol li:not(.ql-direction-rtl, .ql-format-group_type)::before {
+      margin-left: $spacer-xs;
+      margin-right: -$bb-rich-text-editor-list-side-margin;
+    }
+  }
+}
+
+.bb-rich-text-editor {
+  i.flip-horizontal {
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+  quill-editor {
+    border: unset;
+    border-radius: inherit;
+
+    .ql-editor {
+      line-height: inherit;
+      text-align: unset;
+      code {
+        color: $color-neutral-black;
+      }
+    }
+
+    &:focus-visible {
+      outline: unset;
+    }
+
+    .ql-tooltip {
+      display: none;
+    }
+    .ql-snow .ql-editor a {
+      text-decoration: unset;
+    }
+    .ql-container {
+      line-height: inherit;
+      font-family: inherit;
+      font-size: inherit;
+    }
+    .ql-container,
+    .ql-toolbar {
+      border: unset;
+    }
+    .ql-editor.ql-blank {
+      &:before {
+        font-style: normal;
+        font-size: inherit;
+      }
+    }
+    .ql-toolbar {
+      display: flex;
+    }
+    .ql-format-group {
+      display: flex;
+      &:not(:empty):not(:last-of-type) {
+        padding-right: $bb-rich-text-editor-toolbar-separator-width;
+        padding-left: 0;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        i {
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.bb-rich-text-editor__textbox {
+  // Unset `height` for `.form-control`
+  height: auto;
+  padding: unset;
+  &.is-disabled {
+    pointer-events: none;
+  }
+}
+
+.bb-rich-text-editor__char-counter {
+  margin-top: $bb-rich-text-editor-char-counter-margin-top;
+  color: $bb-rich-text-editor-char-counter-color;
+}
+
+.bb-rich-text-editor__content > .ql-container {
+  height: $bb-rich-text-editor-content-height;
+  overflow-y: auto;
+  outline: 0;
+
+  //Placeholder
+  &:empty:not(:focus)::before {
+    display: block; /* For Firefox */
+    color: $bb-rich-text-editor-content-placeholder-color;
+    content: attr(placeholder);
+  }
+}

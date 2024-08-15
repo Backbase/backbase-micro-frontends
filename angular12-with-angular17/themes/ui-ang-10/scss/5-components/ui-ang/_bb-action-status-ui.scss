@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$action-status-height: 1.5rem !default;
+$action-status-width: 1.5rem !default;
+
+.bb-action-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $action-status-width;
+  height: $action-status-height;
+}

@@ -1,0 +1,65 @@
+////
+/// Colors (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --color-primary-lightest: #{$color-primary-lightest};
+  --color-primary-lighter: #{$color-primary-lighter};
+  --color-primary-darker: #{$color-primary-darker};
+  --color-primary-darkest: #{$color-primary-darkest};
+  --color-secondary-lightest: #{$color-secondary-lightest};
+  --color-secondary-lighter: #{$color-secondary-lighter};
+  --color-secondary-darker: #{$color-secondary-darker};
+  --color-secondary-darkest: #{$color-secondary-darkest};
+  --color-accent-lighter: #{$color-accent-lighter};
+  --color-accent-lightest: #{$color-accent-lightest};
+  --color-accent-darker: #{$color-accent-darker};
+  --color-accent-darkest: #{$color-accent-darkest};
+  --color-success-lighter: #{$color-success-lighter};
+  --color-success-lightest: #{$color-success-lightest};
+  --color-success-darker: #{$color-success-darker};
+  --color-success-darkest: #{$color-success-darkest};
+  --color-danger-lighter: #{$color-danger-lighter};
+  --color-danger-lightest: #{$color-danger-lightest};
+  --color-danger-darker: #{$color-danger-darker};
+  --color-danger-darkest: #{$color-danger-darkest};
+  --color-warning-lighter: #{$color-warning-lighter};
+  --color-warning-lightest: #{$color-warning-lightest};
+  --color-warning-darker: #{$color-warning-darker};
+  --color-warning-darkest: #{$color-warning-darkest};
+  --color-info-lighter: #{$color-info-lighter};
+  --color-info-lightest: #{$color-info-lightest};
+  --color-info-darker: #{$color-info-darker};
+  --color-info-darkest: #{$color-info-darkest};
+}
+
+$color-primary-lightest: var(--color-primary-lightest);
+$color-primary-lighter: var(--color-primary-lighter);
+$color-primary-darker: var(--color-primary-darker);
+$color-primary-darkest: var(--color-primary-darkest);
+$color-secondary-lightest: var(--color-secondary-lightest);
+$color-secondary-lighter: var(--color-secondary-lighter);
+$color-secondary-darker: var(--color-secondary-darker);
+$color-secondary-darkest: var(--color-secondary-darkest);
+$color-accent-lighter: var(--color-accent-lighter);
+$color-accent-lightest: var(--color-accent-lightest);
+$color-accent-darker: var(--color-accent-darker);
+$color-accent-darkest: var(--color-accent-darkest);
+$color-success-lighter: var(--color-success-lighter);
+$color-success-lightest: var(--color-success-lightest);
+$color-success-darker: var(--color-success-darker);
+$color-success-darkest: var(--color-success-darkest);
+$color-danger-lighter: var(--color-danger-lighter);
+$color-danger-lightest: var(--color-danger-lightest);
+$color-danger-darker: var(--color-danger-darker);
+$color-danger-darkest: var(--color-danger-darkest);
+$color-warning-lighter: var(--color-warning-lighter);
+$color-warning-lightest: var(--color-warning-lightest);
+$color-warning-darker: var(--color-warning-darker);
+$color-warning-darkest: var(--color-warning-darkest);
+$color-info-lighter: var(--color-info-lighter);
+$color-info-lightest: var(--color-info-lightest);
+$color-info-darker: var(--color-info-darker);
+$color-info-darkest: var(--color-info-darkest);

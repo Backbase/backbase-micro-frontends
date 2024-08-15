@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+.bb-approvals-assign-badge {
+  background-color: $color-neutral-lightest;
+  padding: $spacer-sm;
+  border-radius: $border-radius-sm;
+  width: fit-content;
+  max-width: 20rem;
+
+  &.badge-danger {
+    background-color: $color-danger-lightest;
+  }
+}

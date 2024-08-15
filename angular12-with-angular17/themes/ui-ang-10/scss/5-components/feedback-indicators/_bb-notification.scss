@@ -1,0 +1,169 @@
+// Global annotations
+////
+/// @group feedback-indicators
+/// @access private
+////
+
+$notification-padding: $sizer-lg !default;
+$notification-padding-inline-end: 2 * $sizer-lg !default;
+$notification-background-color: $color-neutral-white !default;
+$notification-border-radius: $border-radius-md !default;
+$notification-box-shadow: $box-shadow-sm !default;
+$notification-title-color: $color-neutral-black !default;
+$notification-title-font-size: $font-size-default !default;
+$notification-title-font-weight: $font-weight-semi-bold !default;
+$notification-body-font-size: $font-size-subtitle !default;
+$notification-close-color: $color-neutral-dark !default;
+$notification-close-right: $sizer-md !default;
+$notification-min-width: 18.75rem !default;
+$notification-max-width: 25rem !default;
+$notifications-badge-focus-box-shaddow: 0 0 0 2px $color-primary !default;
+
+%notification-focus-outline {
+  &:focus {
+    outline: none;
+    box-shadow: $notifications-badge-focus-box-shaddow;
+  }
+}
+
+/// Notifications are used to communicate messages to the user as a direct response to a user action or as a response to
+/// some internal event.  They are usually optional and dismissible.  Note the difference with alerts, which are usually
+/// in the context of a task the user is working on.
+///
+/// Notifications include borders and rounded corners by default, but with `.bb-notification--flush` it is possible to
+/// render them edge-to-edge in a parent container (like a card or bb-list).
+///
+/// @name bb-notification
+///
+/// @example html - default
+///   <div class="bb-notification">
+///     <i class="bb-notification__icon bb-icon bb-icon--danger bb-icon-error"></i>
+///     <div class="bb-notification__body">
+///       <h3 class="bb-notification__title">Notification title</h3>
+///       <div class="bb-text-support">Notification description</div>
+///     </div>
+///   </div>
+///
+/// @example html - dismissible
+///   <div class="bb-notification bb-notification--dismissible">
+///     <i class="bb-notification__icon bb-icon bb-icon--danger bb-icon-error"></i>
+///     <div class="bb-notification__body">
+///       <h3 class="bb-notification__title">Notification title</h3>
+///       <div class="bb-text-support">Notification description</div>
+///     </div>
+///     <button class="bb-notification__close close" type=button">
+///       &cross;
+///     </button>
+///   </div>
+///
+/// @example html - flush
+///   <div class="card">
+///     <div class="bb-list bb-list--flush-md">
+///       <div class="bb-list__item">
+///         <div class="bb-notification bb-notification--flush">
+///           <i class="bb-notification__icon bb-icon bb-icon--danger bb-icon-error"></i>
+///            <div class="bb-notification__body">
+///             <h3 class="bb-notification__title">Alert title</h3>
+///             <div class="bb-text-support">Alert description</div>
+///           </div>
+///         </div>
+///       </div>
+///       <div class="bb-list__item">
+///         <div class="bb-notification bb-notification--flush">
+///           <i class="bb-notification__icon bb-icon bb-icon--danger bb-icon-error"></i>
+///           <div class="bb-notification__body">
+///             <h3 class="bb-notification__title">Alert title</h3>
+///             <div class="bb-text-support">Alert description</div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+.bb-notification {
+  position: relative;
+  display: flex;
+  min-width: $notification-min-width;
+  max-width: $notification-max-width;
+  padding-block: $notification-padding;
+  padding-inline-start: $notification-padding;
+  padding-inline-end: $notification-padding-inline-end;
+  background-color: $notification-background-color;
+  border-radius: $notification-border-radius;
+  box-shadow: $notification-box-shadow;
+  @extend %notification-focus-outline;
+
+  @include media-breakpoint-down(sm) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .bb-button-bar {
+    margin-block-start: $spacer-md;
+  }
+
+  a {
+    @extend %notification-focus-outline;
+  }
+}
+
+.bb-notification__close {
+  position: absolute;
+  inset-block-start: $notification-padding;
+  inset-inline-end: $notification-close-right;
+  padding: $sizer-xs;
+  color: $notification-close-color;
+  font-weight: normal;
+  font-size: 0.9rem;
+  @extend %notification-focus-outline;
+
+  .bb-icon {
+    line-height: initial;
+  }
+}
+
+.bb-notification__title {
+  color: $notification-title-color;
+  font-weight: $notification-title-font-weight;
+  font-size: $notification-title-font-size;
+}
+
+.bb-notification__icon {
+  margin-inline-end: $spacer-sm;
+
+  .bb-icon {
+    line-height: initial;
+  }
+}
+
+.bb-notification__body {
+  width: 100%;
+  font-size: $notification-body-font-size;
+}
+
+.bb-notification--dismissible {
+  .bb-notification__title {
+    margin-inline-end: $spacer;
+  }
+}
+
+.bb-notification--flush {
+  width: 100%;
+  padding-block: $sizer-md;
+  padding-inline: $card-md-sizer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.bb-notification__details-button {
+  @extend %notification-focus-outline;
+  margin-block-start: $spacer-sm;
+}
+
+.bb-notification__message-link {
+  // fix safari link truncation issue when tooltip is shown
+  &:after {
+    content: "";
+  }
+}

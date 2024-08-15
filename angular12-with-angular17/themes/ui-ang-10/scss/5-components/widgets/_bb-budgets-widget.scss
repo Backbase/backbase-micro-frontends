@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$budget-scrollable-category-list-height: 15rem !default;
+
+.bb-scrollable-category-list {
+  height: $budget-scrollable-category-list-height;
+  padding-inline-start: $sizer-xs;
+  overflow-y: auto;
+}
+
+.bb-budget-card-chart {
+  position: relative;
+}

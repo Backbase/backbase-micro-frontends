@@ -1,0 +1,74 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$topbar-branding-area-img-height: $sizer-lg !default;
+
+.bb-topbar {
+  position: relative;
+  display: flex;
+  height: $page-layout-topbar-height;
+}
+
+.bb-topbar__nav-expand-marker {
+  // `padding` is same as `.bb-navigation-item__link` to align hamburger item and menu icon
+  padding: $sizer-md;
+  line-height: 0.5;
+  background: transparent;
+  border: none;
+
+  .bb-icon {
+    line-height: 0.7;
+
+    &:before {
+      content: "menu";
+    }
+  }
+}
+
+.bb-topbar__nav-expand-marker--horizontal-nav {
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}
+
+.bb-topbar__branding-area {
+  display: flex;
+  align-items: center;
+
+  // TODO: this shouldn't be here, but the img should have dimensions instead
+  img {
+    display: block;
+    height: $topbar-branding-area-img-height;
+  }
+}
+
+.bb-topbar__content-area {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+
+  @include media-breakpoint-down(md) {
+    margin-inline-end: $spacer-md;
+  }
+}
+
+@include ms-ie-browsers-only() {
+  .bb-topbar__navigation-area {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    + .bb-topbar__content-area {
+      flex-basis: auto;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .bb-topbar__content-area {
+    display: block;
+  }
+}

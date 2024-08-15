@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+.bb-infinite-scroll-container-showcase {
+  height: 400px;
+}
+.infinite-scroll-wrapper {
+  max-height: 100%;
+  overflow-y: auto;
+}

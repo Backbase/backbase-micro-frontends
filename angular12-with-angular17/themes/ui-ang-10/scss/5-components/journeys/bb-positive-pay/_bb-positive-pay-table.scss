@@ -1,0 +1,101 @@
+//// Configure the spacing of view checks list for large devices
+/// @access public
+/// @group journey-specific
+/// @ignore
+/// We can't use :focus-visible pseudo class(for a11y) since it's not compatible with all browser.
+/// In order to handle this, we are relying on the polyfill(.focus-visible) which make it compatible with all major browsers
+////
+
+// Configure the min width for the table cells
+$positive-pay-table-cell-min-width: 10 * $sizer !default;
+
+// Configure the max width for the table cells
+$positive-pay-table-cell-max-width: 10 * $sizer !default;
+
+// Configure the fixed width for the table cells (wider version)
+$positive-pay-table-cell-width-wider: 11 * $sizer !default;
+
+// Configure the fixed width for the table cells (narrower version)
+$positive-pay-table-cell-width-narrower: 14 * $sizer-xs !default;
+
+// Configure the padding for sorted table cell to align right
+$positive-pay-table-cell-sorted-end: $sizer-lg !default;
+
+// Configure the padding for the table header cells
+$positive-pay-table-header-cell-padding-vertical: $table-heading-padding-vertical !default;
+
+// Configure the padding for the table header cells
+$positive-pay-table-header-cell-padding-horizontal: $table-heading-padding-horizontal !default;
+
+// Configure the box-shadow for the table header cells
+$positive-pay-table-box-shadow: $table-heading-focus-shadow !default;
+
+/// Styles for tables in Positive pay journey
+///
+/// @name bb-positive-pay-table
+
+/// @example html
+/// <table class="bb-positive-pay-table ">
+///  <thead>
+///   <tr>
+///     <th>Exception</th>
+///     <th class="bb-positive-pay-table__th--half-width">Column data</th>
+/// </tr>
+///  </thead>
+///  <tbody>
+///   <tr class="bb-positive-pay-table__row bb-positive-pay-table__row--clickable">
+///    <td class="bb-positive-pay-table__cell bb-positive-pay-table__cell--no-shrink">Robin Green</td>
+///    <td class="bb-positive-pay-table__cell bb-positive-pay-table__cell--no-shrink">462228</td>
+///    <td class="bb-positive-pay-table__cell bb-positive-pay-table__cell--no-grow">1090, 1001, 1002, 1003</td>
+///    <td class="bb-positive-pay-table__cell bb-positive-pay-table__cell--sorted-end">1090, 1001, 1002, 1003</td>
+///    <td class="bb-positive-pay-text bb-positive-pay-text--warning">Duplicate check</td>
+///   </tr>
+///  </tbody>
+/// </table>
+
+.bb-positive-pay-table:focus:not(.focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+.bb-positive-pay-table__cell--no-shrink {
+  min-width: $positive-pay-table-cell-min-width;
+}
+
+.bb-positive-pay-table__cell--fixed-wider {
+  width: $positive-pay-table-cell-width-wider;
+}
+
+.bb-positive-pay-table__cell--fixed-narrower {
+  width: $positive-pay-table-cell-width-narrower;
+}
+
+.bb-positive-pay-table__row--clickable {
+  cursor: pointer;
+}
+
+.bb-positive-pay-table thead th.sortable {
+  padding: 0;
+}
+
+.bb-positive-pay-table__th > .bb-positive-pay-sortable-header {
+  padding: $positive-pay-table-header-cell-padding-vertical
+    $positive-pay-table-header-cell-padding-horizontal;
+}
+
+.bb-positive-pay-table__th > .bb-positive-pay-sortable-header:focus {
+  box-shadow: $positive-pay-table-box-shadow;
+  outline: none;
+}
+
+.bb-positive-pay-table__th--half-width {
+  width: 50%;
+}
+
+.bb-positive-pay-table .bb-positive-pay-table__cell--sorted-end {
+  padding-inline-end: $positive-pay-table-cell-sorted-end;
+}
+
+.bb-positive-pay-table__cell--no-grow {
+  max-width: $positive-pay-table-cell-max-width;
+}

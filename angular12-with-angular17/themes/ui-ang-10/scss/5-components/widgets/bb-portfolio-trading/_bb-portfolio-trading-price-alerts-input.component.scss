@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-price-alerts__amount-input {
+  border: $portfolio-trading-component-border;
+  padding: $sizer;
+  border-radius: $border-radius;
+}

@@ -1,0 +1,31 @@
+////
+/// Colors (global)
+/// @group 1-variables/semantic/color/icon
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the default icon color
+$color-icon-default: $color-light-neutral-darkest;
+
+/// Configures the support icon color
+$color-icon-support: $color-light-neutral-dark;
+
+/// Configures the disabled icon color
+$color-icon-disabled: $color-light-neutral-greyest;
+
+/// Configures the primary icon color
+$color-icon-primary: $color-light-primary-default;
+
+/// Configures the info icon color
+$color-icon-info: $color-light-info-default;
+
+/// Configures the success icon color
+$color-icon-success: $color-light-success-default;
+
+/// Configures the warning icon color
+$color-icon-warning: $color-light-warning-darkest;
+
+/// Configures the danger icon color
+$color-icon-danger: $color-light-danger-default;

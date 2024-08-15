@@ -1,0 +1,12 @@
+$dropdown-multi-select-disabled-toggle: $color-text-disabled !default;
+$dropdown-multi-select-disabled-toggle-bg: $color-neutral-lighter !default;
+
+.bb-payord-account-dropdown-select--disabled {
+  @extend .bb-text-disabled;
+  background-color: $dropdown-multi-select-disabled-toggle-bg;
+  cursor: not-allowed;
+  pointer-events: none;
+  .bb-account-info__product-number {
+    @extend .bb-text-disabled;
+  }
+}

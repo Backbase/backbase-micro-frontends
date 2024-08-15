@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-manage-approval-policies-table-row-min-height: 4.5rem !default;
+
+/// Styles for Manage Approval Policies table row item
+/// This component shows Approval business function information.
+///
+/// @name bb-manage-approval-policies-table-row
+///
+/// @example html
+/// <div class="row py-3 mx-0 bb-manage-approval-policies-table-row">
+///   <div class="col-auto d-flex align-items-center pr-0">
+///      <bb-input-checkbox-ui></bb-input-checkbox-ui>
+///   </div>
+///   <div class="col-4 text-small d-flex align-items-center">
+///     <bb-ellipsis-ui class="mw-100"></bb-ellipsis-ui>
+///   </div>
+///   <div class="col-4 text-small d-flex align-items-center">
+///       <bb-ellipsis-ui class="mw-100"></bb-ellipsis-ui>
+///   </div>
+///   <div class="col d-flex align-items-center justify-content-end">
+///     <button bbButton>Assign policy</button>
+///   </div>
+/// </div>
+
+.bb-manage-approval-policies-table-row {
+  min-height: $bb-manage-approval-policies-table-row-min-height;
+}

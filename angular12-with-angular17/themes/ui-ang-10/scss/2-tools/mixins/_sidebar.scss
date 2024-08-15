@@ -1,0 +1,94 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+//rb-sidebar mixins
+@mixin toggle-sidebar-labels($show) {
+  .nav {
+    li.bb-universal-nav-header,
+    span.bb-universal-nav-item-title {
+      @if $show {
+        opacity: 1;
+      } @else {
+        opacity: 0;
+      }
+    }
+
+    li.bb-universal-nav-divider {
+      @if $show {
+        visibility: hidden;
+      } @else {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Shows between 'sm' and 'md'
+@mixin small-sidebar() {
+  .rb-sidebar {
+    @include toggle-sidebar-labels(false);
+
+    &,
+    &:not(.soy-template) {
+      width: $sidebar-collapsed-width;
+      min-width: $sidebar-collapsed-width;
+      transform: translateX(0);
+    }
+
+    .nav-link {
+      padding-inline-end: 0;
+    }
+
+    .bb-universal-nav {
+      &-header {
+        height: 0;
+        margin: 0;
+      }
+
+      &-item-title {
+        display: none;
+      }
+
+      &-item-menu-icon {
+        margin-inline-end: 0;
+      }
+    }
+  }
+
+  .sidebar-is-open {
+    .rb-sidebar {
+      @include toggle-sidebar-labels(true);
+
+      z-index: 5;
+      width: $sidebar-width;
+      transform: translateX(0);
+    }
+  }
+}
+@mixin nav-item-badge-position($toggled) {
+  @if $toggled {
+    .bb-universal-nav-item {
+      position: relative;
+
+      .bb-universal-nav-item-badge {
+        position: absolute;
+        inset-block-start: 2px;
+        inset-inline-start: calc(50% + 6px);
+        transform: translate(-50%);
+      }
+    }
+  } @else {
+    .bb-universal-nav-item {
+      position: static;
+
+      .bb-universal-nav-item-badge {
+        position: static;
+        inset-block-start: auto;
+        inset-inline-end: auto;
+      }
+    }
+  }
+}

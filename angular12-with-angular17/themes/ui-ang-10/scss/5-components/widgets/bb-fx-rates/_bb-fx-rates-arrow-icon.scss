@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-fx-rates-buying-arrow {
+  transform: rotate(180deg);
+}
+
+@include media-breakpoint-down(sm) {
+  .bb-fx-rates-buying-arrow-sm {
+    transform: rotate(270deg);
+  }
+
+  .bb-fx-rates-selling-arrow-sm {
+    transform: rotate(90deg);
+  }
+}

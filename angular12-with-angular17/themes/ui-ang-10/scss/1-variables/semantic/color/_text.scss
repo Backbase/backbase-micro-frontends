@@ -1,0 +1,31 @@
+////
+/// Colors (global)
+/// @group 1-variables/semantic/color/text
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the text default color
+$color-text-default: $color-light-neutral-darkest;
+
+/// Configures the text support color
+$color-text-support: $color-light-neutral-dark;
+
+/// Configures the text disabled color
+$color-text-disabled: $color-light-neutral-greyest;
+
+/// Configures the text primary color
+$color-text-primary: $color-light-primary-default;
+
+/// Configures the text info color
+$color-text-info: $color-light-info-default;
+
+/// Configures the text success color
+$color-text-success: $color-light-success-default;
+
+/// Configures the text warning color
+$color-text-warning: $color-light-warning-darkest;
+
+/// Configures the text danger color
+$color-text-danger: $color-light-danger-default;

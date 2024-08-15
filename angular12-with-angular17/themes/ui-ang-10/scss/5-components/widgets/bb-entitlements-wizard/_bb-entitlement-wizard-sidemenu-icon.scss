@@ -1,0 +1,61 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$entitlement-wizard-sidemenu-icon-checked-color: $color-primary !default;
+$entitlement-wizard-sidemenu-icon-size: $sizer-lg !default;
+$entitlement-wizard-sidemenu-icon-color: $color-neutral-black !default;
+$entitlement-wizard-sidemenu-icon-font-weight: $font-weight-semi-bold !default;
+$entitlement-wizard-sidemenu-icon-font-size: $font-size-subtitle !default;
+$entitlement-wizard-sidemenu-icon-line-height: 1 !default;
+$entitlement-wizard-sidemenu-icon-background-color: $color-neutral-grey !default;
+$entitlement-wizard-sidemenu-icon-active-color: $color-neutral-white !default;
+$entitlement-wizard-sidemenu-icon-active-background-color: $color-primary !default;
+
+/// Styles for Entitlements Wizard side-menu icons
+/// This component shows stepper number/icons in wizard side-menu.
+///
+/// @name bb-entitlement-wizard-sidemenu-icon
+///
+/// @example html
+///       <div class="bb-entitlement-wizard-sidemenu-icon"
+//             [ngClass]="{'bb-entitlement-wizard-sidemenu-icon--active': hostRef.status === 'active'}"
+//        >
+//          <div *ngIf="hostRef.status !== 'done'; else checkIcon">
+//            {{hostRef.index}}
+//          </div>
+//        </div>
+
+.bb-entitlement-wizard-sidemenu-icon {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: $entitlement-wizard-sidemenu-icon-size;
+  height: $entitlement-wizard-sidemenu-icon-size;
+  color: $entitlement-wizard-sidemenu-icon-color;
+  font-weight: $entitlement-wizard-sidemenu-icon-font-weight;
+  font-size: $entitlement-wizard-sidemenu-icon-font-size;
+  line-height: $entitlement-wizard-sidemenu-icon-line-height;
+  background-color: $entitlement-wizard-sidemenu-icon-background-color;
+  border-radius: $border-radius-circle;
+
+  bb-icon-ui {
+    &[name="check"] {
+      width: 100%;
+      height: 100%;
+      background: $entitlement-wizard-sidemenu-icon-checked-color;
+      border-radius: 100%;
+      .bb-icon {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.bb-entitlement-wizard-sidemenu-icon--active {
+  color: $entitlement-wizard-sidemenu-icon-active-color;
+  background-color: $entitlement-wizard-sidemenu-icon-active-background-color;
+}

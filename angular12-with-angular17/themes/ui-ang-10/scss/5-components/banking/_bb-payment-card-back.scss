@@ -1,0 +1,26 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+@use "sass:math";
+
+$payment-card-image: url(#{$path-bb-images}/bb-payment-card-activation-ui/credit-card-back.svg);
+$payment-card-size: 15.75rem !default;
+
+/// Displays the back of a payment card.
+///
+/// @name bb-payment-card-back
+///
+/// @example html
+///   <div class="bb-payment-card-back"></div>
+.bb-payment-card-back {
+  width: $payment-card-size;
+  height: math.div($payment-card-size, 1.68);
+  background-image: $payment-card-image;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: $box-shadow-md;
+}

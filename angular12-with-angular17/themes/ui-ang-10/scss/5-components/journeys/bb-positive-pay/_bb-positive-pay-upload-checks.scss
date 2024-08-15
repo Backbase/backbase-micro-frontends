@@ -1,0 +1,30 @@
+// Configure styles for uploading csv file for checks
+////
+/// @group journey-specific
+/// @access public
+////
+
+// Configure the width of tooltip for checks mapping in upload checks
+$positive-pay-upload-checks-tooltip-max-width: 400px !default;
+
+// Configure the horizontal margin for checks mapping in upload checks
+$positive-pay-file-upload-margin-horizontal: $spacer-xs !default;
+
+/// Styles for checks mapping in Positive pay journey
+///
+/// @name bb-positive-pay-upload-checks
+
+/// @example html
+/// <div class="positive-pay-checks-mapping">
+///   <button class="btn btn-sm btn-circle bb-positive-pay-checks-mapping__tooltip">
+///     <em class="bb-icon bb-icon-info bb-icon--md"></em>
+///   </button>
+/// </div>
+
+.bb-positive-pay-checks-mapping__tooltip .tooltip-inner {
+  max-width: $positive-pay-upload-checks-tooltip-max-width;
+}
+
+.bb-positive-pay-checks-mapping__sub-header {
+  margin-right: $spacer-xs;
+}

@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$payord-debit-create-preview-bank-info-padding: $sizer-md !default;
+$payord-debit-create-preview-bank-info-background-color: $color-neutral-lightest !default;
+$payord-debit-create-preview-bank-info-border-radius: $border-radius-sm !default;
+$payord-debit-create-preview-hr-border-color: $color-neutral-grey !default;
+
+/// Styles for Payment Order Debit Create widget
+///
+/// @name bb-payord-debit-create-preview
+///
+/// @example html - widget skeleton
+///   <div class="bb-payord-debit-create-preview">
+///     <div class="bb-payord-debit-create-preview__bank-info"></div>
+///     <hr class="bb-payord-debit-create-preview__hr">
+///   </div>
+///
+
+//NOSONAR
+.bb-payord-debit-create-preview {
+}
+
+.bb-payord-debit-create-preview__bank-info {
+  padding: $payord-debit-create-preview-bank-info-padding;
+  background-color: $payord-debit-create-preview-bank-info-background-color;
+  border-radius: $payord-debit-create-preview-bank-info-border-radius;
+}
+
+.bb-payord-debit-create-preview__hr {
+  margin-top: 0;
+  border-color: $payord-debit-create-preview-hr-border-color;
+}

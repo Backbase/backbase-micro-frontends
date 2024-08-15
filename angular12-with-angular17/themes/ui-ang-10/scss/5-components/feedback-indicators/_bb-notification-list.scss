@@ -1,0 +1,55 @@
+// Global annotations
+////
+/// @group feedback-indicators
+/// @access private
+////
+
+/// Positions notifications in the corner of the viewport.
+/// You can use this container for `.bb-notification` components.
+///
+/// @name bb-notification-list
+///
+/// @example html
+///   <ul class="bb-notification-list">
+///     <li class="bb-notification-list__item bb-notification">
+///       <i class="bb-notification__icon bb-icon bb-icon--danger bb-icon-error"></i>
+///       <div class="bb-notification__body">
+///         <h3 class="bb-notification__title">Alert 1</h3>
+///         <div class="bb-text-support">Alert description</div>
+///       </div>
+///       <button class="bb-notification__close close" type=button">
+///         &cross;
+///       </button>
+///     </li>
+///     <li class="bb-notification-list__item bb-notification">
+///       <i class="bb-notification__icon bb-icon bb-icon--success bb-icon-success"></i>
+///       <div class="bb-notification__body">
+///         <h3 class="bb-notification__title">Alert 2</h3>
+///         <div class="bb-text-support">With some actions</div>
+///         <div class="bb-button-bar">
+///           <button type="button" class="bb-button-bar__button btn btn-sm btn-primary">Yes</button>
+///           <button type="button" class="bb-button-bar__button btn btn-sm btn-secondary">No</button>
+///         </div>
+///       </div>
+///       <button type="button" class="bb-notification__close close">
+///         &cross;
+///       </button>
+///     </li>
+///   </ul>
+.bb-notification-list {
+  position: fixed;
+  top: $spacer-md;
+  right: $spacer-md;
+  left: $spacer-md;
+  z-index: 2000;
+  padding: 0; // undo default <ul> paddings
+
+  @include media-breakpoint-up(sm) {
+    inset-inline-start: auto;
+  }
+}
+
+.bb-notification-list__item:not(:last-of-type) {
+  display: block;
+  margin-bottom: $spacer-sm;
+}

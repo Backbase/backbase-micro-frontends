@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$login-card-wrapper-padding: $sizer-xl !default;
+
+.iam-login-card {
+  width: 100%;
+  padding: $login-card-wrapper-padding;
+
+  // This is a one-off style.
+  // If this design repeats, perhaps make this into a mixin
+  &.bb-card {
+    @include media-breakpoint-down(sm) {
+      @include stretch-and-center-bb-card();
+      border-radius: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      width: 600px;
+    }
+  }
+}
+
+.bb-page-background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(#{$path-bb-images}/login-background.jpg);
+  background-size: cover;
+}

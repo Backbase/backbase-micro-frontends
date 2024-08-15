@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/purple
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-purple-lightest: $chart-color-5-lightest; // #E8DCF8
+$color-light-purple-lighter: $chart-color-5-lighter; // #955DDD
+$color-light-purple-default: $chart-color-5; // #6817CF
+$color-light-purple-darker: $chart-color-5-darker; // #491091
+$color-light-purple-darkest: $chart-color-5-darkest; // #390D72
+$color-light-purple-on-color: $color-neutral-white;

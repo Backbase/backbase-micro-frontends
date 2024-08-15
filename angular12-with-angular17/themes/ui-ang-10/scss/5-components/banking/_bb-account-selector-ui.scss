@@ -1,0 +1,439 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// Sets the color for selected accounts in dropdown
+/// @todo Configuring color doesn't really work well because product-item and account-info override the color
+$account-selector-option-checked-color: inherit !default;
+
+/// Sets the color for focused accounts in dropdown
+/// @todo Configuring color doesn't really work well because product-item and account-info override the color
+$account-selector-option-focus-color: inherit !default;
+
+/// @todo figure out what account-selector-color should be used for, not only placeholder?
+$account-selector-color: $color-neutral-dark !default;
+$account-selector-placeholder-font-size: $font-size-base * 1.125 !default;
+$account-selector-optgroup-label-color: $color-text-support !default;
+$account-selector-optgroup-label-font-weight: $font-weight-semi-bold !default;
+$account-selector-optgroup-label-font-size: $font-size-subtitle !default;
+$account-selector-expand-marker-color: $color-neutral-darker !default;
+
+$account-selector-sm-option-description-max-width: $sizer-md * 13.75 !default;
+
+$account-selector-option-separator-width: calc(100% - (#{$spacer-lg} * 2));
+$account-selector-option-separator-width-sm: calc(100% - (#{$spacer-md} * 2));
+$account-selector-selected-padding-horizontal: $spacer-lg !default;
+$account-selector-selected-padding-horizontal-sm: $spacer-md !default;
+
+/// Sets the border-radius of the icons
+$account-selector-icon-border-radius: $border-radius-sm !default;
+$account-selector-invalid-border: $input-invalid-border !default;
+
+$account-selector-focus-box-shadow: none !default;
+
+/// Configures the (minimum) padding of the account-selector
+$account-selector-padding: $spacer-xl !default;
+/// Configures the (maximum) height of the account-selector
+$account-selector-max-height: $account-selector-height + $account-selector-padding !default;
+
+@mixin bb-account-selector-small {
+  &.ng-select.ng-select-single,
+  &.ng-select.ng-select-multiple {
+    > .ng-select-container {
+      height: auto;
+      padding: $sizer-md;
+
+      > .ng-value-container {
+        white-space: normal;
+
+        .account-amount {
+          align-self: flex-start;
+        }
+
+        .product-item-content__info {
+          padding-right: $spacer-xl;
+        }
+
+        .ng-value {
+          padding-right: $sizer-md;
+        }
+
+        .bb-amount {
+          margin-top: $sizer;
+        }
+      }
+    }
+
+    .ng-dropdown-panel {
+      .ng-dropdown-header {
+        .bb-account-selector-dropdown__header {
+          padding: $sizer-md;
+        }
+
+        .bb-account-selector--multiple__selected-account-filters {
+          padding: 0 $sizer-md $sizer-sm;
+        }
+      }
+
+      & > .ng-dropdown-panel-items {
+        max-height: $account-selector-dropdown-max-height;
+
+        .ng-option {
+          padding: $sizer-sm $sizer-md;
+          overflow: visible;
+
+          dropdown-heightng-option-child {
+            + .ng-option-child {
+              position: relative;
+
+              &::before {
+                width: $account-selector-option-separator-width-sm;
+              }
+            }
+          }
+        }
+
+        .ng-optgroup {
+          padding: $sizer-sm $sizer-md;
+        }
+      }
+
+      // need to push the checkbox a bit down in order to look nicer.
+      // Line height values creates space around the title, tha
+      .bb-input-checkbox {
+        margin-top: $sizer-sm;
+      }
+
+      .bb-input-checkbox__content {
+        display: inline;
+        padding-left: $sizer-lg;
+      }
+
+      .bb-account-selector__option {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &.ng-select.ng-select-multiple {
+    .bb-account-selector__selected {
+      padding-right: $account-selector-selected-padding-horizontal-sm;
+    }
+  }
+}
+
+.bb-account-selector {
+  // needed to override <style> tag of ng-select
+  &.ng-select-single,
+  &.ng-select-multiple {
+    &.ng-select-filtered {
+      .ng-select-container {
+        .ng-placeholder {
+          display: initial;
+        }
+
+        &.ng-has-value {
+          .ng-placeholder {
+            display: none;
+          }
+
+          .ng-value-container {
+            .ng-value {
+              visibility: initial;
+            }
+          }
+        }
+      }
+    }
+
+    > .ng-select-container {
+      min-height: $account-selector-height;
+      padding: 0 $sizer-lg;
+      overflow: visible;
+      border: 0;
+      box-shadow: $account-selector-box-shadow;
+
+      // For IE compatibility - https://github.com/philipwalton/flexbugs/issues/231#issuecomment-362790042
+      &::after {
+        min-height: inherit;
+        font-size: 0;
+        content: "";
+      }
+
+      &:hover {
+        box-shadow: $account-selector-box-shadow;
+      }
+
+      .ng-arrow-wrapper {
+        .ng-arrow {
+          top: 0;
+          width: auto;
+          color: $account-selector-expand-marker-color;
+          border: none;
+
+          @include material-icons();
+
+          &::after {
+            margin: 0 -4px; // cropping
+            content: "expand_more";
+          }
+        }
+      }
+
+      &.ng-has-value {
+        .ng-value {
+          width: 100%;
+          padding-right: $sizer-lg;
+        }
+      }
+
+      .bb-product-item__type {
+        .bb-icon,
+        .bicon {
+          padding: $sizer-sm;
+          color: $account-selector-icon-color;
+          background-color: $account-selector-icon-background-color;
+          border-radius: $account-selector-icon-border-radius;
+        }
+      }
+    }
+
+    .ng-dropdown-panel {
+      > .ng-dropdown-panel-items {
+        max-height: $account-selector-dropdown-max-height;
+        margin-bottom: $spacer-lg;
+
+        .ng-option {
+          padding: $sizer-lg;
+
+          dropdown-height:not(.disabled):not(:disabled).focus,
+          &:not(.disabled):not(:disabled):focus {
+            outline: 0;
+            box-shadow: $btn-focus-box-shadow inset;
+          }
+
+          &:not(.disabled):not(:disabled):active,
+          &:not(.disabled):not(:disabled).active {
+            box-shadow: $btn-focus-box-shadow inset;
+
+            &:focus {
+              box-shadow: $btn-focus-box-shadow inset;
+            }
+          }
+
+          &.ng-option-marked {
+            color: $account-selector-option-focus-color;
+            &:hover {
+              background-color: $account-selector-option-focus-background-color;
+            }
+            background-color: inherit;
+            border: $account-focus-border-primary;
+          }
+
+          &.ng-option-selected {
+            color: $account-selector-option-checked-color;
+            background-color: $account-selector-option-checked-background-color;
+          }
+
+          &.ng-option-disabled {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: $account-selector-height;
+            margin-top: -$spacer-lg;
+            color: $color-neutral-black;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-base;
+          }
+
+          + .ng-option {
+            position: relative;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              right: 0;
+              left: 0;
+              width: $account-selector-option-separator-width;
+              height: $account-selector-option-separator-height;
+              margin: 0 auto;
+              background-color: $color-neutral-grey;
+              content: "";
+            }
+          }
+        }
+
+        .ng-optgroup {
+          padding: $sizer-sm $sizer-lg;
+          color: $account-selector-optgroup-label-color;
+          font-weight: $account-selector-optgroup-label-font-weight;
+          font-size: $account-selector-optgroup-label-font-size;
+        }
+      }
+    }
+
+    &.ng-select-opened {
+      > .ng-select-container {
+        background: $account-selector-option-focus-background-color;
+
+        .ng-arrow-wrapper {
+          .ng-arrow {
+            &::after {
+              content: "expand_less";
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: $account-selector-box-shadow;
+        }
+      }
+    }
+  }
+
+  // heavier overrides of ng-select behaviour from <style> tag
+  &.ng-select.ng-select-single,
+  &.ng-select.ng-select-multiple {
+    > .ng-select-container {
+      border-radius: $account-selector-border-radius;
+
+      > .ng-value-container {
+        padding: 0;
+
+        > .ng-placeholder {
+          position: static;
+          top: 0;
+          padding: 0;
+          color: $account-selector-color;
+          font-size: $account-selector-placeholder-font-size;
+        }
+
+        // ng-input class overrides the width of visually-hidden class because of high specificity
+        // Fixing the width issue by providing high specificity to visually-hidden class
+        .visually-hidden {
+          width: 1px;
+        }
+      }
+
+      .ng-arrow-wrapper {
+        width: auto;
+        padding: 0;
+      }
+    }
+    &.ng-select-focused {
+      &:not(.ng-select-opened) > .ng-select-container {
+        box-shadow: $account-selector-focus-box-shadow;
+        > .ng-value-container::before {
+          position: absolute;
+          top: $account-focus-outline-distance;
+          right: $account-focus-outline-distance;
+          bottom: $account-focus-outline-distance;
+          left: $account-focus-outline-distance;
+          border: $account-focus-border-primary;
+          border-radius: $account-selector-border-radius;
+          content: "";
+        }
+      }
+    }
+
+    &.ng-select-bottom,
+    &.ng-select-top {
+      > .ng-select-container {
+        border-radius: $account-selector-border-radius;
+      }
+    }
+
+    &.ng-invalid.ng-touched {
+      > .ng-select-container {
+        border: $account-selector-invalid-border;
+      }
+    }
+  }
+
+  &.ng-select.ng-select-multiple {
+    > .ng-select-container {
+      > .ng-value-container {
+        overflow: hidden;
+      }
+    }
+
+    .bb-account-selector__selected {
+      padding-right: $account-selector-selected-padding-horizontal;
+      overflow: hidden;
+    }
+
+    .bb-account-selector__selected-accounts {
+      color: $account-selector-color;
+    }
+
+    .bb-account-selector__selected-account-filters {
+      padding-top: $sizer-lg;
+    }
+  }
+
+  // overrides end
+
+  .ng-dropdown-panel.ng-select-top,
+  .ng-dropdown-panel.ng-select-bottom {
+    overflow: hidden;
+    border: 0;
+    border-radius: $account-selector-border-radius;
+    box-shadow: $account-selector-box-shadow;
+  }
+
+  .ng-dropdown-panel.ng-select-bottom {
+    margin-top: $account-selector-dropdown-spacer;
+  }
+
+  .ng-dropdown-panel.ng-select-top {
+    margin-bottom: $account-selector-dropdown-spacer;
+  }
+
+  .ng-dropdown-panel {
+    .ng-dropdown-header {
+      padding: 0;
+      border-bottom: 0;
+
+      .bb-account-selector-dropdown__header {
+        padding: $sizer-lg;
+        border-bottom: 0;
+
+        &--hidden {
+          display: none;
+        }
+      }
+
+      .bb-account-selector--multiple__selected-account-filters {
+        padding: 0 $sizer-lg $sizer-md;
+      }
+    }
+
+    .bb-input-checkbox__content {
+      display: inline;
+    }
+  }
+
+  .bb-account-info {
+    overflow: hidden;
+  }
+}
+
+.bb-account-selector--bottom-space {
+  max-height: $account-selector-max-height;
+  padding-bottom: $account-selector-padding;
+}
+
+@include media-breakpoint-down(sm) {
+  .bb-account-selector {
+    @include bb-account-selector-small;
+  }
+  .bb-account-selector--bottom-space {
+    max-height: $account-selector-max-height + $spacer-xl;
+  }
+}
+
+.bb-account-selector--sm {
+  @include bb-account-selector-small;
+}

@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.bb-textarea-ui {
+  &.ng-invalid.ng-touched {
+    .form-control {
+      border: $input-invalid-border;
+    }
+
+    min-height: $input-height;
+  }
+  textarea {
+    &:focus {
+      border-color: $input-border-color;
+      outline: $form-focus-border-primary;
+      outline-offset: $form-focus-outline-distance;
+      box-shadow: $form-focus-box-shadow;
+    }
+  }
+}

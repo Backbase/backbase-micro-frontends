@@ -1,0 +1,27 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.bb-input-inline-edit-ui {
+  .bb-input-validation-message {
+    margin-top: 0;
+  }
+
+  .form-control {
+    margin-bottom: $spacer-sm;
+  }
+}
+
+.bb-input-inline-edit-ui__char-counter {
+  display: inline-block;
+
+  .bb-char-counter {
+    margin-block-start: 0;
+  }
+}
+
+.bb-input-inline-edit-ui__description-seprator {
+  margin-inline: $spacer-xs;
+}

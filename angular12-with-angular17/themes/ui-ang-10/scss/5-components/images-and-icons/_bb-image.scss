@@ -1,0 +1,40 @@
+// Global annotations
+////
+/// @group images-and-icons
+/// @access private
+////
+
+$email-file-name: "email-icon" !default;
+$email-image-width: 62px !default;
+$email-image-height: 42px !default;
+$phone-file-name: "phone-icon" !default;
+$phone-image-width: 41px !default;
+$phone-image-height: 72px !default;
+
+/// @name bb-image
+///
+/// @example html
+///   <i class="bb-image"></i>
+///
+/// @example html - phone
+///   <div class="bb-image bb-image--phone"></div>
+///
+/// @example html - email
+///   <div class="bb-image bb-image--email"></div>
+.bb-image {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bb-image--phone {
+  background-image: url(#{$path-bb-images}/#{$phone-file-name}.svg);
+  width: $phone-image-width;
+  height: $phone-image-height;
+}
+
+.bb-image--email {
+  background-image: url(#{$path-bb-images}/#{$email-file-name}.svg);
+  width: $email-image-width;
+  height: $email-image-height;
+}

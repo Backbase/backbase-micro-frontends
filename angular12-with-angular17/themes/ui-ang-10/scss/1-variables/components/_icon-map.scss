@@ -1,0 +1,3940 @@
+////
+/// Icons Map for bb-icon-ui (global)
+/// Further extended via map-merge for categories, delivery-tracker
+/// [Key: bicon class name] : [Value: 'content' value]
+/// @group 1-variables/components/icon-map
+/// @access private
+////
+
+/// Icon Map
+$icon-map: (
+  3d-rotation:
+    (
+      icon: "3d_rotation",
+      font-space: 0,
+    ),
+  ac-unit: (
+    icon: "ac_unit",
+    font-space: 1,
+  ),
+  access-alarm: (
+    icon: "access_alarm",
+    font-space: 2,
+  ),
+  access-alarms: (
+    icon: "access_alarms",
+    font-space: 2,
+  ),
+  access-time: (
+    icon: "access_time",
+    font-space: 2,
+  ),
+  accessibility: (
+    icon: "accessibility",
+    font-space: 3,
+  ),
+  accessible: (
+    icon: "accessible",
+    font-space: 4,
+  ),
+  account-box: (
+    icon: "account_box",
+    font-space: 2,
+  ),
+  account: (
+    icon: "account_balance",
+    font-space: 2,
+  ),
+  accounts: (
+    icon: "account_balance",
+    font-space: 0,
+  ),
+  account-balance: (
+    icon: "account_balance",
+    font-space: 2,
+  ),
+  account-balance-wallet: (
+    icon: "account_balance_wallet",
+    font-space: 2,
+  ),
+  manage-accounts: (
+    icon: "manage_accounts",
+    font-space: 2,
+  ),
+  actions: (
+    icon: "flash_on",
+    font-space: 6,
+  ),
+  adb: (
+    icon: "adb",
+    font-space: 5,
+  ),
+  add-a-photo: (
+    icon: "add_a_photo",
+    font-space: 0,
+  ),
+  add-alarm: (
+    icon: "add_alarm",
+    font-space: 2,
+  ),
+  add-alert: (
+    icon: "add_alert",
+    font-space: 3,
+  ),
+  add-box: (
+    icon: "add_box",
+    font-space: 3,
+  ),
+  add-circle: (
+    icon: "add_circle",
+    font-space: 2,
+  ),
+  add-location: (
+    icon: "add_location",
+    font-space: 5,
+  ),
+  add-outline: (
+    icon: "add_circle_outline",
+    font-space: 2,
+  ),
+  add-shopping-cart: (
+    icon: "add_shopping_cart",
+    font-space: 1,
+  ),
+  add-to-photos: (
+    icon: "add_to_photos",
+    font-space: 2,
+  ),
+  add-to-queue: (
+    icon: "add_to_queue",
+    font-space: 1,
+  ),
+  add: (
+    icon: "add",
+    font-space: 5,
+  ),
+  adjust: (
+    icon: "adjust",
+    font-space: 2,
+  ),
+  airline-seat-flat-angled: (
+    icon: "airline_seat_flat_angled",
+    font-space: 1,
+  ),
+  airline-seat-flat: (
+    icon: "airline_seat_flat",
+    font-space: 2,
+  ),
+  airline-seat-individual-suite: (
+    icon: "airline_seat_individual_suite",
+    font-space: 1,
+  ),
+  airline-seat-legroom-extra: (
+    icon: "airline_seat_legroom_extra",
+    font-space: 1,
+  ),
+  airline-seat-legroom-normal: (
+    icon: "airline_seat_legroom_normal",
+    font-space: 2,
+  ),
+  airline-seat-legroom-reduced: (
+    icon: "airline_seat_legroom_reduced",
+    font-space: 3,
+  ),
+  airline-seat-recline-extra: (
+    icon: "airline_seat_recline_extra",
+    font-space: 2,
+  ),
+  airline-seat-recline-normal: (
+    icon: "airline_seat_recline_normal",
+    font-space: 4,
+  ),
+  airplanemode-active: (
+    icon: "airplanemode_active",
+    font-space: 2,
+  ),
+  airplanemode-inactive: (
+    icon: "airplanemode_inactive",
+    font-space: 2,
+  ),
+  airplay: (
+    icon: "airplay",
+    font-space: 1,
+  ),
+  airport-shuttle: (
+    icon: "airport_shuttle",
+    font-space: 1,
+  ),
+  alarm-add: (
+    icon: "alarm_add",
+    font-space: 2,
+  ),
+  alarm-off: (
+    icon: "alarm_off",
+    font-space: 2,
+  ),
+  alarm-on: (
+    icon: "alarm_on",
+    font-space: 2,
+  ),
+  alarm: (
+    icon: "alarm",
+    font-space: 2,
+  ),
+  album: (
+    icon: "album",
+    font-space: 2,
+  ),
+  all-inclusive: (
+    icon: "all_inclusive",
+    font-space: 0,
+  ),
+  all-out: (
+    icon: "all_out",
+    font-space: 3,
+  ),
+  android: (
+    icon: "android",
+    font-space: 2,
+  ),
+  angle-left: (
+    icon: "keyboard_arrow_left",
+    font-space: 8,
+  ),
+  angle-right: (
+    icon: "keyboard_arrow_right",
+    font-space: 8,
+  ),
+  announcement: (
+    icon: "announcement",
+    font-space: 2,
+  ),
+  apps: (
+    icon: "apps",
+    font-space: 4,
+  ),
+  archive: (
+    icon: "archive",
+    font-space: 3,
+  ),
+  arrow-back: (
+    icon: "arrow_back",
+    font-space: 4,
+  ),
+  arrow-back-ios: (
+    icon: "arrow_back_ios",
+    font-space: 4,
+  ),
+  arrow-downward: (
+    icon: "arrow_downward",
+    font-space: 4,
+  ),
+  arrow_forward: (
+    icon: "arrow_forward",
+    font-space: 4,
+  ),
+  arrow-drop-down-circle: (
+    icon: "arrow_drop_down_circle",
+    font-space: 2,
+  ),
+  arrow-forward: (
+    icon: "arrow_forward",
+    font-space: 4,
+  ),
+  arrow-right-alt: (
+    icon: "arrow_right_alt",
+    font-space: 4,
+  ),
+  arrow-upward: (
+    icon: "arrow_upward",
+    font-space: 4,
+  ),
+  art-track: (
+    icon: "art_track",
+    font-space: 2,
+  ),
+  article: (
+    icon: "article",
+    font-space: 2,
+  ),
+  aspect-ratio: (
+    icon: "aspect_ratio",
+    font-space: 1,
+  ),
+  assessment: (
+    icon: "assessment",
+    font-space: 3,
+  ),
+  assignment-ind: (
+    icon: "assignment_ind",
+    font-space: 3,
+  ),
+  assignment-late: (
+    icon: "assignment_late",
+    font-space: 3,
+  ),
+  assignment-return: (
+    icon: "assignment_return",
+    font-space: 3,
+  ),
+  assignment-returned: (
+    icon: "assignment_returned",
+    font-space: 3,
+  ),
+  assignment-turned-in: (
+    icon: "assignment_turned_in",
+    font-space: 3,
+  ),
+  assistant-photo: (
+    icon: "assistant_photo",
+    font-space: 4,
+  ),
+  assistant: (
+    icon: "assistant",
+    font-space: 3,
+  ),
+  atm: (
+    icon: "atm",
+    font-space: 2,
+  ),
+  attach-file: (
+    icon: "attach_file",
+    font-space: 6,
+  ),
+  attach-money: (
+    icon: "attach_money",
+    font-space: 6,
+  ),
+  attachment: (
+    icon: "attachment",
+    font-space: 2,
+  ),
+  audiotrack: (
+    icon: "audiotrack",
+    font-space: 5,
+  ),
+  audit: (
+    icon: "assignment",
+    font-space: 3,
+  ),
+  authorizations: (
+    icon: "gavel",
+    font-space: 1,
+  ),
+  autorenew: (
+    icon: "autorenew",
+    font-space: 4,
+  ),
+  auto_fix_high: (
+    icon: "auto_fix_high",
+    font-space: 2,
+  ),
+  backspace: (
+    icon: "backspace",
+    font-space: 0,
+  ),
+  backup: (
+    icon: "backup",
+    font-space: 0,
+  ),
+  ballot: (
+    icon: "ballot",
+    font-space: 2,
+  ),
+  batches: (
+    icon: "storage",
+    font-space: 2,
+  ),
+  battery-alert: (
+    icon: "battery_alert",
+    font-space: 7,
+  ),
+  battery-charging-full: (
+    icon: "battery_charging_full",
+    font-space: 7,
+  ),
+  battery-full: (
+    icon: "battery_full",
+    font-space: 7,
+  ),
+  battery-std: (
+    icon: "battery_std",
+    font-space: 7,
+  ),
+  battery-unknown: (
+    icon: "battery_unknown",
+    font-space: 7,
+  ),
+  bar-chart: (
+    icon: "insert_chart",
+    font-space: 3,
+  ),
+  beach-access: (
+    icon: "beach_access",
+    font-space: 3,
+  ),
+  beenhere: (
+    icon: "beenhere",
+    font-space: 3,
+  ),
+  block: (
+    icon: "block",
+    font-space: 2,
+  ),
+  bluetooth-audio: (
+    icon: "bluetooth_audio",
+    font-space: 3,
+  ),
+  bluetooth-connected: (
+    icon: "bluetooth_connected",
+    font-space: 3,
+  ),
+  bluetooth-disabled: (
+    icon: "bluetooth_disabled",
+    font-space: 4,
+  ),
+  bluetooth-searching: (
+    icon: "bluetooth_searching",
+    font-space: 3,
+  ),
+  bluetooth: (
+    icon: "bluetooth",
+    font-space: 5,
+  ),
+  blur-circular: (
+    icon: "blur_circular",
+    font-space: 2,
+  ),
+  blur-linear: (
+    icon: "blur_linear",
+    font-space: 3,
+  ),
+  blur-off: (
+    icon: "blur_off",
+    font-space: 2,
+  ),
+  blur-on: (
+    icon: "blur_on",
+    font-space: 2,
+  ),
+  book: (
+    icon: "book",
+    font-space: 4,
+  ),
+  bookmark-border: (
+    icon: "bookmark_border",
+    font-space: 4,
+  ),
+  bookmark: (
+    icon: "bookmark",
+    font-space: 4,
+  ),
+  border-all: (
+    icon: "border_all",
+    font-space: 3,
+  ),
+  border-bottom: (
+    icon: "border_bottom",
+    font-space: 3,
+  ),
+  border-clear: (
+    icon: "border_clear",
+    font-space: 3,
+  ),
+  border-color: (
+    icon: "edit",
+    font-space: 0,
+  ),
+  border-horizontal: (
+    icon: "border_horizontal",
+    font-space: 3,
+  ),
+  border-inner: (
+    icon: "border_inner",
+    font-space: 3,
+  ),
+  border-left: (
+    icon: "border_left",
+    font-space: 3,
+  ),
+  border-outer: (
+    icon: "border_outer",
+    font-space: 3,
+  ),
+  border-right: (
+    icon: "border_right",
+    font-space: 3,
+  ),
+  border-style: (
+    icon: "border_style",
+    font-space: 3,
+  ),
+  border-top: (
+    icon: "border_top",
+    font-space: 3,
+  ),
+  border-vertical: (
+    icon: "border_vertical",
+    font-space: 3,
+  ),
+  branding-watermark: (
+    icon: "branding_watermark",
+    font-space: 0,
+  ),
+  brightness-1: (
+    icon: "brightness_1",
+    font-space: 2,
+  ),
+  brightness-2: (
+    icon: "brightness_2",
+    font-space: 4,
+  ),
+  brightness-3: (
+    icon: "brightness_3",
+    font-space: 5,
+  ),
+  brightness-4: (
+    icon: "brightness_4",
+    font-space: 0,
+  ),
+  brightness-5: (
+    icon: "brightness_5",
+    font-space: 0,
+  ),
+  brightness-6: (
+    icon: "brightness_6",
+    font-space: 0,
+  ),
+  brightness-7: (
+    icon: "brightness_7",
+    font-space: 0,
+  ),
+  brightness-auto: (
+    icon: "brightness_auto",
+    font-space: 0,
+  ),
+  brightness-high: (
+    icon: "brightness_high",
+    font-space: 0,
+  ),
+  brightness-low: (
+    icon: "brightness_low",
+    font-space: 0,
+  ),
+  brightness-medium: (
+    icon: "brightness_medium",
+    font-space: 0,
+  ),
+  broken-image: (
+    icon: "broken_image",
+    font-space: 2,
+  ),
+  brush: (
+    icon: "brush",
+    font-space: 2,
+  ),
+  bubble-chart: (
+    icon: "bubble_chart",
+    font-space: 4,
+  ),
+  bug-report: (
+    icon: "bug_report",
+    font-space: 3,
+  ),
+  build: (
+    icon: "build",
+    font-space: 1,
+  ),
+  burst-mode: (
+    icon: "burst_mode",
+    font-space: 1,
+  ),
+  business-center: (
+    icon: "business_center",
+    font-space: 2,
+  ),
+  business: (
+    icon: "business",
+    font-space: 2,
+  ),
+  cached: (
+    icon: "cached",
+    font-space: 1,
+  ),
+  cake: (
+    icon: "cake",
+    font-space: 2,
+  ),
+  calendar: (
+    icon: "date_range",
+    font-space: 3,
+  ),
+  calendar-today: (
+    icon: "calendar_today",
+    font-space: 3,
+  ),
+  call-end: (
+    icon: "call_end",
+    font-space: 0,
+  ),
+  call-made: (
+    icon: "call_made",
+    font-size: 2,
+  ),
+  call-merge: (
+    icon: "call_merge",
+    font-space: 5,
+  ),
+  call-missed-outgoing: (
+    icon: "call_missed_outgoing",
+    font-space: 3,
+  ),
+  call-missed: (
+    icon: "call_missed",
+    font-space: 3,
+  ),
+  call-received: (
+    icon: "call_received",
+    font-space: 4,
+  ),
+  call-split: (
+    icon: "call_split",
+    font-space: 3,
+  ),
+  call-to-action: (
+    icon: "call_to_action",
+    font-space: 1,
+  ),
+  call: (
+    icon: "call",
+    font-space: 3,
+  ),
+  camera-alt: (
+    icon: "camera_alt",
+    font-space: 2,
+  ),
+  camera-enhance: (
+    icon: "camera_enhance",
+    font-space: 2,
+  ),
+  camera-front: (
+    icon: "camera_front",
+    font-space: 5,
+  ),
+  camera-rear: (
+    icon: "camera_rear",
+    font-space: 5,
+  ),
+  camera-roll: (
+    icon: "camera_roll",
+    font-space: 2,
+  ),
+  camera: (
+    icon: "camera",
+    font-space: 2,
+  ),
+  campaign: (
+    icon: "campaign",
+    font-space: 2,
+  ),
+  cancel: (
+    icon: "cancel",
+    font-space: 2,
+  ),
+  cancel-presentation: (
+    icon: "cancel_presentation",
+    font-space: 2,
+  ),
+  card-giftcard: (
+    icon: "card_giftcard",
+    font-space: 2,
+  ),
+  card-membership: (
+    icon: "card_membership",
+    font-space: 2,
+  ),
+  card-travel: (
+    icon: "card_travel",
+    font-space: 2,
+  ),
+  caret-down: (
+    icon: "arrow_drop_down",
+    font-space: 7,
+  ),
+  caret-up: (
+    icon: "arrow_drop_up",
+    font-space: 7,
+  ),
+  casino: (
+    icon: "casino",
+    font-space: 3,
+  ),
+  cast-connected: (
+    icon: "cast_connected",
+    font-space: 1,
+  ),
+  cast: (
+    icon: "cast",
+    font-space: 1,
+  ),
+  category: (
+    icon: "category",
+    font-space: 3,
+  ),
+  center-focus-strong: (
+    icon: "center_focus_strong",
+    font-space: 3,
+  ),
+  center-focus-weak: (
+    icon: "center_focus_weak",
+    font-space: 3,
+  ),
+  change-history: (
+    icon: "change_history",
+    font-space: 2,
+  ),
+  chat-bubble-outline: (
+    icon: "chat_bubble_outline",
+    font-space: 2,
+  ),
+  chat-bubble: (
+    icon: "chat_bubble",
+    font-space: 2,
+  ),
+  chat: (
+    icon: "chat",
+    font-space: 2,
+  ),
+  check-box-outline-blank: (
+    icon: "check_box_outline_blank",
+    font-space: 3,
+  ),
+  check-box: (
+    icon: "check_box",
+    font-space: 3,
+  ),
+  check: (
+    icon: "check",
+    font-space: 3,
+  ),
+  checkroom: (
+    icon: "checkroom",
+    font-space: 2,
+  ),
+  check-circle-outline: (
+    icon: "check_circle_outline",
+    font-space: 2,
+  ),
+  chevron-left: (
+    icon: "chevron_left",
+    font-space: 8,
+  ),
+  chevron-right: (
+    icon: "chevron_right",
+    font-space: 8,
+  ),
+  child-care: (
+    icon: "child_care",
+    font-space: 1,
+  ),
+  child-friendly: (
+    icon: "child_friendly",
+    font-space: 2,
+  ),
+  chrome-reader-mode: (
+    icon: "chrome_reader_mode",
+    font-space: 1,
+  ),
+  circle: (
+    icon: "fiber_manual_record",
+    font-space: 4,
+  ),
+  class: (
+    icon: "class",
+    font-space: 3,
+  ),
+  clear-all: (
+    icon: "clear_all",
+    font-space: 3,
+  ),
+  clear: (
+    icon: "clear",
+    font-space: 4,
+  ),
+  closed-caption: (
+    icon: "closed_caption",
+    font-space: 3,
+  ),
+  cloud-circle: (
+    icon: "cloud_circle",
+    font-space: 2,
+  ),
+  cloud-done: (
+    icon: "cloud_done",
+    font-space: 0,
+  ),
+  cloud-off: (
+    icon: "cloud_off",
+    font-space: 0,
+  ),
+  cloud-queue: (
+    icon: "cloud_queue",
+    font-space: 0,
+  ),
+  cloud-upload: (
+    icon: "cloud_upload",
+    font-space: 0,
+  ),
+  cloud: (
+    icon: "cloud",
+    font-space: 0,
+  ),
+  code: (
+    icon: "code",
+    font-space: 2,
+  ),
+  collections-bookmark: (
+    icon: "collections_bookmark",
+    font-space: 2,
+  ),
+  collections: (
+    icon: "collections",
+    font-space: 2,
+  ),
+  color-lens: (
+    icon: "color_lens",
+    font-space: 3,
+  ),
+  colorize: (
+    icon: "colorize",
+    font-space: 3,
+  ),
+  comment: (
+    icon: "comment",
+    font-space: 2,
+  ),
+  commute: (
+    icon: "commute",
+    font-space: 2,
+  ),
+  compare: (
+    icon: "compare",
+    font-space: 3,
+  ),
+  computer: (
+    icon: "computer",
+    font-space: 0,
+  ),
+  confirmation-number: (
+    icon: "confirmation_number",
+    font-space: 2,
+  ),
+  contact-mail: (
+    icon: "contact_mail",
+    font-space: 0,
+  ),
+  contact-phone: (
+    icon: "contact_phone",
+    font-space: 0,
+  ),
+  contacts: (
+    icon: "contacts",
+    font-space: 2,
+  ),
+  content-copy: (
+    icon: "file_copy",
+    font-space: 2,
+  ),
+  contract: (
+    icon: "library_books",
+    font-space: 2,
+  ),
+  control-point-duplicate: (
+    icon: "control_point_duplicate",
+    font-space: 0,
+  ),
+  control-point: (
+    icon: "control_point",
+    font-space: 2,
+  ),
+  copyright: (
+    icon: "copyright",
+    font-space: 2,
+  ),
+  create-new-folder: (
+    icon: "create_new_folder",
+    font-space: 2,
+  ),
+  create-payment: (
+    icon: "add",
+    font-space: 5,
+  ),
+  create: (
+    icon: "create",
+    font-space: 3,
+  ),
+  credit-card: (
+    icon: "credit_card",
+    font-space: 2,
+  ),
+  credit-cards: (
+    icon: "credit_card",
+    font-space: 2,
+  ),
+  crop-16-9: (
+    icon: "crop_16_9",
+    font-space: 3,
+  ),
+  crop-3-2: (
+    icon: "crop_3_2",
+    font-space: 3,
+  ),
+  crop-5-4: (
+    icon: "crop_5_4",
+    font-space: 3,
+  ),
+  crop-7-5: (
+    icon: "crop_7_5",
+    font-space: 3,
+  ),
+  crop-din: (
+    icon: "crop_din",
+    font-space: 3,
+  ),
+  crop-free: (
+    icon: "crop_free",
+    font-space: 3,
+  ),
+  crop-landscape: (
+    icon: "crop_landscape",
+    font-space: 3,
+  ),
+  crop-original: (
+    icon: "crop_original",
+    font-space: 3,
+  ),
+  crop-portrait: (
+    icon: "crop_portrait",
+    font-space: 5,
+  ),
+  crop-rotate: (
+    icon: "crop_rotate",
+    font-space: 0,
+  ),
+  crop-square: (
+    icon: "crop_square",
+    font-space: 4,
+  ),
+  crop: (
+    icon: "crop",
+    font-space: 1,
+  ),
+  currency-trade: (
+    icon: "multiline_chart",
+    font-space: 2,
+  ),
+  current-accounts: (
+    icon: "account_balance_wallet",
+    font-space: 2,
+  ),
+  dashboard: (
+    icon: "dashboard",
+    font-space: 3,
+  ),
+  data-usage: (
+    icon: "data_usage",
+    font-space: 2,
+  ),
+  debit-cards: (
+    icon: "credit_card",
+    font-space: 2,
+  ),
+  dehaze: (
+    icon: "dehaze",
+    font-space: 2,
+  ),
+  delete-forever: (
+    icon: "delete_forever",
+    font-space: 5,
+  ),
+  delete-sweep: (
+    icon: "delete_sweep",
+    font-space: 2,
+  ),
+  delete: (
+    icon: "delete",
+    font-space: 5,
+  ),
+  description: (
+    icon: "description",
+    font-space: 4,
+  ),
+  desktop-mac: (
+    icon: "desktop_mac",
+    font-space: 0,
+  ),
+  desktop-windows: (
+    icon: "desktop_windows",
+    font-space: 0,
+  ),
+  details: (
+    icon: "details",
+    font-space: 3,
+  ),
+  developer-board: (
+    icon: "developer_board",
+    font-space: 2,
+  ),
+  developer-mode: (
+    icon: "developer_mode",
+    font-space: 5,
+  ),
+  device-hub: (
+    icon: "device_hub",
+    font-space: 3,
+  ),
+  devices-other: (
+    icon: "devices_other",
+    font-space: 1,
+  ),
+  devices: (
+    icon: "devices",
+    font-space: 0,
+  ),
+  dialer-sip: (
+    icon: "dialer_sip",
+    font-space: 3,
+  ),
+  dialpad: (
+    icon: "dialpad",
+    font-space: 4,
+  ),
+  directions-bike: (
+    icon: "directions_bike",
+    font-space: 0,
+  ),
+  directions-boat: (
+    icon: "directions_boat",
+    font-space: 2,
+  ),
+  directions-bus: (
+    icon: "directions_bus",
+    font-space: 4,
+  ),
+  directions-car: (
+    icon: "directions_car",
+    font-space: 3,
+  ),
+  directions-railway: (
+    icon: "directions_railway",
+    font-space: 4,
+  ),
+  directions-run: (
+    icon: "directions_run",
+    font-space: 1,
+  ),
+  directions-subway: (
+    icon: "directions_subway",
+    font-space: 4,
+  ),
+  directions-transit: (
+    icon: "directions_transit",
+    font-space: 4,
+  ),
+  directions-walk: (
+    icon: "directions_walk",
+    font-space: 5,
+  ),
+  directions: (
+    icon: "directions",
+    font-space: 2,
+  ),
+  disc-full: (
+    icon: "disc_full",
+    font-space: 2,
+  ),
+  dns: (
+    icon: "dns",
+    font-space: 3,
+  ),
+  dock: (
+    icon: "dock",
+    font-space: 6,
+  ),
+  domain: (
+    icon: "domain",
+    font-space: 2,
+  ),
+  done-all: (
+    icon: "done_all",
+    font-space: 0,
+  ),
+  done-outline: (
+    icon: "done_outline",
+    font-space: 0,
+  ),
+  done: (
+    icon: "done",
+    font-space: 3,
+  ),
+  donut-large: (
+    icon: "donut_large",
+    font-space: 2,
+  ),
+  donut-small: (
+    icon: "donut_small",
+    font-space: 2,
+  ),
+  download: (
+    icon: "cloud_download",
+    font-space: 0,
+  ),
+  drafts: (
+    icon: "drafts",
+    font-space: 2,
+  ),
+  drag-indicator: (
+    icon: "drag_indicator",
+    font-space: 2,
+  ),
+  drag-n-drop: (
+    icon: "drag_handle",
+    font-space: 4,
+  ),
+  drive-eta: (
+    icon: "drive_eta",
+    font-space: 3,
+  ),
+  dvr: (
+    icon: "dvr",
+    font-space: 1,
+  ),
+  edit-location: (
+    icon: "edit_location",
+    font-space: 5,
+  ),
+  edit: (
+    icon: "edit",
+    font-space: 3,
+  ),
+  eject: (
+    icon: "eject",
+    font-space: 5,
+  ),
+  ellipsis-h: (
+    icon: "more_horiz",
+    font-space: 4,
+  ),
+  email: (
+    icon: "inbox",
+    font-space: 3,
+  ),
+  enhanced-encryption: (
+    icon: "enhanced_encryption",
+    font-space: 4,
+  ),
+  equalizer: (
+    icon: "equalizer",
+    font-space: 4,
+  ),
+  error-outline: (
+    icon: "error_outline",
+    font-space: 2,
+  ),
+  error: (
+    icon: "error",
+    font-space: 2,
+  ),
+  escalator-warning: (
+    icon: "escalator_warning",
+    font-space: 2,
+  ),
+  euro-symbol: (
+    icon: "euro_symbol",
+    font-space: 3,
+  ),
+  ev-station: (
+    icon: "ev_station",
+    font-space: 4,
+  ),
+  event-available: (
+    icon: "event_available",
+    font-space: 3,
+  ),
+  event-busy: (
+    icon: "event_busy",
+    font-space: 3,
+  ),
+  event-note: (
+    icon: "event_note",
+    font-space: 3,
+  ),
+  event-seat: (
+    icon: "event_seat",
+    font-space: 2,
+  ),
+  event: (
+    icon: "event",
+    font-space: 3,
+  ),
+  exchange: (
+    icon: "compare_arrows",
+    font-space: 2,
+  ),
+  exit-to-app: (
+    icon: "exit_to_app",
+    font-space: 3,
+  ),
+  expand-less: (
+    icon: "expand_less",
+    font-space: 6,
+  ),
+  expand-more: (
+    icon: "expand_more",
+    font-space: 6,
+  ),
+  explicit: (
+    icon: "explicit",
+    font-space: 3,
+  ),
+  explore: (
+    icon: "explore",
+    font-space: 2,
+  ),
+  exposure-neg-1: (
+    icon: "exposure_neg_1",
+    font-space: 4,
+  ),
+  exposure-neg-2: (
+    icon: "exposure_neg_2",
+    font-space: 2,
+  ),
+  exposure-plus-1: (
+    icon: "exposure_plus_1",
+    font-space: 3,
+  ),
+  exposure-plus-2: (
+    icon: "exposure_plus_2",
+    font-space: 2,
+  ),
+  exposure-zero: (
+    icon: "exposure_zero",
+    font-space: 8,
+  ),
+  exposure: (
+    icon: "exposure",
+    font-space: 2,
+  ),
+  extension: (
+    icon: "extension",
+    font-space: 1,
+  ),
+  face: (
+    icon: "face",
+    font-space: 2,
+  ),
+  fastfood: (
+    icon: "fastfood",
+    font-space: 2,
+  ),
+  fast-forward: (
+    icon: "fast_forward",
+    font-space: 2,
+  ),
+  fast-rewind: (
+    icon: "fast_rewind",
+    font-space: 2,
+  ),
+  favorite-border: (
+    icon: "favorite_border",
+    font-space: 2,
+  ),
+  favorite: (
+    icon: "favorite",
+    font-space: 2,
+  ),
+  featured-play-list: (
+    icon: "featured_play_list",
+    font-space: 2,
+  ),
+  featured-video: (
+    icon: "featured_video",
+    font-space: 0,
+  ),
+  feedback: (
+    icon: "feedback",
+    font-space: 2,
+  ),
+  fiber-dvr: (
+    icon: "fiber_dvr",
+    font-space: 0,
+  ),
+  fiber-new: (
+    icon: "fiber_new",
+    font-space: 2,
+  ),
+  fiber-pin: (
+    icon: "fiber_pin",
+    font-space: 2,
+  ),
+  fiber-smart-record: (
+    icon: "fiber_smart_record",
+    font-space: 0,
+  ),
+  file-copy: (
+    icon: "file_copy",
+    font-space: 2,
+  ),
+  file-download: (
+    icon: "download",
+    font-space: 2,
+  ),
+  file-upload: (
+    icon: "upload",
+    font-space: 2,
+  ),
+  filter-1: (
+    icon: "filter_1",
+    font-space: 1,
+  ),
+  filter-2: (
+    icon: "filter_2",
+    font-space: 1,
+  ),
+  filter-3: (
+    icon: "filter_3",
+    font-space: 1,
+  ),
+  filter-4: (
+    icon: "filter_4",
+    font-space: 1,
+  ),
+  filter-5: (
+    icon: "filter_5",
+    font-space: 1,
+  ),
+  filter-6: (
+    icon: "filter_6",
+    font-space: 1,
+  ),
+  filter-7: (
+    icon: "filter_7",
+    font-space: 1,
+  ),
+  filter-8: (
+    icon: "filter_8",
+    font-space: 1,
+  ),
+  filter-9-plus: (
+    icon: "filter_9_plus",
+    font-space: 1,
+  ),
+  filter-9: (
+    icon: "filter_9",
+    font-space: 2,
+  ),
+  filter-b-and-w: (
+    icon: "filter_b_and_w",
+    font-space: 3,
+  ),
+  filter-center-focus: (
+    icon: "filter_center_focus",
+    font-space: 3,
+  ),
+  filter-drama: (
+    icon: "filter_drama",
+    font-space: 0,
+  ),
+  filter-frames: (
+    icon: "filter_frames",
+    font-space: 2,
+  ),
+  filter-hdr: (
+    icon: "filter_hdr",
+    font-space: 0,
+  ),
+  filter-list: (
+    icon: "filter",
+    font-space: 1,
+  ),
+  filter-none: (
+    icon: "filter_none",
+    font-space: 1,
+  ),
+  filter-tilt-shift: (
+    icon: "filter_tilt_shift",
+    font-space: 2,
+  ),
+  filter-vintage: (
+    icon: "filter_vintage",
+    font-space: 2,
+  ),
+  filter: (
+    icon: "filter_list",
+    font-space: 3,
+  ),
+  find-in-page: (
+    icon: "find_in_page",
+    font-space: 4,
+  ),
+  find-replace: (
+    icon: "find_replace",
+    font-space: 4,
+  ),
+  fingerprint: (
+    icon: "fingerprint",
+    font-space: 3,
+  ),
+  first-page: (
+    icon: "first_page",
+    font-space: 5,
+  ),
+  fitness-center: (
+    icon: "fitness_center",
+    font-space: 2,
+  ),
+  flag: (
+    icon: "flag",
+    font-space: 4,
+  ),
+  flare: (
+    icon: "flare",
+    font-space: 1,
+  ),
+  flash-auto: (
+    icon: "flash_auto",
+    font-space: 2,
+  ),
+  flash-off: (
+    icon: "flash_off",
+    font-space: 2,
+  ),
+  flight-land: (
+    icon: "flight_land",
+    font-space: 2,
+  ),
+  flight-takeoff: (
+    icon: "flight_takeoff",
+    font-space: 2,
+  ),
+  flight: (
+    icon: "flight",
+    font-space: 2,
+  ),
+  flip-to-back: (
+    icon: "flip_to_back",
+    font-space: 3,
+  ),
+  flip-to-front: (
+    icon: "flip_to_front",
+    font-space: 3,
+  ),
+  flip: (
+    icon: "flip",
+    font-space: 2,
+  ),
+  folder-open: (
+    icon: "folder_open",
+    font-space: 2,
+  ),
+  folder-shared: (
+    icon: "folder_shared",
+    font-space: 2,
+  ),
+  folder-special: (
+    icon: "folder_special",
+    font-space: 2,
+  ),
+  folder: (
+    icon: "folder",
+    font-space: 2,
+  ),
+  font-download: (
+    icon: "font_download",
+    font-space: 2,
+  ),
+  format-align-center: (
+    icon: "format_align_center",
+    font-space: 3,
+  ),
+  format-align-justify: (
+    icon: "format_align_justify",
+    font-space: 3,
+  ),
+  format-align-left: (
+    icon: "format_align_left",
+    font-space: 3,
+  ),
+  format-align-right: (
+    icon: "format_align_right",
+    font-space: 3,
+  ),
+  format-bold: (
+    icon: "format_bold",
+    font-space: 7,
+  ),
+  format-clear: (
+    icon: "format_clear",
+    font-space: 2,
+  ),
+  format-color-reset: (
+    icon: "format_color_reset",
+    font-space: 4,
+  ),
+  format-indent-decrease: (
+    icon: "format_indent_decrease",
+    font-space: 3,
+  ),
+  format-indent-increase: (
+    icon: "format_indent_increase",
+    font-space: 3,
+  ),
+  format-italic: (
+    icon: "format_italic",
+    font-space: 5,
+  ),
+  format-line-spacing: (
+    icon: "format_line_spacing",
+    font-space: 1,
+  ),
+  format-list-bulleted: (
+    icon: "format_list_bulleted",
+    font-space: 2,
+  ),
+  format-list-numbered: (
+    icon: "format_list_numbered",
+    font-space: 2,
+  ),
+  format-list-numbered-rtl: (
+    icon: "format_list_numbered_rtl",
+    font-space: 2,
+  ),
+  format-paint: (
+    icon: "format_paint",
+    font-space: 3,
+  ),
+  format-quote: (
+    icon: "format_quote",
+    font-space: 5,
+  ),
+  format-shapes: (
+    icon: "format_shapes",
+    font-space: 1,
+  ),
+  format-size: (
+    icon: "format_size",
+    font-space: 3,
+  ),
+  format-strikethrough: (
+    icon: "format_strikethrough",
+    font-space: 3,
+  ),
+  format-textdirection-l-to-r: (
+    icon: "format_textdirection_l_to_r",
+    font-space: 3,
+  ),
+  format-textdirection-r-to-l: (
+    icon: "format_textdirection_r_to_l",
+    font-space: 4,
+  ),
+  format-underlined: (
+    icon: "format_underlined",
+    font-space: 5,
+  ),
+  forum: (
+    icon: "forum",
+    font-space: 2,
+  ),
+  forward-10: (
+    icon: "forward_10",
+    font-space: 7,
+  ),
+  forward-30: (
+    icon: "forward_30",
+    font-space: 7,
+  ),
+  forward-5: (
+    icon: "forward_5",
+    font-space: 4,
+  ),
+  forward: (
+    icon: "forward",
+    font-space: 4,
+  ),
+  free-breakfast: (
+    icon: "free_breakfast",
+    font-space: 2,
+  ),
+  fullscreen-exit: (
+    icon: "fullscreen_exit",
+    font-space: 5,
+  ),
+  fullscreen: (
+    icon: "fullscreen",
+    font-space: 5,
+  ),
+  functions: (
+    icon: "functions",
+    font-space: 5,
+  ),
+  g-translate: (
+    icon: "g_translate",
+    font-space: 2,
+  ),
+  gamepad: (
+    icon: "gamepad",
+    font-space: 2,
+  ),
+  games: (
+    icon: "games",
+    font-space: 2,
+  ),
+  gesture: (
+    icon: "gesture",
+    font-space: 3,
+  ),
+  get-app: (
+    icon: "get_app",
+    font-space: 5,
+  ),
+  gif: (
+    icon: "gif",
+    font-space: 5,
+  ),
+  golf-course: (
+    icon: "golf_course",
+    font-space: 3,
+  ),
+  gps-fixed: (
+    icon: "gps_fixed",
+    font-space: 1,
+  ),
+  gps-not-fixed: (
+    icon: "gps_not_fixed",
+    font-space: 1,
+  ),
+  gps-off: (
+    icon: "gps_off",
+    font-space: 1,
+  ),
+  grade: (
+    icon: "grade",
+    font-space: 2,
+  ),
+  gradient: (
+    icon: "gradient",
+    font-space: 3,
+  ),
+  grain: (
+    icon: "grain",
+    font-space: 3,
+  ),
+  graphic-eq: (
+    icon: "graphic_eq",
+    font-space: 3,
+  ),
+  grass: (
+    icon: "grass",
+    font-space: 2,
+  ),
+  grid-off: (
+    icon: "grid_off",
+    font-space: 1,
+  ),
+  grid-on: (
+    icon: "grid_on",
+    font-space: 2,
+  ),
+  group-add: (
+    icon: "group_add",
+    font-space: 0,
+  ),
+  group-work: (
+    icon: "group_work",
+    font-space: 2,
+  ),
+  group: (
+    icon: "group",
+    font-space: 3,
+  ),
+  handshake: (
+    icon: "handshake",
+    font-space: 2,
+  ),
+  handyman: (
+    icon: "handyman",
+    font-space: 2,
+  ),
+  hd: (
+    icon: "hd",
+    font-space: 3,
+  ),
+  hdr-off: (
+    icon: "hdr_off",
+    font-space: 2,
+  ),
+  hdr-on: (
+    icon: "hdr_on",
+    font-space: 3,
+  ),
+  hdr-strong: (
+    icon: "hdr_strong",
+    font-space: 1,
+  ),
+  hdr-weak: (
+    icon: "hdr_weak",
+    font-space: 1,
+  ),
+  headset-mic: (
+    icon: "headset_mic",
+    font-space: 3,
+  ),
+  headset: (
+    icon: "headset",
+    font-space: 3,
+  ),
+  healing: (
+    icon: "healing",
+    font-space: 2,
+  ),
+  hearing: (
+    icon: "hearing",
+    font-space: 3,
+  ),
+  help-outline: (
+    icon: "help_outline",
+    font-space: 2,
+  ),
+  help: (
+    icon: "help",
+    font-space: 2,
+  ),
+  high-quality: (
+    icon: "high_quality",
+    font-space: 3,
+  ),
+  highlight-off: (
+    icon: "highlight_off",
+    font-space: 2,
+  ),
+  highlight: (
+    icon: "highlight",
+    font-space: 3,
+  ),
+  history: (
+    icon: "history",
+    font-space: 1,
+  ),
+  home: (
+    icon: "home",
+    font-space: 2,
+  ),
+  hot-tub: (
+    icon: "hot_tub",
+    font-space: 2,
+  ),
+  hotel: (
+    icon: "hotel",
+    font-space: 1,
+  ),
+  hourglass-empty: (
+    icon: "hourglass_empty",
+    font-space: 6,
+  ),
+  hourglass-full: (
+    icon: "hourglass_full",
+    font-space: 6,
+  ),
+  how-to-reg: (
+    icon: "how_to_reg",
+    font-space: 0,
+  ),
+  http: (
+    icon: "http",
+    font-space: 1,
+  ),
+  https: (
+    icon: "https",
+    font-space: 4,
+  ),
+  image-aspect-ratio: (
+    icon: "image_aspect_ratio",
+    font-space: 3,
+  ),
+  image: (
+    icon: "image",
+    font-space: 3,
+  ),
+  import-contacts: (
+    icon: "import_contacts",
+    font-space: 2,
+  ),
+  import-export: (
+    icon: "import_export",
+    font-space: 5,
+  ),
+  important-devices: (
+    icon: "important_devices",
+    font-space: 0,
+  ),
+  inbox: (
+    icon: "email",
+    font-space: 2,
+  ),
+  indeterminate-check-box: (
+    icon: "indeterminate_check_box",
+    font-space: 3,
+  ),
+  incoming: (
+    icon: "call_received",
+    font-space: 2,
+  ),
+  info: (
+    icon: "info",
+    font-space: 2,
+  ),
+  input: (
+    icon: "input",
+    font-space: 1,
+  ),
+  insert-chart: (
+    icon: "insert_chart",
+    font-space: 3,
+  ),
+  insert-comment: (
+    icon: "insert_comment",
+    font-space: 2,
+  ),
+  insert-drive-file: (
+    icon: "insert_drive_file",
+    font-space: 4,
+  ),
+  insert-emoticon: (
+    icon: "insert_emoticon",
+    font-space: 2,
+  ),
+  insert-invitation: (
+    icon: "insert_invitation",
+    font-space: 3,
+  ),
+  insert-link: (
+    icon: "insert_link",
+    font-space: 2,
+  ),
+  insert-photo: (
+    icon: "insert_photo",
+    font-space: 3,
+  ),
+  invert-colors-off: (
+    icon: "invert_colors_off",
+    font-space: 3,
+  ),
+  invert-colors: (
+    icon: "invert_colors",
+    font-space: 4,
+  ),
+  investment-accounts: (
+    icon: "trending_up",
+    font-space: 2,
+  ),
+  iso: (
+    icon: "iso",
+    font-space: 3,
+  ),
+  keyboard-backspace: (
+    icon: "keyboard_backspace",
+    font-space: 3,
+  ),
+  keyboard-capslock: (
+    icon: "keyboard_capslock",
+    font-space: 5,
+  ),
+  keyboard-hide: (
+    icon: "keyboard_hide",
+    font-space: 2,
+  ),
+  keyboard-return: (
+    icon: "keyboard_return",
+    font-space: 2,
+  ),
+  keyboard-tab: (
+    icon: "keyboard_tab",
+    font-space: 1,
+  ),
+  keyboard-voice: (
+    icon: "keyboard_voice",
+    font-space: 4,
+  ),
+  keyboard: (
+    icon: "keyboard",
+    font-space: 2,
+  ),
+  kitchen: (
+    icon: "kitchen",
+    font-space: 4,
+  ),
+  label: (
+    icon: "label",
+    font-space: 2,
+  ),
+  label-off: (
+    icon: "label_off",
+    font-space: 0,
+  ),
+  landscape: (
+    icon: "landscape",
+    font-space: 1,
+  ),
+  language: (
+    icon: "language",
+    font-space: 2,
+  ),
+  laptop-chromebook: (
+    icon: "laptop_chromebook",
+    font-space: 0,
+  ),
+  laptop-mac: (
+    icon: "laptop_mac",
+    font-space: 0,
+  ),
+  laptop-windows: (
+    icon: "laptop_windows",
+    font-space: 0,
+  ),
+  laptop: (
+    icon: "laptop",
+    font-space: 0,
+  ),
+  last-page: (
+    icon: "last_page",
+    font-space: 5,
+  ),
+  launch: (
+    icon: "launch",
+    font-space: 3,
+  ),
+  layers-clear: (
+    icon: "layers_clear",
+    font-space: 2,
+  ),
+  layers: (
+    icon: "layers",
+    font-space: 3,
+  ),
+  leak-add: (
+    icon: "leak_add",
+    font-space: 3,
+  ),
+  leak-remove: (
+    icon: "leak_remove",
+    font-space: 3,
+  ),
+  lens: (
+    icon: "lens",
+    font-space: 2,
+  ),
+  library-add: (
+    icon: "library_add",
+    font-space: 2,
+  ),
+  library-music: (
+    icon: "library_music",
+    font-space: 2,
+  ),
+  lightbulb-outline: (
+    icon: "lightbulb",
+    font-space: 5,
+  ),
+  line-style: (
+    icon: "line_style",
+    font-space: 3,
+  ),
+  line-weight: (
+    icon: "line_weight",
+    font-space: 3,
+  ),
+  linear-scale: (
+    icon: "linear_scale",
+    font-space: 2,
+  ),
+  link: (
+    icon: "link",
+    font-space: 2,
+  ),
+  link-off: (
+    icon: "link_off",
+    font-space: 2,
+  ),
+  linked-camera: (
+    icon: "linked_camera",
+    font-space: 2,
+  ),
+  list: (
+    icon: "list",
+    font-space: 3,
+  ),
+  live-help: (
+    icon: "live_help",
+    font-space: 3,
+  ),
+  live-tv: (
+    icon: "live_tv",
+    font-space: 0,
+  ),
+  loading: (
+    icon: "refresh",
+    font-space: 4,
+  ),
+  loans: (
+    icon: "monetization_on",
+    font-space: 2,
+  ),
+  local-activity: (
+    icon: "local_activity",
+    font-space: 2,
+  ),
+  local-airport: (
+    icon: "local_airport",
+    font-space: 2,
+  ),
+  local-bar: (
+    icon: "local_bar",
+    font-space: 3,
+  ),
+  local-cafe: (
+    icon: "local_cafe",
+    font-space: 2,
+  ),
+  local-car-wash: (
+    icon: "local_car_wash",
+    font-space: 3,
+  ),
+  local-convenience-store: (
+    icon: "local_convenience_store",
+    font-space: 2,
+  ),
+  local-dining: (
+    icon: "local_dining",
+    font-space: 2,
+  ),
+  local-drink: (
+    icon: "local_drink",
+    font-space: 3,
+  ),
+  local-florist: (
+    icon: "local_florist",
+    font-space: 3,
+  ),
+  local-gas-station: (
+    icon: "local_gas_station",
+    font-space: 3,
+  ),
+  local-grocery-store: (
+    icon: "local_grocery_store",
+    font-space: 1,
+  ),
+  local-hospital: (
+    icon: "local_hospital",
+    font-space: 3,
+  ),
+  local-hotel: (
+    icon: "local_hotel",
+    font-space: 1,
+  ),
+  local-laundry-service: (
+    icon: "local_laundry_service",
+    font-space: 3,
+  ),
+  local-library: (
+    icon: "local_library",
+    font-space: 3,
+  ),
+  local-mall: (
+    icon: "local_mall",
+    font-space: 2,
+  ),
+  local-movies: (
+    icon: "local_movies",
+    font-space: 4,
+  ),
+  local-offer: (
+    icon: "local_offer",
+    font-space: 2,
+  ),
+  local-parking: (
+    icon: "local_parking",
+    font-space: 5,
+  ),
+  local-pharmacy: (
+    icon: "local_pharmacy",
+    font-space: 3,
+  ),
+  local-phone: (
+    icon: "local_phone",
+    font-space: 3,
+  ),
+  local-pizza: (
+    icon: "local_pizza",
+    font-space: 3,
+  ),
+  local-play: (
+    icon: "local_play",
+    font-space: 2,
+  ),
+  local-post-office: (
+    icon: "local_post_office",
+    font-space: 2,
+  ),
+  local-printshop: (
+    icon: "local_printshop",
+    font-space: 2,
+  ),
+  local-see: (
+    icon: "local_see",
+    font-space: 2,
+  ),
+  local-shipping: (
+    icon: "local_shipping",
+    font-space: 0,
+  ),
+  local-taxi: (
+    icon: "local_taxi",
+    font-space: 3,
+  ),
+  location-city: (
+    icon: "location_city",
+    font-space: 3,
+  ),
+  location-disabled: (
+    icon: "location_disabled",
+    font-space: 1,
+  ),
+  location-off: (
+    icon: "location_off",
+    font-space: 2,
+  ),
+  location-on: (
+    icon: "location_on",
+    font-space: 5,
+  ),
+  location-searching: (
+    icon: "location_searching",
+    font-space: 1,
+  ),
+  lock-open: (
+    icon: "lock_open",
+    font-space: 4,
+  ),
+  lock: (
+    icon: "lock",
+    font-space: 4,
+  ),
+  looks-3: (
+    icon: "looks_3",
+    font-space: 3,
+  ),
+  looks-4: (
+    icon: "looks_4",
+    font-space: 3,
+  ),
+  looks-5: (
+    icon: "looks_5",
+    font-space: 3,
+  ),
+  looks-6: (
+    icon: "looks_6",
+    font-space: 3,
+  ),
+  looks-one: (
+    icon: "looks_one",
+    font-space: 3,
+  ),
+  looks-two: (
+    icon: "looks_two",
+    font-space: 3,
+  ),
+  looks: (
+    icon: "looks",
+    font-space: 1,
+  ),
+  loop: (
+    icon: "loop",
+    font-space: 4,
+  ),
+  loupe: (
+    icon: "loupe",
+    font-space: 2,
+  ),
+  low-priority: (
+    icon: "low_priority",
+    font-space: 2,
+  ),
+  loyalty: (
+    icon: "loyalty",
+    font-space: 2,
+  ),
+  mail-outline: (
+    icon: "mail_outline",
+    font-space: 2,
+  ),
+  mail: (
+    icon: "mail",
+    font-space: 2,
+  ),
+  map: (
+    icon: "map",
+    font-space: 3,
+  ),
+  markunread-mailbox: (
+    icon: "markunread_mailbox",
+    font-space: 2,
+  ),
+  markunread: (
+    icon: "markunread",
+    font-space: 2,
+  ),
+  medical-services: (
+    icon: "medical_services",
+    font-space: 2,
+  ),
+  memory: (
+    icon: "memory",
+    font-space: 3,
+  ),
+  menu: (
+    icon: "menu",
+    font-space: 3,
+  ),
+  merge-type: (
+    icon: "merge_type",
+    font-space: 5,
+  ),
+  message: (
+    icon: "message",
+    font-space: 2,
+  ),
+  mic-none: (
+    icon: "mic_none",
+    font-space: 4,
+  ),
+  mic-off: (
+    icon: "mic_off",
+    font-space: 3,
+  ),
+  mic: (
+    icon: "mic",
+    font-space: 5,
+  ),
+  miscellaneous-services: (
+    icon: "miscellaneous_services",
+    font-space: 2,
+  ),
+  mms: (
+    icon: "mms",
+    font-space: 2,
+  ),
+  mode-comment: (
+    icon: "mode_comment",
+    font-space: 2,
+  ),
+  mode-edit: (
+    icon: "mode_edit",
+    font-space: 3,
+  ),
+  monetization-on: (
+    icon: "monetization_on",
+    font-space: 2,
+  ),
+  money-off: (
+    icon: "money_off",
+    font-space: 4,
+  ),
+  monochrome-photos: (
+    icon: "monochrome_photos",
+    font-space: 2,
+  ),
+  mood-bad: (
+    icon: "mood_bad",
+    font-space: 2,
+  ),
+  mood: (
+    icon: "mood",
+    font-space: 2,
+  ),
+  more-vertical: (
+    icon: "more_vert",
+    font-space: 9,
+  ),
+  money: (
+    icon: "money",
+    font-space: 2,
+  ),
+  more: (
+    icon: "more",
+    font-space: 0,
+  ),
+  motorcycle: (
+    icon: "motorcycle",
+    font-space: 0,
+  ),
+  mouse: (
+    icon: "mouse",
+    font-space: 4,
+  ),
+  move-to-inbox: (
+    icon: "move_to_inbox",
+    font-space: 3,
+  ),
+  movie-creation: (
+    icon: "movie_creation",
+    font-space: 2,
+  ),
+  movie-filter: (
+    icon: "movie_filter",
+    font-space: 2,
+  ),
+  movie: (
+    icon: "movie",
+    font-space: 2,
+  ),
+  music-note: (
+    icon: "music_note",
+    font-space: 6,
+  ),
+  music-video: (
+    icon: "music_video",
+    font-space: 1,
+  ),
+  my-location: (
+    icon: "my_location",
+    font-space: 1,
+  ),
+  nature-people: (
+    icon: "nature_people",
+    font-space: 2,
+  ),
+  nature: (
+    icon: "nature",
+    font-space: 4,
+  ),
+  navigate-before: (
+    icon: "navigate_before",
+    font-space: 8,
+  ),
+  navigate-next: (
+    icon: "navigate_next",
+    font-space: 8,
+  ),
+  navigation: (
+    icon: "navigation",
+    font-space: 4,
+  ),
+  near-me: (
+    icon: "near_me",
+    font-space: 3,
+  ),
+  network-check: (
+    icon: "network_check",
+    font-space: 1,
+  ),
+  network-locked: (
+    icon: "network_locked",
+    font-space: 1,
+  ),
+  new-releases: (
+    icon: "new_releases",
+    font-space: 1,
+  ),
+  next-week: (
+    icon: "next_week",
+    font-space: 2,
+  ),
+  nfc: (
+    icon: "nfc",
+    font-space: 2,
+  ),
+  nights-stay: (
+    icon: "nights_stay",
+    font-space: 2,
+  ),
+  no-encryption: (
+    icon: "no_encryption",
+    font-space: 3,
+  ),
+  no-sim: (
+    icon: "no_sim",
+    font-space: 3,
+  ),
+  not-interested: (
+    icon: "not_interested",
+    font-space: 2,
+  ),
+  note-add: (
+    icon: "note_add",
+    font-space: 4,
+  ),
+  note: (
+    icon: "note",
+    font-space: 2,
+  ),
+  notifications-active: (
+    icon: "notifications_active",
+    font-space: 2,
+  ),
+  notifications-none: (
+    icon: "notifications_none",
+    font-space: 4,
+  ),
+  notifications-off: (
+    icon: "notifications_off",
+    font-space: 3,
+  ),
+  notifications-paused: (
+    icon: "notifications_paused",
+    font-space: 4,
+  ),
+  notifications: (
+    icon: "notifications",
+    font-space: 4,
+  ),
+  offline-pin: (
+    icon: "offline_pin",
+    font-space: 2,
+  ),
+  ondemand-video: (
+    icon: "ondemand_video",
+    font-space: 1,
+  ),
+  online-prediction: (
+    icon: "online_prediction",
+    font-space: 2,
+  ),
+  opacity: (
+    icon: "opacity",
+    font-space: 4,
+  ),
+  open-in-browser: (
+    icon: "open_in_browser",
+    font-space: 3,
+  ),
+  open-in-new: (
+    icon: "open_in_new",
+    font-space: 3,
+  ),
+  open-with: (
+    icon: "open_with",
+    font-space: 1,
+  ),
+  outgoing: (
+    icon: "call_made",
+    font-space: 2,
+  ),
+  pages: (
+    icon: "pages",
+    font-space: 3,
+  ),
+  pageview: (
+    icon: "pageview",
+    font-space: 2,
+  ),
+  paid: (
+    icon: "paid",
+    font-space: 2,
+  ),
+  palette: (
+    icon: "palette",
+    font-space: 3,
+  ),
+  pan-tool: (
+    icon: "pan_tool",
+    font-space: 1,
+  ),
+  panorama-fish-eye: (
+    icon: "panorama_fish_eye",
+    font-space: 2,
+  ),
+  panorama-horizontal: (
+    icon: "panorama_horizontal",
+    font-space: 2,
+  ),
+  panorama-vertical: (
+    icon: "panorama_vertical",
+    font-space: 4,
+  ),
+  panorama-wide-angle: (
+    icon: "panorama_wide_angle",
+    font-space: 2,
+  ),
+  panorama: (
+    icon: "panorama",
+    font-space: 1,
+  ),
+  party-mode: (
+    icon: "party_mode",
+    font-space: 2,
+  ),
+  pause-circle-filled: (
+    icon: "pause_circle_filled",
+    font-space: 2,
+  ),
+  pause-circle-outline: (
+    icon: "pause_circle_outline",
+    font-space: 2,
+  ),
+  pause: (
+    icon: "pause",
+    font-space: 6,
+  ),
+  payment: (
+    icon: "payment",
+    font-space: 2,
+  ),
+  payments: (
+    icon: "payments",
+    font-space: 2,
+  ),
+  people-outline: (
+    icon: "people_outline",
+    font-space: 1,
+  ),
+  perm-camera-mic: (
+    icon: "perm_camera_mic",
+    font-space: 2,
+  ),
+  perm-contact-calendar: (
+    icon: "perm_contact_calendar",
+    font-space: 3,
+  ),
+  perm-data-setting: (
+    icon: "perm_data_setting",
+    font-space: 0,
+  ),
+  perm-device-information: (
+    icon: "perm_device_information",
+    font-space: 5,
+  ),
+  perm-identity: (
+    icon: "perm_identity",
+    font-space: 4,
+  ),
+  perm-media: (
+    icon: "perm_media",
+    font-space: 0,
+  ),
+  perm-phone-msg: (
+    icon: "perm_phone_msg",
+    font-space: 3,
+  ),
+  perm-scan-wifi: (
+    icon: "perm_scan_wifi",
+    font-space: 0,
+  ),
+  person-add: (
+    icon: "person_add",
+    font-space: 1,
+  ),
+  person-outline: (
+    icon: "person_outline",
+    font-space: 4,
+  ),
+  person-pin-circle: (
+    icon: "person_pin_circle",
+    font-space: 5,
+  ),
+  person-pin: (
+    icon: "person_pin",
+    font-space: 3,
+  ),
+  person-remove: (
+    icon: "person_remove",
+    font-space: 1,
+  ),
+  personal-video: (
+    icon: "personal_video",
+    font-space: 1,
+  ),
+  pets: (
+    icon: "pets",
+    font-space: 2,
+  ),
+  phone-android: (
+    icon: "phone_android",
+    font-space: 5,
+  ),
+  phone-bluetooth-speaker: (
+    icon: "phone_bluetooth_speaker",
+    font-space: 3,
+  ),
+  phone-forwarded: (
+    icon: "phone_forwarded",
+    font-space: 3,
+  ),
+  phone-in-talk: (
+    icon: "phone_in_talk",
+    font-space: 2,
+  ),
+  phone-iphone: (
+    icon: "phone_iphone",
+    font-space: 4,
+  ),
+  phone-locked: (
+    icon: "phone_locked",
+    font-space: 3,
+  ),
+  phone-missed: (
+    icon: "phone_missed",
+    font-space: 0,
+  ),
+  phone-paused: (
+    icon: "phone_paused",
+    font-space: 3,
+  ),
+  phone: (
+    icon: "phone",
+    font-space: 3,
+  ),
+  phonelink-erase: (
+    icon: "phonelink_erase",
+    font-space: 3,
+  ),
+  phonelink-lock: (
+    icon: "phonelink_lock",
+    font-space: 3,
+  ),
+  phonelink-off: (
+    icon: "phonelink_off",
+    font-space: 0,
+  ),
+  phonelink-ring: (
+    icon: "phonelink_ring",
+    font-space: 2,
+  ),
+  phonelink-setup: (
+    icon: "phonelink_setup",
+    font-space: 3,
+  ),
+  phonelink: (
+    icon: "phonelink",
+    font-space: 0,
+  ),
+  photo-album: (
+    icon: "photo_album",
+    font-space: 4,
+  ),
+  photo-camera: (
+    icon: "photo_camera",
+    font-space: 2,
+  ),
+  photo-filter: (
+    icon: "photo_filter",
+    font-space: 3,
+  ),
+  photo-library: (
+    icon: "photo_library",
+    font-space: 2,
+  ),
+  photo-size-select-actual: (
+    icon: "photo_size_select_actual",
+    font-space: 1,
+  ),
+  photo-size-select-large: (
+    icon: "photo_size_select_large",
+    font-space: 1,
+  ),
+  photo-size-select-small: (
+    icon: "photo_size_select_small",
+    font-space: 1,
+  ),
+  photo: (
+    icon: "photo",
+    font-space: 3,
+  ),
+  picture-as-pdf: (
+    icon: "picture_as_pdf",
+    font-space: 2,
+  ),
+  picture-in-picture-alt: (
+    icon: "picture_in_picture_alt",
+    font-space: 1,
+  ),
+  picture-in-picture: (
+    icon: "picture_in_picture",
+    font-space: 1,
+  ),
+  pie-chart: (
+    icon: "pie_chart",
+    font-space: 2,
+  ),
+  pie_chart_outline: (
+    icon: "pie_chart_outline",
+    font-space: 2,
+  ),
+  pin-drop: (
+    icon: "pin_drop",
+    font-space: 5,
+  ),
+  place: (
+    icon: "place",
+    font-space: 5,
+  ),
+  play-arrow: (
+    icon: "play_arrow",
+    font-space: 5,
+  ),
+  play-circle-filled: (
+    icon: "play_circle_filled",
+    font-space: 2,
+  ),
+  play-circle-outline: (
+    icon: "play_circle_outline",
+    font-space: 2,
+  ),
+  play-for-work: (
+    icon: "play_for_work",
+    font-space: 6,
+  ),
+  playlist-add-check: (
+    icon: "playlist_add_check",
+    font-space: 1,
+  ),
+  playlist-add: (
+    icon: "playlist_add",
+    font-space: 2,
+  ),
+  playlist-play: (
+    icon: "playlist_play",
+    font-space: 2,
+  ),
+  plus-one: (
+    icon: "plus_one",
+    font-space: 4,
+  ),
+  poll: (
+    icon: "poll",
+    font-space: 3,
+  ),
+  polymer: (
+    icon: "polymer",
+    font-space: 0,
+  ),
+  pool: (
+    icon: "pool",
+    font-space: 2,
+  ),
+  portable-wifi-off: (
+    icon: "portable_wifi_off",
+    font-space: 2,
+  ),
+  portrait: (
+    icon: "portrait",
+    font-space: 3,
+  ),
+  power-input: (
+    icon: "power_input",
+    font-space: 2,
+  ),
+  power-settings-new: (
+    icon: "power_settings_new",
+    font-space: 3,
+  ),
+  power: (
+    icon: "power",
+    font-space: 6,
+  ),
+  pregnant-woman: (
+    icon: "pregnant_woman",
+    font-space: 8,
+  ),
+  present-to-all: (
+    icon: "present_to_all",
+    font-space: 1,
+  ),
+  print: (
+    icon: "print",
+    font-space: 2,
+  ),
+  priority-high: (
+    icon: "priority_high",
+    font-space: 10,
+  ),
+  profile: (
+    icon: "account_circle",
+    font-space: 2,
+  ),
+  psychology: (
+    icon: "psychology",
+    font-space: 1,
+  ),
+  public: (
+    icon: "public",
+    font-space: 2,
+  ),
+  publish: (
+    icon: "publish",
+    font-space: 6,
+  ),
+  query-builder: (
+    icon: "query_builder",
+    font-space: 2,
+  ),
+  question-answer: (
+    icon: "question_answer",
+    font-space: 2,
+  ),
+  queue-music: (
+    icon: "queue_music",
+    font-space: 3,
+  ),
+  queue-play-next: (
+    icon: "queue_play_next",
+    font-space: 1,
+  ),
+  queue: (
+    icon: "queue",
+    font-space: 2,
+  ),
+  quick-action: (
+    icon: "flash_on",
+    font-space: 5,
+  ),
+  radio-button-checked: (
+    icon: "radio_button_checked",
+    font-space: 2,
+  ),
+  radio-button-unchecked: (
+    icon: "radio_button_unchecked",
+    font-space: 2,
+  ),
+  radio: (
+    icon: "radio",
+    font-space: 2,
+  ),
+  rate-review: (
+    icon: "rate_review",
+    font-space: 2,
+  ),
+  receipt: (
+    icon: "receipt",
+    font-space: 3,
+  ),
+  recent-actors: (
+    icon: "recent_actors",
+    font-space: 1,
+  ),
+  record-voice-over: (
+    icon: "record_voice_over",
+    font-space: 1,
+  ),
+  redeem: (
+    icon: "redeem",
+    font-space: 2,
+  ),
+  redo: (
+    icon: "redo",
+    font-space: 2,
+  ),
+  remove-circle-outline: (
+    icon: "remove_circle_outline",
+    font-space: 2,
+  ),
+  remove-circle: (
+    icon: "remove_circle",
+    font-space: 2,
+  ),
+  remove-from-queue: (
+    icon: "remove_from_queue",
+    font-space: 1,
+  ),
+  remove-red-eye: (
+    icon: "remove_red_eye",
+    font-space: 1,
+  ),
+  remove-shopping-cart: (
+    icon: "remove_shopping_cart",
+    font-space: 0,
+  ),
+  remove: (
+    icon: "remove",
+    font-space: 5,
+  ),
+  reorder: (
+    icon: "reorder",
+    font-space: 3,
+  ),
+  repeat-one: (
+    icon: "repeat_one",
+    font-space: 3,
+  ),
+  repeat: (
+    icon: "repeat",
+    font-space: 3,
+  ),
+  replay-10: (
+    icon: "replay_10",
+    font-space: 6,
+  ),
+  replay-30: (
+    icon: "replay_30",
+    font-space: 6,
+  ),
+  replay-5: (
+    icon: "replay_5",
+    font-space: 4,
+  ),
+  replay: (
+    icon: "replay",
+    font-space: 4,
+  ),
+  reply-all: (
+    icon: "reply_all",
+    font-space: 0,
+  ),
+  reply: (
+    icon: "reply",
+    font-space: 3,
+  ),
+  report-problem: (
+    icon: "error",
+    font-space: 2,
+  ),
+  report: (
+    icon: "report",
+    font-space: 3,
+  ),
+  request-quote: (
+    icon: "request_quote",
+    font-space: 3,
+  ),
+  restaurant-menu: (
+    icon: "restaurant_menu",
+    font-space: 2,
+  ),
+  restaurant: (
+    icon: "restaurant",
+    font-space: 3,
+  ),
+  restore-page: (
+    icon: "restore_page",
+    font-space: 4,
+  ),
+  restore: (
+    icon: "restore",
+    font-space: 1,
+  ),
+  ring-volume: (
+    icon: "ring_volume",
+    font-space: 0,
+  ),
+  room-service: (
+    icon: "room_service",
+    font-space: 2,
+  ),
+  room: (
+    icon: "room",
+    font-space: 5,
+  ),
+  rotate-90-degrees-ccw: (
+    icon: "rotate_90_degrees_ccw",
+    font-space: 1,
+  ),
+  rotate-left: (
+    icon: "rotate_left",
+    font-space: 4,
+  ),
+  rotate-right: (
+    icon: "rotate_right",
+    font-space: 4,
+  ),
+  rounded-corner: (
+    icon: "rounded_corner",
+    font-space: 1,
+  ),
+  router: (
+    icon: "router",
+    font-space: 1,
+  ),
+  rowing: (
+    icon: "rowing",
+    font-space: 1,
+  ),
+  rss-feed: (
+    icon: "rss_feed",
+    font-space: 4,
+  ),
+  rv-hookup: (
+    icon: "rv_hookup",
+    font-space: 2,
+  ),
+  satellite: (
+    icon: "satellite",
+    font-space: 3,
+  ),
+  save: (
+    icon: "save",
+    font-space: 3,
+  ),
+  savings-accounts: (
+    icon: "savings",
+    font-space: 2,
+  ),
+  save-alt: (
+    icon: "save_alt",
+    font-space: 3,
+  ),
+  scanner: (
+    icon: "scanner",
+    font-space: 3,
+  ),
+  schedule: (
+    icon: "schedule",
+    font-space: 2,
+  ),
+  school: (
+    icon: "school",
+    font-space: 1,
+  ),
+  screen-lock-landscape: (
+    icon: "screen_lock_landscape",
+    font-space: 0,
+  ),
+  screen-lock-portrait: (
+    icon: "screen_lock_portrait",
+    font-space: 5,
+  ),
+  screen-lock-rotation: (
+    icon: "screen_lock_rotation",
+    font-space: 0,
+  ),
+  screen-rotation: (
+    icon: "screen_rotation",
+    font-space: 0,
+  ),
+  screen-share: (
+    icon: "screen_share",
+    font-space: 0,
+  ),
+  sd-card: (
+    icon: "sd_card",
+    font-space: 4,
+  ),
+  sd-storage: (
+    icon: "sd_storage",
+    font-space: 4,
+  ),
+  search: (
+    icon: "search",
+    font-space: 3,
+  ),
+  security: (
+    icon: "security",
+    font-space: 3,
+  ),
+  select-all: (
+    icon: "select_all",
+    font-space: 3,
+  ),
+  send: (
+    icon: "send",
+    font-space: 1,
+  ),
+  sentiment-dissatisfied: (
+    icon: "sentiment_dissatisfied",
+    font-space: 2,
+  ),
+  sentiment-neutral: (
+    icon: "sentiment_neutral",
+    font-space: 2,
+  ),
+  sentiment-satisfied: (
+    icon: "sentiment_satisfied",
+    font-space: 2,
+  ),
+  sentiment-very-dissatisfied: (
+    icon: "sentiment_very_dissatisfied",
+    font-space: 2,
+  ),
+  sentiment-very-satisfied: (
+    icon: "sentiment_very_satisfied",
+    font-space: 2,
+  ),
+  settings-applications: (
+    icon: "settings_applications",
+    font-space: 3,
+  ),
+  settings-backup-restore: (
+    icon: "settings_backup_restore",
+    font-space: 0,
+  ),
+  settings-bluetooth: (
+    icon: "settings_bluetooth",
+    font-space: 5,
+  ),
+  settings-brightness: (
+    icon: "settings_brightness",
+    font-space: 1,
+  ),
+  settings-cell: (
+    icon: "settings_cell",
+    font-space: 6,
+  ),
+  settings-ethernet: (
+    icon: "settings_ethernet",
+    font-space: 1,
+  ),
+  settings-input-antenna: (
+    icon: "settings_input_antenna",
+    font-space: 1,
+  ),
+  settings-input-component: (
+    icon: "settings_input_component",
+    font-space: 1,
+  ),
+  settings-input-composite: (
+    icon: "settings_input_composite",
+    font-space: 1,
+  ),
+  settings-input-hdmi: (
+    icon: "settings_input_hdmi",
+    font-space: 5,
+  ),
+  settings-input-svideo: (
+    icon: "settings_input_svideo",
+    font-space: 0,
+  ),
+  settings-overscan: (
+    icon: "settings_overscan",
+    font-space: 2,
+  ),
+  settings-phone: (
+    icon: "settings_phone",
+    font-space: 3,
+  ),
+  settings-power: (
+    icon: "settings_power",
+    font-space: 4,
+  ),
+  settings-remote: (
+    icon: "settings_remote",
+    font-space: 4,
+  ),
+  settings-system-daydream: (
+    icon: "settings_system_daydream",
+    font-space: 1,
+  ),
+  settings-voice: (
+    icon: "settings_voice",
+    font-space: 5,
+  ),
+  settings: (
+    icon: "settings",
+    font-space: 2,
+  ),
+  share: (
+    icon: "share",
+    font-space: 3,
+  ),
+  shop-two: (
+    icon: "shop_two",
+    font-space: 1,
+  ),
+  shop: (
+    icon: "shop",
+    font-space: 2,
+  ),
+  shopping-basket: (
+    icon: "shopping_basket",
+    font-space: 1,
+  ),
+  shopping-cart: (
+    icon: "shopping_cart",
+    font-space: 1,
+  ),
+  short-text: (
+    icon: "short_text",
+    font-space: 4,
+  ),
+  show-chart: (
+    icon: "show_chart",
+    font-space: 2,
+  ),
+  shuffle: (
+    icon: "shuffle",
+    font-space: 4,
+  ),
+  signal-cellular-4-bar: (
+    icon: "signal_cellular_4_bar",
+    font-space: 2,
+  ),
+  signal-cellular-connected-no-internet-4-bar: (
+    icon: "signal_cellular_connected_no_internet_4_bar",
+    font-space: 2,
+  ),
+  signal-cellular-no-sim: (
+    icon: "signal_cellular_no_sim",
+    font-space: 3,
+  ),
+  signal-cellular-null: (
+    icon: "signal_cellular_null",
+    font-space: 2,
+  ),
+  signal-cellular-off: (
+    icon: "signal_cellular_off",
+    font-space: 1,
+  ),
+  signal-wifi-4-bar-lock: (
+    icon: "signal_wifi_4_bar_lock",
+    font-space: 0,
+  ),
+  signal-wifi-4-bar: (
+    icon: "signal_wifi_4_bar",
+    font-space: 0,
+  ),
+  signal-wifi-off: (
+    icon: "signal_wifi_off",
+    font-space: 0,
+  ),
+  sim-card: (
+    icon: "sim_card",
+    font-space: 4,
+  ),
+  skip-next: (
+    icon: "skip_next",
+    font-space: 6,
+  ),
+  skip-previous: (
+    icon: "skip_previous",
+    font-space: 6,
+  ),
+  slideshow: (
+    icon: "slideshow",
+    font-space: 3,
+  ),
+  slow-motion-video: (
+    icon: "slow_motion_video",
+    font-space: 2,
+  ),
+  smartphone: (
+    icon: "smartphone",
+    font-space: 5,
+  ),
+  smoke-free: (
+    icon: "smoke_free",
+    font-space: 2,
+  ),
+  smoking-rooms: (
+    icon: "smoking_rooms",
+    font-space: 2,
+  ),
+  sms-failed: (
+    icon: "sms_failed",
+    font-space: 2,
+  ),
+  sms: (
+    icon: "sms",
+    font-space: 2,
+  ),
+  snooze: (
+    icon: "snooze",
+    font-space: 2,
+  ),
+  sort-by-alpha: (
+    icon: "sort_by_alpha",
+    font-space: 1,
+  ),
+  sort: (
+    icon: "sort",
+    font-space: 3,
+  ),
+  spa: (
+    icon: "spa",
+    font-space: 2,
+  ),
+  space-bar: (
+    icon: "space_bar",
+    font-space: 4,
+  ),
+  speaker-group: (
+    icon: "speaker_group",
+    font-space: 4,
+  ),
+  speaker-notes-off: (
+    icon: "speaker_notes_off",
+    font-space: 1,
+  ),
+  speaker-notes: (
+    icon: "speaker_notes",
+    font-space: 2,
+  ),
+  speaker-phone: (
+    icon: "speaker_phone",
+    font-space: 5,
+  ),
+  speaker: (
+    icon: "speaker",
+    font-space: 5,
+  ),
+  spellcheck: (
+    icon: "spellcheck",
+    font-space: 1,
+  ),
+  stacked-line-chart: (
+    icon: "stacked_line_chart",
+    font-space: 2,
+  ),
+  star-border: (
+    icon: "star_border",
+    font-space: 2,
+  ),
+  star-half: (
+    icon: "star_half",
+    font-space: 2,
+  ),
+  star: (
+    icon: "star",
+    font-space: 2,
+  ),
+  stars: (
+    icon: "stars",
+    font-space: 2,
+  ),
+  statements: (
+    icon: "note_add",
+    font-space: 4,
+  ),
+  stay-current-landscape: (
+    icon: "stay_current_landscape",
+    font-space: 0,
+  ),
+  stay-current-portrait: (
+    icon: "stay_current_portrait",
+    font-space: 5,
+  ),
+  stay-primary-landscape: (
+    icon: "stay_primary_landscape",
+    font-space: 1,
+  ),
+  stay-primary-portrait: (
+    icon: "stay_primary_portrait",
+    font-space: 5,
+  ),
+  stop-screen-share: (
+    icon: "stop_screen_share",
+    font-space: 0,
+  ),
+  stop: (
+    icon: "stop",
+    font-space: 6,
+  ),
+  store-mall-directory: (
+    icon: "store_mall_directory",
+    font-space: 3,
+  ),
+  store: (
+    icon: "store",
+    font-space: 3,
+  ),
+  storefront: (
+    icon: "storefront",
+    font-space: 2,
+  ),
+  straighten: (
+    icon: "straighten",
+    font-space: 1,
+  ),
+  streetview: (
+    icon: "streetview",
+    font-space: 0,
+  ),
+  strikethrough-s: (
+    icon: "strikethrough_s",
+    font-space: 3,
+  ),
+  style: (
+    icon: "style",
+    font-space: 1,
+  ),
+  subdirectory-arrow-left: (
+    icon: "subdirectory_arrow_left",
+    font-space: 4,
+  ),
+  subdirectory-arrow-right: (
+    icon: "subdirectory_arrow_right",
+    font-space: 4,
+  ),
+  subject: (
+    icon: "subject",
+    font-space: 4,
+  ),
+  subscriptions: (
+    icon: "subscriptions",
+    font-space: 2,
+  ),
+  subtitles: (
+    icon: "subtitles",
+    font-space: 2,
+  ),
+  subway: (
+    icon: "subway",
+    font-space: 2,
+  ),
+  success: (
+    icon: "check_circle",
+    font-space: 2,
+  ),
+  supervised-user-circle: (
+    icon: "supervised_user_circle",
+    font-space: 4,
+  ),
+  supervisor-account: (
+    icon: "supervisor_account",
+    font-space: 2,
+  ),
+  support: (
+    icon: "support",
+    font-space: 2,
+  ),
+  surround-sound: (
+    icon: "surround_sound",
+    font-space: 2,
+  ),
+  swap-calls: (
+    icon: "swap_calls",
+    font-space: 2,
+  ),
+  swap-horiz: (
+    icon: "swap_horiz",
+    font-space: 3,
+  ),
+  swap-vert: (
+    icon: "swap_vert",
+    font-space: 5,
+  ),
+  swap-vertical-circle: (
+    icon: "swap_vertical_circle",
+    font-space: 2,
+  ),
+  switch-camera: (
+    icon: "switch_camera",
+    font-space: 2,
+  ),
+  switch-video: (
+    icon: "switch_video",
+    font-space: 2,
+  ),
+  sync-alt: (
+    icon: "sync_alt",
+    font-space: 0,
+  ),
+  sync-disabled: (
+    icon: "sync_disabled",
+    font-space: 3,
+  ),
+  sync-problem: (
+    icon: "sync_problem",
+    font-space: 3,
+  ),
+  sync: (
+    icon: "sync",
+    font-space: 4,
+  ),
+  system-update-alt: (
+    icon: "system_update_alt",
+    font-space: 1,
+  ),
+  system-update: (
+    icon: "system_update",
+    font-space: 5,
+  ),
+  tab-unselected: (
+    icon: "tab_unselected",
+    font-space: 1,
+  ),
+  tab: (
+    icon: "tab",
+    font-space: 1,
+  ),
+  table-chart: (
+    icon: "table_chart",
+    font-space: 2,
+  ),
+  tablet-android: (
+    icon: "tablet_android",
+    font-space: 3,
+  ),
+  tablet-mac: (
+    icon: "tablet_mac",
+    font-space: 2,
+  ),
+  tablet: (
+    icon: "tablet",
+    font-space: 1,
+  ),
+  tag-faces: (
+    icon: "tag_faces",
+    font-space: 2,
+  ),
+  tap-and-play: (
+    icon: "tap_and_play",
+    font-space: 2,
+  ),
+  term-deposits: (
+    icon: "savings",
+    font-space: 2,
+  ),
+  terrain: (
+    icon: "terrain",
+    font-space: 1,
+  ),
+  text-fields: (
+    icon: "text_fields",
+    font-space: 2,
+  ),
+  text-format: (
+    icon: "text_format",
+    font-space: 5,
+  ),
+  text-snippet: (
+    icon: "text_snippet",
+    font-space: 2,
+  ),
+  textsms: (
+    icon: "textsms",
+    font-space: 2,
+  ),
+  texture: (
+    icon: "texture",
+    font-space: 3,
+  ),
+  theaters: (
+    icon: "theaters",
+    font-space: 4,
+  ),
+  thumb-down: (
+    icon: "thumb_down",
+    font-space: 0,
+  ),
+  thumb-up: (
+    icon: "thumb_up",
+    font-space: 0,
+  ),
+  thumbs-up-down: (
+    icon: "thumbs_up_down",
+    font-space: 0,
+  ),
+  time-to-leave: (
+    icon: "time_to_leave",
+    font-space: 3,
+  ),
+  timelapse: (
+    icon: "timelapse",
+    font-space: 2,
+  ),
+  timeline: (
+    icon: "timeline",
+    font-space: 1,
+  ),
+  timer-10: (
+    icon: "timer_10",
+    font-space: 2,
+  ),
+  timer-3: (
+    icon: "timer_3",
+    font-space: 3,
+  ),
+  timer-off: (
+    icon: "timer_off",
+    font-space: 2,
+  ),
+  timer: (
+    icon: "timer",
+    font-space: 3,
+  ),
+  times: (
+    icon: "close",
+    font-space: 5,
+  ),
+  title: (
+    icon: "title",
+    font-space: 5,
+  ),
+  toc: (
+    icon: "toc",
+    font-space: 3,
+  ),
+  today: (
+    icon: "today",
+    font-space: 3,
+  ),
+  toggle-down: (
+    icon: "keyboard_arrow_down",
+    font-space: 6,
+  ),
+  toggle-up: (
+    icon: "keyboard_arrow_up",
+    font-space: 6,
+  ),
+  toll: (
+    icon: "toll",
+    font-space: 1,
+  ),
+  tonality: (
+    icon: "tonality",
+    font-space: 2,
+  ),
+  tools: (
+    icon: "widgets",
+    font-space: 2,
+  ),
+  touch-app: (
+    icon: "touch_app",
+    font-space: 4,
+  ),
+  toys: (
+    icon: "toys",
+    font-space: 1,
+  ),
+  track-changes: (
+    icon: "track_changes",
+    font-space: 2,
+  ),
+  traffic: (
+    icon: "traffic",
+    font-space: 4,
+  ),
+  train: (
+    icon: "train",
+    font-space: 4,
+  ),
+  tram: (
+    icon: "tram",
+    font-space: 5,
+  ),
+  transactions: (
+    icon: "swap_horiz",
+    font-space: 3,
+  ),
+  transfer-within-a-station: (
+    icon: "transfer_within_a_station",
+    font-space: 2,
+  ),
+  transform: (
+    icon: "transform",
+    font-space: 2,
+  ),
+  translate: (
+    icon: "translate",
+    font-space: 1,
+  ),
+  trending-down: (
+    icon: "trending_down",
+    font-space: 2,
+  ),
+  trending-flat: (
+    icon: "trending_flat",
+    font-space: 2,
+  ),
+  tune: (
+    icon: "tune",
+    font-space: 3,
+  ),
+  turned-in-not: (
+    icon: "turned_in_not",
+    font-space: 5,
+  ),
+  turned-in: (
+    icon: "turned_in",
+    font-space: 5,
+  ),
+  tv: (
+    icon: "tv",
+    font-space: 1,
+  ),
+  unarchive: (
+    icon: "unarchive",
+    font-space: 3,
+  ),
+  undo: (
+    icon: "undo",
+    font-space: 1,
+  ),
+  unexpected: (
+    icon: "storage",
+    font-space: 2,
+  ),
+  unfold-less: (
+    icon: "unfold_less",
+    font-space: 7,
+  ),
+  unfold-more: (
+    icon: "unfold_more",
+    font-space: 7,
+  ),
+  update: (
+    icon: "update",
+    font-space: 3,
+  ),
+  usb: (
+    icon: "usb",
+    font-space: 4,
+  ),
+  user: (
+    icon: "person",
+    font-space: 4,
+  ),
+  users: (
+    icon: "people",
+    font-space: 1,
+  ),
+  verified-user: (
+    icon: "verified_user",
+    font-space: 3,
+  ),
+  vertical-align-bottom: (
+    icon: "vertical_align_bottom",
+    font-space: 4,
+  ),
+  vertical-align-center: (
+    icon: "vertical_align_center",
+    font-space: 4,
+  ),
+  vertical-align-top: (
+    icon: "vertical_align_top",
+    font-space: 4,
+  ),
+  vibration: (
+    icon: "vibration",
+    font-space: 0,
+  ),
+  video-call: (
+    icon: "video_call",
+    font-space: 3,
+  ),
+  video-label: (
+    icon: "video_label",
+    font-space: 1,
+  ),
+  video-library: (
+    icon: "video_library",
+    font-space: 2,
+  ),
+  videocam-off: (
+    icon: "videocam_off",
+    font-space: 2,
+  ),
+  videocam: (
+    icon: "videocam",
+    font-space: 3,
+  ),
+  videogame-asset: (
+    icon: "videogame_asset",
+    font-space: 0,
+  ),
+  view-agenda: (
+    icon: "view_agenda",
+    font-space: 2,
+  ),
+  view-array: (
+    icon: "view_array",
+    font-space: 3,
+  ),
+  view-carousel: (
+    icon: "view_carousel",
+    font-space: 2,
+  ),
+  view-column: (
+    icon: "view_column",
+    font-space: 3,
+  ),
+  view-comfy: (
+    icon: "view_comfy",
+    font-space: 2,
+  ),
+  view-compact: (
+    icon: "view_compact",
+    font-space: 2,
+  ),
+  view-day: (
+    icon: "view_day",
+    font-space: 2,
+  ),
+  view-headline: (
+    icon: "view_headline",
+    font-space: 4,
+  ),
+  view-list: (
+    icon: "view_list",
+    font-space: 3,
+  ),
+  view-module: (
+    icon: "view_module",
+    font-space: 3,
+  ),
+  view-quilt: (
+    icon: "view_quilt",
+    font-space: 3,
+  ),
+  view-stream: (
+    icon: "view_stream",
+    font-space: 3,
+  ),
+  view-week: (
+    icon: "view_week",
+    font-space: 2,
+  ),
+  vignette: (
+    icon: "vignette",
+    font-space: 0,
+  ),
+  visibility-off: (
+    icon: "visibility_off",
+    font-space: 1,
+  ),
+  visibility: (
+    icon: "visibility",
+    font-space: 1,
+  ),
+  voice-chat: (
+    icon: "voice_chat",
+    font-space: 2,
+  ),
+  voicemail: (
+    icon: "voicemail",
+    font-space: 0,
+  ),
+  volume-down: (
+    icon: "volume_down",
+    font-space: 5,
+  ),
+  volume-mute: (
+    icon: "volume_mute",
+    font-space: 5,
+  ),
+  volume-off: (
+    icon: "volume_off",
+    font-space: 3,
+  ),
+  volume-up: (
+    icon: "volume_up",
+    font-space: 3,
+  ),
+  vpn-key: (
+    icon: "vpn_key",
+    font-space: 0,
+  ),
+  vpn-lock: (
+    icon: "vpn_lock",
+    font-space: 0,
+  ),
+  wallpaper: (
+    icon: "wallpaper",
+    font-space: 2,
+  ),
+  warning: (
+    icon: "warning",
+    font-space: 1,
+  ),
+  warning-amber: (
+    icon: "warning_amber",
+    font-space: 1,
+  ),
+  watch-later: (
+    icon: "query_builder",
+    font-space: 2,
+  ),
+  watch: (
+    icon: "watch",
+    font-space: 4,
+  ),
+  wb-auto: (
+    icon: "wb_auto",
+    font-space: 0,
+  ),
+  wb-cloudy: (
+    icon: "wb_cloudy",
+    font-space: 0,
+  ),
+  wb-incandescent: (
+    icon: "wb_incandescent",
+    font-space: 1,
+  ),
+  wb-iridescent: (
+    icon: "wb_iridescent",
+    font-space: 3,
+  ),
+  wb-sunny: (
+    icon: "wb_sunny",
+    font-space: 1,
+  ),
+  wc: (
+    icon: "wc",
+    font-space: 4,
+  ),
+  web-asset: (
+    icon: "web_asset",
+    font-space: 3,
+  ),
+  web: (
+    icon: "web",
+    font-space: 2,
+  ),
+  weekend: (
+    icon: "weekend",
+    font-space: 0,
+  ),
+  whatshot: (
+    icon: "whatshot",
+    font-space: 4,
+  ),
+  wifi-lock: (
+    icon: "wifi_lock",
+    font-space: 0,
+  ),
+  wifi-tethering: (
+    icon: "wifi_tethering",
+    font-space: 2,
+  ),
+  wifi: (
+    icon: "wifi",
+    font-space: 1,
+  ),
+  withdrawal: (
+    icon: "local_atm",
+    font-space: 2,
+  ),
+  work: (
+    icon: "work",
+    font-space: 2,
+  ),
+  work-outline: (
+    icon: "work_outline",
+    font-space: 2,
+  ),
+  wrap-text: (
+    icon: "wrap_text",
+    font-space: 3,
+  ),
+  youtube-searched-for: (
+    icon: "youtube_searched_for",
+    font-space: 2,
+  ),
+  zoom-in: (
+    icon: "zoom_in",
+    font-space: 3,
+  ),
+  zoom-out-map: (
+    icon: "zoom_out_map",
+    font-space: 3,
+  ),
+  zoom-out: (
+    icon: "zoom_out",
+    font-space: 3,
+  ),
+  offline-bolt: (
+    icon: "offline_bolt",
+    font-space: 3,
+  ),
+  speed: (
+    icon: "speed",
+    font-space: 3,
+  )
+);

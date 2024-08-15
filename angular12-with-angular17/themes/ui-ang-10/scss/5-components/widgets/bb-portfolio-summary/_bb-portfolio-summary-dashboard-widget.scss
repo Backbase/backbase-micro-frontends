@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$portfolio-summary-dashboard-account-margin-top: -$spacer * 2.5 !default;
+$portfolio-summary-dashboard-content-padding: $spacer-xl !default;
+
+.portfolio-summary-dashboard__account {
+  margin-top: $portfolio-summary-dashboard-account-margin-top;
+}
+.portfolio-summary-dashboard__asset-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.portfolio-summary-dashboard__content {
+  padding-top: $portfolio-summary-dashboard-content-padding;
+  padding-bottom: $portfolio-summary-dashboard-content-padding;
+}
+.portfolio-summary-dashboard__details-divider {
+  border-inline-start: $border;
+}
+.portfolio-summary-dashboard__details-hidden {
+  display: none;
+}
+.bb-portfolio-summary__progress-bar {
+  height: $spacer-sm;
+  border-radius: $border-radius-xs + 1;
+}

@@ -1,0 +1,64 @@
+// Global annotations
+////
+/// @group generic
+/// @access private
+////
+
+@font-face {
+  font-weight: 400;
+  font-family: "Material Icons Outlined";
+  font-style: normal;
+  font-display: block;
+  src: url("#{$path-bb-fonts}/materialicons/MaterialIcons-Outlined.woff2") format("woff2");
+  // HACK: outlined font cannot render on IE11, so defaulting to filled icons.  See ATOM-228
+  // url("#{$path-bb-fonts}/materialicons/MaterialIcons-Outlined.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Material Icons";
+  font-style: normal;
+  font-display: block;
+  src: url("#{$path-bb-fonts}/materialicons/MaterialIcons-Regular.woff2") format("woff2"),
+    url("#{$path-bb-fonts}/materialicons/MaterialIcons-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: $font-weight-regular;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/LibreFranklin/LibreFranklin-Regular.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-semi-bold;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/LibreFranklin/LibreFranklin-SemiBold.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-bold;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  src: url("#{$path-bb-fonts}/LibreFranklin/LibreFranklin-Bold.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-regular;
+  font-family: "Libre Franklin";
+  font-style: italic;
+  src: url("#{$path-bb-fonts}/LibreFranklin/LibreFranklin-Italic.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: $font-weight-bold;
+  font-family: "Libre Franklin";
+  font-style: italic;
+  src: url("#{$path-bb-fonts}/LibreFranklin/LibreFranklin-BoldItalic.woff");
+  font-display: swap;
+}

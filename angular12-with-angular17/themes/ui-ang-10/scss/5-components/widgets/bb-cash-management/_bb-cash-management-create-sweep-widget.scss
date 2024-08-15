@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$sweep-account-selector-invalid-color: $color-danger !default;
+
+.sweep-account-selector--invalid .ng-select-container {
+  border: 1px solid $sweep-account-selector-invalid-color;
+}

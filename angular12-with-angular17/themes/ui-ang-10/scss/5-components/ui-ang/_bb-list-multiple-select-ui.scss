@@ -1,0 +1,70 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$list-multiple-select-input-checkbox-padding-block-end: $sizer-sm !default;
+$list-multiple-select-divider-margin-block-start: $sizer-sm !default;
+$list-multiple-select-divider-margin-block-end: $sizer-sm !default;
+$list-multiple-select-divider-margin-inline-start: $sizer !default;
+$list-multiple-select-divider-margin-inline-end: $sizer !default;
+$list-multiple-select-divider-border-color: $border-color !default;
+$list-multiple-select-divider-border-style: $border-style !default;
+$list-multiple-select-divider-border-width: $border-width !default;
+
+/// A list for nested checkboxes and custom header with optional action
+///
+/// @name bb-list-multiple-select-ui
+///
+/// @example html
+/// <div class="bb-list-multiple-select">
+///   <div class="bb-list-multiple-select__action">
+///     <a href="">Clear All</a>
+///   </div
+///   <div class="bb-list-multiple-select__dropdown-divider"></div>
+///   <ul class="bb-list-multiple-select__list">
+///     <li>
+///       <input type="checkbox">
+///      <label class="bb-switch__label">
+///       Parent
+///      </label>
+///     </li>
+///     <li class="bb-checkbox-group">
+///       <input type="checkbox" class="bb-input-checkbox">
+///       <label class="bb-switch__label">
+///        Child
+///       </label>
+///     </li>
+///     <li class="bb-checkbox-group">
+///       <input type="checkbox" class="bb-input-checkbox">
+///       <label class="bb-switch__label">
+///        Child
+///       </label>
+///     </li>
+///   </ul
+/// </div>
+
+//NOSONAR
+.bb-list-multiple-select {
+}
+
+.bb-list-multiple-select__dropdown-divider {
+  margin-block-start: $list-multiple-select-divider-margin-block-start;
+  margin-inline-end: $list-multiple-select-divider-margin-inline-end;
+  margin-block-end: $list-multiple-select-divider-margin-block-end;
+  margin-inline-start: $list-multiple-select-divider-margin-inline-start;
+  overflow: hidden;
+  border-color: $list-multiple-select-divider-border-color;
+  border-style: $list-multiple-select-divider-border-style;
+  border-width: $list-multiple-select-divider-border-width;
+}
+
+.bb-list-multiple-select__list {
+  @include list-unstyled();
+
+  .bb-input-checkbox {
+    display: flex;
+    padding-block-end: $list-multiple-select-input-checkbox-padding-block-end;
+  }
+}

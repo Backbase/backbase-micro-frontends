@@ -1,0 +1,20 @@
+$search-country-control-height: 2rem !default;
+$search-country-items-list-max-height: $pre-scrollable-max-height;
+
+bb-select-country-dropdown {
+  &.ng-touched.ng-invalid {
+    .bb-select-country-dropdown__toggle.form-control {
+      border: $input-invalid-border;
+    }
+  }
+
+  .bb-search-box__simple-input,
+  .bb-search-box .btn {
+    height: $search-country-control-height;
+  }
+
+  .bb-select-country-dropdown__items-list {
+    overflow-y: auto;
+    max-height: $search-country-items-list-max-height;
+  }
+}

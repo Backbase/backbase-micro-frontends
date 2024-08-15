@@ -1,0 +1,40 @@
+////
+/// @group 1-variables/components/empty-state
+/// @access public
+////
+
+/// Configures the maximum width of the state container
+/// @require {variable} $sizer
+$empty-state-container-max-width: $sizer * 25 !default;
+
+/// Configures the minimum width of the state container
+/// @require {variable} $optional
+$empty-state-container-min-width: $optional !default;
+
+/// Configures the color of the empty-state icon
+/// @require {variable} $color-neutral-darker
+$empty-state-icon-color: $color-neutral-darker !default;
+
+/// Configures the color of the empty-state title
+/// @require {variable} $color-neutral-black
+$empty-state-title-color: $color-neutral-black !default;
+
+/// Configures the font weight of the empty-state title
+/// @require {variable} $font-weight-semi-bold
+$empty-state-title-font-weight: $font-weight-semi-bold !default;
+
+/// Configures the font size of the empty-state title
+/// @require {variable} $optional
+$empty-state-title-font-size: $optional !default;
+
+/// Configures the color of the empty-state message
+/// @require {variable} $color-neutral-dark
+$empty-state-message-color: $color-neutral-dark !default;
+
+/// Configures the font size of the empty-state message
+/// @require {variable} $font-size-subtitle
+$empty-state-message-font-size: $font-size-subtitle !default;
+
+/// Configures the font weight of the empty-state message
+/// @require {variable} $optional
+$empty-state-message-font-weight: $optional !default;

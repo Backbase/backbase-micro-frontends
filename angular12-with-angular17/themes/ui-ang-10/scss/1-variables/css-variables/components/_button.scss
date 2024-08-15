@@ -1,0 +1,57 @@
+////
+/// Charts (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --button-padding-horizontal: #{$button-padding-horizontal};
+  --button-padding-vertical: #{$button-padding-vertical};
+  --button-font-size: #{$button-font-size};
+  --button-font-weight: #{$button-font-weight};
+  --button-disabled-opacity: #{$button-disabled-opacity};
+  --button-border-width: #{$button-border-width};
+  --button-border-radius: #{$button-border-radius};
+  --button-box-shadow-offset-x: #{$button-box-shadow-offset-x};
+  --button-box-shadow-offset-y: #{$button-box-shadow-offset-y};
+  --button-box-shadow-blur-radius: #{$button-box-shadow-blur-radius};
+  --button-box-shadow-spread-radius: #{$button-box-shadow-spread-radius};
+  --button-box-shadow-color: #{$button-box-shadow-color};
+  --button-box-shadow: #{$button-box-shadow};
+  --button-active-box-shadow-offset-x: #{$button-active-box-shadow-offset-x};
+  --button-active-box-shadow-offset-y: #{$button-active-box-shadow-offset-y};
+  --button-active-box-shadow-blur-radius: #{$button-active-box-shadow-blur-radius};
+  --button-active-box-shadow-spread-radius: #{$button-active-box-shadow-spread-radius};
+  --button-active-box-shadow-color: #{$button-active-box-shadow-color};
+  --button-active-box-shadow: #{$button-active-box-shadow};
+  --button-color-transition: #{$button-color-transition};
+  --button-background-color-transition: #{$button-background-color-transition};
+  --button-border-color-transition: #{$button-border-color-transition};
+  --button-box-shadow-transition: #{$button-box-shadow-transition};
+  --button-transition: #{$button-transition};
+}
+
+$button-padding-horizontal: var(--button-padding-horizontal);
+$button-padding-vertical: var(--button-padding-vertical);
+$button-font-size: var(--button-font-size);
+$button-font-weight: var(--button-font-weight);
+$button-disabled-opacity: var(--button-disabled-opacity);
+$button-border-width: var(--button-border-width);
+$button-border-radius: var(--button-border-radius);
+$button-box-shadow-offset-x: var(--button-box-shadow-offset-x);
+$button-box-shadow-offset-y: var(--button-box-shadow-offset-y);
+$button-box-shadow-blur-radius: var(--button-box-shadow-blur-radius);
+$button-box-shadow-spread-radius: var(--button-box-shadow-spread-radius);
+$button-box-shadow-color: var(--button-box-shadow-color);
+$button-box-shadow: var(--button-box-shadow);
+$button-active-box-shadow-offset-x: var(--button-active-box-shadow-offset-x);
+$button-active-box-shadow-offset-y: var(--button-active-box-shadow-offset-y);
+$button-active-box-shadow-blur-radius: var(--button-active-box-shadow-blur-radius);
+$button-active-box-shadow-spread-radius: var(--button-active-box-shadow-spread-radius);
+$button-active-box-shadow-color: var(--button-active-box-shadow-color);
+$button-active-box-shadow: var(--button-active-box-shadow);
+$button-color-transition: var(--button-color-transition);
+$button-background-color-transition: var(--button-background-color-transition);
+$button-border-color-transition: var(--button-border-color-transition);
+$button-box-shadow-transition: var(--button-box-shadow-transition);
+$button-transition: var(--button-transition);

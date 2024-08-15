@@ -1,0 +1,242 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+$cash-flow-forecast-configuration-error-height: 4.5 * $sizer !default;
+$cash-flow-forecast-configuration-stepper-height: 3 * $sizer !default;
+$cash-flow-forecast-configuration-select-currency-height: 6 * $sizer !default;
+$cash-flow-forecast-configuration-accounting-category-non-list-content-height: 30 * $sizer !default;
+$cash-flow-forecast-configuration-bank-account-non-list-content-height: 34 * $sizer !default;
+$cash-flow-forecast-configuration-currency-select-max-width: 6 * $sizer !default;
+
+$cash-flow-forecast-configuration-category-item-sm-padding: $sizer * 0.75 !default;
+$cash-flow-forecast-configuration-category-item-sm-left: $focus-box-shadow-spread-radius !default;
+$cash-flow-forecast-configuration-accounting-category-item-label-padding-left: calc(
+  #{$input-checkbox-checkbox-dimensions} + #{$sizer-md}
+) !default;
+
+// Accounting categories page max height variables
+$cash-flow-forecast-configuration-accounting-category-edit-non-list-content-height: calc(
+  #{$cash-flow-forecast-configuration-accounting-category-non-list-content-height} - #{$cash-flow-forecast-configuration-stepper-height}
+) !default;
+$cash-flow-forecast-configuration-accounting-category-list-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-accounting-category-non-list-content-height}
+) !default;
+$cash-flow-forecast-configuration-accounting-category-list-with-error-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-accounting-category-non-list-content-height} - #{$cash-flow-forecast-configuration-error-height}
+) !default;
+$cash-flow-forecast-configuration-accounting-category-list-edit-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-accounting-category-edit-non-list-content-height}
+) !default;
+$cash-flow-forecast-configuration-accounting-category-list-edit-with-error-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-accounting-category-edit-non-list-content-height} - #{$cash-flow-forecast-configuration-error-height}
+) !default;
+
+// Bank accounts page max height variables
+$cash-flow-forecast-configuration-bank-account-edit-non-list-content-height: calc(
+  #{$cash-flow-forecast-configuration-bank-account-non-list-content-height} - #{$cash-flow-forecast-configuration-stepper-height} -
+    #{$cash-flow-forecast-configuration-select-currency-height}
+) !default;
+$cash-flow-forecast-configuration-bank-account-list-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-bank-account-non-list-content-height}
+) !default;
+$cash-flow-forecast-configuration-bank-account-list-with-error-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-bank-account-non-list-content-height} - #{$cash-flow-forecast-configuration-error-height}
+) !default;
+$cash-flow-forecast-configuration-bank-account-list-edit-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-bank-account-edit-non-list-content-height}
+) !default;
+$cash-flow-forecast-configuration-bank-account-list-edit-with-error-max-height: calc(
+  100vh - #{$cash-flow-forecast-configuration-bank-account-edit-non-list-content-height} - #{$cash-flow-forecast-configuration-error-height}
+) !default;
+
+/// Styles for Cash flow configuration widget
+///
+/// @example html
+///
+/// Accounting categories page
+///
+///  <div class="cash-flow-forecast-configuration-page">
+///    <bb-stepper-ui>
+///      <bb-stepper-step-ui></bb-stepper-step-ui>
+///    </bb-stepper-ui>
+///    ..............
+///    <div class="cash-flow-configuration-accounting-category-list">
+///      <bb-collapsible-card-ui class="bb-collapsable-list">
+///        <div bbCollapsibleTitle>
+///          <div class="cash-flow-configuration-accounting-category-item">
+///            <bb-checkbox-group-ui></bb-checkbox-group-ui>
+///            <span class="cash-flow-configuration-accounting-category-item__label">
+///              <span class="bb-text-default bb-text-semi-bold"> ... </span>
+///              <span class="bb-text-support bb-subtitle"> ... </span>
+///            </span>
+///          </div>
+///        </div>
+///        <ul bbCollapsibleBody class="bb-list bb-list--density-none bb-list--infinite">
+///          <li class="bb-list__item">
+///            <bb-input-checkbox-ui class="cash-flow-configuration-accounting-category-item cash-flow-configuration-accounting-category-item--child">
+///              <span class="cash-flow-configuration-accounting-category-item__label">
+///                <span class="bb-text-default"> ... </span>
+///                <span class="bb-text-support bb-subtitle"> ...</span>
+///              </span>
+///            </bb-input-checkbox-ui>
+///          </li>
+///        </ul>
+///      </bb-collapsible-card-ui>
+///    </div>
+///  </div>
+
+@mixin cashFlowConfigurationListMaxHeight($max-height, $max-height-with-error, $list-class) {
+  .#{$list-class} {
+    max-height: $max-height;
+
+    @include media-breakpoint-down(md) {
+      max-height: none;
+    }
+  }
+
+  &.cash-flow-forecast-configuration-page-no-selected-error .#{$list-class} {
+    max-height: $max-height-with-error;
+
+    @include media-breakpoint-down(md) {
+      max-height: none;
+    }
+  }
+}
+
+// Page styles
+.cash-flow-forecast-configuration-page {
+  @include cashFlowConfigurationListMaxHeight(
+    $cash-flow-forecast-configuration-accounting-category-list-max-height,
+    $cash-flow-forecast-configuration-accounting-category-list-with-error-max-height,
+    "cash-flow-configuration-accounting-category-list"
+  );
+  @include cashFlowConfigurationListMaxHeight(
+    $cash-flow-forecast-configuration-bank-account-list-max-height,
+    $cash-flow-forecast-configuration-bank-account-list-with-error-max-height,
+    "cash-flow-configuration-bank-account-list"
+  );
+}
+
+.cash-flow-forecast-configuration-page-edit {
+  @include cashFlowConfigurationListMaxHeight(
+    $cash-flow-forecast-configuration-accounting-category-list-edit-max-height,
+    $cash-flow-forecast-configuration-accounting-category-list-edit-with-error-max-height,
+    "cash-flow-configuration-accounting-category-list"
+  );
+  @include cashFlowConfigurationListMaxHeight(
+    $cash-flow-forecast-configuration-bank-account-list-edit-max-height,
+    $cash-flow-forecast-configuration-bank-account-list-edit-with-error-max-height,
+    "cash-flow-configuration-bank-account-list"
+  );
+}
+
+.cash-flow-forecast-configuration-page .bb-stepper {
+  margin-bottom: $spacer-lg;
+  padding: 0;
+}
+
+// page footer
+
+@include media-breakpoint-down(md) {
+  .cash-flow-forecast-configuration-page__footer {
+    flex-direction: column-reverse;
+
+    button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $sizer-md;
+
+      // because of column-reverse the first item will be last
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// List styles
+
+.cash-flow-configuration-accounting-category-item .bb-input-checkbox__content {
+  padding-left: $cash-flow-forecast-configuration-accounting-category-item-label-padding-left;
+  vertical-align: middle;
+}
+
+.cash-flow-configuration-accounting-category-item--child label,
+.cash-flow-configuration-accounting-category-item__label-wrapper {
+  width: 100%;
+  padding: $sizer-md $sizer-md $sizer-md 3.5 * $sizer;
+
+  @include media-breakpoint-down(md) {
+    padding-left: $sizer-md;
+  }
+}
+
+.cash-flow-configuration-accounting-category-item__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+// Bank accounts
+.cash-flow-forecast-configuration-page__currency {
+  max-width: $cash-flow-forecast-configuration-currency-select-max-width;
+
+  label {
+    white-space: nowrap;
+  }
+}
+// @deprecated - not used by journey anymore
+.cash-flow-configuration-bank-account-item {
+  label {
+    width: 100%;
+    padding: $sizer-md;
+  }
+
+  .bb-input-checkbox__content {
+    width: 100%;
+    padding-left: $cash-flow-forecast-configuration-accounting-category-item-label-padding-left;
+    vertical-align: middle;
+  }
+}
+
+// @deprecated - not used by journey anymore
+.cash-flow-configuration-bank-account-item--no-checkbox {
+  width: 100%;
+  padding: $sizer-md;
+}
+
+// @deprecated - not used by journey anymore
+.cash-flow-configuration-bank-account-item__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.cash-flow-configuration-bank-account-list {
+  position: relative;
+  overflow: auto;
+}
+
+@include media-breakpoint-down(sm) {
+  // @deprecated - not used by journey anymore
+  .cash-flow-configuration-bank-account-item__label {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: $sizer-sm;
+  }
+  // @deprecated - not used by journey anymore
+  .cash-flow-configuration-bank-account-item {
+    label {
+      padding: $cash-flow-forecast-configuration-category-item-sm-padding 0;
+    }
+
+    .bb-input-checkbox__content {
+      &::before,
+      &::after {
+        top: $cash-flow-forecast-configuration-category-item-sm-padding;
+        left: $cash-flow-forecast-configuration-category-item-sm-left;
+      }
+    }
+  }
+}

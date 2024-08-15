@@ -1,0 +1,48 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+// Override so that form-controls nested in form-group
+// with validation are displayed with that validation state also
+@mixin form-validation-state-nested-override($state, $color) {
+  .form-group {
+    &.is-#{$state} .form-control {
+      padding: $input-padding;
+      color: $input-color;
+      font-weight: $input-font-weight;
+      font-size: $input-font-size;
+      background-color: $input-background-color;
+      border: $input-border;
+      border-radius: $input-border-radius;
+      box-shadow: $input-box-shadow;
+
+      &::placeholder {
+        color: $input-placeholder-color;
+      }
+
+      &:focus {
+        border: $input-focus-border;
+        box-shadow: $input-focus-box-shadow;
+      }
+
+      &:invalid {
+        border: $input-invalid-border;
+      }
+
+      &:disabled {
+        color: $input-disabled-color;
+        background-color: $input-disabled-background-color;
+        &::placeholder {
+          color: $input-disabled-placeholder-color;
+        }
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+}

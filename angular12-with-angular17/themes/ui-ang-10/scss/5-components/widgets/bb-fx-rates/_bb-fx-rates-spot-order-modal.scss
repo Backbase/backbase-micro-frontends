@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-fx-rates-spot-order-modal > .modal-dialog {
+  max-width: 900px;
+  padding: $spacer-sm;
+}
+
+@include media-breakpoint-down(lg) {
+  .bb-fx-rates-spot-order-modal > .modal-dialog {
+    max-width: $modal-md;
+    padding: $spacer-sm;
+  }
+}

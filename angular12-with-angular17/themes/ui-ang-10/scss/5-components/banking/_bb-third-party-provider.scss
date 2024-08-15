@@ -1,0 +1,35 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$third-party-provider-content-name-font-weight: $font-weight-semi-bold !default;
+
+/// @todo sassdoc
+///
+/// @name bb-third-party-provider
+.bb-third-party-provider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bb-third-party-provider__wrapper {
+  display: flex;
+}
+
+.bb-third-party-provider__avatar {
+  margin-right: $spacer;
+  background-color: transparent;
+}
+
+.bb-third-party-provider__name-icon {
+  display: flex;
+  align-items: center;
+  font-weight: $third-party-provider-content-name-font-weight;
+}
+
+.bb-third-party-provider__name {
+  margin-right: $spacer-sm;
+}

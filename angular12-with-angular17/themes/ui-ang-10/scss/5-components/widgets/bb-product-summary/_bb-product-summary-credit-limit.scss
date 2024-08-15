@@ -1,0 +1,108 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-product-summary-credit-limit
+///
+/// @example html
+///  <div *ngIf="color"
+///       class="
+///         rounded-circle
+///         bb-credit-limit-attribute__color-mark
+///         bb-credit-limit__color--{{color}}
+///       "
+///  ></div>
+/// <bb-amount-ui
+///        class="bb-credit-limit-attribute__value"
+///        [currency]="currency"
+///        [amount]="amount"
+/// ></bb-amount-ui>
+///
+/// @example credit limit status bar
+/// <div class="bb-credit-limit-status-bar">
+///   <div class="bb-credit-limit-status-bar__value bb-credit-limit-status-bar__value--sm bb-credit-limit__color--secondary" style="width: 100%;"></div>
+///   <div class="bb-credit-limit-status-bar__value bb-credit-limit-status-bar__value--lg bb-credit-limit__color--primary" style="width: 33.5%;"></div>
+///   <div class="bb-credit-limit-status-bar__value bb-credit-limit-status-bar__value--md bb-credit-limit__color--danger" style="width: 10%;"></div>
+///   <div class="bb-credit-limit-status-bar__value bb-credit-limit-status-bar__value--sm bb-credit-limit__color--accent" style="width: 8%;"></div>
+/// </div>
+
+$bb-credit-limit-color-primary: $chart-primary-color !default;
+$bb-credit-limit-color-secondary: $chart-neutral-grey-color !default;
+$bb-credit-limit-color-accent: $chart-color-6 !default;
+$bb-credit-limit-color-warning: $chart-alert-color !default;
+$bb-credit-limit-color-danger: $chart-negative-color !default;
+$bb-credit-limit-color-mark-size: $sizer-sm !default;
+$bb-credit-limit-color-mark-margin: $spacer-xs !default;
+$bb-credit-limit-attribute-value-offset: calc(
+  #{$bb-credit-limit-color-mark-size} + #{$bb-credit-limit-color-mark-margin}
+) !default;
+$bb-credit-limit-status-bar-height: $sizer-sm !default;
+$bb-credit-limit-status-bar-value-min-width: $sizer-sm !default;
+
+.bb-credit-limit-attribute__color-mark {
+  display: inline-block;
+  width: $bb-credit-limit-color-mark-size;
+  height: $bb-credit-limit-color-mark-size;
+  margin-right: $bb-credit-limit-color-mark-margin;
+  vertical-align: middle;
+}
+.bb-credit-limit-attribute__value {
+  padding-left: $bb-credit-limit-attribute-value-offset;
+}
+.bb-credit-limit-attribute__value--primary {
+  color: $bb-credit-limit-color-primary;
+}
+.bb-credit-limit-attribute__value--secondary {
+  color: $bb-credit-limit-color-secondary;
+}
+.bb-credit-limit-attribute__value--accent {
+  color: $bb-credit-limit-color-accent;
+}
+.bb-credit-limit-attribute__value--warning {
+  color: $bb-credit-limit-color-warning;
+}
+.bb-credit-limit-attribute__value--danger {
+  color: $bb-credit-limit-color-danger;
+}
+
+.bb-credit-limit__color--primary {
+  background-color: $bb-credit-limit-color-primary;
+}
+.bb-credit-limit__color--secondary {
+  background-color: $bb-credit-limit-color-secondary;
+}
+.bb-credit-limit__color--accent {
+  background-color: $bb-credit-limit-color-accent;
+}
+.bb-credit-limit__color--warning {
+  background-color: $bb-credit-limit-color-warning;
+}
+.bb-credit-limit__color--danger {
+  background-color: $bb-credit-limit-color-danger;
+}
+
+/*
+ * Credit limit status bar
+ */
+.bb-credit-limit-status-bar {
+  position: relative;
+  height: $bb-credit-limit-status-bar-height;
+}
+.bb-credit-limit-status-bar__value {
+  position: absolute;
+  width: 100%;
+  min-width: $bb-credit-limit-status-bar-value-min-width;
+  height: 100%;
+  border-radius: $bb-credit-limit-status-bar-height;
+}
+.bb-credit-limit-status-bar__value--sm {
+  min-width: $bb-credit-limit-status-bar-value-min-width;
+}
+.bb-credit-limit-status-bar__value--md {
+  min-width: calc(2 * #{$bb-credit-limit-status-bar-value-min-width});
+}
+.bb-credit-limit-status-bar__value--lg {
+  min-width: calc(3 * #{$bb-credit-limit-status-bar-value-min-width});
+}

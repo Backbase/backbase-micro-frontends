@@ -1,0 +1,29 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+@import "flag-icon-base";
+@import "flag-icon-list";
+
+.bb-set-locale-widget {
+  display: inline-block;
+
+  .bb-set-locale-widget__locale-text {
+    margin-inline-start: $spacer-md;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bb-set-locale-widget {
+    .dropdown-menu {
+      /* stylelint-disable-next-line declaration-no-important */
+      min-width: 0 !important; //overrides bootstrap [BS4]
+    }
+  }
+
+  .bb-set-locale-widget__locale-text {
+    display: none;
+  }
+}

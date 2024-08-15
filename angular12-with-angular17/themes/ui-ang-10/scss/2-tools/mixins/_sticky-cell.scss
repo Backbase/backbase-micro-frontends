@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+@mixin sticky-cell() {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: inherit; // fixes background color of pinned columns in WC2 widget
+  background-clip: padding-box; // restores top and bottom borders for cells with position: sticky
+  border-block-end: 1px solid rgba($color-neutral-black, 0.15); // fixes opacity for border-bottom of sticky cells
+}

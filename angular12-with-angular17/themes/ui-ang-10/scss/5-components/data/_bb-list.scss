@@ -1,0 +1,194 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+////
+
+$list-separator-line-width: 1px !default;
+$list-separator-color: $color-neutral-grey !default;
+$list-spacing: $spacer-lg !default;
+$list-spacing-md: $spacer-md !default;
+$list-spacing-sm: $spacer-sm !default;
+
+/// Display content in a vertically stacked list.  Removes default ul/li styling and adds a
+/// separator between items.
+///
+/// With `bb-list--flush-{sm,md,lg}`, all padding between lines is removed, which means the items
+/// inside the list need to provide the appropriate padding.  The main use case for this is using a
+/// list directly inside a card and allowing list items to have edge-to-edge hover/focus states.
+///
+/// @name bb-list
+///
+/// @example html - list
+///   <ul class="bb-list">
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///   </ul>
+///
+/// @example html - medium space between list items
+///   <ul class="bb-list bb-list--density-md">
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///   </ul>
+///
+/// @example html - smaller space between list items
+///   <ul class="bb-list bb-list--density-sm">
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///   </ul>
+///
+/// @example html - flush (in a card-sm)
+///   <div class="card card-sm">
+///     <div class="card-header">
+///       <h3 class="bb-header-3">Notifications</h3>
+///     </div>
+///     <ul class="bb-list bb-list--flush-sm">
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///     </ul>
+///     <div class="card-footer">
+///       Footer
+///     </div>
+///   </div>
+///
+/// @example html - flush (in a card-md)
+///   <div class="card">
+///     <div class="card-header">
+///       <h3 class="bb-header-3">Notifications</h3>
+///     </div>
+///     <ul class="bb-list bb-list--flush-md">
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///     </ul>
+///     <div class="card-footer">
+///       Footer
+///     </div>
+///   </div>
+///
+/// @example html - flush (in a card-lg)
+///   <div class="card card-lg">
+///     <div class="card-header">
+///       <h3 class="bb-header-3">Notifications</h3>
+///     </div>
+///     <ul class="bb-list bb-list--flush-lg">
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///       <li class="bb-list__item">item</li>
+///     </ul>
+///     <div class="card-footer">
+///       Footer
+///     </div>
+///   </div>
+///
+/// @example html - no separator between list elements
+///   <ul class="bb-list bb-list--no-separator">
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///   </ul>
+///
+/// @example html - no separator for certain list element
+///   <ul class="bb-list">
+///     <li class="bb-list__item bb-list__item--no-separator">item</li>
+///     <li class="bb-list__item">item</li>
+///     <li class="bb-list__item">item</li>
+///   </ul>
+
+.bb-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.bb-list__item:not(:last-of-type) {
+  position: relative;
+  margin-bottom: $list-spacing;
+  padding-bottom: $list-spacing;
+
+  &:not(.bb-list__item--no-separator)::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    border-bottom: $list-separator-line-width solid $list-separator-color;
+    content: "";
+  }
+}
+
+// The `infinite` modifier can be used for incrementally rendered lists,
+// where the list item in the DOM is not yet the last item in the dataset
+// and will be rendered once it is available.
+.bb-list--infinite {
+  .bb-list__item:last-child {
+    border-bottom: $list-separator-line-width solid $list-separator-color;
+  }
+}
+
+.bb-list.bb-list--no-separator {
+  .bb-list__item::after {
+    content: none;
+  }
+}
+
+.bb-list--density-sm {
+  .bb-list__item:not(:last-of-type) {
+    margin-bottom: $list-spacing-sm;
+    padding-bottom: $list-spacing-sm;
+  }
+}
+
+.bb-list--density-md {
+  .bb-list__item:not(:last-of-type) {
+    margin-bottom: $list-spacing-md;
+    padding-bottom: $list-spacing-md;
+  }
+}
+
+.bb-list--density-none {
+  .bb-list__item:not(:last-of-type) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.bb-list--flush-sm {
+  .bb-list__item {
+    margin-bottom: 0;
+    padding: 0;
+
+    &::after {
+      width: calc(100% - 2 * #{$card-sm-sizer});
+      margin-left: $card-sm-sizer;
+    }
+  }
+}
+
+.bb-list--flush-md {
+  .bb-list__item {
+    margin-bottom: 0;
+    padding: 0;
+
+    &::after {
+      width: calc(100% - 2 * #{$card-md-sizer});
+      margin-left: $card-md-sizer;
+    }
+  }
+}
+
+.bb-list--flush-lg {
+  .bb-list__item {
+    margin-bottom: 0;
+    padding: 0;
+
+    &::after {
+      width: calc(100% - 2 * #{$card-lg-sizer});
+      margin-left: $card-lg-sizer;
+    }
+  }
+}

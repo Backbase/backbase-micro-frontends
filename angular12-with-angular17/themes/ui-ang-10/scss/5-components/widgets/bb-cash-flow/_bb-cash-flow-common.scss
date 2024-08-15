@@ -1,0 +1,227 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+$bb-cash-flow-table-header-date-min-width: 7.875 * $sizer !default; // 126px
+$bb-cash-flow-table-header-ccy-min-width: 3 * $sizer !default; // 48px
+$bb-cash-flow-table-header-invoice-min-width: 9.375 * $sizer !default; // 150px
+
+$bb-cash-flow-table-expected-date-icon-color: $color-neutral-greyer !default;
+$bb-cash-flow-table-expected-date-icon-hover-color: $color-neutral-dark !default;
+$bb-cash-flow-table-expected-date-button-hover-background-color: $color-neutral-light !default;
+$bb-cash-flow-table-text-danger-color: $color-text-danger !default;
+
+$bb-cash-flow-search-container-max-width: 17.5 * $sizer !default;
+$bb-cash-flow-empty-state-container-max-width: 50 * $sizer !default;
+
+$bb-cash-flow-forecast-setting-initial-container-max-width: 32 * $sizer !default;
+$bb-cash-flow-forecast-setting-initial-stepper-max-width: 16 * $sizer !default;
+$bb-cash-flow-forecast-setting-initial-stepper-separator-width: $stepper-separator-height !default; // matching with horizontal height
+$bb-cash-flow-forecast-setting-initial-stepper-separator-margin-left: calc(
+  #{$step-icon-size} / 2 - #{$bb-cash-flow-forecast-setting-initial-stepper-separator-width} / 2
+) !default; // calculating margin depends of step icon dimensions
+$bb-cash-flow-forecast-setting-initial-stepper-separator-height: $sizer-lg !default;
+
+/// Common cash flow styles
+///
+/// @example html - search and filters section
+///
+/// <div class="bb-cash-flow-search-params-container">
+///   <div class="bb-cash-flow-search-params-container__search">
+///     ...
+///   </div>
+///   <div class="bb-cash-flow-search-params-container__filter-and-time-container">
+///     <bb-cash-flow-last-updated-time [dateTimestamp]="syncDatetime"
+///                                     wrapperClasses="bb-cash-flow-search-params-container__time-of-last-update">
+///     </bb-cash-flow-last-updated-time>
+///     <div class="bb-cash-flow-search-params-container__filter">
+///       ...
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example html - expected date
+///
+/// <div class="bb-cash-flow-expected-date">
+///   <button class="bb-cash-flow-expected-date__button bb-cash-flow-expected-date__button--pressed">
+///     <span>Button title</span>
+///     <bb-icon-ui class="bb-cash-flow-expected-date__icon"></bb-icon-ui>
+///   </button>
+/// </div>
+///
+///  @example html - due date
+///
+/// <div class="bb-cash-flow-due-date bb-cash-flow-due-date--mobile">
+///   <div class="bb-cash-flow-due-date__date">Due date</div>
+///   <div class="bb-cash-flow-due-date__overdue-days">Overdue days</div>
+/// </div>
+
+// Table styles
+
+.bb-cash-flow-table {
+  thead th {
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-table-default;
+
+    &:focus {
+      outline: 0;
+      box-shadow: $table-heading-focus-shadow;
+    }
+  }
+
+  td {
+    vertical-align: top;
+  }
+}
+
+.bb-cash-flow-item-icon {
+  margin-top: $spacer-xs;
+}
+
+.bb-cash-flow-table__date-header {
+  min-width: $bb-cash-flow-table-header-date-min-width;
+}
+
+.bb-cash-flow-table__ccy-header {
+  min-width: $bb-cash-flow-table-header-ccy-min-width;
+}
+
+.bb-cash-flow-table__invoice-header {
+  min-width: $bb-cash-flow-table-header-invoice-min-width;
+}
+
+// Filters and search
+
+.bb-cash-flow-search-params-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: $spacer-lg;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+  }
+}
+
+.bb-cash-flow-search-params-container__search {
+  max-width: $bb-cash-flow-search-container-max-width;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+    margin-bottom: $spacer-md;
+  }
+}
+
+.bb-cash-flow-search-params-container__filter {
+  @include media-breakpoint-down(md) {
+    margin-bottom: $sizer-md;
+  }
+}
+
+.bb-cash-flow-search-params-container__filter-and-time-container {
+  display: flex;
+  flex-direction: row;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column-reverse;
+  }
+}
+
+.bb-cash-flow-search-params-container__time-of-last-update {
+  margin-right: $spacer-sm;
+
+  @include media-breakpoint-down(lg) {
+    margin-right: 0;
+  }
+}
+
+// Expected date
+
+.bb-cash-flow-expected-date .bb-cash-flow-expected-date__button {
+  margin-top: -$spacer-xs;
+  margin-left: -$spacer-sm;
+  padding: $sizer-xs $sizer-sm;
+  border-radius: $border-radius-xs;
+
+  .bb-cash-flow-expected-date__icon {
+    color: $bb-cash-flow-table-expected-date-icon-color;
+    @include transition($transition-base);
+  }
+
+  &.bb-cash-flow-expected-date__button--pressed,
+  &.btn-unstyled:hover,
+  &:focus {
+    background-color: $bb-cash-flow-table-expected-date-button-hover-background-color;
+
+    .bb-cash-flow-expected-date__icon {
+      color: $bb-cash-flow-table-expected-date-icon-hover-color;
+    }
+  }
+}
+
+// Due date
+
+.bb-cash-flow-due-date--mobile {
+  display: flex;
+  color: $bb-cash-flow-table-text-danger-color;
+
+  .bb-cash-flow-due-date__date {
+    margin-right: $sizer-xs;
+  }
+
+  .bb-cash-flow-due-date__overdue-days {
+    color: $bb-cash-flow-table-text-danger-color;
+
+    &::before {
+      content: "(";
+    }
+    &::after {
+      content: ")";
+    }
+  }
+
+  .bb-cash-flow-due-date__overdue-date {
+    margin-right: $spacer-xs;
+  }
+}
+
+// Initial container
+
+.bb-cash-flow-forecast-setting-initial-container {
+  max-width: $bb-cash-flow-forecast-setting-initial-container-max-width;
+
+  // styles to make vertical alignment for stepper
+  @include media-breakpoint-down(md) {
+    .bb-stepper {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: $bb-cash-flow-forecast-setting-initial-stepper-max-width;
+      margin: 0 auto;
+    }
+
+    .bb-stepper__separator {
+      width: $bb-cash-flow-forecast-setting-initial-stepper-separator-width;
+      height: $bb-cash-flow-forecast-setting-initial-stepper-separator-height;
+      margin-left: $bb-cash-flow-forecast-setting-initial-stepper-separator-margin-left;
+    }
+
+    .bb-step__label {
+      position: static;
+      display: block;
+      white-space: nowrap;
+    }
+  }
+}
+
+.cash-flow-empty-state__container {
+  .bb-empty-state {
+    max-width: $bb-cash-flow-empty-state-container-max-width;
+  }
+}

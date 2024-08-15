@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+@mixin text-overflow() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,492 @@
+////
+/// @group 5-components/structure/bb-card
+/// @access public
+////
+
+/// Setting the level of shadow on the bb-card.
+/// Replacing `-sm` with any of these modifiers changes the level of shadow:
+/// `sm`, `md`, `lg`, `xl`.
+/// @example scss
+///   $bb-card-shadow-level-sm: $box-shadow-sm !default;
+///   $bb-card-shadow-level-md: $box-shadow-md !default;
+///   $bb-card-shadow-level-lg: $box-shadow-lg !default;
+///   $bb-card-shadow-level-xl: $box-shadow-xl !default;
+$bb-card-shadow-level-sm: $box-shadow-sm !default;
+$bb-card-shadow-level-md: $box-shadow-md !default;
+$bb-card-shadow-level-lg: $box-shadow-lg !default;
+$bb-card-shadow-level-xl: $box-shadow-xl !default;
+
+/// Setting the border styles of bb-card.
+/// The border styles are split up in `radius`, `width` and `color`.
+/// @example scss
+///  $bb-card-border-radius: $border-radius-md !default;
+///  $bb-card-border-width: 0px !default;
+///  $bb-card-border-color: $color-neutral-white !default;
+///  $bb-card-inner-border-radius: calc(#{$bb-card-border-radius} -
+///  #{$bb-card-border-width}) !default;
+$bb-card-border-radius: $border-radius-md !default;
+$bb-card-border-radius-xs: $border-radius-xs !default;
+$bb-card-border-radius-sm: $border-radius-sm !default;
+$bb-card-border-radius-md: $border-radius-md !default;
+$bb-card-border-radius-lg: $border-radius-lg !default;
+$bb-card-border-width: 0px !default;
+$bb-card-border-color: $color-neutral-white !default;
+$bb-card-inner-border-radius: calc(#{$bb-card-border-radius} - #{$bb-card-border-width}) !default;
+
+/// Setting the background colors of bb-card.
+/// Besides the default, the background colors are organized in `highlight` and `warning`.
+/// @example scss
+///   $bb-card-background-color: $color-neutral-white !default;
+///   $bb-card-highlight-background-color: $color-neutral-lightest !default;
+///   $bb-card-warning-background-color: $color-warning-lightest !default;
+$bb-card-background-color: $color-neutral-white !default;
+$bb-card-highlight-background-color: $color-neutral-lightest !default;
+$bb-card-warning-background-color: $color-warning-lightest !default;
+
+/// Setting the padding on bb-card-header.
+///
+/// Modifiers are available for small (`sm`) or medium (`md`) padding.
+/// Also for applyinng padding when bb-card-header is the only child element in bb-card.
+/// @require {variable} $sizer-md
+/// @require {variable} $sizer-lg
+/// @example scss
+///   $bb-card-header-padding-sm: $sizer-md !default;
+///   $bb-card-header-padding-md: $sizer-lg !default;
+///   $bb-card-header-only-child-padding: $sizer-lg !default;
+$bb-card-header-padding-sm: $sizer-md !default;
+$bb-card-header-padding-md: $sizer-lg !default;
+$bb-card-header-only-child-padding: $sizer-lg !default;
+
+/// Setting the box-shadow on bb-card-header.
+///
+/// Using this variable would set
+/// Also for applyinng padding when bb-card-header is the only child element in bb-card.
+$bb-card-header-focus-box-shadow: $input-btn-focus-box-shadow inset !default;
+
+/// Set the padding values on bb-card, bb-card-body, bb-card-footer.
+///
+/// Different variables are available for setting padding to bb-card elements.
+/// @require {variable} $sizer-lg
+/// @require {variable} $sizer-md
+/// @example scss
+///   $bb-card-padding-vertical: $sizer-lg !default;
+///   $bb-card-padding-horizontal: $sizer-lg !default;
+///   $bb-card-body-padding-sm: $sizer-md !default;
+///   $bb-card-body-padding-md: $sizer-lg !default;
+///   $bb-card-footer-padding-sm: $sizer-md !default;
+$bb-card-padding-vertical: $sizer-lg !default;
+$bb-card-padding-horizontal: $sizer-lg !default;
+$bb-card-body-padding-sm: $sizer-md !default;
+$bb-card-body-padding-md: $sizer-lg !default;
+$bb-card-footer-padding-sm: $sizer-md !default;
+
+/// Set the main color of the bb-card.
+///
+/// @require {variable} $optional
+$bb-card-color: $optional !default;
+
+/// Set the caption color or background-color of bb-card.
+///
+/// @require {variable} $color-neutral-white
+/// @require {variable} $optional
+/// @example scss
+///   $bb-card-caption-background-color: $color-neutral-white !default;
+///   $bb-card-caption-color: $optional !default;
+$bb-card-caption-background-color: $color-neutral-white !default;
+$bb-card-caption-color: $optional !default;
+
+/// Sets the size of margin for bb-card-title
+/// @require {variable} $sizer-md
+$bb-card-margin-title: $sizer-md !default;
+
+/// Set the style values when focus is active on bb-card
+///
+/// @require {variable} $focus-border-primary
+/// @require {variable} $focus-outline-distance
+/// @example scss
+///   $bb-card-focus-border-primary: $focus-border-primary !default;
+///   $bb-card-focus-outline-distance: $focus-outline-distance !default;
+$bb-card-focus-border-primary: $focus-border-primary !default;
+$bb-card-focus-outline-distance: $focus-outline-distance !default;
+
+$bb-card-sizer-map: (
+  sm: $sizer-md,
+  md: $sizer-lg,
+  lg: $sizer-xl,
+) !default;
+
+/// The Backbase card component.
+/// Normally consists of a bb-card-body and optionally a bb-card-header/bb-card-footer.
+///
+/// @name .bb-card
+/// @example html - Default
+///   <div class="bb-card">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+///
+/// @example html - Tweaking shadow level
+///   <div class="bb-card bb-card--shadow-level-xl">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+///
+///
+/// @example html - Small variant
+///   <div class="bb-card bb-card--sm">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+///
+/// @example html - Large variant
+///   <div class="bb-card bb-card--lg">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+///
+/// @example html - Collapsible modifier
+///   <div class="bb-card bb-card--collapsible">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+///
+/// @example html - Highlight
+///   <div class="bb-card bb-card--highlight">
+///     <div class="bb-card__header">
+///       <h3 class="bb-card__title">Card title</h3>
+///     </div>
+///     <div class="bb-card__body">Card body</div>
+///     <div class="bb-card__footer">Card footer</div>
+///   </div>
+
+.bb-card {
+  &:not(.bb-card--ignore) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: $card-height;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: $bb-card-background-color;
+    background-clip: border-box;
+    border: $bb-card-border-width solid $bb-card-border-color;
+    box-shadow: $bb-card-shadow-level-sm;
+    @include border-radius($bb-card-border-radius);
+
+    > hr {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    > .bb-list__group {
+      border-top: inherit;
+      border-bottom: inherit;
+
+      &:first-child {
+        border-top-width: 0;
+        @include border-top-radius($bb-card-inner-border-radius);
+      }
+
+      &:last-child {
+        border-bottom-width: 0;
+        @include border-bottom-radius($bb-card-inner-border-radius);
+      }
+    }
+
+    > .bb-card__header + .bb-list__group,
+    > .bb-list__group + .bb-card__footer {
+      border-top: 0;
+    }
+
+    @mixin bb-card__header($sizerValue) {
+      padding: $sizerValue $sizerValue 0 $sizerValue;
+      @include media-breakpoint-down(md) {
+        padding: $bb-card-header-padding-sm $bb-card-header-padding-sm 0 $bb-card-header-padding-sm;
+      }
+    }
+
+    @mixin bb-card__header--only-child($sizerValue) {
+      padding-bottom: $sizerValue;
+    }
+
+    @mixin bb-card__body($sizerValue) {
+      padding: $sizerValue;
+      @include media-breakpoint-down(md) {
+        padding: $bb-card-body-padding-sm;
+      }
+    }
+
+    @mixin bb-card__title($sizerValue) {
+      margin-bottom: $sizerValue;
+    }
+
+    @mixin bb-card__footer($sizerValue) {
+      padding: 0 $sizerValue $sizerValue $sizerValue;
+      @include media-breakpoint-down(md) {
+        padding: 0 $bb-card-footer-padding-sm $bb-card-footer-padding-sm $bb-card-footer-padding-sm;
+      }
+    }
+
+    @each $sizeKey, $sizerValue in $bb-card-sizer-map {
+      &.bb-card--#{$sizeKey} {
+        .bb-card__header {
+          @include bb-card__header($sizerValue);
+        }
+
+        .bb-card__header--only-child {
+          @include bb-card__header--only-child($sizerValue);
+        }
+
+        .bb-card__body {
+          @include bb-card__body($sizerValue);
+        }
+
+        .bb-card__title {
+          @include bb-card__title($sizerValue);
+        }
+
+        .bb-card__footer {
+          @include bb-card__footer($sizerValue);
+        }
+
+        &.bb-card {
+          & > .bb-card__header {
+            @include bb-card__header($sizerValue);
+          }
+
+          & > .bb-card__header--only-child {
+            @include bb-card__header--only-child($sizerValue);
+          }
+
+          & > .bb-card__body {
+            @include bb-card__body($sizerValue);
+          }
+
+          & > .bb-card__title {
+            @include bb-card__title($sizerValue);
+          }
+
+          & > .bb-card__footer {
+            @include bb-card__footer($sizerValue);
+          }
+        }
+      }
+    }
+
+    &.bb-card--shadow-level-sm {
+      box-shadow: $bb-card-shadow-level-sm;
+    }
+
+    &.bb-card--shadow-level-md {
+      box-shadow: $bb-card-shadow-level-md;
+    }
+
+    &.bb-card--shadow-level-lg {
+      box-shadow: $bb-card-shadow-level-lg;
+    }
+
+    &.bb-card--shadow-level-xl {
+      box-shadow: $bb-card-shadow-level-xl;
+    }
+
+    &.bb-card--border-level-xs {
+      border-radius: $bb-card-border-radius-xs;
+    }
+
+    &.bb-card--border-level-sm {
+      border-radius: $bb-card-border-radius-sm;
+    }
+
+    &.bb-card--border-level-md {
+      border-radius: $bb-card-border-radius-md;
+    }
+
+    &.bb-card--border-level-lg {
+      border-radius: $bb-card-border-radius-lg;
+    }
+
+    &.bb-card--shadowless {
+      box-shadow: none;
+    }
+
+    &.bb-card--highlight {
+      background-color: $bb-card-highlight-background-color;
+
+      .bb-card__header {
+        background-color: $bb-card-highlight-background-color;
+      }
+    }
+
+    &.bb-card--warning {
+      background-color: $bb-card-warning-background-color;
+
+      .bb-card__header {
+        background-color: $bb-card-warning-background-color;
+      }
+    }
+  }
+}
+
+/* prettier-ignore */
+.bb-card {
+  &:not(.bb-card--ignore) {
+/// Sets the element to serve as the card title placeholder and applies appropriate spacing.
+///
+/// Typically contains the title of the card section.
+///
+/// @require {variable} $bb-card-margin-title
+/// @example html
+///    <div class="bb-card">
+///      <div class="bb-card__header">
+///        <h3 class="bb-card__title">
+///          Card title
+///        </h3>
+///      </div>
+///      <div class="bb-card__body">Card body</div>
+///      <div class="bb-card__footer">Card footer</div>
+///    </div>
+    .bb-card__title {
+      margin-bottom: $bb-card-margin-title;
+    }
+  }
+}
+
+/* prettier-ignore */
+.bb-card {
+  &:not(.bb-card--ignore) {
+/// Sets the element to serve as the card body placeholder and applies appropriate spacing
+/// and responsive behavior.
+///
+/// Typically contains the maint content of the card section.
+///
+/// @example html
+///    <div class="bb-card">
+///      <div class="bb-card__header">
+///        <h3 class="bb-card__title">Card title</h3>
+///      </div>
+///      <div class="bb-card__body">
+///        Card body
+///      </div>
+///      <div class="bb-card__footer">Card footer</div>
+///    </div>
+    .bb-card__body {
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: $bb-card-body-padding-md;
+      @include media-breakpoint-down(md) {
+        padding: $bb-card-body-padding-sm;
+      }
+      @include setOptional(color, $bb-card-color);
+    }
+  }
+}
+
+/* prettier-ignore */
+.bb-card {
+  &:not(.bb-card--ignore) {
+/// Sets the element to serve as the card header placeholder and applies
+/// appropriate spacing and responsive behavior.
+///
+/// Typically contains the card title
+///
+/// @require {mixin} setOptional
+/// @example html
+///    <div class="bb-card">
+///      <div class="bb-card__header">
+///        <h3 class="bb-card__title">Card title</h3>
+///      </div>
+///      <div class="bb-card__body">Card body</div>
+///      <div class="bb-card__footer">Card footer</div>
+///    </div>
+    .bb-card__header {
+      margin-bottom: 0;
+      padding: $bb-card-header-padding-md $bb-card-header-padding-md 0 $bb-card-header-padding-md;
+      @include setOptional(color, $bb-card-caption-color);
+      background-color: $bb-card-caption-background-color;
+      border-bottom: $bb-card-border-width solid $bb-card-border-color;
+      border-top-left-radius: $bb-card-border-radius;
+      border-top-right-radius: $bb-card-border-radius;
+
+      &:first-child {
+        @include border-radius($bb-card-inner-border-radius);
+      }
+
+      &:focus {
+        position: relative;
+        outline: none;
+        box-shadow: none;
+        &::before {
+          position: absolute;
+          top: $bb-card-focus-outline-distance;
+          right: $bb-card-focus-outline-distance;
+          bottom: $bb-card-focus-outline-distance;
+          left: $bb-card-focus-outline-distance;
+          border: $bb-card-focus-border-primary;
+          border-radius: inherit;
+          content: "";
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        padding: $bb-card-header-padding-sm;
+      }
+
+      &--only-child {
+        padding-bottom: $bb-card-header-only-child-padding;
+        border-bottom-right-radius: $bb-card-border-radius;
+        border-bottom-left-radius: $bb-card-border-radius;
+      }
+    }
+  }
+}
+
+/* prettier-ignore */
+.bb-card {
+  &:not(.bb-card--ignore) {
+/// Sets the element to serve as the card footer placeholder and applies appropriate spacing
+/// and responsive behavior.
+///
+/// Typically contains the footer content of the card
+///
+/// @require {variable} $card-border-width
+/// @example html
+///    <div class="bb-card">
+///      <div class="bb-card__header">
+///        <h3 class="bb-card__title">Card title</h3>
+///      </div>
+///      <div class="bb-card__body">Card body</div>
+///      <div class="bb-card__footer">
+///        Card footer
+///      </div>
+///    </div>
+    .bb-card__footer {
+      padding: $bb-card-padding-vertical $bb-card-padding-horizontal;
+      @include setOptional(color, $bb-card-caption-color);
+      background-color: $bb-card-caption-background-color;
+      border-top: $card-border-width solid $bb-card-border-color;
+
+      &:last-child {
+        @include border-radius(0 0 $bb-card-inner-border-radius $bb-card-inner-border-radius);
+      }
+      @include media-breakpoint-down(md) {
+        padding: $bb-card-footer-padding-sm;
+      }
+    }
+  }
+}

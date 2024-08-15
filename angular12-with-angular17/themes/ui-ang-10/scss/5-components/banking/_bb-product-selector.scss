@@ -1,0 +1,171 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$product-selector-dropdown-menu-height: 22.5rem !default;
+$product-selector-dropdown-box-shadow: $box-shadow-sm !default;
+$product-selector-border-radius: $border-radius-md !default;
+$product-selector-background-color: $color-neutral-white !default;
+
+$product-selector-dropdown-menu-item-separator-color: $color-neutral-grey !default;
+$product-selector-dropdown-menu-item-hover-bg: $color-neutral-lightest !default;
+$product-selector-dropdown-menu-item-active-bg: $color-primary-lightest !default;
+$product-selector-dropdown-menu-item-content-line-height: $line-height-base !default;
+$account-selector-invalid-border: $input-invalid-border !default;
+$product-selector-focus-border-primary: $focus-border-primary !default;
+
+/// Displays a larger dropdown to select products.
+/// Used in combination with Bootstrap's dropdown and dropdown-menu classes
+///
+/// @name bb-product-selector
+///
+/// @example html - default
+///   <div class="bb-product-selector">
+///     <div class="bb-product-selector__dropdown dropdown">
+///       <button class="bb-product-selector__item dropdown-toggle btn-unstyled btn btn-md">
+///         <div class="bb-product-selector__item-content">
+///           Product selector selected item
+///         </div>
+///         <i class="bb-product-selector__icon bb-icon bb-icon-toggle-down bb-icon--md"></i>
+///       </button>
+///       <div class="bb-product-selector__dropdown-menu dropdown-menu show">
+///         <button class="bb-product-selector__dropdown-item btn-unstyled btn btn-md">
+///           Option
+///         </button>
+///       </div>
+///     </div>
+///   </div>
+
+@mixin bb-account-selector-small {
+  .bb-product-selector__item {
+    padding: $spacer-md;
+  }
+
+  .bb-product-selector__dropdown-item {
+    padding: $spacer-md $spacer-lg 0;
+
+    &:after {
+      margin-top: $spacer-md;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bb-product-selector {
+    @include bb-account-selector-small;
+  }
+}
+
+.bb-product-selector {
+  background-color: $product-selector-background-color;
+  box-shadow: $box-shadow-sm;
+  @include border-radius($product-selector-border-radius);
+}
+
+.bb-product-selector__item {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  @include border-radius($product-selector-border-radius);
+  padding: $spacer-lg;
+
+  &:focus::before {
+    position: absolute;
+    top: $focus-outline-distance;
+    right: $focus-outline-distance;
+    bottom: $focus-outline-distance;
+    left: $focus-outline-distance;
+    z-index: calc($zindex-dropdown + 1);
+    border: $product-selector-focus-border-primary;
+    border-radius: $product-selector-border-radius;
+    content: "";
+  }
+}
+
+.bb-product-selector__item-content {
+  flex-grow: 1;
+  line-height: $product-selector-dropdown-menu-item-content-line-height;
+  white-space: normal;
+}
+
+.bb-product-selector__icon {
+  margin-left: $spacer-xs;
+}
+
+.bb-product-selector__dropdown-menu-panel {
+  flex-grow: 1;
+  width: 100%;
+  max-height: $product-selector-dropdown-menu-height + 2rem;
+  overflow: hidden;
+  box-shadow: $product-selector-dropdown-box-shadow;
+}
+
+.bb-product-selector__dropdown-menu {
+  max-height: $product-selector-dropdown-menu-height;
+  overflow-y: auto;
+}
+
+.bb-product-selector__dropdown-item {
+  display: block;
+  width: 100%;
+  padding: $spacer-lg $spacer-xl 0;
+
+  &:after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: $spacer-lg;
+    font-size: 1px;
+    content: "";
+  }
+
+  &:not(.disabled):not(:disabled):hover {
+    background: $product-selector-dropdown-menu-item-hover-bg;
+  }
+
+  &:not(.disabled):not(:disabled).focus,
+  &:not(.disabled):not(:disabled):focus {
+    border: $product-selector-focus-border-primary;
+    box-shadow: none;
+    transition: none;
+  }
+
+  &:not(.disabled):not(:disabled):active {
+    border: $product-selector-focus-border-primary;
+    box-shadow: none;
+    transition: none;
+
+    &:focus {
+      border: $product-selector-focus-border-primary;
+      box-shadow: none;
+      transition: none;
+    }
+  }
+
+  &:not(.disabled):not(:disabled).selected {
+    background: $product-selector-dropdown-menu-item-active-bg;
+
+    &:hover {
+      background: $product-selector-dropdown-menu-item-hover-bg;
+    }
+  }
+}
+
+.bb-product-selector__dropdown-item:not(:last-of-type) {
+  &:after {
+    background: $product-selector-dropdown-menu-item-separator-color;
+  }
+}
+
+// Remove margin-top comes from bootstrap ".btn-block + .btn-block"
+.bb-product-selector__dropdown-item + .bb-product-selector__dropdown-item {
+  margin-top: 0;
+}
+
+.bb-product-selector--invalid-border {
+  .bb-product-selector__item {
+    border: $account-selector-invalid-border;
+  }
+}

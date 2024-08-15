@@ -1,0 +1,8 @@
+// This flag enables dynamic spacings based on screen sizes
+// example:
+// card-body class will have padding set to
+// - $card-lg-sizer on large screen
+// - $card-md-sizer on small screen
+// - $card-sm-sizer on extral small screen
+//
+$experimental-enable-dynamic-spacing: true !default;

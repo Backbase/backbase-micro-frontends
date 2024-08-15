@@ -1,0 +1,54 @@
+////
+/// Focus state (global)
+/// @group 1-variables/state/focus
+/// @access public
+////
+
+/// Configures the horizontal shadow position of focused components
+/// Used to compose $focus-box-shadow
+$focus-box-shadow-offset-x: 0 !default;
+
+/// Configures the vertical shadow position of focused components
+/// Used to compose $focus-box-shadow
+$focus-box-shadow-offset-y: 0 !default;
+
+/// Configures the shadow blur radius for focused components
+/// Used to compose $focus-box-shadow
+$focus-box-shadow-blur-radius: 0 !default;
+
+/// Configures the shadow spread radius for focused components
+/// Used to compose $focus-box-shadow
+$focus-box-shadow-spread-radius: 3px !default;
+
+/// Configures the shadow color for focused components
+/// Used to compose $focus-box-shadow
+/// @require {variable} $color-info
+$focus-box-shadow-color: $color-info !default;
+
+/// Focus state shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $focus-box-shadow-offset-x
+/// @require {variable} $focus-box-shadow-offset-y
+/// @require {variable} $focus-box-shadow-blur-radius
+/// @require {variable} $focus-box-shadow-spread-radius
+/// @require {variable} $focus-box-shadow-color
+$focus-box-shadow: $focus-box-shadow-offset-x $focus-box-shadow-offset-y
+  $focus-box-shadow-blur-radius $focus-box-shadow-spread-radius $focus-box-shadow-color;
+
+/// Configures the border-color for focused components
+/// @require {variable} $color-info-lighter
+$focus-border-color: $color-info-lighter !default;
+
+/// Configures the border-color for focused components
+$focus-border-width-primary: 3px !default;
+
+///Configures the border color for focused components
+/// @require {variable} $focus-border-width-primary
+/// @require {variable} $color-primary
+$focus-border-primary: $focus-border-width-primary solid $color-primary !default;
+
+///Configures the position top bottom left right for focused components when border is used
+$focus-outline-distance: -8px !default;
+
+///Configures the position top bottom left right for focused components when outline is used to display focus
+$focus-outline-offset-distance: 4px !default;

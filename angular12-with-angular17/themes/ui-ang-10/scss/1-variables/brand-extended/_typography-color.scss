@@ -1,0 +1,28 @@
+////
+/// Typography (global)
+/// @group 1-variables/brand-extended/typography
+/// @access private
+////
+
+/// Configures the color used for headings
+/// @access public
+/// @require {variable} $color-neutral-darker
+$color-heading: $color-neutral-darker !default;
+
+// primary color
+/// @require {variable} $color-primary
+$color-text-primary: $color-primary !default;
+
+// support color
+/// @todo make sure naming is simmilar to new "middle-layer" approach
+$color-text-support: $color-neutral-dark !default;
+
+// disabled color
+$color-text-disabled: $color-neutral-greyest !default;
+
+// danger color
+$color-text-danger: #d32f2f !default;
+
+// success color
+/// @require {variable} $color-success
+$color-text-success: $color-success !default;

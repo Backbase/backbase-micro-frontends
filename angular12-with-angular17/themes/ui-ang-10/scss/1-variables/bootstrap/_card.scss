@@ -1,0 +1,13 @@
+// Variables provided by Bootstrap
+$card-spacer-y: $spacer-md !default;
+$card-spacer-x: $sizer-lg !default;
+
+/// Setting the default border width for 'card'.
+$card-border-width: 0px !default;
+$card-border-radius: $border-radius-md !default;
+$card-border-color: $color-neutral-white !default;
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-bg: $color-neutral-white !default;
+$card-cap-color: null !default;
+$card-color: null !default;
+$card-bg: $color-neutral-white !default;

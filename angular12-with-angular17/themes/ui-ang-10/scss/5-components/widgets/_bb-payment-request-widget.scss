@@ -1,0 +1,81 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$payment-request-amount-font-size: 3rem !default;
+
+/// Styles for consent Request widget
+///
+/// @name bb-payment-request-widget
+///
+/// @example html - widget skeleton
+/// <div class="bb-payment-request">
+///   <div class="bb-heading-2 bb-block bb-block--md">
+///     Consent request header
+///   </div>
+///   <div class="bb-subtitle bb-block bb-block--md">
+///      Third party requested a payment from you
+///   </div>
+///   <div class="bb-block bb-block--lg">
+///     <div class="bb-block bb-block--sm bb-text-bold">
+///       Pay to
+///     </div>
+///     <div class="card card-sm">
+///       <div class="card-body">
+///         <span>TPP</span>
+///       </div>
+///     </div>
+///   </div>
+///   <div class="bb-block bb-block--lg">
+///     <div class="bb-block bb-block--sm bb-text-bold">
+///       Amount
+///     </div>
+///     <div class="card card-sm bb-payment-request__amount">100$</div>
+///   </div>
+///   <div class="bb-block bb-block--lg">
+///     <div class="bb-block bb-block--sm bb-text-bold">
+///       From account
+///     </div>
+///   </div>
+///   <div class="bb-block bb-block--lg">
+///     <div class="bb-block bb-block--sm bb-text-bold">
+///        Payment details
+///     </div>
+///     <div>Purchase of 1 year subscription for Amazon</div>
+///   </div>
+/// </div>
+
+.bb-payment-request {
+  display: block;
+}
+
+.bb-payment-request__amount {
+  font-size: $payment-request-amount-font-size;
+  box-shadow: none;
+}
+
+.bb-payment-request-product-selector__no-account {
+  margin-top: $spacer-sm;
+  color: $color-danger;
+}
+
+.bb-payment-request-product-selector__placeholder--sizer-xl {
+  padding: $sizer-xl;
+}
+
+.bb-payment-request-product-selector__placeholder--sizer-lg {
+  padding: $sizer-lg;
+}
+
+.bb-payment-request-product-selector__item-group--rounded {
+  border-radius: $border-radius;
+}
+
+.product-item-group .bb-payment-request-product-selector__item-button {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  text-align: left;
+}

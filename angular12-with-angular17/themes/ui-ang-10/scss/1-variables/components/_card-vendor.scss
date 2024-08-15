@@ -1,0 +1,45 @@
+////
+/// Card vendors
+/// @group 1-variables/components/card-vendor
+/// @access public
+////
+
+/// Configures the card vendor images used by the card-vendor component
+/// It uses a Sass map ([key: card-name]: ( image: [url-to-svg-card-image], width: [a number], height: [a number]))
+$card-vendor-map: (
+  "mastercard": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/mastercard.svg),
+    "width": 39,
+    "height": 24,
+  ),
+  "visa": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/visa.svg),
+    "width": 80,
+    "height": 24,
+  ),
+  "visa-debit": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/visa-debit.svg),
+    "width": 48,
+    "height": 24,
+  ),
+  "diners-club": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/diners-club.svg),
+    "width": 31,
+    "height": 24,
+  ),
+  "maestro": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/maestro.svg),
+    "width": 39,
+    "height": 24,
+  ),
+  "union-pay": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/union-pay.svg),
+    "width": 38,
+    "height": 24,
+  ),
+  "visa-white": (
+    "image": url(#{$path-bb-images}/bb-card-vendor-ui/visa-white.svg),
+    "width": 80,
+    "height": 24,
+  ),
+) !default;

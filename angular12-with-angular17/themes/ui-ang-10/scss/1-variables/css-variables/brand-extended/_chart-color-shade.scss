@@ -1,0 +1,92 @@
+////
+/// Color shades (global)
+/// @name color-shades
+/// @group base
+/// @access private
+////
+
+:root {
+  --chart-color-1-lighter: #{$chart-color-1-lighter};
+  --chart-color-1-lightest: #{$chart-color-1-lightest};
+  --chart-color-1-darker: #{$chart-color-1-darker};
+  --chart-color-1-darkest: #{$chart-color-1-darkest};
+  --chart-color-2-lighter: #{$chart-color-2-lighter};
+  --chart-color-2-lightest: #{$chart-color-2-lightest};
+  --chart-color-2-darker: #{$chart-color-2-darker};
+  --chart-color-2-darkest: #{$chart-color-2-darkest};
+  --chart-color-3-lighter: #{$chart-color-3-lighter};
+  --chart-color-3-lightest: #{$chart-color-3-lightest};
+  --chart-color-3-darker: #{$chart-color-3-darker};
+  --chart-color-3-darkest: #{$chart-color-3-darkest};
+  --chart-color-4-lighter: #{$chart-color-4-lighter};
+  --chart-color-4-lightest: #{$chart-color-4-lightest};
+  --chart-color-4-darker: #{$chart-color-4-darker};
+  --chart-color-4-darkest: #{$chart-color-4-darkest};
+  --chart-color-5-lighter: #{$chart-color-5-lighter};
+  --chart-color-5-lightest: #{$chart-color-5-lightest};
+  --chart-color-5-darker: #{$chart-color-5-darker};
+  --chart-color-5-darkest: #{$chart-color-5-darkest};
+  --chart-color-6-lighter: #{$chart-color-6-lighter};
+  --chart-color-6-lightest: #{$chart-color-6-lightest};
+  --chart-color-6-darker: #{$chart-color-6-darker};
+  --chart-color-6-darkest: #{$chart-color-6-darkest};
+  --chart-color-7-lighter: #{$chart-color-7-lighter};
+  --chart-color-7-lightest: #{$chart-color-7-lightest};
+  --chart-color-7-darker: #{$chart-color-7-darker};
+  --chart-color-7-darkest: #{$chart-color-7-darkest};
+  --chart-color-8-lighter: #{$chart-color-8-lighter};
+  --chart-color-8-lightest: #{$chart-color-8-lightest};
+  --chart-color-8-darker: #{$chart-color-8-darker};
+  --chart-color-8-darkest: #{$chart-color-8-darkest};
+  --chart-color-9-lighter: #{$chart-color-9-lighter};
+  --chart-color-9-lightest: #{$chart-color-9-lightest};
+  --chart-color-9-darker: #{$chart-color-9-darker};
+  --chart-color-9-darkest: #{$chart-color-9-darkest};
+  --chart-color-10-lighter: #{$chart-color-10-lighter};
+  --chart-color-10-lightest: #{$chart-color-10-lightest};
+  --chart-color-10-darker: #{$chart-color-10-darker};
+  --chart-color-10-darkest: #{$chart-color-10-darkest};
+}
+
+$chart-color-1-lighter: var(--chart-color-1-lighter);
+$chart-color-1-lightest: var(--chart-color-1-lightest);
+$chart-color-1-darker: var(--chart-color-1-darker);
+$chart-color-1-darkest: var(--chart-color-1-darkest);
+$chart-color-2-lighter: var(--chart-color-2-lighter);
+$chart-color-2-lightest: var(--chart-color-2-lightest);
+$chart-color-2-darker: var(--chart-color-2-darker);
+$chart-color-2-darkest: var(--chart-color-2-darkest);
+$chart-color-3-lighter: var(--chart-color-3-lighter);
+$chart-color-3-lightest: var(--chart-color-3-lightest);
+$chart-color-3-darker: var(--chart-color-3-darker);
+$chart-color-3-darkest: var(--chart-color-3-darkest);
+$chart-color-4-lighter: var(--chart-color-4-lighter);
+$chart-color-4-lightest: var(--chart-color-4-lightest);
+$chart-color-4-darker: var(--chart-color-4-darker);
+$chart-color-4-darkest: var(--chart-color-4-darkest);
+$chart-color-5-lighter: var(--chart-color-5-lighter);
+$chart-color-5-lightest: var(--chart-color-5-lightest);
+$chart-color-5-darker: var(--chart-color-5-darker);
+$chart-color-5-darkest: var(--chart-color-5-darkest);
+$chart-color-6-lighter: var(--chart-color-6-lighter);
+$chart-color-6-lightest: var(--chart-color-6-lightest);
+$chart-color-6-darker: var(--chart-color-6-darker);
+$chart-color-6-darkest: var(--chart-color-6-darkest);
+$chart-color-7-lighter: var(--chart-color-7-lighter);
+$chart-color-7-lightest: var(--chart-color-7-lightest);
+$chart-color-7-darker: var(--chart-color-7-darker);
+$chart-color-7-darkest: var(--chart-color-7-darkest);
+$chart-color-8-lighter: var(--chart-color-8-lighter);
+$chart-color-8-lightest: var(--chart-color-8-lightest);
+$chart-color-8-darker: var(--chart-color-8-darker);
+$chart-color-8-darkest: var(--chart-color-8-darkest);
+$chart-color-9-lighter: var(--chart-color-9-lighter);
+$chart-color-9-lightest: var(--chart-color-9-lightest);
+$chart-color-9-darker: var(--chart-color-9-darker);
+$chart-color-9-darkest: var(--chart-color-9-darkest);
+$chart-color-10-lighter: var(--chart-color-10-lighter);
+$chart-color-10-lightest: var(--chart-color-10-lightest);
+$chart-color-10-darker: var(--chart-color-10-darker);
+$chart-color-10-darkest: var(--chart-color-10-darkest);
+$chart-colors: var(--chart-colors);
+$wealth-chart-colors: var(--wealth-chart-colors);

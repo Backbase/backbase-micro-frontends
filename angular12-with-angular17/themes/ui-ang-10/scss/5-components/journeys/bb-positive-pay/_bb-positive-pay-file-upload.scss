@@ -1,0 +1,51 @@
+// Configure styles for uploading file
+////
+/// @group journey-specific
+/// @access public
+////
+
+// Configure the background color for drag and drop
+$positive-pay-dnd-background-color: transparent !default;
+
+// Configure the border color for drag and drop
+$positive-pay-dnd-border-color: $color-neutral-greyer !default;
+
+// Configure the border radius for drag and drop
+$positive-pay-dnd-border-radius: $border-radius-md !default;
+
+// Configure the color for drag over state
+$positive-pay-dnd-over-color: #f1f6fb !default;
+
+// Configure the opacity for drag over state
+$positive-pay-dnd-over-opacity: 0.8 !default;
+
+// Configure the horizontal padding for file upload container
+$positive-pay-file-upload-padding-horizontal: $sizer !default;
+
+// Configure the vertical padding for file upload container
+$positive-pay-file-upload-padding-vertical: $sizer-lg !default;
+
+/// Styles for file upload component in Positive pay journey
+///
+/// @name bb-positive-pay-file-upload
+
+/// @example html
+/// <div class="bb-positive-pay-file-upload-container bb-positive-pay-dnd">
+///  <button class="btn btn-link">Click to upload</button>
+/// </div>
+
+.bb-positive-pay-dnd {
+  background: $positive-pay-dnd-background-color;
+  opacity: 1;
+  border: 1px dashed $positive-pay-dnd-border-color;
+  border-radius: $positive-pay-dnd-border-radius;
+}
+
+.bb-positive-pay-dnd--over {
+  background: $positive-pay-dnd-over-color;
+  opacity: $positive-pay-dnd-over-opacity;
+}
+
+.bb-positive-pay-file-upload-container {
+  padding: $positive-pay-file-upload-padding-vertical $positive-pay-file-upload-padding-horizontal;
+}

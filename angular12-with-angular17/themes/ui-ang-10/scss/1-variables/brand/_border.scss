@@ -1,0 +1,30 @@
+@import "color";
+
+////
+/// @group 1-variables/brand/border
+/// @access public
+////
+
+/// Global border width
+/// @todo make sure this is the default border width in all components
+$border-width: 1px !default;
+
+/// Global border style
+$border-style: solid;
+
+/// Global border color
+/// @todo make sure this is the default border color in all components
+/// @require {variable} $color-neutral-grey
+$border-color: $color-neutral-grey !default;
+
+/// Global border (read-only)
+/// @require {variable} $border-width
+/// @require {variable} $border-style
+/// @require {variable} $border-color
+$border: $border-width $border-style $border-color;
+
+/// Global border for horizontal navigation header for xs,sm,md and lg sizes.
+$layout-horizontal-topbar-border-xs: 0 0 $border-width * 10 $border-width * 10 !default;
+$layout-horizontal-topbar-border-sm: 0 0 $border-width * 16 $border-width * 16 !default;
+$layout-horizontal-topbar-border-md: 0 0 $border-width * 24 $border-width * 24 !default;
+$layout-horizontal-topbar-border-lg: 0 0 100px 100px !default;

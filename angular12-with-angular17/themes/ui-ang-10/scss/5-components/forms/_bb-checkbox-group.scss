@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.bb-checkbox-group {
+  padding-inline-start: calc(
+    #{$input-checkbox-checkbox-dimensions} + #{$input-checkbox-label-left-margin}
+  );
+}

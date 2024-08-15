@@ -1,0 +1,71 @@
+// Global annotations
+////
+/// @group 5-components/typography/colors
+/// @access public
+////
+
+/// Extending from the global color variable `$color-warning-lightest`.
+///
+/// @name highlight-background-color
+$highlight-background-color: $color-warning-lightest;
+
+/// Sets the color of containing text to the 'primary' color, using variable `$color-text-primary`.
+///
+/// @example html
+/// <p class="bb-text-primary">
+///   Text with primary color
+/// </p>
+.bb-text-primary {
+  color: $color-text-primary;
+}
+
+/// Sets the color of the containing text to the 'support' color, using variable `$color-text-support`.
+///
+/// @example html
+/// <p class="bb-text-support">
+///   Text with support color
+/// </p>
+.bb-text-support {
+  color: $color-text-support;
+}
+
+/// Sets the color of the containing text to the 'disabled' color, using variable `$color-text-disabled`.
+///
+/// @example html
+/// <p class="bb-text-disabled">
+///   Text with disabled color
+/// </p>
+.bb-text-disabled {
+  color: $color-text-disabled;
+}
+
+/// Sets the color of the containing text to the 'danger' color, using variable `$color-text-danger`.
+///
+/// @example html
+/// <p class="bb-text-danger">
+///   Text with danger color
+/// </p>
+.bb-text-danger {
+  color: $color-text-danger;
+}
+
+/// Sets the color of the containing text to the 'success' color, using variable `$color-text-success`.
+///
+/// @example html
+/// <p class="bb-text-success">
+///   Text with success color
+/// </p>
+.bb-text-success {
+  color: $color-text-success;
+}
+
+/// Adds a background color and an outline of the same color to the element, using variable `$highlight-background-color`.
+///
+/// @example html
+/// <span class="bb-text-highlighted">
+///     Background color and outline
+/// </span>
+.bb-text-highlighted {
+  background-color: $highlight-background-color;
+  outline: $highlight-background-color solid $sizer-xs;
+}

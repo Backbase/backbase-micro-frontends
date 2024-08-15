@@ -1,0 +1,83 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for consent Request widget
+///
+/// @name bb-consent-request-widget
+/// @group widget-specific
+///
+/// @example html - widget skeleton
+/// <div class="bb-consent-request">
+///   <div class="bb-heading-2 bb-block--lg">
+///     Consent request header
+///   </div>
+///   <div class="bb-block--lg">
+///     <div class="bb-block--sm bb-text-bold">
+///       Requested by
+///     </div>
+///     <div class="card card-sm">
+///       <div class="card-body">
+///         <bb-third-party-provider-ui></bb-third-party-provider-ui>
+///       </div>
+///     </div>
+///   </div>
+///   <div class="bb-block--lg">
+///     <div class="bb-block--sm bb-text-bold">
+///       Accounts
+///     </div>
+///     <div>
+///       <bb-product-selector-ui></bb-product-selector-ui>
+///     </div>
+///   </div>
+///   <div class="bb-block--lg">
+///     <div class="bb-block--sm bb-text-bold">
+///       What permissions you grant
+///     </div>
+///     <div class="list-group">
+///       <div class="list-group-item">
+///         <div class="bb-consent-request__information-label"> Account information </div>
+///         <div class="bb-consent-request__account-information"> Name, number </div>
+///       </div>
+///       <div class="list-group-item">
+///         <div class="bb-consent-request__information-label"> Account balance </div>
+///       </div>
+///       <div class="list-group-item">
+///         <div class="bb-consent-request__information-label"> Transactions </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-consent-request {
+  display: block;
+}
+
+.bb-consent-request__information-label {
+  font-weight: $font-weight-bold;
+}
+
+.bb-consent-request__account-information {
+  color: $color-neutral-darker;
+}
+
+.bb-consent-request-product-selector__placeholder--spacer-xl {
+  padding: $spacer-xl;
+}
+
+.bb-consent-request-product-selector__placeholder--spacer-lg {
+  padding: $spacer-lg;
+}
+
+.bb-consent-request-product-selector__item-group--rounded {
+  border-radius: $border-radius;
+}
+
+.product-item-group .bb-consent-request-product-selector__item-button {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  text-align: left;
+}

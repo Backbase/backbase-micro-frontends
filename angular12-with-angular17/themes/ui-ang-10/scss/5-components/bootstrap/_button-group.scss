@@ -1,0 +1,70 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$button-group-divider-color-primary: $color-neutral-white !default;
+$button-group-divider-color-secondary: $color-primary !default;
+$button-group-divider-color-secondary-hover: $color-primary-darker !default;
+$button-border-radius-none: $border-radius-none !default;
+
+// @import "bootstrap/scss/button-group";
+// Manual import of bootstrap code to skip some ugly overrides on borders
+@import "./rtl/bootstrap_button-group";
+
+.btn-group {
+  > .btn-primary + .btn-group > .bb-dropdown-btn-group-wrapper .btn,
+  > .btn-primary + .btn-primary,
+  > .btn-primary + .btn:hover,
+  > .btn:hover + .btn.btn-primary {
+    border-inline-start-color: $button-group-divider-color-primary;
+  }
+  > .btn:hover {
+    z-index: initial;
+  }
+  > .btn {
+    &:first-child {
+      &:focus::before {
+        @include border-inline-end-radius(0);
+        inset-inline-end: $btn-focus-outline-distance * 0.25;
+      }
+    }
+
+    &:last-child {
+      &:focus::before {
+        @include border-inline-start-radius(0);
+        inset-inline-start: $btn-focus-outline-distance * 0.25;
+      }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      &:focus::before {
+        inset-inline: $btn-focus-outline-distance * 0.25;
+        border-radius: $button-border-radius-none;
+      }
+    }
+  }
+}
+
+.btn-group-toggle {
+  display: inline-flex;
+
+  > .btn {
+    &:first-child {
+      @include border-inline-start-radius($btn-border-radius);
+    }
+
+    &:not(:first-child) {
+      border-inline-start: unset;
+    }
+
+    &:last-child {
+      @include border-inline-end-radius($btn-border-radius);
+    }
+
+    &:not(:focus) {
+      box-shadow: none;
+    }
+  }
+}

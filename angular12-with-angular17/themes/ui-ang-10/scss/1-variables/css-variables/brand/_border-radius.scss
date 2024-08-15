@@ -1,0 +1,27 @@
+////
+/// Border radius (global)
+/// @group Border-radius
+/// @access private
+////
+
+:root {
+  --border-radius: #{$border-radius};
+  --border-radius-none: #{$border-radius-none};
+  --border-radius-circle: #{$border-radius-circle};
+  --border-radius-xs: #{$border-radius-xs};
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-pill: #{$border-radius-pill};
+  --border-radius-enabled: #{$border-radius-enabled};
+}
+
+$border-radius: var(--border-radius);
+$border-radius-none: var(--border-radius-none);
+$border-radius-circle: var(--border-radius-circle);
+$border-radius-xs: var(--border-radius-xs);
+$border-radius-sm: var(--border-radius-sm);
+$border-radius-md: var(--border-radius-md);
+$border-radius-lg: var(--border-radius-lg);
+$border-radius-pill: var(--border-radius-pill);
+$border-radius-enabled: var(--border-radius-enabled);

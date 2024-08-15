@@ -1,0 +1,25 @@
+$bb-places-legend-height-width: 1px;
+.gm-style-moc {
+  background-color: $color-neutral-dark;
+}
+.gm-style > div:first-child {
+  button {
+    display: none !important;
+  }
+}
+.bb-maps__form-legend {
+  position: absolute;
+  height: $bb-places-legend-height-width;
+  width: $bb-places-legend-height-width;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+.search-area-button--center {
+  display: inline-block;
+  position: relative;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}

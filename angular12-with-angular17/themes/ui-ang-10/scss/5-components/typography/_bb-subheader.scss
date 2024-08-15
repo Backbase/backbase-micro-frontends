@@ -1,0 +1,39 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$subheader-font-size: $font-size-subheader !default; // 12px
+$subheader-line-height: $line-height-base !default;
+$subheader-font-weight: $font-weight-semi-bold !default;
+$subheader-text-transform: none !default;
+
+/// Will set the following css properties on an HTML element:
+/// - font-weight,
+/// - font-size,
+/// - line-height,
+/// - text-transform
+///
+/// @name bb-subheader
+///
+/// @example html
+///   <div class="bb-subheader">Subheader text here</div>
+///
+/// @example html - Subheader Regular: modifier to reset text-transform and use regular instead of bold font-weight
+///   <div class="bb-subheader bb-subheader--regular">Regular subheader text here</div>
+
+.bb-subheader {
+  font-weight: $subheader-font-weight;
+  font-size: $subheader-font-size;
+  line-height: $subheader-line-height;
+  text-transform: $subheader-text-transform;
+}
+
+.bb-subheader--regular {
+  font-weight: $font-weight-regular;
+  // Provide fallback value for `unset` that is not supported in IE11
+  // using "poor mans unset", namely "inherit"
+  text-transform: inherit;
+  text-transform: unset;
+}

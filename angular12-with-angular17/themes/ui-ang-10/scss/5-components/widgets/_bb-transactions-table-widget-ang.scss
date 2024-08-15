@@ -1,0 +1,162 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$transaction-table-font-size: $font-size-table-default !default;
+$transaction-info-amount-credit: $color-success !default;
+$transaction-table-filter-background-color: $color-neutral-lightest !default;
+$transaction-table-filter-background-border-color: $color-neutral-grey !default;
+$transaction-table-filter-margin-sm: $sizer * -0.5 !default;
+$transaction-table-filter-margin-md: $sizer * -1 !default;
+$transaction-table-filter-margin-lg: $sizer * -2 !default;
+$transaction-table-filter-padding: $spacer !default;
+
+/// Styles for transactions table widget
+///
+/// @name bb-transaction-table-widget-ang
+///
+/// @example html -transactions table filter
+/// <div class="bb-transactions-table__filter">
+///  <form class="card-body">
+///    <div class="row bb-block--lg" role="row">
+///      <!-- Credit/debit indicator -->
+///      <div class="col-md-4">
+///        <div class="form-group">
+///          <bb-dropdown-single-select-ui></bb-dropdown-single-select-ui>
+///        </div>
+///      </div>
+///       <!-- Amount range -->
+///      <div class="col-md-4">
+///        <div class="row">
+///          <div class="col-sm-6">
+///            <div class="form-group">
+///              <input>
+///            </div>
+///          </div>
+///          <div class="col-sm-6">
+///            <div class="form-group">
+///              <input>
+///            </div>
+///          </div>
+///        </div>
+///      </div>
+///      <!-- Date range -->
+///      <div class="col-md-4">
+///        <div class="row">
+///          <div class="col-sm-6">
+///            <bb-input-datepicker-ui></bb-input-datepicker-ui>
+///          </div>
+///          <div class="col-sm-6">
+///            <bb-input-datepicker-ui></bb-input-datepicker-ui>
+///          </div>
+///        </div>
+///      </div>
+///    </div>
+///    <div class="bb-button-bar">
+///      <div class="bb-button-bar__button">
+///      <bb-button-ui
+///        type="submit"
+///        color="primary"
+///      >Apply</bb-button-ui>
+///    </div>
+///    </div>
+///  </form>
+/// </div>
+///
+/// @example html -transactions table info - transactions-info__amount--credit
+/// <div class="card-body bb-transactions-info">
+///    <div class="table-responsive">
+///      <table class="table bb-table">
+///        <thead>
+///          <tr class="bb-transactions-info__header">
+///            <th><span class="th-content">Book date</span>
+///            </th>
+///            <th><span class="th-content">Own Account</span>
+///            </th>
+///            <th><span class="th-content">Counterparty</span>
+///            </th>
+///            <th><span>Reference,description</span?
+///            </th>
+///            <th><span>Amount</span>
+///            </th>
+///          </tr>
+///        </thead>
+///        <tbody>
+///          <tr>
+///            <td>
+///             <span>1/21/18</span>
+///            </td>
+///            <td>
+///              <span>Dave Richards</span>
+///              <div class="bb-text-disabled">IT60 K366 4669 268I LIWV 7XQT 71M</div>
+///            </td>
+///            <td>
+///              <strong>BCA-470875</strong>
+///              <div class="bb-text-disabled">some value</div>
+///            </td>
+///            <td>
+///              <span class="bb-transactions-info__amount" [ngClass]="{'bb-transactions-info__amount--credit': transaction.amount > 0}">EUR</span>
+///            </td>
+///            <td class="bb-text-align-right">
+///              <strong class="bb-transactions-info__amount" [ngClass]="{'bb-transactions-info__amount--credit': transaction.amount > 0}">
+///               <span class="bb-amount">
+///                 <span class="amount bb-amount__value"></span>
+///                 <span class="percent bb-amount__percent">%</span></span>
+///              </strong>
+///            </td>
+///          </tr>
+///        </tbody>
+///      </table>
+///    </div>
+///  </div>
+
+.bb-transactions-info td {
+  vertical-align: top;
+}
+
+.bb-transactions-info__header {
+  font-size: $transaction-table-font-size;
+}
+
+.bb-transactions-info__amount--credit {
+  color: $transaction-info-amount-credit;
+}
+
+.bb-transactions-table__filter {
+  background-color: $transaction-table-filter-background-color;
+  border-block: solid $transaction-table-filter-background-border-color 1px;
+}
+
+.bb-transaction-detail-header__icon {
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: inline-block;
+  }
+}
+
+.bb-transactions-table-controls__filter-search-box {
+  @include media-breakpoint-down(md) {
+    margin-block-end: $spacer-md;
+  }
+}
+
+.bb-card:not(.bb-card--ignore) {
+  .bb-transactions-table__filter {
+    margin-block: $transaction-table-filter-margin-md;
+    padding-inline: $transaction-table-filter-padding;
+  }
+
+  &.bb-card--sm {
+    .bb-transactions-table__filter {
+      margin-inline: $transaction-table-filter-margin-sm;
+    }
+  }
+
+  &.bb-card--lg {
+    .bb-transactions-table__filter {
+      margin-inline: $transaction-table-filter-margin-lg;
+    }
+  }
+}

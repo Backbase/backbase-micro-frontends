@@ -1,0 +1,46 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$limit-info-border-right: 1px $color-text-support solid !default;
+$limit-job-role-margin-right: -1 * $spacer !default;
+$limit-job-role-margin-top: -0.75 * $spacer !default;
+$limit-pending-icon-padding: 0.25 * $sizer !default;
+$limit-pending-view-padding: 1.2 * $sizer !default;
+
+.bb-limit-info {
+  .bb-limit-info__item:not(:last-child) {
+    border-right: $limit-info-border-right;
+  }
+  .bb-limit-info__item:not(:first-child) {
+    padding-right: $sizer-sm;
+    padding-left: $sizer-sm;
+  }
+  .bb-limit-info__item:first-child {
+    padding-right: $sizer-sm;
+  }
+  .bb-limit-info__item__amount {
+    padding-left: $sizer-sm;
+  }
+}
+
+.bb-job-role-limit-icon {
+  margin-top: $limit-job-role-margin-top;
+  margin-right: $limit-job-role-margin-right;
+}
+
+.bb-pending-limit-icon {
+  padding-left: $limit-pending-icon-padding;
+}
+
+.bb-pending-limit-view {
+  padding-right: $limit-pending-view-padding;
+}
+
+.bb-limit-header-card {
+  background-color: $color-neutral-lightest;
+  padding: $sizer-sm;
+  border-radius: $border-radius-sm;
+}

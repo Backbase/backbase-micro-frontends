@@ -1,0 +1,42 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$table-header-font-size: $font-size-table-header !default; // 14px
+$table-header-line-height: $line-height-base !default;
+$table-header-font-weight: $font-weight-semi-bold !default;
+$table-header-text-transform: none !default;
+
+/// Will set the following css properties on the table head (thead) HTML element:
+/// - font-weight
+/// - font-size,
+/// - line-height
+/// - text-transform
+///
+/// @name bb-table-header
+///
+/// @example html
+///   <table class="bb-table-default">
+///     <caption class="bb-table-subtitle">Table caption</caption>
+///     <thead class="bb-table-header">
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </tbody>
+///   </table>
+
+.bb-table-header {
+  font-weight: $table-header-font-weight;
+  font-size: $table-header-font-size;
+  line-height: $table-header-line-height;
+  text-transform: $table-header-text-transform;
+}

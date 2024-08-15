@@ -1,0 +1,30 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-portfolio-trading__dropdown-select {
+  .ng-dropdown-panel {
+    width: auto !important;
+    max-width: 550px;
+    min-width: 100%;
+    inset-inline-end: 0;
+    inset-inline-start: auto;
+    border-radius: $border-radius;
+    border: none;
+    padding: $sizer-sm 0;
+    box-shadow: $box-shadow-md;
+
+    .ng-dropdown-panel-items {
+      border-radius: $border-radius;
+    }
+
+    .ng-option {
+      &.ng-option-marked:first-child {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+// Global annotations
+////
+/// @group elements
+/// @access private
+////
+
+@if $enable-print-styles {
+  @media print {
+    .bb-topbar,
+    .bb-sidebar,
+    .bb-layout__sidebar {
+      display: none;
+    }
+
+    .bb-page-layout__nav-backdrop {
+      display: none !important;
+    }
+
+    // Active nav item has background color instead of border bottom.
+    // In print mode, background is transparent by default from bootstrap.
+    // In order to show active item, we need to use border bottom.
+    .nav-tabs .nav-link.active {
+      border: solid transparent;
+      border-color: $nav-tabs-link-active-border-color;
+      border-width: 0 0 ($border-width * 3) 0;
+    }
+
+    .bb-page-layout__main {
+      min-height: 0;
+    }
+
+    body.modal-open {
+      & > :not(.modal) {
+        display: none;
+      }
+
+      .modal {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        visibility: visible !important;
+      }
+
+      .modal-dialog {
+        overflow: visible !important;
+        visibility: visible !important;
+      }
+    }
+  }
+}

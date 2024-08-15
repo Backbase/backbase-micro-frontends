@@ -1,0 +1,64 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+// save current setting of caret;
+$enable-caret-current: $enable-caret;
+$dropdown-header-text-transform: uppercase !default;
+$enable-caret: false; // disables .dropdown-toggle caret include
+
+@import "../../../../bootstrap5/scss/dropdown";
+
+$enable-caret: $enable-caret-current;
+
+/// The Bootstrap dropdown menu component.  Normally consists of a dropdown-menu, dropdown-divider and dropdown-header.
+/// For the dropdown select (the form control) itself, please use `bb-dropdown`.
+///
+/// @name dropdown-menu
+///
+/// @example html - default
+///   <!-- Example contains position-static and d-block because dropdown is hidden by default -->
+///   <div class="dropdown-menu position-static d-block">
+///     <div class="dropdown-header">
+///       <h3 class="bb-subheader bb-text-support">Dropdown header</h3>
+///     </div>
+///     <a class="dropdown-item" href="#">Action</a>
+///     <a class="dropdown-item" href="#">Another action</a>
+///     <a class="dropdown-item" href="#">Something else here</a>
+///     <div class="dropdown-divider"></div>
+///     <a class="dropdown-item" href="#">Separated link</a>
+///   </div>
+.dropdown-menu {
+  text-align: start;
+  max-height: $dropdown-max-height;
+  overflow-y: auto;
+  box-shadow: $box-shadow-md;
+}
+
+.dropdown:has(bb-user-context-menu-dropdown):not(.bb-dropdown-btn-group-wrapper) {
+  left: unset !important;
+  right: 0.75% !important;
+  transform: translate(0, 70px) !important;
+  z-index: calc($zindex-offcanvas - 1) !important;
+}
+
+.dropdown-menu-unstyled {
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.dropdown-divider {
+  margin-inline: $dropdown-item-padding-x;
+}
+
+.dropdown-header {
+  margin-block-end: $spacer-xs;
+  padding-block: 0;
+  padding-inline: $dropdown-item-padding-x;
+  white-space: nowrap;
+}

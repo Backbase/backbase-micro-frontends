@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-decision-selection__right-border {
+  border-inline-end: 1px solid $color-neutral-grey;
+  padding-inline-end: 35px;
+}
+.bb-decision-selection__label {
+  margin-bottom: 14px;
+}

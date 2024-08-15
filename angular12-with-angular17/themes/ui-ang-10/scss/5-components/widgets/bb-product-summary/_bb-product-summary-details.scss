@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-product-summary-details
+///
+/// @example html
+/// <div class="bb-product-summary-details card">
+/// </div>
+$bb-product-summary-details-bottom-margin: $spacer-xl !default;
+$bb-product-summary-details-bottom-margin-md: $spacer-lg !default;
+
+.bb-product-summary-details {
+  margin-bottom: $bb-product-summary-details-bottom-margin;
+}
+
+@include media-breakpoint-down(md) {
+  .bb-product-summary-details {
+    margin-bottom: $bb-product-summary-details-bottom-margin-md;
+  }
+}

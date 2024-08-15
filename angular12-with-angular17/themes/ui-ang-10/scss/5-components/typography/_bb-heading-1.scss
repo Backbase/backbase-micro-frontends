@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$h1-font-family: null !default;
+$h1-color: null !default;
+$h1-font-weight: $font-weight-bold !default;
+$h1-font-size: $font-size-h1 !default; // 34px
+$h1-line-height: $line-height-heading !default;
+
+/// Will set the following css properties on an HTML element:
+/// - font-family: only if it is provided in presets,
+/// - color: only if it is provided in presets,
+/// - font-weight,
+/// - font-size,
+/// - line-height
+///
+/// @name bb-heading-1
+///
+/// @example html
+///   <div class="bb-heading-1">Heading-1 text here</div>
+.bb-heading-1 {
+  @if $h1-font-family {
+    font-family: $h1-font-family;
+  }
+
+  @if $h1-color {
+    color: $h1-color;
+  }
+
+  font-weight: $h1-font-weight;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}

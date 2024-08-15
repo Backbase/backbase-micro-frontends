@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$currency-selector-dropdown-min-width-wide: 300px !default;
+$currency-selector-items-list-max-height: $pre-scrollable-max-height;
+
+.bb-currency-selector__dropdown {
+  min-width: $currency-selector-dropdown-min-width-wide;
+}
+
+.bb-currency-selector__items-list {
+  overflow-y: auto;
+  max-height: $currency-selector-items-list-max-height;
+}

@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+$quick-link-color: $color-neutral-black !default;
+$quick-link-hover-color: $color-primary !default;
+
+.bb-quick-link-widget__link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+
+  &:hover {
+    text-decoration-line: none;
+    color: $quick-link-hover-color;
+  }
+}
+
+.bb-quick-link-widget__icon {
+  margin-inline-end: $spacer-sm;
+}

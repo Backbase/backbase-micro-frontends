@@ -1,0 +1,54 @@
+$payment-file-list-highlighted-background: $color-warning-lightest !default;
+$payment-file-list-strikethrough-color: $color-neutral-grey !default;
+$payment-file-list-strikethrough-text-color: $color-neutral-greyest !default;
+$payment-file-uploads-dnd-border-color: $color-neutral-greyer !default;
+$payment-file-uploads-dnd-border-radius: $border-radius-sm !default;
+$payment-file-uploads-dnd-label-color-muted: $color-neutral-dark !default;
+$payment-file-uploads-dnd-background-dragging: #ebf0f5 !default;
+
+bb-payment-file-list-ui {
+  .file-row {
+    --bs-gutter-x: 0;
+  }
+
+  .file-row--highlighted {
+    background-color: $payment-file-list-highlighted-background;
+  }
+
+  .file-row--crossed {
+    position: relative;
+    color: $payment-file-list-strikethrough-text-color;
+
+    & .btn-link-text {
+      color: $payment-file-list-strikethrough-text-color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 40%;
+      background-color: $payment-file-list-strikethrough-color;
+    }
+  }
+}
+
+.bb-payment-file-list__count-label {
+  color: $payment-file-uploads-dnd-label-color-muted;
+}
+
+.bb-payment-file-uploads {
+  &__drop-zone {
+    border: 1px dashed $payment-file-uploads-dnd-border-color;
+    border-radius: $payment-file-uploads-dnd-border-radius;
+
+    &--drag-over {
+      background: $payment-file-uploads-dnd-background-dragging;
+    }
+  }
+
+  &__label {
+    color: $payment-file-uploads-dnd-label-color-muted;
+  }
+}

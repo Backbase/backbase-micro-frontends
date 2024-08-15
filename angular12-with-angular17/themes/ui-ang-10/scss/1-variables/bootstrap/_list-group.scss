@@ -1,0 +1,23 @@
+// Variables provided by Bootstrap
+$list-group-color: null !default;
+$list-group-bg: none !default;
+$list-group-border-color: $color-neutral-grey !default;
+$list-group-border-width: $border-width !default;
+$list-group-border-radius: 0 !default;
+
+$list-group-item-padding-y: null !default;
+$list-group-item-padding-x: null !default;
+
+$list-group-hover-bg: lighten($color-neutral-light, 5) !default;
+$list-group-active-color: $color-neutral-darkest !default;
+$list-group-active-bg: $color-neutral-light !default;
+$list-group-active-border-color: $color-neutral-grey !default;
+
+$list-group-disabled-color: $color-text-disabled !default;
+$list-group-disabled-bg: $list-group-bg !default;
+
+$list-group-action-color: $color-neutral-darkest !default;
+$list-group-action-hover-color: $list-group-action-color !default;
+
+$list-group-action-active-color: $color-neutral-darkest !default;
+$list-group-action-active-bg: $color-neutral-light !default;

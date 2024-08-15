@@ -1,0 +1,62 @@
+// Global annotations
+////
+/// @group images-and-icons
+/// @access private
+////
+
+@use "sass:math";
+
+$logo-width: 15 * $sizer !default;
+$logo-min-width: 2 * $sizer !default;
+$logo-height: 1.25 * $sizer !default;
+$logo-aspect-ratio: math.div(19, 233) !default;
+$logo-emblem-aspect-ratio: math.div(45, 65) !default;
+
+$logo-file-name: "logo" !default;
+$logo-full-inverse-file-name: "logo-full-inverse" !default;
+$logo-emblem-file-name: "logo-emblem" !default;
+$logo-emblem-inverse-file-name: "logo-emblem-inverse" !default;
+
+/// @name bb-logo
+///
+/// @example html
+///   <div class="bb-logo"></div>
+///
+/// @example html - emblem
+///   <div class="bb-logo bb-logo--emblem"></div>
+///
+/// @example html - emblem inverse
+///   <div class="bb-logo bb-logo--emblem bb-logo--inverse"></div>
+
+.bb-logo {
+  // For backwards compatibility, the default class has non-responsive dimensions.
+  width: $logo-width;
+  min-width: $logo-min-width;
+  height: $logo-height;
+  background-image: url(#{$path-bb-images}/#{$logo-file-name}.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.bb-logo-responsive {
+    width: 100%;
+    height: auto;
+    padding-block-start: $logo-aspect-ratio * 100%;
+  }
+}
+
+.bb-logo--inverse {
+  background-image: url(#{$path-bb-images}/#{$logo-full-inverse-file-name}.svg);
+}
+
+// .bb-logo-emblem is responsive by default
+.bb-logo--emblem {
+  width: 100%;
+  height: auto;
+  padding-block-start: $logo-emblem-aspect-ratio * 100%;
+  background-image: url(#{$path-bb-images}/#{$logo-emblem-file-name}.svg);
+  background-repeat: no-repeat;
+
+  &.bb-logo--inverse {
+    background-image: url(#{$path-bb-images}/#{$logo-emblem-inverse-file-name}.svg);
+  }
+}

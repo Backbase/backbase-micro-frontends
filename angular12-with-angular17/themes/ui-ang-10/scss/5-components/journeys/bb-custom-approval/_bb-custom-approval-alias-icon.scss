@@ -1,0 +1,68 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$icon-color-list: (
+  "secondary": $color-secondary,
+  "primary": $color-primary-lighter,
+  "info": $chart-color-7,
+) !default;
+
+@mixin bb-custom-approval-alias-icon-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-subheader;
+}
+
+/// Custom approval alias icon classes
+///
+/// @name bb-custom-approval-alias-icon
+///
+/// @example html
+///   <div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--secondary">B</div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--primary">AC</div>
+///     <div class="bb-custom-approval-alias-icon bb-custom-approval-alias-icon--info">HQ</div>
+///   </div>
+
+.bb-custom-approval-alias-icon {
+  @include bb-custom-approval-alias-icon-default();
+  width: $sizer-xl;
+  height: $sizer-xl;
+  border-radius: $border-radius-sm;
+  color: $color-neutral-white;
+}
+
+.bb-custom-approval-alias-icon--sm {
+  @include bb-custom-approval-alias-icon-default();
+  width: $sizer-lg;
+  height: $sizer-lg;
+  border-radius: $border-radius-xs;
+  color: $color-neutral-white;
+}
+
+.bb-custom-approval-alias-icon--md {
+  @include bb-custom-approval-alias-icon-default();
+  width: $sizer-xl;
+  height: $sizer-xl;
+  border-radius: $border-radius-sm;
+  color: $color-neutral-white;
+}
+
+.bb-custom-approval-alias-icon--lg {
+  @include bb-custom-approval-alias-icon-default();
+  width: $sizer-xxxl;
+  height: $sizer-xxxl;
+  font-size: $font-size-highlight;
+  border-radius: $border-radius-sm;
+  color: $color-neutral-white;
+}
+
+@each $color, $value in $icon-color-list {
+  .bb-custom-approval-alias-icon--#{$color} {
+    background-color: $value;
+  }
+}

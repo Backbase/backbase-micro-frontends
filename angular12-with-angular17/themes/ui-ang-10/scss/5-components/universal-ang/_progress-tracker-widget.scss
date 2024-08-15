@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+$progress-tracker-width: 360px !default;
+$zindex-progress-tracker: $zindex-dropdown !default;
+
+.bb-progress-tracker-item-container {
+  position: absolute;
+  inset-inline-start: 0;
+  z-index: $zindex-progress-tracker;
+  width: $progress-tracker-width;
+  background-color: $white;
+}

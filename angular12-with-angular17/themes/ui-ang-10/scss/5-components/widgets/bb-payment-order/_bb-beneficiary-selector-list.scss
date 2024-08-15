@@ -1,0 +1,18 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-beneficiary-selector-list
+///
+/// @example html
+/// <div class="bb-beneficiary-selector-list-label">Contacts</div>
+
+$bb-beneficiary-selector-list-label-padding: $sizer-xs $sizer-md !default;
+$bb-beneficiary-selector-list-label-bg-color: $color-neutral-lightest !default;
+
+.bb-beneficiary-selector-list-label {
+  padding: $bb-beneficiary-selector-list-label-padding;
+  background-color: $bb-beneficiary-selector-list-label-bg-color;
+}

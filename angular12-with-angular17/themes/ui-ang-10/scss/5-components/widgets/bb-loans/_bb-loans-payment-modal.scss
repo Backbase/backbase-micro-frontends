@@ -1,0 +1,16 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$loans-remittance-info-section-padding: $sizer * 3.5 !default;
+
+/// Adds padding to the section.
+///
+/// @example html
+///   <section class="bb-dynamic-input form-group payment-amount bb-amount-input__field--medium bb-block bb-block--lg
+///            col-md-7 bb-loans-remittance-info__section"></section>
+.bb-loans-remittance-info__section {
+  padding-left: $loans-remittance-info-section-padding;
+}

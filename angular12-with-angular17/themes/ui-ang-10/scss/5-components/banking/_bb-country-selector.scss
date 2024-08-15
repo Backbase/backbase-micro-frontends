@@ -1,0 +1,56 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$country-selector-placeholder-padding-vertical: $spacer-sm;
+$country-selector-placeholder-padding-horizontal: $spacer-md;
+
+/// A country selector
+/// Will have the visual styling of an input while having a full list of countries to select.
+/// Can select multiple countries
+///
+/// @name bb-country-selector
+///
+/// @example html
+/// <ng-select class="bb-country-selector"></ng-select>
+///
+/// <ng-select class="bb-country-selector ng-select ng-select-multiple">
+///   <div class="ng-select-container">
+///     <div class="ng-value-container">
+///       <div class="ng-placeholder">Search or select countries</div>
+///       <div class="ng-input">
+///         <input role="combobox" type="text">
+///       </div>
+///     </div>
+///     <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+///   </div>
+/// </ng-select>
+
+.bb-country-selector {
+  &.ng-select.ng-select-multiple {
+    .ng-select-container {
+      @extend .form-control;
+      display: flex;
+      height: inherit;
+      padding: 0;
+
+      .ng-value-container {
+        padding-block-start: $country-selector-placeholder-padding-vertical;
+        padding-block-end: $country-selector-placeholder-padding-vertical;
+        padding-inline-start: $country-selector-placeholder-padding-horizontal;
+
+        .ng-input {
+          padding: 0;
+        }
+
+        .ng-placeholder {
+          inset-block-start: $country-selector-placeholder-padding-vertical;
+          padding: 0;
+          color: $input-placeholder-color;
+        }
+      }
+    }
+  }
+}

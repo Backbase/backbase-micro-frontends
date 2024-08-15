@@ -1,0 +1,12 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$locale-selector-icon-height: 1.5rem !default;
+
+.bb-locale-selector__option-icon {
+  height: $locale-selector-icon-height;
+  margin-inline-end: $spacer-xs;
+}

@@ -1,0 +1,42 @@
+// Variables provided by Bootstrap
+////
+/// @access private
+////
+
+$btn-padding-x: $button-padding-horizontal;
+$btn-padding-y: $button-padding-vertical;
+
+$btn-font-family: $font-family !default;
+$btn-font-size: $button-font-size !default;
+$btn-font-size-sm: $button-font-size * 0.875 !default;
+$btn-font-size-lg: $button-font-size * 1.125 !default;
+$btn-line-height: $line-height-base * 1.07142857 !default;
+$btn-line-height-sm: $btn-line-height !default;
+$btn-line-height-lg: $btn-line-height !default;
+
+$btn-padding-y-sm: $button-padding-vertical * 0.5; // intentional non-standard sizer
+$btn-padding-x-sm: $button-padding-horizontal;
+
+$btn-padding-y-lg: $button-padding-vertical * 1.25 !default; // intentional non-standard sizer
+$btn-padding-x-lg: $button-padding-horizontal !default;
+
+$btn-border-width: $button-border-width;
+$btn-font-weight: $button-font-weight;
+$btn-box-shadow: $button-box-shadow;
+
+$btn-focus-width: $focus-box-shadow-spread-radius;
+$btn-focus-box-shadow: $focus-box-shadow;
+$btn-disabled-opacity: $button-disabled-opacity;
+$btn-active-box-shadow: $button-active-box-shadow;
+
+// TODO: remove? seems we and bootstap are not using it?
+$btn-link-disabled-color: $color-text-disabled;
+
+$btn-block-spacing-y: $spacer-md;
+$btn-border-radius: $button-border-radius;
+// TODO: figure out calculation for lg and sm border-radius if they are used anywhere in bootstrap
+$btn-border-radius-lg: $btn-border-radius !default;
+$btn-border-radius-sm: $btn-border-radius !default;
+$btn-transition: $button-transition;
+
+/// button, button-sm are only two public API variables as the others are only Bootstrap

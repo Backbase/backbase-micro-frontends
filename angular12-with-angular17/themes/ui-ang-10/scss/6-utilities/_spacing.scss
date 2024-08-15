@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+// example: .pb-{10|15|...}p
+// @for $i from 1 through ceil($max-spacing/$spacing-step) {
+//   @debug ".pb-#{$i*$spacing-step}p";
+//   .pb-#{$i*$spacing-step}p {
+//     padding-bottom: 0% + $i * $spacing-step;
+//   }
+// }
+
+// Padding utility classes that respect bootstrap breakpoints (sm, md, lg),
+// using increments of 5%
+// BS4.2 has this? Yup
+// example: .pb-{sm|md|lg}-{10|15|...}p
+// @each $breakpoint in map-keys($container-max-widths) {
+//   @if $breakpoint != 'xl' {
+//     @for $i from 1 through ceil($max-spacing/$spacing-step) {
+//       @debug ".pb-#{$breakpoint}-#{$i*$spacing-step}p";
+//       .pb-#{$breakpoint}-#{$i*$spacing-step}p {
+//         @include media-breakpoint-down($breakpoint) {
+//           padding-bottom: 0% + $i * $spacing-step;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// TODO: Refactor templates that use above code. Since internal widgets on T2.0 shouldn't use utility classes, this is no longer relevant.

@@ -1,0 +1,315 @@
+////
+/// Contextual UI Variant Color Palettes (global)
+/// These variables are meant for internal (Bootstrap) only use
+/// @access private
+/// @group bootstrap-base
+////
+
+/*
+* By default, the theme uses a global cascade based on the global color-base.scss variables file to generate a uniform, consistent visual variants across alerts, badges, buttons, and other bootstrap visuals.
+*
+* Usage of this file is reserved for interfacing with native bootstrap 4 mixins and functions
+* for example: [alert|button|badge|text-emphasis|background [ -outline ]]-variant()
+*
+* These mixins generate the respective color classes (for example: btn-primary)
+*
+* Recommendation: Only modify if you want to customize partial visual variants
+* Example: have deviating primary colors for alert and badge
+*/
+
+// Color Contrasts (BS4 Overrides)
+// Customize the light and dark text colors for color contrast function.
+// @access public
+$yiq-text-dark: $color-neutral-darkest !default;
+
+// A11y Contrast Text Colors (yiq-colors;)
+$light: $color-neutral-white !default;
+$dark: $color-neutral-black !default;
+
+// Color overrides for visual variants
+// This will replace or add key-value pairs to the variant generators
+$theme-partial-overrides: () !default;
+
+// Replacement for BS4 native $theme-colors map for regenerating UI variant classes
+
+// Impact: alert, badge, buttons, list-group, root(css-var), tables, background, borders, text
+// Default base colors
+$theme-default-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "success": $color-success,
+  "info": $color-info,
+  "warning": $color-warning,
+  "danger": $color-danger,
+  "accent": $color-accent,
+  "light": $color-neutral-light,
+  "dark": $color-neutral-darker,
+) !default;
+// Fallback bootstrap reset
+$theme-colors: $theme-default-colors;
+
+// Default base bright colors
+// For events/states :hover, :disabled, :active, :focus
+$theme-bright-default-colors: (
+  "primary": $color-primary-lightest,
+  "secondary": $color-secondary-lightest,
+  "success": $color-success-lightest,
+  "info": $color-info-lightest,
+  "warning": $color-warning-lightest,
+  "danger": $color-danger-lightest,
+  "accent": $color-accent-lightest,
+  "light": $color-neutral-lightest,
+  "dark": $color-neutral-darkest,
+) !default;
+
+// Alert
+//
+// Used for: button-variant mixin, with arguments
+/*
+  * @argument background <--
+  * @argument border
+  * @argument color
+  */
+$theme-alert-colors: map-merge((), $theme-colors) !default;
+
+// Badge
+//
+// Used for: badge-variant mixin, with arguments
+/*
+  * @argument background <--
+  */
+$theme-badge-colors: map-merge(
+  (
+    "light": $color-neutral-lightest,
+    "dark": $color-neutral-darkest,
+  ),
+  $theme-default-colors
+) !default;
+
+// Background
+//
+// Used for: background-variant mixin, with arguments
+/*
+  * @argument background <--
+  */
+$theme-background-colors: map-merge((), $theme-default-colors) !default;
+
+// text-emphasis
+//
+// Used for: text-emphasis-variant mixin, with arguments
+/*
+  * @argument parent-selector
+  * @argument color <--
+  */
+$theme-text-emphasis-colors: map-merge((), $theme-default-colors) !default;
+
+// table-row
+//
+// Used for: table-row-variant mixin, with arguments
+/*
+  * @argument parent-selector
+  * @argument color <--
+  */
+$theme-table-row-colors: map-merge((), $theme-bright-default-colors) !default;
+$theme-button-colors: (
+  primary: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-primary,
+    default-border: $color-primary,
+    hover-bg: $color-primary-darker,
+    hover-border: $color-primary-darker,
+    active-bg: $color-primary-darkest,
+    active-border: $color-primary-darkest,
+    focus-bg: $color-primary,
+    focus-border: $color-primary,
+  ),
+  secondary: (
+    color: $color-primary,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: transparent,
+    default-border: $color-primary,
+    hover-bg: $color-primary,
+    hover-border: $color-primary,
+    active-bg: $color-primary-darker,
+    active-border: $color-primary-darker,
+    focus-bg: transparent,
+    focus-border: $color-primary,
+  ),
+  success: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-success,
+    default-border: $color-success,
+    hover-bg: $color-success-darker,
+    hover-border: $color-success-darker,
+    active-bg: $color-success-darkest,
+    active-border: $color-success-darkest,
+    focus-bg: $color-success,
+    focus-border: $color-primary,
+  ),
+  info: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-info,
+    default-border: $color-info,
+    hover-bg: $color-info-darker,
+    hover-border: $color-info-darker,
+    active-bg: $color-info-darkest,
+    active-border: $color-info-darkest,
+    focus-bg: $color-info,
+    focus-border: $color-primary,
+  ),
+  warning: (
+    color: $color-neutral-darkest,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-warning,
+    default-border: $color-warning,
+    hover-bg: $color-warning-darker,
+    hover-border: $color-warning-darker,
+    active-bg: $color-warning-darkest,
+    active-border: $color-warning-darkest,
+    focus-bg: $color-warning,
+    focus-border: $color-primary,
+  ),
+  danger: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-danger,
+    default-border: $color-danger,
+    hover-bg: $color-danger-darker,
+    hover-border: $color-danger-darker,
+    active-bg: $color-danger-darkest,
+    active-border: $color-danger-darkest,
+    focus-bg: $color-danger,
+    focus-border: $color-primary,
+  ),
+  link: (
+    color: $color-primary,
+    hover-color: $color-primary-darker,
+    active-color: $color-primary-darker,
+    default-bg: transparent,
+    default-border: $color-primary,
+    hover-bg: $color-neutral-grey-light,
+    hover-border: $color-neutral-lighter,
+    active-bg: $color-neutral-grey,
+    active-border: $color-neutral-light,
+    focus-bg: transparent,
+    focus-border: $color-primary,
+  ),
+  light: (
+    color: $color-neutral-darkest,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-neutral-light,
+    default-border: $color-neutral-light,
+    hover-bg: $color-neutral-darker,
+    hover-border: $color-neutral-darker,
+    active-bg: $color-neutral-darkest,
+    active-border: $color-neutral-darkest,
+    focus-bg: $color-neutral-light,
+    focus-border: $color-primary,
+  ),
+  dark: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: $color-neutral-dark,
+    default-border: $color-neutral-dark,
+    hover-bg: $color-neutral-darker,
+    hover-border: $color-neutral-darker,
+    active-bg: $color-neutral-darkest,
+    active-border: $color-neutral-darkest,
+    focus-bg: $color-neutral-dark,
+    focus-border: $color-primary,
+  ),
+  link-dark: (
+    color: $color-neutral-black,
+    hover-color: $color-neutral-black,
+    active-color: $color-neutral-black,
+    default-bg: transparent,
+    default-border: $color-primary,
+    hover-bg: $color-neutral-grey-light,
+    hover-border: $color-neutral-lighter,
+    active-bg: $color-neutral-grey,
+    active-border: $color-neutral-light,
+    focus-bg: transparent,
+    focus-border: $color-primary,
+  ),
+  neutral: (
+    color: $color-neutral-darker,
+    hover-color: $color-neutral-darker,
+    active-color: $color-neutral-darker,
+    default-bg: $color-neutral-white,
+    default-border: $color-neutral-greyer,
+    hover-bg: $color-neutral-greyer,
+    hover-border: $color-neutral-greyer,
+    active-bg: $color-neutral-greyer,
+    active-border: $color-neutral-greyer,
+    focus-bg: $color-neutral-white,
+    focus-border: $color-primary,
+  ),
+) !default;
+
+$theme-button-on-color-colors: (
+  primary: (
+    color: $color-neutral-darker,
+    hover-color: $color-neutral-darker,
+    active-color: $color-neutral-darker,
+    default-bg: $color-neutral-white,
+    default-border: $color-neutral-white,
+    hover-bg: rgba($color-neutral-white, 0.75),
+    hover-border: $color-primary-darker,
+    active-bg: rgba($color-neutral-white, 0.5),
+    active-border: $color-primary-darkest,
+    focus-bg: $color-neutral-white,
+    focus-border: $color-neutral-white,
+  ),
+  secondary: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-darker,
+    active-color: $color-neutral-darker,
+    default-bg: transparent,
+    default-border: $color-neutral-white,
+    hover-bg: rgba($color-neutral-white, 0.75),
+    hover-border: $color-neutral-white,
+    active-bg: rgba($color-neutral-white, 0.5),
+    active-border: $color-primary-darkest,
+    focus-bg: transparent,
+    focus-border: $color-neutral-white,
+  ),
+  link: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-darker,
+    active-color: $color-neutral-darker,
+    default-bg: transparent,
+    default-border: $color-primary,
+    hover-bg: rgba($color-neutral-white, 0.75),
+    hover-border: $color-primary-darker,
+    active-bg: rgba($color-neutral-white, 0.5),
+    active-border: $color-primary-darkest,
+    focus-bg: transparent,
+    focus-border: $color-neutral-white,
+  ),
+  link-text: (
+    color: $color-neutral-white,
+    hover-color: $color-neutral-white,
+    active-color: $color-neutral-white,
+    default-bg: transparent,
+    default-border: $color-primary,
+    hover-bg: transparent,
+    hover-border: transparent,
+    active-bg: transparent,
+    active-border: transparent,
+    focus-bg: transparent,
+    focus-border: $color-neutral-white,
+  ),
+) !default;
+
+// NOTE: Chart colors moved to variables/_charts.scss

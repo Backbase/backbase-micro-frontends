@@ -1,0 +1,24 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+/// Accounts edit alias input
+///
+/// @example html
+/// <div class="bb-accounts-edit-alias-input">
+///   <div class="bb-input-inline-edit-ui">
+///     <div class="form-group">
+///       <form>
+///         <input value="Account alias" />
+///       </form>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-accounts-edit-alias-input {
+  .form-group {
+    margin-block-end: 0;
+  }
+}

@@ -1,0 +1,20 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/neutral
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-neutral-transparent: transparent !default;
+$color-light-neutral-white: $color-neutral-white; // #FFFFFF
+$color-light-neutral-lightest: $color-neutral-lighter; // #F3F6F9
+$color-light-neutral-lighter: #ebf0f5 !default;
+$color-light-neutral-light: $color-neutral-grey-light; // #E1E8EF
+$color-light-neutral-grey: $color-neutral-grey; // #CCD5DF
+$color-light-neutral-greyer: $color-neutral-greyer; // #A3B2C2
+$color-light-neutral-greyest: $color-neutral-greyest; // #7189A7
+$color-light-neutral-dark: $color-neutral-dark; // #3A495D
+$color-light-neutral-darker: $color-neutral-darker; // #091C35
+$color-light-neutral-darkest: $color-neutral-darkest; // #061223
+$color-light-neutral-black: $color-neutral-black; // #000000

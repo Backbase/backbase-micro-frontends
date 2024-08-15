@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// General reset rules
+/// @group generic
+/// @access private
+////
+
+@import "../../../bootstrap5/scss/reboot";
+
+input::-ms-clear {
+  display: none;
+}
+
+// Body
+//
+
+body {
+  text-align: start; // 3
+}
+//
+// Typography
+//
+
+dd {
+  margin-inline-start: 0; // Undo browser default
+}
+
+// We recomment using empty caption to fix sonar warnings.
+// And Bootstrap 5 adds extra padding for all captions. Add this override to mitigate empty caption cases.
+caption:empty {
+  padding-block: 0;
+}

@@ -1,0 +1,12 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+////
+
+$scrollable-box-content-height: $sizer-xxl * 8 !default;
+
+.scrollable-box-content {
+  height: $scrollable-box-content-height;
+  overflow-y: auto;
+}

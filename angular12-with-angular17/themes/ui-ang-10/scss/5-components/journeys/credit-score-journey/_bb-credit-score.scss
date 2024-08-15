@@ -1,0 +1,19 @@
+$bb-credit-score-header-sec-inset-block-start: 4.5 * $spacer;
+$bb-credit-score-web-app-max-width: 1201px;
+
+.bb-credit-score__header-section {
+  inset-block-start: $bb-credit-score-header-sec-inset-block-start;
+  background-color: $background-color-neutral;
+  width: 100%;
+}
+
+.bb-credit-score__sso-iframe {
+  min-width: 100% !important;
+  overflow: hidden;
+  border-width: 0;
+}
+
+.bb-credit-score-web-app__header,
+.bb-credit-score-web-app__error-card-max-width {
+  max-width: $bb-credit-score-web-app-max-width;
+}

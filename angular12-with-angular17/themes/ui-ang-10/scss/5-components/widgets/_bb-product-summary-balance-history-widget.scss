@@ -1,0 +1,168 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+// Balance history line chart variables
+@use "sass:math";
+
+$account-balance-history-line-chart-series-stroke-width: 2px !default;
+$account-balance-history-line-chart-gridline-vertical-stroke-width: 0 !default;
+$account-balance-history-line-chart-gridline-horizontal-stroke-color: $color-neutral-lighter !default;
+$account-balance-history-line-chart-refline-stroke-color: $color-neutral-greyest !default;
+$account-balance-history-line-chart-refline-stroke-dash-array: none !default;
+$account-balance-history-line-chart-x-axis-tick-color: $color-text-support !default;
+$account-balance-history-line-chart-x-axis-tick-font-weight: $font-weight-semi-bold !default;
+$account-balance-history-line-chart-height: 220px !default;
+
+// Balance history header variables
+$account-balance-history-header-datepicker-max-width: 16 * $sizer !default;
+
+/// Styles for Product Summary bb-balance-history-header component
+///
+/// @name bb-balance-history-header
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-balance-history-header__datepicker bb-stack__item d-none d-lg-block">
+///       <div class="bb-input-datepicker__wrapper">
+///         <div class="input-group bb-input-datepicker">
+///           <input class="form-control bb-input-datepicker__range" placeholder="M/D/YY-M/D/YY">
+///           <button class="bb-input-datepicker__calendar-opener-button btn-link btn btn-md">
+///             <i class="bb-icon bb-icon-calendar-today bb-icon--md bb-icon--dark"></i>
+///           </button>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--fill d-none d-lg-block">
+///       <div class="btn-group">
+///         <button class="btn-secondary btn btn-md">D</button>
+///         <button class="btn-secondary btn btn-md">W</button>
+///         <button class="btn-secondary btn btn-md">M</button>
+///         <button class="btn-secondary btn btn-md">Y</button>
+///         <button class="btn-secondary btn btn-md active">All</button>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--fill d-lg-none">
+///       <div class="bb-dropdown-btn-group-wrapper dropdown">
+///         <button class="dropdown-toggle btn-secondary btn-md btn">
+///           <div class="dropdown-menu-toggle-button__content">
+///             <span class="ng-star-inserted">Period: Custom</span>
+///             <i class="bb-icon bb-icon-caret-down bb-icon--md bb-icon--cropped"></i>
+///           </div>
+///         </button>
+///       </div>
+///       <div class="bb-balance-history-header__custom-period">
+///         <div class="bb-input-datepicker__wrapper">
+///           <div class="input-group bb-input-datepicker">
+///             <input class="form-control bb-input-datepicker__range" placeholder="M/D/YY-M/D/YY">
+///             <button class="bb-input-datepicker__calendar-opener-button btn-link btn btn-md">
+///               <i class="bb-icon bb-icon-calendar-today bb-icon--md bb-icon--dark"></i>
+///             </button>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-balance-history-header__dropdown bb-stack__item bb-stack__item--align-top">
+///       <button class="dropdown-toggle btn-secondary btn-md btn btn-circle">
+///         <i class="bb-icon bb-icon-get-app bb-icon--md"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-balance-history-header__datepicker {
+  max-width: $account-balance-history-header-datepicker-max-width;
+}
+
+.bb-balance-history-header__custom-period {
+  max-width: $account-balance-history-header-datepicker-max-width;
+  margin-top: $spacer-sm;
+}
+
+/// Styles for Product Summary balance-history-table component
+///
+/// @name bb-balance-history-table
+///
+/// @example html
+///   <table class="table table-hover">
+///     <thead>
+///       <tr>
+///         <th><span class="highlight text-small">Date</span></th>
+///         <th class="bb-text-align-right"><span class="highlight text-small">Currency</span></th>
+///         <th class="bb-text-align-right"><span class="highlight text-small">Amount</span></th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td class="bb-balance-history-table__date-cell">June 1, 2017</td>
+///         <td class="bb-balance-history-table__value-cell bb-text-align-right break-word">EUR</td>
+///         <td class="bb-balance-history-table__value-cell bb-text-align-right break-word">12.00</td>
+///       </tr>
+///       <tr>
+///         <td class="bb-balance-history-table__date-cell">June 13, 2017</td>
+///         <td class="bb-balance-history-table__value-cell bb-text-align-right break-word">EUR</td>
+///         <td class="bb-balance-history-table__value-cell bb-text-align-right break-word">302.50</td>
+///       </tr>
+///     </tbody>
+///   </table>
+.bb-balance-history-table__date-cell {
+  width: math.div(100%, 3);
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 60%;
+  }
+}
+
+.bb-balance-history-table__value-cell {
+  width: math.div(100%, 3);
+
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 20%;
+  }
+}
+
+.bb-account-balance-history__line-chart {
+  height: $account-balance-history-line-chart-height;
+}
+
+/**
+  Override ngx-charts styles
+*/
+.bb-account-balance-history__line-chart .ngx-charts .gridline-path.gridline-path-vertical {
+  stroke-width: $account-balance-history-line-chart-gridline-vertical-stroke-width;
+}
+
+.bb-account-balance-history__line-chart .ngx-charts .gridline-path.gridline-path-horizontal {
+  stroke: $account-balance-history-line-chart-gridline-horizontal-stroke-color;
+}
+
+.bb-account-balance-history__line-chart .ngx-charts .line-series .line {
+  stroke-width: $account-balance-history-line-chart-series-stroke-width;
+}
+
+.bb-account-balance-history__line-chart .ngx-charts .refline-path {
+  stroke: $account-balance-history-line-chart-refline-stroke-color;
+  stroke-dasharray: $account-balance-history-line-chart-refline-stroke-dash-array;
+}
+
+.bb-account-balance-history__line-chart .x.axis .tick {
+  font-weight: $account-balance-history-line-chart-x-axis-tick-font-weight;
+  fill: $account-balance-history-line-chart-x-axis-tick-color;
+}
+
+.bb-account-balance-history__line-chart .ngx-charts .line-chart {
+  &:hover .line-highlight {
+    display: none;
+  }
+  .line-series {
+    opacity: 1;
+  }
+}

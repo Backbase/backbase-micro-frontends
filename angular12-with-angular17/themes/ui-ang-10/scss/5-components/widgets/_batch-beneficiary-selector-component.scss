@@ -1,0 +1,28 @@
+.batch-beneficiary-selector {
+  .bb-account-selector {
+    .ng-select-container {
+      box-shadow: none;
+      border: $input-border-width $input-border-style $color-neutral-grey;
+      border-radius: $border-radius-sm !important;
+      &:not(.ng-has-value) {
+        min-height: 2.5rem;
+      }
+    }
+
+    .ng-dropdown-panel-items {
+      max-height: 14rem !important;
+    }
+  }
+  &.ng-invalid {
+    .ng-select-container {
+      border: $input-invalid-border-width $input-invalid-border-style $input-invalid-border-color;
+    }
+  }
+  &.batch-beneficiary-external-selector {
+    .ng-has-value {
+      .ng-arrow-wrapper {
+        display: none;
+      }
+    }
+  }
+}

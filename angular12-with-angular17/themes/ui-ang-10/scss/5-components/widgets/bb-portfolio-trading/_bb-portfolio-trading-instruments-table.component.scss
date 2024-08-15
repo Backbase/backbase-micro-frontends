@@ -1,0 +1,18 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-portfolio-trading-instrument__item-icon-column {
+  width: 60px;
+}
+.bb-portfolio-trading-instrument__item-name-col {
+  width: auto;
+}
+.bb-instrument-table-row {
+  &:hover {
+    text-decoration: none;
+    background-color: $portfolio-trading-background-color-neutral;
+  }
+}

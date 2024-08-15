@@ -1,0 +1,29 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-accessgroup-approval-log
+/// @example html
+/// <div class="bb-accessgroup-approval-log">
+///   <div class="bb-card bb-card--sm bb-card--shadowless bb-accessgroup-approval-log__comment">
+///     <div class="bb-card__body">
+///       <small>This is a comment.</small>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-accessgroup-approval-log__comment {
+  &::before {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: $color-neutral-white;
+    transform: rotate(45deg);
+    content: "";
+  }
+}

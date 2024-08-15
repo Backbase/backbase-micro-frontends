@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$direction-icon-size: 2.25 * $spacer;
+$direction-icon-top-shift: -0.75 * $spacer;
+$direction-icon-right-shift: 0.875 * $spacer;
+
+.bb-approval-policy-review-current-state-card {
+  background-color: $color-neutral-lightest;
+  border-radius: $spacer-sm;
+}
+
+.bb-approval-policy-review-feature-state-card {
+  border: $border-width $border-style $color-warning;
+  border-radius: $spacer-sm;
+}
+
+.bb-approval-policy-review-icon-container {
+  position: relative;
+}
+
+.bb-approval-policy-review-direction-icon {
+  position: absolute;
+  inset-block-end: $direction-icon-top-shift;
+  inset-inline-end: $direction-icon-right-shift;
+  z-index: 1;
+  width: $direction-icon-size;
+  height: $direction-icon-size;
+  background-color: $color-warning;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}

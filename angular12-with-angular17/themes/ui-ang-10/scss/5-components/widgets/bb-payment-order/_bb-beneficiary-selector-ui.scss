@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-beneficiary-selector-ui
+
+$bb-beneficiary-selector-ui-primary-color: $color-primary;
+$bb-beneficiary-selector-ui-danger-color: $color-danger;
+$bb-beneficiary-selector-ui-tab-height: 340px;
+
+///  @example html - beneficiary selector
+///
+/// <div class="bb-beneficiary-selector-ui">
+///   ...
+///   <bb-search-box-ui></bb-search-box-ui>
+///   <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right w-100 bb-beneficiary-selector-ui__list">
+///     <bb-beneficiary-tabs class="bb-beneficiary-selector-ui__tabs">
+///       ...
+///       <cdk-virtual-scroll-viewport ... class="bb-beneficiary-selector-ui__scroll-container">
+///         ...
+///         <bb-beneficiary-contact ... class="bb-beneficiary-selector-ui__list-item"></bb-beneficiary-contact>
+///       </cdk-virtual-scroll-viewport>
+///     </bb-beneficiary-tabs>
+///   </div>
+/// </div>
+
+.bb-beneficiary-selector-ui__list.dropdown-menu.show {
+  display: inline-table;
+}
+
+.bb-beneficiary-selector-ui__enter-details {
+  color: $bb-beneficiary-selector-ui-primary-color;
+  &:hover {
+    color: $bb-beneficiary-selector-ui-primary-color;
+  }
+}
+
+.bb-beneficiary-selector-ui__load-more-error:hover {
+  color: $bb-beneficiary-selector-ui-danger-color;
+}
+
+.bb-beneficiary-selector-ui__tabs .nav.nav-tabs {
+  margin-bottom: 0;
+}
+
+.bb-beneficiary-selector-ui__scroll-container {
+  height: $bb-beneficiary-selector-ui-tab-height;
+}
+
+.bb-beneficiary-selector-ui__list-item {
+  display: block;
+}
+
+// Fix for angular issue https://github.com/angular/components/issues/24277
+.bb-beneficiary-selector-ui .cdk-virtual-scroll-content-wrapper {
+  max-width: 100%;
+}

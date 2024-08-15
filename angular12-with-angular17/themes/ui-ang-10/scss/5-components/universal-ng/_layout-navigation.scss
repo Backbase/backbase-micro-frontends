@@ -1,0 +1,320 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+$base-padding-height: 1.25rem !default;
+$small-height: 0.9375rem !default; // 15px
+$base-height: 1.25rem !default; // 20px
+$large-height: 1.5625rem !default; // 25px
+$tiny-padding-height: 0.625rem !default;
+$small-padding-height: 0.9375rem !default;
+$page-layout-fixed-content-max-width: 945px !default;
+$sidebar-duration: $motion-duration-default !default;
+$layout-navigation-main-content-padding-left: 16px !default;
+$layout-navigation-main-content-padding-right: 16px !default;
+$layout-navigation-header-font-size: 10px !default;
+$layout-navigation-header-height: 14px !default;
+$layout-navigation-header-margins: 10px 0 8px 0 !default;
+$layout-navigation-header-paddings: 0 16px 0 24px !default;
+$layout-navigation-header-color: $color-neutral-white !default;
+$layout-navigation-item-height: 40px !default;
+// Navbar (topbar)
+$navbar-box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 0 rgba(0, 0, 0, 0.12),
+  0 1px 1px 0 rgba(0, 0, 0, 0.01) !default;
+$navbar-brand-padding-y: 0 !default;
+$navbar-brand-font-size: $font-size-base !default;
+
+//WC2 - UCH (handlebars)
+.rb-sidebar {
+  z-index: 1;
+  min-width: $sidebar-width;
+  padding-top: 1.5rem;
+  overflow-y: auto;
+  background-color: $color-primary-darkest;
+  border-right: $border-width $border-style transparent;
+  //Animate - Sliding
+  transition: mdc-animation-enter(width, $sidebar-duration),
+    mdc-animation-enter(transform, $sidebar-duration);
+
+  & .rb-sidebar-area,
+  & > div {
+    height: 100%;
+  }
+
+  .nav {
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        height: $layout-navigation-item-height;
+        padding-left: $base-padding-height;
+      }
+
+      a:focus {
+        background-color: $color-primary-lightest;
+      }
+
+      &.active {
+        background-color: $color-primary-lightest;
+        border-left: 3px solid $color-accent;
+      }
+
+      &.active a {
+        color: $layout-navigation-link-active-color;
+      }
+    }
+
+    li.bb-universal-nav-header,
+    span.bb-universal-nav-item-title {
+      @include animation(opacity, $sidebar-duration);
+      width: inherit;
+      height: auto;
+      opacity: 0;
+    }
+
+    li.bb-universal-nav-divider {
+      height: 1px;
+      margin-top: $large-height;
+      background-color: $color-info;
+    }
+  }
+
+  .bb-universal-nav {
+    padding: 0;
+
+    &-item {
+      &-menu-icon {
+        max-width: 20px;
+        margin-right: 18px;
+        font-size: $sidebar-icon-size;
+      }
+
+      &-title {
+        line-height: 20px;
+      }
+    }
+
+    &-divider,
+    &-header {
+      border: unset;
+    }
+
+    &-header {
+      height: $layout-navigation-header-height;
+      margin: $layout-navigation-header-margins;
+      padding: $layout-navigation-header-paddings;
+      color: $layout-navigation-header-color;
+      font-weight: $headings-font-weight;
+      font-size: $layout-navigation-header-font-size;
+      line-height: $layout-navigation-header-height;
+      text-transform: uppercase;
+    }
+
+    .bp-g-model {
+      width: 100%;
+    }
+  }
+}
+
+// Top Navigation Bar (UCH)
+// @layout-navigation
+.rb-navbar-top {
+  width: 100%;
+  height: $navbar-top-height;
+  background-color: $color-neutral-white;
+  box-shadow: $box-shadow-sm;
+
+  &-item {
+    position: relative;
+    top: $navbar-top-height * 0.5;
+    transform: translateY(-50%);
+  }
+
+  .navbar-header {
+    height: $navbar-top-height;
+  }
+
+  .notifications-area {
+    > div {
+      margin: 0 $base-height;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.rb-content {
+  flex: 1;
+  padding-right: $layout-navigation-main-content-padding-right;
+  background: $color-neutral-lightest;
+}
+
+.main {
+  @include animation(padding, $sidebar-duration);
+  padding-top: 0;
+
+  //Fixes issue caused in mobile views in smaller devices
+  // Note that favorite accounts in business collection will cause the main area to have a horizontal scrollbar on smaller screen sizes!
+  @include media-breakpoint-up(lg) {
+    width: calc(100% - #{$sidebar-width});
+  }
+
+  .sticky-top-outline & {
+    top: 0;
+  }
+}
+
+// Minimum width supported by widgets
+.bp-widget-body {
+  min-width: 320px;
+}
+
+/* the common rule for widgets isn't applicable for the navigation areas */
+.nav .bp-widget-body,
+.rb-sidebar .bp-widget-body {
+  min-width: inherit;
+}
+
+// Small -- show hidden sidebar menu upon .navbar toggle
+@include media-breakpoint-down(sm) {
+  .rb-row-content-left {
+    //Offsets are now overriding navbar.css styles from layout-navigation source -- 'left' offsetting no longer necessary after removal of position: fixed
+    /* stylelint-disable-next-line declaration-no-important */
+    left: 0 !important; //layout-navigation, container-navigation
+
+    & .rb-sidebar {
+      display: none;
+      height: 100%;
+    }
+
+    &.active .rb-sidebar {
+      left: 0;
+      display: block;
+
+      & .bb-universal-nav {
+        &-item-title {
+          display: inline;
+        }
+
+        &-item-menu-icon {
+          margin-right: $layout-navigation-main-content-padding-right;
+        }
+      }
+    }
+  }
+}
+
+/**
+ ** Styles for Handlebars (layout-navigation)
+ **
+ **/
+.top-side-navigation-layout {
+  &.fixed {
+    .rb-content {
+      max-width: $page-layout-fixed-content-max-width + $sidebar-width +
+        $layout-navigation-main-content-padding-left;
+      padding-left: $sidebar-width;
+    }
+
+    &.hideSidebar {
+      .rb-sidebar {
+        width: 0;
+      }
+
+      .rb-content {
+        max-width: $page-layout-fixed-content-max-width +
+          $layout-navigation-main-content-padding-left;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &.hideSidebar {
+    .rb-sidebar {
+      width: 0;
+    }
+
+    .rb-content {
+      padding-left: $layout-navigation-main-content-padding-left;
+    }
+  }
+
+  .rb-content {
+    padding-left: $sidebar-width + $layout-navigation-main-content-padding-left;
+  }
+}
+
+// Top side navigation layout
+@include media-breakpoint-down(sm) {
+  @include small-sidebar();
+
+  .top-side-navigation-layout {
+    &.fixed {
+      .rb-content {
+        max-width: $page-layout-fixed-content-max-width + $sidebar-collapsed-width +
+          $layout-navigation-main-content-padding-left;
+        padding-left: $sidebar-collapsed-width + $layout-navigation-main-content-padding-left;
+      }
+
+      &.hideSidebar {
+        .rb-content {
+          padding-left: $layout-navigation-main-content-padding-left;
+        }
+      }
+    }
+
+    .rb-content {
+      padding-left: $sidebar-collapsed-width + $layout-navigation-main-content-padding-left;
+    }
+  }
+}
+
+// Desktop,Tablet -- show full sidebar /w full labels
+@include media-breakpoint-up(md) {
+  .rb-sidebar {
+    @include toggle-sidebar-labels(true);
+  }
+}
+
+// Tablet to Mobile -- Collapsed sidebar labels /w icons
+@include media-breakpoint-between(sm, md) {
+  // this class is only applicable for sm-md cases
+  @include small-sidebar();
+}
+// Mobile -- hides the sidebar completely on 'sm' (and below)
+@include media-breakpoint-down(sm) {
+  .rb-sidebar {
+    transform: translateX(-$sidebar-collapsed-width);
+  }
+
+  .main {
+    &,
+    &:not(.soy-template) {
+      padding-left: $spacer;
+    }
+  }
+
+  .top-side-navigation-layout {
+    &.fixed {
+      .rb-content {
+        max-width: $page-layout-fixed-content-max-width +
+          $layout-navigation-main-content-padding-left;
+        padding-left: $layout-navigation-main-content-padding-left;
+      }
+
+      &.hideSidebar {
+        .rb-content {
+          padding-left: $layout-navigation-main-content-padding-left;
+        }
+      }
+    }
+
+    .rb-content {
+      padding-left: $layout-navigation-main-content-padding-left;
+    }
+  }
+}

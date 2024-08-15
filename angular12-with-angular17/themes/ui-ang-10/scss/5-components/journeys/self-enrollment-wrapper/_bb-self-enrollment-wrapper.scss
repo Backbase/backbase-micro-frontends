@@ -1,0 +1,68 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+/// @deprecated - please use bb-identity-journey-wrapper instead
+////
+
+$self-enrollment-images-path: "../../../../assets/images";
+
+/// Styles for sample Self Enrollment wrapper component
+/// This component displays a UI that aligns with backbase default identity login UI.
+///
+/// @name bb-self-enrollment
+///
+/// @example html
+/// <div class="bb-self-enrollment__container">
+///   <div class="bb-self-enrollment__background-container">
+///     <div class="bb-self-enrollment__background" aria-hidden="true"></div>
+///   </div>
+///   <div class="bb-self-enrollment__body-container">
+///     <div class="container container--fixed-width-small bb-self-enrollment__body">
+///       <router-outlet></router-outlet>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-self-enrollment__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bb-self-enrollment__background-container {
+  width: 50%;
+  height: 100%;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.bb-self-enrollment__background {
+  width: 100%;
+  height: 100%;
+  background-image: url(#{$self-enrollment-images-path}/identity-login-background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bb-self-enrollment__body-container {
+  width: 100%;
+  height: 100%;
+  padding: $spacer-md;
+  overflow: auto;
+  background-color: white;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    width: 50%;
+    padding: $spacer-xl;
+  }
+}
+
+.bb-self-enrollment__body {
+  margin: auto;
+}

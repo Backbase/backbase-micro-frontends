@@ -1,0 +1,99 @@
+////
+/// @group 5-components/structure/bb-block
+/// @access public
+////
+
+/// Align content vertically using a bottom margin.
+/// Uses the `$spacer-xs` variable for the size of margin.
+///
+/// Explanation responsive modifiers:
+/// - `..--xs`: Extra small screens only
+/// - `..--sm`: Small screens only
+/// - `..--md`: Medium screens only
+/// - `..--lg`: Large screens only
+/// - `..--xl`: Extra large screens only
+/// - `..--[xs|sm|md|lg|xl]-[up|down]`: Allows for applying responsive rules _only_ to smaller or larger than screensize
+///
+/// In addition to the standard responsive modifiers, the extra modifier `..-md-down` allows for
+/// applying the `bb-block` styles _only_ on smaller (`down`) or bigger (`up`) screensizes than the breakpoint.
+///
+/// @todo There is a long-term plan to replace this class name with a better concept
+///
+/// @name .bb-block--*
+///
+/// @example html
+/// <div class="bb-block--xs">
+///   Content with xs margin bottom
+/// </div>
+/// <div class="bb-block--sm">
+///   Content with sm margin bottom
+/// </div>
+/// <div class="bb-block--md">
+///   Content with md margin bottom
+/// </div>
+/// <div class="bb-block--lg">
+///   Content with lg margin bottom
+/// </div>
+/// <div class="bb-block--xl">
+///   Content with xl margin bottom
+/// </div>
+/// <div class="bb-block--no-margin">
+///   Content with no margin bottom
+/// </div>
+/// <div class="bb-block--full-width">
+///   Content with full width
+/// </div>
+/// <div class="bb-block--bottom-space">
+///   Content with defined padding bottom and max height
+/// </div>
+///
+/// @example html
+/// <div class="bb-block--md-md-down">
+///   Content with margin bottom
+/// </div>
+
+.bb-block--xs {
+  margin-block-end: $spacer-xs;
+}
+
+.bb-block--sm {
+  margin-block-end: $spacer-sm;
+}
+
+.bb-block--md {
+  margin-block-end: $spacer-md;
+}
+
+.bb-block--lg {
+  margin-block-end: $spacer-lg;
+}
+
+.bb-block--xl {
+  margin-block-end: $spacer-xl;
+}
+
+.bb-block--no-margin {
+  margin-block-end: 0;
+}
+
+.bb-block--full-width {
+  width: 100%;
+}
+
+.bb-block--lg-down {
+  @include media-breakpoint-down(lg) {
+    margin-block-end: $spacer-md;
+  }
+}
+
+.bb-block--bottom-space {
+  max-height: calc(#{$input-height} + #{$spacer-xl} * 2);
+  padding-block-end: $spacer-xl;
+}
+
+/// @name .bb-block--fill
+///
+/// @deprecated Use .bb-block--full-width
+.bb-block--fill {
+  width: 100%;
+}

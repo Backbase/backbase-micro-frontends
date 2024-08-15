@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.device-information__data {
+  display: flex;
+  flex-direction: column;
+  padding-left: $spacer-md;
+}
+
+.device-information__data-name {
+  font-weight: $font-weight-semi-bold;
+}
+
+.device-information__data-type {
+  color: $color-neutral-dark;
+}
+
+.device-information__text--disabled {
+  color: $color-neutral-dark;
+}
+
+.device-information__list-menu {
+  display: flex;
+  align-items: center;
+}
+
+.device-information__badge {
+  margin-right: $spacer-sm;
+}
+
+.device-information__form-device {
+  margin-bottom: $spacer-xs;
+}
+
+.device-information__form-device-type {
+  font-weight: $font-weight-semi-bold;
+}
+
+.device-information__form-registered {
+  color: $color-neutral-dark;
+}
+
+.device-information__form-registered-date {
+  font-weight: $font-weight-semi-bold;
+}
+
+.device-information__modal-lower-divider {
+  margin-bottom: 0;
+}
+
+.device-information__list-group-detail {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-right: $spacer-sm;
+}

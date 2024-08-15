@@ -1,0 +1,98 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$modal-body-padding-vertical: $sizer-lg !default;
+$modal-header-computed-height: 4.25rem !default; // adjust this if the header computed height can be bigger
+$modal-footer-computed-height: 5rem !default; // adjust this if the footer computed height can be bigger
+$modal-content-top: 3rem !default; // distance from the top of the viewport
+
+$select-items-max-height: calc(
+  100vh -
+    (
+      #{$modal-header-computed-height} + #{$modal-footer-computed-height} + #{2 *
+        $modal-body-padding-vertical} + #{2 * $modal-content-top}
+    )
+) !default;
+
+$select-items-search-box-max-width: 50% !default;
+$select-items-state-height: 60vh !default;
+$select-items-fixed-height: 75vh !default;
+
+/// Styles for Select Items Modal
+/// This component shows visually list of accounts in dialog modal.
+///
+/// @name bb-select-items-modal
+///
+/// @example html
+/// <div class="modal-dialog">
+///   <div class="modal-content">
+///     <div class="modal-header">
+///       <div class="modal-title">
+///         Title
+///       </div>
+///     </div>
+///     <div class="modal-body">
+///       <div class="bb-select-items">
+///         <div class="bb-select-items__state">
+///           Error State
+///         </div>
+///         <input type="search" class="bb-select-items__search-box" />
+///       </div>
+///       <div class="bb-select-items__sticky-header-top">
+///         Sticky Header
+///       </div>
+///       <div class="bb-list bb-list--density-sm">
+///         <div class="bb-list__item">
+///           <div class="bb-stack">
+///             <div class="bb-stack__item">
+///               <input type="checkbox" />
+///               <span>
+///                 Some Text
+///               </span>
+///             </div>
+///           </div>
+///         </div>
+///         <div class="bb-list__item">
+///           <div class="bb-stack">
+///             <div class="bb-stack__item">
+///               <input type="checkbox" />
+///               <span>
+///                 Some Text
+///               </span>
+///             </div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-select-items {
+  display: flex;
+  flex-direction: column;
+  max-height: $select-items-max-height;
+  overflow: auto;
+}
+
+.bb-select-fixed-items {
+  display: block;
+  height: $select-items-fixed-height;
+}
+
+.bb-select-items__search-box {
+  max-width: $select-items-search-box-max-width;
+}
+
+.bb-select-items__sticky-header-top {
+  padding-top: $sizer-sm;
+  background: $color-neutral-white;
+}
+
+.bb-select-items__state {
+  flex-direction: column;
+  justify-content: center;
+  height: $select-items-state-height;
+}

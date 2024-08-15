@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$ew-privilege-indicator-item-padding: $sizer-md 0 !default;
+$ew-privilege-indicator-item-nth-child: odd !default;
+$ew-privilege-indicator-item-background: $color-neutral-light !default;
+$ew-privilege-indicator-item-border-radius: $border-radius-sm !default;
+
+/// Styles for Entitlement Wizard Privilege Indicator List
+/// This component shows visually whether a function is permitted or not.
+///
+/// @name bb-ew-privilege-indicator-item
+///
+/// @example html
+/// <span class="col bb-ew-privilege-indicator-item bb-text-align-center">
+
+.bb-ew-privilege-indicator-item {
+  padding: $ew-privilege-indicator-item-padding;
+
+  &:nth-child(#{$ew-privilege-indicator-item-nth-child}) {
+    background-color: $color-neutral-light;
+  }
+}
+
+.bb-ew-privilege-indicator-item--first {
+  border-radius: $ew-privilege-indicator-item-border-radius
+    $ew-privilege-indicator-item-border-radius 0 0;
+}
+
+.bb-ew-privilege-indicator-item--last {
+  border-radius: 0 0 $ew-privilege-indicator-item-border-radius
+    $ew-privilege-indicator-item-border-radius;
+}

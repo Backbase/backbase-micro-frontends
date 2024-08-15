@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+$bb-portfolio-summary-list-header-margin-right: $spacer-lg !default;
+$bb-portfolio-summary-list-header-margin-left: $spacer-sm !default;
+$bb-portfolio-summary-list-body-margin-right: $spacer * 4 !default;
+$bb-portfolio-summary-list-body-margin-left: $spacer-sm !default;
+$bb-portfolio-summary-list-body-progressbar-padding-right: $spacer * 4 !default;
+$bb-portfolio-summary-allocations-dot-size: $spacer !default;
+
+.bb-portfolio-summary-allocations__list-header {
+  margin-right: $bb-portfolio-summary-list-header-margin-right;
+  margin-left: $bb-portfolio-summary-list-header-margin-left;
+}
+
+.bb-portfolio-summary-allocations__list-header-progressbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bb-portfolio-summary-allocations__list-body {
+  margin-right: $bb-portfolio-summary-list-body-margin-right;
+  margin-left: $bb-portfolio-summary-list-body-margin-left;
+}
+
+.bb-portfolio-summary-allocations__list-body-progressbar {
+  padding-right: $bb-portfolio-summary-list-body-progressbar-padding-right;
+}
+
+.portfolio-summary-allocations-dot {
+  width: $bb-portfolio-summary-allocations-dot-size;
+  height: $bb-portfolio-summary-allocations-dot-size;
+  border-radius: $border-radius-xs;
+}

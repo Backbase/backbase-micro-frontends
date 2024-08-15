@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+@mixin stretch-and-center-bb-card {
+  height: 100vh; //For vertical-stretch look on mobile
+
+  & .bb-card__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

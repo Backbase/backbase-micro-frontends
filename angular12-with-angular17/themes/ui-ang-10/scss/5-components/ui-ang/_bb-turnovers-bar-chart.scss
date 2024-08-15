@@ -1,0 +1,61 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+/* Overriding some of ngx-chart classes for turnovers bar-chart */
+.bb-chart {
+  .chart-legend {
+    /* stylelint-disable-next-line declaration-no-important */
+    width: 100% !important; //chart library override
+
+    .legend-label-text {
+      width: 100%;
+    }
+
+    .legend-labels {
+      background: transparent;
+    }
+
+    .legend-label-color {
+      border-radius: 100%;
+    }
+  }
+
+  .grid-panel {
+    &.odd {
+      rect {
+        fill: transparent;
+      }
+    }
+
+    &.forecast {
+      rect {
+        fill: $color-neutral-lightest;
+      }
+    }
+  }
+}
+.bb-cashflow-legend__item {
+  width: $spacer-md;
+  height: $spacer-md;
+  margin-right: $spacer-sm;
+  border-radius: $spacer-xs;
+}
+
+.bb-cashflow-chart__hr {
+  position: relative;
+  bottom: 2.875 * $spacer;
+}
+
+:root {
+  --chart-group-bar-color: #{$chart-color-4-darker}, #{$color-success};
+  --chart-budget-donut-color-base: #{$color-neutral-light};
+  --chart-budget-donut-color-overspent: #{$chart-color-2-darker};
+  --chart-budget-donut-color-primary: #{$color-primary};
+  --chart-budget-donut-color-warning: #{$color-warning};
+  --chart-budget-donut-color-danger: #{$color-danger};
+  --chart-budget-donut-color-success: #{$color-success};
+  --chart-tick-color-neutral-greyest: #{$color-neutral-greyest};
+}

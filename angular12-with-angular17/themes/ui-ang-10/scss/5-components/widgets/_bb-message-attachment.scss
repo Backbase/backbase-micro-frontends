@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-message-attachment__loader {
+  .bb-state-container {
+    padding: 0;
+  }
+}
+
+.bb-message-attachment__content--disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,52 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+.btn-group-vertical > div.bb-dropdown-btn-group-wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  .btn,
+  .btn-group > div.bb-dropdown-btn-group-wrapper {
+    width: 100%;
+  }
+
+  > .btn + .btn,
+  > .btn + .btn-group > div.bb-dropdown-btn-group-wrapper,
+  > .btn-group > div.bb-dropdown-btn-group-wrapper + .btn,
+  > .btn-group
+    > div.bb-dropdown-btn-group-wrapper
+    + .btn-group
+    > div.bb-dropdown-btn-group-wrapper {
+    margin-top: -$btn-border-width;
+    margin-left: 0;
+  }
+
+  // Reset rounded corners
+  > div.bb-dropdown-btn-group-wrapper > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > div.bb-dropdown-btn-group-wrapper > .btn {
+    @include border-bottom-radius(0);
+  }
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) > div.bb-dropdown-btn-group-wrapper > .btn {
+    @include border-top-radius(0);
+  }
+}
+
+.btn-group-toggle > div.bb-dropdown-btn-group-wrapper {
+  > .btn,
+  > .btn-group > div.bb-dropdown-btn-group-wrapper > .btn {
+    margin-bottom: 0; // Override default `<label>` value
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+  }
+}

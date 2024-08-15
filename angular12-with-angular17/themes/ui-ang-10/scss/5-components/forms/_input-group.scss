@@ -1,0 +1,88 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$input-group-browser-zoom-adjust: 1.4px !default;
+$input-group-form-control-border-inline-end-width: 0 !default;
+$input-group-form-control-border-inline-start-width: 0 !default;
+
+$input-group-append-prepend-btn-bg: $input-bg;
+$input-group-append-prepend-btn-color: $color-neutral-darker;
+$input-group-append-prepend-btn-border: $input-border-width solid $input-border-color !default;
+$input-group-append-prepend-btn-focus-border-color: $input-focus-border-color !default;
+$input-group-append-prepend-btn-hover-bg: $input-bg;
+$input-group-append-prepend-btn-hover-border-color: $input-border-color !default;
+$input-group-append-prepend-btn-hover-color: $color-primary !default;
+
+@import "../../../../bootstrap5/scss/forms/input-group";
+
+.input-group {
+  > .form-control[type="text"],
+  > .form-control[type="number"],
+  > .form-control[type="email"],
+  > .form-control[type="password"],
+  > .form-control[type="search"] {
+    &:not(:last-child),
+    &:not(:last-child).ng-invalid.ng-touched {
+      border-inline-end-width: $input-group-form-control-border-inline-end-width;
+    }
+
+    &:not(:first-child),
+    &:not(:first-child).ng-invalid.ng-touched {
+      border-inline-start-width: $input-group-form-control-border-inline-start-width;
+    }
+  }
+
+  > .btn {
+    &:not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(
+        .invalid-feedback
+      ) {
+      &:not(:last-child),
+      &:not(:first-child) {
+        padding-inline: $sizer-md;
+        color: $input-group-append-prepend-btn-color;
+        background-color: $input-group-append-prepend-btn-bg;
+        border: $input-group-append-prepend-btn-border;
+
+        &:not(.disabled):not(:disabled):focus,
+        &:not(.disabled):not(:disabled).focus {
+          border-color: $input-border-color;
+        }
+
+        &:not(.disabled):not(:disabled):hover {
+          color: $input-group-append-prepend-btn-hover-color;
+          background-color: $input-group-append-prepend-btn-hover-bg;
+          border-color: $input-group-append-prepend-btn-hover-border-color;
+        }
+
+        &.disabled,
+        &:disabled {
+          color: $input-disabled-color;
+          background-color: $input-disabled-background-color;
+          cursor: not-allowed;
+          pointer-events: initial;
+        }
+      }
+      &:not(:last-child) {
+        @include border-inline-start-radius($input-border-radius);
+        @include border-inline-end-radius(0);
+        border-inline-end: none;
+
+        &:focus {
+          border-inline-end: none;
+        }
+      }
+      &:not(:first-child) {
+        @include border-inline-end-radius($input-border-radius);
+        @include border-inline-start-radius(0);
+        border-inline-start: none;
+
+        &:focus {
+          border-inline-start: none;
+        }
+      }
+    }
+  }
+}

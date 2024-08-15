@@ -1,0 +1,250 @@
+// Global annotations
+////
+/// @group 5-components/typography/alignment
+/// @access private
+////
+
+/// Aligns text within the element to the left.
+/// Responsive modifiers:
+/// - `..-md`: Medium screens only
+/// - `..-md-up`: Medium screens and larger
+/// - `..-md-down`: Medium screens and smaller
+///
+/// @name bb-text-align-left
+///
+/// @example html
+/// <div class="bb-text-align-left">
+///   This text is left-aligned
+/// </div>
+/// <div class="bb-text-align-left-md">
+///   This text is left-aligned on medium screens
+/// </div>
+/// <div class="bb-text-align-left-md-up">
+///   This text is left-aligned on medium screens and larger
+/// </div>
+/// <div class="bb-text-align-left-md-down">
+///   This text is left-aligned on medium screens and smaller
+/// </div>
+.bb-text-align-left {
+  text-align: left;
+}
+
+/// Aligns text within the element to the right.
+/// Responsive modifiers:
+/// - `..-md`: Medium screens only
+/// - `..-md-up`: Medium screens and larger
+/// - `..-md-down`: Medium screens and smaller
+///
+/// @name bb-text-align-right
+///
+/// @example html
+/// <div class="bb-text-align-right">
+///   This text is right-aligned
+/// </div>
+/// <div class="bb-text-align-right--md">
+///   This text is right-aligned on medium screens
+/// </div>
+/// <div class="bb-text-align-right--md-up">
+///   This text is right-aligned on medium screens and larger
+/// </div>
+/// <div class="bb-text-align-right--md-down">
+///   This text is right-aligned on medium screens and smaller
+/// </div>
+.bb-text-align-right {
+  text-align: right;
+}
+
+/// Aligns text within the element in the center.
+/// Responsive modifiers:
+/// - `..-md`: Medium screens only
+/// - `..-md-up`: Medium screens and larger
+/// - `..-md-down`: Medium screens and smaller
+///
+/// @name bb-text-align-center
+///
+/// @example html
+/// <div class="bb-text-align-center">
+///   This text is centered
+/// </div>
+/// <div class="bb-text-align-center--md">
+///   This text is center-aligned only on medium screens
+/// </div>
+/// <div class="bb-text-align-center--md-up">
+///   This text is center-aligned on medium screens and larger
+/// </div>
+/// <div class="bb-text-align-center--md-down">
+///   This text is center-aligned on medium screens and smaller
+/// </div>
+.bb-text-align-center {
+  text-align: center;
+}
+
+/// Prevent the contained text from wrapping when the element resizes.
+///
+/// @name bb-text-nowrap
+/// @example html
+/// <div class="bb-text-nowrap">
+///   This text will overflow the parent element.
+/// </div>
+.bb-text-nowrap {
+  white-space: nowrap;
+}
+
+/// Lines are wrapped, filling the element's box with multiple lines when wrapped.
+///
+/// @name bb-text-wrap
+/// @example html
+/// <button class="btn bb-text-wrap">
+///   This text fills into the button's box with multiple lines wrapped
+/// </button>
+.bb-text-wrap {
+  white-space: normal;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  .bb-text-align-left-#{$infix} {
+    @include media-breakpoint-only($breakpoint) {
+      text-align: left;
+    }
+  }
+
+  .bb-text-align-left-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      text-align: left;
+    }
+  }
+
+  .bb-text-align-left-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      text-align: left;
+    }
+  }
+
+  .bb-text-align-right-#{$infix} {
+    @include media-breakpoint-only($breakpoint) {
+      text-align: right;
+    }
+  }
+
+  .bb-text-align-right-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      text-align: right;
+    }
+  }
+
+  .bb-text-align-right-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      text-align: right;
+    }
+  }
+
+  .bb-text-align-center-#{$infix} {
+    @include media-breakpoint-only($breakpoint) {
+      text-align: center;
+    }
+  }
+
+  .bb-text-align-center-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      text-align: center;
+    }
+  }
+
+  .bb-text-align-center-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      text-align: center;
+    }
+  }
+}
+
+/// Aligns text within the element to the start.
+/// Responsive modifiers:
+/// - `..-md`: Medium screens only
+/// - `..-md-up`: Medium screens and larger
+/// - `..-md-down`: Medium screens and smaller
+///
+/// @name bb-text-align-start
+///
+/// @example html
+/// <div class="bb-text-align-start">
+///   This text is start-aligned
+/// </div>
+/// <div class="bb-text-align-start-md">
+///   This text is start-aligned on medium screens
+/// </div>
+/// <div class="bb-text-align-start-md-up">
+///   This text is start-aligned on medium screens and larger
+/// </div>
+/// <div class="bb-text-align-start-md-down">
+///   This text is start-aligned on medium screens and smaller
+/// </div>
+.bb-text-align-start {
+  text-align: start;
+}
+
+/// Aligns text within the element to the end.
+/// Responsive modifiers:
+/// - `..-md`: Medium screens only
+/// - `..-md-up`: Medium screens and larger
+/// - `..-md-down`: Medium screens and smaller
+///
+/// @name bb-text-align-end
+///
+/// @example html
+/// <div class="bb-text-align-end">
+///   This text is end-aligned
+/// </div>
+/// <div class="bb-text-align-end--md">
+///   This text is end-aligned on medium screens
+/// </div>
+/// <div class="bb-text-align-end--md-up">
+///   This text is end-aligned on medium screens and larger
+/// </div>
+/// <div class="bb-text-align-end--md-down">
+///   This text is end-aligned on medium screens and smaller
+/// </div>
+.bb-text-align-end {
+  text-align: end;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  .bb-text-align-start-#{$infix} {
+    @include media-breakpoint-only($breakpoint) {
+      text-align: start;
+    }
+  }
+
+  .bb-text-align-start-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      text-align: start;
+    }
+  }
+
+  .bb-text-align-start-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      text-align: start;
+    }
+  }
+
+  .bb-text-align-end-#{$infix} {
+    @include media-breakpoint-only($breakpoint) {
+      text-align: end;
+    }
+  }
+
+  .bb-text-align-end-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      text-align: end;
+    }
+  }
+
+  .bb-text-align-end-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      text-align: end;
+    }
+  }
+}

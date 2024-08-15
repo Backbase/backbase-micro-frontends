@@ -1,0 +1,32 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-schedule-switch
+
+/// @example
+/// <div class="form-group bb-dynamic-input bb-schedule-switch">
+///     <div class="bb-inline-stack  bb-stack--align-top">
+///       <div class="bb-inline-stack__item--spacing-md">
+///         <bb-switch-ui></bb-switch-ui>
+///       </div>
+///       <div>
+///         <div class="b-block bb-block--xs bb-stack bb-schedule-switch__label">
+///           <label class="bb-stack__item bb-stack__item--spacing-xs bb-block bb-block--no-margin">Label</label>
+///           <span [bbTooltip]="message">
+///             <bb-icon-ui name="info" color="secondary" size="sm" class=""></bb-icon-ui>
+///           </span>
+///         </div>
+///         <div class="bb-subtitle bb-text-support bb-schedule-switch__description">
+///           <span>Description</span>
+///         </div>
+///       </div>
+///     </div>
+/// </div>
+
+.bb-schedule-switch .bb-switch,
+.bb-schedule-switch__label bb-icon-ui {
+  vertical-align: middle;
+}

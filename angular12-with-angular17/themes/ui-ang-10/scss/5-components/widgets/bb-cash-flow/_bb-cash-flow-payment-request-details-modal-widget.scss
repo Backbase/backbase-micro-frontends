@@ -1,0 +1,69 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cash-flow-payment-request-details-modal-close-button-background-color: $color-neutral-greyer !default;
+$cash-flow-payment-request-details-modal-icon-background-color: $color-secondary !default;
+$cash-flow-payment-request-details-modal-header-panel-background-color: $color-secondary-lighter !default;
+$cash-flow-payment-request-details-modal-header-panel-height: 10 * $sizer !default;
+
+/// Styles for Cash Flow Payment Request Details Widget
+///
+/// @name bb-cash-flow-payment-request-details-widget
+///
+/// @example html
+///
+/// <bb-modal-ui
+//    [modalOptions]="hostRef.modalOptions"
+//    [isOpen]="isModalOpen"
+//    (cancel)="hostRef.closeModal()"
+//    >
+///   <div class="cash-flow-payment-request-details-modal__header-panel">
+///     <button class="cash-flow-payment-request-details-modal__button-close">
+///       ...
+///     </button>
+///   </div>
+///   <div class="cash-flow-payment-request-details-modal__icon-wrapper">
+///     ...
+///   </div>
+///   <div class="cash-flow-payment-request-details-modal__wrapper">
+///     ...
+///   </div>
+///   <bb-modal-body-ui>
+///     <ng-template bbCustomModalBody>
+///       ...
+///     </ng-template>
+///   </bb-modal-body-ui>
+/// </bb-modal-ui>
+
+.cash-flow-payment-request-details-modal__button-close {
+  margin: $spacer-sm $spacer-sm $spacer-sm auto;
+  background-color: $cash-flow-payment-request-details-modal-close-button-background-color;
+}
+
+.cash-flow-payment-request-details-modal__header-panel {
+  display: flex;
+  height: $cash-flow-payment-request-details-modal-header-panel-height;
+  background-color: $cash-flow-payment-request-details-modal-header-panel-background-color;
+  border-radius: $border-radius-md $border-radius-md 0 0;
+}
+
+.cash-flow-payment-request-details-modal__wrapper {
+  margin: -$spacer-md 0;
+}
+
+.cash-flow-payment-request-details-modal__icon-wrapper {
+  position: relative;
+  display: flex;
+  width: 5 * $sizer;
+  height: 5 * $sizer;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  padding: $sizer-md;
+  background-color: $color-primary-lightest;
+  border-radius: $border-radius-sm;
+  transform: translateX(-50%) translateY(-50%);
+}

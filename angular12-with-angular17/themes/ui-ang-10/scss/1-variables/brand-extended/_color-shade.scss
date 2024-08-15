@@ -1,0 +1,178 @@
+////
+/// Color gradients (global)
+/// @group 1-variables/brand-extended/chart-shade
+/// @access private
+////
+
+$color-shade-lighter: 30%;
+$color-shade-lightest: 85%;
+$color-shade-darker: 30%;
+$color-shade-darkest: 45%;
+
+/// The 30% lighter shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-lighter
+$color-primary-lighter: mix(#fff, $color-primary, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-lightest
+$color-primary-lightest: mix(#fff, $color-primary, $color-shade-lightest);
+
+/// The 30% darker shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-darker
+$color-primary-darker: mix(#000, $color-primary, $color-shade-darker);
+
+/// The 45% darker shade of $color-primary (read-only)
+/// @access public
+/// @require {variable} $color-primary
+/// @require {variable} $color-shade-darkest
+$color-primary-darkest: mix(#000, $color-primary, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-lighter
+$color-secondary-lighter: mix(#fff, $color-secondary, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-lightest
+$color-secondary-lightest: mix(#fff, $color-secondary, $color-shade-lightest);
+
+/// The 30% darker shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-darker
+$color-secondary-darker: mix(#000, $color-secondary, $color-shade-darker);
+
+/// The 45% darker shade of $color-secondary (read-only)
+/// @access public
+/// @require {variable} $color-secondary
+/// @require {variable} $color-shade-darkest
+$color-secondary-darkest: mix(#000, $color-secondary, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-lighter
+$color-accent-lighter: mix(#fff, $color-accent, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-lightest
+$color-accent-lightest: mix(#fff, $color-accent, $color-shade-lightest);
+
+/// The 30% darker shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-darker
+$color-accent-darker: mix(#000, $color-accent, $color-shade-darker);
+
+/// The 45% darker shade of $color-accent (read-only)
+/// @access public
+/// @require {variable} $color-accent
+/// @require {variable} $color-shade-darkest
+$color-accent-darkest: mix(#000, $color-accent, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-lighter
+$color-success-lighter: mix(#fff, $color-success, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-lightest
+$color-success-lightest: mix(#fff, $color-success, $color-shade-lightest);
+
+/// The 30% darker shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-darker
+$color-success-darker: mix(#000, $color-success, $color-shade-darker);
+
+/// The 45% darker shade of $color-success (read-only)
+/// @access public
+/// @require {variable} $color-success
+/// @require {variable} $color-shade-darkest
+$color-success-darkest: mix(#000, $color-success, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-lighter
+$color-danger-lighter: mix(#fff, $color-danger, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-lightest
+$color-danger-lightest: mix(#fff, $color-danger, $color-shade-lightest);
+
+/// The 30% darker shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-darker
+$color-danger-darker: mix(#000, $color-danger, $color-shade-darker);
+
+/// The 45% darker shade of $color-danger (read-only)
+/// @access public
+/// @require {variable} $color-danger
+/// @require {variable} $color-shade-darkest
+$color-danger-darkest: mix(#000, $color-danger, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-lighter
+$color-warning-lighter: mix(#fff, $color-warning, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-lightest
+$color-warning-lightest: mix(#fff, $color-warning, $color-shade-lightest);
+
+/// The 30% darker shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-darker
+$color-warning-darker: mix(#000, $color-warning, $color-shade-darker);
+
+/// The 45% darker shade of $color-warning (read-only)
+/// @access public
+/// @require {variable} $color-warning
+/// @require {variable} $color-shade-darkest
+$color-warning-darkest: mix(#000, $color-warning, $color-shade-darkest);
+
+/// The 30% lighter shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-lighter
+$color-info-lighter: mix(#fff, $color-info, $color-shade-lighter);
+
+/// The 85% lighter shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-lightest
+$color-info-lightest: mix(#fff, $color-info, $color-shade-lightest);
+
+/// The 30% darker shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-darker
+$color-info-darker: mix(#000, $color-info, $color-shade-darker);
+
+/// The 45% darker shade of $color-info (read-only)
+/// @access public
+/// @require {variable} $color-info
+/// @require {variable} $color-shade-darkest
+$color-info-darkest: mix(#000, $color-info, $color-shade-darkest);

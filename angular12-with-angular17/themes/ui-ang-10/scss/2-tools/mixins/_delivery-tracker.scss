@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+// adds adjacent lines to elements
+// Main purpose is to allow a collection of icons to be connected
+@mixin apply-adjacent-lines($parent, $child, $color, $value) {
+  .#{$parent}:not(:first-of-type) > .#{$child}-#{$color}::before,
+  .#{$parent}:not(:last-of-type) > .#{$child}-#{$color}::after {
+    position: absolute;
+    inset-block-start: 40%;
+    width: 50%;
+    border-block-start: solid $spacer * 0.5 $value;
+    content: "";
+  }
+
+  .#{$parent}:not(:first-of-type) > .#{$child}-#{$color}::before {
+    inset-inline-end: 50%;
+    inset-inline-start: $font-icon-size-sm * -1;
+  }
+}

@@ -1,0 +1,373 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$btn-link-hover-decoration: none !default;
+$btn-box-shadow-focus: none !default;
+$btn-icon-link-color: $color-neutral-darker !default;
+$btn-icon-link-hover-background: $color-neutral-lighter !default;
+$btn-icon-link-active-background: $color-neutral-light !default;
+$btn-circle-sm-size: 2rem !default;
+$btn-circle-md-size: 2.7rem !default;
+$btn-link-text-light-background-color: rgba(255, 255, 255, 0) !default;
+$btn-small-circle-font-size: 1.25rem !default;
+$btn-small-circle-line-height: 1 !default;
+
+@import "../../../../bootstrap5/scss/buttons";
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $button-font-weight;
+  white-space: nowrap;
+
+  &:focus {
+    box-shadow: $btn-box-shadow-focus;
+  }
+
+  &:not(.btn-unstyled) {
+    &:focus::before {
+      position: absolute;
+      inset: $btn-focus-outline-distance;
+      border: $btn-focus-border-primary;
+      border-radius: $btn-border-radius;
+      content: "";
+    }
+
+    &.rounded-outline {
+      &:focus::before {
+        border-radius: $border-radius-sm;
+      }
+    }
+  }
+
+  &:is(.btn-link-text) {
+    &:focus::before {
+      inset-block: $btn-focus-outline-distance * 0.25;
+      inset-inline: $btn-focus-outline-distance * 0.5;
+      border-radius: $btn-focus-border-radius-link-text;
+    }
+  }
+
+  i + span,
+  span + i {
+    margin-inline-start: $btn-padding-x * 0.33;
+  }
+
+  &.btn-circle {
+    padding: 0;
+
+    &.btn-sm {
+      width: $btn-circle-sm-size;
+      height: $btn-circle-sm-size;
+
+      .bb-icon,
+      .bicon {
+        font-size: $btn-small-circle-font-size;
+        line-height: $btn-small-circle-line-height;
+      }
+    }
+
+    &.btn-md {
+      width: $btn-circle-md-size;
+      height: $btn-circle-md-size;
+    }
+  }
+
+  bb-icon-ui {
+    &:last-child {
+      .bb-icon--cropped {
+        margin-inline-start: $spacer-sm;
+      }
+    }
+
+    &:first-child {
+      .bb-icon--cropped {
+        margin-inline-end: $spacer-sm;
+      }
+    }
+  }
+}
+
+@mixin button-style($color, $button-color-map) {
+  /*
+   We are passing the focus background and focus border as background to the mixin then manually overriding the border and background just after invoking the mixing.
+   The reason for this is that the focus rules are harder to override than the border and background ones, and they are using the background and border color
+  */
+  @include button-variant(
+    map-get($button-color-map, "focus-bg"),
+    map-get($button-color-map, "focus-border"),
+    map-get($button-color-map, "color"),
+    map-get($button-color-map, "hover-bg"),
+    map-get($button-color-map, "hover-border"),
+    map-get($button-color-map, "hover-color"),
+    map-get($button-color-map, "active-bg"),
+    map-get($button-color-map, "active-border"),
+    map-get($button-color-map, "active-color")
+  );
+
+  @include gradient-bg(map-get($button-color-map, "default-bg"));
+  border-color: map-get($button-color-map, "default-border");
+
+  @if map-has-key($button-color-map, "color") {
+    color: map-get($button-color-map, "color");
+  }
+
+  @if $color == "link" or $color == "link-dark" or $color == "link-on-color" {
+    border-color: transparent;
+  }
+
+  &:focus:not(:hover):not(:active):not(:disabled):not(.disabled) {
+    color: map-get($button-color-map, "color");
+    background-color: map-get($button-color-map, "focus-bg");
+  }
+
+  &:focus::before {
+    border-color: map-get($button-color-map, "focus-border");
+  }
+
+  &.btn-circle {
+    border-width: $border-width;
+
+    &:not(.btn-circle--filled) {
+      @if $color == "success" or $color == "danger" {
+        @include gradient-bg(transparent);
+        color: map-get($button-color-map, "default-border");
+
+        &:focus:not(:hover):not(:active) {
+          background-color: transparent;
+          color: map-get($button-color-map, "default-border");
+        }
+      }
+
+      @if $color == "neutral" {
+        background-color: transparent;
+      }
+    }
+
+    &:not(:disabled):not(.disabled):hover {
+      color: $color-neutral-white;
+    }
+
+    &:active,
+    &.active,
+    &:active:focus,
+    &.active:focus {
+      color: $color-neutral-white;
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $color-neutral-greyest;
+    background-color: $color-neutral-lighter;
+    border-color: $color-neutral-lighter;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:hover {
+      background-color: map-get($button-color-map, "hover-bg");
+      border-color: map-get($button-color-map, "hover-border");
+
+      @if (map_has_key($button-color-map, "hover-color")) {
+        $hover-color: map-get($button-color-map, "hover-color");
+        color: $hover-color;
+
+        .bicon,
+        .bb-icon {
+          color: $hover-color !important;
+        }
+      }
+    }
+
+    &:active,
+    &.active,
+    &:active:focus,
+    &.active:focus {
+      background-color: map-get($button-color-map, "active-bg");
+      border-color: map-get($button-color-map, "active-border");
+      color: map-get($button-color-map, "active-color");
+    }
+
+    &:focus,
+    &.active:focus {
+      box-shadow: $btn-box-shadow-focus;
+    }
+  }
+}
+
+.btn-link,
+.btn-link-dark {
+  opacity: 1;
+
+  &:focus,
+  &:hover {
+    text-decoration: $btn-link-hover-decoration;
+  }
+  &:focus {
+    box-shadow: $btn-box-shadow-focus;
+  }
+}
+
+.btn-link-text {
+  @include button-variant(
+    $btn-link-text-light-background-color,
+    $btn-link-text-light-background-color,
+    $btn-link-text-light-background-color,
+    $btn-link-text-light-background-color,
+    $btn-link-text-light-background-color,
+    $btn-link-text-light-background-color
+  );
+  padding: 0;
+  color: $color-primary;
+  border: none;
+  border-radius: 0;
+  opacity: 1;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    // TODO: define box shadow when the global focus state is ready
+    color: $color-primary-darkest;
+    text-decoration: underline;
+
+    .bb-icon {
+      color: $color-primary-darker;
+      text-decoration: none;
+
+      &::before {
+        display: inline-block;
+      }
+    }
+  }
+
+  &:hover {
+    color: $color-primary-darker;
+  }
+  &:focus {
+    box-shadow: $btn-box-shadow-focus;
+  }
+}
+
+// For each of Bootstrap's buttons, define text, background, and border color.
+@each $color, $button-color-map in $theme-button-colors {
+  .btn-#{$color} {
+    @include button-style($color, $button-color-map);
+  }
+}
+
+// For buttons that support being displayed on the color background, define text, background, and border color.
+@each $color, $button-color-map in $theme-button-on-color-colors {
+  .btn-on-color .btn-#{$color} {
+    @include button-style($color, $button-color-map);
+  }
+}
+
+.btn-link-text-light {
+  @extend .btn-link-text;
+
+  color: $color-neutral-white;
+
+  &:focus,
+  &.focus,
+  &:hover,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    // TODO: define box shadow when the global focus state is ready
+    color: $color-neutral-white;
+  }
+}
+
+.btn-icon-link {
+  color: $btn-icon-link-color;
+
+  &:not(.disabled):not(:disabled) {
+    &:hover {
+      color: $btn-icon-link-color;
+      background-color: $btn-icon-link-hover-background;
+    }
+
+    &:active {
+      color: $btn-icon-link-color;
+      background-color: $btn-icon-link-active-background;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $color-neutral-greyest;
+    background-color: $color-neutral-lighter;
+    border-color: $color-neutral-lighter;
+  }
+}
+
+.btn-unstyled {
+  padding: 0 0;
+  color: inherit;
+  font-weight: normal;
+  text-align: start;
+  background: transparent;
+  border: 0;
+  border-radius: $border-radius-none;
+
+  &:not(:disabled):not(.disabled) {
+    &:hover {
+      background-color: transparent;
+    }
+
+    &.active,
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
+
+.btn-unstyled--focusable {
+  &:focus::before {
+    position: absolute;
+    inset: $btn-focus-outline-distance * 0.5;
+    border: $btn-focus-border-primary;
+    content: "";
+  }
+}
+
+button,
+[type="submit"],
+[type="button"],
+[type="reset"] {
+  @include appearance-toggle();
+}
+
+// .btn-block` was copied from node_modules/bootstrap/scss/_buttons.scss of bootstrap@4.6
+// The reason is as follows. Bootstrap 5 offers a grid system and its utility classes.
+// But those come with `!important` which we cannot use in the `theme`
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+$select-purpose-items-list-max-height: $pre-scrollable-max-height;
+
+bb-select-purpose-dropdown {
+  .bb-select-purpose-dropdown__options-list {
+    overflow-y: auto;
+    max-height: $select-purpose-items-list-max-height;
+  }
+}

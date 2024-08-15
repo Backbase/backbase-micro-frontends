@@ -1,0 +1,84 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Sets the standard divider width value.
+/// Extending from `$border-width`
+/// @name $divider-width
+$divider-width: $border-width !default;
+
+/// Sets the standard outer divider style.
+/// Extending from `$border-style`
+/// @name $divider-style
+$divider-style: $border-style !default;
+
+/// Sets the standard divider color.
+/// Extending from `$border-color`
+/// @name $divider-color
+$divider-color: $border-color !default;
+
+/// Sets the standard outer divider parameters: `$divider-width` `$divider-style` `$divider-color`.
+$divider: $divider-width $divider-style $divider-color !default;
+
+/// Sets inner top divider to the element using variables `$divider-width`, `$divider-color`.
+///
+/// @example html
+/// <div class="divider-inner-top">
+///   Content
+/// </div>
+.divider-inner-top {
+  box-shadow: inset 0 $divider-width $divider-color;
+}
+
+/// Sets inner bottom divider to the element using variables `$divider-width`, `$divider-color`.
+///
+/// @example html
+/// <div class="divider-inner-bottom">
+///   Content
+/// </div>
+.divider-inner-bottom {
+  box-shadow: inset 0 - $divider-width $divider-color;
+}
+
+/// Sets inner top and bottom divider to the element using variables `$divider-width`, `$divider-color`.
+///
+/// @example html
+/// <div class="divider-inner-vertical">
+///   Content
+/// </div>
+.divider-inner-vertical {
+  box-shadow: inset 0 $divider-width $divider-color, inset 0 - $divider-width $divider-color;
+}
+
+/// Sets outer top divider to the element using variable `$divider`.
+///
+/// @example html
+/// <div class="divider-outer-top">
+///   Content
+/// </div>
+.divider-outer-top {
+  border-top: $divider;
+}
+
+/// Sets outer bottom divider to the element using variable `$divider`.
+///
+/// @example html
+/// <div class="divider-outer-bottom">
+///   Content
+/// </div>
+.divider-outer-bottom {
+  border-bottom: $divider;
+}
+
+/// Sets outer top and bottom divider to the element using variables `$divider`.
+///
+/// @example html
+/// <div class="divider-outer-vertical">
+///   Content
+/// </div>
+.divider-outer-vertical {
+  border-top: $divider;
+  border-bottom: $divider;
+}

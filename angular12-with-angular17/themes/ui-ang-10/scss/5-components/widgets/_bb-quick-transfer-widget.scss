@@ -1,0 +1,217 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$quick-transfer-height: 498px !default;
+$qt-item-amount-font-size: $font-size-subtitle; // 14px
+$qt-disabled-item-background: $color-neutral-lightest;
+$qt-form-item-height: 3.5rem;
+$qt-item-amount-font-weight: $font-weight-regular;
+$qt-selected-item-bg: $color-neutral-light;
+$qt-complete-screen-bg: $color-neutral-white;
+$qt-complete-screen-top: 4.5rem;
+$qt-success-screen-bg: rgba(0, 0, 0, 0.5);
+$qt-success-img-max-width: 9rem;
+$qt-fail-icon-size: 7.5rem;
+$qt-modal-arrow-icon-width: 2.25rem;
+$qt-heading-border-color: $color-neutral-grey;
+
+/// @example html
+/// <div class="bb-quick-transfer">
+///   <div class="bb-quick-transfer__view">
+///     <div class="bb-block bb-quick-transfer__heading">
+///       <div class="bb-stack"><bb-header-ui class="bb-stack__item bb-stack__item--fill"><h2 class="bb-block--lg"> Quick transfer </h2></bb-header-ui></div>
+///     </div>
+///     <form class="bb-quick-transfer__form">
+///       <div class="bb-block bb-block--lg">
+///         <label class="bb-label">From</label>
+///         <button class="form-control form-control-lg bb-stack btn-unstyled btn btn-md">
+///           <span class="bb-stack__item bb-stack__item--fill bb-text-support">Select your account</span>
+///           <bb-icon-ui class="bb-text-support bb-stack__item"><i class="bb-icon bb-icon-angle-right bb-icon--md bb-icon--cropped"></i></bb-icon-ui>
+///         </button>
+///       </div>
+///       <div class="bb-block bb-block--lg">
+///         <label class="bb-label">To</label>
+///         <button class="form-control form-control-lg bb-stack btn-unstyled btn btn-md">
+///           <span class="bb-stack__item bb-stack__item--fill bb-text-support">Select beneficiary</span>
+///           <bb-icon-ui class="bb-text-support bb-stack__item"><i class="bb-icon bb-icon-angle-right bb-icon--md bb-icon--cropped"></i></bb-icon-ui>
+///         </button>
+///       </div>
+///       <div class="bb-block bb-block--xl">
+///         <label class="bb-label">Amount</label>
+///         <div class="bb-amount-input__field--large">
+///           <div class="bb-amount-input">
+///            <div class="bb-amount-input__field">
+///              <input type="text" class="form-control bb-text-align-right" placeholder="0.00" />
+///              <span *ngIf="currency" class="bb-amount-input__symbol bb-text-support">$</span>
+///            </div>
+///           </div>
+///         </div>
+///       </div>
+///       <div class="bb-block bb-block--sm">
+///         <button class="btn-primary btn btn-md btn-block">Transfer Now</button>
+///       </div>
+///     </form>
+///   </div>
+/// </div>
+
+.bb-quick-transfer {
+  position: relative;
+  z-index: 2;
+  min-height: $quick-transfer-height;
+  overflow: hidden;
+  border-radius: $border-radius;
+}
+
+.bb-quick-transfer__view {
+  display: flex;
+  flex-direction: column;
+  height: $quick-transfer-height;
+  padding-block: $spacer-lg;
+  padding-inline: 0;
+
+  .bb-quick-transfer-selector-field {
+    height: $qt-form-item-height;
+    &:hover {
+      border-color: $input-border-color;
+    }
+    &:focus {
+      border-color: $input-border-color;
+      outline: $form-focus-border-primary;
+      outline-offset: $form-focus-outline-distance;
+      box-shadow: $form-focus-box-shadow;
+    }
+  }
+  .bb-product-item__amount {
+    display: block;
+    font-weight: $qt-item-amount-font-weight;
+    font-size: $qt-item-amount-font-size;
+    text-align: start;
+  }
+  .bb-quick-transfer__product-item {
+    display: block;
+    padding-block: $spacer-sm;
+    padding-inline: $spacer-lg;
+
+    &:focus {
+      border: $product-selector-focus-border-primary;
+      box-shadow: none;
+      transition: none;
+    }
+  }
+  .bb-quick-transfer__product-item:not(.disabled):not(:disabled):hover {
+    background: $qt-disabled-item-background;
+  }
+  .bb-quick-transfer__subheader {
+    padding-block: ($spacer-lg * 0.5);
+    padding-inline: $spacer-lg;
+  }
+  .bb-quick-transfer__heading--border {
+    border-block-end: 1px solid $qt-heading-border-color;
+  }
+}
+
+.bb-quick-transfer__view--form {
+  height: auto;
+  min-height: $quick-transfer-height;
+}
+
+.bb-quick-transfer__modal-wrap,
+.bb-quick-transfer__view {
+  .product-item-content {
+    display: block;
+  }
+  .bb-product-item__details,
+  .bb-account-info__title {
+    margin: 0;
+  }
+  .bb-product-item__title {
+    margin-inline-end: 0;
+  }
+}
+.bb-quick-transfer__heading,
+.bb-quick-transfer__form {
+  padding-inline: $spacer-lg;
+}
+
+.bb-quick-transfer__tabs-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    margin-block-end: ($spacer-lg * 0.5);
+
+    @include media-breakpoint-down(md) {
+      .nav-link {
+        padding-inline: $spacer-sm;
+      }
+    }
+  }
+}
+.bb-quick-transfer__tabs-content {
+  position: relative;
+  flex-grow: 1;
+  height: auto;
+}
+
+.bb-quick-transfer--selected-bg {
+  background-color: $qt-selected-item-bg;
+}
+
+.bb-quick-transfer--disabled {
+  @extend .bb-text-disabled;
+  .bb-account-info__product-number {
+    @extend .bb-text-disabled;
+  }
+}
+
+.bb-quick-transfer__modal-wrap {
+  .bb-product-item__amount {
+    display: block;
+    font-size: $font-size-base;
+    text-align: start;
+  }
+  .bb-ellipsis--single-line {
+    white-space: pre-wrap;
+  }
+}
+
+.bb-quick-transfer__complete {
+  position: absolute;
+  inset-block-start: $qt-complete-screen-top;
+  inset-inline-start: 0;
+  width: 100%;
+  height: calc(100% - #{$qt-complete-screen-top});
+  padding: $spacer-lg;
+  background: $qt-complete-screen-bg;
+  border-radius: $border-radius;
+}
+.bb-quick-transfer__success-overlay {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $qt-success-screen-bg;
+}
+.bb-quick-transfer__success-img {
+  max-width: $qt-success-img-max-width;
+}
+.bb-quick-transfer__fail-icon {
+  i::before {
+    font-size: $qt-fail-icon-size;
+    line-height: 1;
+  }
+}
+.bb-quick-transfer__modal-from {
+  max-width: calc(50% - #{$qt-modal-arrow-icon-width});
+}
+
+.bb-amount-input__symbol {
+  padding-inline-start: $spacer-lg;
+}

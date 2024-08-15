@@ -1,0 +1,18 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$my-requests-container-sizer: $sizer-lg !default;
+$my-requests-spacer-md: $spacer-md !default;
+$my-requests-table-background: $white !default;
+
+.bb-my-requests {
+  margin-bottom: $my-requests-spacer-md;
+}
+
+.bb-my-requests__container {
+  padding: $my-requests-container-sizer;
+  background-color: $my-requests-table-background;
+}

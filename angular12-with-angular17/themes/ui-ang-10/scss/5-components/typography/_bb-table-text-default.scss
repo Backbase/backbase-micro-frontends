@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$table-default-font-size: $font-size-table-default !default; // 14px
+$table-default-line-height: $line-height-base !default;
+
+/// Will set the following css properties on the table HTML element:
+/// - font-size,
+/// - line-height
+///
+/// @name bb-table-text-default
+///
+/// @example html
+///   <table class="bb-table-default">
+///     <caption class="bb-table-subtitle">Table caption</caption>
+///     <thead class="bb-table-header">
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </tbody>
+///   </table>
+
+.bb-table-text-default {
+  font-size: $table-default-font-size;
+  line-height: $table-default-line-height;
+}

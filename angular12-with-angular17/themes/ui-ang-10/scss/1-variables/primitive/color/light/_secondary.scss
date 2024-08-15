@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/secondary
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-secondary-lightest: $color-secondary-lightest; // #DFE5F6
+$color-light-secondary-lighter: $color-secondary-lighter; // #6884D6
+$color-light-secondary-default: $color-secondary; // #274FC4
+$color-light-secondary-darker: $color-secondary-darker; // #1B3789
+$color-light-secondary-darkest: $color-secondary-darkest; // #152B6C
+$color-light-secondary-on-color: $color-neutral-white;

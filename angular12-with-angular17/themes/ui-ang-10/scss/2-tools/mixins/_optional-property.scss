@@ -1,0 +1,13 @@
+////
+/// Utility variables (should only be used internally) (global)
+/// @group mixins
+/// @access private
+////
+
+/// Checks if the provided variable exists. If it does, it will render the given CSS property.
+///
+@mixin setOptional($property, $variable) {
+  @if $variable {
+    #{$property}: $variable;
+  }
+}

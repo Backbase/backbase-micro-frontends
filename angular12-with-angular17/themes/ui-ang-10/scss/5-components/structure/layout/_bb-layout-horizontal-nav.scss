@@ -1,0 +1,590 @@
+// Global annotations
+////
+/// layout-horizontal-nav
+/// @group 5-components/structure/layout/bb-layout-horizontal-nav
+/// @access public
+////
+
+// By default layout-horizontal-nav relies on the background color of the container
+$layout-horizontal-nav-background-color: transparent !default;
+$layout-horizontal-nav-color: $color-neutral-black !default;
+//$layout-horizontal-nav-dropdown-background defined in layout.scss
+$layout-horizontal-nav-dropdown-background-color: $layout-horizontal-nav-dropdown-background;
+$layout-horizontal-nav-dropdown-border-radius: $border-radius !default;
+$layout-horizontal-nav-dropdown-box-shadow: $box-shadow-md !default;
+$layout-horizontal-nav-dropdown-color: $color-neutral-white !default;
+$layout-horizontal-nav-dropdown-zindex: $zindex-fixed + 1 !default;
+$layout-horizontal-nav-dropdown-submenu-zindex: $layout-horizontal-nav-dropdown-zindex + 1 !default;
+$layout-horizontal-nav-item-icon-spacer: 1ch !default;
+$layout-horizontal-nav-link-active-background-color: transparent !default;
+$layout-horizontal-nav-link-active-border-color: $color-primary !default;
+$layout-horizontal-nav-link-active-color: $color-primary !default;
+$layout-horizontal-nav-link-active-font-weight: inherit !default;
+$layout-horizontal-nav-link-focus-color: $color-primary !default;
+$layout-horizontal-nav-link-background-color: transparent !default;
+$layout-horizontal-nav-link-border-height: 4px !default;
+$layout-horizontal-nav-link-color: $layout-horizontal-nav-color !default;
+$layout-horizontal-nav-link-hover-background-color: transparent !default;
+$layout-horizontal-nav-link-hover-border-color: $color-neutral-greyer !default;
+$layout-horizontal-nav-link-hover-color: $color-neutral-black !default;
+$layout-horizontal-nav-menubar-height: 4.5rem !default;
+$layout-horizontal-nav-submenu-column-width: 20.2 * $sizer !default;
+$layout-horizontal-nav-submenu-header-background-color: transparent !default;
+$layout-horizontal-nav-submenu-header-link-active-background-color: $color-neutral-white !default;
+$layout-horizontal-nav-submenu-header-link-hover-background-color: $color-neutral-white !default;
+$layout-horizontal-nav-submenu-link-active-background-color: $color-primary-darkest !default;
+$layout-horizontal-nav-submenu-link-border-radius: $border-radius-sm !default;
+// $layout-horizontal-nav-submenu-text-color variable declared in layout.scss
+$layout-horizontal-nav-submenu-link-color: $layout-horizontal-nav-submenu-text-color;
+$layout-horizontal-nav-submenu-link-hover-background-color: $color-primary-darker !default;
+$layout-horizontal-nav-submenu-min-width: 10em !default;
+$layout-horizontal-nav-submenu-link-focus-outline: 2px !default;
+$layout-horizontal-nav-expanded-link-color: $layout-text-color !default;
+
+/// @name bb-layout bb-layout__horizontal-nav
+/// @example - bb-layout__horizontal-nav Top level item navigation
+/// <ul class="bb-layout__horizontal-nav">
+///   <li class="bb-layout__horizontal-nav-item">
+///     <a class="bb-layout__horizontal-nav-link">
+///       <span class="bb-layout__horizontal-nav-item-description"></span>
+///     </a>
+///   </li>
+/// </ul>
+
+/// @name bb-layout bb-layout__horizontal-nav
+/// @example - bb-layout__horizontal-nav Dropdown navigation item. One column
+/// <ul class="bb-layout__horizontal-nav">
+///   <li class="bb-layout__horizontal-nav-item">
+///     <a class="bb-layout__horizontal-nav-link">
+///       <div class="bb-layout__horizontal-nav-item-icon">
+///         <i class="bb-icon"></i>
+///       </div>
+///       <span class="bb-layout__horizontal-nav-item-description"></span>
+///       <div class="bb-layout__horizontal-nav-expand-marker">
+///         <i class="bb-icon"></i>
+///       </div>
+///     </a>
+///     <div class="bb-layout__horizontal-nav-submenu">
+///       <button class="bb-layout__horizontal-nav-submenu-header">
+///         <div class="bb-layout__horizontal-nav-submenu--close">
+///           <i class="bb-icon"></i>
+///         </div>
+///         <div class="bb-layout__horizontal-nav-submenu--text"> Main Menu </div>
+///       </button>
+///       <ul class="bb-layout__horizontal-nav-column">
+///         <li>
+///           <a class="bb-layout__horizontal-nav-submenu-link">
+///             <div class="bb-layout__horizontal-nav-submenu-item-icon">
+///               <i class="bb-icon"></i>
+///             </div>
+///             <div class="bb-layout__horizontal-nav-submenu-item-label">
+///               <div class="bb-layout__horizontal-nav-submenu-title"></div>
+///             </div>
+///           </a>
+///         </li>
+///       </ul>
+///     </div>
+///   </li>
+/// </ul>
+
+/// @name bb-layout bb-layout__horizontal-nav
+/// @example - bb-layout__horizontal-nav Dropdown navigation item. Two columns
+/// <ul class="bb-layout__horizontal-nav">
+///   <li class="bb-layout__horizontal-nav-item">
+///     <a class="bb-layout__horizontal-nav-link">
+///       <div class="bb-layout__horizontal-nav-item-icon">
+///         <i class="bb-icon"></i>
+///       </div>
+///       <span class="bb-layout__horizontal-nav-item-description"></span>
+///       <div class="bb-layout__horizontal-nav-expand-marker">
+///         <i class="bb-icon"></i>
+///       </div>
+///     </a>
+///     <div class="bb-layout__horizontal-nav-submenu">
+///       <button class="bb-layout__horizontal-nav-submenu-header">
+///         <div class="bb-layout__horizontal-nav-submenu--close">
+///           <i class="bb-icon"></i>
+///         </div>
+///         <div class="bb-layout__horizontal-nav-submenu--text"> Main Menu </div>
+///       </button>
+///       <ul class="bb-layout__horizontal-nav-column">
+///         <li>
+///           <a class="bb-layout__horizontal-nav-submenu-link">
+///             <div class="bb-layout__horizontal-nav-submenu-item-icon">
+///               <i class="bb-icon"></i>
+///             </div>
+///             <div class="bb-layout__horizontal-nav-submenu-item-label">
+///               <div class="bb-layout__horizontal-nav-submenu-title"></div>
+///             </div>
+///           </a>
+///         </li>
+///       </ul>
+///         <li>
+///           <a class="bb-layout__horizontal-nav-submenu-link">
+///             <div class="bb-layout__horizontal-nav-submenu-item-icon">
+///               <i class="bb-icon"></i>
+///             </div>
+///             <div class="bb-layout__horizontal-nav-submenu-item-label">
+///               <div class="bb-layout__horizontal-nav-submenu-title"></div>
+///             </div>
+///           </a>
+///         </li>
+///       </ul>
+///     </div>
+///   </li>
+/// </ul>
+
+// layout-horizontal-nav container
+// Outermost container for the actual menubar as well as loading indicators and other status messages.
+.bb-layout__horizontal-nav {
+  color: $layout-horizontal-nav-color;
+  background: $layout-horizontal-nav-background-color;
+}
+
+// Menubar
+// Implementations can either be horizontal or vertical, depending on the viewport
+// This will typically be a <ul> element
+.bb-layout__horizontal-nav {
+  @include list-unstyled();
+  display: flex;
+}
+
+// Menubar link
+// This class must not be applied to links in the submenu
+// The link has two state modifiers: "expanded" and "active"
+.bb-layout__horizontal-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: $sizer-lg $sizer-md;
+  color: $layout-horizontal-nav-link-color;
+
+  &.dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.bb-layout__horizontal-nav-link,
+.bb-layout__horizontal-nav-submenu-header,
+.bb-layout__horizontal-nav-submenu-link {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.bb-layout__horizontal-nav-expand-marker {
+  display: none;
+}
+
+.bb-layout__horizontal-nav-column {
+  @include list-unstyled();
+}
+
+// The horizontal version of the menu is typically displayed on desktop viewport widths
+@mixin horizontal-nav-menubar {
+  &.bb-layout__horizontal-nav {
+    position: static;
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: unset;
+    padding-bottom: unset;
+    overflow-y: unset;
+    background-color: transparent;
+    box-shadow: unset;
+    transform: none;
+    transition: unset;
+  }
+
+  .bb-layout__horizontal-nav-expand-marker--vertical {
+    display: inline-flex;
+    padding-left: $sizer-sm;
+  }
+
+  .bb-layout__horizontal-nav-expand-marker--horizontal {
+    display: none;
+  }
+
+  .bb-layout__horizontal-nav-item {
+    position: relative;
+
+    .bb-layout__horizontal-nav-submenu {
+      @include horizontal-nav-dropdown-menu();
+      @include horizontal-nav-dropdown-snap-to-bottom();
+    }
+
+    @include ngb-dropdown-horizontal-nav();
+  }
+
+  .bb-layout__horizontal-nav-item--secondary {
+    /* Secondary menu description displayed for screen readers only, expand marker hidden */
+    .bb-layout__horizontal-nav-item-description {
+      @include sr-only;
+    }
+
+    .bb-layout__horizontal-nav-expand-marker {
+      display: none;
+    }
+
+    .bb-layout__horizontal-nav-item-icon {
+      display: inline-flex;
+    }
+  }
+
+  .bb-layout__horizontal-nav-item-icon {
+    padding-right: unset;
+  }
+
+  .bb-layout__horizontal-nav-item-icon + .bb-layout__horizontal-nav-item-description {
+    padding-left: $layout-horizontal-nav-item-icon-spacer;
+  }
+
+  .bb-layout__horizontal-nav-link {
+    justify-content: unset;
+    height: $layout-horizontal-nav-menubar-height;
+    padding: $sizer-lg $sizer-md;
+    white-space: nowrap;
+    background-color: $layout-horizontal-nav-link-background-color;
+    border-bottom: $layout-horizontal-nav-link-border-height solid transparent;
+    border-top: $layout-horizontal-nav-link-border-height solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $layout-horizontal-nav-link-hover-color;
+      background-color: $layout-horizontal-nav-link-hover-background-color;
+      border-bottom-color: $layout-horizontal-nav-link-hover-border-color;
+    }
+
+    &.bb-layout__horizontal-nav-link--active,
+    &.bb-layout__horizontal-nav-link--expanded {
+      color: $layout-horizontal-nav-link-active-color;
+      font-weight: $layout-horizontal-nav-link-active-font-weight;
+      border-bottom-color: $layout-horizontal-nav-link-active-border-color;
+    }
+  }
+
+  @include horizontal-nav-dropdown-menu-contents();
+
+  .bb-layout__horizontal-nav-submenu-header {
+    display: none;
+  }
+
+  .bb-layout__horizontal-nav-column {
+    width: $layout-horizontal-nav-submenu-column-width;
+  }
+}
+
+// The sidebar version of the menu is typically displayed on smaller viewport widths
+@mixin horizontal-nav-vertical {
+  .bb-layout__horizontal-nav-item--secondary {
+    .bb-layout__horizontal-nav-item-icon {
+      display: none;
+    }
+  }
+
+  .bb-layout__horizontal-nav-item-description {
+    width: 100%;
+  }
+
+  .bb-layout__horizontal-nav-link {
+    justify-content: space-between;
+    padding: $sizer-md $sizer-lg;
+  }
+
+  .bb-layout__horizontal-nav-item-icon {
+    padding-right: $layout-horizontal-nav-item-icon-spacer;
+  }
+
+  &.bb-layout__horizontal-nav {
+    display: none;
+    flex-flow: column nowrap;
+    height: 100vh;
+    padding-bottom: $sizer-xs;
+    margin-left: 0;
+
+    [dir="rtl"] & {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .bb-layout__horizontal-nav-expand-marker--horizontal {
+    display: inline-flex;
+  }
+}
+
+@mixin horizontal-nav-vertical-menu-link {
+  display: flex;
+  padding: $sizer-lg $sizer-md;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  &:hover {
+    // reset Bootstrap :hover styles
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin horizontal-nav-dropdown-menu-link {
+  @include horizontal-nav-vertical-menu-link();
+
+  color: $layout-horizontal-nav-submenu-link-color;
+
+  font-weight: $font-weight-semi-bold;
+  border-radius: $layout-horizontal-nav-submenu-link-border-radius;
+
+  &:hover {
+    color: $layout-horizontal-nav-submenu-link-color;
+    background-color: $layout-horizontal-nav-submenu-link-hover-background-color;
+  }
+
+  &:focus {
+    color: $layout-horizontal-nav-submenu-link-color;
+    background-color: inherit;
+    outline: $color-neutral-white auto $layout-horizontal-nav-submenu-link-focus-outline;
+  }
+
+  &:active {
+    color: $layout-horizontal-nav-submenu-link-color;
+    background-color: $layout-horizontal-nav-submenu-link-active-background-color;
+  }
+}
+
+@mixin horizontal-nav-dropdown-snap-to-bottom() {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $layout-horizontal-nav-dropdown-zindex;
+}
+
+@mixin horizontal-nav-dropdown-menu {
+  z-index: $zindex-popover;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  padding: $sizer-lg;
+  color: $layout-horizontal-nav-dropdown-color;
+  background: $layout-horizontal-nav-dropdown-background-color;
+  border-radius: $layout-horizontal-nav-dropdown-border-radius;
+  box-shadow: $layout-horizontal-nav-dropdown-box-shadow;
+}
+
+@mixin horizontal-nav-dropdown-menu-contents {
+  .bb-layout__horizontal-nav-submenu-header,
+  .bb-layout__horizontal-nav-submenu-link {
+    @include horizontal-nav-dropdown-menu-link();
+  }
+}
+
+.bb-layout__horizontal-nav-submenu--collapsed {
+  display: none;
+}
+
+// Submenu link
+// These contain styles that are common to all variations of the submenu,
+// specifically the dropdown and the sidebar variants.
+//
+// This will typically be an <a> element.
+.bb-layout__horizontal-nav-submenu-link {
+  @include horizontal-nav-vertical-menu-link();
+  justify-content: space-between;
+  min-width: $layout-horizontal-nav-submenu-min-width;
+  padding: $sizer-md $sizer-lg;
+}
+
+.bb-layout__horizontal-nav-submenu-item-icon {
+  margin-right: $spacer-sm;
+  vertical-align: top;
+}
+
+.bb-layout__horizontal-nav-submenu-item-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+// Submenu link title
+// This is the link text, and ideally this fits in one line
+.bb-layout__horizontal-nav-submenu-title,
+.bb-layout__horizontal-nav-submenu-description {
+  overflow-wrap: anywhere;
+}
+
+// Submenu link description
+// This element contains a longer description of the link, possible more than one line.
+.bb-layout__horizontal-nav-submenu-description {
+  font-size: $font-size-sm;
+  line-height: $line-height-base;
+  word-wrap: break-word;
+}
+
+.bb-layout__horizontal-nav-submenu,
+.bb-layout__horizontal-nav-submenu-items {
+  display: flex;
+}
+
+.bb-layout__horizontal-nav-submenu-header {
+  display: flex;
+  align-items: center;
+  padding: $sizer-sm $sizer-lg;
+  line-height: $line-height-base;
+  background-color: $layout-horizontal-nav-submenu-header-background-color;
+  border: none;
+  cursor: pointer;
+
+  .bb-layout__horizontal-nav-submenu--close {
+    margin-right: $spacer-sm;
+  }
+}
+
+// Submenu variant: horizontally sliding panels inside a sidebar
+@mixin horizontal-horizontal-nav-sliding-columns {
+  .bb-layout__horizontal-nav-submenu {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .bb-layout__horizontal-nav-expand-marker--vertical {
+    // There are two expand-markers in the DOM. Only display the horizontal one.
+    display: none;
+  }
+}
+
+@mixin horizontal-horizontal-nav-sliding-columns-animation {
+  overflow-y: auto;
+  transition: $motion-duration-default $motion-timing-ease-in-out;
+  transition-property: left;
+
+  .bb-layout__horizontal-nav-submenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $layout-horizontal-nav-dropdown-submenu-zindex;
+    width: 100%;
+    height: 100%;
+    color: $color-neutral-white;
+    background-color: $color-primary;
+  }
+}
+
+@mixin horizontal-nav-sidebar() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $layout-horizontal-nav-dropdown-zindex;
+  width: $layout-horizontal-nav-submenu-column-width;
+  height: 100vh;
+  margin-top: $layout-horizontal-nav-menubar-height;
+  margin-left: $spacer-sm;
+  background-color: $color-neutral-white;
+  transform: translateX(-100%);
+}
+
+@mixin horizontal-nav-sidebar--hidden() {
+  display: none;
+}
+
+@mixin horizontal-nav-sidebar--visible() {
+  box-shadow: $box-shadow-md;
+  transform: translateX(0);
+}
+
+@mixin ngb-dropdown-horizontal-nav() {
+  &.dropdown {
+    position: relative;
+    .dropdown-menu {
+      position: static;
+      display: none;
+      min-width: auto;
+      &.show {
+        position: absolute;
+        z-index: $zindex-tooltip;
+        display: flex;
+        max-height: none;
+        margin-top: 0.25 * $sizer;
+        border-radius: $sizer;
+        inset-inline-start: 0;
+        width: $layout-horizontal-nav-submenu-column-width;
+      }
+    }
+  }
+}
+
+@mixin ngb-dropdown-sidebar-nav() {
+  &.dropdown {
+    position: static;
+    .dropdown-menu {
+      position: static;
+      display: none;
+      min-width: auto;
+      &.show {
+        position: absolute;
+        display: flex;
+        max-height: none;
+        margin-top: 0;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.bb-layout {
+  &.bb-layout--high-resolution-view {
+    .bb-layout__horizontal-nav {
+      @include horizontal-nav-menubar;
+    }
+  }
+}
+
+.bb-layout {
+  &.bb-layout--horizontal-nav.bb-layout--nav-expanded {
+    .bb-layout__horizontal-nav {
+      display: flex;
+    }
+
+    .bb-layout__horizontal-nav-link {
+      color: $layout-horizontal-nav-expanded-link-color;
+    }
+  }
+
+  .bb-layout__horizontal-nav {
+    @include horizontal-nav-sidebar();
+    @include horizontal-nav-sidebar--visible();
+    @include horizontal-horizontal-nav-sliding-columns-animation();
+    @include horizontal-nav-vertical();
+
+    .bb-layout__horizontal-nav-submenu-header,
+    .bb-layout__horizontal-nav-submenu-link {
+      color: $color-neutral-white;
+
+      &:hover,
+      &:focus {
+        color: $layout-horizontal-nav-submenu-link-color;
+        background-color: $layout-horizontal-nav-submenu-link-hover-background-color;
+        outline: none;
+      }
+    }
+
+    .bb-layout__horizontal-nav-link {
+      &:hover,
+      &:focus {
+        color: $layout-horizontal-nav-link-focus-color;
+      }
+    }
+
+    @include horizontal-horizontal-nav-sliding-columns();
+
+    .bb-layout__horizontal-nav-item {
+      @include ngb-dropdown-sidebar-nav();
+    }
+  }
+}

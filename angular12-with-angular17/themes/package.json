@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@backbase/ui-ang": "^10.7.81",
+    "ngx-quill": "^16.2.1"
+  }
+}

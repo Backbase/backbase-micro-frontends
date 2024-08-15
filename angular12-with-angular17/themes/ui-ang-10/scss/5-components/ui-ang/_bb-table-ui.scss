@@ -1,0 +1,29 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$table-head-highlight-bg-color: $color-neutral-lightest !default;
+
+.bb-table--text-middle {
+  text-align: center;
+}
+
+.bb-table--text-start {
+  text-align: start;
+}
+
+.bb-table--text-end {
+  text-align: end;
+}
+
+.bb-table__head--highlight {
+  background-color: $table-head-highlight-bg-color;
+  border-block-end: $border-width $border-style $border-color;
+}
+
+.bb-table__td--fit-content {
+  width: 1%;
+  white-space: nowrap;
+}

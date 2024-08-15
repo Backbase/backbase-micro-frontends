@@ -1,0 +1,45 @@
+.batch-details-more-description-modal {
+  // 600px is the maximum height of the modal from the acceptance criteria
+  $spec-max-modal-height: 600px;
+  .modal-content {
+    // CSS functions in all-caps because CSS is case-insensitive
+    // and SASS is case-sensitive
+    // necessary to avoid name collisions on CSS functions that are also SASS functions
+    max-height: MIN(#{$spec-max-modal-height}, CALC(100vh - #{$modal-dialog-margin} * 2));
+
+    [cdktrapfocus] {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-height: MIN(#{$spec-max-modal-height}, CALC(100vh - #{$modal-dialog-margin-y-sm-up} * 2));
+    }
+  }
+
+  bb-modal-header-ui {
+    flex: 0 0 auto;
+  }
+
+  bb-modal-body-ui {
+    display: flex;
+    flex: 0 1 100%;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    height: inherit;
+  }
+}
+
+.batch-details-more-description-modal__body {
+  height: 100%;
+  overflow: auto;
+}
+
+.batch-details-more-description-modal__body--paragraph {
+  margin-bottom: $spacer-sm;
+  line-height: 100%;
+}

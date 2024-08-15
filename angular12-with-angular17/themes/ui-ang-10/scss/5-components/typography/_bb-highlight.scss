@@ -1,0 +1,35 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+/// 3 Highlight (e.g., emphasizing amounts)
+$highlight-font-size: $font-size-highlight !default; // 18px
+$highlight-line-height: $line-height-base !default;
+$highlight-font-weight: $font-weight-semi-bold !default;
+$highlight-font-weight-regular: $font-weight-regular !default;
+
+/// Will set css properties on the HTML element as follows:
+/// - font-weight,
+/// - font-size,
+/// - line-height
+///
+/// @name bb-highlight
+///
+/// @example html
+///   <span class="bb-highlight">highlight text here</span>
+
+/// @name bb-highlight--regular
+///
+/// @example html
+///   <span class="bb-highlight--regular">highlight text here will not be bold</span>
+
+.bb-highlight {
+  font-weight: $highlight-font-weight;
+  font-size: $highlight-font-size;
+  line-height: $highlight-line-height;
+}
+
+.bb-highlight--regular {
+  font-weight: $highlight-font-weight-regular;
+}

@@ -1,0 +1,77 @@
+//// Configure the spacing of view checks list for large devices
+/// @access public
+/// @group journey-specific
+/// @ignore
+/// We can't use :focus-visible pseudo class(for a11y) since it's not compatible with all browser.
+/// In order to handle this, we are relying on the polyfill(.focus-visible) which make it compatible with all major browsers
+////
+$positive-pay-list-spacing-lg: $spacer-lg !default;
+
+/// Configure the spacing of view checks list for small devices
+$positive-pay-list-spacing-md: $spacer-md !default;
+
+/// Configure the size of view checks list items
+$positive-pay-list-item-sizer-md: $sizer-md !default;
+
+/// Configure the spacing of view checks list items
+$positive-pay-list-item-spacing-md: $spacer-md !default;
+
+/// Configure the size of view checks list items for large devices
+$positive-pay-list-item-sizer-lg: $sizer-lg !default;
+
+/// Configure the focus ring for the elements
+/// @todo Replace the focus variable with appropriate focus variable once available
+$positive-pay-list-item-focus-box-shadow: $input-btn-focus-box-shadow inset !default;
+
+/// Styles for "View checks" view of Positive pay journey
+///
+/// @name bb-positive-pay-view-checks
+
+/// @example html
+/// <ul class="bb-list bb-list--density-md bb-positive-pay-list">
+///   <li class="bb-list__item bb-positive-pay-list__item>
+///     <a class="bb-positive-pay-list__item-link">Already paid</a>
+///   </li>
+/// </ul>
+
+.bb-positive-pay-list {
+  margin-right: -$positive-pay-list-spacing-lg;
+  margin-left: -$positive-pay-list-spacing-lg;
+
+  @include media-breakpoint-down(md) {
+    margin-right: -$positive-pay-list-spacing-md;
+    margin-left: -$positive-pay-list-spacing-md;
+  }
+}
+
+.bb-positive-pay-list__item {
+  margin: $positive-pay-list-item-sizer-md $positive-pay-list-item-sizer-lg;
+
+  @include media-breakpoint-down(md) {
+    padding-right: $positive-pay-list-item-sizer-md;
+    padding-left: $positive-pay-list-item-sizer-md;
+  }
+}
+
+.bb-positive-pay-list__item-link {
+  display: inline-block;
+  color: currentColor;
+
+  &:hover {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+.bb-positive-pay-list__item:focus:not(.focus-visible) {
+  outline: none;
+}
+
+.bb-positive-pay-list__item.focus-visible {
+  outline: none;
+  box-shadow: $positive-pay-list-item-focus-box-shadow;
+}
+
+.bb-positive-pay-list__item--clickable {
+  cursor: pointer;
+}

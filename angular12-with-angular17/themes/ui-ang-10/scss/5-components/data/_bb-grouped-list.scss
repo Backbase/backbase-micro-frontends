@@ -1,0 +1,82 @@
+//// @access private
+$grouped-list-separator-line-width: 1px !default;
+$grouped-list-separator-color: $color-neutral-grey !default;
+$grouped-list-sizing: $sizer-lg !default;
+$grouped-list-sizing-md: $sizer-md !default;
+$grouped-list-sizing-sm: $sizer-sm !default;
+$grouped-list-hover-color: $color-neutral-light !default;
+
+/// Display content in a vertically stacked list.  Removes default ul/li styling and adds a separator between items.
+///
+/// @name bb-grouped-list
+/// @group data
+///
+/// @example html - list with grouping
+///   <ul class="bb-grouped-list">
+///     <li class="bb-grouped-list__group">Item Group A</li>
+///     <li class="bb-grouped-list__item">item</li>
+///     <li class="bb-grouped-list__item">item</li>
+///     <li class="bb-grouped-list__group">Item Group B</li>
+///     <li class="bb-grouped-list__item">item</li>
+///     <li class="bb-grouped-list__item">item</li>
+///   </ul>
+///
+/// @example html - smaller space between list items
+///   <ul class="bb-grouped-list bb-grouped-list--density-sm">
+///     <li class="bb-grouped-list__item">item</li>
+///     <li class="bb-grouped-list__item">item</li>
+///     <li class="bb-grouped-list__item">item</li>
+///   </ul>
+///
+/// @example html - list items with no separator
+///   <ul class="bb-grouped-list">
+///     <li class="bb-grouped-list__item bb-list__item--no-separator">item</li>
+///   </ul>
+///
+/// @example html - set item as active
+///   <ul class="bb-grouped-list">
+///     <li class="bb-grouped-list__item bb-grouped-list__item--is-active">item</li>
+///   </ul>
+
+.bb-grouped-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.bb-grouped-list__item--is-active {
+  background-color: $grouped-list-hover-color;
+}
+
+.bb-grouped-list__item,
+.bb-grouped-list__group {
+  padding: $grouped-list-sizing-sm $grouped-list-sizing;
+}
+
+.bb-grouped-list__item:hover {
+  background-color: $grouped-list-hover-color;
+}
+
+.bb-grouped-list__item:not(:last-of-type):not(.bb-list__item--no-separator) {
+  border-bottom: $grouped-list-separator-line-width solid $grouped-list-separator-color;
+}
+
+.bb-grouped-list__item--no-separator {
+  border-bottom: unset;
+}
+
+.bb-grouped-list--density-sm {
+  .bb-grouped-list__item,
+  .bb-grouped-list__group {
+    padding-top: $grouped-list-sizing-sm;
+    padding-bottom: $grouped-list-sizing-sm;
+  }
+}
+
+.bb-grouped-list--density-md {
+  .bb-grouped-list__item,
+  .bb-grouped-list__group {
+    padding-top: $grouped-list-sizing-md;
+    padding-bottom: $grouped-list-sizing-md;
+  }
+}

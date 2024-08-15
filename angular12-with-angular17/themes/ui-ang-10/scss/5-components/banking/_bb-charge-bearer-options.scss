@@ -1,0 +1,11 @@
+$charge-bearer-options-radio-position-top: 0.75rem;
+
+.charge-bearer-options {
+  padding-right: $sizer-md;
+  padding-left: $sizer-md;
+}
+
+.charge-bearer-options .bb-input-radio-group__radio::before,
+.charge-bearer-options .bb-input-radio-group__radio::after {
+  top: $charge-bearer-options-radio-position-top;
+}

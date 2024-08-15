@@ -1,0 +1,43 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$badge-counters-colors: (
+  "primary": (
+    "background": $color-primary,
+  ),
+  "secondary": (
+    "background": $color-neutral-grey,
+  ),
+  "success": (
+    "background": $color-success,
+  ),
+  "info": (
+    "background": $color-info,
+  ),
+  "warning": (
+    "background": $color-warning,
+  ),
+  "danger": (
+    "background": $color-danger,
+  ),
+) !default;
+
+.bb-badge-counter {
+  line-height: 1;
+  display: block;
+}
+
+.badge-counter {
+  @each $color, $value in $badge-counters-colors {
+    &.badge-counter-#{$color} {
+      @include badge-variant(map_get($value, "background"));
+    }
+  }
+  color: $color-neutral-white;
+  font-weight: $font-weight-semi-bold;
+  line-height: $badge-line-height;
+  border-radius: $border-radius-pill;
+}

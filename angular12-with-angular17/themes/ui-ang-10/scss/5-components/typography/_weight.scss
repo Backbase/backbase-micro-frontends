@@ -1,0 +1,27 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+/// Make text bold
+///
+/// @name bb-text-bold
+///
+/// @example html
+///   <div class="bb-text-bold">This text a bold text</div>
+.bb-text-bold {
+  // The mismatch in font-weight is intentional - the _semantic_ bold class is _styled_ using the
+  // semi-bold font weight.
+  font-weight: $font-weight-semi-bold;
+}
+
+/// Make text semi bold
+///
+/// @name bb-text-semi-bold
+///
+/// @example html
+///   <div class="bb-text-semi-bold">This text a semi bold text</div>
+.bb-text-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}

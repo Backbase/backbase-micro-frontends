@@ -1,0 +1,54 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$budget-card-width: 274px !default;
+
+.budget-card-wrapper {
+  min-width: $budget-card-width;
+  max-width: $budget-card-width;
+
+  .budget-card-container {
+    box-shadow: $box-shadow-sm;
+  }
+
+  .budget-card-title {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .budget-card-category-icon {
+    color: $color-neutral-dark;
+    background: inherit;
+  }
+
+  .budget-amount {
+    color: $color-neutral-darkest;
+  }
+
+  .progress-indicator-donut-overlay {
+    width: 90%;
+    height: 90%;
+  }
+
+  .label-amount-left {
+    @include font-size($lead-font-size);
+    font-weight: $lead-font-weight;
+  }
+
+  .budget-amount-label {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .budget-card-options-btn,
+  .amount-regular-color .amount {
+    color: inherit;
+  }
+
+  .budget-card-options-btn {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+  }
+}

@@ -1,0 +1,30 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-init-order__cost-breakdown {
+  border-radius: $border-radius-sm;
+  border: $portfolio-trading-component-border;
+  padding: $sizer;
+}
+.bb-init-order__limit-price {
+  border-radius: $border-radius-sm;
+  border: $portfolio-trading-component-border;
+  padding: $sizer;
+}
+.bb-init-order__statistic {
+  padding: $sizer;
+}
+.bb-init-order_load-button-content {
+  padding: $sizer-sm $sizer-lg;
+}
+.bb-portfolio-trading__limit-amount--inactive {
+  color: $portfolio-trading-color-grey;
+  font-size: $font-size-subtitle;
+}
+.bb-portfolio-trading__limit-amount--active {
+  color: $color-neutral-black;
+  font-size: $font-size-highlight;
+}

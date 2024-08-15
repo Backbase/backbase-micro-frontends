@@ -1,0 +1,101 @@
+//// @access private
+$page-layout-vertical-topbar-background-color: $page-layout-background-color !default;
+$page-layout-vertical-topbar-height: $page-layout-topbar-height !default;
+$page-layout-vertical-lg-topbar-padding: $sizer-lg !default;
+$page-layout-vertical-md-topbar-padding: $sizer-md !default;
+$page-layout-vertical-sm-topbar-padding: $sizer-xs !default;
+
+$page-layout-vertical-lg-topbar-height: $page-layout-vertical-topbar-height + 2 *
+  $page-layout-vertical-lg-topbar-padding !default;
+$page-layout-vertical-md-topbar-height: $page-layout-vertical-topbar-height + 2 *
+  $page-layout-vertical-md-topbar-padding !default;
+$page-layout-vertical-sm-topbar-height: $page-layout-vertical-topbar-height + 2 *
+  $page-layout-vertical-sm-topbar-padding !default;
+
+.bb-page-layout--vertical-nav {
+  // Start the main content below the topbar
+  &.bb-page-layout--sticky-topbar {
+    padding-block-start: $page-layout-vertical-topbar-height + 2 *
+      $page-layout-vertical-lg-topbar-padding;
+
+    @include media-breakpoint-down(lg) {
+      padding-block-start: $page-layout-vertical-topbar-height + 2 *
+        $page-layout-vertical-md-topbar-padding;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-block-start: $page-layout-vertical-topbar-height + 2 *
+        $page-layout-vertical-sm-topbar-padding;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .bb-sidebar {
+      position: fixed;
+      inset-block-start: 0;
+      height: 100vh;
+    }
+  }
+
+  &.bb-page-layout--sticky-sidebar {
+    @include media-breakpoint-up(lg) {
+      .bb-sidebar {
+        inset-block-start: $page-layout-vertical-topbar-height + 2 *
+          $page-layout-vertical-lg-topbar-padding;
+
+        @include media-breakpoint-down(lg) {
+          inset-block-start: 0;
+        }
+
+        // @include media-breakpoint-down(md) {
+        //   top: $page-layout-vertical-topbar-height + 2 * $page-layout-vertical-sm-topbar-padding;
+        // }
+      }
+
+      &.bb-page-layout--nav-expanded {
+        .bb-page-layout__main {
+          padding-inline-start: $navigation-width;
+        }
+      }
+
+      &.bb-page-layout--nav-collapsed {
+        .bb-page-layout__main {
+          padding-inline-start: $navigation-collapsed-width;
+        }
+      }
+    }
+  }
+
+  .bb-page-layout__topbar {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100vw;
+    height: $page-layout-vertical-lg-topbar-height;
+    padding-block: $page-layout-vertical-lg-topbar-padding;
+    background-color: $page-layout-vertical-topbar-background-color;
+
+    @include media-breakpoint-down(lg) {
+      height: $page-layout-vertical-md-topbar-height;
+      padding-block: $page-layout-vertical-md-topbar-padding;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: $page-layout-vertical-sm-topbar-height;
+      padding-block: $page-layout-vertical-sm-topbar-padding;
+    }
+  }
+
+  .bb-sidebar__sidebar-toggler {
+    height: $page-layout-vertical-lg-topbar-height;
+
+    @include media-breakpoint-down(lg) {
+      height: $page-layout-vertical-md-topbar-height;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: $page-layout-vertical-sm-topbar-height;
+    }
+  }
+}

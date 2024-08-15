@@ -1,0 +1,22 @@
+////
+/// Spacing and margins (global)
+/// Used for setting the margins around components to determine their position from other elements
+/// @group base
+/// @access private
+////
+
+:root {
+  --spacer: #{$spacer};
+  --spacer-xl: #{$spacer-xl};
+  --spacer-lg: #{$spacer-lg};
+  --spacer-md: #{$spacer-md};
+  --spacer-sm: #{$spacer-sm};
+  --spacer-xs: #{$spacer-xs};
+}
+
+$spacer: var(--spacer);
+$spacer-xl: var(--spacer-xl);
+$spacer-lg: var(--spacer-lg);
+$spacer-md: var(--spacer-md);
+$spacer-sm: var(--spacer-sm);
+$spacer-xs: var(--spacer-xs);

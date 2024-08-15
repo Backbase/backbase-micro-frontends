@@ -1,0 +1,53 @@
+////
+/// Account-selector
+/// @group 1-variables/components/account-selector
+/// @access public
+////
+
+/// Configures the (minimum) hight of the account-selector
+/// @require {variable} $sizer-md
+$account-selector-height: $sizer-md * 6 !default;
+
+/// Configures the maximum height of the account-selector drop-down list
+/// @require {variable} $sizer-md
+$account-selector-dropdown-max-height: $sizer-md * 26.5 !default;
+
+/// Configures the border-radius of both the account-selector and the drop-down list
+/// @require {variable} $border-radius
+$account-selector-border-radius: $border-radius !default;
+
+/// Configures the shadow for both the account-selector and the drop-down list
+/// @require {variable} $box-shadow-sm
+$account-selector-box-shadow: $box-shadow-sm !default;
+
+/// Configures the background-color for selected accounts in the account-selector drop-down list
+/// @require {variable} $color-primary-lightest
+$account-selector-option-checked-background-color: $color-primary-lightest !default;
+
+/// Configures the background-color for focused accounts in the account-selector drop-down list
+/// @require {variable} $color-neutral-lightest
+$account-selector-option-focus-background-color: $color-neutral-lightest !default;
+
+/// Configures the height of the separator-border between account-selector drop-down options
+/// @require {variable} $border-width
+$account-selector-option-separator-height: $border-width !default;
+
+/// Configures the space between the account-selector and the drop-down list
+/// @require {variable} $spacer
+$account-selector-dropdown-spacer: $spacer * 1.25;
+
+/// Configures the background color of account-selector icons
+/// @require {variable} $color-secondary
+$account-selector-icon-background-color: $color-secondary !default;
+
+/// Configures the icon color of account-selector icons
+/// @require {variable} $color-neutral-white
+$account-selector-icon-color: $color-neutral-white !default;
+
+/// Configures the width style color of the border on focus (experimental)
+/// @require {variable} $focus-border-primary
+$account-focus-border-primary: $focus-border-primary !default;
+
+/// Configures the distance(top bottom left right) of the border from the element on focus (experimental)
+/// @require {variable} $focus-outline-distance
+$account-focus-outline-distance: $focus-outline-distance !default;

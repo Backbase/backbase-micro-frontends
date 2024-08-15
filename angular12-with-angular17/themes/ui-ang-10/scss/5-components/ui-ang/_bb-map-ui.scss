@@ -1,0 +1,33 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$map-container-height: 100% !default;
+$map-min-height: 36rem !default;
+$map-border-radius: $border-radius-sm !default;
+
+/// Google Maps
+///
+/// @name bb-map
+///
+/// @example html
+///   <div id="google-maps" class="bb-map"></div>
+///   <script>
+///     var map;
+///     function initMap() {
+///       map = new google.maps.Map(document.getElementById('map'), {
+///         center: {lat: -34.397, lng: 150.644},
+///       zoom: 8
+///      });
+///     }
+///   </script>
+///   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"async defer></script>
+///
+
+.bb-map {
+  height: $map-container-height;
+  min-height: $map-min-height;
+  border-radius: $map-border-radius;
+}

@@ -1,0 +1,808 @@
+////
+/// @group 5-components/structure/bb-stack
+/// @access public
+////
+
+/// Group a set of elements horizontally. The elements can be grouped directly as children of the `bb-stack` element or
+/// further grouped in sections.
+///
+/// By default, elements are not wrapped to the next line and center-aligned.
+///
+/// The following modifiers are available:
+/// - to enable wrapping and responsive layouts: `bb-stack--wrap`, `bb-stack__break`,
+///   `bb-stack__break--<breakpoint>-[up|down]`
+/// - for aligning to top/bottom: `bb-stack--align-top`, `bb-stack--align-bottom`
+/// - for aligning to baseline: `bb-stack--baseline`, `bb-stack--align-baseline`
+/// - for aligning specific items to top/bottom: `bb-stack__item--align-<top|bottom>`
+/// - for aligning entire items and their successors to the right: `bb-stack__item--push-right`
+/// - to control the spacing between items: `bb-stack--density-<sm|lg|none>`
+/// - to control the spacing after specific items: `bb-stack__item--spacing-<sm|md|lg|none>`
+///
+/// @name .bb-stack
+///
+/// @example html - Three sections - where one takes up remaining space
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--fill">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+///
+/// @example html - Push section to the right
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">
+///           XY
+///         </span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--push-right">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+///
+/// @example html - Responsive layout using wrapping and responsive breaks
+///   <div class="bb-stack bb-stack--wrap">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">
+///           XY
+///         </span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--fill">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__break bb-stack__break--sm-down"></div>
+///     <div class="bb-stack__item">
+///       <button class="bb-toolbar__item btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="bb-toolbar__item btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+///
+/// @example html - Without wrapping div's
+///   <div class="bb-stack">
+///     <div class="bb-stack__item bb-avatar">
+///       <span class="bb-avatar__initials">
+///         XY
+///       </span>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <button class="bb-stack__item btn btn-sm btn-success btn-circle">
+///       <i class="bb-icon bb-icon-check"></i>
+///     </button>
+///     <button class="bb-stack__item btn btn-sm btn-danger btn-circle">
+///       <i class="bb-icon bb-icon-times"></i>
+///     </button>
+///   </div>
+///
+/// @example html - Aligning text vertically
+///   <div class="bb-stack bb-stack--align-top">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">
+///           XY
+///         </span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--align-top">
+///       .bb-stack__item--align-top
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--align-bottom">
+///       .bb-stack__item--align-bottom
+///     </div>
+///   </div>
+///
+/// @example html - Using row and column to size stacked items
+///   <div class="bb-stack row">
+///     <div class="bb-stack__item col-6">
+///       <div class="bb-stack">
+///         <div class="bb-avatar bb-stack__item">
+///            <span class="bb-avatar__initials">
+///              XY
+///            </span>
+///         </div>
+///         <div class="bb-stack__item">
+///           <div><strong>Amazon</strong></div>
+///           <div><span class="text-muted">http://amazon.com</span></div>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item col-2">
+///       <div>3 accounts</div>
+///     </div>
+///     <div class="bb-stack__item col-2">
+///       <div><strong>Expire date</strong></div>
+///     </div>
+///     <div class="bb-stack__item col-md-1 col-4">
+///       <div class="badge badge-primary">badge</div>
+///     </div>
+///     <div class="bb-stack__item col-md-1 col-2">
+///       <i class="bb-icon bb-icon-toggle-down"></i>
+///     </div>
+///   </div>
+///
+/// @example html - Controlling the spacing between elements
+///   <div class="bb-stack bb-stack--density-sm">
+///     <div class="bb-stack__item">
+///       default (sm)
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--spacing-sm">
+///       --spacing-sm
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--spacing-md">
+///       --spacing-md
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--spacing-lg">
+///       --spacing-lg
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--spacing-none">
+///       --spacing-none
+///     </div>
+///     <div class="bb-stack__item">
+///       default (end)
+///     </div>
+///   </div>
+/// @example html - Grow and shrink on flex child elements
+///   <div class="bb-stack bb-stack--density-sm">
+///     <div class="bb-stack__item bb-stack__item--fill">
+///       -- grow to container width
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--no-shrink">
+///        -- will not shrink
+///     </div>
+///   </div>
+
+.bb-stack {
+  display: flex;
+  align-items: center;
+  &:not([class^="col-"], [class*=" col-"]) {
+    width: 100%;
+  }
+}
+
+/// Align the contents of the main `bb-stack` from top to bottom in a column
+///
+/// @example html
+///   <div class="bb-stack bb-stack--vertical">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--vertical {
+  flex-direction: column;
+}
+
+/// Align the contents of the main `bb-stack` element centrally
+///
+/// @example html
+///   <div class="bb-stack bb-stack__center">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--center {
+  justify-content: center;
+}
+
+/// Align the contents of the main `bb-stack` element with auto spacing between elements
+///
+/// @example html
+///   <div class="bb-stack bb-stack__space-between">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--space-between {
+  justify-content: space-between;
+}
+
+/// Enable the wrapping of items within the main `bb-stack` element
+///
+/// @example html
+///   <div class="bb-stack bb-stack--wrap">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--wrap {
+  flex-wrap: wrap;
+}
+
+/// Align the contents of the main `bb-stack` element to the top
+///
+/// @example html
+///   <div class="bb-stack bb-stack--align-top">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--align-top {
+  align-items: flex-start;
+}
+
+/// Align the contents of the main `bb-stack` element to the bottom
+///
+/// @example html
+///   <div class="bb-stack bb-stack--align-bottom">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--align-bottom {
+  align-items: flex-end;
+}
+
+/// Align the contents of the main `bb-stack` element to baseline
+///
+/// @example html
+///   <div class="bb-stack bb-stack--align-baseline">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--align-baseline {
+  align-items: baseline;
+}
+
+/// Main class to apply to the stacked elements
+///
+/// @require {variable} spacer-md
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item {
+  margin-inline-end: $spacer-md;
+  margin-inline-start: 0;
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+}
+
+/// Secondary class to apply to the stacked elements, will apply even margin to both left and right and not act differently on last child
+/// For example: Useful when you have a list of images to select from a modal. Elements will be centered in relation to side paddings
+/// @require {variable} spacer-md
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__box-item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-bb-stack__box-item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-bb-stack__box-item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__box-item {
+  margin-inline: calc(#{$spacer-md * 0.5});
+}
+
+/// Remove any spacing between the stacked elements
+///
+/// @example html
+///   <div class="bb-stack bb-stack--density-none">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack--density-none {
+  .bb-stack__item {
+    margin-inline-end: 0;
+  }
+
+  .bb-stack__box-item {
+    margin-inline: 0;
+  }
+}
+
+/// Main class to apply on stack row items
+///
+/// @example html
+///   <div class="bb-stack row">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack.row,
+.bb-stack.form-row {
+  > .bb-stack__item {
+    margin-inline-end: 0;
+  }
+}
+
+/// Prevents the current stacked element to resize within a stack
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--no-shrink">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--no-shrink {
+  flex-shrink: 0;
+}
+
+/// Fills the stacked element to use up any empty space
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--fill">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--fill {
+  flex-basis: 1%;
+  flex-grow: 1;
+}
+
+/// Add padding bottom and max height to stacked element for
+/// for example - wrap error message below without layout shifting
+///
+/// @example html
+///   <div class="bb-stack__item--bottom-space">
+///     <bb-input-text-ui
+///         formControlName="companyId"
+///         label="Company ID"
+///         aria-describedby="ach-blocker-company-id-required-error"
+///     >
+///     </bb-input-text-ui>
+///     <bb-input-validation-message-ui
+///         role="alert"
+///         [showErrors]="achBlockerRuleForm.get('companyId')?.errors?.required"
+///     >Company ID is required.
+///     </bb-input-validation-message-ui>
+///   </div>
+.bb-stack__item--bottom-space {
+  max-height: calc(#{$input-height} + #{$spacer-xl} * 2);
+  padding-bottom: $spacer-xl;
+}
+
+/// Align the stacked item to the top
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item bb-stack__item--align-top">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--align-top {
+  align-self: flex-start;
+}
+
+/// Align the stacked item to the bottom
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--align-bottom">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--align-bottom {
+  align-self: flex-end;
+}
+
+/// Align the stacked item to the right
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item bb-stack__item--push-right">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--push-right {
+  margin-inline-start: auto;
+}
+
+/// Align the stacked item to the left
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item bb-stack__item--push-left">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--push-left {
+  margin-inline-end: auto;
+}
+
+/// Removes any spacing (margin) from the stacked element
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item bb-stack__item--spacing-none">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__item--spacing-none {
+  margin-inline-end: 0;
+}
+
+/// Wrap subsequent items to the next line
+///
+/// @example html
+///   <div class="bb-stack">
+///     <div class="bb-stack__item bb-stack__break">
+///       <div class="bb-avatar">
+///         <span class="bb-avatar__initials">XY</span>
+///       </div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <div><strong>Title</strong></div>
+///       <div>x</div>
+///       <div><span class="text-muted">Muted</span></div>
+///     </div>
+///     <div class="bb-stack__item">
+///       <button class="btn btn-sm btn-success btn-circle">
+///         <i class="bb-icon bb-icon-check"></i>
+///       </button>
+///       <button class="btn btn-sm btn-danger btn-circle">
+///         <i class="bb-icon bb-icon-times"></i>
+///       </button>
+///     </div>
+///   </div>
+.bb-stack__break {
+  height: 0;
+}
+
+@each $sizeKey, $spacingValue in $spacing-map {
+  .bb-stack--density-#{$sizeKey} {
+    .bb-stack__item:not(:last-child) {
+      margin-inline-end: $spacingValue;
+    }
+    .bb-stack__box-item {
+      margin-inline: calc(#{$spacingValue} / 2);
+    }
+  }
+
+  .bb-stack__item--spacing-#{$sizeKey} {
+    margin-inline-end: $spacingValue;
+  }
+
+  .bb-stack__box-item--spacing-#{$sizeKey} {
+    margin-inline: calc(#{$spacingValue} / 2);
+  }
+
+  .bb-stack__break--spacing-#{$sizeKey} {
+    height: $spacingValue;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  .bb-stack__break--#{$breakpoint} {
+    @include media-breakpoint-only($breakpoint) {
+      flex-basis: 100%;
+    }
+  }
+
+  .bb-stack__break-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      flex-basis: 100%;
+    }
+  }
+
+  .bb-stack__break-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      flex-basis: 100%;
+    }
+  }
+
+  .bb-stack__item--fill-#{$breakpoint} {
+    @include media-breakpoint-only($breakpoint) {
+      flex-grow: 1;
+    }
+  }
+
+  .bb-stack__item--fill-#{$infix}-up {
+    @include media-breakpoint-up($breakpoint) {
+      flex-grow: 1;
+    }
+  }
+
+  .bb-stack__item--fill-#{$infix}-down {
+    @include media-breakpoint-down($breakpoint) {
+      flex-grow: 1;
+    }
+  }
+
+  .bb-stack__item--push-right-#{$breakpoint} {
+    @include media-breakpoint-only($breakpoint) {
+      margin-inline-start: auto;
+    }
+  }
+
+  .bb-stack__item--push-right-#{$breakpoint}-up {
+    @include media-breakpoint-up($breakpoint) {
+      margin-inline-start: auto;
+    }
+  }
+
+  .bb-stack__item--push-right-#{$breakpoint}-down {
+    @include media-breakpoint-down($breakpoint) {
+      margin-inline-start: auto;
+    }
+  }
+
+  .bb-stack__item--push-left-#{$breakpoint} {
+    @include media-breakpoint-only($breakpoint) {
+      margin-inline-end: auto;
+    }
+  }
+
+  .bb-stack__item--push-left-#{$breakpoint}-up {
+    @include media-breakpoint-up($breakpoint) {
+      margin-inline-end: auto;
+    }
+  }
+
+  .bb-stack__item--push-left-#{$breakpoint}-down {
+    @include media-breakpoint-down($breakpoint) {
+      margin-inline-end: auto;
+    }
+  }
+}

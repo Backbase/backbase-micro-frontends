@@ -1,0 +1,329 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$approval-log-details-bottom-border: 1px solid $color-neutral-grey !default;
+$approval-log-add-new-item-border: 1px solid $color-success;
+$approval-log-remove-item-border: 1px solid $color-danger;
+$approval-log-primary-item-border: 1px solid $primary;
+$approval-log-unchanged-item-border: 1px solid $color-neutral-darker;
+$approval-log-details-header-subtitle-color: $color-neutral-black !default;
+$approval-log-details-header-username-color: $color-neutral-black !default;
+$approval-log-details-approvers-label: $color-neutral-dark !default;
+$approval-log-details-permissions-item-label: $color-neutral-dark !default;
+$approval-log-details-permissions-item-label-toggle: $color-neutral-dark !default;
+$approval-log-details-permissions-item-data-group-added: $color-warning-lightest !default;
+$approval-log-details-permissions-item-data-group-removed: $color-neutral-greyest !default;
+$approval-log-details-unlock-user-status-locked-background: $color-warning-lightest;
+$approval-log-details-unlock-user-status-active-background: $color-primary-lightest;
+$approval-log-details-business-function-policies-changelog-heading-padding-bottom: $sizer-md * 0.75 !default;
+$approval-log-details-business-function-policies-details-max-width: $sizer * 42 !default;
+$approval-log-details-business-function-policies-details-header-font-size: $font-size-table-header !default;
+$approval-log-details-business-function-policies-details-header-line-height: $line-height-base !default;
+$approval-log-details-business-function-policies-details-header-font-weight: $font-weight-semi-bold !default;
+
+/// Styles for Approval Log Details widget
+///
+/// @name bb-approval-log-details
+///
+/// @example html - widget skeleton
+///   <div class="bb-approval-log-details">
+///     <button class="btn btn-link bb-approval-log-details__back-button>Back</button>
+///     <div class="bb-approval-log-details-header">
+///       <h2>XY</h2>
+///       <div class="bb-approval-log-details-header__subtitle bb-subtitle">
+///         Initiated by: <span class="bb-approval-log-details-header__username">John Doe</span>
+///       </div>
+///     </div>
+///
+///     <div class="bb-approval-log-details-approvers">
+///       <div class="bb-approval-log-details-approvers__label">1 of 3 approvals required:</div>
+///       <div>x</div>
+///     </div>
+///
+///     <div class="bb-block bb-block--xl bb-approval-log-details-assign-permissions-item">
+///       <div class="bb-block bb-block--md bb-approval-log-details-assign-permissions-item__heading">
+///       </div>
+///
+///       <div class="bb-block bb-block--md">
+///         <div class="bb-stack row">
+///           <div class="bb-stack__item col-2 bb-approval-log-details-assign-permissions-item__label">
+///             Description
+///           </div>
+///           <div class="bb-stack__item col-10 bb-text-semi-bold bb-approval-log-details-assign-permissions-item__value-removed">
+///             Assign Permissions
+///           </div>
+///         </div>
+///       </div>
+///
+///       <div class="bb-block bb-block--md">
+///         <div class="bb-stack bb-approval-log-details-assign-permission-item__collapsible-header">
+///           <div class="bb-stack__item bb-stack__item--spacing-sm">X</div>
+///           <div class="bb-stack__item bb-stack__item--spacing-sm bb-highlight">Account groups within</div>
+///           <div class="bb-stack__item bb-stack__item--spacing-sm bb-stack__item--push-right
+///             bb-subtitle bb-approval-log-details-assign-permission-item__collapsible-header__toggle">Minimise
+///           </div>
+///           <div class="bb-icon bb-icon-toggle-up"></div>
+///         </div>
+///       </div>
+///
+///       <div class="bb-block bb-block--lg bb-permissions-changelog-data-group-wrapper">
+///         <div class="bb-block bb-block--sm bb-text-semi-bold">1 Account Groups</div>
+///         <div class="bb-stack row">
+///           <div class="bb-stack__item col-4">
+///             <div class="bb-block bb-block--sm">
+///               <div class="bb-stack bb-permissions-changelog-data-group">
+///                 <div class="bb-icon bb-icon-add bb-stack__item bb-stack__item--spacing-sm"></div>
+///                 <span class="bb-stack__item bb-subtitle bb-text-semi-bold">Data Group name</span>
+///               </div>
+///             </div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///
+///     <div class="bb-approval-log-details-footer">
+///       <div class="bb-block bb-block--md bb-highlight">Ready to make your decision?</div>
+///       <div class="bb-button-bar bb-button-bar--reverse">
+///         <button class="bb-button-bar__button btn btn-danger">
+///           Reject
+///         </button>
+///         <button class="bb-button-bar__button btn btn-success">
+///           Approve
+///         </button>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-approval-log-details {
+  padding: $sizer-lg;
+}
+
+.bb-approval-log-details__back-button {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.bb-approval-log-details-header {
+  padding-bottom: $sizer;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-header__subtitle {
+  color: $approval-log-details-header-subtitle-color;
+}
+
+.bb-approval-log-details-header__username {
+  color: $approval-log-details-header-username-color;
+  font-weight: $font-weight-bold;
+}
+
+.bb-approval-log-details-approvers {
+  padding: $sizer 0;
+  border-bottom: $approval-log-details-bottom-border;
+
+  // made this nesting to overwrite parent card styles
+  .bb-approval-log-details-approvers__card-body {
+    padding: $card-sm-sizer;
+  }
+}
+
+.bb-approval-log-details-approvers__label {
+  color: $approval-log-details-approvers-label;
+}
+
+.bb-approval-log-details-approvers__badge {
+  margin-left: $spacer-sm;
+}
+
+.bb-approval-log-details-assign-permissions-item {
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-assign-permissions-item__heading {
+  padding-bottom: $sizer-sm;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-assign-permissions-item__heading-label-removed {
+  text-decoration: line-through;
+}
+
+.bb-approval-log-details-assign-permissions-item__label {
+  color: $approval-log-details-permissions-item-label;
+}
+
+.bb-approval-log-details-assign-permissions-item__value-removed {
+  color: $approval-log-details-permissions-item-data-group-removed;
+  text-decoration: line-through;
+}
+
+.bb-approval-log-details-assign-permission-item__collapsible-header {
+  padding: $sizer-sm 0;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-assign-permission-item__collapsible-header__toggle {
+  color: $approval-log-details-permissions-item-label-toggle;
+}
+
+.bb-permissions-changelog-data-group-wrapper {
+  padding-left: $sizer-xl;
+}
+
+.bb-permissions-changelog-data-group {
+  padding-left: $sizer-lg;
+}
+
+.bb-permissions-changelog-data-group__label {
+  padding: 0 $sizer-xs;
+}
+
+.bb-permissions-changelog-data-group__label--added {
+  background-color: $approval-log-details-permissions-item-data-group-added;
+}
+
+.bb-permissions-changelog-data-group__label--removed {
+  color: $approval-log-details-permissions-item-data-group-removed;
+  text-decoration: line-through;
+}
+
+.bb-permissions-changelog-data-group__label--unchanged {
+  margin-left: $spacer-lg;
+}
+
+.bb-data-groups-changelog-item {
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-data-groups-changelog-item__heading {
+  padding-bottom: $sizer-sm;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-data-groups-changelog-data-group-label {
+  margin: $spacer-xs 0;
+  padding: 0 $sizer-xs;
+}
+
+.bb-data-groups-changelog-data-group-label--modified {
+  margin-left: $spacer-xs;
+  background-color: $color-warning-lightest;
+}
+
+.bb-data-groups-changelog-account-label {
+  color: $color-neutral-darkest;
+}
+
+.bb-data-groups-changelog-alias-label {
+  font-size: $subheader-font-size;
+  line-height: $subheader-line-height;
+}
+
+.bb-data-groups-changelog-account-label--removed {
+  text-decoration: line-through;
+}
+
+.bb-data-groups-changelog-account-label--added {
+  background-color: $color-warning-lightest;
+}
+
+.bb-data-groups-changelog-item__collapsible-header {
+  padding: $spacer-sm 0;
+  border-bottom: $border-width solid $border-color;
+}
+
+.bb-data-groups-changelog-item__collapsible-header__toggle {
+  color: $color-neutral-dark;
+}
+
+.bb-data-groups-changelog-item__collapsible-item {
+  padding-bottom: $sizer-md;
+  border-bottom: $border-width solid $border-color;
+}
+
+.bb-approval-log-details-unlock-user-changelog {
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-unlock-user-changelog__heading {
+  padding-bottom: $sizer-sm;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-unlock-user-changelog__user-status {
+  padding: $sizer;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow-level-1;
+}
+
+.bb-approval-log-details-unlock-user-changelog__user-status--locked {
+  background-color: $approval-log-details-unlock-user-status-locked-background;
+}
+
+.bb-approval-log-details-unlock-user-changelog__user-status--active {
+  background-color: $approval-log-details-unlock-user-status-active-background;
+}
+
+.bb-function-group-changelog-changed {
+  background-color: $color-warning-lightest;
+}
+
+.bb-function-group-add-new-data {
+  background-color: $color-success-lightest;
+}
+
+.bb-approval-log-details-business-function-policies-changelog {
+  padding-bottom: $sizer-lg;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-business-function-policies-changelog__heading {
+  padding-bottom: $approval-log-details-business-function-policies-changelog-heading-padding-bottom;
+  border-bottom: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-business-function-policies-changelog__heading--sibling {
+  padding-top: $sizer-xxl;
+  border-top: $approval-log-details-bottom-border;
+}
+
+.bb-approval-log-details-business-function-policies-details {
+  max-width: $approval-log-details-business-function-policies-details-max-width;
+}
+
+.bb-approval-log-details-business-function-policies-details__header {
+  font-weight: $approval-log-details-business-function-policies-details-header-font-weight;
+  font-size: $approval-log-details-business-function-policies-details-header-font-size;
+  line-height: $approval-log-details-business-function-policies-details-header-line-height;
+}
+
+.bb-approval-log-details-business-function-policies-details-item {
+  padding-top: $sizer-md;
+  padding-bottom: $sizer-md;
+  border-top: $approval-log-details-bottom-border;
+}
+
+.bb-card {
+  &.bb-approval-log-border-add-success-item {
+    border: $approval-log-add-new-item-border;
+    box-shadow: none;
+  }
+
+  &.bb-approval-log-border-remove-item {
+    border: $approval-log-remove-item-border;
+    box-shadow: none;
+  }
+
+  &.bb-approval-log-border-primary-item {
+    border: $approval-log-primary-item-border;
+    box-shadow: none;
+  }
+
+  &.bb-approval-log-border-unchanged-item {
+    border: $approval-log-unchanged-item-border;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+//To account for dark bg colors
+@each $color, $value in map-merge($theme-background-colors, $theme-partial-overrides) {
+  @include bg-variant(".bg-#{$color}", $value, true);
+
+  .bg-#{$color} {
+    /* stylelint-disable-next-line declaration-no-important */
+    color: color-contrast($value) !important; //Bootstrap 4 utility override
+  }
+}

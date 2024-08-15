@@ -1,0 +1,85 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$dropdown-icon-margin: $spacer-sm !default;
+
+/// Generic class for the dropdown input.
+///
+///
+/// @example html - default
+///   <div class="bb-dropdown">
+///     <select class="form-control bb-dropdown__select">
+///       <option>Option 1</option>
+///       <option>Option 2</option>
+///       <option>Option 3</option>
+///     </select>
+///     <div class="bb-dropdown__icon">
+///       <i class="bb-icon bb-icon-toggle-down"></i>
+///     </div>
+///   </div>
+///
+/// @example html - disabled
+///   <div class="bb-dropdown bb-dropdown--disabled">
+///     <select disabled class="form-control bb-dropdown__select">
+///       <option>Option 1</option>
+///       <option>Option 2</option>
+///       <option>Option 3</option>
+///     </select>
+///     <div class="bb-dropdown__icon">
+///       <i class="bb-icon bb-icon-toggle-down"></i>
+///     </div>
+///   </div>
+
+.bb-dropdown__select {
+  @include appearance-toggle();
+  padding-inline-end: $dropdown-icon-margin * 2 + $spacer-md;
+  cursor: pointer;
+
+  &.form-control:not(:disabled) {
+    background-color: $color-neutral-white;
+  }
+
+  @-moz-document url-prefix() {
+    option {
+      font-family: $font-family-sans-serif;
+      font-size: $font-size-default;
+    }
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:disabled {
+    color: $input-disabled-color;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  &:disabled + .bb-dropdown__icon {
+    color: $input-disabled-color;
+  }
+}
+
+.bb-dropdown__icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: $input-height;
+  margin-top: calc(-1 * #{$input-height});
+  margin-top: calc(-#{$input-line-height * 1em} - #{$input-padding-y * 2}); // IE11 compatibility
+  margin-inline-end: $dropdown-icon-margin;
+  pointer-events: none;
+}
+
+bb-dropdown-single-select-ui select.bb-dropdown__select {
+  &:focus {
+    border-color: $input-border-color;
+    outline: $input-focus-border-primary;
+    outline-offset: $input-focus-outline-offset-distance;
+    box-shadow: none;
+  }
+}

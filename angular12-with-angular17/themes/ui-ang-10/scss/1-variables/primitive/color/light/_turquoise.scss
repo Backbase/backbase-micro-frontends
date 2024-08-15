@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/turquoise
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-turquoise-lightest: $chart-color-6-lightest; // #DDF8F8
+$color-light-turquoise-lighter: $chart-color-6-lighter; // #62E0E0
+$color-light-turquoise-default: $chart-color-6; // #1ED2D2
+$color-light-turquoise-darker: $chart-color-6-darker; // #159393
+$color-light-turquoise-darkest: $chart-color-6-darkest; // #117474
+$color-light-turquoise-on-color: $color-neutral-white;

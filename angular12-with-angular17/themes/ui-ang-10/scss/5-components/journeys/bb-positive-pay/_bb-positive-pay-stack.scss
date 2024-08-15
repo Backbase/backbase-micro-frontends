@@ -1,0 +1,43 @@
+// Configure styles for stacked controls with toggle to keep tab order for a11y
+////
+/// @group journey-specific
+/// @access public
+////
+
+/// Sets flex direction to row-reverse (and column-reverse for xs screens)
+///
+/// @name bb-positive-pay-stack--reverse
+///
+/// @example
+/// ```html
+/// <div class="bb-stack bb-positive-pay-stack--reverse">
+///   <div class="bb-stack__item bb-positive-pay-stack__item--reverse">
+///     This Element will be on the right side of the container (or on bottom on XS screen)
+///   </div>
+///   <div class="bb-stack__break bb-stack__break--xs bb-stack__break--spacing"></div>
+///   <div class="bb-stack__item bb-positive-pay-stack__item--reverse">
+///     This Element will bw on the left side of the container (or on top on XS screen)
+///   </div>
+/// </div>
+/// ```
+.bb-positive-pay-stack--reverse {
+  flex-direction: row-reverse;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
+
+.bb-positive-pay-stack__item--reverse {
+  margin-left: $spacer-md;
+  margin-right: 0;
+
+  &:last-child {
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+  }
+}

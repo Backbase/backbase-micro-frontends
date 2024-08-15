@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+@import "../../../../bootstrap5/scss/list-group";
+
+/// The Bootstrap list-group component.  Normally consists of a list-group-item / list-group-item-action.
+///
+/// @name list-group
+///
+/// @example html - default
+///  <div class="list-group list-group-flush" role="list">
+///    <div role="listitem">
+///      <a href="#" class="list-group-item list-group-item-action">
+///        This is test item.
+///      </a>
+///    </div>
+///  </div>
+
+.list-group-item {
+  a {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+.list-group-flush:last-child {
+  & .list-group-item {
+    &:last-child {
+      margin-bottom: -1px; // We need this to avoid double border between items.
+      border-bottom: 1px solid $list-group-border-color;
+    }
+  }
+}

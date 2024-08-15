@@ -1,0 +1,116 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for Consent Details widget
+///
+/// @name bb-consent-details
+///
+/// @example html - header component
+///   <div class="bb-consent-details-header">
+///     <div class="bb-consent-details-header__tpp">XY</div>
+///     <div class="bb-consent-details-header__badge">
+///       <div class="badge badge-success">ACTIVE</div>
+///     </div>
+///
+///     <div class="bb-consent-details-header__status-wrapper">
+///       <div class="bb-consent-details-header__status">
+///         <div class="bb-consent-details-header__date-label">Expiry date</div>
+///         <div data-role="expiry-date">Feb 09, 2019 at 9:15 AM</div>
+///       </div>
+///     </div>
+///   </div>
+///   <div class="bb-consent-details">
+///     <div class="bb-consent-details__lg">
+///       <div class="bb-consent-details__lg-wrapper">
+///         <div class="bb-consent-details__lg-wrapper-item">
+///           some list for lg view
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-consent-details__sm">
+///       <div class="bb-consent-details__sm-wrapper">
+///         <div class="bb-consent-details__sm-wrapper-item">
+///           some list for sm view
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+.bb-consent-details-header {
+  padding: $sizer-lg;
+}
+
+.bb-consent-details-header__status-wrapper {
+  @include media-breakpoint-down(xl) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+}
+
+.bb-consent-details-header__status {
+  margin-right: $spacer;
+}
+
+.bb-consent-details-tpp {
+  @include media-breakpoint-up(lg) {
+    padding: $sizer-lg;
+  }
+}
+
+.bb-consent-details-tpp__info-label {
+  display: block;
+  margin-bottom: $spacer-sm;
+  border-bottom: $border-width $border-style $color-neutral-greyer;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.bb-consent-details-accounts-item {
+  border-radius: $border-radius;
+}
+
+.bb-consent-details-permissions__details {
+  color: $color-neutral-darker;
+}
+
+.bb-consent-details__lg {
+  display: flex;
+  border-top: $border-width $border-style $color-neutral-greyer;
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.bb-consent-details__lg-wrapper {
+  width: 100%;
+  padding: $sizer-lg;
+  border-left: $border-width $border-style $color-neutral-greyer;
+}
+
+.bb-consent-details__sm {
+  display: block;
+  width: 100%;
+  padding: $sizer-lg;
+  border-top: $border-width $border-style $color-neutral-greyer;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.bb-consent-details__sm-collapsible {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bb-consent-details__button {
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

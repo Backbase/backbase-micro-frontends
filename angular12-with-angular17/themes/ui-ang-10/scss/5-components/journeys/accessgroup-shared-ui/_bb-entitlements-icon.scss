@@ -1,0 +1,55 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+////
+
+$entitlements-icon-size: $sizer-xxxl !default;
+$entitlements-icon-size-md: $sizer-xxl !default;
+$entitlements-icon-size-sm: $sizer-lg !default;
+$entitlements-icon-bg: $color-neutral-light !default;
+$entitlements-icon-bg-grey: $color-neutral-grey !default;
+$entitlements-icon-bg-dark: $color-neutral-dark !default;
+$entitlements-icon-border-radius: $sizer-sm !default;
+$entitlements-icon-border-radius-sm: $sizer-xs !default;
+
+/// Styles for @backbase/accessgroup-shared-ui (Entitlements) - Entitlements Icon Component
+/// This component is used to display different entity types (Legal entity, Job roles, Approval, etc) over the entitlements.
+/// This icon will be used across all the entitlements capabilities.
+///
+/// @name bb-entitlements-icon
+///
+/// @example html
+/// <div class="bb-entitlements-icon">
+///   <bb-icon-ui  size="md" name="account"></bb-icon-ui>
+/// </div>
+
+.bb-entitlements-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $entitlements-icon-size;
+  height: $entitlements-icon-size;
+  background-color: $entitlements-icon-bg;
+  border-radius: $entitlements-icon-border-radius;
+}
+
+.bb-entitlements-icon--md {
+  width: $entitlements-icon-size-md;
+  height: $entitlements-icon-size-md;
+}
+
+.bb-entitlements-icon--sm {
+  width: $entitlements-icon-size-sm;
+  height: $entitlements-icon-size-sm;
+  border-radius: $entitlements-icon-border-radius-sm;
+}
+
+.bb-entitlements-icon--grey {
+  background-color: $entitlements-icon-bg-grey;
+}
+
+.bb-entitlements-icon--dark {
+  background-color: $entitlements-icon-bg-dark;
+  color: $color-neutral-white;
+}

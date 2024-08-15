@@ -1,0 +1,68 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+//// <div class="bb-stack bb-stack--wrap">
+////   <div class="bb-stack__box-item bb-manage-pockets-create-details__modal-image-item"">
+////     <div class="bb-block bb-block--sm">
+////       <img class="bb-manage-pockets-create-details__pocket-image" [src]="imgUrl">
+////     </div>
+////   </div>
+////   <div class="bb-stack__box-item bb-manage-pockets-create-details__modal-image-item"">...</div>
+//// </div>
+
+$manage-pockets-create-details-input-container-width: 100% !default;
+$manage-pockets-create-details-input-container-max-width: 300px !default;
+
+$manage-pockets-create-details-image-container-bottom-block-end: $spacer-xl !default;
+$manage-pockets-create-details-image-height: 118px !default;
+$manage-pockets-create-details-image-width: 118px !default;
+$manage-pockets-create-details-image-border-radius: $border-radius-md !default;
+$manage-pockets-create-details-image-active-border: 2px solid $color-primary !default;
+$manage-pockets-create-details-image-active-box-shadow: $box-shadow-sm !default;
+
+$manage-pockets-create-details-pocket-stack-item-bottom-block-end: $sizer-lg !default;
+
+$manage-pockets-create-details-pocket-stack-item-focus-border-color: $input-border-color !default;
+$manage-pockets-create-details-pocket-stack-item-focus-border-radius: $border-radius-md !default;
+$manage-pockets-create-details-pocket-stack-item-focus-outline: $input-focus-border-primary !default;
+$manage-pockets-create-details-pocket-stack-item-focus-outline-offset: $input-focus-outline-offset-distance !default;
+$manage-pockets-create-details-pocket-stack-item-focus-box-shadow: $input-box-shadow !default;
+
+.bb-manage-pockets-create-details__pocket-image-container {
+  @include media-breakpoint-down(md) {
+    margin-block-end: $manage-pockets-create-details-image-container-bottom-block-end;
+  }
+}
+
+.bb-manage-pockets-create-details__pocket-image {
+  width: $manage-pockets-create-details-image-width;
+  height: $manage-pockets-create-details-image-height;
+  border-radius: $manage-pockets-create-details-image-border-radius;
+  cursor: pointer;
+
+  &.active {
+    border: $manage-pockets-create-details-image-active-border;
+    box-shadow: $manage-pockets-create-details-image-active-box-shadow;
+  }
+}
+
+.bb-manage-pockets-create-details__input-container {
+  width: $manage-pockets-create-details-input-container-width;
+  @include media-breakpoint-up(sm) {
+    max-width: $manage-pockets-create-details-input-container-max-width;
+  }
+}
+
+.bb-manage-pockets-create-details__modal-image-item {
+  margin-block-end: $manage-pockets-create-details-pocket-stack-item-bottom-block-end;
+  cursor: pointer;
+  &:focus {
+    border-color: $manage-pockets-create-details-pocket-stack-item-focus-border-color;
+    border-radius: $manage-pockets-create-details-pocket-stack-item-focus-border-radius;
+    outline: $manage-pockets-create-details-pocket-stack-item-focus-outline;
+    outline-offset: $manage-pockets-create-details-pocket-stack-item-focus-outline-offset;
+    box-shadow: $manage-pockets-create-details-pocket-stack-item-focus-box-shadow;
+  }
+}

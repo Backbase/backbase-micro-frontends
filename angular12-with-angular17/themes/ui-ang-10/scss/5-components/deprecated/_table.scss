@@ -1,0 +1,44 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+$table-padding-flush: $sizer-lg !default; // for when table is flush inside a bb-card
+$table-padding: $sizer-md;
+
+.bb-table--flush {
+  th:first-child,
+  td:first-child {
+    padding-left: $table-padding-flush;
+  }
+
+  th:last-child,
+  td:last-child {
+    padding-right: $table-padding-flush;
+  }
+}
+
+bb-table-checkbox,
+bb-table-header-checkbox {
+  .bb-input-checkbox-label {
+    .bb-input-checkbox {
+      + .bb-input-checkbox-content {
+        &::before,
+        &::after {
+          top: calc(50% - #{$table-padding});
+        }
+      }
+    }
+  }
+}
+
+.bb-table--compact {
+  font-size: 14px;
+}
+
+/* Generates class for different row background states in a table like
+ *`.table-row-primary`, `.table-row-danger` etc */
+@each $state, $bg-value in $theme-table-row-colors {
+  @include table-variant($state, $bg-value);
+}

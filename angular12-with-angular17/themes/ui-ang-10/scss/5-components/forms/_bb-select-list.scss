@@ -1,0 +1,135 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+$select-list-placeholder-padding-vertical-xs: $sizer-xs !default;
+$select-list-placeholder-padding-vertical-sm: $sizer-sm !default;
+$select-list-placeholder-padding-horizontal: $sizer-md !default;
+$select-list-multiple-value-margin-bottom: $spacer-xs !default;
+$select-list-border-radius: $border-radius-sm !default;
+$select-list-focus-box-shadow: none !default;
+
+/// An item selector
+/// Will have the visual styling of an input while having a full list of items to select.
+/// Can select a single item or multiple items
+///
+/// @name bb-select-list
+///
+/// @example html - <multiple select>
+/// <ng-select class="bb-select-list ng-select ng-select-multiple">
+///   <div class="ng-select-container">
+///     <div class="ng-value-container">
+///       <div class="ng-placeholder">Search or select items</div>
+///       <div class="ng-input">
+///         <input role="combobox" type="text">
+///       </div>
+///     </div>
+///     <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+///   </div>
+/// </ng-select>
+///
+/// @example html - <single select>
+/// <ng-select class="bb-select-list ng-select ng-select-single">
+///   ...
+/// </ng-select>
+
+.bb-select-list {
+  &.ng-select {
+    &.ng-select-single,
+    &.ng-select-multiple {
+      .ng-select-container {
+        opacity: 1;
+        background-color: $color-neutral-white;
+        display: flex;
+        padding: 0;
+        border-radius: $select-list-border-radius;
+
+        .ng-value-container {
+          padding-block-start: $select-list-placeholder-padding-vertical-sm;
+          padding-block-end: $select-list-placeholder-padding-vertical-xs;
+          padding-inline-start: $select-list-placeholder-padding-horizontal;
+
+          // move this inside ng-value-container to remove !import
+          .ng-placeholder {
+            inset-block-start: $select-list-placeholder-padding-vertical-sm;
+            padding: 0;
+            color: $color-neutral-dark;
+          }
+        }
+
+        .ng-clear-wrapper {
+          .ng-clear {
+            color: $color-neutral-dark;
+          }
+        }
+      }
+    }
+
+    &.ng-select-single {
+      .ng-select-container {
+        height: 40px;
+
+        .ng-value-container {
+          .ng-input {
+            padding-inline-start: $select-list-placeholder-padding-horizontal;
+          }
+        }
+      }
+    }
+
+    &.ng-select-multiple {
+      .ng-select-container {
+        height: inherit;
+
+        .ng-value-container {
+          // made top/bottom spaces equal for selected items
+          .ng-value {
+            margin-block-end: $select-list-multiple-value-margin-bottom;
+          }
+
+          .ng-input {
+            z-index: unset;
+            flex: unset;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .ng-dropdown-panel.ng-select-bottom {
+      border-end-end-radius: $select-list-border-radius;
+      border-end-start-radius: $select-list-border-radius;
+
+      .ng-option.ng-option-disabled {
+        color: $color-neutral-dark;
+      }
+      .ng-dropdown-panel-items {
+        padding-block-end: $sizer-sm;
+        .ng-option.ng-option-marked {
+          border: $input-focus-border-primary;
+        }
+      }
+    }
+
+    &.ng-invalid.ng-touched {
+      .ng-select-container {
+        border: $input-invalid-border;
+      }
+    }
+    &.ng-select-focused {
+      &:not(.ng-select-opened) > .ng-select-container {
+        overflow: visible;
+        border-color: $input-border-color;
+        box-shadow: $select-list-focus-box-shadow;
+        > .ng-value-container::before {
+          position: absolute;
+          inset: $input-focus-outline-distance * 2;
+          border: $input-focus-border-primary;
+          border-radius: $select-list-border-radius;
+          content: "";
+        }
+      }
+    }
+  }
+}

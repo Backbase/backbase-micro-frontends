@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/red
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-red-lightest: $chart-color-1-lightest; // #FADCD9
+$color-light-red-lighter: $chart-color-1-lighter; // #FADCD9
+$color-light-red-default: $chart-color-1; // #E01700
+$color-light-red-darker: $chart-color-1-darker; // #E01700
+$color-light-red-darkest: $chart-color-1-darkest; // #7B0D00
+$color-light-red-on-color: $color-neutral-white;

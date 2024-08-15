@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$account-groups-selector-min-width: 100px !default;
+
+/// Class for ng-selector component for selecting multiple account groups
+///
+/// @name bb-account-groups-selector
+///
+/// @example html
+///   <ng-select class="bb-account-groups-selector ng-select ng-select-multiple">
+///     <div class="ng-select-container">
+///       <div class="ng-value-container">
+///         <div class="ng-placeholder">Search or select countries</div>
+///         <div class="ng-input">
+///           <input role="combobox" type="text">
+///         </div>
+///       </div>
+///       <span class="ng-arrow-wrapper"><span class="ng-arrow"></span></span>
+///     </div>
+///   </ng-select>
+
+.bb-account-groups-selector {
+  &.ng-select.ng-select-multiple {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-input {
+          flex: 1;
+          min-width: $account-groups-selector-min-width;
+        }
+      }
+    }
+  }
+}

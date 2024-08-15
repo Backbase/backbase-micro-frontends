@@ -1,0 +1,218 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// Set the aspect-ratio-height, used to be divided by the aspect-ratio-width to determine total aspect ratio
+@use "sass:math";
+
+$payment-card-aspect-ratio-height: 206 !default;
+
+/// Set the aspect-ratio-width, used to divide the aspect-ratio-height to determine total aspect ratio
+$payment-card-aspect-ratio-width: 322 !default;
+
+$payment-card-aspect-ratio: math.div(
+  $payment-card-aspect-ratio-height,
+  $payment-card-aspect-ratio-width
+) !default;
+
+$payment-card-logo-top: math.div(24, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-logo-left: math.div(24, $payment-card-aspect-ratio-width) * 100% !default;
+$payment-card-logo-width: math.div(47, $payment-card-aspect-ratio-width) * 100% !default;
+
+$payment-card-vendor-right: math.div(19, $payment-card-aspect-ratio-width) * 100% !default;
+$payment-card-vendor-top: math.div(24, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-vendor-width: math.div(42, $payment-card-aspect-ratio-width) * 100% !default;
+
+$payment-card-number-top: math.div(75, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-number-left: math.div(19, $payment-card-aspect-ratio-width) * 100% !default;
+
+$payment-card-name-top: math.div(109, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-name-left: math.div(19, $payment-card-aspect-ratio-width) * 100% !default;
+
+$payment-card-expiration-date-bottom: math.div(19, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-expiration-date-left: math.div(19, $payment-card-aspect-ratio-width) * 100% !default;
+
+$payment-card-type-virtual-bottom: math.div(19, $payment-card-aspect-ratio-height) * 100% !default;
+$payment-card-type-virtual-right: math.div(19, $payment-card-aspect-ratio-width) * 100% !default;
+$payment-card-type-virtual-padding: $spacer-xs $spacer-sm !default;
+$payment-card-type-virtual-border-radius: $spacer-xs !default;
+$payment-card-type-virtual-background-color: rgba(
+  $color: $color-neutral-black,
+  $alpha: 0.2,
+) !default;
+
+/// Private default backgrounds which can be overwritten by custom-backgrounds with the same key
+$payment-card-default-background-map: (
+  "primary-card": linear-gradient(0deg, #0062c4 0%, #00b2d1 100%),
+  "blue-card": linear-gradient(0deg, #00a1e0 0%, #00d9d9 100%),
+  "black-card": linear-gradient(0deg, #181e41 0%, #23345e 100%),
+  "gold-card": linear-gradient(0deg, #f27d09 0%, #ffac09 100%),
+  "green-card": linear-gradient(0deg, #2e7d32 0%, #2e7d32 100%),
+  "card-red": linear-gradient(0deg, #b8213f 0%, #c22327 100%),
+  "darkorange-card": linear-gradient(0deg, #e63b0b 0%, #f2780c 100%),
+  "darkred-card": linear-gradient(0deg, #49074e 0%, #a81e5c 100%),
+  "darkviolet-card": linear-gradient(0deg, #2f0642 0%, #49074e 100%),
+);
+
+/// Private combined backgroud-colors
+$payment-card-background-map: map-merge(
+  $payment-card-default-background-map,
+  $payment-card-custom-background-map
+);
+
+/// Represents a payment card, showing information like name, number and expiration date.
+///
+/// The background of the payment card is controlled by modifiers named by the payment card name,
+/// for example `bb-payment-card--blue-card`.  These names and their configurations are set up in
+/// the `$payment-card-background-map`.
+///
+/// @name bb-payment-card
+///
+/// @example html
+///   <div class="bb-payment-card">
+///     <div class="bb-payment-card__container">
+///       <div class="bb-payment-card__logo">
+///         <div class="bb-logo"></div>
+///       </div>
+///       <div class="bb-payment-card__vendor">
+///         <div class="bb-block--xs">
+///           <bb-card-vendor-ui></bb-card-vendor-ui>
+///         </div>
+///         <div class="bb-payment-card__type">
+///           Credit
+///         </div>
+///       </div>
+///       <div class="bb-payment-card__number">
+///         **** **** **** 1234
+///       </div>
+///       <div class="bb-payment-card__name">
+///         Ricardo Peterson
+///       </div>
+///       <div class="bb-payment-card__expiration-date">
+///         <div class="bb-payment-card__expiration-date-label">
+///           VALID THRU
+///         </div>
+///         <span class="bb-payment-card__expiration-date-date">
+///           03/21
+///         </span>
+///       </div>
+///       <div class="bb-payment-card__virtual-tag">
+///         Virtual
+///       </div>
+///     </div>
+///   </div>
+.bb-payment-card {
+  position: relative;
+  direction: ltr;
+
+  box-sizing: content-box;
+  width: 100%;
+  min-width: $payment-card-min-width;
+  max-width: $payment-card-max-width;
+
+  background-image: map-get($payment-card-background-map, "primary-card");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-radius: $payment-card-border-radius;
+  box-shadow: $payment-card-box-shadow;
+}
+
+.bb-payment-card__container {
+  padding-top: $payment-card-aspect-ratio * 100%;
+}
+
+.bb-payment-card__logo {
+  position: absolute;
+  top: $payment-card-logo-top;
+  left: $payment-card-logo-left;
+  width: $payment-card-logo-width;
+}
+
+.bb-payment-card__vendor {
+  position: absolute;
+  right: $payment-card-vendor-right;
+  top: $payment-card-vendor-top;
+  width: $payment-card-vendor-width;
+}
+
+.bb-payment-card__number {
+  position: absolute;
+  top: $payment-card-number-top;
+  left: $payment-card-number-left;
+
+  color: $payment-card-color;
+  font-size: $payment-card-number-font-size;
+  @include setOptional(font-weight, $payment-card-number-font-weight);
+}
+
+.bb-payment-card__name {
+  position: absolute;
+  top: $payment-card-name-top;
+  left: $payment-card-name-left;
+  right: $payment-card-name-left;
+
+  color: $payment-card-color;
+  @include setOptional(font-size, $payment-card-name-font-size);
+  font-weight: $payment-card-name-font-weight;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bb-payment-card__type {
+  color: $payment-card-color;
+  font-size: $payment-card-label-font-size;
+  text-align: center;
+  @include setOptional(font-weight, $payment-card-label-font-weight);
+}
+
+.bb-payment-card__virtual-tag {
+  position: absolute;
+  bottom: $payment-card-type-virtual-bottom;
+  right: $payment-card-type-virtual-right;
+
+  padding: $payment-card-type-virtual-padding;
+  border-radius: $payment-card-type-virtual-border-radius;
+
+  color: $payment-card-color;
+  font-size: $payment-card-label-font-size;
+  @include setOptional(font-weight, $payment-card-label-font-weight);
+
+  background-color: $payment-card-type-virtual-background-color;
+}
+
+.bb-payment-card-expiration-date, // this class kept for backwards compatibility
+.bb-payment-card__expiration-date {
+  position: absolute;
+  bottom: $payment-card-expiration-date-bottom;
+  left: $payment-card-expiration-date-left;
+
+  color: $payment-card-color;
+}
+
+.bb-payment-card-expiration-date__label, // this class kept for backwards compatibility
+.bb-payment-card__expiration-date-label {
+  font-size: $payment-card-label-font-size;
+  @include setOptional(font-weight, $payment-card-label-font-weight);
+}
+
+.bb-payment-card-expiration-date__date, // this class kept for backwards compatibility
+.bb-payment-card__expiration-date-date {
+  font-weight: $payment-card-expiration-date-font-weight;
+  font-size: $payment-card-expiration-date-font-size;
+}
+
+@each $background, $value in $payment-card-background-map {
+  .bb-payment-card.bb-payment-card-#{$background}, // this class kept for backwards compatibility
+  .bb-payment-card--#{$background} {
+    background: $value;
+  }
+}
+
+.bb-payment-card-shadow {
+  border-radius: $payment-card-border-radius;
+  box-shadow: $payment-card-box-shadow;
+}

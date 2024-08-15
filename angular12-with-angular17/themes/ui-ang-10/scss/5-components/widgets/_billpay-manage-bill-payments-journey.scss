@@ -1,0 +1,161 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-billpay-multiple-bills-bg-color: $color-neutral-white !default;
+$bb-billpay-multiple-bills-board-bg-color: $background-color-neutral !default;
+$bb-billpay-multiple-bills-desc-border-radius: calc(#{$border-radius} * 2) !default;
+$bb-billpay-multiple-bills-card-margin-bottom: calc(#{$spacer} * 8) !default;
+$bb-billpay-multiple-bills-line-height: 2.5 !default;
+$bb-billpay-multiple-bills-selected-item-bg: $color-neutral-light !default;
+
+/// <footer class='bb-billpay-multiple-bills-board bb-stack bb-stack--center'>
+///    <div class="bb-stack bb-stack--wrap container">
+///     <div class="bb-stack__item bb-stack__item--fill--md-up">
+///       <p class="bb-block bb-block--xs">Total Amount</p>
+///       <span class="bb-heading-1">$00.00</span>
+///     </div>
+///     <div class="bb-stack__item bb-billpay-multiple-bills-board-desc">
+//        <div class="card card-sm card--shadowless bb-inline-stack bb-billpay-multiple-bills-board-desc__body">
+//          <div class="card-body">
+///          <span class="bb-stack bb-d-md-none">
+///            <bb-icon-ui name="dns" size="md" color="primary"></bb-icon-ui>
+///          </span>
+///          <div class="bb-inline-stack bb-d-none bb-d-md-flex">
+///            <bb-icon-ui name="dns" size="md" class="bb-stack__item bb-stack__item--spacing-sm"></bb-icon-ui>
+///            <div class="bb-table-subtitle">You can start by filling the amounts on the bills you would like to pay</div>
+///          </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </footer>
+
+//   <div class="bb-d-none bb-d-lg-block bb-billpay-multiple-bills-form__titles">
+//     <div class="bb-billpay-multiple-bills__grid-container">
+//       <div class="bb-billpay-multiple-bills__grid-item">
+//         <span class="bb-subtitle bb-text-semi-bold">Payee</span>
+//       </div>
+//       <div class="bb-billpay-multiple-bills__grid-item bb-stack__item bb-stack__item--spacing-md bb-text-align-right">
+//         <span class="bb-subtitle bb-text-semi-bold">Outstanding</span>
+//       </div>
+//       <div class="bb-billpay-multiple-bills__grid-item bb-stack">
+//         <span class="bb-subtitle bb-text-semi-bold bb-stack__item bb-stack__item--spacing-xs">Send Date </span>
+//       </div>
+//       <div class="bb-billpay-multiple-bills__grid-item">
+//         <span class="bb-subtitle bb-text-semi-bold">Amount</span>
+//       </div>
+//     </div>
+//   </div>
+
+.bb-billpay-multiple-bills-form__titles {
+  padding: $sizer-sm 0;
+  border-block-end: $border;
+}
+
+.bb-billpay-multiple-bills-list-item {
+  .bb-billpay-multiple-bills__grid-container {
+    padding-block: $sizer-md;
+    padding-inline: 0;
+  }
+
+  &:not(:last-child) .bb-billpay-multiple-bills-list-item__content {
+    border-block-end: $border;
+  }
+
+  .bb-product-selector {
+    border: $border;
+    border-radius: $border-radius-sm;
+    box-shadow: none;
+
+    .bb-product-selector__item {
+      padding-block: $sizer-sm;
+      padding-inline: $sizer-md;
+      border-radius: $border-radius-sm;
+    }
+    .bb-product-selector__dropdown-item {
+      padding-block-start: $sizer-sm;
+      padding-block-end: 0;
+      padding-inline: $sizer-md;
+
+      &:after {
+        margin-block-start: $spacer-sm;
+      }
+    }
+  }
+
+  .bb-amount-input__symbol {
+    padding-inline-start: $sizer-sm;
+  }
+}
+
+.bb-billpay-multiple-bills-selector--selected-bg {
+  background-color: $bb-billpay-multiple-bills-selected-item-bg;
+}
+
+.bb-billpay-multiple-bills-list-item__collapsible-area {
+  width: 100%;
+  padding: $sizer-md;
+  background-color: $bb-billpay-multiple-bills-board-bg-color;
+}
+
+.bb-billpay-multiple-bills__grid-container {
+  display: grid;
+  grid-template-columns: 4fr repeat(2, 1.3fr) repeat(2, 2fr) 1fr;
+  column-gap: $spacer-md;
+}
+
+.bb-billpay-multiple-bills__grid-item--higher {
+  line-height: $bb-billpay-multiple-bills-line-height;
+}
+
+.bb-billpay-multiple-bills__grid-item,
+.bb-billpay-multiple-bills__tooltip {
+  vertical-align: top;
+}
+
+@include media-breakpoint-down(lg) {
+  .bb-billpay-multiple-bills__grid-container {
+    grid-template-columns: repeat(2, 2fr);
+    column-gap: 0;
+  }
+  .bb-billpay-multiple-bills__grid-item--second-row {
+    grid-row: 2 / 3;
+    margin-block-start: $spacer-sm;
+  }
+  .bb-billpay-multiple-bills__grid-item {
+    margin-inline-end: 0;
+  }
+}
+
+.bb-billpay-multiple-bills-board {
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  z-index: 10;
+  padding-block: $spacer-md;
+  padding-inline: $spacer-sm;
+  background-color: $bb-billpay-multiple-bills-bg-color;
+
+  .bb-billpay-multiple-bills-board-desc {
+    flex-grow: 2;
+    .bb-billpay-multiple-bills-board-desc__body {
+      background-color: $bb-billpay-multiple-bills-board-bg-color;
+      border-radius: $bb-billpay-multiple-bills-desc-border-radius;
+    }
+  }
+}
+
+.bb-billpay-multiple-bills {
+  display: inline-block;
+  margin-block-end: $bb-billpay-multiple-bills-card-margin-bottom;
+}
+
+.bb-billpay-sso-iframe {
+  display: none;
+  min-width: 100%;
+  overflow: hidden;
+  border: 0;
+}

@@ -1,0 +1,24 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+
+.portfolio-summary-instrument__keystatistics-field {
+  flex: 0 0 25%;
+}
+
+.portfolio-summary-instrument__description-field {
+  flex: 0 0 20%;
+}
+
+.portfolio-summary-instrument__details-field {
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.portfolio-summary-instrument-view-performance {
+  &--height {
+    height: 300px;
+  }
+}

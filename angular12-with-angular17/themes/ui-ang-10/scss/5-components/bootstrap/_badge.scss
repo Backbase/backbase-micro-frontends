@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$badge-colors: (
+  "primary": (
+    "background": $color-primary-lightest,
+    "color": $color-primary-darkest,
+  ),
+  "secondary": (
+    "background": $color-neutral-grey,
+    "color": $color-neutral-black,
+  ),
+  "success": (
+    "background": $color-success-lightest,
+    "color": $color-success-darkest,
+  ),
+  "partial-success": (
+    "background": $color-neutral-white,
+    "color": $color-success,
+  ),
+  "info": (
+    "background": $color-info-lightest,
+    "color": $color-info-darkest,
+  ),
+  "warning": (
+    "background": $color-warning-lightest,
+    "color": $color-warning-darkest,
+  ),
+  "danger": (
+    "background": $color-danger-lightest,
+    "color": $color-danger-darkest,
+  ),
+  "neutral-light": (
+    "background": $color-neutral-lighter,
+    "color": $color-neutral-greyest,
+  ),
+) !default;
+
+@import "../../../../bootstrap5/scss/badge";
+
+// Overrides not possible through bootstrap variables
+@each $color, $value in $badge-colors {
+  .badge-#{$color} {
+    @include badge-variant(map-get($value, "background"));
+    color: map-get($value, "color");
+  }
+}
+
+// Overrides not possible through bootstrap variables
+.badge {
+  line-height: $badge-line-height;
+
+  abbr {
+    text-decoration: none;
+  }
+}

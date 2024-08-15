@@ -1,0 +1,62 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+///
+/// Styles for Portfolio Summary common components
+/// @name bb-portfolio-summary-settings
+///
+/// @example html
+///
+///<div ngbDropdownMenu class="bb-portfolio-summary-settings__dropdown-menu row" >
+///     <div class="bb-portfolio-summary-settings__portfolios-list bb-block bb-block--sm" >
+///     ...
+///     </div>
+///</div>
+
+$bb-portfolio-summary-legend-marker-size: 0.625rem !default;
+$bb-portfolio-summary-legend-marker-border-radius: 0.125rem !default;
+$bb-portfolio-summary-allocations-progressbar-negative-bg-color: $color-danger !default;
+$bb-portfolio-summary-export-dropdown-margin: 0.5rem !default;
+$bb-bb-portfolio-summary-settings-dropdown-menu-width: 30rem !default;
+$portfolio-summary-settings-portfolios-list-height: 24vh !default;
+$bb-portfolio-summary-filter-background-color: $color-neutral-lighter !default;
+
+.bb-portfolio-summary-legend__marker {
+  width: $bb-portfolio-summary-legend-marker-size;
+  height: $bb-portfolio-summary-legend-marker-size;
+  border-radius: $bb-portfolio-summary-legend-marker-border-radius;
+}
+
+.bb-portfolio-summary-progressbar--negative {
+  justify-content: flex-end;
+
+  .progress-bar {
+    background-color: $bb-portfolio-summary-allocations-progressbar-negative-bg-color;
+  }
+}
+
+.bb-portfolio-summary-common-export-dropdown {
+  &__icon--margin,
+  &__status--margin {
+    margin-right: $bb-portfolio-summary-export-dropdown-margin;
+  }
+}
+
+.bb-portfolio-summary-settings__dropdown-menu {
+  width: $bb-bb-portfolio-summary-settings-dropdown-menu-width;
+  padding: $spacer-md;
+}
+
+.bb-portfolio-summary-settings__dropdown-menu--selected {
+  background-color: $color-primary-lightest;
+}
+
+.portfolio-summary-settings__portfolios-list {
+  max-height: $portfolio-summary-settings-portfolios-list-height;
+  overflow: auto;
+}
+
+.portfolio-summary-filter--background-color {
+  background-color: $bb-portfolio-summary-filter-background-color;
+}

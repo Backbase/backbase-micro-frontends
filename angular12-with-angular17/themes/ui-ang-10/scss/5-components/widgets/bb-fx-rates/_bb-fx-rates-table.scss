@@ -1,0 +1,25 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-fx-rates-table-container-min-height: 20rem !default;
+$bb-fx-rates-table-wrapper-min-width: 12rem !default;
+$bb-fx-rates-table-header-action-width: 4rem !default;
+
+.bb-fx-rates-table {
+  table-layout: fixed;
+}
+
+.bb-fx-rates-table-wrapper {
+  min-width: $bb-fx-rates-table-wrapper-min-width;
+}
+
+.bb-fx-rates-table-container {
+  min-height: $bb-fx-rates-table-container-min-height;
+}
+
+.bb-fx-rates-table__header-action {
+  width: $bb-fx-rates-table-header-action-width;
+}

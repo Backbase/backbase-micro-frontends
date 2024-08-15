@@ -1,0 +1,40 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+/// Accounts overview paginator
+///
+/// @example html
+/// <div class="accounts-overview-paginator">
+///   <div class="bb-stack bb-stack--center">
+///     <button class="bb-stack__item">Load More</button>
+///   </div>
+///   <div class="accounts-overview-paginator__pagination">
+///     <div class="bb-stack bb-stack--center">
+///       <button class="bb-stack__item">Prev</button>
+///       <button class="bb-stack__item">Next</button>
+///     </div>
+///     <div class="accounts-overview-paginator__items-size-dropdown">
+///       <div class="dropdown-menu" style="display: none">
+///         <button>12 items</button>
+///         <button>24 items</button>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.accounts-overview-paginator__pagination {
+  position: relative;
+}
+
+.accounts-overview-paginator__items-size-dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .dropdown-menu {
+    min-width: auto;
+  }
+}

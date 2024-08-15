@@ -1,0 +1,81 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+.h-100vh {
+  height: 100vh;
+}
+
+.w-100vw {
+  width: 100vw;
+}
+
+// helper class to make an element fill the height of its parent
+// useful when you want to have multiple items with the same height, wrapped in col-x classes inside a row
+.h-fill {
+  height: 100%;
+}
+
+$sizers: (
+  0: 0,
+  1: $sizer-xs,
+  2: $sizer-sm,
+  3: $sizer-md,
+  4: $sizer-lg,
+  5: $sizer-xl,
+);
+
+// Recreate Bootstrap's padding utility classes based on `$sizers` instead of `$spacers`.
+// The following loop was forked from `bootstrap/scss/utilities/spacing`
+/* stylelint-disable declaration-no-important*/
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (padding: p) {
+      @each $size, $length in $sizers {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+  }
+}
+
+// Implementation of classes with responsive width and height sizes
+// Examples: .w-md-50, .h-lg-100 etc.
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} {
+          #{$prop}: $length !important;
+        }
+      }
+    }
+  }
+}
+/* stylelint-enable declaration-no-important*/

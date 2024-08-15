@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.bb-input-date-divided {
+  display: flex;
+  .bb-input-date-divided-day {
+    width: 10%;
+    min-width: 60px;
+    margin-left: $spacer-sm;
+  }
+
+  .bb-input-date-divided-month {
+    width: 10%;
+    min-width: 60px;
+    margin-left: $spacer-sm;
+  }
+
+  .bb-input-date-divided-year {
+    width: 20%;
+    min-width: 60px;
+    margin-left: $spacer-sm;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}

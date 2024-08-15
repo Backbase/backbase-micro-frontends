@@ -1,0 +1,69 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$payments-chips-color: $color-primary !default;
+$payments-chips-font-size: $font-size-base !default;
+$payments-chips-font-weight: $font-weight-regular !default;
+$payments-chips-line-height: 25px !default;
+$payments-chips-padding: 4px 8px 4px 12px !default;
+$payments-chips-border-radius: 50px !default;
+$payments-chips-border-color: $color-primary !default;
+$payments-chips-margin: 8px !default;
+$payments-chips-background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.85) 100%
+  ),
+  #295eff !default;
+$payments-chips-close-padding-start: 4px !default;
+$payments-chips-close-font-weight: normal !default;
+$payments-chips-close-font-size: 0.6rem !default;
+$payments-chips-close-display: inline-flex !default;
+$payments-chips-close-vert-align: middle !default;
+
+/// Displays a chip with close button
+///
+/// @name bb-payment-card-back
+///
+/// @example html
+/// <div class="bb-chip">
+///   <span >Label</span>
+///   <button
+///     type="button"
+///     class="bb-chip__close">
+///     <bb-icon-ui color="muted" name="clear" size="sm"></bb-icon-ui>
+///   </button>
+/// </div>
+.bb-chip {
+  color: $payments-chips-color;
+
+  font-size: $payments-chips-font-size;
+  font-weight: $payments-chips-font-weight;
+  line-height: $payments-chips-line-height;
+
+  display: inline-block;
+  padding: $payments-chips-padding;
+  align-items: center;
+  border-radius: $payments-chips-border-radius;
+  border: 1px solid var(--light-mode-primary-default, $payments-chips-border-color);
+  background: $payments-chips-background;
+  margin-block-end: $payments-chips-margin;
+  margin-inline-end: $payments-chips-margin;
+
+  &__close {
+    padding-top: 0;
+    padding-inline-start: $payments-chips-close-padding-start;
+    padding-bottom: 0;
+    padding-inline-end: 0;
+    font-weight: $payments-chips-close-font-weight;
+    font-size: $payments-chips-close-font-size;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    display: $payments-chips-close-display;
+    vertical-align: $payments-chips-close-vert-align;
+  }
+}

@@ -1,0 +1,13 @@
+////
+/// Custom icons (global)
+/// @group base
+/// @access private
+////
+
+$icon-custom-category-color: $color-secondary !default;
+
+:root {
+  --icon-custom-category-color: #{$icon-custom-category-color};
+}
+
+$icon-custom-category-color: var(--$icon-custom-category-color);

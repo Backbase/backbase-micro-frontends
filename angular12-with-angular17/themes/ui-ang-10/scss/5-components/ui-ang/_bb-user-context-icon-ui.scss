@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+.bb-user-context-icon-ui {
+  width: 4rem;
+  height: 3rem;
+  padding-inline-end: 1rem;
+  background-color: $color-primary-darkest;
+  -webkit-mask-image: url(#{$path-bb-images}/bb-service-agreement-ui/service-agreement-icon.svg);
+  mask-image: url(#{$path-bb-images}/bb-service-agreement-ui/service-agreement-icon.svg);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  transform: scaleX(var(--icon-direction));
+  [dir="rtl"] & {
+    justify-content: flex-end;
+  }
+  &.context-icon--home {
+    background-color: $color-primary;
+  }
+
+  &.context-icon--disabled {
+    background-color: $color-neutral-greyest;
+  }
+
+  .bb-user-context-icon-text {
+    font-weight: $font-weight-semi-bold;
+    font-size: $font-size-h3;
+    line-height: $line-height-base;
+    letter-spacing: 0;
+  }
+}
+
+.bb-user-context-icon-ui-md {
+  width: 3.25rem;
+  height: 2.5rem;
+  padding-inline-end: 0.75rem;
+
+  .bb-user-context-icon-text {
+    font-size: $font-size-base;
+  }
+}
+
+.bb-user-context-icon-ui-sm {
+  width: 2rem;
+  height: 1.5rem;
+  padding-inline-end: $sizer-sm;
+
+  .bb-user-context-icon-text {
+    font-size: $font-size-subheader;
+    line-height: 1;
+  }
+}
+
+.user-context-menu-info__avatar {
+  padding-inline: 0 $spacer-sm;
+}

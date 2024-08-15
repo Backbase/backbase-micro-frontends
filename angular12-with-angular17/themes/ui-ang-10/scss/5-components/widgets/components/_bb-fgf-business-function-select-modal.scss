@@ -1,0 +1,52 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$fgf-modal-body-padding-vertical: $sizer-lg !default;
+$fgf-modal-header-computed-height: 4.25rem !default; // adjust this if the header computed height can be bigger
+$fgf-modal-footer-computed-height: 5rem !default; // adjust this if the footer computed height can be bigger
+$fgf-modal-content-top: 2rem !default; // distance from the top of the viewport
+
+$fgf-business-function-select-max-height: calc(
+  100vh -
+    (
+      #{$fgf-modal-header-computed-height} + #{$fgf-modal-footer-computed-height} + #{2 *
+        $fgf-modal-body-padding-vertical} + #{2 * $fgf-modal-content-top}
+    )
+) !default;
+
+$fgf-business-function-select-background-color: $color-neutral-white !default;
+
+/// Styles for Function Group Form Business Function Select Modal
+/// This component shows visually tree of business function in dialog modal.
+///
+/// @name bb-fgf-business-function-select
+///
+/// @example html
+/// <div class="modal-dialog">
+///   <div class="modal-content">
+///     <div class="modal-header">
+///       <div class="modal-title">
+///         Title
+///       </div>
+///     </div>
+///     <div class="modal-body">
+///       <div class="bb-fgf-business-function-select">
+///
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-fgf-business-function-select {
+  position: relative;
+  max-height: $fgf-business-function-select-max-height;
+  overflow-y: auto;
+}
+
+.bb-fgf-business-function-select__sticky-header {
+  padding-bottom: $sizer-sm;
+  background: $fgf-business-function-select-background-color;
+}

@@ -1,0 +1,11 @@
+////
+/// Typography (global)
+/// @group typography
+/// @access private
+////
+
+:root {
+  --color-heading: #{$color-heading};
+}
+
+$color-heading: var(--color-heading);

@@ -1,0 +1,127 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$dp-input-btn-hover-bg: $color-neutral-white !default;
+
+.bb-input-datepicker-ui {
+  input.datepicker-input-hidden,
+  label.datepicker-input-hidden {
+    width: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 0;
+    border: 0;
+    outline: 0;
+  }
+
+  label.datepicker-input-hidden {
+    position: absolute;
+    bottom: 0;
+  }
+
+  input.datepicker-input-hidden {
+    visibility: hidden;
+  }
+
+  .input-group > .form-control:not(:first-child) {
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+
+  &.ng-invalid {
+    &.ng-touched {
+      .bb-input-datepicker__input {
+        border-color: $color-danger;
+      }
+    }
+  }
+}
+
+.bb-input-datepicker__wrapper {
+  position: relative;
+
+  > * + .bb-input-datepicker {
+    position: static;
+  }
+}
+
+.bb-input-datepicker__range-split-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  label {
+    width: 100%;
+
+    &:has(+ label) {
+      width: 49%;
+    }
+
+    ~ label {
+      width: 49%;
+    }
+  }
+
+  .input-group {
+    width: 49%;
+  }
+}
+
+.bb-input-datepicker__calendar-opener-button {
+  &.btn-link:not(:disabled):not(.disabled) {
+    &:focus:not(:hover):not(:active),
+    &:active:focus,
+    &:hover {
+      background: $dp-input-btn-hover-bg;
+      border-color: $input-border-color;
+    }
+
+    &:active:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.bb-input-datepicker__input {
+  &.ng-touched.ng-invalid {
+    &:not(:disabled):not(.disabled):focus {
+      border-right: none;
+    }
+
+    & + ngb-datepicker,
+    & {
+      & + .bb-input-datepicker__calendar-opener-button {
+        &:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(
+            .invalid-tooltip
+          ):not(.invalid-feedback) {
+          border-color: $color-danger;
+        }
+      }
+    }
+  }
+}
+.bb-input-datepicker {
+  .btn {
+    &:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(
+        .invalid-tooltip
+      ):not(.invalid-feedback) {
+      &:focus::before {
+        border-radius: inherit;
+      }
+    }
+  }
+
+  // Bootstrap 5 overrides
+  // These overrides styles in https://github.com/twbs/bootstrap/blob/v5.3.0-alpha1/scss/forms/_input-group.scss#L92
+  // which causes rounded corner mid-input box for RTL
+  input:first-child:not(.dropdown-menu):not(.dropdown-item):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    @include border-inline-start-radius($input-border-radius);
+    @include border-inline-end-radius(0);
+  }
+}

@@ -1,0 +1,151 @@
+////
+/// Buttons (global)
+/// @group 1-variables/components/button
+/// @access public
+////
+
+/// Configures the horizontal button padding
+/// @require {variable} $sizer-lg
+$button-padding-horizontal: $sizer-lg !default;
+
+/// Configures the vertical button padding
+/// @require {variable} $sizer-sm
+$button-padding-vertical: $sizer-sm !default;
+
+/// Configures the button font size
+/// @require {variable} $font-size-default
+$button-font-size: $font-size-default !default;
+
+/// Configures the button font weight
+/// @require {variable} $font-weight-regular
+$button-font-weight: $font-weight-semi-bold !default;
+
+/// Configures the button:disabled opacity
+$button-disabled-opacity: 1 !default;
+
+/// Configures the button border width
+/// @require {variable} $border-width
+$button-border-width: $border-width !default;
+
+/// Configures the button border radius
+/// @require {variable} $border-radius-pill
+$button-border-radius: $border-radius-pill !default;
+
+/// Configures the button shadow offset-x
+/// Used to compose $button-box-shadow
+$button-box-shadow-offset-x: 0;
+
+/// Configures the button shadow offset-y
+/// Used to compose $button-box-shadow
+$button-box-shadow-offset-y: 0;
+
+/// Configures the button shadow blur-radius
+/// Used to compose $button-box-shadow
+$button-box-shadow-blur-radius: 0;
+
+/// Configures the button shadow spread-radius
+/// Used to compose $button-box-shadow
+$button-box-shadow-spread-radius: 0;
+
+/// Configures the button shadow color
+/// Used to compose $button-box-shadow
+/// @require {variable} $color-neutral-white
+$button-box-shadow-color: $color-neutral-white;
+
+/// Button shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $button-box-shadow-offset-x
+/// @require {variable} $button-box-shadow-offset-y
+/// @require {variable} $button-box-shadow-blur-radius
+/// @require {variable} $button-box-shadow-spread-radius
+/// @require {variable} $button-box-shadow-color
+$button-box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y
+  $button-box-shadow-blur-radius $button-box-shadow-spread-radius $button-box-shadow-color;
+
+/// Configures the button:active shadow offset-x
+/// Used to compose $button-box-shadow
+/// @require {variable} $focus-box-shadow-offset-x
+$button-active-box-shadow-offset-x: $focus-box-shadow-offset-x !default;
+
+/// Configures the button:active shadow offset-y
+/// Used to compose $button-box-shadow
+/// @require {variable} $focus-box-shadow-offset-y
+$button-active-box-shadow-offset-y: $focus-box-shadow-offset-y !default;
+
+/// Configures the button:active shadow blur-radius
+/// Used to compose $button-box-shadow
+/// @require {variable} $focus-box-shadow-blur-radius
+$button-active-box-shadow-blur-radius: $focus-box-shadow-blur-radius !default;
+
+/// Configures the button:active shadow spread-radius
+/// Used to compose $button-box-shadow
+/// @require {variable} $focus-box-shadow-spread-radius
+$button-active-box-shadow-spread-radius: $focus-box-shadow-spread-radius !default;
+
+/// Configures the button:active shadow color
+/// Used to compose $button-box-shadow
+/// @require {variable} $focus-box-shadow-color
+$button-active-box-shadow-color: $focus-box-shadow-color !default;
+
+/// Button:active shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $button-active-box-shadow-offset-x
+/// @require {variable} $button-active-box-shadow-offset-y
+/// @require {variable} $button-active-box-shadow-blur-radius
+/// @require {variable} $button-active-box-shadow-spread-radius
+/// @require {variable} $button-active-box-shadow-color
+$button-active-box-shadow: $button-active-box-shadow-offset-x $button-active-box-shadow-offset-y
+  $button-active-box-shadow-blur-radius $button-active-box-shadow-spread-radius
+  $button-active-box-shadow-color;
+
+/// Configures the button color-transition (experimental)
+/// Used to configure the default $button-transition
+/// @require {variable} $motion-duration-default
+/// @require {variable} $motion-timing-ease-in-out
+$button-color-transition: color $motion-duration-default $motion-timing-ease-in-out !default;
+
+/// Configures the button background-color-transition (experimental)
+/// Used to configure the default $button-transition
+/// @require {variable} background-color
+/// @require {variable} $motion-duration-default
+/// @require {variable} $motion-timing-ease-in-out
+$button-background-color-transition: background-color $motion-duration-default
+  $motion-timing-ease-in-out !default;
+
+/// Configures the button border-color-transition (experimental)
+/// Used to configure the default  $button-transition
+/// @require {variable} $motion-duration-default
+/// @require {variable} border-color
+/// @require {variable} $motion-timing-ease-in-out
+$button-border-color-transition: border-color $motion-duration-default $motion-timing-ease-in-out !default;
+
+/// Configures the button shadow-transition (experimental)
+/// Used to configure the default $button-transition
+/// @require {variable} box-shadow
+/// @require {variable} $motion-duration-default
+/// @require {variable} $motion-timing-ease-in-out
+$button-box-shadow-transition: box-shadow $motion-duration-default $motion-timing-ease-in-out !default;
+
+/// Configures all transitions used for button transitions (experimental)
+/// Defaults to transitions with $button-color-transition, $button-background-color-transition, $button-border-color-transition and $button-box-shadow-transition
+/// @require {variable} $button-color-transition
+/// @require {variable} $button-background-color-transition
+/// @require {variable} $button-border-color-transition
+/// @require {variable} $button-box-shadow-transition
+$button-transition: $button-color-transition, $button-background-color-transition,
+  $button-border-color-transition, $button-box-shadow-transition !default;
+
+/// Configures the focus of the button  (experimental)
+/// Used to configure when button is focused
+/// @require {variable} $focus-border-primary
+$btn-focus-border-primary: $focus-border-primary !default;
+
+/// Configures the distance between button border and focus  outline  (experimental)
+/// Used to configure when button is focused
+/// @require {variable} $focus-outline-distance
+$btn-focus-outline-distance: $focus-outline-distance !default;
+
+/// Configures the border radius  (experimental)
+/// Used to configure when button is focused
+/// @require {variable} $border-radius-sm
+$btn-focus-border-radius-link-text: $border-radius-sm !default;

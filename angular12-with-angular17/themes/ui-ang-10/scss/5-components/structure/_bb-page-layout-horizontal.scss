@@ -1,0 +1,41 @@
+////
+/// @access private
+////
+$page-layout-horizontal-topbar-background-color: $color-neutral-white !default;
+$page-layout-horizontal-topbar-box-shadow: $box-shadow-md-size $box-shadow-md-color !default;
+
+/// Until this breakpoint the navigation should be expandable,
+/// and not display by default, to save screen real estate.
+$page-layout-nav-expandable-breakpoint: md;
+
+.bb-page-layout--horizontal-nav {
+  .bb-page-layout__topbar {
+    background-color: $page-layout-horizontal-topbar-background-color;
+    box-shadow: $page-layout-horizontal-topbar-box-shadow;
+  }
+
+  &.bb-page-layout--nav-expanded {
+    .bb-page-layout__nav-backdrop {
+      z-index: $zindex-modal-backdrop;
+      display: block;
+
+      @include media-breakpoint-up($page-layout-nav-expandable-breakpoint) {
+        // Display backdrop only for mobile viewports where the sidebar menu is visible
+        display: none;
+      }
+    }
+    .bb-page-layout__topbar {
+      z-index: $zindex-modal;
+    }
+  }
+
+  .bb-page-layout__main {
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-up($page-layout-nav-expandable-breakpoint) {
+    .bb-page-layout__toggler {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Global annotations
+////
+/// @group navigation
+/// @access private
+////
+
+$navbar-brand-width: 266px !default;
+$navbar-right-width: 500px !default;
+$nav-link-color: $color-neutral-dark !default;
+$nav-link-hover-color: $color-neutral-darker !default;
+$nav-link-disabled-color: $color-text-disabled !default;
+$navigation-link-active-color: $color-info !default;
+$navigation-link-hover-bgcolor: transparent !default;
+$navigation-link-focus-bgcolor: transparent !default;
+$navigation-link-active-bgcolor: transparent !default;
+
+@import "../../../../bootstrap5/scss/navbar";
+
+//
+// Navigation Menu (vertical)
+//
+
+.navbar-brand {
+  max-width: $navbar-brand-width;
+  margin-left: $spacer;
+
+  & img {
+    max-width: 0.9 * $navbar-brand-width;
+  }
+}
+
+.navbar {
+  padding: 0;
+  background-color: transparent;
+
+  @include media-breakpoint-up(md) {
+    .navbar-right {
+      width: $navbar-right-width;
+      margin-right: 0;
+    }
+  }
+
+  .nav li.nav-item {
+    @include animation(border-color, 500ms);
+    border-left: 4px solid transparent;
+
+    & a {
+      @include animation(background-color, 500ms);
+      color: $nav-link-color;
+
+      &:focus {
+        @include animation(background-color, 500ms);
+        background-color: $navigation-link-focus-bgcolor;
+      }
+
+      &:hover {
+        @include animation(background-color, 500ms);
+        color: $nav-link-hover-color;
+        background-color: $navigation-link-hover-bgcolor;
+      }
+    }
+
+    &:hover:not(.active) {
+      @include animation(border-color, 500ms);
+
+      border-color: $navigation-link-hover-bgcolor;
+    }
+
+    &:active:not(.active) {
+      @include animation(border-color, 500ms);
+
+      background-color: $navigation-link-active-bgcolor;
+    }
+
+    &.active {
+      a {
+        color: $navigation-link-active-color;
+        background-color: $navigation-link-active-bgcolor;
+      }
+    }
+  }
+}

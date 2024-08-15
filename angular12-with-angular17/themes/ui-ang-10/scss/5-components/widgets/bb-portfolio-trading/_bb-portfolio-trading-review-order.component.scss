@@ -1,0 +1,17 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-review-order__cost-breakdown {
+  border-radius: $border-radius-sm;
+  border: $portfolio-trading-component-border;
+  padding: $sizer;
+}
+.bb-review-order__statistic {
+  padding: $sizer;
+}
+.bb-review-order_load-button-content {
+  padding: $sizer-sm $sizer-lg;
+}

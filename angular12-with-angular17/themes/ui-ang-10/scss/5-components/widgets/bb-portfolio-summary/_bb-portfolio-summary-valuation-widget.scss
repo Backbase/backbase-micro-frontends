@@ -1,0 +1,63 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$portfolio-summary-chart-min-height: 448px !default;
+
+/* Overriding some of ngx-chart classes for cumulative performance and valuation/variation charts */
+
+.bb-chart-series {
+  min-height: 100px;
+
+  .gridline-path {
+    stroke: $color-neutral-lightest;
+  }
+}
+
+.bb-performance__header {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, auto);
+  grid-template-areas: "chart-name trading-periods chart-settings";
+
+  .bb-performance__header-chart-type {
+    grid-area: chart-name;
+  }
+
+  .bb-performance__header-trading-periods {
+    grid-area: trading-periods;
+
+    .bb-button-bar__button {
+      border-radius: $border-radius-xs;
+      padding: 4px 11px;
+      margin: 5px 25px;
+
+      &:last-of-type {
+        margin-inline-start: 0;
+      }
+
+      &:focus::before {
+        border-radius: $border-radius-xs;
+      }
+    }
+  }
+
+  .bb-performance__header-chart-settings {
+    grid-area: chart-settings;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, "lg")) {
+    grid-template-columns: 1fr auto;
+    justify-items: start;
+    grid-template-areas:
+      "chart-name chart-settings"
+      "trading-periods .";
+  }
+}
+
+.bb-chart-card {
+  &.bb-chart-card--min-height {
+    min-height: $portfolio-summary-chart-min-height;
+  }
+}

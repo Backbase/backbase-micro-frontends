@@ -1,0 +1,111 @@
+////
+/// @group 5-components/structure/bb-toolbar
+/// @access public
+////
+
+/// Group a set of elements horizontally. The elements can be grouped directly as children of the bb-toolbar element or
+/// can be further grouped into sections.
+///
+/// @require {variable} sizer-md
+/// @example html - Without sections
+///   <div class="bb-toolbar">
+///     <button bbButton color="success" circle="true" class="bb-toolbar__item">
+///       <bb-icon-ui name="check"></bb-icon-ui>
+///     </button>
+///     <button bbButton color="danger" circle="true" class="bb-toolbar__item">
+///       <bb-icon-ui name="times"></bb-icon-ui>
+///     </button>
+///   </div>
+///
+/// @example html - With sections
+///   <div class="bb-toolbar">
+///     <div class="bb-toolbar__section">
+///       Some title
+///     </div>
+///     <div class="bb-toolbar__section bb-toolbar__section--align-end">
+///       <button bbButton color="success" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="check"></bb-icon-ui>
+///       </button>
+///       <button bbButton color="danger" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="times"></bb-icon-ui>
+///       </button>
+///     </div>
+///   </div>
+
+.bb-toolbar {
+  display: flex;
+  align-items: center;
+  padding: $sizer-md;
+}
+
+/// Creates a section for the toolbar.
+///
+/// @example html
+///   <div class="bb-toolbar">
+///     <div class="bb-toolbar__section">Some title</div>
+///     <div class="bb-toolbar__section bb-toolbar__section--align-end">
+///       <button bbButton color="success" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="check"></bb-icon-ui>
+///       </button>
+///       <button bbButton color="danger" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="times"></bb-icon-ui>
+///       </button>
+///     </div>
+///   </div>
+.bb-toolbar__section {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+/// Create a section with all controls aligned to the right.
+///
+/// @require {variable} spacer-md
+///
+/// @example html
+///   <div class="bb-toolbar">
+///     <div class="bb-toolbar__section">Some title</div>
+///     <div class="bb-toolbar__section bb-toolbar__section--align-end">
+///       <button bbButton color="success" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="check"></bb-icon-ui>
+///       </button>
+///       <button bbButton color="danger" circle="true" class="bb-toolbar__item">
+///         <bb-icon-ui name="times"></bb-icon-ui>
+///       </button>
+///     </div>
+///   </div>
+.bb-toolbar__section--align-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .bb-toolbar__item {
+    margin-inline-end: 0;
+    margin-inline-start: $spacer-md;
+
+    &:first-child {
+      margin-inline-start: 0;
+    }
+  }
+}
+
+/// Every item in the toolbar requires this class for proper alignment.
+///
+/// @require {variable} spacer-md
+///
+/// @example html
+///   <div class="bb-toolbar">
+///     <button bbButton color="success" circle="true" class="bb-toolbar__item">
+///       <bb-icon-ui name="check"></bb-icon-ui>
+///     </button>
+///     <button bbButton color="danger" circle="true" class="bb-toolbar__item">
+///       <bb-icon-ui name="times"></bb-icon-ui>
+///     </button>
+///   </div>
+.bb-toolbar__item {
+  margin-inline-end: $spacer-md;
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+}

@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.profile-dropdown-item {
+  &.profile-dropdown-item--width {
+    width: 482px;
+  }
+}

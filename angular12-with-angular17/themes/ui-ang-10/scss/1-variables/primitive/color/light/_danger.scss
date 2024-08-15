@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/danger
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-danger-lightest: $color-danger-lightest; // #F5DEDB
+$color-light-danger-lighter: $color-danger-lighter; // #D26558
+$color-light-danger-default: $color-danger; // #BF2310
+$color-light-danger-darker: $color-danger-darker; // #86190B
+$color-light-danger-darkest: $color-danger-darkest; // #691309
+$color-light-danger-on-color: $color-neutral-white;

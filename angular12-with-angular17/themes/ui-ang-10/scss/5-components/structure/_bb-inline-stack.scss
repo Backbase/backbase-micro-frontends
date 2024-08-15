@@ -1,0 +1,114 @@
+////
+/// @group 5-components/structure/bb-inline-stack
+/// @access public
+////
+
+/// Vertically align and space items in an inline element, for example an icon with a label, or
+/// text with a badge.
+///
+/// Modifiers exist for controlling:
+/// - the spacing between items (`bb-inline-stack--density-<sm|lg|none>`);
+/// - the spacing after specific items (`bb-inline-stack__item--spacing-<sm|md|lg|none>`).
+///
+/// @name .bb-inline-stack
+///
+/// @example html - Icon + text
+///   <span class="bb-inline-stack">
+///     <i class="bb-inline-stack__item bb-icon bb-icon-cancel"></i>
+///     <span class="bb-inline-stack__item">Closed</span>
+///   </span>
+///
+/// @example html - Text + badge
+///   <span class="bb-inline-stack">
+///     <span class="bb-inline-stack__item">Tab</span>
+///     <span class="bb-inline-stack__item badge badge-counter badge-counter-danger">3</span>
+///   </span>
+///
+/// @example html - Controlling the spacing between elements
+///   <span class="bb-inline-stack bb-inline-stack--density-sm">
+///     <div class="bb-inline-stack__item">Tab</div>
+///     <div class="bb-inline-stack__item badge badge-counter badge-counter-danger">3</div>
+///   </span>
+.bb-inline-stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+/// Single item placed inside an element using `bb-inline-stack`
+/// @name .bb-inline-stack__item
+/// @require {variable} $spacer-xs
+/// @example html
+///   <span class="bb-inline-stack">
+///     <span class="bb-inline-stack__item">
+///       Tab
+///     </span>
+///     <span class="bb-inline-stack__item">
+///       Tab
+///     </span>
+///   </span>
+.bb-inline-stack__item {
+  margin-inline-end: $spacer-xs;
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+}
+
+/* prettier-ignore */
+@each $sizeKey, $spacingValue in $spacing-map {
+/// Sets the density of the stack
+/// @name .bb-inline-stack--density
+/// @example html
+///   <span class="bb-inline-stack bb-inline-stack--density-md">
+///     <span class="bb-inline-stack__item">Tab 1</span>
+///     <span class="bb-inline-stack__item">Tab 2</span>
+///   </span>
+  .bb-inline-stack--density-#{$sizeKey} {
+    .bb-inline-stack__item:not(:last-child) {
+      margin-inline-end: $spacingValue;
+    }
+  }
+
+/// Sets the spacing between stacked items
+/// @name .bb-inline-stack__item--spacing
+/// @example html
+///   <span class="bb-inline-stack">
+///     <span class="bb-inline-stack__item bb-inline-stack__item--spacing-md">
+///       Tab
+///     </span>
+///     <span class="bb-inline-stack__item bb-inline-stack__item--spacing-md">
+///       Tab
+///     </span>
+///   </span>
+  .bb-inline-stack__item--spacing-#{$sizeKey} {
+    margin-inline-end: $spacingValue;
+  }
+}
+
+/// Removes any margin (density) from the entire stack
+/// @name .bb-inline-stack--density-none
+/// @example html
+///   <span class="bb-inline-stack bb-inline-stack--density-none">
+///     <span class="bb-inline-stack__item">Tab 1</span>
+///     <span class="bb-inline-stack__item">Tab 2</span>
+///   </span>
+.bb-inline-stack--density-none {
+  .bb-inline-stack__item {
+    margin-inline-end: 0;
+  }
+}
+
+/// Removes any spacing from all stacked items
+/// @name .bb-inline-stack__item--spacing-none
+/// @example html
+///   <span class="bb-inline-stack">
+///     <span class="bb-inline-stack__item bb-inline-stack__item--spacing-none">
+///       Tab
+///     </span>
+///     <span class="bb-inline-stack__item bb-inline-stack__item--spacing-none">
+///       Tab
+///     </span>
+///   </span>
+.bb-inline-stack__item--spacing-none {
+  margin-inline-end: 0;
+}

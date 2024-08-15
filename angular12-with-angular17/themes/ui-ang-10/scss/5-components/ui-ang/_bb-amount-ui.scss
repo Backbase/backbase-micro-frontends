@@ -1,0 +1,38 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$amount-currency-amount-spacer: $spacer-xs !default;
+$amount-background-color-positive: $color-success-lightest;
+$amount-background-color-negative: $color-danger-lightest;
+
+.bb-amount--bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+.bb-amount--currency-space {
+  .bb-amount__value {
+    span {
+      &:first-child {
+        &.symbol {
+          margin-inline-end: $amount-currency-amount-spacer;
+        }
+      }
+      &:last-child {
+        &.symbol {
+          margin-inline-start: $amount-currency-amount-spacer;
+        }
+      }
+    }
+  }
+}
+
+.bb-amount--positive {
+  background-color: $amount-background-color-positive;
+}
+
+.bb-amount--negative {
+  background-color: $amount-background-color-negative;
+}

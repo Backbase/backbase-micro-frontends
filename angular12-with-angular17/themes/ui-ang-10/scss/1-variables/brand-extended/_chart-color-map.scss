@@ -1,0 +1,20 @@
+////
+/// Chart color map (global)
+/// @group 1-variables/brand-extended/chart-color-map
+/// @access private
+////
+
+/// Chart colors
+/// @todo why do they include all these non-$chart colors such as $color-accent and $chart-primary-color?
+$chart-colors: lighten($chart-primary-color, 10%), lighten($chart-color-4, 10%),
+  lighten($chart-positive-color, 10%), lighten($chart-color-3, 10%),
+  lighten($chart-color-1-lighter, 10%), lighten($chart-negative-color, 10%),
+  lighten($chart-color-9, 10%), lighten($chart-color-8, 10%), lighten($chart-color-7, 10%),
+  lighten($chart-color-4, 10%), darken($chart-primary-color, 10%), darken($chart-color-4, 10%),
+  darken($chart-positive-color, 10%), darken($chart-color-3, 10%),
+  darken($chart-color-1-lighter, 10%), darken($chart-negative-color, 10%),
+  darken($chart-color-9, 10%), darken($chart-color-8, 10%), darken($chart-color-7, 10%),
+  darken($chart-color-4, 10%) !default;
+
+$wealth-chart-colors: $chart-color-1, $chart-color-2, $chart-color-3, $chart-color-4, $chart-color-5,
+  $chart-color-6, $chart-color-7, $chart-color-8, $chart-color-9 !default;

@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for Function Group List Widget
+///
+/// @name bb-function-group-list-widget
+/// @example html
+///  <div class="bb-stack bb-business-function">
+///    <div class="bb-business-function__name bb-stack__item">
+///     Business Function
+///    </div>
+///    <div class="bb-business-function__indicator bb-stack__item">
+///      <span class="col"> Execute </span>
+///      <span class="col"> View </span>
+///    </div>
+///  </div>
+
+.bb-business-function__name {
+  width: 25%;
+  padding-left: $sizer-md;
+}
+
+.bb-business-function__indicator {
+  width: 75%;
+}
+
+.bb-function-group-list-button-group {
+  padding: 0 $sizer-xl;
+}
+
+.bb-function-group-list-new-button {
+  padding: $sizer-xl $sizer-xl $sizer-md;
+}

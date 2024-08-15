@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+////
+
+.bb-approval-log-manage-global-limits {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: $sizer-xl;
+    align-items: baseline;
+    justify-content: end;
+  }
+
+  &__cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $sizer-sm;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

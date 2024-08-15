@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-accessgroup-header
+/// @example html
+/// <div class="bb-block bb-accessgroup-header">
+///   <div class="bb-accessgroup-header__item">
+///     <h3>Users & Permissions</h3>
+///     <div class="bb-block bb-block--md bb-text-support">
+///       Select users and manage their permissions
+///     </div>
+///   </div>
+/// </div>
+
+.bb-accessgroup-header {
+  padding: $sizer-lg;
+}
+.bb-accessgroup-header__item {
+  border-bottom: $border-width $border-style $border-color;
+}

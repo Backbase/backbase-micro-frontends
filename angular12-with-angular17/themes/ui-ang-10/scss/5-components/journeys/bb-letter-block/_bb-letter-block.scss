@@ -1,0 +1,13 @@
+.bb-letter-block__active {
+  color: $color-success;
+  background-color: $color-neutral-white;
+  border: solid 1px $color-success;
+}
+
+.bb-letter-block__default {
+  background-color: $color-neutral-grey-light;
+}
+
+.bb-block-text {
+  color: $color-neutral-dark;
+}

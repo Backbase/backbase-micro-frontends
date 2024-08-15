@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+// Hide elements that have cloak
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none;
+}

@@ -1,0 +1,56 @@
+$duplicate-payment-account-details-card-min-body-height: 4rem !default;
+
+.duplicate-payment__header--expanded {
+  .alert-warning {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+  }
+}
+
+.duplicate-payment__icon {
+  position: absolute;
+  top: $sizer-xl;
+  right: $sizer-xl;
+}
+
+.duplicate-payment__expanded-container {
+  margin-bottom: $spacer-lg;
+  padding: $sizer-lg;
+  border-top: none;
+  border-bottom-left-radius: $border-radius-sm;
+  border-bottom-right-radius: $border-radius-sm;
+  border-left: $border-width $border-style $color-warning;
+  border-right: $border-width $border-style $color-warning;
+  border-bottom: $border-width $border-style $color-warning;
+
+  .bb-payment-account-details-card__header {
+    margin-right: $spacer-md;
+  }
+
+  .bb-payment-account-details-card__body {
+    margin-top: 0;
+
+    @include media-breakpoint-up(sm) {
+      min-height: $duplicate-payment-account-details-card-min-body-height;
+    }
+  }
+}
+
+.duplicate-payment__collapsed-container {
+  position: relative;
+
+  .alert-body {
+    @include media-breakpoint-down(sm) {
+      padding-right: $sizer-xl;
+    }
+  }
+}
+
+.duplicate-payment-status-row {
+  margin-bottom: $spacer-lg;
+}
+
+.duplicate-payment-status-row__label-spacer--right {
+  margin-right: $spacer-sm;
+}

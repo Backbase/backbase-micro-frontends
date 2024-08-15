@@ -1,0 +1,232 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$trade-finance-shipment-from-to-direction-item-vertical-indent: $sizer * 1.875 !default;
+
+$trade-finance-shipment-from-to-direction-container-margin: $spacer-md !default;
+$trade-finance-shipment-from-to-direction-item-padding: $sizer-md !default;
+$trade-finance-shipment-from-to-direction-item-border-radius: $border-radius !default;
+
+$trade-finance-application-summary-container-border-radius: $border-radius * 2 !default;
+
+$trade-finance-import-lc-container-padding-top: $sizer-xl !default;
+$trade-finance-import-lc-container-side-paddings: $sizer-md !default;
+
+$trade-finance-fullscreen-background-color: $background-color-neutral !default;
+$trade-finance-fullscreen-z-index: $zindex-modal-backdrop - 1 !default;
+
+$trade-finance-fullscreen-close-button-background-color: $color-neutral-white !default;
+$trade-finance-fullscreen-close-button-box-shadow: $box-shadow-sm !default;
+$trade-finance-fullscreen-close-button-color: $color-neutral-dark !default;
+
+$trade-finance-import-lc-footer-paddings: $sizer-lg !default;
+$trade-finance-import-lc-footer-background-color: $color-neutral-lighter !default;
+$trade-finance-import-lc-footer-box-shadow: $box-shadow-sm-offset-x (-1) * $box-shadow-sm-offset-y
+  $box-shadow-sm-blur-radius $box-shadow-sm-spread-radius $box-shadow-sm-color;
+
+$trade-finance-import-lc-full-width: 100% !default;
+$trade-finance-import-lc-width-sm: 38rem !default;
+$trade-finance-import-lc-width-md: 48rem !default;
+$trade-finance-import-lc-width-xl: 56rem !default;
+
+/// Styles for Trade Finance Manage Letter Of Credit Import Widget
+///
+/// @name trade-finance-manage-letter-of-credit-import-widget-ang
+///
+/// @example html
+///
+/// ...
+/// <form class="row bb-trade-finance-shipment-from-to-container">
+///	  <div class="col-md col-sm-12">
+///		<div class="bb-block bb-trade-finance-shipment-start-point-container">
+///        ...
+///		</div>
+///	  </div>
+///
+///   <bb-shipment-arrow class="bb-trade-finance-shipment-arrow-component bb-trade-finance-shipment-arrow-component--padded"></bb-shipment-arrow>
+///
+///   <div class="col-md col-sm-12">
+///		<div class="bb-trade-finance-shipment-end-point-error-message-container">
+///        ...
+///		</div>
+///   </div>
+/// </form>
+/// ...
+/// <div class="bb-trade-finance-shipment-direction-container">
+///  <div
+///    class="bb-trade-finance-shipment-direction-container__direction-item card--highlight bb-stack bb-stack--center">
+///    <bb-icon-ui
+///      class="bb-stack__item bb-text-support"
+///      name="arrow-forward"
+///      size="md"
+///      cropped
+///    ></bb-icon-ui>
+///  </div>
+///</div>
+/// ...
+///<div class="bb-trade-finance-application-summary-container">
+//  <bb-icon-ui class="bb-block bb-block--lg" size="xxl" color="success" name="success"></bb-icon-ui>
+//
+//  <span class="bb-text-semi-bold">{{ titles.submitted }}</span>
+//</div>
+//
+// ...
+//
+// <div bbFullscreen class="container-fluid bb-trade-finance-import-lc-container">
+//
+// ...
+//
+// <button
+//	class="bb-stack__item manual-batch__button-close"
+//	bbButton
+//	color="link-dark"
+//	[circle]="true"
+//	[attr.aria-label]="translations.ariaLabels.discardLC"
+// >
+//   <bb-icon-ui color="link-text-light" name="clear" size="md" cropped></bb-icon-ui>
+// </button>
+//
+// ...
+//
+// 	<div class="bb-stack bb-stack--center bb-trade-finance-import-lc-container--sized">
+//	  <div class="bb-stack__item bb-trade-finance-import-lc-container__body">
+//      ...
+//    </div>
+//  </div>
+//
+// ...
+//
+//  <div class="bb-stack bb-stack--center bb-trade-finance-import-lc-container--sized bb-trade-finance-import-lc-container--highlighted">
+//	  <div class="bb-stack__item bb-trade-finance-import-lc-container__footer">
+//      ...
+//    <div>
+//  </div>
+//
+//
+// ...
+//
+// 	<button
+//	  class="bb-stack__item bb-trade-finance-fullscreen-close-button"
+//	  bbButton
+//	  color="link-dark"
+//	  [circle]="true"
+//	  [attr.aria-label]="translations.ariaLabels.discardLC"
+//	>
+//	<bb-icon-ui
+//	  color="link-text-light"
+//	  name="clear"
+//	  size="md"
+//	  cropped
+//	></bb-icon-ui>
+//  </button>
+//
+
+.bb-trade-finance-shipment-arrow-component {
+  display: flex;
+}
+
+.bb-trade-finance-shipment-arrow-component--padded {
+  padding: $sizer-xl 0;
+}
+
+.bb-trade-finance-shipment-direction-container {
+  display: flex;
+  margin-right: $trade-finance-shipment-from-to-direction-container-margin;
+  margin-left: $trade-finance-shipment-from-to-direction-container-margin;
+}
+
+.bb-trade-finance-shipment-direction-container__direction-item {
+  padding: $trade-finance-shipment-from-to-direction-item-padding;
+  border-radius: $trade-finance-shipment-from-to-direction-item-border-radius;
+}
+
+.bb-trade-finance-shipment-start-point-container {
+  margin-bottom: $trade-finance-shipment-from-to-direction-item-vertical-indent;
+}
+
+.bb-trade-finance-shipment-end-point-error-message-container {
+  display: flex;
+  height: $trade-finance-shipment-from-to-direction-item-vertical-indent;
+}
+
+.bb-trade-finance-shipment-from-to-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.bb-trade-finance-align-items-baseline {
+  align-items: baseline;
+}
+
+.bb-trade-finance-application-summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $sizer-lg 0;
+  color: $color-success-darkest;
+  font-size: $font-size-highlight;
+  background-color: $color-success-lightest;
+  border-radius: $trade-finance-application-summary-container-border-radius;
+}
+
+.bb-trade-finance-import-lc-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: $trade-finance-import-lc-container-padding-top;
+
+  .bb-trade-finance-import-lc-container__footer {
+    padding: $trade-finance-import-lc-footer-paddings 0;
+  }
+
+  .bb-trade-finance-import-lc-container__body,
+  .bb-trade-finance-import-lc-container__footer {
+    @include media-breakpoint-up(xl) {
+      width: $trade-finance-import-lc-width-xl;
+    }
+
+    @include media-breakpoint-down(xxl) {
+      width: $trade-finance-import-lc-width-md;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: $trade-finance-import-lc-width-sm;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: $trade-finance-import-lc-full-width;
+    }
+  }
+}
+
+.bb-trade-finance-import-lc-container--sized {
+  padding-right: $trade-finance-import-lc-container-side-paddings;
+  padding-left: $trade-finance-import-lc-container-side-paddings;
+}
+
+.bb-trade-finance-import-lc-container--highlighted {
+  background-color: $trade-finance-import-lc-footer-background-color;
+  box-shadow: $trade-finance-import-lc-footer-box-shadow;
+}
+
+.bb-trade-finance-fullscreen-container {
+  position: fixed;
+  z-index: $trade-finance-fullscreen-z-index;
+  overflow: auto;
+  inset: 0;
+  background-color: $trade-finance-fullscreen-background-color;
+}
+
+.bb-trade-finance-fullscreen-close-button {
+  color: $trade-finance-fullscreen-close-button-color;
+  background-color: $trade-finance-fullscreen-close-button-background-color;
+  box-shadow: $trade-finance-fullscreen-close-button-box-shadow;
+}
+
+.bb-trade-finance-text-break {
+  overflow-wrap: anywhere;
+}

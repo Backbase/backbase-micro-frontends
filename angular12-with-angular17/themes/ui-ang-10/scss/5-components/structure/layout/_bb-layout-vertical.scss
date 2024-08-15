@@ -1,0 +1,117 @@
+//// @access private
+$layout-vertical-topbar-background-color: $page-layout-background-color !default;
+$layout-vertical-topbar-height: $page-layout-topbar-height !default;
+$layout-vertical-lg-topbar-padding: $sizer-lg !default;
+$layout-vertical-md-topbar-padding: $sizer-md !default;
+$layout-vertical-sm-topbar-padding: $sizer-xs !default;
+
+$layout-vertical-lg-topbar-height: $layout-vertical-topbar-height + 2 *
+  $layout-vertical-lg-topbar-padding !default;
+$layout-vertical-md-topbar-height: $layout-vertical-topbar-height + 2 *
+  $layout-vertical-md-topbar-padding !default;
+$layout-vertical-sm-topbar-height: $layout-vertical-topbar-height + 2 *
+  $layout-vertical-sm-topbar-padding !default;
+
+/// @name bb-layout bb-layout--vertical-nav
+/// @example - bb-layout bb-layout--vertical-nav vertical navigation
+/// <div class="bb-layout bb-layout--vertical-nav">
+///   <div class="bb-layout__topbar">
+///       <button class="bb-layout__skip-to-content"> </button>
+///       <button class="bb-layout__nav-expand-marker"></button>
+///       <div class="bb-layout__branding-area"></div>
+///       <div class="bb-layout__topbar-content-area"></div>
+///   </div>
+///   <div class="bb-layout__nav-backdrop"></div>
+///   <div class="bb-layout__main">
+///     <div class="bb-layout__sidebar">
+///       <button class="bb-layout__sidebar-toggler"></button>
+///       <nav>
+///         <ul class="bb-layout__vertical-nav"></ul>
+///       </nav>
+///     </div>
+///     <div class="bb-page-layout__content">
+///       <div class="bb-page-layout__container container-fluid">
+///         <div class="bb-layout__main-content-header" aria-live="polite">
+///         </div>
+///         <div class="bb-layout__main-content-area">
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-layout--vertical-nav {
+  padding-block-start: $layout-vertical-topbar-height + 2 * $layout-vertical-lg-topbar-padding;
+
+  @include media-breakpoint-down(lg) {
+    padding-block-start: $layout-vertical-topbar-height + 2 * $layout-vertical-md-topbar-padding;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-block-start: $layout-vertical-topbar-height + 2 * $layout-vertical-sm-topbar-padding;
+  }
+
+  .bb-layout__sidebar {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: $zindex-sticky;
+    padding: $page-layout-padding-horizontal;
+    overflow-y: auto;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .bb-layout__sidebar {
+      position: fixed;
+      inset-block-start: 0;
+      height: 100vh;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .bb-layout__sidebar {
+      inset-block-start: $layout-vertical-topbar-height + 2 * $layout-vertical-lg-topbar-padding;
+
+      @include media-breakpoint-down(lg) {
+        inset-block-start: 0;
+      }
+    }
+
+    &.bb-layout--nav-expanded .bb-layout__main {
+      padding-inline-start: $navigation-width;
+    }
+
+    .bb-layout__main {
+      padding-inline-start: $navigation-collapsed-width;
+    }
+  }
+
+  .bb-layout__topbar {
+    height: $layout-vertical-lg-topbar-height;
+    padding-block: $layout-vertical-lg-topbar-padding;
+    background-color: $layout-vertical-topbar-background-color;
+    z-index: $zindex-fixed;
+
+    @include media-breakpoint-down(lg) {
+      height: $layout-vertical-md-topbar-height;
+      padding-block: $layout-vertical-md-topbar-padding;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: $layout-vertical-sm-topbar-height;
+      padding-block: $layout-vertical-sm-topbar-padding;
+    }
+  }
+
+  .bb-layout__sidebar-sidebar-toggler {
+    height: $layout-vertical-lg-topbar-height;
+
+    @include media-breakpoint-down(lg) {
+      height: $layout-vertical-md-topbar-height;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: $layout-vertical-sm-topbar-height;
+    }
+  }
+}

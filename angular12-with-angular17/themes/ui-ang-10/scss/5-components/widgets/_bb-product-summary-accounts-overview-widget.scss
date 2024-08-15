@@ -1,0 +1,400 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+@use "sass:math";
+
+$accounts-overview-header-space-bottom: $spacer-xl !default;
+$accounts-overview-title-space-bottom: $spacer-md !default;
+$accounts-overview-search-space-between: $spacer-sm !default;
+$accounts-overview-search-width: $sizer * 18.75 !default;
+$accounts-overview-toggle-space-between: $spacer-md !default;
+$accounts-overview-grid-spacing-vertical-xl: $spacer-xl !default;
+$accounts-overview-grid-spacing-vertical-lg: $spacer-lg !default;
+$accounts-overview-cards-space-between: $spacer-xl !default;
+$accounts-overview-cards-space-between-sm: $spacer-lg !default;
+$accounts-overview-grid-breakpoint-xxxl: 1680px !default; // breakpoint at which 4 columns are shown
+$accounts-overview-table-breakpoint-xxl: 1440px !default; // breakpoint at which all the table columns are shown
+$accounts-overview-list-font-size: $font-size-sm !default;
+$accounts-overview-loader-min-height: 25rem !default;
+
+// Breaking grid layout into one (sm), two (md), three (xl) and four (xxl) columns
+$accounts-overview-card-layout-sm: 100% !default;
+$accounts-overview-card-layout-md: (100% * 0.5) !default;
+$accounts-overview-card-layout-xl: math.div(100%, 3) !default;
+$accounts-overview-card-layout-xxl: (100% * 0.25) !default;
+$accounts-overview-card-layout-xxl-ie: (100% * 0.2) !default;
+
+$accounts-overview-card-min-width: 18.5rem !default;
+
+/// Styles for Accounts overview widget, where accounts can be viewed either in table or in cards layout.
+///
+/// @name bb-accounts-overview
+///
+/// @example html
+///   <div class="bb-accounts-overview card card-body">
+///     <div class="bb-stack bb-stack--wrap bb-accounts-overview-header">
+///     </div>
+///     <div class="bb-stack bb-stack--wrap bb-accounts-overview-grid">
+///       <div class="bb-stack__item bb-accounts-overview-grid__card"></div>
+///     </div>
+///   </div>
+//NOSONAR
+.bb-accounts-overview {
+}
+
+/// Styles for Accounts overview header component. This component is shared between two different account layouts, table and cards.
+///
+/// @name bb-accounts-overview-header
+///
+/// @example html
+///  <div class="bb-accounts-overview-header">
+///    <h2 class="bb-accounts-overview-header__title" ></h2>
+///    <div class="bb-stack bb-accounts-overview-header__actions-wrapper">
+///      <div class="bb-stack__item bb-stack bb-accounts-overview-header__search">
+///        <bb-search-box-ui size="sm"></bb-search-box-ui>
+///      </div>
+///      <div class="bb-stack__item bb-stack bb-accounts-overview-header__toggle">
+///        <div class="bb-stack__item">
+///          <bb-dropdown-menu-ui buttonSize="sm"></bb-dropdown-menu-ui>
+///        </div>
+///        <div class="bb-stack__item btn-group btn-group-sm">
+///          <button bbButton>
+///            <bb-icon-ui></bb-icon-ui>
+///          </button>
+///          <button bbButton>
+///            <bb-icon-ui></bb-icon-ui>
+///          </button>
+///        </div>
+///      </div>
+///    </div>
+///  </div>
+.bb-accounts-overview-header {
+  margin-bottom: $accounts-overview-header-space-bottom;
+
+  @include media-breakpoint-down(md) {
+    @include ms-browsers-only {
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 -#{$spacer-sm} $accounts-overview-header-space-bottom;
+
+    @include ms-browsers-only {
+      margin: 0 -#{$spacer-sm} $accounts-overview-header-space-bottom;
+    }
+  }
+}
+
+.bb-accounts-overview-header__title {
+  width: 100%;
+  margin-bottom: $accounts-overview-title-space-bottom;
+}
+
+.bb-accounts-overview-header__actions-wrapper {
+  justify-content: space-between;
+
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+  }
+}
+
+.bb-accounts-overview-header__search {
+  max-width: $accounts-overview-search-width;
+
+  @include media-breakpoint-down(md) {
+    display: initial;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: $accounts-overview-search-space-between;
+  }
+}
+
+.bb-accounts-overview-header__toggle {
+  justify-content: flex-end;
+
+  @include media-breakpoint-down(md) {
+    justify-content: space-between;
+  }
+}
+
+/// A customized grid that accounts for a larger breakpoint ("xxl") than the grid normally
+/// supports.  Divides cards in 4 columns after the xxl breakpoint (and 1, 2, 3 columns on xs, md,
+/// xl respectively).
+///
+/// @name bb-accounts-overview-grid
+///
+/// @example html
+///   <div class="bb-stack bb-stack--wrap bb-accounts-overview-grid">
+///     <div class="bb-stack__item bb-accounts-overview-grid__card">
+///       <div class="card"><div class="card-body"></div></div>
+///     </div>
+///     <div class="bb-stack__item bb-accounts-overview-grid__card">
+///       <div class="card"><div class="card-body"></div></div>
+///     </div>
+///     <div class="bb-stack__item bb-accounts-overview-grid__card">
+///       <div class="card"><div class="card-body"></div></div>
+///     </div>
+///     <div class="bb-stack__item bb-accounts-overview-grid__card">
+///       <div class="card"><div class="card-body"></div></div>
+///     </div>
+///     <div class="bb-stack__item bb-accounts-overview-grid__card">
+///       <div class="card"><div class="card-body"></div></div>
+///     </div>
+///   </div>
+.bb-accounts-overview-grid {
+  width: auto;
+  margin: 0 -#{$spacer-lg};
+  padding-top: $accounts-overview-grid-spacing-vertical-lg;
+  justify-content: space-around;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 -#{$spacer-md};
+    padding-top: $accounts-overview-grid-spacing-vertical-xl;
+  }
+
+  &.bb-accounts-overview-grid--sm {
+    margin-bottom: -#{$accounts-overview-cards-space-between-sm};
+    padding-top: 0;
+  }
+}
+
+.bb-accounts-overview-grid__card {
+  flex: 0 0 $accounts-overview-card-layout-sm;
+  min-width: $accounts-overview-card-min-width;
+  margin-right: 0;
+  margin-bottom: $accounts-overview-cards-space-between;
+  padding: 0 #{$spacer-md};
+  cursor: pointer;
+
+  @include ms-browsers-only {
+    flex-basis: $accounts-overview-card-layout-md;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 $accounts-overview-card-layout-md;
+    min-width: $accounts-overview-card-min-width;
+
+    @include ms-browsers-only {
+      flex-basis: $accounts-overview-card-layout-xl;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 $accounts-overview-card-layout-xl;
+    min-width: $accounts-overview-card-min-width;
+
+    @include ms-browsers-only {
+      flex-basis: $accounts-overview-card-layout-xxl;
+    }
+  }
+
+  @media (min-width: $accounts-overview-grid-breakpoint-xxxl) {
+    flex: 0 0 $accounts-overview-card-layout-xxl;
+    min-width: $accounts-overview-card-min-width;
+
+    @include ms-browsers-only {
+      flex-basis: $accounts-overview-card-layout-xxl-ie;
+    }
+  }
+
+  &.bb-accounts-overview-grid__card-booked-balance--sm {
+    margin-bottom: $accounts-overview-cards-space-between-sm;
+  }
+}
+
+/// An accounts table that can be used for web view
+///
+/// @name bb-accounts-overview-table
+///
+/// @example html
+/// <table class="table table-hover bb-table">
+///   <thead>
+///     <tr class="bb-accounts-overview-table__header-row">
+///       <th></th>
+///       <th>
+///         <span class="bb-accounts-overview-table__header-content th-content">Name</span>
+///       </th>
+///       <th class="bb-accounts-overview-table__cell bb-accounts-overview-table__cell--xxl">
+///         <span class="bb-accounts-overview-table__header-content th-content">Number</span>
+///       </th>
+///       <th class="bb-accounts-overview-table__cell">
+///         <span class="bb-accounts-overview-table__header-content bb-accounts-overview-table__header-content--wrap-lg th-content">
+///           Available Balance
+///         </span>
+///       </th>
+///     </tr>
+///   </thead>
+///   <tbody>
+///     <tr class="bb-accounts-overview-table__table-row">
+///       <td class="bb-accounts-overview-table__favorite_cell">
+///         <button class="btn-link btn btn-md btn-circle"><i class="bb-icon bb-icon-star-border bb-icon--md"></i></button>
+///       </td>
+///       <td>
+///         <div class="bb-account__account-name-text">Name 1</div>
+///         <div class="bb-account__account-number">1111 2222 3333 4444 5555 6666</div>
+///       </td>
+///       <td class="bb-accounts-overview-table__cell bb-accounts-overview-table__cell--xxl">
+///         <div class="bb-account__account-number">Number 1</div>
+///       </td>
+///       <td class="bb-accounts-overview-table__cell">
+///         <div class="bb-accounts-overview-table__table-content bb-accounts-overview-table__table-content--wrap-lg>
+///           <span class="bb-amount__value">Balance 1</span>
+///         </div>
+///       </td>
+///     </tr>
+///     <tr class="bb-accounts-overview-table__table-row">
+///       <td class="bb-accounts-overview-table__favorite_cell">
+///         <button class="btn-link btn btn-md btn-circle"><i class="bb-icon bb-icon-star-border bb-icon--md"></i></button>
+///       </td>
+///       <td>
+///         <div class="bb-account__account-name-text">Name 2</div>
+///         <div class="bb-account__account-number">1111 2222 3333 4444 5555 6666</div>
+///       </td>
+///       <td class="bb-accounts-overview-table__cell bb-accounts-overview-table__cell--xxl">
+///         <div class="bb-account__account-number">Number 2</div>
+///       </td>
+///       <td class="bb-accounts-overview-table__cell">
+///         <div class="bb-accounts-overview-table__table-content bb-accounts-overview-table__table-content--wrap-lg>
+///           <span class="bb-amount__value">Balance 2</span>
+///         </div>
+///       </td>
+///     </tr>
+///   </tbody>
+/// </table>
+.bb-accounts-overview-table {
+  thead {
+    border-bottom: 0;
+  }
+}
+
+.bb-accounts-overview-table__header-row {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.bb-accounts-overview-table__header-content {
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-sm;
+}
+
+.bb-accounts-overview-table__header-content--wrap-lg {
+  @extend %bb-accounts-overview-table__content--wrap-lg;
+}
+
+.bb-accounts-overview-table__table-row {
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 $spacer-md;
+  }
+}
+
+.bb-accounts-overview-table__table-content--wrap-lg {
+  @extend %bb-accounts-overview-table__content--wrap-lg;
+}
+
+.bb-accounts-overview-table__cell--xxl {
+  @media (max-width: $accounts-overview-table-breakpoint-xxl - 1px) {
+    display: none;
+  }
+}
+
+.bb-accounts-overview-table__payments-button {
+  margin-right: $spacer-md;
+}
+
+.bb-accounts-overview-table__favorite_cell {
+  width: $spacer-xl;
+}
+
+%bb-accounts-overview-table__content--wrap-lg {
+  @include media-breakpoint-down(xl) {
+    white-space: normal;
+    word-break: break-all; // Fallback for IE
+    word-break: break-word;
+  }
+}
+
+/// An accounts list that can be used instead of accounts table for "md" and "sm" breakpoints
+///
+/// @name bb-accounts-overview-list
+///
+/// @example html
+/// <div class="bb-list bb-block bb-block--xl bb-accounts-overview-list">
+///   <div class="bb-list__item bb-accounts-overview-list__item">
+///     <div class="bb-stack bb-block bb-block--md bb-accounts-overview-list__item-info">
+///       <div class="bb-stack__item bb-stack__item--align-top">
+///         <div class="bb-accounts-overview-list__item-name">Card name 1</div>
+///         <div class="bb-accounts-overview-list__item-number">Card number 1</div>
+///       </div>
+///       <div class="bb-stack-item bb-stack__item--push-right">
+///         <div class="bb-stack">Card actions 1</div>
+///       </div>
+///     </div>
+///     <div class="bb-accounts-overview-list__item-booked-balance">Card balance 1</div>
+///   </div>
+///   <div class="bb-list__item bb-accounts-overview-list__item">
+///     <div class="bb-stack bb-block bb-block--md bb-accounts-overview-list__item-info">
+///       <div class="bb-stack__item bb-stack__item--align-top">
+///         <div class="bb-accounts-overview-list__item-name"">Card name 2</div>
+///         <div class="bb-accounts-overview-list__item-number">Card number 2</div>
+///       </div>
+///       <div class="bb-stack-item bb-stack__item--push-right">
+///         <div class="bb-stack">Card actions 2</div>
+///       </div>
+///     </div>
+///     <div class="bb-accounts-overview-list__item-booked-balance">Card balance 2</div>
+///   </div>
+/// </div>
+.bb-accounts-overview-list {
+  font-size: $accounts-overview-list-font-size;
+}
+
+.bb-accounts-overview-list__item:first-of-type {
+  margin-top: $spacer-md;
+}
+
+.bb-accounts-overview-list__item:not(:last-of-type) {
+  margin-bottom: $spacer-md;
+  padding-bottom: $spacer-md;
+}
+
+.bb-accounts-overview-list__item-info {
+  justify-content: space-between;
+}
+
+.bb-accounts-overview-list__item-name {
+  font-weight: $font-weight-semi-bold;
+}
+
+.bb-accounts-overview-list__item-number {
+  color: $account-number-color;
+}
+
+.bb-accounts-overview-list__item-booked-balance {
+  font-weight: $font-weight-semi-bold;
+  text-align: right;
+}
+
+.bb-accounts-overview-list__favorite-icon {
+  margin-right: $spacer-md;
+}
+
+/// Block containing the loader component with some default min-height
+///
+/// @name bb-accounts-overview-loader
+///
+/// @example html
+/// <div class="bb-accounts-overview-loader">
+/// <bb-loading-indicator-ui text="Loading Accounts"></bb-loading-indicator-ui>
+/// </div>
+
+.bb-accounts-overview-loader {
+  min-height: $accounts-overview-loader-min-height;
+}

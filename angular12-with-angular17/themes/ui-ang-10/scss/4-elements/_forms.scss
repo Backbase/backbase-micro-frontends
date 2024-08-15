@@ -1,0 +1,24 @@
+// Global annotations
+////
+/// @group elements
+/// @access private
+////
+
+label {
+  font-weight: $font-weight-semi-bold;
+}
+
+[type="button"],
+[role="button"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+button[disabled],
+input[disabled],
+.disabled {
+  cursor: not-allowed;
+}

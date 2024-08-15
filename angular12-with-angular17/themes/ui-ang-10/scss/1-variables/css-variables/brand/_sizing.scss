@@ -1,0 +1,24 @@
+////
+/// Sizing and padding (global)
+/// Used for padding inside components to determine their size
+/// @group base
+/// @access private
+////
+
+:root {
+  --sizer: #{$sizer};
+  --sizer-xxl: #{$sizer-xxl};
+  --sizer-xl: #{$sizer-xl};
+  --sizer-lg: #{$sizer-lg};
+  --sizer-md: #{$sizer-md};
+  --sizer-sm: #{$sizer-sm};
+  --sizer-xs: #{$sizer-xs};
+}
+
+$sizer: var(--sizer);
+$sizer-xxl: var(--sizer-xxl);
+$sizer-xl: var(--sizer-xl);
+$sizer-lg: var(--sizer-lg);
+$sizer-md: var(--sizer-md);
+$sizer-sm: var(--sizer-sm);
+$sizer-xs: var(--sizer-xs);

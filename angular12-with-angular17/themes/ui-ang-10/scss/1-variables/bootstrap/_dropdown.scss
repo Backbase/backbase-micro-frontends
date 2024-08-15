@@ -1,0 +1,26 @@
+// Variables provided by Bootstrap
+$dropdown-min-width: 200px !default;
+$dropdown-max-height: 80vh !default;
+$dropdown-padding-y: $sizer-md !default;
+$dropdown-spacer: $spacer-xs !default;
+$dropdown-font-size: $font-size-base !default;
+$dropdown-color: $color-neutral-black !default;
+$dropdown-bg: $color-neutral-white !default;
+$dropdown-border-color: $border-color !default;
+$dropdown-border-radius: $border-radius-md !default;
+$dropdown-border-width: 0 !default;
+$dropdown-inner-border-radius: calc(
+  #{$dropdown-border-radius} - #{$dropdown-border-width}
+) !default;
+$dropdown-divider-bg: $color-neutral-grey !default;
+$dropdown-divider-margin-y: $spacer-sm !default;
+$dropdown-box-shadow: $box-shadow-md !default;
+$dropdown-link-color: $color-neutral-black !default;
+$dropdown-link-hover-color: $color-neutral-black !default;
+$dropdown-link-hover-bg: $color-neutral-lighter !default;
+$dropdown-link-active-color: $color-neutral-black !default;
+$dropdown-link-active-bg: $color-neutral-light !default;
+$dropdown-link-disabled-color: $color-text-disabled !default;
+$dropdown-item-padding-y: $sizer-sm !default;
+$dropdown-item-padding-x: $sizer-md !default;
+$dropdown-header-color: inherit !default;

@@ -1,0 +1,91 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$account-info-inactive-color: $color-neutral-dark !default;
+$account-info-product-number-color: $color-neutral-dark !default;
+
+/// Displays account details such as account title, number, status.
+///
+/// @name bb-account-info
+///
+/// @example html - default
+///   <div class="bb-account-info">
+///     <div class="bb-account-info__title">
+///       Dave Richards Savings Account
+///     </div>
+///     <div class="bb-account-info__product-number">
+///       NL01 INGB 0123 4567 89
+///     </div>
+///   </div>
+///
+/// @example html - with favorited state
+///   <div class="bb-account-info">
+///     <div class="bb-account-info__title">
+///       Dave Richards Savings Account
+///       <i class="bb-account-info__icon bb-icon bb-icon-star-border bb-icon--primary"></i>
+///     </div>
+///     <div class="bb-account-info__product-number">
+///       NL01 INGB 0123 4567 89
+///     </div>
+///   </div>
+///
+/// @example html - with closed state
+///   <div class="bb-account-info">
+///     <div class="bb-account-info__title">
+///       Dave Richards Savings Account
+///       <span class="bb-account-info__status bb-account-status">
+///         <i class="bb-account-status__icon bb-icon bb-icon-cancel bb-icon--danger"></i>
+///         <span class="bb-account-status__state">Closed</span>
+///       </span>
+///     </div>
+///     <div class="bb-account-info__product-number">
+///       NL01 INGB 0123 4567 89
+///     </div>
+///   </div>
+.bb-account-info {
+  display: flex;
+  // For IE
+  flex: 1;
+  flex-direction: column;
+  // By default the min-width of flexbox items(.bb-account-info is child of .bb-stack) are auto which results in overflow the text from the container.
+  // Explicitly setting some min-width value on flexbox item to restrict the text from overflowing.
+  min-width: 0;
+
+  // bb-ellipsis-ui is the flexbox item inside the .bb-account-info.
+  // Add some min-width value to restrict the text from overflowing
+  bb-ellipsis-ui {
+    min-width: 0;
+    // For IE
+    overflow: hidden;
+  }
+}
+
+.bb-account-info__title {
+  display: flex;
+  align-items: center;
+  margin-block-end: $spacer-xs;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-base;
+}
+
+.bb-account-info__status {
+  flex-shrink: 0;
+  margin-inline-start: $spacer-md;
+}
+
+.bb-account-info__icon {
+  margin-inline-start: $spacer-sm;
+}
+
+.bb-account-info__product-number {
+  color: $account-info-product-number-color;
+  font-size: $font-size-subtitle;
+  font-feature-settings: "calt" 0;
+}
+
+.bb-account-info__product-number-content {
+  direction: ltr;
+}

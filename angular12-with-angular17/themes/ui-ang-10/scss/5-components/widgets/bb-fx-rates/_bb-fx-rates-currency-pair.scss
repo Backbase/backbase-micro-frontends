@@ -1,0 +1,189 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$fx-rates-currency-pair-action-column-width: 5.5rem !default;
+$fx-rates-currency-pair-action-column-width-md: 3rem !default;
+$fx-rates-currency-pair-currency-exchange-info-background-color: $color-primary-lightest !default;
+$fx-rates-currency-pair-currency-exchange-info-border-radius: $border-radius-md !default;
+$fx-rates-currency-pair-currency-font-size: $font-size-h1 !default;
+$fx-rates-currency-pair-currency-font-weight: $font-weight-semi-bold !default;
+$fx-rates-currency-pair-currency-arrow-height: $fx-rates-currency-pair-currency-font-size *
+  $headings-line-height !default;
+$fx-rates-currency-pair-currency-color: $color-neutral-black !default;
+$fx-rates-currency-pair-price-color: $color-neutral-dark !default;
+$fx-rates-currency-pair-price-font-size: $font-size-subtitle !default;
+$fx-rates-currency-pair-order-label-color: $color-neutral-dark !default;
+$fx-rates-currency-pair-order-label-font-size: $font-size-subtitle !default;
+$fx-rates-currency-pair-order-label-font-weight: $font-weight-semi-bold !default;
+$fx-rates-currency-pair-result-price-color: $color-neutral-black !default;
+$fx-rates-currency-pair-result-price-font-size: $font-size-default !default;
+
+/// Block which include information about exchange of currency pair.
+/// Include button with labels regarding exchange order way, block with currencies, arrow and prices.
+///
+/// @name bb-currency-pair
+///
+/// @example html
+///   <div class="bb-currency-pair">
+///     <div class="bb-currency-pair__switcher" [ngClass]="{'bb-currency-pair__switcher--reverse': order}">
+///       <div class="bb-currency-pair__order-label">SELLING</div>
+///       <div class="bb-currency-pair__action-column">
+///         <button bbButton color="outline-info" buttonSize="sm" [circle]="true">
+///           <bb-icon-ui name="swap-horiz"></bb-icon-ui>
+///         </button>
+///       </div>
+///       <div class="bb-currency-pair__order-label">BUYING</div>
+///     </div>
+///
+///     <div class="bb-currency-pair__currency-exchange-info">
+///       <div class="row">
+///         <div class="col pr-0">
+///           <h1 class="bb-currency-pair__currency">AUD</h1>
+///         </div>
+///         <div class="bb-currency-pair__action-column bb-currency-pair__currency-arrow">
+///           <bb-icon-ui name="arrow-right-alt" cropped="true" size="xl" color="dark"></bb-icon-ui>
+///         </div>
+///         <div class="col pl-0">
+///           <h1 class="bb-currency-pair__currency">CAD</h1>
+///         </div>
+///       </div>
+///
+///       <div class="row">
+///         <div class="col text-right pr-0">
+///           <div class="bb-currency-pair__price">1 AUD = 0.171 CAD</div>
+///         </div>
+///         <div class="bb-currency-pair__action-column"></div>
+///         <div class="col pl-0">
+///           <div class="bb-currency-pair__price">1 CAD = 5.84795322 AUD</div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+.bb-currency-pair {
+  .currency-input__decimal .decimal__input {
+    text-align: end;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .currency-input {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.bb-currency-pair__action-column {
+  display: flex;
+  flex: 0 0 auto;
+  align-self: flex-end;
+  justify-content: center;
+  width: $fx-rates-currency-pair-action-column-width;
+  max-width: 100%;
+
+  @include media-breakpoint-down(lg) {
+    width: $fx-rates-currency-pair-action-column-width-md;
+  }
+}
+
+.bb-currency-pair__order-label {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  color: $fx-rates-currency-pair-order-label-color;
+  font-weight: $fx-rates-currency-pair-order-label-font-weight;
+  font-size: $fx-rates-currency-pair-order-label-font-size;
+  line-height: $line-height-base;
+
+  @include media-breakpoint-up(sm) {
+    &:first-child {
+      text-align: right;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 $sizer-sm;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 $sizer-md;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.bb-currency-pair__switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+// we have line of elements that should be reverted, but keep alignment of text to the middle
+// to prevent doubling DOM elements and avoid many of ngClass directives we used this pure css solution
+// align to edge are used on xs screen
+.bb-currency-pair__switcher--reverse {
+  flex-direction: row-reverse;
+
+  .bb-currency-pair__order-label:last-child {
+    text-align: right;
+
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+  }
+
+  .bb-currency-pair__order-label:first-child {
+    text-align: left;
+
+    @include media-breakpoint-down(sm) {
+      text-align: right;
+    }
+  }
+}
+
+.bb-currency-pair__currency-exchange-info {
+  margin-top: $spacer-md * 0.75;
+  padding: $sizer-md $sizer-lg $sizer-lg $sizer-lg;
+  background-color: $fx-rates-currency-pair-currency-exchange-info-background-color;
+  border-radius: $fx-rates-currency-pair-currency-exchange-info-border-radius;
+
+  @include media-breakpoint-down(lg) {
+    padding: $sizer-md $sizer-md $sizer-lg $sizer-md;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: $sizer-md $sizer-md $sizer-md $sizer-md;
+  }
+}
+
+.bb-currency-pair__currency {
+  margin: 0;
+  color: $fx-rates-currency-pair-currency-color;
+  font-weight: $fx-rates-currency-pair-currency-font-weight;
+  font-size: $fx-rates-currency-pair-currency-font-size;
+  line-height: $headings-line-height;
+}
+
+.bb-currency-pair__currency-arrow {
+  display: flex;
+  align-items: center;
+  height: $fx-rates-currency-pair-currency-arrow-height;
+}
+
+.bb-currency-pair__price {
+  color: $fx-rates-currency-pair-price-color;
+  font-size: $fx-rates-currency-pair-price-font-size;
+  line-height: $line-height-base;
+}
+
+.bb-currency-pair__result-price {
+  margin-top: $spacer-md * 0.75;
+  color: $fx-rates-currency-pair-result-price-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $fx-rates-currency-pair-result-price-font-size;
+  line-height: $line-height-base;
+}

@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for Session Timeout Modal
+/// This widget is a demo widget but the modal it uses must appear above all others.
+///
+/// @name bb-session-timeout-modal
+///
+/// @example html - Modal
+/// <bb-modal-ui [modalOptions]="{
+///   backdropClass: 'bb-session-timeout-modal',
+///   windowClass: 'bb-session-timeout-modal'
+/// }">
+///   ...
+/// </bb-modal-ui
+.bb-session-timeout-modal {
+  z-index: $zindex-modal + 1;
+}

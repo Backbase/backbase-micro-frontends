@@ -1,0 +1,23 @@
+////
+/// Focus state (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --focus-box-shadow-offset-x: #{$focus-box-shadow-offset-x};
+  --focus-box-shadow-offset-y: #{$focus-box-shadow-offset-y};
+  --focus-box-shadow-blur-radius: #{$focus-box-shadow-blur-radius};
+  --focus-box-shadow-spread-radius: #{$focus-box-shadow-spread-radius};
+  --focus-box-shadow-color: #{$focus-box-shadow-color};
+  --focus-box-shadow: #{$focus-box-shadow};
+  --focus-border-color: #{$focus-border-color};
+}
+
+$focus-box-shadow-offset-x: var(--focus-box-shadow-offset-x);
+$focus-box-shadow-offset-y: var(--focus-box-shadow-offset-y);
+$focus-box-shadow-blur-radius: var(--focus-box-shadow-blur-radius);
+$focus-box-shadow-spread-radius: var(--focus-box-shadow-spread-radius);
+$focus-box-shadow-color: var(--focus-box-shadow-color);
+$focus-box-shadow: var(--focus-box-shadow);
+$focus-border-color: var(--focus-border-color);

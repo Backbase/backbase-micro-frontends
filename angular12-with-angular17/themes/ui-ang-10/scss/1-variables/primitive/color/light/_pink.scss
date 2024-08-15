@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/pink
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-pink-lightest: $chart-color-3-lightest; // #FCE7F2
+$color-light-pink-lighter: $chart-color-3-lighter; // #F28EC1
+$color-light-pink-default: $chart-color-3; // #ED5EA6
+$color-light-pink-darker: $chart-color-3-darker; // #A64274
+$color-light-pink-darkest: $chart-color-3-darkest; // #82345B
+$color-light-pink-on-color: $color-neutral-white;

@@ -1,0 +1,72 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-transaction-category {
+  /* stylelint-disable-next-line */
+  @extend .bicon;
+  line-height: inherit;
+
+  &-list-item {
+    line-height: 60px;
+    vertical-align: top;
+
+    &-name {
+      line-height: 60px;
+    }
+  }
+
+  &-parent-label {
+    background-color: $color-neutral-white;
+  }
+
+  &-name {
+    line-height: $line-height-base * 1.5;
+  }
+
+  &-icon {
+    width: 1.4rem;
+    text-align: center;
+    background-color: inherit;
+  }
+
+  @at-root {
+    @include media-breakpoint-up(sm) {
+      &-list-limited {
+        max-height: 335px;
+        overflow-y: scroll;
+      }
+    }
+
+    &-large {
+      font-size: 1.4rem;
+      line-height: $line-height-base * 1.5;
+    }
+    @each $category, $icon, $color in $category-list {
+      &-bg-#{$category} {
+        background-color: $color;
+      }
+
+      &-label-#{$category} {
+        color: $color;
+      }
+
+      &-#{$category} {
+        width: 3rem;
+        height: 3rem;
+        color: $color;
+        line-height: 3rem;
+        text-align: center;
+        background-color: $color;
+        border-radius: $border-radius-sm;
+
+        @if $icon {
+          /* stylelint-disable-next-line */
+          @extend .#{$icon};
+        }
+      }
+    }
+  }
+}

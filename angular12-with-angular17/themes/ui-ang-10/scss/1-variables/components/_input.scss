@@ -1,0 +1,139 @@
+////
+/// Forms (global)
+/// @group 1-variables/components/input
+/// @access public
+////
+
+/// Configures the background color for inputs
+/// @require {variable} $color-neutral-white
+$input-background-color: $color-neutral-white !default;
+
+/// Configures the color for inputs
+/// @require {variable} $color-neutral-darker
+$input-color: $color-neutral-darker !default;
+
+/// Configures the placeholder color for inputs
+/// @require {variable} $color-text-support
+$input-placeholder-color: $color-text-support !default;
+
+/// Configures the border width for inputs
+/// Used to compose $input-border
+/// @require {variable} $border-width
+$input-border-width: $border-width !default;
+
+/// Configures the border style for inputs
+/// Used to compose $input-border
+/// @require {variable} $border-style
+$input-border-style: $border-style !default;
+
+/// Configures the border color for inputs
+/// Used to compose $input-border
+/// @require {variable} $border-color
+$input-border-color: $border-color !default;
+
+/// Form input border (read-only)
+/// Composed of the separate border properties: width, style, color
+/// @require {variable} $input-border-width
+/// @require {variable} $input-border-style
+/// @require {variable} $input-border-color
+$input-border: $input-border-width $input-border-style $input-border-color;
+
+/// Configures the border radius for inputs
+/// @require {variable} $border-radius-sm
+$input-border-radius: $border-radius-sm !default;
+
+/// Configures the horizontal padding for inputs
+/// @require {variable} $sizer-md
+$input-padding-horizontal: $sizer-md !default;
+
+/// Configures the vertical padding for inputs
+/// @require {variable} $sizer-sm
+$input-padding-vertical: $sizer-sm !default;
+
+/// Configures the padding for inputs
+/// Composed of separate padding properties: input-padding-vertical and input-padding-horizontal
+/// @require {variable} $input-padding-vertical
+/// @require {variable} $input-padding-horizontal
+$input-padding: $input-padding-vertical $input-padding-horizontal !default;
+
+/// Configures the font size for inputs
+/// @require {variable} $font-size-default
+$input-font-size: $font-size-default !default;
+
+/// Configures the font weight for inputs
+/// @require {variable} $font-weight-regular
+$input-font-weight: $font-weight-regular !default;
+
+/// Configures the shadow for inputs. Defaults to none
+/// Use one of the $shadow variables to configure consistantly
+$input-box-shadow: none !default;
+
+/// Configures the input:focus border color. Defaults to $focus-border-color
+/// @require {variable} $focus-border-color
+$input-focus-border-color: $focus-border-color !default;
+
+/// Configures the input:focus border width. Defaults to $input-border-width
+/// @require {variable} $input-border-width
+$input-focus-border-width: $input-border-width !default;
+
+/// Configures the input:focus border width. Defaults to $input-border-width
+/// @require {variable} $input-border-style
+$input-focus-border-style: $input-border-style !default;
+
+/// Form input:focus border (read-only)
+/// Composed of the separate border properties: width, style and color
+/// @require {variable} $input-focus-border-width
+/// @require {variable} $input-focus-border-style
+/// @require {variable} $input-focus-border-color
+$input-focus-border: $input-focus-border-width $input-focus-border-style $input-focus-border-color;
+
+/// Configures the input:focus shadow. Defaults to $focus-box-shadow
+/// @require {variable} $focus-box-shadow
+$input-focus-box-shadow: $focus-box-shadow !default;
+
+/// Configures the input:invalid border color. Defaults to $color-danger
+/// @require {variable} $color-danger
+$input-invalid-border-color: $color-danger !default;
+
+/// Configures the input:invalid border width. Defaults to $input-border-width
+/// @require {variable} $input-border-width
+$input-invalid-border-width: $input-border-width !default;
+
+/// Configures the input:invalid border style. Defaults to $input-border-style
+/// @require {variable} $input-border-style
+$input-invalid-border-style: $input-border-style !default;
+
+/// Form input:invalid border (read-only)
+/// Composed of the separate border properties: width, style and color
+/// @require {variable} $input-invalid-border-width
+/// @require {variable} $input-invalid-border-style
+/// @require {variable} $input-invalid-border-color
+$input-invalid-border: $input-invalid-border-width $input-invalid-border-style
+  $input-invalid-border-color;
+
+/// Configures the input:disabled background color
+/// @require {variable} $color-neutral-lightest
+$input-disabled-background-color: $color-neutral-lightest !default;
+
+/// Configures the input:disabled placeholder color
+/// @require {variable} $color-neutral-greyest
+$input-disabled-placeholder-color: $color-neutral-greyest !default;
+
+/// Configures the input:disabled color
+/// @require {variable} $color-text-disabled
+$input-disabled-color: $color-text-disabled !default;
+
+/// Configures the width style color of the border on focus (experimental)
+/// @require {variable} $focus-border-primary
+$input-focus-border-primary: $focus-border-primary !default;
+
+/// Configures the distance(top bottom left right) of the border from the element on focus (experimental)
+/// @require {variable} $focus-outline-distance
+$input-focus-outline-distance: $focus-outline-distance * 0.5 !default;
+
+/// Configures the border-radius of dropdown items on focus (experimental)
+$input-focus-dropdown-items-border-radius: 0.25rem !default;
+
+///Configures the position top bottom left right for focused components when outline is used to display focus
+/// @require {variable} $focus-outline-offset-distance
+$input-focus-outline-offset-distance: $focus-outline-offset-distance !default;

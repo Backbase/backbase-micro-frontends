@@ -1,0 +1,56 @@
+// Global annotations
+////
+/// @group universal-collection
+/// @access private
+////
+
+@use "sass:math";
+
+$flag-icon-size-sm: 1rem !default;
+$flag-icon-size-md: 1.5rem !default;
+$flag-icon-size-lg: 2rem !default;
+
+.flag-icon-background {
+  background-repeat: no-repeat;
+  //@deprecate
+  background-position: 50%;
+  background-size: contain;
+}
+
+.flag-icon {
+  position: relative;
+  display: inline-block;
+  width: math.div(4, 3) * $flag-icon-size-sm;
+  line-height: $flag-icon-size-sm;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+
+  &::before {
+    content: "\00a0";
+  }
+
+  &.flag-icon--md {
+    width: math.div(4, 3) * $flag-icon-size-md;
+    line-height: $flag-icon-size-md;
+  }
+
+  &.flag-icon--lg {
+    width: math.div(4, 3) * $flag-icon-size-md;
+    line-height: $flag-icon-size-md;
+  }
+
+  &.flag-icon-squared {
+    width: $flag-icon-size-sm;
+
+    &.flag-icon--md {
+      width: $flag-icon-size-md;
+      line-height: $flag-icon-size-md;
+    }
+
+    &.flag-icon--lg {
+      width: $flag-icon-size-md;
+      line-height: $flag-icon-size-md;
+    }
+  }
+}

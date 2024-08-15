@@ -1,0 +1,26 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-corporate-actions-header {
+  padding: $sizer;
+  &:hover {
+    text-decoration: none;
+    background-color: $portfolio-trading-background-color-neutral;
+  }
+}
+.bb-corporate-action-list__collapsible-body {
+  padding-inline-start: 4.5rem;
+  padding-inline-end: 2.8125rem;
+  .bb-corporate-action-list__collapsible-body-item:nth-child(3n) {
+    text-align: end;
+    margin-inline-start: auto;
+    flex: inherit;
+  }
+}
+.bb-corporate-action-list__collapsible-body-item {
+  flex: 0 0 34%;
+  margin-inline-end: 0;
+}

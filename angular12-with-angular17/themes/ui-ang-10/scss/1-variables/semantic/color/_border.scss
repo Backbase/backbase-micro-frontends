@@ -1,0 +1,16 @@
+////
+/// Colors (global)
+/// @group 1-variables/semantic/color/border
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the border none color
+$color-border-none: $color-light-neutral-transparent;
+
+/// Configures the border input color
+$color-border-input: $color-light-neutral-grey;
+
+/// Configures the border separator color
+$color-border-separator: $color-light-neutral-grey;

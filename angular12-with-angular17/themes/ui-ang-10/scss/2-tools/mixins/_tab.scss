@@ -1,0 +1,60 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+$nav-tabs-inverse-link-focus-border-primary: 3px solid $color-neutral-greyer !default;
+
+// Navigation tabs styling
+@mixin navigation-tabs(
+  $nav-tabs-link-color,
+  $nav-tabs-link-focus-color,
+  $nav-tabs-link-hover-color,
+  $nav-tabs-link-hover-bg,
+  $nav-tabs-link-hover-border-color,
+  $nav-tabs-link-active-color,
+  $nav-tabs-link-active-border-color,
+  $nav-tabs-inverse: false
+) {
+  .nav-tabs {
+    .nav-link {
+      color: $nav-tabs-link-color;
+
+      &:focus {
+        @if $nav-tabs-inverse {
+          &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: $nav-tabs-link-border-radius;
+            border: $nav-tabs-inverse-link-focus-border-primary;
+            content: "";
+          }
+        }
+      }
+
+      &:hover {
+        color: $nav-tabs-link-hover-color;
+        background-color: $nav-tabs-link-hover-bg;
+
+        &:after {
+          background-color: $nav-tabs-link-hover-border-color;
+        }
+      }
+    }
+
+    .nav-link.active {
+      color: $nav-tabs-link-active-color;
+      &:after {
+        background-color: $nav-tabs-link-active-border-color;
+      }
+
+      &:hover {
+        background-color: $nav-tabs-link-hover-bg;
+      }
+    }
+  }
+}

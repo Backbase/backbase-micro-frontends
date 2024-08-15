@@ -1,0 +1,170 @@
+////
+/// @group 5-components/structure/layout/bb-layout-horizontal
+/// @access public
+////
+$layout-horizontal-topbar-background-color: $color-neutral-white !default;
+$layout-horizontal-topbar-bottom-background: transparent !default;
+$layout-horizontal-topbar-box-shadow: $box-shadow-md-size $box-shadow-md-color !default;
+
+$layout-horizontal-content-header-margin-block-start-md: 64px !default;
+$layout-horizontal-content-header-margin-block-start-lg: 80px !default;
+$layout-horizontal-content-header-margin-block-end: 24px !default;
+
+/// @name bb-layout bb-layout--horizontal-nav
+/// @example - bb-layout bb-layout--horizontal-nav
+/// <div class="bb-layout bb-layout--horizontal-nav">
+///   <!-- Topbar Area -->
+///   <nav class="bb-layout__topbar">
+///     <!-- Skip to content -->
+///     <button class="bb-layout__skip-to-content">Skip to Content</button>
+///     <!-- Hamburger -->
+///     <button class="bb-layout__nav-expand-marker"></button>
+///     <!-- Logo -->
+///     <div class="bb-layout__branding-area"></div>
+///     <!-- Navigation Items-->
+///     <ul class="bb-layout__horizontal-nav></ul>
+///     <!-- Topbar Content Area -->
+///     <div class="bb-layout__topbar-content-area"></div>
+///   </nav>
+///   <!-- Backdrop-->
+///   <div class="bb-layout__nav-backdrop"></div>
+///   <!--Main content area-->
+///   <div class="bb-layout__main">
+///     <div class="bb-layout-sidebar"></div>
+///     <div class="bb-layout__content">
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example - Horizontal navigation when the screen resolution is above Layout collapseBreakpoint and the navigation is expanded
+/// <div class="bb-layout bb-layout--horizontal-nav bb-layout--nav-expanded bb-layout--high-resolution-view">
+///   <!-- Topbar Area -->
+///   <nav class="bb-layout__topbar">
+///     <!-- Skip to content -->
+///     <button class="bb-layout__skip-to-content">Skip to Content</button>
+///     <!-- Hamburger -->
+///     <button class="bb-layout__nav-expand-marker"></button>
+///     <!-- Logo -->
+///     <div class="bb-layout__branding-area"></div>
+///     <!-- Navigation Items-->
+///     <ul class="bb-layout__horizontal-nav></ul>
+///     <!-- Topbar Content Area -->
+///     <div class="bb-layout__topbar-content-area"></div>
+///   </nav>
+///   <!-- Backdrop-->
+///   <div class="bb-layout__nav-backdrop"></div>
+///   <!--Main content area-->
+///   <div class="bb-layout__main">
+///     <div class="bb-layout-sidebar"></div>
+///     <div class="bb-layout__content">
+///     </div>
+///   </div>
+/// </div>
+///
+
+@mixin layout-horizontal {
+  padding-block: 0;
+  padding-inline: $sizer-sm;
+  background: $layout-horizontal-background;
+  border-radius: $layout-horizontal-topbar-border;
+}
+//multi-line navigation topbar
+@mixin topbar {
+  .bb-layout__topbar-top {
+    display: flex;
+    width: 100%;
+    background: transparent;
+  }
+}
+//multi-line navigation topbar-bottom, it inherits border radius for different background color.
+@mixin topbar-bottom {
+  .bb-layout__topbar-bottom {
+    width: 100%;
+    height: inherit;
+    background: $layout-horizontal-topbar-bottom-background;
+    border-radius: inherit;
+  }
+}
+
+.bb-layout--horizontal-nav {
+  .bb-layout__topbar {
+    box-shadow: $layout-horizontal-topbar-box-shadow;
+  }
+
+  .bb-layout__topbar.bb-layout__topbar--sm {
+    @include layout-horizontal;
+    z-index: $zindex-modal;
+    height: $layout-topbar-height;
+  }
+
+  .bb-layout__topbar.bb-layout__topbar--md {
+    @include layout-horizontal;
+    @include topbar;
+    @include topbar-bottom;
+    z-index: $zindex-modal;
+    flex-direction: column;
+    height: $layout-topbar-height * 2;
+
+    ~ .bb-layout__main {
+      .bb-layout__content .bb-layout__main-content-header {
+        margin-block-start: $layout-horizontal-content-header-margin-block-start-md;
+        margin-block-end: $layout-horizontal-content-header-margin-block-end;
+      }
+    }
+  }
+
+  .bb-layout__topbar.bb-layout__topbar--lg {
+    @include layout-horizontal;
+    @include topbar;
+    @include topbar-bottom;
+    position: absolute;
+    flex-direction: column;
+    height: $layout-topbar-height * 5;
+
+    .bb-layout__horizontal-nav {
+      z-index: $zindex-tooltip;
+    }
+
+    ~ .bb-layout__main {
+      position: absolute;
+      inset-block-start: 120px;
+      z-index: $zindex-popover;
+      width: 100%;
+
+      .bb-layout__content .bb-layout__main-content-header {
+        margin-block-start: $layout-horizontal-content-header-margin-block-start-lg;
+        margin-block-end: $layout-horizontal-content-header-margin-block-end;
+      }
+    }
+  }
+
+  .bb-layout__branding-area,
+  .bb-layout__topbar-content-area {
+    align-items: center;
+  }
+
+  &.bb-layout--nav-expanded {
+    .bb-layout__nav-backdrop {
+      z-index: $zindex-modal-backdrop;
+      display: block;
+    }
+    .bb-layout__topbar.bb-layout__topbar--lg {
+      ~ .bb-layout__nav-backdrop {
+        z-index: 1061;
+      }
+    }
+  }
+
+  &.bb-layout--nav-expanded.bb-layout--high-resolution-view {
+    .bb-layout__nav-backdrop {
+      // Display backdrop only for mobile viewports where the sidebar menu is visible
+      display: none;
+    }
+  }
+
+  &.bb-layout--high-resolution-view {
+    .bb-layout__nav-expand-marker {
+      display: none;
+    }
+  }
+}

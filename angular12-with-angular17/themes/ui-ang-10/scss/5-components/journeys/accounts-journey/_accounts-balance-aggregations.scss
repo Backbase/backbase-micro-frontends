@@ -1,0 +1,46 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$accounts-balances-aggregation-items-spacer: $spacer-xl !default;
+$accounts-balances-aggregation-delimeter: $color-neutral-light 1px solid !default;
+
+/// Accounts balance aggregations
+///
+/// @example html
+/// <div class="accounts-balances-aggregation-container accounts-balances-aggregation-container--top">
+///   <div class="accounts-balances-aggregation">
+///     <div class="accounts-balances-aggregation__items-list">
+///       <div class="accounts-balances-aggregation__item"></div>
+///       <div class="accounts-balances-aggregation__item"></div>
+///     </div>
+///   </div>
+/// </div>
+
+.accounts-balances-aggregation-container {
+  &.accounts-balances-aggregation-container--top {
+    border-bottom: $accounts-balances-aggregation-delimeter;
+  }
+  &.accounts-balances-aggregation-container--bottom {
+    border-top: $accounts-balances-aggregation-delimeter;
+  }
+}
+
+.accounts-balances-aggregation__items-list {
+  overflow-x: auto;
+}
+
+.accounts-balances-aggregation__item {
+  padding: 0 $accounts-balances-aggregation-items-spacer;
+  border-right: $accounts-balances-aggregation-delimeter;
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+}

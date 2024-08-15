@@ -1,0 +1,41 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$account-status-state-color: $color-neutral-dark !default;
+$account-status-state-icon-color: $color-neutral-dark !default;
+$account-status-state-font-size: $font-size-subtitle !default;
+
+/// Displays whether the account is closed, active, etc.
+///
+/// @name bb-account-status
+///
+/// @example html - default
+///   <span class="bb-account-status">
+///     <i class="bb-account-status__icon bb-icon bb-icon-cancel bb-icon--danger"></i>
+///     <span class="bb-account-status__state">
+///       Closed
+///     </div>
+///   </div>
+.bb-account-status {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bb-account-status__state {
+  color: $account-status-state-color;
+  font-size: $account-status-state-font-size;
+}
+
+.bb-account-status__state--hide-for-mobile {
+  @include media-breakpoint-down(sm) {
+    @include sr-only();
+  }
+}
+
+.bb-account-status__icon {
+  margin-inline-end: $spacer-xs;
+  color: $account-status-state-icon-color;
+}

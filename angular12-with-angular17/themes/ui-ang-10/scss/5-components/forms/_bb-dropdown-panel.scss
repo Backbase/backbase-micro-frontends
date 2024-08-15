@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$dropdown-panel-dropdown-shadow: $dropdown-box-shadow !default;
+
+.bb-dropdown-panel {
+  position: relative;
+}
+
+.bb-dropdown-panel__dropdown {
+  box-shadow: $dropdown-panel-dropdown-shadow;
+
+  &.dropdown-menu {
+    padding: 0;
+  }
+}

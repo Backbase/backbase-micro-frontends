@@ -1,0 +1,20 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+/// Will set the following css properties on an HTML element:
+/// - font-weight,
+/// - font-size,
+/// - line-height
+///
+/// @name bb-text-default
+///
+/// @example html - set default text
+///   <p class="bb-text-default">default text here</p>
+.bb-text-default {
+  font-weight: $font-weight-regular;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}

@@ -1,0 +1,45 @@
+////
+/// Colors (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-success: #{$color-success};
+  --color-danger: #{$color-danger};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+  --color-neutral-white: #{$color-neutral-white};
+  --color-neutral-lightest: #{$color-neutral-lightest};
+  --color-neutral-lighter: #{$color-neutral-lighter};
+  --color-neutral-light: #{$color-neutral-light};
+  --color-neutral-grey: #{$color-neutral-grey};
+  --color-neutral-greyer: #{$color-neutral-greyer};
+  --color-neutral-greyest: #{$color-neutral-greyest};
+  --color-neutral-dark: #{$color-neutral-dark};
+  --color-neutral-darker: #{$color-neutral-darker};
+  --color-neutral-darkest: #{$color-neutral-darkest};
+  --color-neutral-black: #{$color-neutral-black};
+}
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-accent: var(--color-accent);
+$color-success: var(--color-success);
+$color-danger: var(--color-danger);
+$color-warning: var(--color-warning);
+$color-info: var(--color-info);
+$color-neutral-white: var(--color-neutral-white);
+$color-neutral-lightest: var(--color-neutral-lightest);
+$color-neutral-lighter: var(--color-neutral-lighter);
+$color-neutral-light: var(--color-neutral-light);
+$color-neutral-grey: var(--color-neutral-grey);
+$color-neutral-greyer: var(--color-neutral-greyer);
+$color-neutral-greyest: var(--color-neutral-greyest);
+$color-neutral-dark: var(--color-neutral-dark);
+$color-neutral-darker: var(--color-neutral-darker);
+$color-neutral-darkest: var(--color-neutral-darkest);
+$color-neutral-black: var(--color-neutral-black);

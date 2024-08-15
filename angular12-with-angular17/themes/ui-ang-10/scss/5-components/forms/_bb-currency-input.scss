@@ -1,0 +1,20 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$currency-selector-width: 5.5rem !default;
+$currency-amount-decimal-width: 5rem !default;
+
+.bb-currency-input__currency-selector {
+  flex: 0 1 $currency-selector-width;
+}
+
+.bb-currency-input__integer {
+  flex: 1 0 auto;
+}
+
+.bb-currency-input__decimal {
+  flex: 0 1 $currency-amount-decimal-width;
+}

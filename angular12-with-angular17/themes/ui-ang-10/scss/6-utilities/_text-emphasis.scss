@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+@each $color, $value in map-merge($theme-text-emphasis-colors, $theme-partial-overrides) {
+  @include text-emphasis-variant(
+    ".text-#{$color}",
+    map-get($theme-text-emphasis-colors, $color),
+    true
+  );
+}

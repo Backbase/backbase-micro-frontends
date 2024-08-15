@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+$bb-attachment-ui-width: 250px !default;
+
+.bb-attachment-ui {
+  width: $bb-attachment-ui-width;
+
+  &.bb-attachment-ui--block {
+    display: block;
+    width: 100%;
+  }
+}

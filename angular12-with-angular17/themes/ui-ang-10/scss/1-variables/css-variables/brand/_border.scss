@@ -1,0 +1,15 @@
+////
+/// Borders (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --border-width: #{$border-width};
+  --border-style: #{$border-style};
+  --border-color: #{$border-color};
+}
+
+$border-width: var(--border-width);
+$border-style: var(--border-style);
+$border-color: var(--border-color);

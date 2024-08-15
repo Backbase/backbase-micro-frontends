@@ -1,0 +1,307 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$product-kind-title-font-size: $font-size-h2 !default;
+$product-kind-title-font-size-sm: $font-size-h3 !default;
+$product-kind-balance-font-size: $font-size-h3 !default;
+$product-kind-balance-font-size-sm: $font-size-base !default;
+$product-summary-balance-amount-font-size: $font-size-h3 !default;
+$product-summary-balance-amount-font-weight: $font-weight-bold !default;
+$product-kind-item-border-radius: $border-radius-xs !default;
+$product-kind-balance-color: $color-text-support !default;
+$product-kind-header-font-weight: $font-weight-heading !default;
+$product-kind-balance-subtitle-font-size: $font-size-subtitle !default;
+$product-kind-balance-title-font-weight: $font-weight-regular !default;
+$product-summary-balance-title-font-weight: normal !default;
+$product-kind-title-icon-color: $color-primary !default;
+$product-needs-attention-background: linear-gradient(
+  90deg,
+  $color-danger $sizer,
+  $color-neutral-white $sizer
+) !default;
+$product-needs-attention-background-sm: linear-gradient(
+  90deg,
+  $color-danger $sizer-sm,
+  $color-neutral-white $sizer-sm
+) !default;
+$product-needs-attention-title-icon-padding: 6px !default;
+
+/// Product summary list widget consist of product summary balance(a top header contains the total aggregated balance)
+/// and product kinds(such as current account, saving account, credit-card, loans etc). Below are the examples:-
+/// @name bb-product-summary-list-widget
+/// @group Widgets
+///
+/// @example html - bb-product-summary-balance
+///   <div class="bb-product-summary-balance">
+///     <div class="bb-product-summary-balance__tooltip">
+///       <span class="bb-product-summary-balance__title">
+///         Total valuation
+///       </span>
+///       <bb-icon-ui size="sm" name="info" color="dark"></bb-icon-ui>
+///     </div>
+///     <bb-amount-ui class="bb-product-summary-balance__amount" currency="EUR" amount="2000"></bb-amount-ui>
+///   </div>
+///
+/// @example html - bb-product-kind
+///   <div class="bb-product-kind card card-body" role="tab">
+///     <div role="button" tabindex="0" aria-expanded="true" class="bb-product-kind__header">
+///       <div class="bb-product-kind__title">
+///         <bb-icon-ui name="account" class="bb-product-kind__title-icon"></bb-icon-ui>
+///         <span>My Custom Product Kind </span>
+///       </div>
+///       <div class="bb-product-kind__balance">
+///         <span class="bb-product-kind__balance-block">
+///           <span class="bb-product-kind__balance-title">Total</span>
+///           <bb-amount-ui currency="EUR" amount="2000"></bb-amount-ui>
+///         </span>
+///         <bb-icon-ui class="bb-product-kind__balance-icon" name="toggle-up"></bb-icon-ui>
+///       </div>
+///     </div>
+///     <div class="bb-product-kind__item-group">
+///       <button class="bb-product-kind__item bb-list__item">
+///         <bb-product-kind></bb-product-kind>
+///       </button>
+///     </div>
+///   </div>
+///
+/// @example html - bb-product-kind-ui
+///   <div class="bb-product-kind-ui">
+///     <div role="link" tabindex="0" class="bb-product-kind-ui__link" aria-label="Royalties account"></div>
+///     <div class="bb-product-kind-ui__item">
+///       <span class="visually-hidden"> Product details </span>
+///       <div class="bb-product-item product-item">
+///         <div class="bb-stack__item bb-account-info">
+///           <span class="bb-account-info__title">Royalties account</span>
+///           <span class="bb-account-info__product-number">•••• •••• •••• 32IH 3CAW FYXA A36</span>
+///         </div>
+///         <div class="bb-stack__item">
+///           <span class="bb-product-item__amount bb-highlight">€1,000.00</span>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-product-summary-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.bb-product-summary-balance__tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bb-product-summary-balance__title {
+  display: flex;
+  margin-right: $spacer-xs;
+  font-weight: $product-summary-balance-title-font-weight;
+}
+
+.bb-product-summary-balance__amount {
+  font-weight: $product-summary-balance-amount-font-weight;
+  font-size: $product-summary-balance-amount-font-size;
+}
+
+.bb-product-kind {
+  margin-top: $spacer-lg;
+  padding: $spacer-xl;
+  @include media-breakpoint-down(md) {
+    padding: $sizer-md;
+  }
+}
+
+.bb-product-kind__item-group {
+  margin-top: $spacer-xl;
+  @include media-breakpoint-down(md) {
+    margin-top: $spacer-md;
+  }
+}
+
+.bb-product-kind__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: $product-kind-header-font-weight;
+}
+
+.bb-product-kind__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: $product-kind-title-font-size;
+  @include media-breakpoint-down(md) {
+    font-size: $product-kind-title-font-size-sm;
+  }
+}
+
+.bb-product-kind__title-icon {
+  margin-right: $spacer-md;
+  color: $product-kind-title-icon-color;
+}
+
+.bb-product-kind__balance {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bb-product-kind__balance-icon {
+  color: $product-kind-balance-color;
+}
+
+.bb-product-kind__balance-block {
+  margin-inline-end: $spacer-md;
+  margin-bottom: 0;
+  font-size: $product-kind-balance-font-size;
+  @include media-breakpoint-down(sm) {
+    margin-inline-end: $spacer-xs;
+    font-size: $product-kind-balance-font-size-sm;
+  }
+}
+
+.bb-product-kind__balance-title {
+  color: $product-kind-balance-color;
+  font-weight: $product-kind-balance-title-font-weight;
+  font-size: $product-kind-balance-subtitle-font-size;
+  @include media-breakpoint-down(md) {
+    @include sr-only();
+  }
+}
+
+.bb-product-kind__item {
+  width: 100%;
+  padding: 0;
+  text-align: inherit;
+  background-color: $color-neutral-white;
+  border: none;
+  border-radius: $product-kind-item-border-radius;
+}
+
+.bb-product-kind__item:not(:last-of-type) {
+  margin-bottom: $spacer-xl;
+  padding-bottom: $spacer-xl;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer-md;
+    padding-bottom: $spacer-md;
+  }
+}
+
+.bb-product-kind-ui {
+  position: relative;
+}
+
+.bb-product-kind-ui__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bb-product-kind-ui__item {
+  position: relative;
+  cursor: pointer;
+
+  .bb-product-item__title {
+    flex: none;
+  }
+}
+
+// Needs Your Attention Section
+
+.bb-product-needs-attention {
+  margin-top: $spacer-lg;
+  padding: $sizer-xl;
+  background: $product-needs-attention-background;
+  @include media-breakpoint-down(md) {
+    padding: $sizer-lg;
+    background: $product-needs-attention-background-sm;
+  }
+}
+
+.bb-product-needs-attention__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bb-product-needs-attention__header-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: $product-kind-title-font-size;
+  @include media-breakpoint-down(md) {
+    font-size: $product-kind-title-font-size-sm;
+  }
+}
+
+.bb-product-needs-attention-title-text {
+  color: $color-danger;
+  font-weight: $font-weight-bold;
+}
+
+.bb-product-needs-attention-title-icon {
+  padding: $product-needs-attention-title-icon-padding;
+  background-color: $color-danger-lightest;
+  border-radius: $sizer-sm;
+}
+
+.bb-product-needs-attention__header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bb-product-needs-attention-header-icon-chevron {
+  color: $color-text-support;
+}
+
+.bb-product-needs-attention__item-group {
+  margin-top: $spacer-xl;
+  @include media-breakpoint-down(md) {
+    margin-top: $spacer-md;
+  }
+}
+
+.bb-product-needs-attention-item {
+  width: 100%;
+  padding: 0;
+  text-align: inherit;
+  background-color: $color-neutral-white;
+  border: none;
+  border-radius: $border-radius-xs;
+}
+
+.bb-product-needs-attention-item:not(:last-of-type) {
+  margin-bottom: $spacer-xl;
+  padding-bottom: $spacer-xl;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer-md;
+    padding-bottom: $spacer-md;
+  }
+}
+
+// Needs Attention Item UI
+
+.bb-product-needs-attention-item-ui__item {
+  position: relative;
+  cursor: pointer;
+
+  .bb-product-item__title {
+    flex: none;
+  }
+}
+
+.bb-product-needs-attention-item-ui-header {
+  margin-bottom: $spacer-md;
+  @include media-breakpoint-down(md) {
+    margin-bottom: $spacer-sm;
+  }
+}

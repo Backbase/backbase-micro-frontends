@@ -1,0 +1,91 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$account-favorite-yes-color: $color-info !default;
+$account-favorite-no-color: $color-neutral-greyer !default;
+$account-number-color: $color-neutral-dark !default;
+$account-kind-right-space: $spacer-md !default;
+
+.bb-account__favorite {
+  text-align: left;
+}
+
+.bb-account__favorite--yes {
+  color: $account-favorite-yes-color;
+}
+
+.bb-account__favorite--no {
+  color: $account-favorite-no-color;
+}
+
+.bb-account__account-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include media-breakpoint-down(md) {
+    flex-grow: 1;
+  }
+}
+
+.bb-account__account-name-icon {
+  margin-right: $account-kind-right-space;
+}
+
+.bb-account__account-name-text {
+  font-weight: $font-weight-semi-bold;
+}
+
+.bb-account__account-number {
+  color: $account-number-color;
+}
+
+.bb-accounts__currency {
+  @include media-breakpoint-down(md) {
+    padding-right: 0;
+    font-weight: $font-weight-semi-bold;
+  }
+}
+
+.bb-account__balance {
+  text-align: right;
+}
+
+.bb-account__balance--available {
+  font-weight: $font-weight-semi-bold;
+  @include media-breakpoint-down(md) {
+    text-align: left;
+  }
+}
+
+.bb-account__row-buttons {
+  display: flex;
+  justify-content: space-around;
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+  }
+}
+
+.bb-account__balance--small-screen {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: block;
+    width: 100%;
+    padding-top: 0 !important;
+    text-align: right;
+  }
+}
+
+.bb-account__amount {
+  font-weight: $font-weight-semi-bold;
+  .bb-amount__value .symbol {
+    margin-right: $spacer-sm;
+  }
+}
+
+.bb-account__account-number--with-status {
+  margin-inline-end: $sizer-sm;
+  vertical-align: middle;
+}

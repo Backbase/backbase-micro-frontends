@@ -1,0 +1,595 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$transaction-list-font-size-subtitle: $font-size-subtitle !default;
+$transaction-list-font-size-amount: $font-size-highlight !default;
+$transaction-list-font-size-amount-sm: $font-size-subtitle !default;
+$transaction-list-subtitle-color: $color-neutral-dark !default;
+$transaction-list-font-weight-bold: $font-weight-bold !default;
+$transaction-list-filter-background-color: $color-neutral-lightest !default;
+$transaction-list-filter-border-color: $color-neutral-grey !default;
+$transaction-list-info-amount-credit: $color-success !default;
+$check-img-size: 15.75rem !default;
+$check-img-container-background-color: $color-neutral-lightest !default;
+$check-img-container-border-color: $color-neutral-grey !default;
+$check-img-state-icon-color: $color-neutral-white !default;
+$check-img-no-image-icon-color: $color-neutral-dark !default;
+$geolocation-map-height: 11.875rem !default;
+$transactions-geolocation-font-size: $font-size-subtitle !default;
+$transactions-geolocation-map-background-color: #d8d8d8 !default;
+$transactions-geolocation-map-border-color: #d9d9d9 !default;
+$transaction-category-small-size: $sizer * 2 !default;
+$transaction-category-size: $sizer * 3 !default;
+$transaction-enrichment-category-color: $color-primary !default;
+$transaction-enrichment-category-background-color: $icon-custom-category-color !default;
+$transaction-details-category-icon-container-size: $sizer * 6 !default;
+$transaction-details-category-icon-size: 3.125rem !default;
+$transaction-details-category-small-icon-size: $font-size-base !default;
+$transaction-details-category-badge-color: $color-neutral-white !default;
+$transaction-details-category-badge-size: 0.375rem !default;
+$transaction-details-additional-info-container-background-color: $color-neutral-lightest !default;
+$transaction-details-additional-info-container-padding: $spacer-xl $spacer-md !default;
+$transaction-details-additional-info-container-border-radius: $spacer-sm !default;
+$transaction-details-controls-label-color: $color-primary !default;
+$transaction-details-cancel-controls-label-color: $color-danger !default;
+$transaction-details-controls-container-width: 9rem !default;
+$transaction-details-controls-container-height: 7.5rem !default;
+$transaction-details-controls-container-padding: $spacer-md $spacer-lg !default;
+$transaction-notes-editIconSet-button-background-color: $color-neutral-light !default;
+$transaction-category-merchant-logo-background-color: $color-neutral-white !default;
+$transaction-category-collapsible-background-color: $color-neutral-lightest !default;
+$transaction-category-collapsible-highlight-color: linear-gradient(
+    0deg,
+    rgba($color-neutral-white, 0.85),
+    rgba($color-neutral-white, 0.85)
+  ),
+  $color-primary !default;
+$transaction-category-collapsible-padding: $spacer-sm $spacer !default;
+$transaction-category-collapsible-border-radius: $sizer-sm !default;
+
+$document-viewer-header-color: $color-neutral-white !default;
+$document-viewer-header-background-color: $color-neutral-darker !default;
+$document-viewer-header-spacer-margin: $spacer-lg !default;
+$document-viewer-header-title-padding: $sizer-lg !default;
+$document-viewer-header-dropdown-icon-margin: $spacer-sm !default;
+$document-viewer-interactor-container-controls-width: 17.063rem !default;
+$document-viewer-interactor-container-controls-height: 3.5rem !default;
+$document-viewer-interactor-container-color: $color-neutral-white !default;
+$document-viewer-interactor-container-background-color: $color-neutral-darker !default;
+$document-viewer-interactor-controls-spacer-margin: $spacer-md !default;
+$document-viewer-interactor-separator-height: 1.5rem !default;
+$document-viewer-interactor-separator-border-width: 0.125rem !default;
+$document-viewer-interactor-separator-border-color: $color-neutral-dark !default;
+$img-viewer-container-image-width: 53.375rem !default;
+$img-viewer-container-image-height: 26.688rem !default;
+$document-viewer-z-index: 1050 !default;
+$transactions-list-container-min-width: 328px !default;
+$transactions-list-container-margin-block-end: $spacer-xl !default;
+$transaction-details-additional-info-container-min-width: 310px !default;
+$transaction-inquire-dispute-attachments: 244px !default;
+$transaction-dispute-text-disabled-color: $color-text-disabled !default;
+
+.bb-transactions-list-container {
+  min-width: $transactions-list-container-min-width;
+  margin-block-end: $transactions-list-container-margin-block-end;
+}
+
+.bb-transaction-list-controls__search-box {
+  flex-grow: 1;
+  padding-block-end: $spacer-md;
+
+  bb-search-box-ui {
+    width: 100%;
+  }
+}
+
+.bb-transaction-list-controls__long-button {
+  display: block;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.bb-transaction-list-controls__short-button {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.bb-transaction-list-header-dispute-status-tag {
+  @include media-breakpoint-down(xl) {
+    margin-inline-end: 0;
+  }
+}
+
+.bb-transaction-list-header-amount {
+  flex-direction: column-reverse;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    margin-inline-start: auto;
+  }
+
+  > .bb-transaction-list-header-amount__wrapper {
+    width: 100%;
+  }
+}
+
+.bb-transaction-item-description__title {
+  font-weight: $transaction-list-font-weight-bold;
+}
+
+.bb-transaction-list-header-amount__value {
+  font-weight: $transaction-list-font-weight-bold;
+  font-size: $transaction-list-font-size-amount;
+
+  @include media-breakpoint-down(md) {
+    font-size: $transaction-list-font-size-amount-sm;
+  }
+}
+
+.bb-transaction-list-header-amount__value--credit {
+  color: $transaction-list-info-amount-credit;
+}
+
+.bb-transaction-item-description__subtitle {
+  color: $transaction-list-subtitle-color;
+  font-size: $transaction-list-font-size-subtitle;
+}
+
+.bb-transaction-item-category {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: inline-block;
+  }
+}
+
+.bb-transaction-list-item-detail-header__close-button {
+  z-index: 2;
+}
+
+.bb-transaction-list-item-detail-header__category-badge {
+  background-color: $transaction-enrichment-category-background-color;
+}
+
+.bb-transaction-list-item-detail-header__category-badge-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: $transaction-details-category-badge-size;
+  padding-inline: $spacer-lg;
+  color: $transaction-details-category-badge-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subtitle;
+  line-height: $spacer-lg;
+  white-space: nowrap;
+  border-radius: $btn-border-radius;
+}
+
+.bb-transactions-list-pending-header__tooltip,
+.bb-transaction-list-item-detail-header__exchange-icon {
+  margin-inline-start: $spacer-sm;
+  padding-block-end: $spacer-xs;
+  vertical-align: middle;
+}
+
+.bb-transaction-list-item-detail-additional-info {
+  [role="tooltip"] > * {
+    vertical-align: middle;
+  }
+
+  padding: $transaction-details-additional-info-container-padding;
+  background-color: $transaction-details-additional-info-container-background-color;
+  border-radius: $transaction-details-additional-info-container-border-radius;
+
+  .bb-input-radio-group__radio.disabled {
+    .bb-input-radio-group__radio-label {
+      color: $transaction-dispute-text-disabled-color;
+    }
+  }
+}
+
+.bb-transactions-list-pending-header__tooltip--md-top {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+  }
+}
+
+.bb-transactions-list-pending-header__tooltip--sm-bottom {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: inline-block;
+  }
+}
+
+.bb-inquire-dispute-attachments {
+  margin-inline-end: 0;
+
+  .bb-inquire-dispute-attachments__item {
+    > * {
+      width: $transaction-inquire-dispute-attachments;
+    }
+  }
+}
+
+.bb-transaction-list-item-detail-additional-info__title {
+  font-weight: $font-weight-semi-bold;
+}
+
+.bb-transaction-list-item-details-controls-container {
+  min-width: $transaction-details-controls-container-width;
+  min-height: $transaction-details-controls-container-height;
+  padding: $transaction-details-controls-container-padding;
+
+  @include media-breakpoint-down(lg) {
+    margin-inline-end: 0;
+  }
+}
+
+.bb-transaction-list-item-details-cancel-controls-label {
+  color: $transaction-details-cancel-controls-label-color;
+}
+
+.bb-transaction-list-item-details-controls-label {
+  color: $transaction-details-controls-label-color;
+}
+
+.bb-transaction-notes-editIconSet {
+  .bb-transaction-notes-editIconSet-button.btn-link-dark {
+    &:hover,
+    &:focus {
+      background-color: $transaction-notes-editIconSet-button-background-color;
+    }
+  }
+}
+
+.bb-transactions-list-filter {
+  background-color: $transaction-list-filter-background-color;
+  border-block: solid $transaction-list-filter-border-color 1px;
+}
+
+.bb-transactions-list-filter__field {
+  width: 100%;
+}
+
+.bb-transactions-table-filter {
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+  }
+}
+
+.bb-transactions-table-filter__field {
+  width: 100%;
+  @include media-breakpoint-down(sm) {
+    min-width: 100%;
+  }
+}
+
+.bb-transactions-table-filter-first-field {
+  @include media-breakpoint-down(sm) {
+    margin-block-end: $spacer-md;
+  }
+}
+
+.bb-transaction-header {
+  cursor: pointer;
+}
+
+.bb-check-img-container {
+  position: relative;
+  box-sizing: content-box;
+  width: $check-img-size;
+  height: $check-img-size * 0.381;
+  background: $check-img-container-background-color;
+  border: 1px solid $check-img-container-border-color;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    .bb-check-img-container-state__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color-neutral-black, 0.5);
+      border-radius: $border-radius-sm;
+    }
+  }
+}
+
+.bb-check-img-container__img {
+  width: 100%;
+  height: 100%;
+}
+
+.bb-check-img-container-state {
+  position: relative;
+}
+
+.bb-check-img-container-state__container {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  min-width: $check-img-size;
+  height: 100%;
+  min-height: $check-img-size * 0.381;
+  color: $check-img-state-icon-color;
+}
+
+.bb-check-no-img {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  margin: 0;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.bb-check-no-img__icon {
+  color: $check-img-no-image-icon-color;
+}
+
+.bb-transcations-geolocation-map {
+  width: 100%;
+  height: $geolocation-map-height;
+  background: $transactions-geolocation-map-background-color;
+  border: 1px solid $transactions-geolocation-map-border-color;
+  border-radius: $border-radius-sm;
+}
+
+.bb-transactions-geolocation {
+}
+
+.bb-transactions-geolocation__address {
+  font-size: $transactions-geolocation-font-size;
+}
+
+.bb-transaction-category--enriched {
+  width: $transaction-category-size;
+  height: $transaction-category-size;
+  color: $transaction-enrichment-category-color;
+  line-height: $transaction-category-size;
+  background-color: $transaction-enrichment-category-background-color;
+  border-radius: $border-radius-sm;
+}
+
+.bb-transaction-category--large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $transaction-details-category-icon-container-size;
+  height: $transaction-details-category-icon-container-size;
+  font-size: $transaction-details-category-icon-size;
+}
+
+.bb-transaction-category--small {
+  width: $transaction-category-small-size;
+  height: $transaction-category-small-size;
+  font-size: $transaction-details-category-small-icon-size;
+  line-height: $transaction-category-small-size;
+}
+
+.bb-transaction-category-merchant-logo-background-color {
+  background-color: $transaction-category-merchant-logo-background-color;
+}
+
+.bb-transaction-category__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bb-transaction-category--pending {
+  width: $transaction-category-size;
+  height: $transaction-category-size;
+  color: $color-neutral-dark;
+  line-height: $transaction-category-size;
+  background-color: $color-neutral-grey;
+  border-radius: $border-radius-sm;
+}
+
+//document-viewer-backdrop
+.bb-document-viewer-backdrop {
+  z-index: $document-viewer-z-index;
+}
+
+.bb-document-viewer-backdrop-default-off {
+  position: fixed;
+  min-width: initial;
+  min-height: initial;
+}
+
+//document-viewer-container
+.bb-document-viewer-container {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: $document-viewer-z-index;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.bb-document-viewer-container__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bb-document-viewer-container-image {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.bb-document-viewer-container__state {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+//document-viewer-header
+.bb-document-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $document-viewer-interactor-container-controls-height;
+  color: $document-viewer-header-color;
+  background-color: $document-viewer-header-background-color;
+  opacity: 1;
+
+  button > * {
+    vertical-align: middle;
+  }
+}
+
+button.bb-document-viewer-header__spacer,
+button.bb-stack__item.bb-document-viewer-header__spacer {
+  margin-inline-end: $document-viewer-header-spacer-margin;
+}
+
+.bb-document-viewer-header__title {
+  padding-inline-start: $document-viewer-header-title-padding;
+}
+
+.bb-document-viewer-header-controls__mobile-view {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.bb-document-viewer-header-controls__web-view {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.bb-document-viewer-header__dropdown-icon {
+  margin-inline-end: $document-viewer-header-dropdown-icon-margin;
+  vertical-align: middle;
+}
+
+//document-viewer-interactor
+.bb-document-viewer-interactor {
+  position: absolute;
+  bottom: 1.25rem;
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    bottom: 0;
+    background-color: $document-viewer-interactor-container-background-color;
+  }
+}
+
+.bb-document-viewer-interactor__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: $document-viewer-interactor-container-controls-width;
+  height: $document-viewer-interactor-container-controls-height;
+  margin: auto;
+  color: $document-viewer-interactor-container-color;
+  background-color: $document-viewer-interactor-container-background-color;
+  opacity: 1;
+}
+
+.bb-document-viewer-interactor-controls {
+  margin: auto;
+  button > * {
+    vertical-align: middle;
+  }
+}
+
+.bb-document-viewer-interactor-controls--invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bb-document-viewer-interactor-controls__button {
+  padding: 0;
+  color: inherit;
+  font-weight: normal;
+  text-align: start;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.bb-document-viewer-interactor-controls__spacer {
+  margin-inline-end: $document-viewer-interactor-controls-spacer-margin;
+}
+
+.bb-document-viewer-interactor-separator {
+  height: $document-viewer-interactor-separator-height;
+  border-inline-start: $document-viewer-interactor-separator-border-width solid
+    $document-viewer-interactor-separator-border-color;
+}
+
+//image-viewer
+.bb-img-viewer-container {
+  position: relative;
+  flex-grow: 1;
+  height: calc(100% - 25%);
+}
+
+.bb-img-viewer-container__img {
+  @include media-breakpoint-up(md) {
+    width: $img-viewer-container-image-width;
+    height: $img-viewer-container-image-height;
+  }
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(1);
+}
+
+.bb-transaction-collapsible-category {
+  padding: $transaction-category-collapsible-padding;
+  border-radius: $transaction-category-collapsible-border-radius;
+  background-color: $transaction-category-collapsible-background-color;
+  cursor: pointer;
+
+  &.bb-transaction-collapsible-category--highlight {
+    background: $transaction-category-collapsible-highlight-color;
+  }
+}
+
+.bb-categories-form {
+  overflow: auto;
+}
+
+.bb-nested-categories-body {
+  height: calc(100vh - 19.4rem);
+
+  @include media-breakpoint-down(md) {
+    height: calc(100vh - 18.6rem);
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: calc(100vh - 14.6rem);
+  }
+}
+
+.transactions-categories-modal {
+  padding: 0 $sizer-xl;
+}
+
+.category-radio-btn {
+  padding-inline-start: $sizer-lg;
+}
+
+.category-label {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.categories-card-body {
+  padding: $sizer $sizer 0 $sizer;
+}

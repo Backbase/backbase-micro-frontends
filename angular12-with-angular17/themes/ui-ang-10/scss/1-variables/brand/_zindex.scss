@@ -1,0 +1,35 @@
+////
+/// z-index layering (global)
+///
+/// These variable names are the same as in Bootstrap.
+/// The values defined here apply to Bootstrap as well.
+///
+/// @todo These variables should become public when all `z-index` properties in our codebase
+// are defined using these variables or relative to these variables.
+/// @group 1-variables/brand/zindex
+/// @access private
+////
+
+/// Z-index for drop-down components (read-only)
+$zindex-dropdown: 1000;
+
+/// Z-index of sticky components (read-only)
+$zindex-sticky: 1020;
+
+/// Z-index of fixed components (read-only)
+$zindex-fixed: 1030;
+
+/// Z-index for the backdrop of modal components (read-only)
+$zindex-modal-backdrop: 1040;
+
+/// Z-index for the backdrop of offcanvas components (read-only)
+$zindex-offcanvas: 1050;
+
+/// Z-index for modal components (read-only)
+$zindex-modal: 1055;
+
+/// Z-index of pop-over components (read-only)
+$zindex-popover: 1070;
+
+/// Z-index of tooltip components (read-only)
+$zindex-tooltip: 1080;

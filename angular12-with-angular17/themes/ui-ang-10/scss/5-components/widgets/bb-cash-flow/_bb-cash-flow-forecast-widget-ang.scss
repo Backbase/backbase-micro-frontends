@@ -1,0 +1,337 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cash-flow-forecast-creation-date-top: $spacer-md !default;
+$cash-flow-forecast-creation-date-right: $spacer-md !default;
+
+$cash-flow-forecast-chart-grid-line-color: $color-neutral-lighter !default;
+$cash-flow-forecast-table-header-min-width: 15 * $sizer !default; // 240px
+$cash-flow-forecast-table-cell-min-height: 2.25 * $sizer !default;
+$cash-flow-forecast-table-category-cell-min-height: 3.5 * $sizer !default;
+$cash-flow-forecast-table-header-account-cell-padding-left: 3.65 * $sizer !default;
+$cash-flow-forecast-table-account-cell-border: $border-width $border-style $color-neutral-white !default;
+$cash-flow-forecast-table-focus-box-shadow: $input-btn-focus-box-shadow inset !default;
+
+$cash-flow-forecast-chart-tooltip-min-width: 12.5 * $sizer !default; // 200px
+$cash-flow-forecast-chart-tooltip-max-width: 25 * $sizer !default; // 400px
+$cash-flow-forecast-chart-tooltip-title-color: $color-neutral-white !default;
+$cash-flow-forecast-chart-tooltip-font-size: $font-size-subheader !default;
+$cash-flow-forecast-chart-tooltip-area-focus-stroke-width: $input-btn-focus-width !default;
+$cash-flow-forecast-chart-tooltip-area-focus-stroke-color: $input-btn-focus-color !default;
+$cash-flow-forecast-cadence-dropdown-hover-background-color: $color-neutral-lighter !default;
+
+$cash-flow-forecast-chart-area-hover-color: mix(
+  $color-neutral-lightest,
+  rgba(0, 0, 0, 0),
+  60%
+) !default;
+$cash-flow-forecast-chart-history-area-color: mix(
+  mix($color-neutral-white, $color-primary, 85%),
+  rgba(0, 0, 0, 0),
+  30%
+) !default;
+
+/// Styles for Cash Flow forecast table
+///
+/// @example html - forecast table
+///
+/// <div class="bb-cash-flow-forecast-table">
+///   <div class="bb-cash-flow-forecast-table__header">
+///     <div class="bb-cash-flow-forecast-table__row">
+///       <div class="bb-cash-flow-forecast-table__cell">...</div>
+///       <div class="bb-cash-flow-forecast-table__cell">...</div>
+///     </div>
+///   </div>
+///   <div class="bb-cash-flow-forecast-table__body">
+///     <div class="bb-cash-flow-forecast-table__row-wrapper bb-cash-flow-forecast-table__chart-wrapper">
+///       <div class="bb-cash-flow-forecast-table__row">
+///         <div class="bb-cash-flow-forecast-table__cell">
+///           <bb-cash-flow-forecast-bar-chart class="bb-cash-flow-forecast__chart"></bb-cash-flow-forecast-bar-chart>
+///         </div>
+///       </div>
+///     </div>
+///     <div class="bb-cash-flow-forecast-table__row-wrapper bb-cash-flow-forecast-table__table-wrapper">
+///       <div *ngFor="let cashFlowItem of cashFlowData"
+///            class="bb-cash-flow-forecast-table__row">
+///         <div class="bb-cash-flow-forecast-table__cell">
+///           <bb-ellipsis-ui class="bb-cash-flow-forecast-table-item-shrink" text="Opening Balance"></bb-ellipsis-ui>
+///         </div>
+///         <div class="bb-cash-flow-forecast-table__cell">...</div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example html - forecast widget
+///
+/// <div class="bb-cash-flow-forecast">
+///   <bb-cash-flow-forecast-table></bb-cash-flow-forecast-table>
+///   <div class="bb-cash-flow-forecast__creation-date">Last updated: Today at 12:00</div>
+/// </div>
+
+// Cadence boundary interface
+%current-cadence-boundary {
+  position: absolute;
+  height: 100%;
+  border-left: $border;
+  content: "";
+}
+
+%focus-box-shadow {
+  &:focus {
+    outline: none;
+    box-shadow: $cash-flow-forecast-table-focus-box-shadow;
+  }
+}
+
+// Widget
+.bb-cash-flow-forecast {
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.bb-cash-flow-forecast-mobile-state {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+.bb-cash-flow-forecast__creation-date {
+  position: absolute;
+  top: $cash-flow-forecast-creation-date-top;
+  right: $cash-flow-forecast-creation-date-right;
+  display: flex;
+}
+
+// Table
+.bb-cash-flow-forecast-table {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: $font-size-table-default;
+}
+
+.bb-cash-flow-forecast-table-currency {
+  width: 100%;
+  margin: $spacer-md;
+  padding: $sizer-md;
+  background-color: $color-neutral-lighter;
+  border-radius: $border-radius-sm;
+}
+
+.bb-cash-flow-forecast-table__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-cash-flow-forecast-table__row-wrapper {
+  display: flex;
+}
+
+.bb-cash-flow-forecast-table__cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: $cash-flow-forecast-table-cell-min-height;
+}
+
+.bb-cash-flow-forecast-table__table-wrapper {
+  .bb-cash-flow-forecast-table__row {
+    flex: none;
+    &:focus {
+      transition: none;
+      z-index: 1;
+      outline: none;
+      box-shadow: $focus-box-shadow;
+    }
+
+    &.bb-cash-flow-forecast-item-hover,
+    &.bb-cash-flow-forecast-table__row--current {
+      background-color: $cash-flow-forecast-chart-area-hover-color;
+    }
+  }
+
+  .bb-cash-flow-forecast-table__cell {
+    justify-content: flex-end;
+    padding: 0 $sizer-sm;
+  }
+}
+
+.bb-cash-flow-forecast-table__row--current {
+  position: relative;
+
+  &::before {
+    @extend %current-cadence-boundary;
+    left: 0;
+  }
+
+  &::after {
+    @extend %current-cadence-boundary;
+    right: 0;
+  }
+}
+
+.bb-cash-flow-forecast-table__header {
+  min-width: $cash-flow-forecast-table-header-min-width;
+  border-bottom-left-radius: $border-radius-md;
+  box-shadow: $box-shadow-sm;
+
+  .bb-cash-flow-forecast-table__cell {
+    padding: 0 $sizer-md;
+    &:focus {
+      transition: none;
+      z-index: 1;
+      outline: none;
+      box-shadow: $focus-box-shadow;
+    }
+  }
+
+  .bb-cash-flow-forecast-table__cell--account {
+    padding-left: $cash-flow-forecast-table-header-account-cell-padding-left;
+  }
+}
+
+.bb-cash-flow-forecast-table__cell--category {
+  min-height: $cash-flow-forecast-table-category-cell-min-height;
+  border-top: $border;
+}
+
+.bb-cash-flow-forecast-table__cell--account {
+  border-bottom: $cash-flow-forecast-table-account-cell-border;
+}
+
+.bb-cash-flow-forecast-table__cell--general {
+  z-index: 1;
+  margin: $spacer-md 0;
+  font-weight: $font-weight-semi-bold;
+  background-color: $color-neutral-lighter;
+
+  &:last-child {
+    margin-top: -$spacer-sm;
+    margin-bottom: $spacer-lg;
+  }
+}
+
+.bb-cash-flow-forecast-table__cell--info {
+  flex-direction: column;
+}
+
+.bb-cash-flow-forecast-table__chart-wrapper {
+  .bb-cash-flow-forecast-table__cell {
+    border-bottom: $border;
+  }
+
+  .gridline-path {
+    stroke: $cash-flow-forecast-chart-grid-line-color;
+  }
+}
+
+.bb-cash-flow-forecast-table__body {
+  flex-shrink: 1;
+  overflow: auto;
+}
+
+.bb-cash-flow-forecast-table__cadence-selector {
+  width: 100%;
+  margin-top: auto;
+}
+
+.bb-cash-flow-forecast-table-item-shrink {
+  min-width: 0;
+}
+
+// Tooltip
+
+.bb-cash-flow-forecast-chart-tooltip-window {
+  .tooltip-inner {
+    min-width: $cash-flow-forecast-chart-tooltip-min-width;
+    max-width: $cash-flow-forecast-chart-tooltip-max-width;
+    padding: $sizer-sm;
+    font-size: $cash-flow-forecast-chart-tooltip-font-size;
+    text-align: left;
+    border-radius: $border-radius-xs;
+  }
+}
+
+.bb-cash-flow-forecast-chart-tooltip-body__title {
+  color: $cash-flow-forecast-chart-tooltip-title-color;
+  font-size: $cash-flow-forecast-chart-tooltip-font-size;
+}
+
+// Chart
+
+// by default bars filled with black color
+.bb-cash-flow-forecast-chart-bar-group__tooltip-area {
+  fill: transparent;
+}
+
+.bb-cash-flow-forecast-chart-history-area {
+  fill: $cash-flow-forecast-chart-history-area-color;
+}
+
+.bb-cash-flow-forecast-chart-bar-group {
+  &.bb-cash-flow-forecast-item-hover .bb-cash-flow-forecast-chart-bar-group__tooltip-area,
+  .bb-cash-flow-forecast-chart-bar-group__tooltip-area--current {
+    fill: $cash-flow-forecast-chart-area-hover-color;
+  }
+
+  &:focus {
+    outline: none;
+
+    .bb-cash-flow-forecast-chart-bar-group__tooltip-area {
+      stroke: $cash-flow-forecast-chart-tooltip-area-focus-stroke-color;
+      stroke-width: $cash-flow-forecast-chart-tooltip-area-focus-stroke-width;
+    }
+  }
+}
+
+.bb-cash-flow-forecast-chart-baseline {
+  stroke: $color-neutral-greyest;
+}
+
+.bb-cash-flow-forecast-chart-current-cadence-border {
+  stroke: $color-neutral-grey;
+}
+
+.bb-cash-flow-forecast-chart-label {
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  fill: $color-neutral-dark;
+}
+
+.bb-cash-flow-forecast-cadence-dropdown {
+  border-radius: $border-radius-md;
+
+  button {
+    &:focus {
+      border-color: $input-border-color;
+      outline: $input-focus-border-primary;
+      outline-offset: $input-focus-outline-offset-distance;
+      box-shadow: none;
+    }
+  }
+  .bb-cash-flow-forecast-cadence-dropdown__label {
+    padding: $sizer-sm $sizer-md $sizer-sm $sizer-md;
+  }
+
+  .dropdown-menu {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $cash-flow-forecast-cadence-dropdown-hover-background-color;
+  }
+}
+
+.bb-cash-flow-forecast-cadence-dropdown__item-wrapper {
+  display: block;
+}

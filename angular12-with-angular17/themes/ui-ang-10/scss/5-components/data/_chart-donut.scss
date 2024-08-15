@@ -1,0 +1,80 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+////
+
+/**
+ * --------------------------------------------------------------------------
+ * Donut chart component
+ * --------------------------------------------------------------------------
+ * @description
+ *
+ * Some styles are read inside code that generates canvas.
+ * Examples for that kind of styles cannot be provided.
+ */
+
+$chart-donut-max-width: 335px !default;
+$chart-donut-large-max-width: 385px !default;
+
+$chart-donut-slice-icon-font-size: 1.5rem !default;
+$chart-donut-slice-icon-line-height: 1.5rem !default;
+$chart-donut-slice-amount-font-size: 0.875rem !default;
+
+.chart-donut {
+  max-width: $chart-donut-max-width;
+  margin: 55px auto;
+  padding: 0 16px;
+
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &.chart-donut-container-inflated {
+    min-height: $chart-donut-max-width;
+  }
+}
+
+// repetitive selector for WC2 + WC3
+.bb-transaction-category.chart-donut-slice-icon,
+.chart-donut-slice-icon {
+  font-size: 16px;
+  background: inherit;
+}
+
+.chart-donut-slice-amount {
+  margin: 0;
+  padding: 0;
+  color: $color-neutral-darker;
+  font-size: 12px;
+
+  .amount {
+    white-space: nowrap;
+  }
+}
+
+.chart-donut-center-word {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.chart-donut-large {
+  max-width: $chart-donut-large-max-width;
+
+  &.chart-donut-container-inflated {
+    min-height: $chart-donut-large-max-width;
+  }
+}
+
+.chart-donut-slice-icon {
+  font-size: $chart-donut-slice-icon-font-size;
+  line-height: $chart-donut-slice-icon-line-height;
+}
+
+.chart-donut-slice-amount {
+  font-size: $chart-donut-slice-amount-font-size;
+}

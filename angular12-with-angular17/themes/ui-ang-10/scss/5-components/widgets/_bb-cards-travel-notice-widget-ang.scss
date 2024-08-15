@@ -1,0 +1,67 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$cards-travel-notice-sizer: $sizer-sm !default;
+$cards-travel-notice-create-review-label-font-size: $small-font-size !default;
+$cards-travel-notice-create-contact-disclaimer-label-font-size: $small-font-size !default;
+$cards-travel-notice-create-contact-disclaimer-label-color: $color-neutral-dark !default;
+$cards-travel-notice-list-empty-state-label-color: $color-neutral-dark !default;
+$cards-travel-notice-create-card-group-min-width: 45rem !default; // IE compatibility
+$cards-travel-notice-count-label-font-size: $font-size-subtitle;
+$cards-travel-notice-list-expired-color: $color-text-support !default;
+
+.bb-create-travel-notice {
+}
+
+.bb-travel-notice-list-item--expired {
+  color: $cards-travel-notice-list-expired-color;
+
+  .bb-travel-notice-header {
+    color: $cards-travel-notice-list-expired-color;
+  }
+}
+
+.bb-create-travel-notice__cards-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline-end: $sizer;
+  font-size: $cards-travel-notice-count-label-font-size;
+}
+
+.bb-create-travel-notice__cards-count--xs-top {
+  @include media-breakpoint-down(sm) {
+    order: -1;
+    padding-inline-end: 0;
+  }
+}
+
+.bb-create-travel-notice__disclaimer {
+  color: $cards-travel-notice-create-contact-disclaimer-label-color;
+  font-size: $cards-travel-notice-create-contact-disclaimer-label-font-size;
+}
+
+.bb-travel-notice-list__label {
+  font-size: $cards-travel-notice-create-review-label-font-size;
+}
+
+.bb-travel-notice-empty-state__message {
+  color: $cards-travel-notice-list-empty-state-label-color;
+  font-size: $cards-travel-notice-create-review-label-font-size;
+}
+
+//This is only applied for IE
+.bb-create-travel-notice-card-group {
+  @include media-breakpoint-up(lg) {
+    @include ms-browsers-only {
+      min-width: $cards-travel-notice-create-card-group-min-width;
+    }
+  }
+}
+
+.bb-create-travel-notice-card-group__payment-card {
+  padding-inline-start: $cards-travel-notice-sizer;
+}

@@ -1,0 +1,91 @@
+////
+/// @group structure
+/// @access public
+////
+
+$sidebar-icon-size: $font-size-base * 1.5 !default;
+$sidebar-font-size: $font-size-subtitle !default;
+$sidebar-color: $color-neutral-greyest !default;
+$sidebar-toparea-bottom-padding: $sizer-lg !default;
+$sidebar-sidebar-toggler-y-padding: $sizer-md !default;
+$sidebar-sidebar-toggler-x-padding: $sizer-md !default;
+
+/// @name .bb-sidebar
+.bb-sidebar {
+  color: $sidebar-color;
+  font-size: $sidebar-font-size;
+  background-color: $page-layout-background-color;
+  transform: translateX(0);
+  transition: transform 200ms 0ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+// The "sidebar toggler" element is the button to collapse the sidebar
+// It is only displayed in designs where the sidebar is not visible at all times.
+.bb-sidebar__sidebar-toggler {
+  height: $page-layout-topbar-height;
+  padding-block: $sidebar-sidebar-toggler-y-padding;
+  padding-inline: $sidebar-sidebar-toggler-x-padding;
+  line-height: 0.5;
+  background: transparent;
+  border: none;
+
+  .bb-icon {
+    &:before {
+      content: "arrow_back";
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.bb-sidebar__sidebar-toggler--horizontal-nav {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+@mixin bb-sidebar--hidden() {
+  // Disable box shadow, to prevent it from peaking out at the edge of the screen
+  box-shadow: none;
+  transform: translateX(-100%);
+}
+
+@mixin bb-sidebar--visible() {
+  box-shadow: $box-shadow-md;
+  transform: translateX(0);
+}
+
+@include media-breakpoint-up(xl) {
+  .bb-sidebar--collapsed {
+    @include bb-navigation--collapsed();
+    @include bb-navigation-item--collapsed();
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .bb-sidebar--collapsed {
+    @include bb-navigation--collapsed();
+    @include bb-navigation-item--collapsed();
+  }
+}
+
+@include media-breakpoint-between(xs, lg) {
+  .bb-sidebar {
+    padding-block: $page-layout-section-padding-narrow;
+  }
+  .bb-sidebar--collapsed {
+    @include bb-sidebar--hidden();
+  }
+
+  .bb-sidebar--expanded {
+    @include bb-sidebar--visible();
+  }
+}
+
+.bb-sidebar--horizontal-nav {
+  width: unset;
+  max-width: unset;
+  padding-inline-start: 0;
+}

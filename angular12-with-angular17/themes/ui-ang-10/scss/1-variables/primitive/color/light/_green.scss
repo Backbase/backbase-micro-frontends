@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/green
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-green-lightest: $chart-color-7-lightest; // #E2F5ED
+$color-light-green-lighter: $chart-color-7-lighter; // #79D2A9
+$color-light-green-default: $chart-color-7; // #40BF84
+$color-light-green-darker: $chart-color-7-darker; // #469771
+$color-light-green-darkest: $chart-color-7-darkest; // #236949
+$color-light-green-on-color: $color-neutral-white;

@@ -1,0 +1,13 @@
+@include media-breakpoint-down(md) {
+  .manage-statements__table.table {
+    .online-statement-td,
+    .post-statement-td {
+      max-width: 50%;
+      display: inline-block;
+      margin-bottom: $spacer-md;
+    }
+    .account-type-td {
+      display: none;
+    }
+  }
+}

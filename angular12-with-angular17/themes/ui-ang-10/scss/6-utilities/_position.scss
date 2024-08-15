@@ -1,0 +1,25 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+//Positioning elements
+/**
+ * @description
+ * Class for positioning element in the center (horizontally and vertically)
+ * of container which is positioned relatively
+ *
+ */
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-basis {
+  -webkit-flex-basis: 100%; /* Safari 6.1+ */
+  flex-basis: 100%;
+}

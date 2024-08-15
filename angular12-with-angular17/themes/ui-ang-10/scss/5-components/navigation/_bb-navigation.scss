@@ -1,0 +1,171 @@
+// Global annotations
+////
+/// @group navigation
+/// @access private
+////
+
+$navigation-width: 15rem !default;
+$navigation-separator-width: $border-width !default;
+$navigation-separator-color: $color-neutral-grey !default;
+$navigation-item-color: $color-neutral-black !default;
+$navigation-item-background-color: transparent !default;
+$navigation-item-link-hover-color: $color-primary !default;
+$navigation-item-hover-background-color: $color-neutral-light !default; // TODO: should be lighter, but page background isn't white - design needs to look at this
+$navigation-item-active-color: $color-primary-darkest !default;
+$navigation-item-active-background-color: $color-primary-lightest !default;
+$navigation-collapsed-width: 3.5rem !default;
+
+// Styles for navigation-spa-widget-ang and navigation-link-widget-ang
+.bb-navigation {
+  min-width: $navigation-width;
+  max-width: $navigation-width;
+  padding-inline-start: 0;
+  list-style: none;
+  //transition: width 200ms 0ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.bb-navigation__header {
+  padding-block: $sizer-sm;
+  padding-inline: $sizer-md;
+  color: $navigation-header-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  text-transform: uppercase;
+
+  .bb-navigation__item + & {
+    margin-block-start: $sizer-md;
+  }
+
+  // Reset heading styles when used within menuHeader link type
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: inherit;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}
+
+.bb-navigation__separator {
+  height: 0;
+  margin-block: $spacer-md;
+  margin-inline: $spacer-sm;
+  background-color: $navigation-separator-color;
+}
+
+@mixin bb-navigation--collapsed() {
+  .bb-navigation {
+    min-width: $navigation-collapsed-width;
+    max-width: $navigation-collapsed-width;
+  }
+
+  .bb-navigation__header {
+    @include sr-only;
+  }
+
+  .bb-navigation__separator {
+    height: $navigation-separator-width;
+  }
+}
+
+// bb-navigation-item.scss
+
+.bb-navigation-item {
+  display: flex;
+  align-items: center;
+}
+
+.bb-navigation-item__link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-block: $sizer-sm;
+  padding-inline: $sizer-md;
+  color: $navigation-item-color;
+  line-height: 1.25rem;
+  background-color: $navigation-item-background-color;
+  @include border-radius($navigation-item-border-radius);
+
+  &:hover {
+    color: initial;
+    text-decoration: none;
+    background-color: $navigation-item-hover-background-color;
+  }
+}
+
+.bb-navigation--link {
+  .bb-navigation-item__link:hover {
+    color: $navigation-item-link-hover-color;
+    background-color: initial;
+  }
+}
+
+.bb-navigation__item:not(:last-of-type) {
+  margin-block-end: $sizer-xs;
+}
+
+.bb-navigation-item__icon {
+  width: $sizer-lg;
+  margin-inline-end: $spacer-sm;
+}
+
+.bb-navigation-item__title {
+  word-break: break-all; // Fallback; IE does not support break-word
+  word-break: break-word;
+}
+
+.bb-navigation-item__badge {
+  margin-inline-start: $spacer-sm;
+}
+
+.bb-navigation--link .bb-navigation-item--active {
+  .bb-navigation-item__link {
+    color: initial;
+    background-color: initial;
+  }
+
+  .bb-navigation-item__icon {
+    color: initial;
+  }
+}
+
+.bb-navigation-item--active {
+  .bb-navigation-item__link {
+    color: $navigation-item-active-color;
+    background-color: $navigation-item-active-background-color;
+  }
+
+  .bb-navigation-item__icon {
+    color: $navigation-item-active-color;
+  }
+}
+
+@mixin bb-navigation-item--collapsed() {
+  .bb-navigation-item--active {
+    .bb-navigation-item__link {
+      background-color: $navigation-item-background-color;
+    }
+  }
+
+  .bb-navigation-item {
+    position: relative;
+  }
+
+  .bb-navigation-item__icon {
+    margin-inline-end: unset;
+  }
+
+  .bb-navigation__header-title,
+  .bb-navigation-item__title {
+    @include sr-only;
+  }
+
+  .bb-navigation-item__badge {
+    position: absolute;
+    transform: translate(55%, -40%);
+  }
+}

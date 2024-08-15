@@ -1,0 +1,321 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$candle-chart-height: $sizer * 12.25 !default;
+$candle-chart-border-radius: $border-radius-sm !default;
+$candle-chart-border-width: 2px !default;
+$candle-chart-border-color: $color-neutral-grey !default;
+$candle-chart-label-color: $color-neutral-dark !default;
+$candle-chart-content-border: 1px solid $color-neutral-grey !default;
+$candle-chart-content-height: $sizer * 5.75 !default;
+$candle-chart-line-highlighted-color: #1476cc !default;
+$candle-chart-min-width: $sizer * 15 !default;
+$candle-chart-md-height: $sizer * 10.5 !default;
+$candle-chart-md-y-padding: $spacer * 0.75 !default;
+$candle-chart-md-content-height: $sizer * 3.125 !default;
+$candle-chart-md-content-border-height: $sizer * 1.6875 !default;
+$candle-chart-content-border-height: $sizer * 2.8125 !default;
+$candle-chart-line-height: $sizer-xs !default;
+$candle-chart-line-top-offset: calc(50% - (#{$candle-chart-line-height} / 2)) !default;
+$candle-chart-caption-line-height: $line-height-base * 0.8 !default;
+$candle-chart-current-price-height: $sizer-sm !default;
+$candle-chart-current-price-width: $sizer-xs !default;
+$candle-chart-current-price-bottom: $sizer-xs !default;
+$candle-chart-current-price-value-color: #0062c4 !default;
+$candle-chart-current-price-bottom-offset: $spacer * 0.625 !default;
+$candle-chart-line-point-inactive-size: $sizer-xs !default;
+$candle-chart-line-point-active-size: $sizer-xs * 2 !default;
+$candle-chart-line-point-shadow: 0 0 2px 2px $color-neutral-white !default;
+$candle-chart-line-point-active-bottom-offset: -2px !default;
+$candle-chart-switcher-bottom-margin: $spacer * 0.75 !default;
+$candle-chart-switcher-btn-text-width: $sizer * 2.6875 !default;
+
+/// @name bb-fx-rates-candle-chart
+///
+/// @example html - candle chart with current price pointer
+/// <div class="bb-candle-chart">
+///    <div class="bb-candle-chart__switcher">
+///      <div class="btn-group btn-group-sm bb-toolbar__item">
+///        <button bbButton>
+///          <span class="bb-candle-chart__switcher-btn-text" Day </span>
+///        </button>
+///        <button bbButton>
+///          <span class="bb-candle-chart__switcher-btn-text"> Week </span>
+///        </button>
+///      </div>
+///    </div>
+///    <div class="bb-candle-chart__header">
+///      <div class="bb-candle-chart__label bb-candle-chart__label--left">
+///       <div> 0.0515 </div>
+///       <div> min </div>
+///     </div>
+///     <div class="bb-candle-chart__label bb-candle-chart__label--right">
+///       <div> 2.105 </div>
+///       <div> max </div>
+///     </div>
+///   </div>
+///   <div class="bb-candle-chart__content">
+///     <div class="bb-candle-chart__line"></div>
+///     <div class="bb-candle-chart__line bb-candle-chart__line--current bb-candle-chart__line--blue">
+///       <div class="bb-candle-chart__current-price">
+///         <div class="bb-candle-chart__current-price-value bb-candle-chart__current-price-value--right"> 1.0123 </div>
+///       </div>
+///       <div class="bb-candle-chart__point bb-candle-chart__point--left"></div>
+///       <div class="bb-candle-chart__point bb-candle-chart__point--right"></div>
+///     </div>
+///     <div class="bb-candle-chart__bottom-caption">
+///       <div class="bb-candle-chart__caption bb-candle-chart__caption--left">
+///         <div class="bb-candle-chart__caption-value"> 0.985 </div>
+///         <div class="bb-candle-chart__caption-type"> Bid </div>
+///       </div>
+///       <div class="bb-candle-chart__caption bb-candle-chart__caption--right">
+///         <div class="bb-candle-chart__caption-value"> 1.545 </div>
+///         <div class="bb-candle-chart__caption-type"> Ask </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example html - trend candle chart (without current price pointer)
+/// <div class="bb-candle-chart bb-candle-chart--md">
+///    <div class="bb-candle-chart__header">
+///      <div class="bb-candle-chart__label bb-candle-chart__label--left">
+///       <div> 0.0515 </div>
+///       <div> min </div>
+///     </div>
+///     <div class="bb-candle-chart__label bb-candle-chart__label--right">
+///       <div> 2.105 </div>
+///       <div> max </div>
+///     </div>
+///   </div>
+///   <div class="bb-candle-chart__content">
+///     <div class="bb-candle-chart__line"></div>
+///     <div class="bb-candle-chart__line bb-candle-chart__line--current bb-candle-chart__line--green">
+///       <div class="bb-candle-chart__point bb-candle-chart__point--left"></div>
+///       <div class="bb-candle-chart__point bb-candle-chart__point--right"></div>
+///     </div>
+///     <div class="bb-candle-chart__bottom-caption">
+///       <div class="bb-candle-chart__caption bb-candle-chart__caption--left">
+///         <div class="bb-candle-chart__caption-value"> 0.985 </div>
+///         <div class="bb-candle-chart__caption-type"> Open </div>
+///       </div>
+///       <div class="bb-candle-chart__caption bb-candle-chart__caption--right bb-candle-chart__caption--green">
+///         <div class="bb-candle-chart__caption-value"> 1.545 </div>
+///         <div class="bb-candle-chart__caption-type"> Close </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-candle-chart {
+  width: 100%;
+  min-width: $candle-chart-min-width;
+  height: $candle-chart-height;
+  padding: $spacer-md $spacer-md $spacer-sm;
+  border-top: $candle-chart-border-width $border-style $candle-chart-border-color;
+  border-bottom: $candle-chart-border-width $border-style $candle-chart-border-color;
+}
+
+.bb-candle-chart--md {
+  height: $candle-chart-md-height;
+  padding: $candle-chart-md-y-padding $spacer-md;
+
+  .bb-candle-chart__content {
+    height: $candle-chart-md-content-height;
+
+    &:before,
+    &:after {
+      height: $candle-chart-md-content-border-height;
+    }
+  }
+}
+
+.bb-candle-chart--side-borders {
+  border-right: $candle-chart-border-width $border-style $candle-chart-border-color;
+  border-left: $candle-chart-border-width $border-style $candle-chart-border-color;
+  border-radius: $candle-chart-border-radius;
+}
+
+.bb-candle-chart__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: $spacer-xs;
+}
+
+.bb-candle-chart__label {
+  min-width: 0;
+  color: $candle-chart-label-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  line-height: $line-height-base * 0.75;
+}
+
+.bb-candle-chart__label--left {
+  padding-right: $spacer-xs;
+}
+
+.bb-candle-chart__label--right {
+  text-align: right;
+}
+
+.bb-candle-chart__content {
+  position: relative;
+  height: $candle-chart-content-height;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $candle-chart-content-border-height;
+    border-left: $candle-chart-content-border;
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: $candle-chart-content-border-height;
+    border-right: $candle-chart-content-border;
+    content: "";
+  }
+}
+
+.bb-candle-chart__line {
+  position: absolute;
+  top: $candle-chart-line-top-offset;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: $candle-chart-line-height;
+  background-color: $color-neutral-grey;
+}
+
+.bb-candle-chart__line--blue {
+  background-color: $candle-chart-line-highlighted-color;
+}
+
+.bb-candle-chart__line--red {
+  background-color: $color-danger;
+}
+
+.bb-candle-chart__line--green {
+  background-color: $color-success;
+}
+
+.bb-candle-chart__bottom-caption {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $spacer-xs;
+}
+
+.bb-candle-chart__caption {
+  display: flex;
+  flex-direction: column;
+  color: $candle-chart-label-color;
+  transition: opacity 0.2s;
+}
+
+.bb-candle-chart__caption--red {
+  color: $color-danger;
+}
+
+.bb-candle-chart__caption--green {
+  color: $color-success;
+}
+
+.bb-candle-chart__caption--right {
+  text-align: right;
+}
+
+.bb-candle-chart__caption--fade {
+  opacity: 0.3;
+}
+
+.bb-candle-chart__caption-value {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-h3;
+  line-height: $candle-chart-caption-line-height;
+}
+
+.bb-candle-chart__caption-type {
+  font-weight: bold;
+  font-size: $font-size-subheader;
+  line-height: 1.125rem;
+}
+
+.bb-candle-chart__current-price {
+  position: absolute;
+  bottom: $candle-chart-current-price-bottom;
+  width: $candle-chart-current-price-width;
+  height: $candle-chart-current-price-height;
+  background: $candle-chart-line-highlighted-color;
+}
+
+.bb-candle-chart__current-price-value {
+  position: absolute;
+  bottom: $candle-chart-current-price-bottom-offset;
+  left: 0;
+  color: $candle-chart-current-price-value-color;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-h3;
+  line-height: 1.625rem;
+}
+
+.bb-candle-chart__current-price-value--right {
+  right: 0;
+  left: auto;
+}
+
+.bb-candle-chart__point {
+  position: absolute;
+  bottom: 0;
+  width: $candle-chart-line-point-inactive-size;
+  height: $candle-chart-line-point-inactive-size;
+  background-color: transparent;
+}
+
+.bb-candle-chart__point--left {
+  left: 0;
+}
+
+.bb-candle-chart__point--right {
+  right: 0;
+}
+
+.bb-candle-chart__point--highlight {
+  bottom: $candle-chart-line-point-active-bottom-offset;
+  width: $candle-chart-line-point-active-size;
+  height: $candle-chart-line-point-active-size;
+  border-radius: $border-radius-circle;
+  box-shadow: $candle-chart-line-point-shadow;
+}
+
+.bb-candle-chart__point--blue {
+  background-color: $candle-chart-line-highlighted-color;
+}
+
+.bb-candle-chart__point--red {
+  background-color: $color-danger;
+}
+
+.bb-candle-chart__point--green {
+  background-color: $color-success;
+}
+
+.bb-candle-chart__switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $candle-chart-switcher-bottom-margin;
+}
+
+.bb-candle-chart__switcher-btn-text {
+  width: $candle-chart-switcher-btn-text-width;
+}

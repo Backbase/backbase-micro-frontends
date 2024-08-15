@@ -1,0 +1,227 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+/// Set the background for the file-icon bended corner
+$icon-file-corner-background-color: $color-neutral-white !default;
+
+$icon-default-color-list: map-merge($theme-default-colors, $account-kind-color-list);
+
+$icon-default-bg-color-list: map-merge($theme-bright-default-colors, $account-kind-bg-color-list);
+
+$icon-colors: map-merge($icon-default-color-list, $icon-custom-color-list);
+
+[dir="ltr"] {
+  --icon-direction: 1;
+}
+
+[dir="rtl"] {
+  --icon-direction: -1;
+}
+
+bb-icon-ui {
+  display: inline-flex;
+
+  i {
+    pointer-events: none;
+  }
+}
+
+.bb-icon {
+  @include material-icons();
+  text-align: center;
+}
+
+.bb-icon--rtl {
+  transform: scaleX(var(--icon-direction));
+}
+
+.bb-icon--animate {
+  @include infinite-rotation(true);
+}
+
+// Icon sizes
+@each $size-abbr, $size in $icon-size-map {
+  .bb-icon--#{$size-abbr} {
+    font-size: #{$size};
+
+    &.bb-icon__background {
+      width: map-get($icon-background-size-map, $size-abbr);
+      height: map-get($icon-background-size-map, $size-abbr);
+      line-height: map-get($icon-background-size-map, $size-abbr);
+    }
+  }
+}
+
+@each $bb-icon-name, $icon-data in $icon-map {
+  .bb-icon-#{$bb-icon-name} {
+    &::before {
+      @if (
+        str-index("#{$bb-icon-name}", "category") or
+          str-index("#{$bb-icon-name}", "transaction-type") or
+          str-index("#{$bb-icon-name}", "credit-debit-indicator")
+      ) {
+        content: str-replace(map-get($icon-data, "icon"), "-", "_");
+      } @else {
+        content: map_get($icon-data, "icon");
+      }
+    }
+
+    @if (map_has_key($icon-data, "font-space") and map_get($icon-data, "font-space") != 0) {
+      &.bb-icon--cropped {
+        &::before {
+          margin: 0 -#{map-get($icon-data, "font-space")}px;
+        }
+      }
+    }
+
+    @if (map-has-key($icon-data, "color")) {
+      color: map-get($icon-data, "color");
+
+      &.bb-icon__background {
+        background-color: map-get($icon-data, "color");
+      }
+    }
+  }
+}
+
+//TODO: Add feature @Input for bb-icon-ui
+.bb-icon-arrow-in::before {
+  display: inline-block;
+  transform: rotateX(180deg);
+  content: "reply";
+}
+
+.bb-icon-arrow-out::before {
+  display: inline-block;
+  transform: rotateY(180deg);
+  content: "reply";
+}
+
+//File Icon generation
+.bb-icon[class*="bb-icon-file-"]:not(.bb-icon-file-upload):not(.bb-icon-file-download):not(
+    .bb-icon-file-copy
+  ) {
+  position: relative;
+  display: inline-block;
+  width: $file-icon-width;
+  height: $file-icon-height;
+  margin-left: $file-icon-left-margin;
+  color: $icon-contrast-color;
+  font-size: $file-icon-font-size;
+  font-family: $font-family;
+  line-height: $file-icon-height;
+  text-align: center;
+  background-color: $file-icon-background-color;
+  border-radius: $file-icon-border-radius;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: $file-icon-fold-size solid;
+    border-top-color: $icon-file-corner-background-color;
+    border-right-color: $icon-file-corner-background-color;
+    border-bottom-color: lighten($file-icon-background-color, 10%);
+    border-left-color: lighten($file-icon-background-color, 10%);
+    border-bottom-left-radius: $file-icon-fold-border-radius;
+    content: "";
+  }
+
+  @each $size, $map in $bicon-size-map {
+    &.bb-icon--#{$size} {
+      width: map-get($map, "width");
+      height: map-get($map, "height");
+      font-size: map-get($map, "font-size");
+      line-height: map-get($map, "line-height");
+      @if $size == "sm" {
+        top: $file-icon-sm-vertical-correction;
+      }
+
+      &::after {
+        border-width: map-get($map, "border-width");
+      }
+    }
+  }
+
+  @each $filetype, $map in $file-icon-map {
+    &.bb-icon-file-#{$filetype} {
+      background-color: map-get($map, "bg-color");
+      color: $color-neutral-white;
+
+      &::before {
+        content: map-get($map, "content");
+      }
+
+      &::after {
+        border-bottom-color: map-get($map, "fold-color");
+        border-left-color: map-get($map, "fold-color");
+      }
+
+      &.bb-icon--md::before {
+        content: map-get($map, "md-content");
+      }
+
+      &.bb-icon--sm::before {
+        content: map-get($map, "sm-content");
+      }
+    }
+  }
+
+  &.bb-icon-file-bb-sepa {
+    font-size: $font-size-subheader;
+    line-height: $file-icon-bb-sepa-line-height;
+    background-image: url("#{$path-bb-images}/logo-emblem-inverse.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $file-icon-background-size;
+
+    &.bb-icon--md {
+      background-size: $file-icon-md-background-size;
+    }
+
+    &.bb-icon--sm {
+      top: $file-icon-bb-sepa-sm-vertical-correction;
+      background-size: $file-icon-sm-background-size;
+    }
+  }
+}
+
+.bb-icon__background {
+  color: $icon-contrast-color;
+}
+
+@each $color, $value in $icon-colors {
+  .bb-icon--#{$color} {
+    @if $color == "warning" {
+      color: $color-warning-darkest;
+    } @else {
+      color: $value;
+    }
+  }
+
+  .bb-icon__background--#{$color} {
+    background-color: map-get($icon-default-bg-color-list, $color);
+
+    @if $color == "warning" {
+      color: $color-warning-darkest;
+    } @else {
+      color: $value;
+    }
+
+    &.bb-icon--inverse {
+      background: white;
+      color: $value;
+    }
+  }
+}
+
+.bb-icon__background--circle {
+  border-radius: $border-radius-circle;
+}
+
+.bb-icon__background--square {
+  @include border-radius($icon-square-border-radius);
+}

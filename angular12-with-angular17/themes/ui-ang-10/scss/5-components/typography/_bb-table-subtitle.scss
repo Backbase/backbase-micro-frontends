@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$table-subtitle-font-size: $font-size-subtitle !default; // 14px
+$table-subtitle-line-height: $line-height-base !default;
+
+/// Will set css properties on various table HTML elements like caption as follows:
+/// - font-size,
+/// - line-height
+///
+/// @name bb-table-subtitle
+///
+/// @example html
+///   <table class="bb-table-default">
+///     <caption class="bb-table-subtitle">Table caption</caption>
+///     <thead class="bb-table-header">
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td>column 1</td>
+///         <td>column 2</td>
+///       </tr>
+///     </tbody>
+///   </table>
+
+.bb-table-subtitle {
+  font-size: $table-subtitle-font-size;
+  line-height: $table-subtitle-line-height;
+}

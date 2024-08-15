@@ -1,0 +1,43 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$popover-max-width: 400px !default;
+$popover-medium-width: 400px !default;
+$popover-font-size: 13px !default;
+$popover-duration: $motion-duration-default !default;
+
+//For: NG-Bootstrap's Popover
+.rb-navbar-top {
+  .popover {
+    display: inline-block;
+    overflow: hidden;
+    opacity: 1;
+
+    &.bottom {
+      margin: 0;
+    }
+
+    &:not(.in) {
+      @include animation(transform, $popover-duration);
+
+      transform: scale(0);
+    }
+
+    &.in {
+      @include animation(transform, $popover-duration);
+
+      transform: scale(1);
+    }
+
+    .popover-arrow {
+      display: none;
+    }
+  }
+}
+
+.popover.fade.in {
+  display: block;
+}

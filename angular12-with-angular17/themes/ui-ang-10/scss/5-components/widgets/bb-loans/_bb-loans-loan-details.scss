@@ -1,0 +1,327 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$loans-loan-summary-progress-color-active: $color-primary !default;
+$loans-loan-summary-progress-color-success: $color-success !default;
+$loans-loan-summary-progress-color-default: $progress-bar-background-color !default;
+$loans-loan-summary-progress-legend-size: $sizer-sm !default;
+$loans-loan-summary-progress-height: $sizer-sm !default;
+
+$loans-loan-summary-loan-item-name-line-height: 2.3rem !default;
+
+$loans-loan-summary-loan-info-section-title-line-height: 1.9rem !default;
+
+$loans-loan-summary-alias-edit-input-max-width: 500px !default;
+
+$loans-loan-summary-overdue-banner-icon-size: $font-icon-size-md !default;
+$loans-loan-summary-overdue-banner-button-size: $btn-circle-md-size !default;
+
+// 100% - (download and preview buttons) - (icon size and margin)
+$loans-loan-info-document-name-max-width: calc(
+  100% - 2 * (#{$btn-circle-md-size} + #{$spacer-md}) - #{$sizer-lg} - #{$spacer-sm}
+) !default;
+// 100% - (download button) - (icon size and margin)
+$loans-loan-info-document-name-no-preview-max-width: calc(
+  100% - #{$btn-circle-md-size} - #{$spacer-md} - #{$sizer-lg} - #{$spacer-sm}
+) !default;
+
+/// Loans loan overview styles
+///
+/// @example html - Summary progress block
+///
+/// <div class="bb-loans-summary-progress">
+///   <div class="row g-0">
+///     <div class="col-9 col-sm-9">
+///       <div class="row g-0">
+///         <div class="col-12 col-md-6 bb-block bb-block--md bb-loans-summary-progress__active-amount-wrapper">
+///           <div class="bb-loans-summary-progress__legend-item bb-loans-summary-progress__legend-item--active">
+///             <div class="bb-loans-summary-amount-item">
+///               <div class="bb-loans-summary-amount-item__title">
+///                 Active legend item
+///               </div>
+///             </div>
+///           </div>
+///         </div>
+///         <div class="col-12 col-md-6 bb-block bb-block--md">
+///           <div class="bb-loans-summary-progress__legend-item">
+///             <div class="bb-loans-summary-amount-item">
+///               <div class="bb-loans-summary-amount-item__title">
+///                 Legend item
+///               </div>
+///             </div>
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+///   <div class="row g-0 bb-block bb-block--md">
+///     <div class="col-8">
+///       <bb-progressbar-ui class="bb-loans-summary-progress__progressbar" [max]="100" [value]="75"></bb-progressbar-ui>
+///     </div>
+///   </div>
+/// </div>
+///
+/// @example html - Summary formula block
+///
+/// <bb-collapsible-card-ui class="bb-loans-summary-formula bb-loans-summary-formula--list">
+///   <div bbCollapsibleTitle>
+///     <div class="bb-loans-summary-amount-item">
+///       <div class="bb-subtitle">
+///           Amount title
+///           <span class="bb-loans-summary-amount-item__label bb-subtitle"></span>
+//        </div>
+///       <div class="bb-text-bold">Amount value</div>
+///     </div>
+///   </div>
+///   <div bbCollapsibleBody>
+///     <hr>
+///     <div class="bb-block bb-block--md">
+///       <div  class="bb-loans-summary-amount-item">
+///         <div class="bb-subtitle">Amount title 1</div>
+///         <div class="bb-text-bold">Amount value 1</div>
+///       </div>
+///     </div>
+///   </div>
+/// </bb-collapsible-card-ui>
+///
+/// @example html - Alias wrapper
+///
+/// <div class="bb-loans-summary-alias-wrapper bb-loans-summary-alias-wrapper--editing">
+///   <bb-loan-summary-edit-alias [alias]="loanAlias" [showEditButton]="true"></bb-loan-summary-edit-alias>
+/// </div>
+///
+/// @example html - Loan info section with list of documents
+///
+/// <div class="bb-loans-loan-info">
+///   <bb-loan-info-print-button class="bb-loans-loan-info__print-btn"></bb-loan-info-print-button>
+///   <ul class="bb-list">
+///     <li class="bb-list__item">
+///       <bb-header-ui heading="Section heading" headingType="h3" headingClasses="loan-info-section__title bb-block bb-block--lg"></bb-header-ui>
+///       <div class="row bb-loans-loan-info__section">
+///         <div class="col-12">
+///           <ul class="bb-list bb-list--no-separator bb-list--density-none">
+///             <li class="bb-list__item bb-stack bb-loans-loan-info-documents-section bb-loans-loan-info-documents-section--no-preview">
+///               <bb-ellipsis-ui class="bb-stack__item bb-stack__item--fill bb-loans-loan-info-documents-section__name" text="Document">
+///               </bb-ellipsis-ui>
+///             </li>
+///           </ul>
+///         </div>
+///       </div>
+///     </li>
+///   </ul>
+/// </div>
+///
+/// @example html - Loan overdue banner
+///
+/// <bb-loan-summary-blue-banner-payment-info class="bb-loans-alert-ui--align-center"
+///   <bb-alert-ui>
+///     <div class="bb-stack bb-stack--wrap">
+///       <div class="bb-stack__item bb-stack__item--align-top bb-stack__item--fill bb-text-bold bb-text-default">
+///         <ng-container *ngIf="overduePaymentsCount; else amountOverdue">
+///           <div>
+///             <span> with a total of
+///             <bb-amount-ui class="bb-product-summary-balance__amount" currency="EUR" amount="2000"></bb-amount-ui>
+///             overdue
+///             </span>
+///             <span> since {{ overdueDate | bbDate }}</span>
+///           </div>
+///         </ng-container>
+///       </div>
+///     </div>
+///   </div>
+/// </bb-loan-summary-blue-banner-payment-info>
+///
+/// @example html - Loan item name
+///
+/// <bb-loan-item-name>
+///   <bb-header-ui data-role="loan-item-name">
+///     <h2 data-role="headings" class="bb-heading-2 bb-loan-summary__loan-item-name bb-block bb-block--xs break-word">
+///       Any Mortgage Line 2
+///     </h2>
+///   </bb-header-ui>
+/// </bb-loan-item-name>
+
+@mixin addLegendColorByType($type, $background-color) {
+  .bb-loans-summary-progress__legend-item--#{$type} {
+    .bb-loans-summary-amount-item__title::before {
+      background-color: $background-color;
+    }
+  }
+}
+
+@mixin showSrOnlyElem() {
+  &.visually-hidden {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    white-space: normal;
+    clip: auto;
+    clip-path: none;
+  }
+}
+
+.bb-loans-alert-ui--align-center {
+  .alert-body {
+    align-items: center;
+  }
+}
+
+.bb-loans-summary-progress {
+  .bb-loans-summary-amount-item__label {
+    display: inline;
+    margin-inline-start: $spacer-xs;
+    color: $color-neutral-dark;
+    font-weight: $font-weight-regular;
+    vertical-align: sub;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bb-loans-summary-progress__active-amount-wrapper {
+    margin-block-end: $spacer-xl;
+  }
+}
+
+.bb-loans-summary-progress__legend-item {
+  padding-inline-start: $sizer-md;
+
+  .bb-loans-summary-amount-item__title {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -$sizer-md;
+      width: $loans-loan-summary-progress-legend-size;
+      height: $loans-loan-summary-progress-legend-size;
+      background-color: $loans-loan-summary-progress-color-default;
+      border-radius: $border-radius-circle;
+      transform: translateY(-50%);
+      content: "";
+    }
+  }
+}
+
+@include addLegendColorByType("active", $loans-loan-summary-progress-color-active);
+@include addLegendColorByType("success", $loans-loan-summary-progress-color-success);
+
+.bb-loans-summary-progress__progressbar .bb-progress-bar {
+  height: $loans-loan-summary-progress-height;
+}
+
+// Summary formula
+.bb-loans-summary-formula .bb-card__body {
+  margin-block-end: -$spacer-md;
+
+  .bb-loans-summary-amount-item {
+    margin-block-end: $spacer-md;
+  }
+}
+
+.bb-loans-summary-formula__amounts-wrapper {
+  @include media-breakpoint-up(xl) {
+    justify-content: space-between;
+  }
+}
+
+.bb-loans-summary-formula--list .bb-card__body {
+  .bb-loans-summary-amount-item {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+}
+
+// Overdue banner
+.bb-loans-summary-overdue-alert {
+  background-color: $loan-item-overdue-background-color;
+
+  .bb-loans-summary-overdue-alert__body {
+    position: relative;
+  }
+
+  &.bb-loans-summary-overdue-alert--with-amount {
+    @include media-breakpoint-down(md) {
+      .alert-description {
+        margin-inline-start: -#{$loans-loan-summary-overdue-banner-icon-size + $spacer-md};
+      }
+
+      .alert-content {
+        margin-right: #{$loans-loan-summary-overdue-banner-button-size + $spacer-md};
+      }
+
+      .bb-loans-summary-overdue-alert__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $btn-circle-md-size;
+        height: $btn-circle-md-size;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.bb-loan-summary__loan-item-name {
+  line-height: $loans-loan-summary-loan-item-name-line-height;
+}
+
+.loan-info-section__title {
+  line-height: $loans-loan-summary-loan-info-section-title-line-height;
+}
+
+.bb-loans-summary-alias-wrapper--editing {
+  max-width: $loans-loan-summary-alias-edit-input-max-width;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+}
+
+// Loan info tab
+.bb-loans-loan-info {
+  position: relative;
+}
+
+.bb-loans-loan-info__print-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.bb-loans-loan-info__section,
+.bb-loans-loan-info-collateral-card {
+  margin-block-end: -$spacer-lg;
+}
+
+.bb-loans-loan-info-documents-section .bb-loans-loan-info-documents-section__name {
+  max-width: $loans-loan-info-document-name-max-width;
+}
+
+.bb-loans-loan-info-documents-section--no-preview .bb-loans-loan-info-documents-section__name {
+  max-width: $loans-loan-info-document-name-no-preview-max-width;
+}
+
+// Amortized payment schedule details
+.bb-loans-amortized-payment-details-account-card__title {
+  // clear visually-hidden styles
+  @include media-breakpoint-down(sm) {
+    @include showSrOnlyElem();
+  }
+}
+
+.bb-loans-amortized-payment-details-account-card__separator-icon {
+  margin: 0 $spacer-sm;
+}
+
+.bb-loans-amortized-payment-details-account-card__separator-icon--hidden {
+  visibility: hidden;
+}

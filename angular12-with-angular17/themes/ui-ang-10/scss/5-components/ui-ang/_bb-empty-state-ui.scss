@@ -1,0 +1,43 @@
+////
+/// @group ui-components
+/// @access private
+////
+
+$empty-state-icon-margin-block-end: $spacer * 1.25 !default;
+
+$empty-state-title-line-height: 1.5rem !default;
+
+.bb-empty-state {
+  @include setOptional(min-width, $empty-state-container-min-width);
+  max-width: $empty-state-container-max-width;
+  margin-block: 0;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.bb-empty-state__icon {
+  margin-block-end: $empty-state-icon-margin-block-end;
+  color: $empty-state-icon-color;
+}
+
+.bb-empty-state__title {
+  margin-block-end: $spacer-xs;
+  color: $empty-state-title-color;
+  font-weight: $empty-state-title-font-weight;
+  @include setOptional(font-size, $empty-state-title-font-size);
+  line-height: $empty-state-title-line-height;
+}
+
+.bb-empty-state__message {
+  margin-block-end: 0;
+  padding-block: 0;
+  padding-inline: $sizer;
+  color: $empty-state-message-color;
+  @include setOptional(font-weight, $empty-state-message-font-weight);
+  font-size: $empty-state-message-font-size;
+  text-align: center;
+}
+
+.bb-empty-state__subtitle {
+  text-align: center;
+}

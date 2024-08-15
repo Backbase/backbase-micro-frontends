@@ -1,0 +1,22 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+$portfolio-summary-dashboard-aggregation-header-padding-left: $spacer * 2.5 !default;
+
+.portfolio-summary-dashboard-aggregation__header {
+  padding-left: $portfolio-summary-dashboard-aggregation-header-padding-left;
+}
+
+.bb-currency__empty-state-button {
+  border-radius: var(--bs-border-radius-pill);
+}
+
+.cumulative-performance-chart-event-template {
+  max-width: 25 * $sizer;
+}
+
+.dashboard-aggregation-card-details--capitalize {
+  text-transform: capitalize;
+}

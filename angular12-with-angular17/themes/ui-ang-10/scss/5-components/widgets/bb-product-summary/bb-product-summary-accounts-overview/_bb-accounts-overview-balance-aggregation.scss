@@ -1,0 +1,180 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$balance-aggregation-background-color: $color-neutral-lighter !default;
+$balance-aggregation-margin-horizontal: $spacer-xl !default;
+$balance-aggregation-margin-horizontal--md: $sizer-md !default;
+$balance-aggregation-margin-horizontal--sm: $sizer-md !default;
+$balance-aggregation-margin-bottom: $spacer-xl !default;
+$balance-aggregation-border-radius: $border-radius-xs !default;
+
+$balance-aggregation-title-font-size: $font-size-base !default;
+$balance-aggregation-title-padding: $spacer-xl !default;
+$balance-aggregation-title-padding-horizontal-xs: $spacer !default;
+
+$balance-aggregation-card-container-padding-vertical: $spacer !default;
+$balance-aggregation-card-padding-horizontal: $spacer-xl !default;
+$balance-aggregation-card-border-color: $color-neutral-light !default;
+
+$balance-aggregation-amount-font-size: $font-size-h3 !default;
+$balance-aggregation-amount-font-weight: $font-weight-bold !default;
+$balance-aggregation-amount-height: $sizer-xl !default;
+
+$balance-aggregation-account-number-font-size: $font-size-subheader !default;
+$balance-aggregation-account-number-color: $color-neutral-dark !default;
+
+$balance-aggregation-error-font-size: $font-size-subtitle !default;
+$balance-aggregation-error-margin-top: $spacer !default;
+$balance-aggregation-error-margin-horizontal: $spacer-xl !default;
+$balance-aggregation-error-margin-horizontal-sm: $spacer !default;
+$balance-aggregation-error-padding: $spacer-lg !default;
+$balance-aggregation-error-background-color: $white !default;
+$balance-aggregation-error-message-margin-bottom: $spacer-sm !default;
+$balance-aggregation-error-button-margin-left-xs: $spacer-xl !default;
+$balance-aggregation-error-button-text-margin-left: $spacer-sm !default;
+
+/// Component containing list of aggregated balances for all accounts per currency
+///
+/// @name bb-balance-aggregation
+///
+/// @example html
+/// <div class="balance-aggregation balance-aggregation--bottom">
+///  <h5 class="balance-aggregation__title">
+///    Your balances per currency (6)
+///  </h5>
+///
+///  <div class="bb-stack balance-aggregation__card-container">
+///    <div class="bb-stack__item balance-aggregation__card">
+///      <div class="bb-stack bb-stack--density-sm">
+///        <div class="bb-stack__item">
+///          <i
+///            class="bb-icon balance-aggregation__icon flag-icon flag-icon--md flag-icon-eu"
+///          ></i>
+///        </div>
+///        <bb-amount-ui
+///          class="bb-stack__item bb-amount--bold bb-amount--currency-space balance-aggregation__amount"
+///          [amount]="3289"
+///          [currency]="EUR"
+///          [mapCurrency]="false"
+///        ></bb-amount-ui>
+///      </div>
+///      <div class="bb-balance-aggregation__account-number">12 accounts</div>
+///    </div>
+///  </div>
+///  <!-- error state -->
+///  <div class="bb-balance-aggregation__error">
+///   <div class="bb-stack bb-stack--wrap bb-balance-aggregation__error-message-wrapper">
+///    <div class="bb-stack bb-stack__item bb-balance-aggregation__error-message">
+///     <bb-icon-ui name="warning" size="md" color="danger" [inverse]="true" class="bb-stack__item"></bb-icon-ui>
+///     <span class="bb-stack__item">Aggregations could not be retrieved</span>
+///    </div>
+///     <button bbButton type="button" color="link-text" class="bb-stack__item balance-aggregation__refresh-btn">
+///       <bb-icon-ui name="loading"></bb-icon-ui>
+///       <span class="bb-balance-aggregation__refresh-text">refresh page</span>
+///     </button>
+///   </div>
+///  </div>
+///</div>
+
+@mixin balance-aggregation-margins($sizer) {
+  margin: 0 -#{$sizer};
+}
+
+.bb-balance-aggregation {
+  @include balance-aggregation-margins($balance-aggregation-margin-horizontal);
+
+  padding-bottom: 1rem;
+  background: $balance-aggregation-background-color;
+
+  @if $experimental-enable-dynamic-spacing {
+    @include media-breakpoint-down(md) {
+      @include balance-aggregation-margins($balance-aggregation-margin-horizontal--md);
+    }
+    @include media-breakpoint-down(sm) {
+      @include balance-aggregation-margins($balance-aggregation-margin-horizontal--sm);
+    }
+  }
+}
+
+.bb-balance-aggregation--bottom {
+  margin-bottom: -#{$balance-aggregation-margin-bottom};
+}
+
+.bb-balance-aggregation__title {
+  padding: $balance-aggregation-title-padding $balance-aggregation-title-padding 0;
+  font-size: $balance-aggregation-title-font-size;
+
+  @include media-breakpoint-down(sm) {
+    padding-right: $balance-aggregation-title-padding-horizontal-xs;
+    padding-left: $balance-aggregation-title-padding-horizontal-xs;
+  }
+}
+
+.bb-balance-aggregation__card-container {
+  padding: $balance-aggregation-card-container-padding-vertical 0;
+  overflow-x: auto;
+  &:focus {
+    outline: none;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+}
+
+.bb-balance-aggregation__card {
+  padding: 0 $balance-aggregation-card-padding-horizontal;
+  border-right: $balance-aggregation-card-border-color 1px solid;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.bb-balance-aggregation__icon {
+  border-radius: $balance-aggregation-border-radius;
+}
+
+.bb-balance-aggregation__amount {
+  height: $balance-aggregation-amount-height;
+  font-weight: $balance-aggregation-amount-font-weight;
+  font-size: $balance-aggregation-amount-font-size;
+}
+
+.bb-balance-aggregation__account-number {
+  color: $balance-aggregation-account-number-color;
+  font-size: $balance-aggregation-account-number-font-size;
+}
+
+.bb-balance-aggregation__error {
+  width: fit-content;
+  margin: $balance-aggregation-error-margin-top $balance-aggregation-error-margin-horizontal 0;
+  padding: $balance-aggregation-error-padding;
+  font-size: $balance-aggregation-error-font-size;
+  background-color: $balance-aggregation-error-background-color;
+  border-radius: $balance-aggregation-border-radius;
+
+  & .bb-balance-aggregation__error-message-wrapper {
+    margin-top: -#{$balance-aggregation-error-message-margin-bottom};
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: $balance-aggregation-error-margin-top $balance-aggregation-error-margin-horizontal-sm 0;
+  }
+
+  & .bb-balance-aggregation__error-message {
+    width: fit-content;
+    margin-top: $balance-aggregation-error-message-margin-bottom;
+  }
+
+  & .balance-aggregation__refresh-btn {
+    margin-top: $balance-aggregation-error-message-margin-bottom;
+    @include media-breakpoint-down(sm) {
+      margin-left: $balance-aggregation-error-button-margin-left-xs;
+    }
+  }
+
+  & .bb-balance-aggregation__refresh-text {
+    margin-left: $balance-aggregation-error-button-text-margin-left;
+  }
+}

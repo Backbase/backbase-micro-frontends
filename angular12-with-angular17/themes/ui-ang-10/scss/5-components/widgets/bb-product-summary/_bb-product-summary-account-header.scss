@@ -1,0 +1,87 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-account-header
+///
+/// @example account header
+///  <div class="bb-account-header bb-stack bb-stack--wrap">
+///    <div class="bb-account-header__logo bb-stack__item">
+///      <i class="bb-icon bb-icon-credit-cards bb-icon--md bb-icon__background bb-icon__background--square bb-icon__background--secondary"></i>
+///    </div>
+///    <div class="bb-account-header__info bb-stack__item bb-stack__item--fill">
+///      <div class="bb-account-header__title bb-account-header__title--display-mode">Deen Haag Store</div>
+///      <div class="bb-account-header__product-number bb-text-support bb-subtitle"><span> **** **** **** 7084 </span></div>
+///    </div>
+///  </div>
+///
+/// @example graphical account header with input title
+///  <div class="bb-account-graphical-header">
+///    <div class="bb-account-graphical-header__title">
+///      <div class="bb-account-header">
+///        <div class="bb-account-header__title bb-account-header__title--input-mode form-group">
+///          <input type="text" class="form-control">
+///        </div>
+///      </div>
+///    </div>
+///    <div class="bb-account-graphical-header__info">
+///      <div class="bb-stack">
+///        <div class="bb-stack__item bb-text-support bb-subtitle">Minimum Payment</div>
+///        <div class="bb-stack__item bb-amount bb-amount__value">USD150</div>
+///      </div>
+///    </div>
+///  </div>
+///
+/// @example graphical account header with static title
+///  <div class="bb-account-graphical-header">
+///    <div class="bb-account-graphical-header__title">
+///      <div class="bb-account-header">
+///        <div class="bb-account-header__title bb-account-header__title--display-mode">
+///          <span>Deen Haag Store</span>
+///        </div>
+///      </div>
+///    </div>
+///    <div class="bb-account-graphical-header__info">
+///      <div class="bb-stack">
+///        <div class="bb-stack__item bb-text-support bb-subtitle">Minimum Payment</div>
+///        <div class="bb-stack__item bb-amount bb-amount__value">USD150</div>
+///      </div>
+///    </div>
+///  </div>
+
+$bb-account-header-title-input-field-margin: 0rem !default;
+$bb-account-header-title-static-margin-xs-screen: 0rem !default;
+$bb-account-header-title-static-font-weight-xs-screen: $font-weight-semi-bold !default;
+$bb-account-header-title-static-font-size-xs-screen: $font-size-highlight !default;
+$bb-account-header-title-static-line-height-xs-screen: $line-height-base !default;
+
+$bb-account-graphical-header-title-input-margin: $spacer * 0.75 !default;
+$bb-account-graphical-header-title-input-margin-xs-screen: $spacer-sm !default;
+
+/*
+ * Account header
+ */
+.bb-account-header__title .form-group {
+  margin-bottom: $bb-account-header-title-input-field-margin;
+}
+.bb-account-header__title--display-mode {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $bb-account-header-title-static-margin-xs-screen;
+    font-weight: $bb-account-header-title-static-font-weight-xs-screen;
+    font-size: $bb-account-header-title-static-font-size-xs-screen;
+    line-height: $bb-account-header-title-static-line-height-xs-screen;
+  }
+}
+
+/*
+ * Account graphical header
+ */
+.bb-account-graphical-header__title--input-mode {
+  margin-bottom: $bb-account-graphical-header-title-input-margin;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $bb-account-graphical-header-title-input-margin-xs-screen;
+  }
+}

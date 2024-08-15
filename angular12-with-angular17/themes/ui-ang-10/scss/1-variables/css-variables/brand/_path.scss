@@ -1,0 +1,15 @@
+////
+/// Asset paths (global)
+/// @group base-internal
+/// @access private
+////
+
+:root {
+  --path-assets: #{$path-assets};
+  --path-fonts: #{$path-fonts};
+  --path-images: #{$path-images};
+}
+
+$path-assets: var(--path-assets);
+$path-fonts: var(--path-fonts);
+$path-images: var(--path-images);

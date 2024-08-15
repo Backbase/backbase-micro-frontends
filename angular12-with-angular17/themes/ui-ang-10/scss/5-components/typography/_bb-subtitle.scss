@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$subtitle-font-size: $font-size-subtitle !default; // 14px
+$subtitle-line-height: $line-height-base !default;
+
+/// Will set the following css properties on an HTML element:
+/// - font-weight,
+/// - font-size,
+/// - line-height,
+/// - text-transform
+///
+/// @name bb-subtitle
+///
+/// @example html - set subheader text
+///   <div class="bb-subtitle">Subtitle text here</div>
+.bb-subtitle {
+  font-size: $subtitle-font-size;
+  line-height: $subtitle-line-height;
+}

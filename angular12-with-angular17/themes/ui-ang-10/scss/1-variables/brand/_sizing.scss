@@ -1,0 +1,49 @@
+////
+/// Sizing and padding (global)
+/// Used for padding inside components to determine their size
+/// @group 1-variables/brand/sizing
+/// @access public
+////
+
+/// Configures default padding used globally as sizer. This is used to calculate different sizers (xs, sm, md, lg, xl, xxl)
+$sizer: 1rem !default;
+
+// Don't use ($sizer * factor) in your components, but try to use these convenience variables:
+
+/// Extra Small padding (read-only). Is calculated as 25% of the default $sizer
+/// @require {variable} $sizer
+$sizer-xs: $sizer * 0.25;
+
+/// Small padding (read-only). Is calculated as 50% of the default $sizer
+/// For example, used for vertical button padding
+/// @require {variable} $sizer
+$sizer-sm: $sizer * 0.5;
+
+/// Medium padding (read-only). Is calculated as 50% of the default $sizer
+/// For example, used for horizontal button padding
+/// @require {variable} $sizer
+$sizer-md: $sizer;
+
+/// Large padding. Is calculated as 1.5 * $sizer (read-only)
+/// @require {variable} $sizer
+$sizer-lg: $sizer * 1.5;
+
+/// Extra Large padding (read-only). Is calculated as 2 * $sizer
+///  For example, used in the login widget
+/// @require {variable} $sizer
+$sizer-xl: $sizer * 2;
+
+/// Extra Extra Large padding (read-only). Is calculated as 2.5 * $sizer
+/// For example, used in the empty/error state container
+/// @require {variable} $sizer
+$sizer-xxl: $sizer * 2.5;
+
+/// Extra Extra Extra Large padding (read-only). Is calculated as 3.5 * $sizer
+/// For example, used in the custom approvals alias icon
+/// @require {variable} $sizer
+$sizer-xxxl: $sizer * 3.5;
+
+/// Disables "Responsive Font Sizes" feature.
+/// Read more at https://getbootstrap.com/docs/5.0/getting-started/rfs/
+/// @access private
+$enable-rfs: false !default;

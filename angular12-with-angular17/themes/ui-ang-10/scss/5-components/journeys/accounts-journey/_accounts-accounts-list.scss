@@ -1,0 +1,75 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+// Account list rows
+$accounts-list-account-row-min-height: 2 * $line-height-base * $font-size-base !default;
+// Account list cards
+$accounts-list-card-min-width: 18.5rem !default;
+$accounts-list-cards-max-columns: 4 !default;
+$accounts-list-cards-spacer: $spacer-lg !default;
+$accounts-list-cards-column-min-width: max(18.5rem, 25%);
+
+/// Accounts list row
+///
+/// @example html
+/// <div class="bb-accounts-account-row bb-stack bb-stack--align-top">
+///   <div class="bb-accounts-account-row__item bb-stack__item bb-inline-stack">
+///     <div class="bb-inline-stack__item">[icon]</div>
+///   </div>
+///   <div class="bb-accounts-account-row__item bb-stack__item bb-stack__item--fill">
+///     <div>Account Title</div>
+///     <div>IBAN 1234 1234 1234</div>
+///     <div> -- additional info 1 -- </div>
+///     <div> -- additional info 2 -- </div>
+///   </div>
+///   <div class="bb-accounts-account-row__item bb-stack__item bb-inline-stack">
+///     <div class="bb-inline-stack__item">[actions]</div>
+///   </div>
+/// </div>
+
+.bb-accounts-account-row__item {
+  min-height: $accounts-list-account-row-min-height;
+}
+
+/// Accounts list cards
+///
+/// @example html
+/// <div class="bb-accounts-account-cards">
+///   <div class="bb-accounts-account-cards__card-container">
+///     <div class="bb-accounts-account-cards__card bb-card">
+///       <div>Account Title</div>
+///       <div>IBAN 1234 1234 1234</div>
+///     </div>
+///   </div>
+///   <div class="bb-accounts-account-cards__card-container">
+///     <div class="bb-accounts-account-cards__card bb-card">
+///       <div>Account Title</div>
+///       <div>IBAN 1234 1234 1234</div>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-accounts-account-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($accounts-list-cards-column-min-width, 1fr));
+  margin: 0 calc(-#{$accounts-list-cards-spacer} / 2) calc(-#{$accounts-list-cards-spacer});
+}
+
+.bb-accounts-account-cards__card-container {
+  padding: 0 calc(#{$accounts-list-cards-spacer} / 2);
+  margin-block-end: $accounts-list-cards-spacer;
+}
+
+.bb-accounts-account-cards__card {
+  cursor: pointer;
+  height: 100%;
+}
+
+.bb-accounts-list-table__heading {
+  line-height: 2rem;
+  padding-block-start: $sizer;
+  padding-block-end: $sizer;
+}

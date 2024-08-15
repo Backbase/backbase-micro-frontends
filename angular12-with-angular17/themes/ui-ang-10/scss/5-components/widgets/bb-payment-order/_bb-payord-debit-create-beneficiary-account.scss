@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// @name bb-payord-debit-create-beneficiary-account
+///
+/// @example html
+/// <button class="bb-payord-debit-create-beneficiary-account">Button text</button>
+
+$bb-create-beneficiary-account-menuitem-padding: $sizer-md !default;
+
+.bb-create-beneficiary-account-menuitem {
+  padding: $bb-create-beneficiary-account-menuitem-padding;
+}

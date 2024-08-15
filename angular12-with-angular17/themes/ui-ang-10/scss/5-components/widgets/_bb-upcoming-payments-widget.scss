@@ -1,0 +1,68 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+@use "sass:math";
+
+$upcoming-payments-spacer-200: $spacer * 2 !default;
+$upcoming-payments-spacer-150: $spacer * 1.5 !default;
+$upcoming-payments-spacer-50: $spacer * 0.5 !default;
+$upcoming-payments-spacer-25: $spacer * 0.25 !default;
+$upcoming-payments-spacer-15: math.div($spacer, 6) !default;
+
+$upcoming-payments-group-row-padding: $upcoming-payments-spacer-150 $upcoming-payments-spacer-150
+  $upcoming-payments-spacer-150 0 !default;
+$upcoming-payments-icon-wrapper-padding: 1rem 1rem 0.5rem 1rem !default;
+$upcoming-payments-close-button-opacity: 0.7 !default;
+$upcoming-payments-details-icon-color: $white !default;
+$upcoming-payments-details-icon-background-color: $color-primary-darkest !default;
+
+.bb-upcoming-payments-list__group-date {
+  padding-top: $upcoming-payments-spacer-50;
+  padding-bottom: $upcoming-payments-spacer-50;
+  color: $color-text-support;
+  text-transform: uppercase;
+}
+
+.bb-upcoming-payments-list__recurrent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: $upcoming-payments-spacer-25;
+  color: $color-text-support;
+}
+
+.bb-upcoming-payments-list__recurrent-label {
+  display: block;
+  margin-left: $upcoming-payments-spacer-50;
+}
+
+.bb-upcoming-payments-details__modal-header-button-close {
+  position: absolute;
+  right: $upcoming-payments-spacer-200;
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: $upcoming-payments-close-button-opacity;
+}
+
+.bb-upcoming-payments-details-header__wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.bb-upcoming-payments-details-header__icon-wrapper {
+  display: inline-block;
+  padding: $upcoming-payments-icon-wrapper-padding;
+  color: $upcoming-payments-details-icon-color;
+  background-color: $upcoming-payments-details-icon-background-color;
+  border-radius: $border-radius;
+}
+
+.bb-upcoming-payments-tab-container {
+  .nav-tabs {
+    margin-bottom: $spacer-md;
+  }
+}

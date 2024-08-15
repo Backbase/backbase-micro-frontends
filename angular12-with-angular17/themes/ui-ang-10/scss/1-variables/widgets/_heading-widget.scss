@@ -1,0 +1,16 @@
+////
+/// @group 1-variables/widgets/heading-widget
+/// @access public
+////
+
+/// Configures the background for the bb-heading-widget. Uses a linear gradient by default
+/// @todo should the blue used for the second gradient be one of the color (shade) variabels?
+$heading-widget-background: linear-gradient(
+    -135deg,
+    rgba($color-neutral-white, 0.05) 0%,
+    rgba($color-neutral-black, 0.05) 100%
+  ),
+  linear-gradient(33.7deg, rgb(212, 237, 255) 0%, $color-neutral-white 100%) !default;
+
+/// Configures the color for the bb-heading-widget heading
+$heading-widget-color: $color-neutral-black !default;

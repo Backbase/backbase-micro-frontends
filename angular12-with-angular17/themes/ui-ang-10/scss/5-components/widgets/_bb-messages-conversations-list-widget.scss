@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-messages-conversations-list-padding: $sizer-xl !default;
+$bb-messages-conversations-list-item-focus-border: 2px solid $color-primary !default;
+
+.bb-messages-conversations-list__container {
+  @include media-breakpoint-up(sm) {
+    padding: $bb-messages-conversations-list-padding;
+  }
+
+  .bb-messages-conversations-list-item {
+    &:focus {
+      border: $bb-messages-conversations-list-item-focus-border;
+      box-shadow: none;
+    }
+  }
+}

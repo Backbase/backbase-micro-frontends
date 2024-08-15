@@ -1,0 +1,24 @@
+///  @example html - due controls buttons
+///
+/// <div class="bb-stop-checks-control-buttons bb-button-bar">
+///   <button class="bb-button-bar__button">Continue</button>
+///   <button class="bb-button-bar__button bb-stop-checks-control-buttons__cancel">Cancel</button>
+/// </div>
+
+.bb-stop-checks-control-buttons__cancel {
+  display: none;
+}
+
+.bb-stop-checks-control-buttons {
+  flex-direction: row;
+}
+
+.modal-dialog {
+  .bb-stop-checks-control-buttons {
+    flex-direction: row-reverse;
+  }
+
+  .bb-stop-checks-control-buttons__cancel {
+    display: block;
+  }
+}

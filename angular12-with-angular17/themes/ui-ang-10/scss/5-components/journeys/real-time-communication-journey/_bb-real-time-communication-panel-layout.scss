@@ -1,0 +1,339 @@
+$bb-rtc-chat-header-button-size: 3.5rem !default;
+$bb-rtc-chat-header-height: 3.563rem !default;
+$bb-rtc-chat-footer-text-area-min-height: 4.063rem !default;
+$bb-rtc-chat-footer-text-area-max-height: 5.4rem !default;
+$bb-rtc-chat-footer-text-area-information-height: 1.25rem !default;
+$bb-rtc-chat-message-error-buttons-separator: "·";
+$bb-rtc-chat-message-error-message-margin-top: 0.4rem !default;
+$bb-rtc-chat-panel-footer-information-font-size: 0.75rem !default;
+$bb-rtc-chat-current-day-height: 1.313rem !default;
+$bb-rtc-chat-current-day-width: 21.938rem !default;
+$bb-rtc-chat-current-day-font-size: 0.875rem !default;
+$bb-badge-unread-messages-count-left: 2rem;
+$bb-badge-unread-messages-count-top: 2rem;
+$bb-rtc-chat-panel-footer__textarea-mobile-view-height: 2.438rem !default;
+$bb-rtc-chat-panel-footer__button-size: 2.313rem !default;
+$bb-rtc-chat-text-area-focus-border: 2px $border-style $color-primary !default;
+$bb-call-overlay-z-index: $zindex-popover + 1 !default;
+$bb-call-overlay-end-call-failed-modal-z-index: $bb-call-overlay-z-index + 1 !default;
+$bb-call-overlay-max-height: 50vh !default;
+$bb-call-overlay-width: 254px !default;
+
+.bb-rtc-conversation-panel-header {
+  height: $bb-rtc-chat-header-height;
+  border-bottom: $border;
+  background-color: $color-neutral-grey;
+
+  .bb-rtc-conversation-panel-header__left-section-content {
+    float: left;
+    border-right: $border;
+  }
+
+  .bb-rtc-conversation-panel-header__call-content {
+    float: left;
+  }
+
+  .bb-rtc-conversation-panel-header__close-button {
+    height: $bb-rtc-chat-header-button-size;
+    width: $bb-rtc-chat-header-button-size;
+  }
+
+  .bb-rtc-conversation-panel-header__right-section-content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-inline-end: $spacer-sm;
+
+    .bb-rtc-conversation-panel-header__btn-margin {
+      margin-inline-end: $spacer-md;
+    }
+  }
+}
+
+.bb-rtc-conversation-panel-footer {
+  border-top: $border;
+  margin-top: $spacer-sm;
+
+  .bb-rtc-conversation-panel-footer__ready-to-accept {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bb-rtc-conversation-panel-footer__maybe-accept-conversation-later-button {
+    margin-inline-end: $spacer-lg;
+  }
+
+  .bb-rtc-conversation-panel-footer__form {
+    display: flex;
+
+    .bb-rtc-conversation-panel-footer__textarea {
+      flex: 1;
+      margin-inline-end: $spacer-sm;
+      min-height: $bb-rtc-chat-footer-text-area-min-height;
+      max-height: $bb-rtc-chat-footer-text-area-max-height;
+      height: $bb-rtc-chat-footer-text-area-min-height;
+      border: $border;
+      resize: none;
+
+      &:focus {
+        border: $bb-rtc-chat-text-area-focus-border;
+      }
+
+      @include media-breakpoint-down(sm) {
+        min-height: $bb-rtc-chat-panel-footer__textarea-mobile-view-height;
+        height: $bb-rtc-chat-panel-footer__textarea-mobile-view-height;
+        margin-inline-start: $spacer-sm;
+      }
+    }
+
+    .bb-rtc-conversation-panel-footer__button {
+      @include media-breakpoint-down(sm) {
+        width: $bb-rtc-chat-panel-footer__button-size;
+        height: $bb-rtc-chat-panel-footer__button-size;
+        margin-inline-end: $spacer-sm;
+      }
+    }
+  }
+
+  .bb-rtc-conversation-panel-footer__information {
+    height: $bb-rtc-chat-footer-text-area-information-height;
+    font-size: $bb-rtc-chat-panel-footer-information-font-size;
+    padding: $spacer-xs 0;
+  }
+}
+
+.bb-rtc-conversation-panel__content {
+  background-color: $background-color-neutral;
+  border-radius: $border-radius-sm;
+  padding: $spacer-lg;
+  height: 100%;
+  overflow: auto;
+
+  @include media-breakpoint-down(sm) {
+    border-radius: $border-radius-none;
+  }
+
+  .bb-rtc-conversation-panel__content--no-background {
+    background-color: $card-bg;
+  }
+
+  .bb-rtc-current-day {
+    text-align: center;
+    width: $bb-rtc-chat-current-day-width;
+    height: $bb-rtc-chat-current-day-height;
+    margin-bottom: $spacer-lg;
+    font-weight: $font-weight-semi-bold;
+    font-size: $bb-rtc-chat-current-day-font-size;
+    line-height: $bb-rtc-chat-current-day-height;
+    font-style: normal;
+  }
+}
+
+.bb-rtc-conversation-panel-row-message {
+  display: flex;
+  justify-content: flex-start;
+  margin-inline-end: $spacer-lg;
+
+  .bb-rtc-conversation-panel-row-message__inner {
+    display: flex;
+    flex-direction: column;
+
+    .bb-rtc-conversation-panel-row-message__text {
+      border-radius: $border-radius-sm;
+      padding: $spacer-sm;
+      color: $color-neutral-black;
+      white-space: break-spaces;
+      max-width: 100%;
+      word-break: break-word;
+      background: $card-bg;
+    }
+  }
+
+  .bb-rtc-conversation-panel-row-message--no-background {
+    background: $background-color-neutral;
+  }
+
+  .bb-rtc-conversation-panel-row-message__loading-spinner {
+    float: left;
+    margin: $spacer-xs $spacer-sm;
+  }
+
+  .bb-rtc-conversation-panel-row-message__error-icon {
+    float: left;
+    margin: $bb-rtc-chat-message-error-message-margin-top $spacer-xs;
+  }
+
+  .bb-rtc-conversation-panel-row-message__timestamp,
+  .bb-rtc-conversation-panel-row-message__employee-name {
+    font-size: $font-size-sm;
+  }
+
+  .bb-rtc-conversation-panel-row-message__error-buttons {
+    margin-inline-start: $spacer-xs;
+  }
+
+  .bb-rtc-conversation-panel-row-message__error-button-retry,
+  .bb-rtc-conversation-panel-row-message__error-button-edit {
+    vertical-align: baseline;
+    color: $color-primary-lighter;
+    font-family: sans-serif;
+    font-size: $font-size-subheader;
+    line-height: $spacer-xs;
+  }
+
+  .bb-rtc-conversation-panel-row-message__error-button-separator::before {
+    content: $bb-rtc-chat-message-error-buttons-separator;
+    margin: 0 $spacer-sm;
+    color: $color-primary;
+  }
+}
+
+.bb-rtc-conversation-panel-row-message--me {
+  justify-content: flex-end;
+  margin-inline-end: 0;
+  margin-inline-start: $spacer-lg;
+
+  .bb-rtc-conversation-panel-row-message__inner {
+    align-items: flex-end;
+
+    .bb-rtc-conversation-panel-row-message__text {
+      background: $color-primary-lightest;
+    }
+  }
+}
+
+.bb-rtc-conversation-panel-row-message--error {
+  .bb-rtc-conversation-panel-row-message__employee-name {
+    color: $color-danger;
+    font-size: $font-size-subheader;
+    line-height: $spacer-xs;
+  }
+
+  .bb-rtc-conversation-panel-row-message__text {
+    background-color: $color-danger-lightest;
+  }
+}
+
+.bb-rtc-conversation-panel-row-ended-message {
+  text-align: center;
+  color: $color-neutral-dark;
+  font-size: $bb-rtc-chat-panel-footer-information-font-size;
+  padding-bottom: $spacer-sm;
+}
+
+.bb-rtc-conversation-panel-row-date-message {
+  text-align: center;
+  font-size: $small-font-size;
+}
+
+.bb-rtc-conversation-panel-row-accepted-message {
+  text-align: center;
+  color: $color-neutral-dark;
+  font-size: $font-size-subheader;
+}
+
+.bb-badge-unread-messages-count {
+  position: relative;
+  top: $bb-badge-unread-messages-count-left;
+  left: $bb-badge-unread-messages-count-top;
+  z-index: 1;
+}
+
+.bb-rtc-call-overlay {
+  border-radius: $border-radius-sm;
+  position: fixed;
+  z-index: $bb-call-overlay-z-index;
+  margin-block: $spacer-md;
+  margin-inline: $spacer-md;
+  background-color: $dark;
+  inline-size: $bb-call-overlay-width;
+  max-block-size: $bb-call-overlay-max-height;
+
+  .end-call {
+    color: $light;
+    background-color: $danger;
+    border-color: $danger;
+  }
+}
+
+.bb-rtc-call-overlay__section {
+  margin: $spacer-md $spacer-xl;
+  display: flex;
+  justify-content: center;
+}
+
+.bb-rtc-call-overlay__section-break {
+  background-color: $color-neutral-darker;
+}
+
+.bb-rtc-call-overlay__end-call-button {
+  // Selector to get around lack of ability to add btn-circle--filled
+  // to nested button within bb-load-button-ui
+  > .btn-danger.btn-circle:not(.btn-circle--filled):not(:hover):not(:active) {
+    color: $light;
+    background-color: $danger;
+    border-color: $danger;
+  }
+}
+
+.bb-rtc-call-overlay__end-call-icon {
+  transform: rotate(135deg);
+}
+
+.bb-rtc-call-overlay__end-call-icon--ended {
+  .bb-icon {
+    background-color: $secondary;
+    border-color: $secondary;
+  }
+}
+
+.bb-rtc-call-overlay__reposition-button {
+  background-color: transparent;
+  border: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.bb-rtc-call-overlay__reposition-button--bottom-right {
+  transform: scaleX(-1);
+}
+
+.bb-rtc-call-overlay__caller-info {
+  color: $light;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
+}
+
+.bb-rtc-call-overlay__footer {
+  margin-block: $spacer-md;
+  margin-inline: $spacer-sm;
+}
+
+.bb-rtc-call-overlay--bottom-left {
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
+.bb-rtc-call-overlay--bottom-right {
+  inset-block-end: 0;
+  inset-inline-end: 0;
+}
+
+.bb-call-overlay-connection-warning {
+  background: $color-warning;
+  padding-inline: $spacer-md;
+  padding-block: $spacer-md;
+  margin-inline: $spacer-sm;
+  margin-block: $spacer-sm;
+  border-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+  gap: $spacer-sm;
+  font-weight: bold;
+}

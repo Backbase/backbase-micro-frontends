@@ -1,0 +1,24 @@
+// Configure styles for exception details modal popup
+////
+/// @group journey-specific
+/// @access public
+////
+
+$positive-pay-modal-alert-margin-top: -$spacer !default;
+
+/// Modal popup for the positive pay journeys.
+///
+/// @name bb-positive-pay-modal
+///
+/// @example html
+/// <div class="bb-positive-pay-modal modal-dialog">
+///  <div class="modal-body">
+///   <div class="bb-positive-pay-modal__alert bb-positive-pay-modal__alert--drag-up">
+///    <div class="alert alert-danger" role="alert">Alert message</div>
+///   </div>
+///  </div>
+/// </div>
+
+.bb-positive-pay-modal__alert--drag-up {
+  margin-top: $positive-pay-modal-alert-margin-top;
+}

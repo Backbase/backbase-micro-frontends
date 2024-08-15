@@ -1,0 +1,49 @@
+$account-details-card-bg-color: $color-neutral-lightest !default;
+$account-details-card-min-width: 13rem !default;
+$account-details-card-border-radius: 0.5rem !default;
+$account-details-card-header-min-height: 2.5rem !default;
+
+.bb-payment-account-details-card__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bb-payment-account-details-card {
+  display: flex;
+  flex-direction: column;
+  min-width: $account-details-card-min-width;
+  padding: $sizer-md;
+  background-color: $account-details-card-bg-color;
+  border-radius: $account-details-card-border-radius;
+}
+
+.bb-payment-account-details-card--full-height {
+  height: 100%;
+}
+
+.bb-payment-account-details-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: $account-details-card-header-min-height;
+}
+
+.bb-payment-account-details-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: $spacer-md;
+}
+
+@include media-breakpoint-down(md) {
+  .bb-payment-account-details-card__container {
+    flex-direction: column;
+  }
+
+  .bb-account-transfer-icon {
+    margin: $spacer-md;
+    transform: rotate(90deg);
+  }
+}

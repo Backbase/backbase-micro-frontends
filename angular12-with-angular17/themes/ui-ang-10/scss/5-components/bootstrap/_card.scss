@@ -1,0 +1,357 @@
+// Global annotations
+////
+/// @group structure
+/// @access private
+////
+
+$card-shadow-level-1: $box-shadow-sm !default;
+$card-shadow-level-2: $box-shadow-md !default;
+$card-shadow-level-3: $box-shadow-lg !default;
+$card-shadow-level-4: $box-shadow-xl !default;
+$card-highlight-bg-color: $color-neutral-lightest !default;
+$card-header-focus-box-shadow: $input-btn-focus-box-shadow inset !default;
+
+$card-section-highlight-bg-color: $color-neutral-lighter !default;
+$card-section-border-color: $border-color !default;
+
+$card-sm-sizer: $sizer-md !default;
+$card-md-sizer: $card-spacer-x !default;
+$card-lg-sizer: $sizer-xl !default;
+
+@import "../../../../bootstrap5/scss/card";
+
+/// The Bootstrap card component.  Normally consists of a card-body and optionally a card-header/card-footer.
+/// Alternatively, consists of card-sections that are separated by a rule and are highlightable.
+///
+/// @name card
+///
+/// @example html - default
+///   <div class="card">
+///     <div class="card-header">
+///       <h3 class="card-title">Card title</h3>
+///     </div>
+///     <div class="card-body">Card body</div>
+///     <div class="card-footer">Card footer</div>
+///   </div>
+///
+/// @example html - tweaking shadow level
+///   <div class="card card--shadow-level-4">
+///     <div class="card-header">
+///       <h3 class="card-title">Card title</h3>
+///     </div>
+///     <div class="card-body">Card body</div>
+///     <div class="card-footer">Card footer</div>
+///   </div>
+///
+/// @example html - small variant
+///   <div class="card card-sm">
+///     <div class="card-header">
+///       <h3 class="card-title">Card title</h3>
+///     </div>
+///     <div class="card-body">Card body</div>
+///     <div class="card-footer">Card footer</div>
+///   </div>
+///
+/// @example html - large variant
+///   <div class="card card-lg">
+///     <div class="card-header">
+///       <h3 class="card-title">Card title</h3>
+///     </div>
+///     <div class="card-body">Card body</div>
+///     <div class="card-footer">Card footer</div>
+///   </div>
+///
+/// @example html - with (highlighted) sections
+///   <div class="card">
+///     <div class="card-header">
+///       <h2 class="card-title">My details</h2>
+///     </div>
+///     <div class="card-section">Form section</div>
+///     <div class="card-section card-section--highlight">Form section that is being modified</div>
+///     <div class="card-section">Form section</div>
+///   </div>
+///
+/// @example html - with collapsible modifier
+///   <div class="card card--collapsible">
+///     <div class="card-header">
+///       <h3 class="card-title">Card title</h3>
+///     </div>
+///     <div class="card-body">Card body</div>
+///     <div class="card-footer">Card footer</div>
+///   </div>
+
+@mixin dynamic-card-padding($sizer) {
+  > .card-header {
+    padding: $sizer $sizer 0 $sizer;
+  }
+
+  > .card-header--only-child {
+    padding-bottom: $sizer;
+  }
+
+  > .card-body {
+    padding: $sizer;
+  }
+
+  > .card-footer {
+    padding: 0 $sizer $sizer $sizer;
+  }
+
+  > .card-section {
+    padding: $sizer;
+  }
+}
+
+.card {
+  box-shadow: $card-shadow-level-1;
+
+  @if $experimental-enable-dynamic-spacing {
+    // Enable dynamic padding changes based on the screen size
+    @include media-breakpoint-up(sm) {
+      @include dynamic-card-padding($card-lg-sizer);
+    }
+
+    @include media-breakpoint-down(md) {
+      @include dynamic-card-padding($card-md-sizer);
+
+      > .card-title {
+        margin-bottom: $spacer-sm;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      @include dynamic-card-padding($card-sm-sizer);
+    }
+  }
+
+  // Card with small paddings
+  &.card-sm {
+    > .card-header {
+      padding: $card-sm-sizer $card-sm-sizer 0 $card-sm-sizer;
+    }
+
+    > .card-header--only-child {
+      padding-bottom: $card-sm-sizer;
+    }
+
+    > .card-body {
+      padding: $card-sm-sizer;
+    }
+
+    > .card-title {
+      margin-bottom: $spacer-sm;
+    }
+
+    > .card-footer {
+      padding: 0 $card-sm-sizer $card-sm-sizer $card-sm-sizer;
+    }
+
+    > .card-section {
+      padding: $card-sm-sizer;
+    }
+  }
+
+  // Card with medium padding
+  &.card-md {
+    > .card-header {
+      padding: $card-md-sizer $card-md-sizer 0 $card-md-sizer;
+    }
+
+    > .card-header--only-child {
+      padding-bottom: $card-md-sizer;
+    }
+
+    > .card-body {
+      padding: $card-md-sizer;
+    }
+
+    > .card-footer {
+      padding: 0;
+    }
+
+    > .card-section {
+      padding: $card-md-sizer;
+    }
+  }
+
+  // Card with large padding
+  &.card-lg {
+    > .card-header {
+      padding: $card-lg-sizer $card-lg-sizer 0 $card-lg-sizer;
+    }
+
+    > .card-header--only-child {
+      padding-bottom: $card-lg-sizer;
+    }
+
+    > .card-body {
+      padding: $card-lg-sizer;
+    }
+
+    > .card-footer {
+      padding: 0 $card-lg-sizer $card-lg-sizer $card-lg-sizer;
+    }
+
+    > .card-section {
+      padding: $card-lg-sizer;
+    }
+  }
+}
+
+.card--shadow-level-1 {
+  box-shadow: $card-shadow-level-1;
+}
+
+.card--shadow-level-2 {
+  box-shadow: $card-shadow-level-2;
+}
+
+.card--shadow-level-3 {
+  box-shadow: $card-shadow-level-3;
+}
+
+.card--shadow-level-4 {
+  box-shadow: $card-shadow-level-4;
+}
+
+.card--shadowless {
+  box-shadow: none;
+}
+
+.card--highlight {
+  background-color: $card-highlight-bg-color;
+
+  .card-header {
+    background-color: $card-highlight-bg-color;
+  }
+}
+
+.card--collapsible .card-body {
+  padding-top: 0;
+}
+//screen above 768px padding should be 24px(default) and only for screen less than 768px padding should be 16px
+.card-body {
+  padding: $card-md-sizer;
+
+  @include media-breakpoint-down(md) {
+    padding: $card-sm-sizer;
+  }
+}
+.card-header {
+  padding: $card-md-sizer $card-md-sizer 0 $card-md-sizer;
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+
+  &:focus {
+    outline: none;
+    box-shadow: $card-header-focus-box-shadow;
+  }
+}
+
+.card-header--only-child {
+  padding-bottom: $card-md-sizer;
+  border-bottom-right-radius: $card-border-radius;
+  border-bottom-left-radius: $card-border-radius;
+}
+
+.card-footer {
+  border-bottom-right-radius: $card-border-radius;
+  border-bottom-left-radius: $card-border-radius;
+}
+
+.card-section {
+  position: relative;
+  flex: 1 1 auto;
+  padding: $card-md-sizer;
+  color: $card-color;
+
+  // Displays a border underneath the card section
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% - 2 * #{$card-md-sizer});
+    margin-left: $card-md-sizer;
+    border-bottom: 1px solid $card-section-border-color;
+    content: "";
+  }
+
+  // Removes the border underneath the section on the last item
+  &:last-of-type::after {
+    display: none;
+  }
+
+  &:first-child {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $card-border-radius;
+    border-bottom-left-radius: $card-border-radius;
+  }
+}
+
+.card-section--highlight {
+  background-color: $card-section-highlight-bg-color;
+
+  // Removes the border underneath highlighted sections
+  &::after {
+    display: none;
+  }
+}
+
+// Card with small paddings
+.card-sm {
+  .card-header {
+    padding: $card-sm-sizer $card-sm-sizer 0 $card-sm-sizer;
+  }
+
+  .card-header--only-child {
+    padding-bottom: $card-sm-sizer;
+  }
+
+  .card-body {
+    padding: $card-sm-sizer;
+  }
+
+  .card-title {
+    margin-bottom: $spacer-sm;
+  }
+
+  .card-footer {
+    padding: 0 $card-sm-sizer $card-sm-sizer $card-sm-sizer;
+  }
+
+  .card-section {
+    padding: $card-sm-sizer;
+  }
+}
+
+// Card with large padding
+.card-lg {
+  .card-header {
+    padding: $card-lg-sizer $card-lg-sizer 0 $card-lg-sizer;
+  }
+
+  .card-header--only-child {
+    padding-bottom: $card-lg-sizer;
+  }
+
+  //screen above 768px padding should be 32px and only for screen less tha 768px padding should be 16px
+  .card-body {
+    padding: $card-lg-sizer;
+
+    @include media-breakpoint-down(md) {
+      padding: $card-sm-sizer;
+    }
+  }
+
+  .card-footer {
+    padding: 0 $card-lg-sizer $card-lg-sizer $card-lg-sizer;
+  }
+
+  .card-section {
+    padding: $card-lg-sizer;
+  }
+}

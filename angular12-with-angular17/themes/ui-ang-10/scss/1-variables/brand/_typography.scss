@@ -1,0 +1,98 @@
+////
+/// Typography (global)
+/// @group 1-variables/brand/typography
+/// @access private
+////
+
+/// Used as IE fallback value
+/// @access private
+$font-size-fallback: 16px;
+
+/// Configures the default font
+/// @access public
+$font-family: "Libre Franklin", sans-serif !default;
+
+/// Configures the font used for headings. Defaults to $font-family
+/// @access public
+/// @require {variable} $font-family
+$font-family-heading: $font-family !default;
+
+/// Configures the font size base. NOTE: Use relative sizing like rem. This ensures user-specific settings, which create an accessible experience
+/// Browser default of 1rem is typically 16px
+/// @access public
+$font-size-base: 1rem !default;
+
+/// Configures the font size used by the Hero font
+/// @access public
+$font-size-hero: 2.5rem !default; // 40px
+
+/// Configures the font size used by page titles
+/// @access public
+$font-size-h1: 2.125rem !default; // 34px
+
+/// Configures the font size used by subsection titles
+/// @access public
+$font-size-h2: 1.5rem !default; // 24px
+
+/// Configures the font size used by sub-subsection titles
+/// @access public
+$font-size-h3: 1.25rem !default; // 20px
+
+/// Configures the font size used for emphasizing amounts
+/// @access public
+$font-size-highlight: 1.125rem !default; // 18px
+
+/// Configures the font size used as default. Defaults to $font-size-base
+/// @access public
+/// @require {variable} $font-size-base
+$font-size-default: $font-size-base !default;
+
+/// Configures the font size used for descriptions and secondary text
+/// @access public
+$font-size-subtitle: 0.875rem !default; // 14px
+
+/// Configures the font size used for subheaders
+/// @access public
+$font-size-subheader: 0.75rem !default; // 12px
+
+/// Configures the font size used for table cells
+/// @access public
+$font-size-table-default: 0.875rem !default; // 14px
+
+/// Configures the font size used for table header cells
+/// @access public
+$font-size-table-header: 0.75rem !default; // 12px
+
+/// Configures the default font weight
+/// @access public
+$font-weight-regular: 400 !default;
+
+/// Configures the light font weight
+/// @access public
+$font-weight-light: 300 !default;
+
+/// Configures the semi-bold font-weight
+/// @access public
+$font-weight-semi-bold: 600 !default;
+
+/// Configures the bold font-weight
+/// @access public
+$font-weight-bold: 700 !default;
+
+/// Configures the font-weight used for headings. Defaults to $font-weight-bold
+/// @access public
+/// @require {variable} $font-weight-bold
+$font-weight-heading: $font-weight-bold !default;
+
+/// Configures the default line-height
+/// @access public
+$line-height-base: 1.5 !default;
+
+/// @access private
+/// @deprecated
+$line-height-headings: 1.2 !default;
+
+/// Configures the line-height used by headings
+/// @access public
+/// @require {variable} $line-height-headings
+$line-height-heading: $line-height-headings !default;

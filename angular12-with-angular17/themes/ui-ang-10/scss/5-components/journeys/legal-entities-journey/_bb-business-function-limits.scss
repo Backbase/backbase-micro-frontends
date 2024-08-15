@@ -1,0 +1,100 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+////
+
+$business-function-limits-border-color: $color-neutral-grey !default;
+$business-function-limits-body-padding: 0 $sizer-md $sizer-lg !default;
+$business-function-limits-table-with-spacings-padding: 0 0 ($sizer-md * 0.75) !default;
+$business-function-limits-table-font-size: $font-size-subheader !default;
+$business-function-limits-table-value-font-size: $font-size-sm !default;
+$business-function-limits-font-weight-normal: $font-weight-regular !default;
+$business-function-limits-font-weight-semi-bold: $font-weight-semi-bold !default;
+$business-function-limits-action-width: 65px !default; // Width for button or badge
+$business-function-limits-row-name-width: 130px !default; // Width for row name
+
+/// Styles for Legal Entities Journey - Business Function Limits Component
+/// This component shows visually a limits table related to Business Function.
+///
+/// @name bb-business-function-limits
+///
+/// @example html
+/// <div class="bb-business-function-limits">
+///   <div class="bb-business-function-limits__body bb-stack">
+///     <table class="bb-business-function-limits__table bb-business-function-limits__table--with-spacings bb-block--full-width bb-stack__item">
+///       <thead>
+///         <tr>
+///           <th>Name</th>
+///           <th>Col 1</th>
+///           <th>Col 2</th>
+///         </tr>
+///       </thead>
+///       <tbody>
+///         <tr>
+///           <td>Row 1 name</td>
+///           <td>Test value</td>
+///           <td>Test value</td>
+///         </tr>
+///         <tr>
+///           <td>Row 2 name</td>
+///           <td><bb-icon-ui class="bb-business-function-limits__icon bb-text-disabled" name="all-inclusive"></bb-icon-ui></td>
+///           <td><bb-icon-ui class="bb-business-function-limits__icon bb-text-disabled" name="all-inclusive"></bb-icon-ui></td>
+///         </tr>
+///       </tbody>
+///     </table>
+///     <div class="bb-business-function-limits__action"></div>
+///   </div>
+/// </div>
+
+.bb-business-function-limits {
+  border-bottom: 1px solid $business-function-limits-border-color;
+
+  .bb-business-function-limits__body {
+    padding: $business-function-limits-body-padding;
+  }
+
+  .bb-business-function-limits__icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .bb-business-function-limits__action {
+    min-width: $business-function-limits-action-width;
+  }
+
+  .bb-business-function-limits__table {
+    font-size: $font-size-subheader;
+    table-layout: fixed;
+
+    &--with-spacings {
+      td,
+      th {
+        padding: $business-function-limits-table-with-spacings-padding;
+      }
+    }
+
+    th {
+      font-weight: $business-function-limits-font-weight-normal;
+    }
+
+    td:not(:first-child) {
+      font-weight: $business-function-limits-font-weight-semi-bold;
+      font-size: $business-function-limits-table-value-font-size;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: $business-function-limits-row-name-width;
+    }
+
+    tbody tr:last-child td {
+      padding-bottom: 0;
+    }
+  }
+  .bb-business-function-limits__icon {
+    [dir="rtl"] & {
+      justify-content: flex-start;
+    }
+  }
+}

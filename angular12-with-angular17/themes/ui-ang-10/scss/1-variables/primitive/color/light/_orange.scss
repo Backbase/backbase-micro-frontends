@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/orange
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-orange-lightest: $chart-color-2-lightest; // #FFECD9
+$color-light-orange-lighter: $chart-color-2-lighter; // #FFA64D
+$color-light-orange-default: $chart-color-2; // #FF8000
+$color-light-orange-darker: $chart-color-2-darker; // #FF8000
+$color-light-orange-darkest: $chart-color-2-darkest; // #8C4600
+$color-light-orange-on-color: $color-neutral-white;

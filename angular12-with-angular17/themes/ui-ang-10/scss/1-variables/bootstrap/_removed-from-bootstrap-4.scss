@@ -1,0 +1,23 @@
+$pre-scrollable-max-height: 340px !default;
+$black: #000 !default;
+$hr-border-color: rgba($black, 0.1) !default;
+$hr-opacity: 1 !default;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
+);
+
+$emphasized-link-hover-darken-percentage: 15% !default;
+$enable-print-styles: true !default;
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$input-btn-focus-width: 0.2rem !default;
+$badge-focus-width: $input-btn-focus-width !default;

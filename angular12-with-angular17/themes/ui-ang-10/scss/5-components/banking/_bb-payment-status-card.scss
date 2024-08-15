@@ -1,0 +1,26 @@
+$status-card-min-height: 12.5rem !default;
+$status-card-border-radius: 0.5rem !default;
+$status-card-success-bg-color: $color-success-lightest !default;
+
+.bb-payment-status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: $status-card-min-height;
+  padding: $sizer-md;
+  border-radius: $status-card-border-radius;
+
+  .bb-text-success,
+  .bb-icon--success {
+    color: $color-success-darkest;
+  }
+}
+
+.bb-payment-status-card--success {
+  background-color: $status-card-success-bg-color;
+}
+
+.bb-payment-status-card__icon {
+  margin: $spacer-xl;
+}

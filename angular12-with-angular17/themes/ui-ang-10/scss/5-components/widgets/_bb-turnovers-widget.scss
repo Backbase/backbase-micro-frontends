@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$turnovers-vertical-chart-height: 18rem !default;
+
+.bb-turnovers-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-block-end: $sizer-xl;
+}
+
+//temporary just to make the chart a bit fixed
+//Charts will be migrated later.
+.bb-turnovers-vertical-chart {
+  max-height: $turnovers-vertical-chart-height;
+  margin-block-end: $spacer-xl;
+}

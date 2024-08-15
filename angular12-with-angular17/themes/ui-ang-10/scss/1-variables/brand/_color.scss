@@ -1,0 +1,73 @@
+////
+/// Colors (global)
+/// @group 1-variables/brand/color
+/// @access public
+////
+
+/* stylelint-disable color-no-hex */
+
+/// Configures the brand primary color
+/// Used to calculate lighter and darker shade variables
+$color-primary: #295eff !default;
+
+/// Configures the brand secondary color
+/// Used to calculate lighter and darker shade variables
+$color-secondary: #274fc4 !default;
+
+/// Configures the brand accent color
+/// Used to calculate lighter and darker shade variables
+$color-accent: #69feff !default;
+
+/// Configures the semantic success color
+/// Used to calculate lighter and darker shade variables
+$color-success: #0e813e !default;
+
+/// Configures the semantic danger color
+/// Used to calculate lighter and darker shade variables
+$color-danger: #bf2310 !default;
+
+/// Configures the semantic warning color
+/// Used to calculate lighter and darker shade variables
+$color-warning: #fbc02d !default;
+
+/// Configures the semantic info color
+/// Used to calculate lighter and darker shade variables
+$color-info: #295eff !default;
+
+/// Configures the default white color
+$color-neutral-white: #fff !default;
+
+/// Configures the lightest neutral color
+$color-neutral-lightest: #f8fafb !default;
+
+/// Configures the lighter neutral color
+$color-neutral-lighter: #f3f6f9 !default;
+
+/// Configures the light neutral color
+$color-neutral-light: #e5ebf1 !default;
+
+/// Configures the grey neutral color
+$color-neutral-grey: #ccd5df !default;
+
+/// Configures the grey light neutral color
+$color-neutral-grey-light: #e1e8ef !default;
+
+/// Configures the darker grey neutral color
+$color-neutral-greyer: #a3b2c2 !default;
+
+/// Configures the darkest grey neutral color
+$color-neutral-greyest: #7189a7 !default;
+
+/// Configures the dark neutral color
+$color-neutral-dark: #3a495d !default;
+
+/// Configures the darker neutral color
+$color-neutral-darker: #091c35 !default;
+
+/// Configures the darkest neutral color
+$color-neutral-darkest: #061223 !default;
+
+/// Configures the black neutral color
+$color-neutral-black: #000000 !default;
+
+/* stylelint-enable color-no-hex */

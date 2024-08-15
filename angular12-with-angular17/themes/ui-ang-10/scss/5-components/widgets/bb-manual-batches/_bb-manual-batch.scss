@@ -1,0 +1,69 @@
+//// Global annotations
+////
+//// @group widgets
+//// @access private
+////
+
+$manual-batch-button-close-background-color: $color-neutral-white !default;
+$manual-batch-button-close-box-shadow: $box-shadow-sm !default;
+
+$height: 1rem !default;
+$height-sm: $height * 0.5;
+$height-md: $height;
+$height-lg: $height * 2;
+$height-xl: $height * 4;
+
+$height-map: (
+  sm: $height-sm,
+  md: $height-md,
+  lg: $height-lg,
+  xl: $height-xl,
+);
+
+@each $size, $value in $height-map {
+  .bb-batch_wrapper--#{$size} {
+    height: $value;
+  }
+}
+
+.manual-batch__button-close {
+  background-color: $manual-batch-button-close-background-color;
+  box-shadow: $manual-batch-button-close-box-shadow;
+}
+
+.bb-batch-dropdown-menu-max-height {
+  max-height: 20rem;
+}
+
+.manual-batch__transfers {
+  margin-block-end: 12 * $sizer;
+  padding-block-end: 2 * $sizer;
+}
+
+.bb-beneficiary-dropdown-selector {
+  .bb-product-selector__dropdown-item {
+    padding: 0;
+    &:not(.disabled):not(:disabled):focus,
+    &:not(.disabled):not(:disabled):active {
+      border: none;
+    }
+    &:after {
+      display: none;
+    }
+    &.selected {
+      background-color: $product-selector-dropdown-menu-item-active-bg;
+    }
+
+    .dropdown-item {
+      &:focus,
+      &:focus-visible {
+        border: $focus-border-primary;
+        background-color: transparent;
+      }
+      &:hover {
+        border: $focus-border-primary;
+        background-color: $color-neutral-lightest;
+      }
+    }
+  }
+}

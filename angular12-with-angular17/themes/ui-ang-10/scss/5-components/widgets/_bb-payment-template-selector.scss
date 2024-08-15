@@ -1,0 +1,70 @@
+$payment-template-selector-sizer-md: $sizer-md !default;
+$payment-template-selector-list-container-max-height: 44vh !default;
+$payment-template-selector-list-container-width: 22.5rem !default;
+$payment-template-selector-list-container-width-small-screens: 18.5rem !default;
+$payment-template-selector-placeholder-max-width: 17.5rem !default;
+$payment-template-selector-font-size-placeholder: $font-size-default !default;
+$payment-template-selector-item-padding-y: 0.75rem !default;
+$payment-template-selector-searchbox-padding-y: $sizer-sm !default;
+$payment-template-selector-item-separator-line-width: 1px !default;
+$payment-template-selector-item-separator-color: $color-neutral-grey !default;
+$payment-template-form-counter-invalid-color: $color-danger !default;
+$payment-template-form-counter-padding: $sizer-sm !default;
+$payment-template-form-counter-font-size: 0.75rem !default;
+
+.bb-payment-template-selector__list-container {
+  width: $payment-template-selector-list-container-width;
+
+  @media only screen and (max-width: 600px) {
+    width: $payment-template-selector-list-container-width-small-screens;
+  }
+
+  .bb-infinite-scroll-container {
+    max-height: $payment-template-selector-list-container-max-height;
+    overflow-y: scroll;
+  }
+}
+
+.bb-payment-template-selector__search-box-container {
+  padding: 0 $payment-template-selector-sizer-md;
+}
+
+.bb-payment-template-selector__search-box {
+  padding: $payment-template-selector-searchbox-padding-y 0;
+}
+
+.bb-payment-template-selector__placeholder {
+  max-width: $payment-template-selector-placeholder-max-width;
+  font-size: $payment-template-selector-font-size-placeholder;
+}
+
+.bb-payment-template-selector__item {
+  position: relative;
+  padding: $payment-template-selector-item-padding-y $payment-template-selector-sizer-md;
+  cursor: pointer;
+  &:not(:last-of-type)::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-bottom: $payment-template-selector-item-separator-line-width solid
+      $payment-template-selector-item-separator-color;
+    content: "";
+  }
+}
+
+.bb-payment-template__form-container {
+  bb-input-validation-message-ui {
+    display: inline-block;
+    padding-left: $payment-template-form-counter-padding;
+  }
+
+  .bb-char-counter {
+    display: inline-block;
+    font-size: $payment-template-form-counter-font-size;
+  }
+
+  bb-input-text-ui.ng-pristine.ng-invalid.ng-touched > bb-char-counter-ui > .bb-char-counter {
+    color: $payment-template-form-counter-invalid-color;
+  }
+}

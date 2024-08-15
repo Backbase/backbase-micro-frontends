@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/success
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-success-lightest: $color-success-lightest; // #DBECE2
+$color-light-success-lighter: $color-success-lighter; // #7ABA95
+$color-light-success-default: $color-success; // #0E813E
+$color-light-success-darker: $color-success-darker; // #0A5A2B
+$color-light-success-darkest: $color-success-darkest; // #084722
+$color-light-success-on-color: $color-neutral-white;

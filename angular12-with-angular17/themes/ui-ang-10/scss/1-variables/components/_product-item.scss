@@ -1,0 +1,45 @@
+////
+/// Product item
+/// @group 1-variables/components/product-item
+/// @access public
+////
+
+/// Configures color of the product-item
+/// @require {variable} $optional
+$product-item-title-color: $optional !default;
+
+/// Configures the font weight of the product-item title
+/// @require {variable} $optional
+$product-item-title-font-weight: $optional !default;
+
+/// Configures the font size of the product-item title
+/// @require {variable} $optional
+$product-item-title-font-size: $optional !default;
+
+/// Configures the color of the product-item account-info product-number
+/// @require {variable} $optional
+$product-item-account-info-product-number-color: $optional !default;
+
+/// Configures the font weight of the product-item account-info product-number
+/// @require {variable} $optional
+$product-item-account-info-product-number-font-weight: $optional !default;
+
+/// Configures the font size of the product-item account-info product-number
+/// @require {variable} $optional
+$product-item-account-info-product-number-font-size: $optional !default;
+
+/// Configures the color of the product-item amount
+/// @require {variable} $optional
+$product-item-amount-color: $optional !default;
+
+/// Configures the font weight of the product-item amount
+/// @require {variable} $optional
+$product-item-amount-font-weight: $optional !default;
+
+/// Configures the font-size of the product-item amount
+/// @require {variable} $optional
+$product-item-amount-font-size: $optional !default;
+
+/// Configures the color of the product-item owners
+/// @require {variable} $optional
+$product-item-owners-color: $optional !default;

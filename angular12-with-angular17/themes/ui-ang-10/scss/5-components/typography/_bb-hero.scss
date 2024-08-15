@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$hero-font-family: null !default;
+$hero-color: null !default;
+$hero-font-weight: $font-weight-regular !default;
+$hero-line-height: $line-height-heading !default;
+$hero-font-size: $font-size-hero;
+
+/// Will set the following css properties on an HTML element:
+/// - font-family: only if it is provided in presets,
+/// - color: only if it is provided in presets,
+/// - font-weight,
+/// - font-size,
+/// - line-height
+///
+/// @name bb-hero
+///
+/// @example html
+///   <div class="bb-hero">Hero text here</div>
+
+.bb-hero {
+  @if $hero-font-family {
+    font-family: $hero-font-family;
+  }
+
+  @if $hero-color {
+    color: $hero-color;
+  }
+
+  font-weight: $hero-font-weight;
+  font-size: $hero-font-size;
+  line-height: $hero-line-height;
+}

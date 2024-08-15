@@ -1,0 +1,61 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+.bb-load-button.btn {
+  position: relative;
+  &.bb-load-button--is-loading {
+    cursor: not-allowed;
+  }
+}
+
+.bb-load-button__loading-indicator {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  margin-block-start: -($loading-indicator-sm-size * 0.5);
+  margin-inline-start: -($loading-indicator-sm-size * 0.5);
+
+  .bb-state-container {
+    padding: 0;
+  }
+
+  .bb-loading-indicator__circle {
+    color: inherit;
+  }
+}
+
+.bb-load-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  bb-icon-ui {
+    &:last-child {
+      .bb-icon--cropped {
+        margin-inline-start: $spacer-sm;
+      }
+    }
+
+    &:first-child {
+      .bb-icon--cropped {
+        margin-inline-end: $spacer-sm;
+      }
+    }
+  }
+}
+
+// Reset rounded corners for bb-load-button-ui inside .btn-group
+.btn-group {
+  > bb-load-button-ui:not(:first-child) > .bb-load-button,
+  > .btn-group:not(:first-child) > bb-load-button-ui > .bb-load-button {
+    @include border-inline-start-radius(0);
+  }
+
+  > bb-load-button-ui:not(:last-child) > .bb-load-button,
+  > .btn-group:not(:last-child) > bb-load-button-ui > .bb-load-button {
+    @include border-inline-end-radius(0);
+  }
+}

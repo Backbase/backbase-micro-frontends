@@ -1,0 +1,79 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-billpay-multiple-bills-button-bg-color: $color-neutral-white !default;
+$bb-billpay-multiple-bills-review-item-bg-color: $background-color-neutral !default;
+$bb-billpay-multiple-bills-review-border-radius: $border-radius !default;
+$bb-billpay-multiple-bills-review-item-margin-bottom: $spacer !default;
+
+/// <table class="billpay-multipl-ebills-review">
+///   <thead>
+///    <tr class="bb-stack bb-stack--wrap container">
+///      <th class="billpay-multipl-ebills-review__cell">Column title</th>
+///      <th class="billpay-multipl-ebills-review__cell"></th>
+///    </tr>
+///   </thead>
+///   <tbody>
+///     <tr class="billpay-multipl-ebills-review__tr">
+///      <td class="billpay-multipl-ebills-review__cell">Column content</td>
+///      <td class="billpay-multipl-ebills-review__cell"><button class="btn btn-circle btn-sm billpay-multipl-pills-review__toggler"></button></td>
+///     </tr>
+///     <tr class="billpay-multipl-ebills-review__tr billpay-multipl-ebills-review__tr--last">
+///      <td class="billpay-multipl-ebills-review__cell">Extra fields collapsed</td>
+///     </tr>
+///     <tr class="billpay-multipl-ebills-review__seperator"></tr>
+///   </tbody>
+/// </table>
+
+.billpay-multipl-ebills-review {
+  width: 100%;
+}
+
+.billpay-multipl-ebills-review__cell {
+  position: relative;
+  padding: $sizer;
+
+  &:first-child {
+    padding-left: $sizer * 1.5;
+  }
+  &:last-child {
+    padding-right: $sizer;
+  }
+}
+
+.billpay-multipl-ebills-review__seperator {
+  height: $bb-billpay-multiple-bills-review-item-margin-bottom;
+}
+
+.billpay-multipl-ebills-review__toggler {
+  background-color: $bb-billpay-multiple-bills-button-bg-color;
+}
+
+.billpay-multipl-ebills-review__tr {
+  td {
+    background-color: $bb-billpay-multiple-bills-review-item-bg-color;
+  }
+  &:first-child td {
+    &:first-child {
+      border-top-left-radius: $bb-billpay-multiple-bills-review-border-radius;
+    }
+    &:last-child {
+      border-top-right-radius: $bb-billpay-multiple-bills-review-border-radius;
+    }
+  }
+
+  &.billpay-multipl-ebills-review__tr--last {
+    td {
+      padding: 0 0 $sizer;
+      border-radius: 0 0 $bb-billpay-multiple-bills-review-border-radius
+        $bb-billpay-multiple-bills-review-border-radius;
+    }
+  }
+
+  .billpay-multipl-ebills-review__cell {
+    padding-bottom: 0;
+  }
+}

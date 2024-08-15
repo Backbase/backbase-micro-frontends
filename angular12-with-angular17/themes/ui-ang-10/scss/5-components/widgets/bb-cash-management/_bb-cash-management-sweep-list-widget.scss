@@ -1,0 +1,11 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$sweep-list-sub-text-color: $color-neutral-dark !default;
+
+.sweep-list-item__sub-text {
+  color: $sweep-list-sub-text-color;
+}

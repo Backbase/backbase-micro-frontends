@@ -1,0 +1,16 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+$bb-portfolio-trading-instrument-list_search-dropdown_background: $color-neutral-white !default;
+
+.bb-portfolio-trading-instrument__search {
+  ngb-typeahead-window {
+    width: 100%;
+    transform: translate(0, 50px) !important;
+    .dropdown-item.active {
+      background-color: $bb-portfolio-trading-instrument-list_search-dropdown_background;
+    }
+  }
+}

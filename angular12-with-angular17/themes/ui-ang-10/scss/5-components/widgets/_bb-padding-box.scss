@@ -1,0 +1,56 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Align content using a paddings.
+/// Uses the `$spacer-xs` variable for the size of padding.
+///
+/// - `..--xs`: Extra small padding box `$spacer-xs`
+/// - `..--sm`: Small padding box `$spacer-sm`
+/// - `..--md`: Medium padding box `$spacer-md`
+/// - `..--lg`: Large padding box `$spacer-lg`
+/// - `..--xl`: Extra large padding box `$spacer-xl`
+/// - `..-[vertical|horizontal]--[xs|sm|md|lg|xl]`: Allows for applying only horizontal or vertical paddings
+///
+/// @name .bb-padding-box--*
+///
+/// @example html
+/// <div class="bb-padding-box--xs">
+///   Content with xs paddings
+/// </div>
+/// <div class="bb-padding-box--sm">
+///   Content with sm paddings
+/// </div>
+/// <div class="bb-padding-box--md">
+///   Content with md paddings
+/// </div>
+/// <div class="bb-padding-box--lg">
+///   Content with lg paddings
+/// </div>
+/// <div class="bb-padding-box--xl">
+///   Content with xl paddings
+/// </div>
+/// <div class="bb-padding-box-vertical--xs(sm|md|lg|xl)">
+///   Content with only vertical paddings
+/// </div>
+/// <div class="bb-padding-box-horizontal--xs(sm|md|lg|xl)">
+///   Content with only horizontal paddings
+/// </div>
+
+@each $size, $value in $spacing-map {
+  .bb-padding-box--#{$size} {
+    padding: $value;
+  }
+
+  .bb-padding-box-vertical--#{$size} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  .bb-padding-box-horizontal--#{$size} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}

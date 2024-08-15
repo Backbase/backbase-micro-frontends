@@ -1,0 +1,262 @@
+// Global annotations
+////
+/// @group layout-vertical-nav
+/// @access private
+////
+
+$layout-vertical-nav-width: 15rem !default;
+$layout-vertical-nav-separator-width: $border-width !default;
+$layout-vertical-nav-separator-color: $color-neutral-grey !default;
+$layout-vertical-nav-item-color: $color-neutral-black !default;
+$layout-vertical-nav-item-background-color: transparent !default;
+$layout-vertical-nav-item-link-hover-color: $color-primary !default;
+$layout-vertical-nav-item-hover-background-color: $color-neutral-light !default; // TODO: should be lighter, but page background isn't white - design needs to look at this
+$layout-vertical-nav-item-active-color: $color-primary-darkest !default;
+$layout-vertical-nav-item-active-background-color: $color-primary-lightest !default;
+$layout-vertical-nav-collapsed-width: 3.5rem !default;
+$layout-vertical-line-height: $font-size-subtitle * 1.5 !default;
+
+/// @name bb-layout bb-layout__vertical-nav
+/// @example - bb-layout__vertical-nav External link
+/// <ul class="bb-layout__vertical-nav">
+///   <li class="bb-layout__vertical-nav-section">
+///     <a
+///       target="_blank"
+///       href="http://www.backbase.com"
+///       class="bb-layout__vertical-nav-item-link"
+///     >
+///       <div class="bb-layout__vertical-nav-item-icon">
+///         <i class="bb-icon"></i>
+///       </div>
+///       <span class="bb-layout__vertical-nav-item-title">backbase.com</span>
+///     </a>
+///   </li>
+/// </ul>
+
+/// @name bb-layout bb-layout__vertical-nav
+/// @example - bb-layout__vertical-nav One links group
+/// <ul class="bb-layout__vertical-nav">
+///   <li class="bb-layout__vertical-nav-section">
+///     <div class="bb-layout__vertical-nav-header">
+///       <bb-header-ui></bb-header-ui>
+///     </div>
+///     <ul class="bb-layout__vertical-nav">
+///       <li class="bb-layout__vertical-nav-item">
+///         <a class="bb-layout__vertical-nav-item-link">
+///           <div class="bb-layout__vertical-nav-item-icon">
+///             <i class="bb-icon"></i>
+///           </div>
+///           <span class="bb-layout__vertical-nav-item-title"></span>
+///         </a>
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+
+/// @name bb-layout bb-layout__vertical-nav
+/// @example - bb-layout__vertical-nav Multiple link groups
+/// <ul class="bb-layout__vertical-nav">
+///   <li class="bb-layout__vertical-nav-section">
+///     <div class="bb-layout__vertical-nav-header">
+///       <bb-header-ui></bb-header-ui>
+///     </div>
+///     <ul class="bb-layout__vertical-nav">
+///       <li class="bb-layout__vertical-nav-item">
+///         <a class="bb-layout__vertical-nav-item-link">
+///           <div class="bb-layout__vertical-nav-item-icon">
+///             <i class="bb-icon"></i>
+///           </div>
+///           <span class="bb-layout__vertical-nav-item-title"></span>
+///         </a>
+///       </li>
+///     </ul>
+///   </li>
+///   <li class="bb-layout__vertical-nav-separator" role="separator"></li>
+///   <li class="bb-layout__vertical-nav-section">
+///     <div class="bb-layout__vertical-nav-header">
+///       <bb-header-ui></bb-header-ui>
+///     </div>
+///     <ul class="bb-layout__vertical-nav">
+///       <li class="bb-layout__vertical-nav-item">
+///         <a class="bb-layout__vertical-nav-item-link">
+///           <div class="bb-layout__vertical-nav-item-icon">
+///             <i class="bb-icon"></i>
+///           </div>
+///           <span class="bb-layout__vertical-nav-item-title"></span>
+///         </a>
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+
+.bb-layout__vertical-nav {
+  min-width: $layout-vertical-nav-width;
+  max-width: $layout-vertical-nav-width;
+  padding-inline-start: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.bb-layout__vertical-nav-header {
+  padding-block: $sizer-sm;
+  padding-inline: $sizer-md;
+  color: $layout-vertical-nav-header-color;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  text-transform: uppercase;
+
+  .bb-layout__vertical-nav-section + & {
+    margin-block-start: $sizer-md;
+  }
+
+  // Reset heading styles when used within menuHeader link type
+  & h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: inherit;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}
+
+.bb-layout__vertical-nav-separator {
+  height: 0;
+  margin-block: $spacer-md;
+  margin-inline: $spacer-sm;
+  background-color: $layout-vertical-nav-separator-color;
+}
+
+@mixin no-sr() {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  white-space: normal;
+  -webkit-clip-path: none;
+  clip-path: none;
+  line-height: $layout-vertical-line-height;
+}
+
+@mixin bb-layout__vertical-nav--expanded() {
+  .bb-layout__vertical-nav {
+    min-width: $layout-vertical-nav-width;
+    max-width: $layout-vertical-nav-width;
+  }
+
+  .bb-layout__vertical-nav-header {
+    @include no-sr();
+  }
+
+  .bb-layout__vertical-nav-separator {
+    height: 0;
+  }
+}
+
+@mixin bb-layout__vertical-nav--collapsed() {
+  .bb-layout__vertical-nav {
+    min-width: $layout-vertical-nav-collapsed-width;
+    max-width: $layout-vertical-nav-collapsed-width;
+  }
+
+  .bb-layout__vertical-nav-header {
+    @include sr-only;
+  }
+
+  .bb-layout__vertical-nav-separator {
+    height: $layout-vertical-nav-separator-width;
+  }
+}
+
+.bb-layout__vertical-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.bb-layout__vertical-nav-item-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-block: $sizer-sm;
+  padding-inline: $sizer-md;
+  color: $layout-vertical-nav-item-color;
+  line-height: $layout-vertical-line-height;
+  background-color: $layout-vertical-nav-item-background-color;
+  @include border-radius($layout-vertical-nav-item-border-radius);
+
+  &:not(:disabled):not(.disabled):hover {
+    color: initial;
+    text-decoration: none;
+    background-color: $layout-vertical-nav-item-hover-background-color;
+  }
+}
+
+.bb-layout__vertical-nav-section:not(:last-of-type) {
+  margin-block-end: $sizer-xs;
+}
+
+.bb-layout__vertical-nav-item-icon {
+  width: $sizer-lg;
+  margin-inline-end: $spacer-sm;
+}
+
+.bb-layout__vertical-nav-item-title {
+  word-break: break-all; // Fallback; IE does not support break-word
+  word-break: break-word;
+}
+
+.bb-layout__vertical-nav-item-badge {
+  margin-inline-start: $spacer-sm;
+}
+
+.bb-layout__vertical-nav-item-link.bb-layout__vertical-nav-item-link--active {
+  color: $layout-vertical-nav-item-active-color;
+  background-color: $layout-vertical-nav-item-active-background-color;
+
+  .bb-layout__vertical-nav-item-icon {
+    color: $layout-vertical-nav-item-active-color;
+  }
+}
+
+@mixin bb-layout__vertical-nav-item--collapsed() {
+  .bb-layout__vertical-nav-item {
+    position: relative;
+  }
+
+  .bb-layout__vertical-nav-item-icon {
+    margin-inline-end: unset;
+  }
+
+  .bb-layout__vertical-nav-header-title,
+  .bb-layout__vertical-nav-item-title {
+    @include sr-only;
+  }
+
+  .bb-layout__vertical-nav-item-badge {
+    position: absolute;
+    transform: translate(55%, -40%);
+  }
+}
+
+@mixin bb-layout__vertical-nav-item--expanded() {
+  .bb-layout__vertical-nav-item {
+    position: static;
+  }
+
+  .bb-layout__vertical-nav-item-icon {
+    margin-inline-end: $spacer-xs;
+  }
+
+  .bb-layout__vertical-nav-header-title,
+  .bb-layout__vertical-nav-item-title {
+    @include no-sr();
+  }
+
+  .bb-layout__vertical-nav-item-badge {
+    position: static;
+    transform: none;
+  }
+}

@@ -1,0 +1,11 @@
+////
+/// Background colors (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --background-color-neutral: #{$background-color-neutral};
+}
+
+$background-color-neutral: var(--background-color-neutral);

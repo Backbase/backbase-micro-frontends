@@ -1,0 +1,104 @@
+// Global annotations
+////
+/// @group feedback-indicators
+/// @access private
+////
+
+@import "../../../../bootstrap5/scss/alert";
+
+// Bootstrap overrides
+@each $color, $value in $theme-alert-colors {
+  $alert-contrasted-text-color: color-contrast($value);
+
+  .alert-#{$color} {
+    @include alert-variant($value, transparent, $alert-contrasted-text-color);
+
+    .alert-link {
+      color: $alert-contrasted-text-color;
+      font-weight: normal;
+      text-decoration: underline;
+      &:focus {
+        text-decoration: none;
+        outline-width: 3px;
+        outline-style: solid;
+        outline-color: inherit;
+        outline-offset: 1px;
+      }
+    }
+
+    .text-#{$color} {
+      /* stylelint-disable-next-line */
+      color: $alert-contrasted-text-color !important;
+    }
+
+    .bb-icon {
+      color: $alert-contrasted-text-color;
+    }
+
+    .btn-close {
+      @if $color != "warning" {
+        filter: $btn-close-white-filter;
+      }
+    }
+  }
+
+  .alert-warning {
+    color: $color-neutral-darker;
+  }
+}
+
+// Bootstrap override
+.alert-dismissible {
+  padding-right: unset;
+  padding-inline-start: 1rem;
+  padding-inline-end: $alert-dismissible-padding-right;
+
+  .btn-close {
+    position: absolute;
+    right: unset;
+    top: unset;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    padding: $alert-close-padding;
+    font-weight: $alert-dismissible-font-weight;
+    text-shadow: none;
+    opacity: 1;
+
+    &:focus {
+      outline-width: 3px;
+      outline-style: solid;
+      outline-color: inherit;
+      outline-offset: -0.75rem;
+    }
+
+    &:hover {
+      opacity: $btn-close-hover-opacity;
+    }
+  }
+}
+
+// Bootstrap override
+.alert-heading {
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-base;
+}
+
+// Custom classes
+.alert-icon {
+  margin-inline-end: $alert-icon-margin-right;
+}
+
+.alert-body {
+  display: flex;
+}
+
+.alert-content {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  font-size: $font-size-subtitle;
+}
+
+.alert-heading + .alert-description {
+  margin-block-start: $alert-description-margin-top;
+}

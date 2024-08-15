@@ -1,0 +1,125 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+$icon-circle-size-map: (
+  md: $font-icon-circle-size-md,
+  sm: $font-icon-circle-size-sm,
+) !default;
+
+.bicon {
+  @extend .bb-icon;
+
+  &.animate {
+    @extend .bb-icon--animate;
+  }
+
+  @each $size-abbr, $size in $icon-size-map {
+    &.bicon-#{$size-abbr} {
+      @extend .bb-icon--#{$size-abbr};
+    }
+  }
+
+  // Icon background circle sizes
+  @each $size-abbr, $size in $icon-circle-size-map {
+    &.icon-circle-#{$size-abbr} {
+      @extend .bb-icon__background;
+      @extend .bb-icon__background--circle;
+      @extend .bb-icon--#{$size-abbr};
+
+      width: map-get($icon-background-size-map, $size-abbr);
+      height: map-get($icon-background-size-map, $size-abbr);
+      line-height: map-get($icon-background-size-map, $size-abbr);
+    }
+    // Default icon-circle size
+    @if $size-abbr == "md" {
+      &.icon-circle {
+        @extend .bb-icon__background;
+        @extend .bb-icon__background--circle;
+        @extend .bb-icon--md;
+
+        width: map-get($icon-background-size-map, $size-abbr);
+        height: map-get($icon-background-size-map, $size-abbr);
+        line-height: map-get($icon-background-size-map, $size-abbr);
+      }
+    }
+  }
+}
+
+@each $bb-icon-name, $icon-data in $icon-map {
+  @if (type-of($icon-data) == "map" and map_has_key($icon-data, "font-space")) {
+    .bicon-#{$bb-icon-name}::before {
+      @if (str-index("#{$bb-icon-name}", "category")) {
+        content: str-replace(map-get($icon-data, "icon"), "-", "_");
+      } @else {
+        content: map_get($icon-data, "icon");
+      }
+    }
+  }
+
+  @if (str-index("#{$bb-icon-name}", "category")) {
+    .bicon-#{$bb-icon-name} {
+      @extend .bb-icon-#{$bb-icon-name};
+
+      @each $size-abbr, $size in $icon-size-map {
+        &.icon-circle-#{$size-abbr},
+        &.icon-circle {
+          background-color: map-get($icon-data, "color") !important;
+        }
+      }
+    }
+  }
+}
+
+.bicon-arrow-in::before {
+  display: inline-block;
+  transform: rotateX(180deg);
+  content: "reply";
+}
+
+.bicon-arrow-out::before {
+  display: inline-block;
+  transform: rotateY(180deg);
+  content: "reply";
+}
+
+//File Icon generation
+.bicon[class*="bicon-file-"] {
+  position: relative;
+  display: inline-block;
+  width: $file-icon-width;
+  height: $file-icon-height;
+  margin-left: $file-icon-left-margin;
+  color: $icon-contrast-color;
+  font-size: $file-icon-font-size;
+  font-family: $font-family-base;
+  line-height: $file-icon-height;
+  text-align: center;
+  background-color: $file-icon-background-color;
+  border-radius: $file-icon-border-radius;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: $file-icon-fold-size solid;
+    border-top-color: $icon-file-corner-background-color;
+    border-right-color: $icon-file-corner-background-color;
+    border-bottom-color: lighten($file-icon-background-color, 10%);
+    border-left-color: lighten($file-icon-background-color, 10%);
+    border-bottom-left-radius: $file-icon-fold-border-radius;
+    content: "";
+  }
+}
+
+@each $filetype, $map in $file-icon-map {
+  .bicon-file-#{$filetype} {
+    @extend .bb-icon-file-#{$filetype};
+  }
+}
+
+.bicon-file-bb-sepa {
+  @extend .bb-icon-file-bb-sepa;
+}

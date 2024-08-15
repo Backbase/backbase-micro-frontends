@@ -1,0 +1,13 @@
+// Variables provided by Bootstrap
+@use "sass:math";
+
+$badge-font-size: $font-size-subheader !default;
+$badge-font-weight: $font-weight-regular !default;
+$badge-padding-x: $sizer-sm !default;
+$badge-padding-y: $sizer-xs !default;
+$badge-border-radius: $border-radius-xs !default;
+$badge-pill-padding-x: $sizer-sm !default;
+$badge-pill-border-radius: $border-radius-pill !default;
+
+// Variables provided by Backbase
+$badge-line-height: math.div($line-height-base, 1.25) !default;

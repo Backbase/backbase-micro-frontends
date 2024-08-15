@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-fx-rates-pair-info-width: 20rem !default;
+$bb-fx-rates-pair-info-box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.12) !default;
+
+.bb-fx-rates-pair-info {
+  width: $bb-fx-rates-pair-info-width;
+  box-shadow: $bb-fx-rates-pair-info-box-shadow;
+}

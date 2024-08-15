@@ -1,0 +1,143 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$switch-border-radius: 10rem !default;
+$switch-slider-checked-pos-x: 0.25rem !default;
+$switch-height: 1.25rem !default;
+$switch-width: 2.25rem !default;
+$switch-slider-pos-x: 0.1rem !default;
+$switch-slider-pos-y: 0.125rem !default;
+$switch-slider-size: 1rem !default;
+$switch-slider-translate-x: 0.9rem !default;
+$switch-slider-translate-y: 0 !default;
+
+$switch-bg-color: $color-neutral-greyest !default;
+$switch-border-color: $color-neutral-dark !default;
+$switch-checked-bg-color: $color-info !default;
+$switch-checked-border-color: $color-primary !default;
+$switch-slider-bg-color: $color-neutral-white !default;
+$switch-slider-checked-bg-color: $color-neutral-white !default;
+$switch-disabled-bg-color: $color-neutral-grey !default;
+$switch-slider-disabled-bg-color: $color-neutral-grey-light !default;
+$switch-box-shadow: $box-shadow-sm !default;
+
+$switch-font-weight: $font-weight-regular;
+
+/// A checkbox in the form of a toggleable switch.
+///
+/// @name bb-switch-ui
+///
+/// @example html
+///   <div class="bb-switch bb-switch--align-end">
+///     <label class="bb-switch__label">
+///       example
+///     </label>
+///     <bb-input-checkbox-ui class="bb-switch__checkbox visually-hidden visually-hidden-focusable">
+///       <label class="bb-input-checkbox-label">
+///         <input type="checkbox" class="bb-input-checkbox"/>
+///       </label>
+///     </bb-input-checkbox-ui>
+///     <span class="bb-switch__element bb-switch__element--checked bb-switch__element--disabled bb-switch__element--focused">
+///       <span class="bb-switch__slider slider"></span>
+///     </span>
+///   </div>
+
+.bb-switch {
+  display: inline-flex;
+  align-items: center;
+
+  .bb-input-checkbox__input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.bb-switch--align-end {
+  flex-direction: row-reverse;
+
+  .bb-switch__label {
+    margin-inline-end: 0;
+    margin-inline-start: $spacer-sm;
+  }
+}
+
+.bb-switch__element {
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  min-width: $switch-width;
+  height: $switch-height;
+  background-color: $switch-bg-color;
+  border-radius: $switch-border-radius;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+
+  [dir="rtl"] & {
+    transform: rotate(180deg);
+  }
+}
+
+.bb-switch__element--disabled {
+  background-color: $switch-disabled-bg-color;
+  cursor: not-allowed;
+
+  .bb-switch__slider {
+    background-color: $switch-slider-disabled-bg-color;
+  }
+}
+
+.bb-switch__element--checked {
+  background-color: $switch-checked-bg-color;
+  border-color: $switch-checked-border-color;
+
+  //animation instructions
+  .bb-switch__slider {
+    left: $switch-slider-checked-pos-x;
+    background-color: $switch-slider-checked-bg-color;
+    transform: translate($switch-slider-translate-x, $switch-slider-translate-y);
+  }
+}
+
+.bb-switch__element--focused {
+  box-shadow: none;
+  &::before {
+    position: absolute;
+    top: $input-focus-outline-distance - 1px;
+    right: $input-focus-outline-distance - 1px;
+    bottom: $input-focus-outline-distance - 1px;
+    left: $input-focus-outline-distance - 1px;
+    border: $input-focus-border-primary;
+    border-radius: $switch-border-radius;
+    content: "";
+  }
+}
+
+.bb-switch__slider {
+  position: absolute;
+  top: $switch-slider-pos-y;
+  left: $switch-slider-pos-x;
+  width: $switch-slider-size;
+  height: $switch-slider-size;
+  background-color: $switch-slider-bg-color;
+  border-radius: $switch-border-radius;
+  outline: none;
+  box-shadow: $switch-box-shadow;
+
+  //animation setup
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.bb-switch__label {
+  margin-inline-end: $spacer-sm;
+  margin-block-end: 0;
+  font-weight: $switch-font-weight;
+}

@@ -1,0 +1,59 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$entitlement-wizard-configuration-menu-background: $color-neutral-lighter !default;
+$entitlement-wizard-sidemenu-item-padding: $sizer-xl $sizer-md !default;
+$entitlement-wizard-sidemenu-min-width: 250px !default;
+$entitlement-wizard-sidemenu-max-width: 350px !default;
+$entitlement-wizard-configuration-menu-content: $sizer-lg !default;
+
+/// Styles for Entitlements Wizard configuration menu
+///
+/// @name bb-entitlement-wizard-configuration-menu
+///
+/// @example html
+///   <div class="bb-card bb-entitlement-wizard-configuration-menu">
+///     <div class="row">
+///       <div class="col-auto bb-entitlement-wizard-sidemenu">
+///         <div class="bb-entitlement-wizard-sidemenu__item">...</div>
+///         ...
+///       </div>
+///       <div class="col bb-entitlement-wizard-configuration-menu-content">
+///         <div class="bb-entitlement-wizard-configuration-menu-content__inner">
+///           ...
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-entitlement-wizard-configuration-menu {
+  overflow: hidden;
+}
+
+.bb-entitlement-wizard-sidemenu {
+  min-width: $entitlement-wizard-sidemenu-min-width;
+  max-width: $entitlement-wizard-sidemenu-max-width;
+  padding-right: 0;
+}
+
+.bb-entitlement-wizard-sidemenu__item {
+  padding: $entitlement-wizard-sidemenu-item-padding;
+}
+
+.bb-entitlement-wizard-sidemenu__item--selected {
+  background: $entitlement-wizard-configuration-menu-background;
+}
+
+.bb-entitlement-wizard-configuration-menu-content {
+  padding: $entitlement-wizard-configuration-menu-content;
+  background: $entitlement-wizard-configuration-menu-background;
+}
+
+.bb-entitlement-wizard-configuration-menu-content__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

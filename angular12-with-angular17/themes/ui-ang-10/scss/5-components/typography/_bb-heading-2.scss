@@ -1,0 +1,37 @@
+// Global annotations
+////
+/// @group typography
+/// @access private
+////
+
+$h2-font-family: null !default;
+$h2-font-size: $font-size-h2 !default; // 24px
+$h2-line-height: $line-height-heading !default;
+$h2-font-weight: $font-weight-bold !default;
+$h2-color: null !default;
+
+/// Will set the following css properties on an HTML element:
+/// - font-family: only if it is provided in presets,
+/// - color: only if it is provided in presets,
+/// - font-weight,
+/// - font-size,
+/// - line-height
+///
+/// @name bb-heading-2
+///
+/// @example html
+///   <div class="bb-heading-2">Heading-2 text here</div>
+
+.bb-heading-2 {
+  @if $h2-font-family {
+    font-family: $h2-font-family;
+  }
+
+  @if $h2-color {
+    color: $h2-color;
+  }
+
+  font-weight: $h2-font-weight;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}

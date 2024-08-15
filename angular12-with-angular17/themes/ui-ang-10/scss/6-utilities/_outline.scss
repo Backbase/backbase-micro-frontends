@@ -1,0 +1,38 @@
+// Global annotations
+////
+/// @group utilities
+/// @access private
+////
+
+$bb-outline-spacer: 4px;
+
+// it's a fix for clipped outline on focused elements inside block with `overflow: auto;`
+.bb-outline-spacer {
+}
+
+.bb-outline-spacer--top {
+  margin-block-start: -$bb-outline-spacer;
+  padding-block-start: $bb-outline-spacer;
+}
+
+.bb-outline-spacer--left {
+  margin-inline-start: -$bb-outline-spacer;
+  padding-inline-start: $bb-outline-spacer;
+}
+
+.bb-outline-spacer--right {
+  margin-inline-end: -$bb-outline-spacer;
+  padding-inline-end: $bb-outline-spacer;
+}
+
+.bb-outline-spacer--bottom {
+  margin-block-end: -$bb-outline-spacer;
+  padding-block-end: $bb-outline-spacer;
+}
+
+.bb-outline-spacer--all {
+  @extend .bb-outline-spacer--top;
+  @extend .bb-outline-spacer--right;
+  @extend .bb-outline-spacer--bottom;
+  @extend .bb-outline-spacer--left;
+}

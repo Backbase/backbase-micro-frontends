@@ -1,0 +1,118 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$product-item-card-height: $sizer * 12 !default;
+$product-item-card-height-sm: $sizer * 10.5 !default;
+$product-item-card-kind-color: $color-neutral-dark !default;
+$product-item-card-kind-text-font-size: $font-size-subheader !default;
+$product-item-card-account-number-font-size: $font-size-subtitle !default;
+$product-item-card-account-number-color: $color-neutral-dark !default;
+$product-item-card-alias-font-size: $font-size-subtitle !default;
+$product-item-card-balance-secondary-font-size: $font-size-subtitle !default;
+$product-item-card-balance-secondary-color: $color-neutral-dark !default;
+
+/// @name bb-product-item-card
+///
+/// @example html
+///   <div class="bb-product-item-card">
+///     <div class="bb-product-item-card__header">
+///       <div class="bb-product-item-card__kind">
+///         <i class="bb-product-item-card__kind-icon bb-icon bb-icon-favorite"></i>
+///         <span class="bb-text-bold bb-product-item-card__kind-text">Product kind name</span>
+///       </div>
+///       <div class="bb-product-item-card__buttons">
+///         <button class="bb-product-item-card__favorite"></button>
+///       </div>
+///     </div>
+///     <div class="bb-product-item-card__body">
+///       <div>
+///         <div>
+///           <div class="bb-product-item-card__name">Name</div>
+///           <div class="bb-product-item-card__alias">My credit card</div>
+///         </div>
+///         <div class="bb-account-info__product-number">
+///           NL01 INGB 1234567890
+///         </div>
+///       </div>
+///       <div class="bb-product-item-card__balance">
+///         <span class="bb-amount">
+///           EUR 123
+///         </span>
+///         <div>
+///           <span class="bb-amount bb-subtitle bb-product-item-card__balance-secondary">
+///             EUR 345
+///           </span>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+
+.bb-product-item-card {
+  display: flex;
+  flex-direction: column;
+  height: $product-item-card-height;
+
+  &.bb-product-item-card--sm {
+    min-height: $product-item-card-height-sm;
+    height: 100%;
+  }
+}
+
+.bb-product-item-card__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacer-sm;
+}
+
+.bb-product-item-card__kind {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bb-product-item-card__kind-icon {
+  margin-right: $spacer-sm;
+}
+
+.bb-product-item-card__kind-text {
+  @include text-truncate();
+  color: $product-item-card-kind-color;
+  font-size: $product-item-card-kind-text-font-size;
+}
+
+.bb-product-item-card__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.bb-product-item-card__favorite {
+  margin-right: $spacer-sm;
+}
+
+.bb-product-item-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.bb-product-item-card__name {
+  margin-bottom: $spacer-xs;
+}
+
+.bb-product-item-card__alias {
+  margin-bottom: $spacer-xs;
+  color: $product-item-card-account-number-color;
+  font-size: $product-item-card-alias-font-size;
+}
+
+.bb-product-item-card__balance {
+  text-align: right;
+}
+
+.bb-product-item-card__balance-secondary {
+  color: $product-item-card-balance-secondary-color;
+}

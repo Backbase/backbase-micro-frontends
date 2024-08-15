@@ -1,0 +1,24 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access public
+////
+
+// Configure the vertical spacing for cut off time container
+$positive-pay-cut-off-time-offset-top: 35% !default;
+
+/// @example html
+// <div class="bb-exception-action-bar">
+//   <div class="bb-exception-action-bar__cut-off-time">
+//     <span class="bb-subtitle bb-text-support bb-text-semi-bold">Cut-off at 3:30 PM(PDT)</span>
+// </div>
+
+.bb-exception-action-bar {
+  position: relative;
+}
+.bb-exception-action-bar__cut-off-time {
+  position: absolute;
+  inset-inline-end: 0;
+  writing-mode: horizontal-tb;
+  transform: translateY($positive-pay-cut-off-time-offset-top);
+}

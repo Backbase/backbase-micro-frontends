@@ -1,0 +1,19 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+.table-responsive table tbody td.sweep-status-mobile-position {
+  @include media-breakpoint-down(xl) {
+    text-align: right;
+  }
+}
+
+.bb-cash-management-sweep-list-container {
+  min-height: 400px;
+
+  @include media-breakpoint-down(md) {
+    min-height: 300px;
+  }
+}

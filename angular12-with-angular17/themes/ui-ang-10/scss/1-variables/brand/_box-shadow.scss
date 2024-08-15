@@ -1,0 +1,120 @@
+////
+/// Shadows (global)
+/// @group 1-variables/brand/box-shadow
+/// @access public
+////
+
+/// Configures the horizontal position of Small shadows
+/// Used to compose $box-shadow-sm
+$box-shadow-sm-offset-x: 0px !default;
+
+/// Configures the vertical position of Small shadows
+/// Used to compose $box-shadow-sm
+$box-shadow-sm-offset-y: 4px !default;
+
+/// Configures the blur radius for Small shadows
+/// Used to compose $box-shadow-sm
+$box-shadow-sm-blur-radius: 9px !default;
+
+/// Configures the spread radius for Small shadows
+/// Used to compose $box-shadow-sm
+$box-shadow-sm-spread-radius: 0px !default;
+
+/// Configures the color for Small shadows
+/// Used to compose $box-shadow-sm
+$box-shadow-sm-color: rgba(16, 47, 67, 0.12) !default;
+
+/// Small shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+$box-shadow-sm: $box-shadow-sm-offset-x $box-shadow-sm-offset-y $box-shadow-sm-blur-radius
+  $box-shadow-sm-spread-radius $box-shadow-sm-color;
+
+/// Configures the horizontal position of Medium shadows
+/// Used to compose $box-shadow-md
+$box-shadow-md-offset-x: 0px !default;
+
+/// Configures the vertical position of Medium shadows
+/// Used to compose $box-shadow-md
+$box-shadow-md-offset-y: 8px !default;
+
+/// Configures the blur radius for Medium shadows
+/// Used to compose $box-shadow-md
+$box-shadow-md-blur-radius: 16px !default;
+
+/// Configures the spread radius for Medium shadows
+/// Used to compose $box-shadow-md
+$box-shadow-md-spread-radius: 0px !default;
+
+/// Configures the color for Medium shadows
+/// Used to compose $box-shadow-md
+$box-shadow-md-color: rgba(16, 47, 67, 0.1) !default;
+
+/// Medium shadow - the default for shadows (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $box-shadow-md-offset-x
+/// @require {variable} $box-shadow-md-offset-y
+/// @require {variable} $box-shadow-md-blur-radius
+/// @require {variable} $box-shadow-md-spread-radius
+/// @require {variable} $box-shadow-md-color
+$box-shadow-md: $box-shadow-md-offset-x $box-shadow-md-offset-y $box-shadow-md-blur-radius
+  $box-shadow-md-spread-radius $box-shadow-md-color;
+
+/// Configures the horizontal position of Large shadows
+/// Used to compose $box-shadow-lg
+$box-shadow-lg-offset-x: 0px !default;
+
+/// Configures the vertical position of Large shadows
+/// Used to compose $box-shadow-lg
+$box-shadow-lg-offset-y: 15px !default;
+
+/// Configures the blur radius for Large shadows
+/// Used to compose $box-shadow-lg
+$box-shadow-lg-blur-radius: 20px !default;
+
+/// Configures the spread radius for Large shadows
+/// Used to compose $box-shadow-lg
+$box-shadow-lg-spread-radius: 0px !default;
+
+/// Configures the color for Large shadows
+/// Used to compose $box-shadow-lg
+$box-shadow-lg-color: rgba(16, 47, 67, 0.1) !default;
+
+/// Large shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $box-shadow-lg-offset-x
+/// @require {variable} $box-shadow-lg-offset-y
+/// @require {variable} $box-shadow-lg-blur-radius
+/// @require {variable} $box-shadow-lg-spread-radius
+/// @require {variable} $box-shadow-lg-color
+$box-shadow-lg: $box-shadow-lg-offset-x $box-shadow-lg-offset-y $box-shadow-lg-blur-radius
+  $box-shadow-lg-spread-radius $box-shadow-lg-color;
+
+/// Configures the horizontal position of Exta Large shadows
+/// Used to compose $box-shadow-xl
+$box-shadow-xl-offset-x: 0px !default;
+
+/// Configures the vertical position of Exta Large shadows
+/// Used to compose $box-shadow-xl
+$box-shadow-xl-offset-y: 48px !default;
+
+/// Configures the blur radius for Exta Large shadows
+/// Used to compose $box-shadow-xl
+$box-shadow-xl-blur-radius: 56px !default;
+
+/// Configures the spread radius for Exta Large shadows
+/// Used to compose $box-shadow-xl
+$box-shadow-xl-spread-radius: 0px !default;
+
+/// Configures the color for Exta Large shadows
+/// Used to compose $box-shadow-xl
+$box-shadow-xl-color: rgba(16, 47, 67, 0.24) !default;
+
+/// Exta Large shadow (read-only)
+/// Composed of the separate shadow properties: offset-x, offset-y, blur-radius, spread-radius and color
+/// @require {variable} $box-shadow-xl-offset-x
+/// @require {variable} $box-shadow-xl-offset-y
+/// @require {variable} $box-shadow-xl-blur-radius
+/// @require {variable} $box-shadow-xl-spread-radius
+/// @require {variable} $box-shadow-xl-color
+$box-shadow-xl: $box-shadow-xl-offset-x $box-shadow-xl-offset-y $box-shadow-xl-blur-radius
+  $box-shadow-xl-spread-radius $box-shadow-xl-color;

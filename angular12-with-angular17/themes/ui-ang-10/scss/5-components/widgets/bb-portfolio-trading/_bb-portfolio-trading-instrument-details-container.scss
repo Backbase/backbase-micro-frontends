@@ -1,0 +1,24 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-portfolio-trading__right-sticky-panel {
+  position: sticky;
+  width: 360px;
+  top: 10%;
+}
+
+.bb-chip {
+  &.bb-chip--plus {
+    border: 1px solid $color-success;
+    color: $color-success;
+    background-color: $color-success-lightest;
+  }
+
+  &.bb-chip--value {
+    border: 1px solid $color-info;
+    color: $color-info;
+  }
+}

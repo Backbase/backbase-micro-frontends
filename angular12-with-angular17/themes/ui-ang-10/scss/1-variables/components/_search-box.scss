@@ -1,0 +1,37 @@
+////
+/// Search-box
+/// @group 1-variables/components/search-box
+/// @access public
+////
+
+/// Configures the border-radius for the search box
+/// @require {variable} $border-radius-pill
+$search-box-border-radius: $border-radius-pill !default;
+
+/// Configures the boxshadow for the .bb-search-box. Defaults to $input-box-shadow
+/// @require {variable} $input-box-shadow
+$search-box-box-shadow: $input-box-shadow !default;
+
+/// Configures the horizontal padding for the search box
+/// @require {variable} $spacer-xs
+$search-box-padding-horizontal: $spacer-xs !default;
+
+/// Configures the horizontal padding for the search box button
+/// @require {variable} $spacer-md
+$search-box-button-padding-horizontal: $spacer-md !default;
+
+/// Configures the border for search-box. Defaults to $input-border
+/// @require {variable} $input-border
+$search-box-border: $input-border !default;
+
+/// Configures the color of the search-box buttons
+/// @require {variable} $color-neutral-dark
+$search-box-button-color: $color-neutral-dark !default;
+
+/// Configures the background-color of the search box buttons
+/// @require {variable} $color-neutral-white
+$search-box-button-background-color: $color-neutral-white !default;
+
+/// Configures the distance(top bottom left right) of the border from the element on focus (experimental)
+/// @require {variable} $focus-outline-distance
+$search-focus-outline-distance: $focus-outline-distance !default;

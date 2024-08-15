@@ -1,0 +1,91 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$bb-account-group-item-padding: $sizer * 0.25 !default;
+$bb-account-group-item-card-height: 100% !default;
+$bb-payee-group-item-padding: $sizer * 0.25 !default;
+$bb-payee-group-item-card-height: 100% !default;
+$bb-payee-group-item-card-item-padding: $sizer * 0.5 !default;
+$bb-payee-group-item-card-item-border: 1px solid $color-neutral-white !default;
+
+/// Styles for Linked Account Group to Payee Group
+/// This component shows Linked Account Group to Payee Group.
+///
+/// @name bb-bb-payee-side-menu-item
+///
+/// @example html
+///<div class="row">
+///   <div class="col-8 bb-account-group-item">
+///     <div class="card bb-account-group-item__card">
+///       <div class="card-body">
+///       </div>
+///     </div>
+///   </div>
+///   <div class="bb-linked-item">
+///     <div class="bb-linked-item__icon">
+///     </div>
+///   </div>
+///   <div class="col-4 bb-payee-group-item">
+///     <div class="card bb-payee-group-item__card">
+///       <div class="card-body">
+///       </div>
+///     </div>
+///   </div>
+///</div>
+
+.bb-account-group-item {
+  padding: $bb-account-group-item-padding;
+}
+
+.bb-account-group-item__card {
+  height: $bb-account-group-item-card-height;
+  background-color: $color-neutral-light;
+}
+
+.bb-payee-group-item {
+  padding: $bb-payee-group-item-padding;
+  color: $color-neutral-white;
+}
+
+.bb-payee-group-item__card {
+  height: $bb-payee-group-item-card-height;
+  background-color: $color-primary;
+}
+
+.bb-account-group-item__card__item {
+  padding: $bb-account-group-item-padding;
+}
+
+.bb-account-group-item__card__item--active {
+  background-color: $color-primary-lightest;
+}
+
+.bb-payee-group-item__card__item {
+  padding: $bb-payee-group-item-card-item-padding;
+  border: $bb-payee-group-item-card-item-border;
+  cursor: pointer;
+}
+
+.bb-account-group-item__card__item--link {
+  cursor: pointer;
+}
+
+.bb-linked-item {
+  position: relative;
+}
+
+.bb-linked-item__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  i {
+    color: $color-primary;
+    background-color: $color-neutral-white;
+  }
+}

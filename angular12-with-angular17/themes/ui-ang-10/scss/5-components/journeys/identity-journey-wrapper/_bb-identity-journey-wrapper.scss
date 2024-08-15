@@ -1,0 +1,67 @@
+// Global annotations
+////
+/// @group journeys
+/// @access private
+////
+
+$identity-journey-images-path: "../../../../assets/images";
+
+/// Styles for sample Identity journey wrapper component
+/// This component displays a UI that aligns with backbase default identity login UI.
+///
+/// @name bb-identity-journey
+///
+/// @example html
+/// <div class="bb-identity-journey__container">
+///   <div class="bb-identity-journey__background-container">
+///     <div class="bb-identity-journey__background" aria-hidden="true"></div>
+///   </div>
+///   <div class="bb-identity-journey__body-container">
+///     <div class="container container--fixed-width-small bb-identity-journey__body">
+///       <router-outlet></router-outlet>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-identity-journey__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bb-identity-journey__background-container {
+  width: 50%;
+  height: 100%;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.bb-identity-journey__background {
+  width: 100%;
+  height: 100%;
+  background-image: url(#{$identity-journey-images-path}/identity-login-background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.bb-identity-journey__body-container {
+  width: 100%;
+  height: 100%;
+  padding: $spacer-md;
+  overflow: auto;
+  background-color: $color-neutral-white;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    width: 50%;
+    padding: $spacer-xl;
+  }
+}
+
+.bb-identity-journey__body {
+  margin: auto;
+}

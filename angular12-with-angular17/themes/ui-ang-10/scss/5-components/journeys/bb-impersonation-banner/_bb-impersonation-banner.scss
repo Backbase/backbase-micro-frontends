@@ -1,0 +1,81 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access public
+////
+
+/// Configure the spacing to move other content when displaying the banner
+$impersonation-banner-spacing: 4rem !default;
+
+/// Styles for adjusting layout when impersonation banner is displayed.
+/// Impersonation banner should be the topmost element within the layout, sitting above
+/// the topbar. This means that any layout elements below should adjust their position
+/// to compensate.
+///
+/// @name bb-impersonation-banner
+/// @example html
+///  <body class="impersonated">
+///    <div class="bb-layout">
+///      ...
+///      <bb-impersonation-banner></bb-impersonation-banner>
+///      ...
+///      <div class="bb-layout__topbar">
+///        ...
+///      </div>
+///      ...
+///    </div>
+///    ...
+///  </body>
+
+.impersonated bb-impersonation-banner {
+  display: block;
+  height: $impersonation-banner-spacing;
+}
+
+bb-impersonation-banner-layout {
+  position: fixed;
+  z-index: $zindex-sticky;
+  display: block;
+  width: 100%;
+  top: 0;
+}
+
+.impersonated .bb-layout__topbar {
+  top: $impersonation-banner-spacing;
+}
+
+/// Any example using a vertical nav should add extra adjustments to account
+/// for the impersonation banner.
+///
+/// @example html
+///  <body class="impersonated">
+///    <div class="bb-layout bb-layout--vertical-nav">
+///      ...
+///      <bb-impersonation-banner></bb-impersonation-banner>
+///      ...
+///      <div class="bb-layout__topbar">
+///        ...
+///      </div>
+///      ...
+///    </div>
+///    ...
+///  </body>
+
+.impersonated .bb-layout--vertical-nav {
+  padding-top: $layout-vertical-topbar-height + 2 * $layout-vertical-lg-topbar-padding +
+    $impersonation-banner-spacing;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: $layout-vertical-topbar-height + 2 * $layout-vertical-md-topbar-padding +
+      $impersonation-banner-spacing;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: $layout-vertical-topbar-height + 2 * $layout-vertical-sm-topbar-padding +
+      $impersonation-banner-spacing;
+  }
+}
+
+.impersonated .bb-layout--vertical-nav .bb-layout__sidebar {
+  margin-top: $impersonation-banner-spacing;
+}

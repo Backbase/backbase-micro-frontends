@@ -1,0 +1,46 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$payord-debit-manage-list-td-padding: $sizer-md !default;
+$payord-debit-manage-list-item-padding: $sizer-md !default;
+$payord-debit-manage-list-item-margin: $spacer-md !default;
+
+/// Styles for Payment Order Debit Manage List widget
+///
+/// @name bb-payord-debit-manage-list
+///
+/// @example html - widget skeleton
+///   <div class="bb-payord-debit-manage-list">
+///     <table>
+///       <tbody>
+///         <tr>
+///           <td class="bb-payord-debit-manage-list__td"></td>
+///         </tr>
+///       </tbody>
+///     </table>
+///     <div class="bb-list">
+///       <div class="bb-list__item bb-payord-debit-manage-list__item">
+///         <div class="bb-payord-debit-manage-list__header"></div>
+///       </div>
+///     </div>
+///   </div>
+.bb-payord-debit-manage-list {
+  // Need higher selector specificity to overwrite bootstrap/ui-ang style
+  .bb-payord-debit-manage-list__td {
+    padding-top: $payord-debit-manage-list-td-padding;
+    padding-bottom: $payord-debit-manage-list-td-padding;
+  }
+
+  .bb-payord-debit-manage-list__item {
+    margin-bottom: $payord-debit-manage-list-item-margin;
+    padding-bottom: $payord-debit-manage-list-item-padding;
+  }
+}
+
+.bb-payord-debit-manage-list__header {
+  padding-right: 0;
+  padding-left: 0;
+}

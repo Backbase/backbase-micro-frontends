@@ -1,0 +1,37 @@
+////
+/// Pagination (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --pagination-padding-horizontal: #{$pagination-padding-horizontal};
+  --pagination-padding-vertical: #{$pagination-padding-vertical};
+  --pagination-line-height: #{$pagination-line-height};
+  --pagination-border-width: #{$pagination-border-width};
+  --pagination-border-radius: #{$pagination-border-radius};
+  --pagination-border-color: #{$pagination-border-color};
+  --pagination-color: #{$pagination-color};
+  --pagination-background-color: #{$pagination-background-color};
+  --pagination-disabled-background-color: #{$pagination-disabled-background-color};
+  --pagination-disabled-border-color: #{$pagination-disabled-border-color};
+  --pagination-disabled-color: #{$pagination-disabled-color};
+  --pagination-active-background-color: #{$pagination-active-background-color};
+  --pagination-active-border-color: #{$pagination-active-border-color};
+  --pagination-active-color: #{$pagination-active-color};
+}
+
+$pagination-padding-horizontal: var(--pagination-padding-horizontal);
+$pagination-padding-vertical: var(--pagination-padding-vertical);
+$pagination-line-height: var(--pagination-line-height);
+$pagination-border-width: var(--pagination-border-width);
+$pagination-border-radius: var(--pagination-border-radius);
+$pagination-border-color: var(--pagination-border-color);
+$pagination-color: var(--pagination-color);
+$pagination-background-color: var(--pagination-background-color);
+$pagination-disabled-background-color: var(--pagination-disabled-background-color);
+$pagination-disabled-border-color: var(--pagination-disabled-border-color);
+$pagination-disabled-color: var(--pagination-disabled-color);
+$pagination-active-background-color: var(--pagination-active-background-color);
+$pagination-active-border-color: var(--pagination-active-border-color);
+$pagination-active-color: var(--pagination-active-color);

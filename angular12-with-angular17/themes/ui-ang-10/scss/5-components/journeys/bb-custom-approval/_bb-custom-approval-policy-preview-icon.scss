@@ -1,0 +1,15 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+.custom-approval-policy-preview-icon {
+  display: flex;
+  width: $sizer-xxxl;
+  height: $sizer-xxxl;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-neutral-lightest;
+  border-radius: $border-radius-sm;
+}

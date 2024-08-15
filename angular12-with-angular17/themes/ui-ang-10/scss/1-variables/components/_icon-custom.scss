@@ -1,0 +1,443 @@
+////
+/// Custom icons (global)
+/// @group 1-variables/components/icon-custom
+/// @access private
+////
+
+@import "icon-map";
+
+/// Configures the custom-category icon color
+/// @access public
+$icon-custom-category-color: $color-primary-lightest !default;
+
+/// Used to merge into $icon-map
+$delivery-tracker-steps-list: (
+  ("ordered", "check"),
+  ("processed", "assignment"),
+  ("in-transit", "local_shipping"),
+  ("delivered", "home")
+);
+
+// if icon map prop exists, retrieve prop value,
+// map-merge delivery tracker step's prop:value to $icon-map, if icon prop exists
+@each $name, $icon in $delivery-tracker-steps-list {
+  @if $icon {
+    $icon-map: map-merge(
+      $icon-map,
+      (
+        "delivery-tracker__step--#{$name}": (
+          icon: $icon,
+        ),
+      )
+    );
+  }
+}
+
+$transaction-types-list: (
+  ("atm", "atm"),
+  ("ach", "phonelink"),
+  ("bill-payment", "description"),
+  ("cash", "attach-money"),
+  ("fee", "monetization-on"),
+  ("deposit", "money"),
+  ("withdrawal", "local-atm"),
+  ("cheques", "featured-play-list"),
+  ("pos", "local-offer"),
+  ("credit-debit-card", "payment"),
+  ("default", "swap-horiz")
+);
+
+@each $name, $icon in $transaction-types-list {
+  @if $icon {
+    $icon-map: map-merge(
+      $icon-map,
+      (
+        "transaction-type-#{$name}": (
+          icon: $icon,
+          color: $icon-custom-category-color,
+        ),
+      )
+    );
+  }
+}
+
+$icon-map: map-merge(
+  $icon-map,
+  (
+    "credit-debit-indicator-incoming": (
+      icon: "call-received",
+      color: $icon-custom-category-color,
+    ),
+  )
+);
+
+$icon-map: map-merge(
+  $icon-map,
+  (
+    "credit-debit-indicator-outgoing": (
+      icon: "call-made",
+      color: $icon-custom-category-color,
+    ),
+  )
+);
+
+// merges into $icon-map
+// this is kept because of backwards compatibility
+$deprecated-category-list: (
+  ("mortgage", "bicon-home", $icon-custom-category-color),
+  ("rent", "bicon-home", $icon-custom-category-color),
+  ("beauty", "bicon-favorite", $icon-custom-category-color),
+  ("alcohol-bars", "bicon-restaurant", $icon-custom-category-color),
+  ("fast-food", "bicon-restaurant", $icon-custom-category-color),
+  ("groceries", "bicon-shopping-basket", $icon-custom-category-color),
+  ("restaurants", "bicon-restaurant", $icon-custom-category-color),
+  ("car", "bicon-directions-car", $icon-custom-category-color),
+  ("public-transport", "bicon-directions-car", $icon-custom-category-color),
+  ("clothing", "bicon-shopping-cart", $icon-custom-category-color),
+  ("electronics", "bicon-devices", $icon-custom-category-color),
+  ("internet", "bicon-description", $icon-custom-category-color),
+  ("mobile-phone", "bicon-description", $icon-custom-category-color),
+  ("utilities", "bicon-receipt", $icon-custom-category-color),
+  ("bonus", "bicon-add-box", $icon-custom-category-color),
+  ("salary-wages", "bicon-add-box", $icon-custom-category-color),
+  ("interest-income", "bicon-toll", $icon-custom-category-color),
+  ("rental-income", "bicon-toll", $icon-custom-category-color)
+);
+
+$category-list: (
+  ("advertising", "bicon-campaign", $icon-custom-category-color),
+  ("atm-cash-withdrawals", "bicon-atm", $icon-custom-category-color),
+  ("automotive-expenses", "bicon-commute", $icon-custom-category-color),
+  ("auto-transport", "bicon-commute", $icon-custom-category-color),
+  ("bills-utilities", "bicon-receipt", $icon-custom-category-color),
+  ("business-miscellaneous", "bicon-work", $icon-custom-category-color),
+  ("business-services", "bicon-business-center", $icon-custom-category-color),
+  ("cable-satellite-services", "bicon-online-prediction", $icon-custom-category-color),
+  ("charitable-giving", "bicon-favorite", $icon-custom-category-color),
+  ("checks", "bicon-featured-play-list", $icon-custom-category-color),
+  ("child-dependent-expenses", "bicon-escalator-warning", $icon-custom-category-color),
+  ("clothing-shoes", "bicon-checkroom", $icon-custom-category-color),
+  ("credit-card-payments", "bicon-credit-card", $icon-custom-category-color),
+  ("consulting", "bicon-portrait", $icon-custom-category-color),
+  ("deposits", "bicon-get-app", $icon-custom-category-color),
+  ("dues-and-subscriptions", "bicon-repeat", $icon-custom-category-color),
+  ("education", "bicon-school", $icon-custom-category-color),
+  ("entertainment", "bicon-local-activity", $icon-custom-category-color),
+  ("expense-reimbursement", "bicon-rotate-left", $icon-custom-category-color),
+  ("food-dining", "bicon-fastfood", $icon-custom-category-color),
+  ("fees-charges", "bicon-money", $icon-custom-category-color),
+  ("financial", "bicon-attach-money", $icon-custom-category-color),
+  ("gasoline-fuel", "bicon-invert-colors", $icon-custom-category-color),
+  ("general-merchandise", "bicon-storefront", $icon-custom-category-color),
+  ("gifts", "bicon-redeem", $icon-custom-category-color),
+  ("gifts-donations", "bicon-card-giftcard", $icon-custom-category-color),
+  ("healthcare-medical", "bicon-medical-services", $icon-custom-category-color),
+  ("health-fitness", "bicon-favorite-border", $icon-custom-category-color),
+  ("hobbies", "bicon-mood", $icon-custom-category-color),
+  ("home", "bicon-home", $icon-custom-category-color),
+  ("home-improvement", "bicon-format-paint", $icon-custom-category-color),
+  ("home-maintenance", "bicon-handyman", $icon-custom-category-color),
+  ("income", "bicon-add-box", $icon-custom-category-color),
+  ("interest", "bicon-all-inclusive", $icon-custom-category-color),
+  ("investments", "bicon-local-florist", $icon-custom-category-color),
+  ("investment-income", "bicon-grass", $icon-custom-category-color),
+  ("kids", "bicon-child-care", $icon-custom-category-color),
+  ("loans", "bicon-hourglass-empty", $icon-custom-category-color),
+  ("mortgages", "bicon-account-balance", $icon-custom-category-color),
+  ("office-maintenance", "bicon-build", $icon-custom-category-color),
+  ("office-supplies", "bicon-file-copy", $icon-custom-category-color),
+  ("online-services", "bicon-router", $icon-custom-category-color),
+  ("other-bills", "bicon-text-snippet", $icon-custom-category-color),
+  ("other-expenses", "bicon-payments", $icon-custom-category-color),
+  ("paychecks-salary", "bicon-attach-money", $icon-custom-category-color),
+  ("personal-care", "bicon-spa", $icon-custom-category-color),
+  ("pets", "bicon-pets", $icon-custom-category-color),
+  ("pets-pet-care", "bicon-pets", $icon-custom-category-color),
+  ("postage-and-shipping ", "bicon-mail", $icon-custom-category-color),
+  ("printing", "bicon-print", $icon-custom-category-color),
+  ("refunds-adjustments", "bicon-system-update-alt", $icon-custom-category-color),
+  ("retirement-contributions", "bicon-support", $icon-custom-category-color),
+  ("retirement-income", "bicon-beach-access", $icon-custom-category-color),
+  ("rewards", "bicon-star", $icon-custom-category-color),
+  ("restaurants-dining", "bicon-restaurant", $icon-custom-category-color),
+  ("savings", "bicon-paid", $icon-custom-category-color),
+  ("securities-trades", "bicon-stacked-line-chart", $icon-custom-category-color),
+  ("shopping", "bicon-shopping-cart", $icon-custom-category-color),
+  ("telephone-services", "bicon-call", $icon-custom-category-color),
+  ("transfer", "bicon-swap-horiz", $icon-custom-category-color),
+  ("transfers", "bicon-swap-horiz", $icon-custom-category-color),
+  ("travel", "bicon-flight", $icon-custom-category-color),
+  ("upcoming-transactions", "bicon-insert-invitation", $icon-custom-category-color),
+  ("uncategorised", "bicon-help-outline", $icon-custom-category-color),
+  ("uncategorized", "bicon-help-outline", $icon-custom-category-color),
+  ("pending", "bicon-access-time", $icon-custom-category-color),
+  ("equipment-and-materials", "bicon-build", $icon-custom-category-color),
+  ("financials", "bicon-attach-money", $icon-custom-category-color),
+  ("human-resources", "bicon-users", $icon-custom-category-color),
+  ("insurance", "bicon-verified-user", $icon-custom-category-color),
+  ("real-estate", "bicon-business", $icon-custom-category-color),
+  ("sales", "bicon-record-voice-over", $icon-custom-category-color),
+  ("services", "bicon-miscellaneous-services", $icon-custom-category-color),
+  ("service-charges-fees", "bicon-control-point-duplicate", $icon-custom-category-color),
+  ("taxes", "bicon-request-quote", $icon-custom-category-color),
+  ("transport", "bicon-commute", $icon-custom-category-color),
+  ("wages-paid", "bicon-unarchive", $icon-custom-category-color)
+);
+
+$category-list: join($category-list, $deprecated-category-list);
+
+// Retail Banking categories for dount chart
+$retail-category-list: (
+  ("income", "bicon-add-box", $icon-custom-category-color, $chart-color-1),
+  ("home", "bicon-home", $icon-custom-category-color, $chart-color-2),
+  ("transfers", "bicon-swap-horiz", $icon-custom-category-color, $chart-color-3),
+  ("shopping", "bicon-shopping-cart", $icon-custom-category-color, $chart-color-4),
+  ("uncategorised", "bicon-help-outline", $icon-custom-category-color, $chart-color-5),
+  ("uncategorized", "bicon-help-outline", $icon-custom-category-color, $chart-color-5),
+  ("transportation", "bicon-directions-car", $icon-custom-category-color, $chart-color-6),
+  ("bills-utilities", "bicon-description", $icon-custom-category-color, $chart-color-7),
+  ("hobbies-entertainment", "bicon-local-play", $icon-custom-category-color, $chart-color-8),
+  ("health-beauty", "bicon-favorite", $icon-custom-category-color, $chart-color-9),
+  ("food-drinks", "bicon-restaurant", $icon-custom-category-color, $chart-color-10),
+  ("other-income", "bicon-bubble-chart", $icon-custom-category-color),
+  ("other-categories", "bicon-category", $icon-custom-category-color, $color-secondary-darkest)
+);
+
+$category-list: join($category-list, $retail-category-list);
+
+// Business banking categories
+$business-category-list: (
+  ("suppliers", false, $chart-color-2),
+  ("salaries", false, $chart-color-1-lighter),
+  ("office-rent", false, $chart-color-10-darker),
+  ("loan-repayment", false, $chart-color-1),
+  ("miscellaneous", false, $chart-color-10),
+  ("intercompany-receivable", false, $chart-color-4),
+  ("term-deposit", false, $chart-color-1),
+  ("direct-debit-collections", false, $chart-color-6),
+  ("intracompany-receivable", false, $chart-color-7),
+  ("interest-received", false, $chart-color-8)
+);
+
+$category-list: join($category-list, $business-category-list);
+
+/// This variable is secretly modifiable by business banking, do not expose or remove !default
+/// TODO: Change to the variable $icon-custom-category-color, business banking should use the chart-colors
+/// @access private
+$account-kind-color-list: (
+  "current-account": $chart-color-4,
+  "savings-account": $chart-positive-color,
+  "term-deposit": $chart-positive-color,
+  "credit-card": $chart-color-3,
+  "debit-card": $chart-color-3,
+  "loan": $chart-color-2,
+  "investment-account": $chart-color-5,
+) !default;
+
+/// This variable is secretly modifiable by business banking, do not expose or remove !default
+/// @access private
+$account-kind-bg-color-list: (
+  "current-account": $chart-color-4-lightest,
+  "savings-account": $chart-positive-color-light-color,
+  "term-deposit": $chart-positive-color-light-color,
+  "credit-card": $chart-color-3-lightest,
+  "debit-card": $chart-color-3-lightest,
+  "loan": $chart-color-2-lightest,
+  "investment-account": $chart-color-5-lightest,
+) !default;
+
+// This is used to populated with items from $category-list
+$chart-categories-colors: ();
+
+// Populate $chart-categories-colors map
+@each $category, $icon, $category-color, $chart-color in $category-list {
+  $icon-content: null;
+  $chart-category-color: if($chart-color, $chart-color, $category-color);
+
+  @if $icon {
+    $icon-content: map_get(map-get($icon-map, str-slice($icon, 7)), "icon");
+  }
+
+  $chart-categories-colors: append(
+    $chart-categories-colors,
+    #{$category $chart-category-color $icon-content},
+    "comma"
+  );
+}
+
+// Get a list of colors for the donut chart used in income-spending-analysis-journey
+$donut-chart-colors: (
+  #{$chart-color-1},
+  #{$chart-color-2},
+  #{$chart-color-3},
+  #{$chart-color-4},
+  #{$chart-color-5},
+  #{$chart-color-6},
+  #{$chart-color-7},
+  #{$chart-color-8},
+  #{$chart-color-9},
+  #{$chart-color-10},
+  #{$icon-custom-category-color}
+);
+
+// For Chart Coloring
+:root {
+  @each $category, $icon, $color in $category-list {
+    $chart-css-variable-name: "--chart-color-" + $category;
+    #{$chart-css-variable-name}: #{$color};
+  }
+  --chart-categories-colors: #{$chart-categories-colors};
+  --donut-chart-colors: #{$donut-chart-colors};
+}
+
+// if icon map prop exists, retrieve prop value,
+// map-merge categories' prop:value to $icon-map, if icon prop exists
+@each $category, $icon, $color in $category-list {
+  @if $icon {
+    $icon-map: map-merge(
+      $icon-map,
+      (
+        "category-#{$category}": (
+          "color": $color,
+          "icon": str-slice($icon, str-index($icon, "-") + 1),
+        ),
+      )
+    );
+  }
+}
+
+// File Icons
+// TODO: Unify with bb-icon-ui variables
+$file-icon-width: 38px !default;
+$file-icon-height: 3rem !default;
+$file-icon-font-size: $font-size-subtitle !default;
+$file-icon-md-font-size: 0.575rem !default;
+$file-icon-sm-font-size: 0.4rem !default;
+$file-icon-md-width: 21px !default;
+$file-icon-sm-width: 12px !default;
+$file-icon-md-height: 1.625rem !default;
+$file-icon-sm-height: 1rem !default;
+$file-icon-sm-vertical-correction: -0.3rem !default;
+$file-icon-fold-size: 5px !default;
+$file-icon-md-fold-size: 3px !default;
+$file-icon-sm-fold-size: 2px !default;
+$file-icon-border-radius: 2px !default;
+$file-icon-fold-border-radius: 2px !default;
+$file-icon-left-margin: 2px !default;
+$file-icon-background-size: 18px !default;
+$file-icon-md-background-size: 12px !default;
+$file-icon-sm-background-size: 8px !default;
+$file-icon-bb-sepa-line-height: $file-icon-height * 1.6 !default;
+$file-icon-bb-sepa-sm-vertical-correction: 0.125rem !default;
+$file-icon-background-color: $color-neutral-greyest !default;
+$file-icon-xls-background-color: $chart-color-4 !default;
+$file-icon-csv-background-color: $chart-color-7 !default;
+$file-icon-bb-sepa-background-color: $color-danger-darker !default;
+$file-icon-pdf-background-color: $color-danger-darker !default;
+$file-icon-img-background-color: $chart-color-4 !default;
+$file-icon-ach-background-color: rgb(255, 172, 9) !default;
+$file-icon-ach-background-color-lighter: rgb(248, 193, 83) !default;
+
+$bicon-size-map: (
+  md: (
+    border-width: $file-icon-md-fold-size,
+    font-size: $file-icon-md-font-size,
+    width: $file-icon-md-width,
+    height: $file-icon-md-height,
+    line-height: $file-icon-md-height,
+  ),
+  sm: (
+    border-width: $file-icon-sm-fold-size,
+    font-size: $file-icon-sm-font-size,
+    width: $file-icon-sm-width,
+    height: $file-icon-sm-height,
+    line-height: $file-icon-sm-height,
+  ),
+) !default;
+
+$file-icon-map: (
+  xls: (
+    content: ".xls",
+    md-content: "XLS",
+    sm-content: "X",
+    bg-color: $file-icon-xls-background-color,
+    fold-color: $chart-color-4-lighter,
+  ),
+  csv: (
+    content: ".csv",
+    md-content: "CSV",
+    sm-content: "C",
+    bg-color: $file-icon-csv-background-color,
+    fold-color: $chart-color-7-lighter,
+  ),
+  mts: (
+    content: ".mts",
+    md-content: "MTS",
+    sm-content: "M",
+    bg-color: $file-icon-background-color,
+    fold-color: $color-neutral-grey,
+  ),
+  blk: (
+    content: ".blk",
+    md-content: "BLK",
+    sm-content: "B",
+    bg-color: $file-icon-background-color,
+    fold-color: $color-neutral-grey,
+  ),
+  bb-sepa: (
+    content: "SEPA",
+    md-content: "",
+    sm-content: "",
+    bg-color: $file-icon-bb-sepa-background-color,
+    fold-color: $color-danger-lighter,
+  ),
+  ach: (
+    content: "ACH",
+    md-content: "ACH",
+    sm-content: "A",
+    bg-color: $file-icon-ach-background-color,
+    fold-color: $file-icon-ach-background-color-lighter,
+  ),
+  pdf: (
+    content: "PDF",
+    md-content: "PDF",
+    sm-content: "P",
+    bg-color: $file-icon-pdf-background-color,
+    fold-color: $color-danger-lighter,
+  ),
+  img: (
+    content: "IMG",
+    md-content: "IMG",
+    sm-content: "I",
+    bg-color: $file-icon-img-background-color,
+    fold-color: $chart-color-4-lighter,
+  ),
+  jpg: (
+    content: "IMG",
+    md-content: "IMG",
+    sm-content: "I",
+    bg-color: $file-icon-img-background-color,
+    fold-color: $chart-color-4-lighter,
+  ),
+  jpeg: (
+    content: "IMG",
+    md-content: "IMG",
+    sm-content: "I",
+    bg-color: $file-icon-img-background-color,
+    fold-color: $chart-color-4-lighter,
+  ),
+  png: (
+    content: "IMG",
+    md-content: "IMG",
+    sm-content: "I",
+    bg-color: $file-icon-img-background-color,
+    fold-color: $chart-color-4-lighter,
+  ),
+  unknown: (
+    content: "?",
+    md-content: "?",
+    sm-content: "?",
+    bg-color: $file-icon-background-color,
+    fold-color: $color-neutral-grey,
+  ),
+) !default;

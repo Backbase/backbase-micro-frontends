@@ -1,0 +1,46 @@
+////
+/// Spacing and margins (global)
+/// Used for setting the margins around components to determine their position from other elements
+/// @group 1-variables/brand/spacing
+/// @access private
+////
+
+/// Configures default margin used globally as spacer. This is used to calculate different spacers (xs, sm, md, lg, xl)
+/// @access public
+$spacer: 1rem !default;
+
+// Don't use ($spacer * factor) in your components, but try to use these convenience variables:
+
+/// Extra Small margin used globally (read-only). Is calculated as 25% of the default $spacer
+/// @access public
+/// @require {variable} $spacer
+$spacer-xs: $spacer * 0.25;
+
+/// Small margin used globally (read-only). Is calculated as 50% of the default $spacer
+/// @access public
+/// @require {variable} $spacer
+$spacer-sm: $spacer * 0.5;
+
+/// Medium margin (read-only). For example, used for margin between buttons.. Defaults to $spacer
+/// @access public
+/// @require {variable} $spacer
+$spacer-md: $spacer;
+
+/// Large margin (read-only). Is calculated as 1.5 * $spacer
+/// @access public
+/// @require {variable} $spacer
+$spacer-lg: $spacer * 1.5;
+
+/// Extra Large padding (read-only). Is calculated as 2 * $spacer
+/// For example, used as distance between widgets
+/// @access public
+/// @require {variable} $spacer
+$spacer-xl: $spacer * 2;
+
+$spacing-map: (
+  xs: $spacer-xs,
+  sm: $spacer-sm,
+  md: $spacer-md,
+  lg: $spacer-lg,
+  xl: $spacer-xl,
+);

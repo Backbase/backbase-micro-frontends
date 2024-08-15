@@ -1,0 +1,117 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$places-list-height: $map-min-height !default;
+$places-list-border-top-separator: $list-separator-line-width solid $list-separator-color !default;
+$places-list-font-size-subtitle: $font-size-subtitle !default;
+
+/// Styles for places widget
+///
+/// @name bb-places-list
+/// @group widget-specific
+///
+/// @example html - default
+///   <div class="bb-places-list">
+///     <div class="bb-list bb-list--density-md">
+///       <div class="bb-stack bb-place-info">
+///         <div class="bb-inline-stack bb-inline-stack--density-sm">
+///           <i class="bb-inline-stack__item">icon</i>
+///           <span class="bb-text-bold">Branch Name 1</span>
+///         </div>
+///         <i class="bb-stack__item bb-stack__item--push-right"> toggle </i>
+///         <div class="bb-place-info__subtitle bb-subtitle">
+///           <span>London</span>
+///           <span>,
+///             <span>Amsterdam</span>
+///           </span>
+///           <div class="bb-text-support bb-inline-stack">
+///             More text
+///           </div>
+///         </div>
+///       </div>
+///       <div class="bb-stack">
+///         <div class="bb-inline-stack bb-inline-stack--density-sm">
+///           <i class="bb-inline-stack__item">icon</i>
+///           <span class="bb-text-bold">Branch Name 1</span>
+///         </div>
+///         <i class="bb-stack__item bb-stack__item--push-right"> toggle </i>
+///         <div class="bb-place-info__subtitle bb-subtitle">
+///           <span>Amsterdam</span>
+///           <span>,
+///             <span>London</span>
+///           </span>
+///           <div class="bb-text-support bb-inline-stack">
+///             More text
+///           </div>
+///         </div>
+///       </div>
+///       <div class="bb-stack">
+///         <div class="bb-inline-stack bb-inline-stack--density-sm">
+///           <i class="bb-inline-stack__item">icon</i>
+///           <span class="bb-text-bold">Branch Name 1</span>
+///         </div>
+///         <i class="bb-stack__item bb-stack__item--push-right"> toggle </i>
+///         <div class="bb-place-info__subtitle bb-subtitle">
+///           <span>Amsterdam</span>
+///           <span>,
+///             <span>London</span>
+///           </span>
+///           <div class="bb-text-support bb-inline-stack">
+///             More text
+///           </div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+///
+/// @example html - places empty list skeleton
+///   <div class="bb-places-list bb-places-list--empty">
+///     <div class="bb-list bb-list--density-md">
+///       <div class="bb-text-align-center">
+///         The places list is empty
+///       </div>
+///     </div>
+///   </div>
+///
+/// @example html - places info skeleton with padding
+///   <div class="bb-place-info">
+///     <div class="bb-inline-stack bb-inline-stack--density-sm">
+///       <i class="bb-inline-stack__item">icon</i>
+///       <span class="bb-text-bold">Branch Name 1</span>
+///     </div>
+///     <i class="bb-stack__item bb-stack__item--push-right"> toggle </i>
+///     <div class="bb-place-info__subtitle">
+///       this is subtitle
+///     </div>
+///     <div class="bb-places-details">
+///       <div class="bb-places-timetable">
+///         timetable is here
+///       </div>
+///       <div class="bb-places-services">
+///         services are here
+///       </div>
+///     </div>
+///   </div>
+.bb-places-list {
+  height: $places-list-height;
+  padding-block-start: $spacer;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-block-start: $places-list-border-top-separator;
+}
+
+.bb-places-list--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bb-place-info__subtitle,
+.bb-place-details,
+.bb-place-timetable,
+.bb-place-services {
+  padding-inline-start: $sizer-xl;
+}

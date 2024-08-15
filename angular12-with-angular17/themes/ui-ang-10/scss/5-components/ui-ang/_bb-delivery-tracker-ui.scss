@@ -1,0 +1,117 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$delivery-tracker-step-text-weight: $font-weight-semi-bold !default;
+$delivery-tracker-step-icon-color: $color-neutral-white !default;
+$delivery-tracker-step-icon-color-disabled: $color-neutral-greyest !default;
+$delivery-tracker-step-icon-background-color: $color-success !default;
+$delivery-tracker-step-icon-background-color-disabled: $color-neutral-light !default;
+
+$delivery-tracker-progress-bar-disabled: $color-neutral-light !default;
+
+/// A delivery tracker component
+/// Will receive an array of `steps` and create one round icon with description for each step and connect them via lines
+/// Completed steps will be painted green or with the customized `color` property and the incompleted ones will be disabled / grey
+///
+/// @name bb-delivery-tracker
+///
+/// @example html
+/// <div class="bb-delivery-tracker">
+///   <div class="bb-delivery-tracker__step bb-delivery-tracker__step--ordered">
+///     <div class="bb-delivery-tracker__step-icon bb-delivery-tracker__step-icon-success">
+///       <bb-icon-ui>
+///         <i class="bb-icon bb-icon-delivery-tracker__step--ordered bb-icon--md icon-circle bb-icon__background bb-icon__background--circle bb-icon__background--success"></i>
+///       </bb-icon-ui>
+///     </div>
+///     <div class="bb-delivery-tracker__step-text"> Ordered </div>
+///     <div class="bb-delivery-tracker__step-date bb-text-support bb-subtitle"> Jan 28, 2019 at 5:41 PM </div>
+///   </div>
+///
+///   <div class="bb-delivery-tracker__step active bb-delivery-tracker__step--processed">
+///     <div class="bb-delivery-tracker__step-icon bb-delivery-tracker__step-icon-success">
+///       <bb-icon-ui>
+///         <i class="bb-icon bb-icon-delivery-tracker__step--processed bb-icon--md icon-circle bb-icon__background bb-icon__background--circle bb-icon__background--success"></i>
+///       </bb-icon-ui>
+///     </div>
+///     <div class="bb-delivery-tracker__step-text"> Processed </div>
+///     <div class="bb-delivery-tracker__step-date bb-text-support bb-subtitle"> Jan 30, 2019 at 1:00 AM </div>
+///   </div>
+///
+///   <div class="bb-delivery-tracker__step bb-delivery-tracker__step--in-transit">
+///     <div class="bb-delivery-tracker__step-icon bb-delivery-tracker__step-icon-success bb-delivery-tracker__step-icon--disabled">
+///       <bb-icon-ui>
+///         <i class="bb-icon bb-icon-delivery-tracker__step--in-transit bb-icon--md icon-circle bb-icon__background bb-icon__background--circle bb-icon__background--light"></i>
+///       </bb-icon-ui>
+///     </div>
+///     <div class="bb-delivery-tracker__step-text bb-text-support"> In Transit </div>
+///   </div>
+///
+///   <div class="bb-delivery-tracker__step bb-delivery-tracker__step--delivered">
+///     <div class="bb-delivery-tracker__step-icon bb-delivery-tracker__step-icon-success bb-delivery-tracker__step-icon--disabled">
+///       <bb-icon-ui>
+///         <i class="bb-icon bb-icon-delivery-tracker__step--delivered bb-icon--md icon-circle bb-icon__background bb-icon__background--circle bb-icon__background--light"></i>
+///       </bb-icon-ui>
+///     </div>
+///     <div class="bb-delivery-tracker__step-text bb-text-support"> Delivered </div>
+///   </div>
+/// </div>
+
+.bb-delivery-tracker {
+  display: flex;
+  align-items: stretch;
+}
+
+.bb-delivery-tracker__step {
+  width: 25%;
+  text-align: center;
+}
+
+.bb-delivery-tracker__step-icon {
+  position: relative;
+  margin-block-end: $sizer-xs;
+
+  .bb-icon {
+    color: $delivery-tracker-step-icon-color;
+    background-color: $delivery-tracker-step-icon-background-color;
+  }
+}
+
+.bb-delivery-tracker__step-text {
+  margin-block-end: $sizer-xs;
+  font-weight: $delivery-tracker-step-text-weight;
+}
+
+.bb-delivery-tracker__step-date {
+  padding-block: 0;
+  padding-inline: $sizer-xs;
+}
+
+.bb-delivery-tracker__step-icon--disabled {
+  .bb-icon {
+    color: $delivery-tracker-step-icon-color-disabled;
+    background-color: $delivery-tracker-step-icon-background-color-disabled;
+  }
+}
+
+@each $color, $value in $theme-background-colors {
+  @include apply-adjacent-lines(
+    "bb-delivery-tracker__step",
+    "bb-delivery-tracker__step-icon",
+    $color,
+    $value
+  );
+}
+
+.bb-delivery-tracker__step.active ~ .bb-delivery-tracker__step > .bb-delivery-tracker__step-icon {
+  &::after,
+  &::before {
+    border-color: $delivery-tracker-progress-bar-disabled;
+  }
+}
+
+.bb-delivery-tracker__step.active > .bb-delivery-tracker__step-icon::after {
+  border-color: $delivery-tracker-progress-bar-disabled;
+}

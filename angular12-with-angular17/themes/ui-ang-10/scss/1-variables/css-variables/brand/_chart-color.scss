@@ -1,0 +1,40 @@
+////
+/// Color shades (global)
+/// @name color-shades
+/// @group base
+/// @access private
+////
+
+:root {
+  --chart-color-1: #{$chart-color-1};
+  --chart-color-2: #{$chart-color-2};
+  --chart-color-3: #{$chart-color-3};
+  --chart-color-4: #{$chart-color-4};
+  --chart-color-5: #{$chart-color-5};
+  --chart-color-6: #{$chart-color-6};
+  --chart-color-7: #{$chart-color-7};
+  --chart-color-8: #{$chart-color-8};
+  --chart-color-9: #{$chart-color-9};
+  --chart-color-10: #{$chart-color-10};
+  --chart-negative-color: #{$chart-negative-color};
+  --chart-positive-color: #{$chart-positive-color};
+  --chart-secondary-color: #{$chart-secondary-color};
+  --chart-neutral-color: #{$chart-neutral-color};
+  --chart-alert-color: #{$chart-alert-color};
+}
+
+$chart-color-1: var(--chart-color-1);
+$chart-color-2: var(--chart-color-2);
+$chart-color-3: var(--chart-color-3);
+$chart-color-4: var(--chart-color-4);
+$chart-color-5: var(--chart-color-5);
+$chart-color-6: var(--chart-color-6);
+$chart-color-7: var(--chart-color-7);
+$chart-color-8: var(--chart-color-8);
+$chart-color-9: var(--chart-color-9);
+$chart-color-10: var(--chart-color-10);
+$chart-negative-color: var(--chart-negative-color);
+$chart-positive-color: var(--chart-positive-color);
+$chart-secondary-color: var(--chart-secondary-color);
+$chart-neutral-color: var(--chart-neutral-color);
+$chart-alert-color: var(--chart-alert-color);

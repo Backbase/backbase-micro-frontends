@@ -1,0 +1,31 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-payment-card-self-service__inactive-container {
+  display: inline-block;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+.bb-payment-card-self-service-row {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.bb-payment-card-self-service-row__description {
+  @include media-breakpoint-down(md) {
+    margin-inline-end: 0;
+    margin-block-end: $spacer-md;
+  }
+}
+
+.bb-payment-card-self-service-row__button {
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}

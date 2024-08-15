@@ -1,0 +1,200 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+$radio-group-label-font-size: $font-size-base !default;
+$radio-group-label-font-weight: $font-weight-semi-bold !default;
+$radio-group-label-bottom-space: $spacer-md !default;
+$radio-icon-inner-size: $sizer-md !default;
+$radio-icon-outer-size: $sizer-lg !default;
+$radio-icon-label-space: $spacer-sm !default;
+$radio-icon-border-color: $color-neutral-greyer !default;
+$radio-icon-selected-color: $color-info !default;
+$radio-icon-hover-border-color: $color-neutral-greyer !default;
+$radio-icon-disabled-color: $color-neutral-grey-light !default;
+$radio-icon-outer-x: 0 !default;
+$radio-icon-inner-x: ($radio-icon-outer-size - $radio-icon-inner-size) * 0.5 !default;
+$radio-input-horizontal-space: $spacer-xl !default;
+
+.bb-input-radio-group__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.bb-input-radio-group__list--horizontal {
+  flex-direction: row;
+
+  .bb-input-radio-group__radio {
+    margin-inline-end: $radio-input-horizontal-space;
+
+    &:last-child {
+      margin-inline-end: 0;
+      margin-block-end: $spacer-md;
+    }
+  }
+}
+
+.bb-input-radio-group__label {
+  margin-block-end: $radio-group-label-bottom-space;
+  font-weight: $radio-group-label-font-weight;
+  font-size: $radio-group-label-font-size;
+}
+
+.bb-input-radio-group__radio {
+  position: relative;
+  display: inline;
+  padding-block: 0;
+  padding-inline-start: calc(#{$radio-icon-outer-size} + #{$radio-icon-label-space});
+  padding-inline-end: 0;
+  white-space: normal;
+  text-align: start;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-block-end: $spacer-md;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    display: inline-block;
+    border-radius: $border-radius-circle;
+    content: "";
+  }
+
+  &::after {
+    top: 50%;
+    inset-inline-start: $radio-icon-inner-x;
+    width: $radio-icon-inner-size;
+    height: $radio-icon-inner-size;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    inset-block-start: 50%;
+    inset-inline-start: $radio-icon-outer-x;
+    width: $radio-icon-outer-size;
+    height: $radio-icon-outer-size;
+    background-color: $input-bg;
+    border: 1px solid $radio-icon-border-color;
+    transform: translateY(-50%);
+  }
+
+  &.selected:not(:disabled):not(.disabled) {
+    &::after {
+      color: $radio-icon-selected-color;
+      background-color: $radio-icon-selected-color;
+    }
+
+    &::before {
+      border-color: $radio-icon-selected-color;
+    }
+
+    &:has(> .ng-invalid.ng-touched) {
+      &::before {
+        border-color: $input-invalid-border-color;
+      }
+    }
+  }
+
+  &:has(> .ng-invalid.ng-touched) {
+    &::before {
+      border-color: $input-invalid-border-color;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+
+    &::before {
+      border-color: $radio-icon-disabled-color;
+      background-color: $radio-icon-disabled-color;
+    }
+  }
+
+  &.active,
+  &:active,
+  &.focus {
+    &:not(:disabled):not(.disabled) {
+      box-shadow: none;
+    }
+  }
+
+  &.selected.disabled,
+  &.selected:disabled {
+    &::before {
+      background-color: $input-bg;
+    }
+
+    &::after {
+      background-color: $radio-icon-disabled-color;
+    }
+  }
+
+  &.focus {
+    &::before {
+      outline: $input-focus-border-primary;
+      outline-offset: 2px;
+      box-shadow: $input-box-shadow;
+    }
+  }
+
+  &.bb-input-radio-group__radio--vertical-align-top {
+    &::before,
+    &::after {
+      inset-block-start: 0;
+      transform: none;
+    }
+
+    &::after {
+      inset-block-start: $radio-icon-inner-x;
+    }
+  }
+
+  &.bb-input-radio-group__radio--vertical-align-middle {
+    &::before,
+    &::after {
+      inset-block-start: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.bb-input-radio-group__radio--vertical-align-bottom {
+    &::before {
+      inset-block-start: 100%;
+      transform: translateY(-100%);
+    }
+    &::after {
+      inset-block-start: unset;
+      inset-block-end: -$radio-icon-inner-x;
+    }
+  }
+}
+
+.bb-input-radio-group__input {
+  position: absolute;
+  inset-inline-start: 0;
+  opacity: 0;
+}
+
+.bb-input-radio-group__radio-label {
+  font-weight: $font-weight-regular;
+}
+
+bb-input-radio-group-ui {
+  &.ng-invalid.ng-touched {
+    .bb-input-radio-group__radio {
+      &::before {
+        border-color: $input-invalid-border-color;
+      }
+    }
+  }
+}

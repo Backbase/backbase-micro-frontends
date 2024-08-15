@@ -1,0 +1,45 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+///
+
+$mac-restriction-table-row-highlighted-background: $color-warning-lightest !default;
+$mac-restriction-table-border-radius: 8px !default;
+$mac-restriction-table-mac-column-min-width: 8rem;
+
+/// Styles for Mac restriction table row
+///
+/// @name bb-mac-restriction-table-row
+///
+/// @example html
+/// <div
+///  class="row bb-padding-box-vertical--{{ isEditMode ? 'sm' : 'md' }}"
+///  [ngClass]="{ 'bb-mac-restriction-table-row-highlighted': isHighlighted }"
+/// >
+///   <div class="col-5 text-small d-flex align-items-center bb-inline-stack">
+///     <span class="visually-hidden"> Business function name </span>
+///     <div class="bb-ellipsis--responsive-container">
+///       <bb-ellipsis-ui [text]="name" tooltipTriggers="hover"></bb-ellipsis-ui>
+///     </div>
+///   </div>
+/// </div>
+
+.bb-mac-restriction-table-row--highlighted {
+  background-color: $mac-restriction-table-row-highlighted-background;
+  border-radius: $mac-restriction-table-border-radius;
+}
+
+.bb-mac-restriction-table-row--mac-column {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax($mac-restriction-table-mac-column-min-width, auto)
+  );
+  row-gap: $spacer-xs;
+}
+
+.bb-mac-restriction-table-row--mac-item {
+  width: max-content;
+}

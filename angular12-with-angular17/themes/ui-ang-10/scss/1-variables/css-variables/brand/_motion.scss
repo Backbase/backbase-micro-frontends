@@ -1,0 +1,27 @@
+////
+/// Motion (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --motion-delay-slow: #{$motion-delay-slow};
+  --motion-delay-default: #{$motion-delay-default};
+  --motion-delay-fast: #{$motion-delay-fast};
+  --motion-duration-slow: #{$motion-duration-slow};
+  --motion-duration-default: #{$motion-duration-default};
+  --motion-duration-fast: #{$motion-duration-fast};
+  --motion-timing-ease-in: #{$motion-timing-ease-in};
+  --motion-timing-ease-out: #{$motion-timing-ease-out};
+  --motion-timing-ease-in-out: #{$motion-timing-ease-in-out};
+}
+
+$motion-delay-slow: var(--motion-delay-slow);
+$motion-delay-default: var(--motion-delay-default);
+$motion-delay-fast: var(--motion-delay-fast);
+$motion-duration-slow: var(--motion-duration-slow);
+$motion-duration-default: var(--motion-duration-default);
+$motion-duration-fast: var(--motion-duration-fast);
+$motion-timing-ease-in: var(--motion-timing-ease-in);
+$motion-timing-ease-out: var(--motion-timing-ease-out);
+$motion-timing-ease-in-out: var(--motion-timing-ease-in-out);

@@ -1,0 +1,36 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+$period-selector-icon-color: $color-neutral-darker !default;
+$period-selector-period-color: $color-text-support !default;
+$period-selector-month-font-size: $font-size-highlight !default;
+$period-selector-period-font-size: $font-size-default !default;
+$period-selector-period-width: 204px !default;
+$period-selector-period-margin-inline-end: $spacer-xs !default;
+$period-selector-period-margin-inline-start: $spacer-xs !default;
+
+.bb-period-selector {
+  display: flex;
+  align-items: center;
+}
+
+.bb-period-selector__date {
+  width: $period-selector-period-width;
+  margin-inline-end: $period-selector-period-margin-inline-end;
+  margin-inline-start: $period-selector-period-margin-inline-start;
+  text-align: center;
+}
+
+.bb-period-selector__month {
+  margin-block-end: $spacer-xs * 0.5;
+  font-weight: $font-weight-semi-bold;
+  font-size: $period-selector-month-font-size;
+}
+
+.bb-period-selector__period {
+  color: $period-selector-period-color;
+  font-size: $period-selector-period-font-size;
+}

@@ -1,0 +1,30 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+.bb-dropdown-single-select {
+  @include appearance-toggle();
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:disabled {
+    border: unset;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.bb-dropdown-single-select-icon {
+  display: flex;
+  align-items: center;
+  float: right;
+  height: $input-height;
+  margin-top: calc(-1 * #{$input-height});
+  margin-right: $spacer-sm;
+  pointer-events: none;
+}

@@ -1,0 +1,39 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+$count-summary-count-font-size: $font-size-hero;
+$count-summary-count-font-color: $color-neutral-black;
+$count-summary-title-font-size: $font-size-subtitle;
+$count-summary-title-font-color: $color-neutral-black;
+$count-summary-subtitle-font-size: $font-size-subheader;
+$count-summary-subtitle-font-color: $color-neutral-greyest;
+
+.bb-count-summary {
+  display: flex;
+  align-items: center;
+}
+
+.bb-count-summary__count {
+  padding-top: $spacer-xs;
+  color: $count-summary-count-font-color;
+  font-size: $count-summary-count-font-size;
+}
+
+.bb-count-summary__details {
+  display: flex;
+  flex-direction: column;
+  margin-left: $spacer-sm;
+}
+
+.bb-count-summary__title {
+  color: $count-summary-title-font-color;
+  font-size: $count-summary-title-font-size;
+}
+
+.bb-count-summary__subtitle {
+  color: $count-summary-subtitle-font-color;
+  font-size: $count-summary-subtitle-font-size;
+}

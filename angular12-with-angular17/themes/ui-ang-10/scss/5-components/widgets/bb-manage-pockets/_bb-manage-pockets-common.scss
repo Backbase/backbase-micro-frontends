@@ -1,0 +1,45 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$manage-pockets-common-card-image-container-bottom-margin: $spacer * 2 !default;
+$manage-pockets-common-card-image-height: 11rem !default;
+$manage-pockets-common-card-image-width: 11rem !default;
+$manage-pockets-common-card-image-border-radius: $border-radius-md !default;
+$bb-pocket-card-call-to-action-padding: 1.25 * $spacer !default;
+
+.bb-manage-pockets-common-pocket-card__goal-amount {
+  vertical-align: text-bottom;
+}
+
+.bb-manage-pockets-common-pocket-card__goal-percentage {
+  vertical-align: text-bottom;
+}
+
+.bb-manage-pockets-common-pocket-card__deadline-date {
+  vertical-align: text-bottom;
+}
+
+.bb-manage-pockets-common-pocket-card__pocket-image-container {
+  @include media-breakpoint-down(md) {
+    margin-block-end: $manage-pockets-common-card-image-container-bottom-margin;
+  }
+}
+
+.bb-manage-pockets-common-pocket-card__pocket-image {
+  width: $manage-pockets-common-card-image-width;
+  height: $manage-pockets-common-card-image-height;
+  border-radius: $manage-pockets-common-card-image-border-radius;
+}
+
+.bb-manage-pockets-common-pocket-card__dropdown-item-label {
+  cursor: pointer;
+}
+
+.bb-manage-pockets-common-pocket-card__call-to-action {
+  position: absolute;
+  top: $bb-pocket-card-call-to-action-padding;
+  inset-inline-end: $bb-pocket-card-call-to-action-padding;
+}

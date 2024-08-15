@@ -1,0 +1,29 @@
+// Global annotations
+////
+/// @group ui-components
+/// @access private
+////
+
+@include ms-browsers-only {
+  @include media-breakpoint-up(sm) {
+    .sweep-rule-editor {
+      flex: none;
+    }
+
+    .sweep-rule-type-wrapper {
+      display: inline-flex;
+    }
+
+    .sweep-rule-type {
+      width: auto;
+    }
+  }
+
+  .button-with-dropdown {
+    flex: 1;
+  }
+}
+
+.sweep-summary-item-label {
+  font-size: 1rem;
+}

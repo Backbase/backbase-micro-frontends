@@ -1,0 +1,92 @@
+$bb-schedule-header-sepatator-top-margin: 0.5rem !default;
+$bb-schedule-repeat-width: 6rem !default;
+$bb-schedule-repeat-top-margin: 6.5rem !default;
+$bb-schedule-repeat-two-option-top-margin: 4.4rem !default;
+$bb-schedule-repeat-desc-left-padding: 0.5rem !default;
+$bb-schedule-repeat-desc-position-top: 0.5rem !default;
+$bb-schedule-repeat-desc-position-left: 6rem !default;
+$bb-schedule-repeat-desc-position-left-sm: 8rem !default;
+$bb-schedule-end-date-width: 12.3rem !default;
+$bb-schedule-end-date-top-margin: 2.5rem !default;
+$bb-schedule-end-date-payord-date-control-no-label: 1.5rem !default;
+$bb-schedule-end-date-top-margin-sm: -7rem !default;
+$bb-schedule-end-date-error-top-margin-sm: -8.5rem !default;
+$bb-schedule-control-left-margin-sm: 2rem !default;
+$bb-schedule-control-max-width-sm: 90% !default;
+$bb-schedule-end-type-bottom-margin-sm: 5rem !default;
+
+.bb-schedule-header__sepatator {
+  margin-top: $bb-schedule-header-sepatator-top-margin;
+}
+
+.bb-schedule__repeat .bb-dynamic-input__desc {
+  position: absolute;
+  top: $bb-schedule-repeat-desc-position-top;
+  left: $bb-schedule-repeat-desc-position-left;
+  display: inline-block;
+  padding-left: $bb-schedule-repeat-desc-left-padding;
+  font-size: $font-size-base;
+}
+
+.bb-schedule__repeat bb-input-number-ui .form-control {
+  display: inline-block;
+  width: $bb-schedule-repeat-width;
+}
+
+@include media-breakpoint-up(md) {
+  .bb-schedule__repeat {
+    margin-top: $bb-schedule-repeat-top-margin;
+  }
+
+  .bb-schedule__repeat--two-option {
+    margin-top: $bb-schedule-repeat-two-option-top-margin;
+  }
+
+  .bb-schedule__end-date {
+    margin-top: $bb-schedule-end-date-top-margin;
+    .payord-date-control__no-label {
+      margin-top: $bb-schedule-end-date-payord-date-control-no-label;
+    }
+  }
+
+  .bb-schedule__end-date .bb-input-datepicker__wrapper {
+    width: $bb-schedule-end-date-width;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bb-schedule__repeat bb-input-number-ui .form-control {
+    max-width: $bb-schedule-control-max-width-sm;
+    margin-left: $bb-schedule-control-left-margin-sm;
+  }
+
+  .bb-schedule__repeat .bb-dynamic-input__desc {
+    left: $bb-schedule-repeat-desc-position-left-sm;
+  }
+
+  .bb-schedule__end-date {
+    max-width: $bb-schedule-control-max-width-sm;
+    margin-top: $bb-schedule-end-date-top-margin-sm;
+    margin-left: $bb-schedule-control-left-margin-sm;
+  }
+
+  .bb-schedule__end-date.ng-dirty.ng-invalid {
+    margin-top: $bb-schedule-end-date-error-top-margin-sm;
+  }
+
+  .bb-schedule__end-type .bb-input-radio-group__radio:nth-child(2).selected {
+    margin-bottom: $bb-schedule-end-type-bottom-margin-sm;
+  }
+}
+
+.bb-schedule__end-type label {
+  white-space: nowrap;
+}
+
+.bb-schedule-header__relative-text {
+  .bb-schedule-header__text {
+    @extend .bb-text-support;
+    @extend .bb-highlight;
+    @extend .bb-highlight--regular;
+  }
+}

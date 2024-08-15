@@ -1,0 +1,161 @@
+////
+/// @group 5-components/structure/bb-container
+/// @access public
+////
+
+/// Setting the horizontal padding value for large (`lg`) size screens.
+///
+/// @require $page-layout-section-padding
+$container-padding-x-lg: $page-layout-section-padding !default;
+
+/// Setting the vertical padding value for large (`lg`) size screens.
+///
+$container-padding-y-lg: 0 !default;
+
+/// Setting the horizontal padding value for medium (`md`) size screens.
+///
+/// @require $page-layout-section-padding-narrow
+$container-padding-x-md: $page-layout-section-padding-narrow !default;
+
+/// Setting the horizontal padding value for small (`sm`) size screens.
+///
+/// @require $sizer-sm
+$container-padding-x-sm: $sizer-sm !default;
+
+/// Setting the vertical padding value for medium (`md`) size screens.
+///
+$container-padding-y-md: 0 !default;
+
+/// Setting the maximum width of the container element.
+///
+/// Standard value is the default `$container-fixed-width-max-width`. For smaller screens you
+/// can use `$container-fixed-width-small-max-width`.
+///
+/// @example scss
+///   $container-fixed-width-max-width: 840px !default;
+///   $container-fixed-width-small-max-width: 600px !default;
+$container-fixed-width-max-width: 840px !default;
+$container-fixed-width-small-max-width: 600px !default;
+
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  margin-inline: auto;
+}
+
+@include media-breakpoint-up(sm) {
+  .container-sm,
+  .container {
+    max-width: 540px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 720px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 960px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/// Main container class setting the basic styles.
+/// Overriding the standard Bootstrap class `.container`.
+///
+/// @require {variable} $container-padding-y-lg
+/// @require {variable} $container-padding-x-lg
+/// @require {variable} $container-padding-y-md
+/// @require {variable} $container-padding-x-md
+/// @example html - Default
+///   <div class="container">
+///     <!-- Content here -->
+///   </div>
+.container {
+  display: block;
+  padding-block: $container-padding-y-lg;
+  padding-inline: $container-padding-x-lg;
+
+  @include media-breakpoint-down(lg) {
+    padding-block: $container-padding-y-md;
+    padding-inline: $container-padding-x-md;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+}
+
+/// Main container fluid class setting the basic styles.
+/// Overriding the standard Bootstrap class `.container-fluid`.
+///
+/// @require {variable} $container-padding-y-lg
+/// @require {variable} $container-padding-x-lg
+/// @require {variable} $container-padding-y-md
+/// @require {variable} $container-padding-x-sm
+/// @example html - Default
+///   <div class="container-fluid">
+///     <!-- Content here -->
+///   </div>
+.container-fluid {
+  display: block;
+  padding-block: $container-padding-y-lg;
+  padding-inline: $container-padding-x-lg;
+
+  @include media-breakpoint-down(md) {
+    padding-block: $container-padding-y-md;
+    padding-inline: $container-padding-x-sm;
+  }
+}
+
+/// Main container fixed-width class setting the basic styles.
+///
+/// @require {variable} $container-fixed-width-max-width
+/// @example html
+///   <div class="container--fixed-width">
+///     <!-- Content here -->
+///   </div>
+/// @example html Variant use-cases
+///   .container--fixed-width {
+///     max-width: $container-fixed-width-max-width;
+///   }
+///   .container--fixed-width-small {
+///     max-width: $container-fixed-width-small-max-width;
+///   }
+.container--fixed-width {
+  max-width: $container-fixed-width-max-width;
+}
+.container--fixed-width-small {
+  max-width: $container-fixed-width-small-max-width;
+}
+
+/// Main container dragging state class setting specific styles when dragging the container.
+///
+/// To be used in conjunction with `.bb-heading-widget--de-elevated`.
+///
+/// @require {variable} $spacer-lg
+/// @require {variable} $heading-widget-de-elevated-padding-block-end
+.container--drag-up {
+  margin-block-start: calc(#{$spacer-lg} - #{$heading-widget-de-elevated-padding-block-end});
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+}

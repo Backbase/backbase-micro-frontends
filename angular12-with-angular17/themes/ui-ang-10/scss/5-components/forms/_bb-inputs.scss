@@ -1,0 +1,23 @@
+// Global annotations
+////
+/// @group forms
+/// @access private
+////
+
+.ng-invalid.ng-touched {
+  > .input-group > input:not(:focus),
+  > .input-wrapper > input:not(:focus),
+  > input:not(:focus),
+  > select:not(:focus) {
+    /* stylelint-disable-next-line */
+    @extend .is-invalid; //BS4 form class
+  }
+}
+
+bb-dropdown-multi-select-ui {
+  &.ng-invalid.ng-touched {
+    .bb-dropdown-multi-select__toggle {
+      @extend .is-invalid;
+    }
+  }
+}

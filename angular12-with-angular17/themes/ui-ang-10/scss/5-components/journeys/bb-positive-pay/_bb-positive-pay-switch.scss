@@ -1,0 +1,36 @@
+// Configure styles for alignement of bb-switch-ui
+////
+/// @group journey-specific
+/// @access public
+////
+
+$positive-pay-switch-spacer-top: $spacer * 2.5 !default;
+
+/// Sets margin-top to vertically align switch with other controls
+///
+/// @name bb-positive-pay-switch-ui
+///
+/// @example
+/// ```html
+/// <div class="bb-stack__item bb-stack__item--bottom-space bb-stack__item--fill">
+///   <label>Control Label</label>
+///   <bb-input-text-ui
+///     bbFormControl
+///     formControlName="formControlName"
+///     [errorLabels]="errorLabels"
+///   >
+///   </bb-input-text-ui>
+/// </div>
+///
+/// <div class="bb-stack__break bb-stack__break--xs bb-stack__break--spacing"></div>
+///
+/// <div class="bb-stack__item bb-stack__item--fill bb-positive-pay-switch-spacing">
+///   <bb-switch-ui></bb-switch-ui>
+/// </div>
+/// ```
+.bb-positive-pay-switch-spacing {
+  margin-top: $positive-pay-switch-spacer-top;
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+}

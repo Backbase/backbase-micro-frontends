@@ -1,0 +1,35 @@
+// Global annotations
+////
+/// @group journey-specific
+/// @access private
+////
+
+$search-bar-position: $spacer * 7.5;
+$employee-app-search-bar-position: $spacer * -2;
+
+.bb-approval-rules-tabs .nav-tabs {
+  margin-block-end: $spacer-sm;
+}
+
+.bb-approval-rules-sticky-search {
+  position: sticky;
+  background-color: $white;
+  z-index: $zindex-sticky;
+}
+
+.bb-layout div.bb-custom-approval-fixed-header {
+  z-index: $zindex-fixed;
+}
+
+.bb-approval-rules-sticky-search-bar {
+  margin-inline: -$spacer-xl;
+  padding: 1.5 * $spacer $spacer-xl;
+}
+
+.bb-approval-rules-sticky-search-position {
+  top: $search-bar-position;
+}
+
+.bb-employee-app-sticky-search-position {
+  top: $employee-app-search-bar-position;
+}

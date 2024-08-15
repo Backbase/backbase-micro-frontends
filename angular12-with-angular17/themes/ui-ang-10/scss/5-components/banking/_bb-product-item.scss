@@ -1,0 +1,167 @@
+// Global annotations
+////
+/// @group banking
+/// @access private
+////
+
+/// @todo remove use of bb-text-default in owners to be able to override
+$product-item-owners-font-weight: $font-weight-regular !default;
+$product-item-owners-font-size: $optional !default;
+
+$product-item-type-size-sm: $sizer-xl !default;
+
+/// @todo these variables ar not being used
+$product-item-separator-color: $color-neutral-grey !default;
+$product-item-separator-margin: $spacer-lg !default;
+$product-item-padding: $sizer-lg !default;
+$product-item-border-radius: $border-radius-md !default;
+///@todo Where is this product-item-type used?
+$product-item-type-border-radius: $border-radius-sm !default;
+$product-item-type-size: $sizer-md * 3 !default;
+$product-item-content-type-bg-color: $color-neutral-darkest !default;
+
+/// @name bb-product-item
+///
+/// @example html - unselected product item basic account
+///   <div class="bb-product-item">
+///     <div class="bb-stack bb-stack--wrap">
+///       <div class="bb-stack__item bb-account-info">
+///         <div class="bb-account-info__title">
+///           <span class="text-truncate">Mrs J. Smith</span>
+///           <span class="bb-account-info__status bb-account-status">
+///             <i class="bb-account-status__icon bb-icon bb-icon-cancel bb-icon--danger"></i>
+///             <span class="bb-account-status__state">Closed</span>
+///           </span>
+///         </div>
+///         <div class="bb-account-info__product-number">
+///           <span class="text-truncate">•••• •••• •••• 1331 9268 19</span>
+///         </div>
+///       </div>
+///       <div class="bb-stack__item bb-stack__item--push-right">
+///         <div class="account-amount bb-highlight">
+///           € 102.10
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+///
+/// @example html - with type icon
+///   <div class="bb-product-item active">
+///     <div class="bb-stack bb-stack--wrap">
+///       <div class="bb-stack__item bb-product-item__active">
+///         <div class="product-item-content__type product-item-content__type--mobile">
+///           <i class="bb-icon bb-icon-accounts bb-icon--md bb-icon--light"></i>
+///         </div>
+///         <div class="product-item-content__type product-item-content__type--desktop">
+///           <i class="bb-icon bb-icon-accounts bb-icon--lg bb-icon--light"></i>
+///         </div>
+///       </div>
+///       <div class="bb-stack__item bb-product-item__title">
+///         <div class="bb-account-info">
+///           <div class="bb-account-info__title">
+///             <span class="text-truncate">Mr J. Simpson</span>
+///           </div>
+///           <div class="bb-account-info__product-number">
+///             <span class="text-truncate">•••• •••• •••• 1331 9268 19</span>
+///           </div>
+///         </div>
+///       </div>
+///       <div class="bb-stack_item bb-stack__item--push-right">
+///         <div class="account-amount bb-highlight">
+///           € 131,230.10
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+.bb-product-item {
+}
+
+@mixin bb-product-item-ui-small {
+  .product-item-content__active {
+    margin-right: $spacer-md;
+  }
+
+  .product-item-content__type {
+    width: $product-item-type-size-sm;
+    height: $product-item-type-size-sm;
+  }
+
+  .product-item-content__head {
+    width: 100%;
+    margin-bottom: $spacer-sm;
+  }
+
+  .bb-product-item {
+    .bb-amount {
+      display: block;
+      margin-top: $spacer-sm;
+    }
+
+    .bb-stack__break {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.product-item-group {
+  box-shadow: $box-shadow-sm;
+  > *:not(:last-of-type) > .product-item {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  > *:not(:first-of-type) > .product-item {
+    border-top: 1px solid $color-neutral-light;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
+
+.bb-product-item__owners,
+.product-item-content__owner {
+  margin-top: $spacer-md;
+  @include setOptional(color, $product-item-owners-color);
+  font-weight: $product-item-owners-font-weight;
+  font-size: $product-item-owners-font-size;
+}
+
+.bb-product-item__active {
+  // override cropping margins
+  bb-icon-ui:first-child,
+  bb-icon-ui:last-child {
+    .bb-icon--cropped {
+      margin: 0;
+    }
+  }
+}
+
+.bb-product-item__title {
+  // For IE
+  flex: 1;
+  // By default the min-width of flexbox items(.bb-product-item__title is child of .bb-stack) are auto which results in overflow the text from the container.
+  // Explicitly setting some min-width value on flexbox item to restrict the text from overflowing.
+  min-width: 0;
+  @include setOptional(color, $product-item-title-color);
+  @include setOptional(font-weight, $product-item-title-font-weight);
+  @include setOptional(font-size, $product-item-title-font-size);
+
+  .bb-account-info__product-number {
+    @include setOptional(color, $product-item-account-info-product-number-color);
+    @include setOptional(font-weight, $product-item-account-info-product-number-font-weight);
+    @include setOptional(font-size, $product-item-account-info-product-number-font-size);
+  }
+}
+
+.bb-product-item__amount {
+  @include setOptional(color, $product-item-amount-color);
+  @include setOptional(font-weight, $product-item-amount-font-weight);
+  @include setOptional(font-size, $product-item-amount-font-size);
+}
+
+@include media-breakpoint-down(sm) {
+  @include bb-product-item-ui-small;
+}
+
+.bb-account-selector-ui--sm {
+  @include bb-product-item-ui-small;
+}

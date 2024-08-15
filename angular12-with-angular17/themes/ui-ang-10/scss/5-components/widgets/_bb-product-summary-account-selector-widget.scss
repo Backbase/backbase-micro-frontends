@@ -1,0 +1,96 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+$product-summary-account-selector-container-padding: 0 $sizer-lg !default;
+$product-summary-account-selector-value-padding: $sizer-md !default;
+
+/// Styles for Accounts selector widget
+///
+/// @name bb-product-summary-account-selector-widget'
+///
+/// @example html
+/// <div class="bb-product-summary-account-selector">
+///   <div class="bb-account-selector ng-select ng-select-single">
+///     <div class="ng-select-container">
+///       <div class="ng-select-container">
+///         <div class="ng-value-container">
+///           <div class="bb-product-item__title">Title</div>
+///           <div class="bb-amount">Amount</div>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+/// </div>
+
+$product-summary-account-selector-option-padding: $sizer-lg !default;
+$product-summary-account-selector-item-padding: $sizer-md !default;
+
+.bb-product-summary-account-selector {
+  .bb-product-item {
+    .bb-amount {
+      margin-block-start: 0;
+    }
+  }
+  .bb-product-item__title {
+    flex: none;
+    margin-block-end: $product-summary-account-selector-item-padding;
+  }
+  .bb-product-item__details {
+    margin-block-end: $product-summary-account-selector-item-padding;
+  }
+
+  .bb-account-selector {
+    &.ng-select.ng-select-single,
+    &.ng-select.ng-select-multiple {
+      .ng-select-container {
+        height: auto;
+        padding-block: 0;
+        padding-inline: $product-summary-account-selector-option-padding;
+        > .ng-value-container {
+          .ng-value {
+            padding-block-start: $product-summary-account-selector-option-padding;
+            padding-block-end: calc(
+              #{$product-summary-account-selector-option-padding} - #{$product-summary-account-selector-item-padding}
+            );
+          }
+        }
+        .bb-amount {
+          margin-block-start: 0;
+        }
+      }
+      .ng-dropdown-panel {
+        .ng-option {
+          padding-block-end: calc(
+            #{$product-summary-account-selector-option-padding} - #{$product-summary-account-selector-item-padding}
+          );
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        .ng-select-container {
+          padding-block: 0;
+          padding-inline: $product-summary-account-selector-item-padding;
+          > .ng-value-container {
+            .ng-value {
+              padding-block-start: $product-summary-account-selector-item-padding;
+              padding-block-end: 0;
+            }
+          }
+        }
+        .ng-dropdown-panel {
+          .ng-option {
+            padding-block-start: $product-summary-account-selector-item-padding;
+            padding-block-end: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bb-product-summary-account-selector__external-title {
+  padding-inline-start: map-get($icon-background-size-map, "md");
+}

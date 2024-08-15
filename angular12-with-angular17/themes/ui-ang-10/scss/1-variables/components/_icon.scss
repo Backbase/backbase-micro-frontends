@@ -1,0 +1,179 @@
+////
+/// Icons (global)
+/// @group 1-variables/components/icon
+/// @access private
+////
+
+/// Configures the padding for font-icons
+/// @access public
+@use "sass:math";
+
+$font-icon-btn-padding: 0.5em !default;
+
+/// Configures the scale for Small icons
+/// @access public
+$icon-scale-sm: math.div(2.5, 3) !default; // ~16px
+
+/// Default scale for Medium icons (read-only). To configure the global icon-size use $font-icon-size instead
+/// @access public
+$icon-scale-md: 1; // ~24px
+
+/// Configures the scale for Large icons
+/// @access public
+$icon-scale-lg: math.div(4, 3) !default; // ~32px
+
+/// Configures the scale for Extra Large icons
+/// @access public
+$icon-scale-xl: math.div(5, 3) !default; // ~40px
+
+/// Configures the scale for Extra Extra Large icons
+/// @access public
+$icon-scale-xxl: 3 !default; // ~72px
+
+/// Configures the scale for Small round icons
+/// @access public
+$icon-scale-circle-sm: 1.6 !default;
+
+/// Configures the scale for Medium  round icons
+/// @access public
+$icon-scale-circle-md: 2 !default;
+
+/// Configures the contrasting icon color for icons with a background-color
+/// @access public
+/// @require {variable} $color-primary
+$icon-contrast-color: $color-primary !default;
+
+/// Configures the border-radius for square icons, has some roundness by default
+/// @access public
+/// @require {variable} $border-radius-sm
+$icon-square-border-radius: $border-radius-sm !default;
+
+$header-background-color: () !default;
+
+/// Can be used to add or override available icon colors.
+/// Beware when adding new color names this is extending th theme.
+/// The classname does not exist in our components and can be added to your components with `.bb-icon--{color}`
+/// @access public;
+/// @require {variable} $color-neutral-greyest
+/// @require {variable} $color-neutral-dark
+$icon-custom-color-list: map-merge(
+  (
+    "inactive": $color-neutral-greyest,
+    "neutral-dark": $color-neutral-dark,
+    "pending-state": $color-neutral-dark,
+  ),
+  $header-background-color
+) !default;
+
+/// Configures the default icon size
+/// @access public
+$font-icon-size: 1.5rem !default; // ~24px
+
+/// Icon size sm (read-only)
+/// Composed of $font-icon-size * $icon-scale-sm
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-sm
+$font-icon-size-sm: $font-icon-size * $icon-scale-sm;
+
+/// Icon size md (read-only)
+/// Composed of $font-icon-size * $icon-scale-md
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-md
+$font-icon-size-md: $font-icon-size * $icon-scale-md;
+
+/// Icon size lg (read-only)
+/// Composed of $font-icon-size * $icon-scale-lg
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-lg
+$font-icon-size-lg: $font-icon-size * $icon-scale-lg;
+
+/// Icon size xl (read-only)
+/// Composed of $font-icon-size * $icon-scale-xl
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-xl
+$font-icon-size-xl: $font-icon-size * $icon-scale-xl;
+
+/// Icon size xxl (read-only)
+/// Composed of $font-icon-size * $icon-scale-xxl
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-xxl
+$font-icon-size-xxl: $font-icon-size * $icon-scale-xxl;
+
+/// Round icon size sm (read-only)
+/// Composed of $font-icon-size * $icon-scale-circle-sm
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-circle-sm
+$font-icon-circle-size-sm: $font-icon-size * $icon-scale-circle-sm;
+
+/// Round icon size md (read-only)
+/// Composed of $font-icon-size * $icon-scale-circle-md
+/// @access public
+/// @require {variable} $font-icon-size
+/// @require {variable} $icon-scale-circle-md
+$font-icon-circle-size-md: $font-icon-size * $icon-scale-circle-md;
+
+/// Configures the icon background size
+/// @access public
+$font-icon-background-size: 2.5rem !default;
+
+/// Icon background size sm (read-only)
+/// Composed of $font-icon-background-size * $icon-scale-sm
+/// @access public
+/// @require {variable} $font-icon-background-size
+/// @require {variable} $icon-scale-sm
+$font-icon-background-size-sm: $font-icon-background-size * $icon-scale-sm;
+
+/// Icon background size md (read-only)
+/// Composed of $font-icon-background-size * $icon-scale-md
+/// @access public
+/// @require {variable} $font-icon-background-size
+/// @require {variable} $icon-scale-md
+$font-icon-background-size-md: $font-icon-background-size * $icon-scale-md;
+
+/// Icon background size lg (read-only)
+/// Composed of $font-icon-background-size * $icon-scale-lg
+/// @access public
+/// @require {variable} $font-icon-background-size
+/// @require {variable} $icon-scale-lg
+$font-icon-background-size-lg: $font-icon-background-size * $icon-scale-lg;
+
+/// Icon background size xl (read-only)
+/// Composed of $font-icon-background-size * $icon-scale-xl
+/// @access public
+/// @require {variable} $font-icon-background-size
+/// @require {variable} $icon-scale-xl
+$font-icon-background-size-xl: $font-icon-background-size * $icon-scale-xl;
+
+/// Icon background size xxl (read-only)
+/// Composed of $font-icon-background-size * $icon-scale-xxl
+/// @access public
+/// @require {variable} $font-icon-background-size
+/// @require {variable} $icon-scale-xxl
+$font-icon-background-size-xxl: $font-icon-background-size * $icon-scale-xxl;
+
+/// Configures the toggle for outlining icons. Defaults to true
+/// When false, it will use the original icon-map definitions
+/// @access public
+$enable-outlined-icons: true !default;
+
+$icon-size-map: (
+  sm: $font-icon-size-sm,
+  md: $font-icon-size-md,
+  lg: $font-icon-size-lg,
+  xl: $font-icon-size-xl,
+  xxl: $font-icon-size-xxl,
+);
+
+$icon-background-size-map: (
+  sm: $font-icon-background-size-sm,
+  md: $font-icon-background-size-md,
+  lg: $font-icon-background-size-lg,
+  xl: $font-icon-background-size-xl,
+  xxl: $font-icon-background-size-xxl,
+);

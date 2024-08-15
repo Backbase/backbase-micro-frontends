@@ -1,0 +1,74 @@
+// Global annotations
+////
+/// @group widgets
+/// @access public
+////
+$bb-manage-approval-policies-quick-filter-bg-color: $color-neutral-lightest !default;
+$bb-manage-approval-policies-quick-filter-item-padding: $sizer-sm $sizer-sm $sizer-sm $sizer-sm !default;
+$bb-manage-approval-policies-quick-filter-item-last-child-padding: $sizer-sm $sizer-sm $sizer-sm
+  $sizer-sm !default;
+$bb-manage-approval-policies-quick-filter-item-first-child-padding: $sizer-sm $sizer-sm $sizer-sm
+  $sizer-sm !default;
+$bb-manage-approval-policies-quick-filter-item-selected-bg-color: #fcf5e0 !default;
+$bb-manage-approval-policies-quick-filter-top-line-height: 2px !default;
+$bb-manage-approval-policies-quick-filter-top-line-width: 100% !default;
+$bb-manage-approval-policies-quick-filter-top-line-success-bg-color: $color-success !default;
+$bb-manage-approval-policies-quick-filter-top-line-warning-bg-color: $color-warning !default;
+$bb-manage-approval-policies-quick-filter-top-line-danger-bg-color: $color-danger !default;
+
+/// Manage approvals quick filter panel
+///
+/// @name bb-manage-approval-policies-quick-filter
+///
+/// @example html
+///   <div class="bb-manage-approval-policies-quick-filter">
+///     <div class="bb-manage-approval-policies-quick-filter__item">
+///       <div class="bb-manage-approval-policies-quick-filter__top-line bb-manage-approval-policies-quick-filter__top-line--assigned"></div>
+///     </div>
+///     <div class="bb-manage-approval-policies-quick-filter__item bb-manage-approval-policies-quick-filter__item--selected">
+///       <div class="bb-manage-approval-policies-quick-filter__top-line bb-manage-approval-policies-quick-filter__top-line--pending"></div>
+///     </div>
+///     <div class="bb-manage-approval-policies-quick-filter__item">
+///       <div class="bb-manage-approval-policies-quick-filter__top-line bb-manage-approval-policies-quick-filter__top-line--unassigned"></div>
+///     </div>
+///   </div>
+
+.bb-manage-approval-policies-quick-filter {
+  align-items: stretch;
+  background-color: $bb-manage-approval-policies-quick-filter-bg-color;
+}
+
+.bb-manage-approval-policies-quick-filter__item {
+  margin: 0;
+  padding: $bb-manage-approval-policies-quick-filter-item-padding;
+  cursor: pointer;
+
+  &:first-child {
+    padding: $bb-manage-approval-policies-quick-filter-item-first-child-padding;
+  }
+
+  &:last-child {
+    padding: $bb-manage-approval-policies-quick-filter-item-last-child-padding;
+  }
+}
+
+.bb-manage-approval-policies-quick-filter__item--selected {
+  background-color: $bb-manage-approval-policies-quick-filter-item-selected-bg-color;
+}
+
+.bb-manage-approval-policies-quick-filter__top-line {
+  width: $bb-manage-approval-policies-quick-filter-top-line-width;
+  height: $bb-manage-approval-policies-quick-filter-top-line-height;
+}
+
+.bb-manage-approval-policies-quick-filter__top-line--assigned {
+  background-color: $bb-manage-approval-policies-quick-filter-top-line-success-bg-color;
+}
+
+.bb-manage-approval-policies-quick-filter__top-line--pending {
+  background-color: $bb-manage-approval-policies-quick-filter-top-line-warning-bg-color;
+}
+
+.bb-manage-approval-policies-quick-filter__top-line--unassigned {
+  background-color: $bb-manage-approval-policies-quick-filter-top-line-danger-bg-color;
+}

@@ -1,0 +1,57 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Block which include information about bb-cards-list-widget.
+///
+/// @name bb-card-list-widget-ang
+///
+/// @example html/
+/// <h2 class="bb-payment-card-group-header bb-stack">
+///  <bb-icon-ui class="bb-payment-card-group-header__icon">
+///   <i class="bb-icon"></i>
+///  </bb-icon-ui>
+///  <span class="bb-stack__item  bb-stack__item--align-center">Credit</span>
+/// </h2>
+/// <div>
+///   <div class="bb-payment-card-component">
+///      <div class="bb-payment-card" [ngClass]="classNames">
+///        <div class="bb-payment-card__container">
+///          <div class="bb-payment-card__logo">
+///            <div class="bb-logo"></div>
+///          </div>
+///          <div class="bb-payment-card__vendor">
+///            <div class="bb-card-vendor"></div>
+///          </div>
+///          <div class="bb-payment-card__number">
+///            •••• •••• •••• 0101
+///          </div>
+///          <div class="bb-payment-card__name">
+///            Jack Reacher
+///          </div>
+///          <div class="bb-payment-card__expiration-date">
+///            <div>
+///              VALID THRU
+///            </div>
+///            12/23
+///          </div>
+///        </div>
+///      </div>
+///   </div>
+/// </div>
+
+.bb-payment-card-group-header__icon {
+  margin-inline-end: $spacer-sm;
+}
+
+.bb-payment-card-controls {
+  margin-inline-end: $spacer-sm;
+}
+
+.bb-payment-card-icon-dialog {
+  width: 100%;
+  max-width: 20rem;
+  min-height: 12rem;
+}

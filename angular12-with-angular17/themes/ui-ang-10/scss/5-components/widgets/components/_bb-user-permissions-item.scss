@@ -1,0 +1,52 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+/// Styles for User Permissions Item
+/// This component shows user permissions.
+///
+/// @name bb-user-permissions-item
+///
+/// @example html
+/// <div class="bb-user-permission-item bb-block bb-block--sm">
+///    <div
+///      class="bb-block bb-block--md">
+///      <div class="bb-stack bb-block bb-block--md row g-0">
+///        <div class="col-3"></div>
+///        <div
+///          class="col-6 bb-user-permission-item__business-function-privileges-name bb-subheader bb-subheader--regular">
+///          <span class="col bb-business-function-privilege-name-item bb-text-align-center">Execute</span>
+///        </div>
+///      </div>
+///
+///    <div
+///      class="bb-stack bb-block bb-block--md row g-0">
+///      <div class="bb-stack__item bb-stack__item--spacing-none bb-text-bold  col-3">
+///         <div class="bb-user-permission-item__function-item__label bb-text-bold bb-subtitle">
+///           Lorem Ipsum
+///         </div>
+///      </div>
+///
+///      <div class="bb-stack col-6">
+///          <span class="col bb-privilege-indicator-list-item bb-text-align-center">
+///          <i class="bb-icon bb-icon-remove bb-icon--md bb-icon--muted"></i>
+///        </span>
+///        </div>
+///    </div>
+///  </div>
+/// </div>
+
+.bb-user-permission-item {
+  padding-top: $sizer-sm;
+}
+
+.bb-user-permission-item__business-function-privileges-name {
+  display: flex;
+}
+
+.bb-user-permission-item__function-item__label {
+  padding-right: 0;
+  padding-left: $sizer;
+}

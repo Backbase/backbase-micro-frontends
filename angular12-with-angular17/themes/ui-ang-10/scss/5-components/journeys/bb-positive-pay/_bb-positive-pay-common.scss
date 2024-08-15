@@ -1,0 +1,25 @@
+//// Common classes used in Positive pay journey
+/// @access public
+/// @group journey-specific
+////
+
+// Configure the warning color for the exception errors
+$positive-pay-exception-error-color: $color-warning-darkest !default;
+
+/// Common classes used in Positive pay journey
+///
+/// @name bb-positive-pay-common
+
+/// @example html
+/// <span class="bb-positive-pay-text bb-positive-pay-text--warning">Duplicate check</span>
+
+.bb-positive-pay-text--warning {
+  color: $positive-pay-exception-error-color;
+}
+
+/// @example html
+/// <span class="bb-positive-pay-full-height">Duplicate check</span>
+
+.bb-positive-pay-full-height {
+  height: 100%;
+}

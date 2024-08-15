@@ -1,0 +1,37 @@
+.dynamic-form,
+.payment-wizard-form {
+  margin-right: -#{$spacer-md};
+  margin-left: -#{$spacer-md};
+
+  .bb-fieldset__heading {
+    margin-bottom: 0;
+    padding: $sizer-md;
+  }
+
+  .btn-container {
+    padding: $sizer-xl $sizer-md $sizer-md;
+  }
+}
+
+.payment-wizard-form,
+.dynamic-form {
+  .bb-fieldset {
+    margin-bottom: 0;
+  }
+
+  .payment-schedule .bb-fieldset {
+    margin-bottom: $spacer-sm;
+  }
+
+  .bb-fieldset__heading,
+  bb-payord-schedule .payment-schedule {
+    margin-bottom: 0;
+    padding: $sizer-md;
+  }
+
+  bb-payord-group:first-of-type {
+    .bb-fieldset__heading {
+      padding-top: 0;
+    }
+  }
+}

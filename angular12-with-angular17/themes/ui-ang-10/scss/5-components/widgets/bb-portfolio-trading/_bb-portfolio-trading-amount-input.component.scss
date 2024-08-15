@@ -1,0 +1,31 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-portfolio-trading__amount-input {
+  width: 60%;
+  border: none;
+  outline: none;
+  color: $portfolio-trading-color-grey;
+  transition: font-size 0.3s;
+  font-size: $font-size-highlight;
+}
+
+.bb-portfolio-trading__amount-input-currency-label {
+  width: 40%;
+  font-size: $font-size-highlight;
+  color: $portfolio-trading-color-grey;
+}
+.bb-portfolio-trading__amount-input-currency-label--touched {
+  color: $color-neutral-black;
+}
+.bb-portfolio-trading__amount-input--touched {
+  color: $color-neutral-black;
+}
+
+.bb-portfolio-trading__amount-input--active {
+  color: $color-neutral-black;
+  font-size: 2rem;
+}

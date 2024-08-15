@@ -1,0 +1,47 @@
+// Global annotations
+////
+/// @group navigation
+/// @access private
+////
+
+$nav-tabs-inverse-link-color: $color-neutral-white !default;
+$nav-tabs-inverse-link-focus-color: $color-neutral-greyer !default;
+$nav-tabs-inverse-link-hover-color: $color-neutral-white !default;
+$nav-tabs-inverse-link-active-color: $color-neutral-white !default;
+$nav-tabs-inverse-link-hover-bg: transparent !default;
+$nav-tabs-inverse-link-hover-border-color: $color-neutral-greyer !default;
+$nav-tabs-inverse-link-active-border-color: $color-neutral-white !default;
+$nav-tabs-inverse-link-focus-border-primary: 3px solid $color-neutral-greyer !default;
+
+$nav-tabs-default-link-color: $color-neutral-black !default;
+$nav-tabs-default-link-focus-color: rgba($color-info, 0.2) !default;
+$nav-tabs-default-link-hover-color: $color-neutral-black !default;
+$nav-tabs-default-link-active-color: $color-info !default;
+$nav-tabs-default-link-hover-bg: $color-neutral-lightest !default;
+$nav-tabs-default-link-hover-border-color: $color-neutral-greyer !default;
+$nav-tabs-default-link-active-border-color: $color-info !default;
+
+.bb-tab--inverse {
+  @include navigation-tabs(
+    $nav-tabs-inverse-link-color,
+    $nav-tabs-inverse-link-focus-color,
+    $nav-tabs-inverse-link-hover-color,
+    $nav-tabs-inverse-link-hover-bg,
+    $nav-tabs-inverse-link-hover-border-color,
+    $nav-tabs-inverse-link-active-color,
+    $nav-tabs-inverse-link-active-border-color,
+    true
+  );
+}
+
+.bb-tab--default {
+  @include navigation-tabs(
+    $nav-tabs-default-link-color,
+    $nav-tabs-default-link-focus-color,
+    $nav-tabs-default-link-hover-color,
+    $nav-tabs-default-link-hover-bg,
+    $nav-tabs-default-link-hover-border-color,
+    $nav-tabs-default-link-active-color,
+    $nav-tabs-default-link-active-border-color
+  );
+}

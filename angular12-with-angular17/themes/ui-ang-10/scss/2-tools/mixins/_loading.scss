@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+/**
+ * @name Spinner mixin
+ *
+ * @description
+ * This will add an animated spinner in the background
+ *
+ * Parameters for this mixin are:
+ * size - Width and height of the spinner
+ */
+@mixin spinner($size) {
+  width: $size;
+  height: $size;
+  background: url("../assets/images/spinner.svg") no-repeat;
+  background-size: $size;
+}

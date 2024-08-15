@@ -1,0 +1,127 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+$select-context-state-height: 100vh !default;
+
+.bb-select-context {
+  display: flex;
+  flex-direction: row;
+}
+
+.bb-select-context__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+}
+
+.bb-select-context__infinite-scroll {
+  overflow-y: auto;
+}
+
+.bb-select-context__header {
+  padding-bottom: $spacer;
+}
+
+.bb-select-context__subheader {
+  margin: $spacer-sm 0;
+  color: $color-neutral-greyest;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  text-transform: uppercase;
+}
+
+.bb-select-context__items-loaded-label {
+  color: $color-neutral-greyest;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-subheader;
+  text-align: center;
+}
+
+.bb-select-context__current-context {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color-neutral;
+}
+
+.bb-select-context__search {
+  display: block;
+  margin-bottom: $spacer;
+}
+
+.bb-select-context__item {
+  padding: 0.75 * $spacer;
+
+  &:hover {
+    background-color: $color-neutral-light;
+  }
+
+  &_selected {
+    background-color: $color-neutral-light;
+  }
+}
+
+.bb-select-context-menu-ellipsis {
+  max-width: 14rem;
+}
+
+.bb-select-context-ellipsis-selected {
+  max-width: 20rem;
+}
+
+.bb-select-context-ellipsis-selected__name {
+  max-width: 15rem;
+}
+
+.bb-select-context-ellipsis-dropdown {
+  max-width: 22rem;
+}
+
+.bb-select-context-ellipsis {
+  max-width: $spacer * 26;
+
+  @media (min-width: 577px) and (max-width: 640px) {
+    width: $spacer * 24;
+  }
+
+  @media (min-width: 481px) and (max-width: 576px) {
+    width: $spacer * 22;
+  }
+
+  @media (min-width: 376px) and (max-width: 480px) {
+    width: $spacer * 14;
+  }
+
+  @media (max-width: 375px) {
+    width: $spacer * 11;
+  }
+}
+
+.bb-select-context__back {
+  margin-top: $spacer;
+}
+
+.service-agreement-item {
+  display: flex;
+  align-items: center;
+}
+
+.bb-select-context__state {
+  justify-content: center;
+  height: $select-context-state-height;
+}
+
+.service-agreement-item__details {
+  margin-left: $spacer;
+}
+
+.service-agreement-item__title {
+  font-weight: bold;
+}
+.service-agreement-item__desc {
+  color: $color-neutral-greyest;
+}

@@ -1,0 +1,27 @@
+////
+/// Asset paths (global)
+/// @group 1-variables/brand/path
+/// @access private
+////
+
+/// Backbase font path (internal)
+$path-bb-fonts: "../../assets/fonts";
+
+/// Backbase images path (internal)
+$path-bb-images: "../../../assets/images";
+
+/// Configures a custom assets path. Defaults to the preset assets folder
+/// @access public
+$path-assets: "../assets" !default;
+
+/// Configures a custom fonts path. Defaults to the preset $assets/fonts folder
+/// @access public
+$path-fonts: "#{$path-assets}/fonts" !default;
+
+/// Configures a custom assets path. Defaults to the preset $assets/fonts folder
+/// @access public
+$path-images: "#{$path-assets}/images" !default;
+
+$path-flag-icon-css: "#{$path-bb-images}/flags" !default;
+$path-flag-icon-rect: "#{$path-flag-icon-css}/4x3" !default;
+$path-flag-icon-square: "#{$path-flag-icon-css}/1x1" !default;

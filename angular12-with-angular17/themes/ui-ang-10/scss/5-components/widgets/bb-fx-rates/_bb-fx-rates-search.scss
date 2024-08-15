@@ -1,0 +1,13 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-fx-rates-search {
+  max-width: 300px;
+
+  @include media-breakpoint-down(md) {
+    max-width: 100%;
+  }
+}

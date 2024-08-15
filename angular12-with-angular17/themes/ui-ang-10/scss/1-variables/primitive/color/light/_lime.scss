@@ -1,0 +1,14 @@
+////
+/// Colors (global)
+/// @group 1-variables/primitive/color/light/lime
+/// @access private
+////
+
+/* stylelint-disable color-no-hex */
+
+$color-light-lime-lightest: $chart-color-8-lightest; // #EBF7DC
+$color-light-lime-lighter: $chart-color-8-lighter; // #A1D85C
+$color-light-lime-default: $chart-color-8; // #79C716
+$color-light-lime-darker: $chart-color-8-darker; // #558B0F
+$color-light-lime-darkest: $chart-color-8-darkest; // #436D0C
+$color-light-lime-on-color: $color-neutral-white;

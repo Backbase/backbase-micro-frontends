@@ -1,0 +1,61 @@
+////
+/// Forms (global)
+/// @group base
+/// @access private
+////
+
+:root {
+  --input-background-color: #{$input-background-color};
+  --input-color: #{$input-color};
+  --input-placeholder-color: #{$input-placeholder-color};
+  --input-border-width: #{$input-border-width};
+  --input-border-style: #{$input-border-style};
+  --input-border-color: #{$input-border-color};
+  --input-border: #{$input-border};
+  --input-border-radius: #{$input-border-radius};
+  --input-padding-horizontal: #{$input-padding-horizontal};
+  --input-padding-vertical: #{$input-padding-vertical};
+  --input-padding: #{$input-padding};
+  --input-font-size: #{$input-font-size};
+  --input-font-weight: #{$input-font-weight};
+  --input-box-shadow: #{$input-box-shadow};
+  --input-focus-border-color: #{$input-focus-border-color};
+  --input-focus-border-width: #{$input-focus-border-width};
+  --input-focus-border-style: #{$input-focus-border-style};
+  --input-focus-border: #{$input-focus-border};
+  --input-focus-box-shadow: #{$input-focus-box-shadow};
+  --input-invalid-border-color: #{$input-invalid-border-color};
+  --input-invalid-border-width: #{$input-invalid-border-width};
+  --input-invalid-border-style: #{$input-invalid-border-style};
+  --input-invalid-border: #{$input-invalid-border};
+  --input-disabled-background-color: #{$input-disabled-background-color};
+  --input-disabled-placeholder-color: #{$input-disabled-placeholder-color};
+  --input-disabled-color: #{$input-disabled-color};
+}
+
+$input-background-color: var(--input-background-color);
+$input-color: var(--input-color);
+$input-placeholder-color: var(--input-placeholder-color);
+$input-border-width: var(--input-border-width);
+$input-border-style: var(--input-border-style);
+$input-border-color: var(--input-border-color);
+$input-border: var(--input-border);
+$input-border-radius: var(--input-border-radius);
+$input-padding-horizontal: var(--input-padding-horizontal);
+$input-padding-vertical: var(--input-padding-vertical);
+$input-padding: var(--input-padding);
+$input-font-size: var(--input-font-size);
+$input-font-weight: var(--input-font-weight);
+$input-box-shadow: var(--input-box-shadow);
+$input-focus-border-color: var(--input-focus-border-color);
+$input-focus-border-width: var(--input-focus-border-width);
+$input-focus-border-style: var(--input-focus-border-style);
+$input-focus-border: var(--input-focus-border);
+$input-focus-box-shadow: var(--input-focus-box-shadow);
+$input-invalid-border-color: var(--input-invalid-border-color);
+$input-invalid-border-width: var(--input-invalid-border-width);
+$input-invalid-border-style: var(--input-invalid-border-style);
+$input-invalid-border: var(--input-invalid-border);
+$input-disabled-background-color: var(--input-disabled-background-color);
+$input-disabled-placeholder-color: var(--input-disabled-placeholder-color);
+$input-disabled-color: var(--input-disabled-color);

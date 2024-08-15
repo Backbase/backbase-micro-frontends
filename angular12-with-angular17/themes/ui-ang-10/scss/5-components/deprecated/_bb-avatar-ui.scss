@@ -1,0 +1,21 @@
+// Global annotations
+////
+/// @group deprecated
+/// @access private
+////
+
+.bb-avatar-sm {
+  @extend .bb-avatar--sm;
+}
+
+.bb-avatar-md {
+  @extend .bb-avatar--md;
+}
+
+.bb-avatar-lg {
+  @extend .bb-avatar--lg;
+}
+
+.bb-avatar-xl {
+  @extend .bb-avatar--xl;
+}

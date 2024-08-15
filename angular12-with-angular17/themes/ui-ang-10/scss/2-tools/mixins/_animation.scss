@@ -1,0 +1,108 @@
+// Global annotations
+////
+/// @group mixins
+/// @access private
+////
+
+/**
+ * @name Positive rotation classes mixin
+ *
+ * @description
+ * This will generate classes with transform rotate '+' deg for a given interval
+ *
+ * Parameters:
+ * $minRotationAngle - starting angle
+ * $maxRotationAngle - end angle
+ */
+
+@mixin generate-positive-rotation-classes($minRotationAngle, $maxRotationAngle) {
+  @for $i from $minRotationAngle through $maxRotationAngle {
+    .rotate-p-#{$i}-deg {
+      transform: rotate(#{$i}deg);
+    }
+  }
+}
+
+/**
+ * @name Negative rotation classes mixin
+ *
+ * @description
+ * This will generate classes with transform rotate '-' deg for a given interval
+ *
+ * Parameters:
+ * $minRotationAngle - starting angle
+ * $maxRotationAngle - end angle
+ */
+@mixin generate-negative-rotation-classes($minRotationAngle, $maxRotationAngle) {
+  @for $i from $minRotationAngle through $maxRotationAngle {
+    .rotate-n-#{$i}-deg {
+      transform: rotate(-#{$i}deg);
+    }
+  }
+}
+
+/**
+ * @name fade animation mixin
+ *
+ * @description
+ * defines animation for fades
+ *
+ * Parameters for this mixin are:
+ * $class-name: Class name
+ * $background-from: Color value;
+ * $background-to: Color value;
+ **/
+
+@mixin animation-ease-in {
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@mixin fade-background-from-to($class-name, $background-from, $background-to) {
+  @keyframes fade-#{$class-name} {
+    from {
+      background-color: $background-from;
+    }
+
+    to {
+      background-color: $background-to;
+    }
+  }
+
+  .#{$class-name} {
+    @include animation-ease-in;
+    background-color: $background-from;
+    animation-name: fade-#{$class-name};
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+// animation / motion
+@mixin animation($what, $speed: $motion-duration-default) {
+  transform-origin: 100% 0;
+  transition: mdc-animation-enter($what, $speed);
+}
+
+/**
+ * @name Infinite rotation animation classes mixin
+ *
+ * @description
+ * It adds all the transformations to infinite rotate an element
+ *
+ * Parameters:
+ * $anticlockwise - reverses animation direction
+ */
+@mixin infinite-rotation($anticlockwise: false) {
+  transform-origin: center center;
+  animation: rotate 2s linear infinite;
+  @if $anticlockwise {
+    animation-direction: reverse;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

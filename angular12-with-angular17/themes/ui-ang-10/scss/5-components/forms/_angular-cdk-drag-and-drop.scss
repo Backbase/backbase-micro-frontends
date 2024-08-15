@@ -1,0 +1,14 @@
+// Global annotations
+////
+/// Angular CDK UI Components (Used in Cash Management & Portfolio Summary)
+/// @group forms
+/// @access private
+////
+
+.cdk-drag-placeholder {
+  opacity: 0.3;
+}
+
+.cdk-drag-handle {
+  cursor: move;
+}

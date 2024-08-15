@@ -1,0 +1,30 @@
+$bb-select-payment-option-label-offset-margin: -3rem !default;
+$bb-select-payment-option-label-left-padding: 2.5rem !default;
+$bb-select-payment-option-border-radius: 1rem !default;
+$bb-select-payment-option-active-bg-color: $color-primary-lightest !default;
+$bb-select-payment-option-bg-color: $color-neutral-lightest !default;
+
+.bb-select-payment-option {
+  padding: 0 $sizer-md;
+}
+
+.bb-select-payment-option .bb-input-radio-group__label,
+.bb-select-payment-option .bb-label {
+  margin-left: -#{$spacer-md};
+}
+
+.bb-select-payment-option .bb-select-payment-option__label {
+  margin-left: $bb-select-payment-option-label-offset-margin;
+  padding: $sizer-md;
+  padding-left: $bb-select-payment-option-label-left-padding;
+  background-color: $bb-select-payment-option-bg-color;
+  border-radius: $bb-select-payment-option-border-radius;
+}
+
+.bb-input-radio-group__radio.selected .bb-select-payment-option__label {
+  background-color: $bb-select-payment-option-active-bg-color;
+}
+
+.bb-select-payment-option__icon {
+  margin: 0 $spacer-sm;
+}

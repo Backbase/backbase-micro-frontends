@@ -1,0 +1,194 @@
+// Global annotations
+////
+/// @group data
+/// @access private
+////
+
+/**
+ * --------------------------------------------------------------------------
+ * Chart.js & ngx-chart tooltip styles
+ * --------------------------------------------------------------------------
+ * @name chart-tooltip
+ * @description
+ * Shared styles for Chart.js UI components
+ * Some styles are read inside code that generates canvas and for those
+ * styles examples cannot be provided.
+ *
+ * @example
+ * <div class="chart-tooltip chart-tooltip-default bb-arrow-top">
+ *   <span>Tooltip title</span>
+ *   <hr class="tooltip-divider">
+ *   <div>Amount
+ *      <span class="pull-right text-success">
+ *        10
+ *      </span>
+ *   </div>
+ * </div>
+ *
+ * <div class="chart-tooltip chart-tooltip-default bb-arrow-bottom">
+ *   <span>Tooltip title</span>
+ *   <hr class="tooltip-divider">
+ *   <div>Amount
+ *      <span class="pull-right text-success">
+ *        10
+ *      </span>
+ *   </div>
+ * </div>
+ *
+ * <div class="chart-tooltip chart-tooltip-default bb-arrow-near bb-arrow-bottom">
+ *   <span>Tooltip title</span>
+ *   <hr class="tooltip-divider">
+ *   <div>Amount
+ *      <span class="pull-right text-success">
+ *        10
+ *      </span>
+ *   </div>
+ * </div>
+ *
+ * <div class="chart-tooltip chart-tooltip-default bb-arrow-far bb-arrow-bottom">
+ *   <span>Tooltip title</span>
+ *   <hr class="tooltip-divider">
+ *   <div>Amount
+ *      <span class="pull-right text-success">
+ *        10
+ *      </span>
+ *   </div>
+ * </div>
+ */
+$chart-tooltip-arrow-size: 10px !default;
+$chart-tooltip-arrow-position-near: 25% !default;
+$chart-tooltip-arrow-position-default: 50% !default;
+$chart-tooltip-arrow-position-far: 75% !default;
+$chart-tooltip-arrow-border-size: 2px !default;
+$chart-tooltip-light-caret-border: 7px solid white !default;
+$chart-tooltip-light-background-color: $color-neutral-white !default;
+$chart-tooltip-light-color: $color-neutral-black !default;
+$chart-tooltip-light-box-shadow: $box-shadow-sm !default;
+$chart-tooltip-sm-padding: $sizer-sm !default;
+$chart-tooltip-md-padding: $sizer-md !default;
+
+:root {
+  --chart-tooltip-caret-size: #{$chart-tooltip-arrow-size + $chart-tooltip-arrow-border-size * 2};
+}
+
+.chart-layout-change {
+  width: grid-breakpoints("md");
+}
+
+.chart-tooltip {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  min-width: 215px;
+  font-size: 15px;
+
+  &.chart-tooltip-wide {
+    min-width: 230px;
+  }
+
+  &.chart-tooltip-small {
+    min-width: 190px;
+  }
+}
+
+.chart-tooltip-default {
+  @include arrow(
+    $chart-tooltip-arrow-size,
+    $chart-tooltip-arrow-border-size,
+    $chart-tooltip-arrow-position-default,
+    $color-neutral-white,
+    $color-neutral-light
+  );
+  padding: 7px 16px;
+  color: $color-neutral-greyest;
+  background-color: $color-neutral-white;
+  border: $border-width $border-style $border-color;
+  border-color: $color-neutral-lightest;
+  border-radius: 2px;
+  box-shadow: $box-shadow-sm;
+  will-change: transform;
+
+  &.bb-arrow-near {
+    @include arrow(
+      $chart-tooltip-arrow-size,
+      $chart-tooltip-arrow-border-size,
+      $chart-tooltip-arrow-position-near,
+      $color-neutral-white,
+      $color-neutral-light
+    );
+  }
+
+  &.bb-arrow-far {
+    @include arrow(
+      $chart-tooltip-arrow-size,
+      $chart-tooltip-arrow-border-size,
+      $chart-tooltip-arrow-position-far,
+      $color-neutral-white,
+      $color-neutral-light
+    );
+  }
+
+  .amount {
+    white-space: nowrap;
+  }
+}
+
+.chart-tooltip-divider {
+  margin: 5px 0;
+}
+
+.chart-tooltip-info-icon {
+  // float: left;
+}
+
+.chart-tooltip-info-text {
+  // float: left;
+  width: 115px;
+}
+
+/*
+Styles for tooltip created via 'ngx-tooltip' directive
+*/
+.chart-tooltip--light {
+  &.ngx-charts-tooltip-content.type-tooltip {
+    color: $chart-tooltip-light-color;
+    background-color: $chart-tooltip-light-background-color;
+    box-shadow: $chart-tooltip-light-box-shadow;
+
+    .tooltip-caret {
+      &.position-left {
+        border-left: $chart-tooltip-light-caret-border;
+      }
+
+      &.position-top {
+        border-top: $chart-tooltip-light-caret-border;
+      }
+
+      &.position-right {
+        border-right: $chart-tooltip-light-caret-border;
+      }
+
+      &.position-bottom {
+        border-bottom: $chart-tooltip-light-caret-border;
+      }
+    }
+  }
+}
+
+/*
+Chart tooltip with small padding
+ */
+.chart-tooltip--sm {
+  &.ngx-charts-tooltip-content.type-tooltip {
+    padding: $chart-tooltip-sm-padding;
+  }
+}
+
+/*
+Chart tooltip with medium padding
+ */
+.chart-tooltip--md {
+  &.ngx-charts-tooltip-content.type-tooltip {
+    padding: $chart-tooltip-md-padding;
+  }
+}

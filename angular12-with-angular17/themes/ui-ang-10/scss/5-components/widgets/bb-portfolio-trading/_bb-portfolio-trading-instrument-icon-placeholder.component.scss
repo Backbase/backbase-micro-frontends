@@ -1,0 +1,39 @@
+// Global annotations
+////
+/// @group widgets
+/// @access private
+////
+
+.bb-instrument-icon {
+  padding: 12px 2px 10px 2px;
+  background: $color-neutral-white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  border-radius: $border-radius-sm;
+  line-height: $font-size-base;
+  font-weight: bold;
+  color: $color-neutral-greyest;
+}
+
+$bicon-size-map: (
+  sm: (
+    font-size: 0.65rem,
+    min-width: 40px,
+    height: 40px,
+    line-height: $font-size-base,
+  ),
+  md: (
+    font-size: $font-size-base,
+    min-width: 58px,
+    height: 58px,
+    line-height: 30px,
+  ),
+);
+
+@each $size, $map in $bicon-size-map {
+  .bb-instrument-icon--#{$size} {
+    min-width: map-get($map, "min-width");
+    height: map-get($map, "height");
+    font-size: map-get($map, "font-size");
+    line-height: map-get($map, "line-height");
+  }
+}

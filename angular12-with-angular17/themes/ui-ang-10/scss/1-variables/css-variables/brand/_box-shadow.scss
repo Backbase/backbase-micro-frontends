@@ -1,0 +1,68 @@
+////
+/// Shadows (global)
+/// @group base
+/// @access private
+////
+
+$box-shadow-sm: var(--box-shadow-sm-offset-x) var(--box-shadow-sm-offset-y)
+  var(--box-shadow-sm-blur-radius) var(--box-shadow-sm-spread-radius) var(--box-shadow-sm-color);
+$box-shadow-md: var(--box-shadow-md-offset-x) var(--box-shadow-md-offset-y)
+  var(--box-shadow-md-blur-radius) var(--box-shadow-md-spread-radius) var(--box-shadow-md-color);
+$box-shadow-lg: var(--box-shadow-lg-offset-x) var(--box-shadow-lg-offset-y)
+  var(--box-shadow-lg-blur-radius) var(--box-shadow-lg-spread-radius) var(--box-shadow-lg-color);
+$box-shadow-xl: var(--box-shadow-xl-offset-x) var(--box-shadow-xl-offset-y)
+  var(--box-shadow-xl-blur-radius) var(--box-shadow-xl-spread-radius) var(--box-shadow-xl-color);
+
+:root {
+  --box-shadow-sm-offset-x: #{$box-shadow-sm-offset-x};
+  --box-shadow-sm-offset-y: #{$box-shadow-sm-offset-y};
+  --box-shadow-sm-blur-radius: #{$box-shadow-sm-blur-radius};
+  --box-shadow-sm-spread-radius: #{$box-shadow-sm-spread-radius};
+  --box-shadow-sm-color: #{$box-shadow-sm-color};
+  --box-shadow-sm: #{$box-shadow-sm};
+
+  --box-shadow-md-offset-x: #{$box-shadow-md-offset-x};
+  --box-shadow-md-offset-y: #{$box-shadow-md-offset-y};
+  --box-shadow-md-blur-radius: #{$box-shadow-md-blur-radius};
+  --box-shadow-md-spread-radius: #{$box-shadow-md-spread-radius};
+  --box-shadow-md-color: #{$box-shadow-md-color};
+  --box-shadow-md: #{$box-shadow-md};
+
+  --box-shadow-lg-offset-x: #{$box-shadow-lg-offset-x};
+  --box-shadow-lg-offset-y: #{$box-shadow-lg-offset-y};
+  --box-shadow-lg-blur-radius: #{$box-shadow-lg-blur-radius};
+  --box-shadow-lg-spread-radius: #{$box-shadow-lg-spread-radius};
+  --box-shadow-lg-color: #{$box-shadow-lg-color};
+  --box-shadow-lg: #{$box-shadow-lg};
+
+  --box-shadow-xl-offset-x: #{$box-shadow-xl-offset-x};
+  --box-shadow-xl-offset-y: #{$box-shadow-xl-offset-y};
+  --box-shadow-xl-blur-radius: #{$box-shadow-xl-blur-radius};
+  --box-shadow-xl-spread-radius: #{$box-shadow-xl-spread-radius};
+  --box-shadow-xl-color: #{$box-shadow-xl-color};
+  --box-shadow-xl: #{$box-shadow-xl};
+}
+
+$box-shadow-sm-offset-x: var(--box-shadow-sm-offset-x);
+$box-shadow-sm-offset-y: var(--box-shadow-sm-offset-y);
+$box-shadow-sm-blur-radius: var(--box-shadow-sm-blur-radius);
+$box-shadow-sm-spread-radius: var(--box-shadow-sm-spread-radius);
+$box-shadow-sm-color: var(--box-shadow-sm-color);
+
+$box-shadow-md-offset-x: var(--box-shadow-md-offset-x);
+$box-shadow-md-offset-y: var(--box-shadow-md-offset-y);
+$box-shadow-md-blur-radius: var(--box-shadow-md-blur-radius);
+$box-shadow-md-spread-radius: var(--box-shadow-md-spread-radius);
+$box-shadow-md-color: var(--box-shadow-md-color);
+
+$box-shadow-lg-offset-x: var(--box-shadow-lg-offset-x);
+$box-shadow-lg-offset-y: var(--box-shadow-lg-offset-y);
+$box-shadow-lg-blur-radius: var(--box-shadow-lg-blur-radius);
+$box-shadow-lg-spread-radius: var(--box-shadow-lg-spread-radius);
+$box-shadow-lg-color: var(--box-shadow-lg-color);
+
+$box-shadow-xl-offset-x: var(--box-shadow-xl-offset-x);
+$box-shadow-xl-offset-y: var(--box-shadow-xl-offset-y);
+$box-shadow-xl-blur-radius: var(--box-shadow-xl-blur-radius);
+$box-shadow-xl-spread-radius: var(--box-shadow-xl-spread-radius);
+$box-shadow-xl-color: var(--box-shadow-xl-color);
