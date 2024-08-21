@@ -1,7 +1,7 @@
 module.exports = [
   {
     context: '/api',
-    target: 'https://app.exp.sdbxaz.azure.backbaseservices.com',
+    target: 'https://app.bus.sdbxaz.azure.backbaseservices.com',
     secure: false,
     changeOrigin: true,
     bypass: function (req) {
@@ -10,7 +10,7 @@ module.exports = [
   },
   {
     context: '/auth',
-    target: 'https://identity.exp.sdbxaz.azure.backbaseservices.com',
+    target: 'https://identity.bus.sdbxaz.azure.backbaseservices.com',
     secure: false,
     changeOrigin: true,
     bypass: function (req) {

@@ -1,5 +1,5 @@
 import { shareNgZone } from '@angular-architects/module-federation-tools';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule, NgZone } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { TemplateRegistry } from '@backbase/foundation-ang/core';
@@ -8,6 +8,7 @@ import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { MOCKS_TOKEN } from './auth/auth.guard';
 import { ServicePathsModule } from './service-paths.module';
+import { UserContextInterceptor } from './user-context/user-context.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,11 @@ import { ServicePathsModule } from './service-paths.module';
     {
       provide: MOCKS_TOKEN,
       useValue: environment.mocksEnabled,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UserContextInterceptor,
+      multi: true,
     },
   ],
   bootstrap: [AppComponent],

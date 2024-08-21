@@ -30,7 +30,7 @@ export const environment: Environment = {
 
 export const authConfig: (baseUrl: string) => AuthConfig = () => ({
   // Url of the Identity Provider
-  issuer: 'https://identity.exp.sdbxaz.azure.backbaseservices.com/auth/realms/customer',
+  issuer: 'https://identity.bus.sdbxaz.azure.backbaseservices.com/auth/realms/customer',
 
   // URL of the SPA to redirect the user to after login
   redirectUri: document.location.origin + '/select-context',
