@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { MOCKS_TOKEN } from './auth/auth.guard';
+import { SharedUserContextInterceptor } from './shared-user-context/shared-user-context.interceptor';
 import { UserContextInterceptor } from './user-context/user-context.interceptor';
 
 @NgModule({
@@ -23,6 +24,11 @@ import { UserContextInterceptor } from './user-context/user-context.interceptor'
     {
       provide: MOCKS_TOKEN,
       useValue: environment.mocksEnabled,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SharedUserContextInterceptor,
+      multi: true,
     },
     {
       provide: HTTP_INTERCEPTORS,

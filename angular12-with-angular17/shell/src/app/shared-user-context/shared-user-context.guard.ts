@@ -8,14 +8,14 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SharedUserContextGuard implements CanActivate, CanActivateChild {
-  private cookieValid = false;
+  private isContextValid = false;
 
   constructor(private readonly router: Router, private readonly serviceAgreementService: ServiceAgreementHttpService) {}
 
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return (
-      this.cookieValid ||
-      this.validateUserContextCookie().pipe(map((isValid) => isValid || this.getSelectContextUrlTree()))
+      this.isContextValid ||
+      this.validateUserContext().pipe(map((isValid) => isValid || this.getSelectContextUrlTree()))
     );
   }
 
@@ -27,15 +27,15 @@ export class SharedUserContextGuard implements CanActivate, CanActivateChild {
     return this.router.createUrlTree(['/select-context']);
   }
 
-  private validateUserContextCookie(): Observable<boolean> {
+  private validateUserContext(): Observable<boolean> {
     return this.serviceAgreementService.getServiceAgreementContext().pipe(
       map(() => {
-        this.cookieValid = true;
-        return this.cookieValid;
+        this.isContextValid = true;
+        return this.isContextValid;
       }),
       catchError(() => {
-        this.cookieValid = false;
-        return of(this.cookieValid);
+        this.isContextValid = false;
+        return of(this.isContextValid);
       }),
     );
   }
