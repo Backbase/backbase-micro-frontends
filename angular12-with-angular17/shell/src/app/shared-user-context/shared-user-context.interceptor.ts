@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
 import { HttpEvent, HttpEventType, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SharedUserContextStorageService } from './shared-user-context-storage.service';
 import { tap } from 'rxjs/operators';
+import { SharedUserContextStorageService } from './shared-user-context-storage.service';
 
 const USER_CONTEXT_HEADER = 'x-user-context';
 

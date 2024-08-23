@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DoBootstrap, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { appModuleImports } from './app-module-imports';
 import { AppComponent } from './app.component';
 import { MOCKS_TOKEN } from './auth/auth.guard';
+import { SharedUserContextInterceptor } from './shared-user-context/shared-user-context.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,11 @@ import { MOCKS_TOKEN } from './auth/auth.guard';
     {
       provide: MOCKS_TOKEN,
       useValue: environment.mocksEnabled,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SharedUserContextInterceptor,
+      multi: true,
     },
   ],
   bootstrap: [],
